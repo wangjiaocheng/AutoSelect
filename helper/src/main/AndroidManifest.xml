@@ -1,0 +1,21 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.autoselect.helper">
+    <!--@RequiresPermission无效-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+    <application>
+        <provider
+            android:name="AHelper$FileProvider4Helper"
+            android:authorities="com.autoselect.helper.AHelper.FileProvider4Helper"
+            android:exported="false" />
+        <provider
+            android:name="AHelper$ContentProvider4Helper"
+            android:authorities="com.autoselect.helper.AHelper.ContentProvider4Helper"
+            android:exported="false" />
+        <!--下载-->
+        <service android:name=".FileHelper$DownloadService" />
+        <!--定位-->
+        <service android:name=".LocationHelper$LocationService" />
+        <activity android:name=".PermissionHelper$BuilderPermissions$PermissionActivity" />
+    </application>
+</manifest>

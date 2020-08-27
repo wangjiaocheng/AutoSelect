@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Title">
+        <attr name="leftIcon" format="reference" />
+        <attr name="leftIconVisibility" format="boolean" />
+        <attr name="leftText" format="string" />
+        <attr name="leftTextColor" format="color" />
+        <attr name="leftTextSize" format="dimension" />
+        <attr name="leftTextVisibility" format="boolean" />
+        <attr name="rightIcon" format="reference" />
+        <attr name="rightIconVisibility" format="boolean" />
+        <attr name="rightText" format="string" />
+        <attr name="rightTextColor" format="color" />
+        <attr name="rightTextSize" format="dimension" />
+        <attr name="rightTextVisibility" format="boolean" />
+        <attr name="title" format="string" />
+        <attr name="titleColor" format="color" />
+        <attr name="titleSize" format="dimension" />
+        <attr name="titleVisibility" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="ProgressBar">
+        <attr name="stopColor" format="color" />
+        <attr name="finishColor" format="color" />
+        <attr name="loadingColor" format="color" />
+        <attr name="PbTextSize" format="dimension" />
+        <attr name="borderWidth" format="dimension" />
+        <attr name="radius" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="ProgressRound">
+        <attr name="circleColor" format="color" />
+        <attr name="circleProgressColor" format="color" />
+        <attr name="textColor" format="color" />
+        <attr name="PrTextSize" format="dimension" />
+        <attr name="roundWidth" format="dimension" />
+        <attr name="max" format="integer" />
+        <attr name="textIsDisplayable" format="boolean" />
+        <attr name="style">
+            <enum name="STROKE" value="0" />
+            <enum name="FILL" value="1" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="AutoImageView">
+        <attr name="ImageSrc" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="ScaleImageView">
+        <attr name="panEnabled" format="boolean" />
+        <attr name="zoomEnabled" format="boolean" />
+        <attr name="quickScaleEnabled" format="boolean" />
+        <attr name="tileBackgroundColor" format="color" />
+        <attr name="assetName" format="string" />
+        <attr name="src" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="SwipeCaptcha">
+        <attr name="captchaWidth" format="dimension" />
+        <attr name="captchaHeight" format="dimension" />
+        <attr name="matchDeviation" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="CardStackView">
+        <attr name="stackOverlapGaps" format="dimension" />
+        <attr name="stackOverlapGapsCollapse" format="dimension" />
+        <attr name="stackHeaderHeight" format="dimension" />
+        <attr name="stackDuration" format="integer" />
+        <attr name="stackNumBottomShow" format="integer" />
+        <attr name="stackAnimationType">
+            <flag name="allDown" value="0" />
+            <flag name="upDown" value="1" />
+            <flag name="upDownStack" value="2" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="CobwebView">
+        <attr name="spiderNameSize" format="dimension" />
+        <attr name="spiderMaxLevel" format="integer" />
+        <attr name="spiderColor" format="color" />
+        <attr name="spiderRadiusColor" format="color" />
+        <attr name="spiderLevelStrokeColor" format="color" />
+        <attr name="spiderLevelStrokeWidth" format="float" />
+        <attr name="spiderLevelStroke" format="boolean" />
+        <attr name="spiderRotate" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="NetSpeedView">
+        <attr name="TextColor" format="color" />
+        <attr name="NsTextSize" format="dimension" />
+        <attr name="isMulti" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="SeatMovie">
+        <attr name="seat_sold" format="reference" />
+        <attr name="seat_checked" format="reference" />
+        <attr name="seat_available" format="reference" />
+        <attr name="overview_sold" format="color" />
+        <attr name="overview_checked" format="color" />
+        <attr name="txt_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="RulerWheelView">
+        <attr name="ColorMark" format="color|reference" />
+        <attr name="ColorMarkText" format="color|reference" />
+        <attr name="ColorHighlight" format="color|reference" />
+        <attr name="MarkTextSize" format="dimension" />
+        <attr name="MarkTextSizeCenter" format="dimension" />
+        <attr name="CursorSize" format="dimension" />
+        <attr name="IntervalFactor" format="float" />
+        <attr name="MarkRatio" format="float" />
+        <attr name="MarkAdditionalCenter" format="string|reference" />
+    </declare-styleable>
+    <declare-styleable name="ShoppingView">
+        <attr name="sv_duration" format="integer" />
+        <attr name="sv_text" format="string" />
+        <attr name="sv_text_size" format="dimension" />
+        <attr name="sv_bg_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="ShineButton">
+        <attr name="btn_color" format="color" />
+        <attr name="btn_color_fill" format="color" />
+        <attr name="enable_flashing" format="boolean" />
+        <attr name="allow_random_color" format="boolean" />
+        <attr name="shine_color_big" format="color" />
+        <attr name="shine_color_small" format="color" />
+        <attr name="shine_size" format="dimension" />
+        <attr name="shine_count" format="integer" />
+        <attr name="animation_duration_shine" format="integer" />
+        <attr name="animation_duration_click" format="integer" />
+        <attr name="shine_turn_angle" format="float" />
+        <attr name="shine_offset_angle_small" format="float" />
+        <attr name="shine_distance_multiple" format="float" />
+    </declare-styleable>
+    <declare-styleable name="PorterShapeImageView">
+        <attr name="siShape" format="integer|reference" />
+    </declare-styleable>
+    <declare-styleable name="HeartLayout">
+        <attr name="xRand" format="dimension" />
+        <attr name="initX" format="dimension" />
+        <attr name="initY" format="dimension" />
+        <attr name="factorXPoint" format="dimension" />
+        <attr name="factorBezier" format="integer" />
+        <attr name="heart_width" format="dimension" />
+        <attr name="heart_height" format="dimension" />
+        <attr name="animLengthRand" format="dimension" />
+        <attr name="animLength" format="dimension" />
+        <attr name="anim_duration" format="integer" />
+    </declare-styleable>
+</resources>
