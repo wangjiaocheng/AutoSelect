@@ -31,9 +31,9 @@ dependencies {
     testImplementation 'junit:junit:4.13'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-    implementation 'com.amap.api:navi-3dmap:7.5.0_3dmap7.5.0'
-    implementation 'com.amap.api:location:5.1.0'
-    implementation 'com.amap.api:search:7.4.0'
+    api 'com.amap.api:navi-3dmap:7.5.0_3dmap7.5.0'
+    api 'com.amap.api:location:5.1.0'
+    api 'com.amap.api:search:7.4.0'
     implementation files('libs/Msc.jar')
     implementation 'com.mcxiaoke.volley:library:1.0.19'//MapCloudImageCache
     implementation project(':helper')
