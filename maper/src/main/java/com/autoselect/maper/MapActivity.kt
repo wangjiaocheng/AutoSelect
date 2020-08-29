@@ -116,27 +116,33 @@ class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListene
     private val initUiSettings = {
         if (uiSettings == null) uiSettings = aMap?.uiSettings
     }
-    private val initMapCustomStyleFile = {
-        val styleName = "style_json.json"
-        var filePath: String? = null
-        try {
-            filePath = filesDir.absolutePath
-            assets.open(styleName).use {
-                writeFileFromIS("$filePath/$styleName", it)
-            }
-        } catch (e: IOException) {
-            e.printStackTrace()
-        }
-        aMap?.apply { setCustomMapStylePath("$filePath/$styleName") }?.showMapText(false)
-    }
     private val init = {
         initMap
         initUiSettings
-        initMapCustomStyleFile
+        selectMapCustomStyleFile()
         selectTypeMap()
         selectTypeLocation
         selectPositionLogo()
         selectPositionControls()
+    }
+
+    fun selectMapCustomStyleFile(isDark: Boolean = false) {
+        val styleData = if (isDark) "style_dark.data" else "style.data"
+        val styleExtraData = if (isDark) "style_extra_dark.data" else "style_extra.data"
+        val texturesZip = if (isDark) "textures_dark.zip" else "textures.zip"
+        var filePath: String? = null
+        try {
+            filePath = filesDir.absolutePath
+            assets.open(styleData).use { writeFileFromIS("$filePath/$styleData", it) }
+            assets.open(styleExtraData).use { writeFileFromIS("$filePath/$styleExtraData", it) }
+            assets.open(texturesZip).use { writeFileFromIS("$filePath/$texturesZip", it) }
+        } catch (e: IOException) {
+            e.printStackTrace()
+        }
+        CustomMapStyleOptions().setEnable(true)
+            .setStyleDataPath("$filePath/$styleData").setStyleExtraPath("$filePath/$styleExtraData")
+            .setStyleTexturePath("$filePath/$texturesZip")
+            .let { aMap?.apply { setCustomMapStyle(it) }?.showMapText(false) }
     }
 
     @JvmOverloads
