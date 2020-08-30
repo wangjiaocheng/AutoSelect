@@ -7,7 +7,12 @@
         <provider
             android:name="AHelper$FileProvider4Helper"
             android:authorities="com.autoselect.helper.AHelper.FileProvider4Helper"
-            android:exported="false" />
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
         <provider
             android:name="AHelper$ContentProvider4Helper"
             android:authorities="com.autoselect.helper.AHelper.ContentProvider4Helper"
