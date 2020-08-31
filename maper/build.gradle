@@ -36,7 +36,7 @@ dependencies {
     implementation 'com.amap.api:location:5.1.0'
     implementation 'com.amap.api:search:7.4.0'
     implementation files('libs/Msc.jar')
-    implementation 'com.mcxiaoke.volley:library:1.0.19'//MapCloudImageCache
+    implementation 'com.mcxiaoke.volley:library:1.0.19'
     implementation project(':helper')
     implementation project(':widgeter')
 }
