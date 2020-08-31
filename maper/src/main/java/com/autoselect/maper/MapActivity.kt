@@ -102,7 +102,7 @@ import kotlin.math.cos
 import kotlin.math.sin
 import kotlin.math.sqrt
 
-open class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListener,
+class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListener,
     BusLineSearch.OnBusLineSearchListener, BusStationSearch.OnBusStationSearchListener,
     OnCloudSearchListener, AMap.InfoWindowAdapter, AMap.OnInfoWindowClickListener,
     GeocodeSearch.OnGeocodeSearchListener,
