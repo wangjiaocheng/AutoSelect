@@ -205,9 +205,11 @@ class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListene
             "${pathExternal}amapsdk/offlineMap/".apply { createDirNone(this) }
         map.onCreate(savedInstanceState)//必须重写
         init
-        registerReceiver(alarmReceiver, IntentFilter().apply { addAction("LOCATION") })
-        registerReceiver(geoFenceReceiver, IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION)
-            .apply { addAction(GEO_FENCE_BROADCAST_ACTION) })
+        AHelper.app.registerReceiver(alarmReceiver, IntentFilter().apply { addAction("LOCATION") })
+        AHelper.app.registerReceiver(geoFenceReceiver,
+            IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION)
+                .apply { addAction(GEO_FENCE_BROADCAST_ACTION) })
+        manager = sensorManager
     }
 
     override fun onResume() {
@@ -230,8 +232,12 @@ class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListene
         map.onDestroy()
         executorService?.shutdownNow()
         alarmReceiver?.let {
-            unregisterReceiver(it)
+            AHelper.app.unregisterReceiver(it)
             alarmReceiver = null
+        }
+        geoFenceReceiver?.let {
+            AHelper.app.unregisterReceiver(it)
+            geoFenceReceiver = null
         }
     } //必须重写
 
@@ -2423,13 +2429,14 @@ class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListene
             infoWindowLayout = this
         }
 
-    private val accelerometer: Sensor? = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
-    private val magneticField: Sensor? = sensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD)
+    private var manager: SensorManager? = null
+    private val accelerometer: Sensor? = manager?.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
+    private val magneticField: Sensor? = manager?.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD)
     val register = {
-        sensorManager.registerListener(this, accelerometer, SensorManager.SENSOR_DELAY_NORMAL)
-        sensorManager.registerListener(this, magneticField, SensorManager.SENSOR_DELAY_NORMAL)
+        manager?.registerListener(this, accelerometer, SensorManager.SENSOR_DELAY_NORMAL)
+        manager?.registerListener(this, magneticField, SensorManager.SENSOR_DELAY_NORMAL)
     }
-    val unRegister: Unit = sensorManager.unregisterListener(this)
+    val unRegister = manager?.unregisterListener(this)
     override fun onAccuracyChanged(sensor: Sensor, accuracy: Int) {}
     private var accelerometerValues = FloatArray(3)//加速度值
     private var magneticValues = FloatArray(3)//地磁值
@@ -2482,7 +2489,7 @@ class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListene
     }
 
     private var traceList: MutableList<TraceLocation> =
-        parseLocationsData(assets, "traceRecord${File.separator}AMapTrace.txt")
+        parseLocationsData(AHelper.app.assets, "traceRecord${File.separator}AMapTrace.txt")
 
     private fun parseLocationsData(
         assetManager: AssetManager, filePath: String
@@ -2516,7 +2523,7 @@ class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListene
         }
     }
 
-    private var recordChooseArray: Array<String>? = recordNames(assets)
+    private var recordChooseArray: Array<String>? = recordNames(AHelper.app.assets)
     private fun recordNames(assetManager: AssetManager): Array<String>? = try {
         assetManager.list("traceRecord")
     } catch (e: IOException) {
@@ -2524,9 +2531,9 @@ class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListene
         null
     }
 
-    private var recordChoose: Spinner = Spinner(this).apply {
+    private var recordChoose: Spinner = Spinner(AHelper.app).apply {
         adapter = recordChooseArray?.let {
-            ArrayAdapter(this@MapActivity, android.R.layout.simple_spinner_item, it)
+            ArrayAdapter(AHelper.app, android.R.layout.simple_spinner_item, it)
                 .apply { setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item) }
         }
         onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
@@ -2535,7 +2542,8 @@ class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListene
                 traceList.clear()
                 sequenceLineID = 1000 + pos
                 recordChooseArray?.get(pos)?.run {
-                    traceList = parseLocationsData(assets, "traceRecord${File.separator}$this")
+                    traceList =
+                        parseLocationsData(AHelper.app.assets, "traceRecord${File.separator}$this")
                     coordinateType = when {
                         startsWith("AMap") -> LBSTraceClient.TYPE_AMAP
                         startsWith("Baidu") -> LBSTraceClient.TYPE_BAIDU
@@ -2604,7 +2612,7 @@ class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListene
                 .apply { setProperCamera(traceLocation2LatLng(traceList)) }
             distanceSum = "总距离："
             timeWait = "等   待："
-            traceClient = LBSTraceClient.getInstance(applicationContext)
+            traceClient = LBSTraceClient.getInstance(AHelper.app)
             traceClient?.queryProcessedTrace(sequenceLineID, traceList, coordinateType, this)
         }
     }
@@ -2740,13 +2748,13 @@ class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListene
         errorStr = location?.locationStr ?: "定位失败，loc is null"
     }
     private var aMapLocationClient: AMapLocationClient? =
-        AMapLocationClient(applicationContext).apply {
+        AMapLocationClient(AHelper.app).apply {
             setLocationOption(aMapLocationClientOption)
             setLocationListener(aMapLocationListener)
         }
     var alarmInterval: Int = 5
     private val alarmIntent: PendingIntent =
-        PendingIntent.getBroadcast(this, 0, Intent().apply { action = "LOCATION" }, 0)
+        PendingIntent.getBroadcast(AHelper.app, 0, Intent().apply { action = "LOCATION" }, 0)
     val locationStart = {
         aMapLocationClient?.apply { setLocationOption(aMapLocationClientOption) }?.startLocation()
         locationHandler.sendEmptyMessage(MSG_LOCATION_START)
@@ -2761,8 +2769,8 @@ class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListene
         locationHandler.sendEmptyMessage(MSG_LOCATION_STOP)
         alarmManager.cancel(alarmIntent)
     }
-    private var webView: WebView? = WebView(applicationContext).apply {
-        settings?.apply {
+    private var webView: WebView? = WebView(AHelper.app).apply {
+        settings.apply {
             javaScriptEnabled = true
             setGeolocationEnabled(false)//不许地理定位（H5辅助定位）；允许地理定位，地理定位失败H5辅助定位
         }
@@ -2800,11 +2808,11 @@ class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListene
         webView?.destroy()
         webView = null
         alarmReceiver?.let {
-            unregisterReceiver(it)
+            AHelper.app.unregisterReceiver(it)
             alarmReceiver = null
         }
         geoFenceReceiver?.let {
-            unregisterReceiver(it)
+            AHelper.app.unregisterReceiver(it)
             geoFenceReceiver = null
         }
         geoFenceClient.removeGeoFence()
