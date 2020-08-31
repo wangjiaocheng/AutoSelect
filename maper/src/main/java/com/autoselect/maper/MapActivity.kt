@@ -15,14 +15,16 @@ import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
 import android.hardware.SensorManager
 import android.net.ConnectivityManager
-import android.os.*
+import android.os.Bundle
+import android.os.Handler
+import android.os.Message
+import android.os.SystemClock
 import android.text.Editable
 import android.text.TextUtils
 import android.text.TextWatcher
 import android.util.Pair
 import android.view.Gravity
 import android.view.LayoutInflater
-import android.view.Surface
 import android.view.View
 import android.view.animation.AccelerateInterpolator
 import android.view.animation.BounceInterpolator
@@ -70,10 +72,7 @@ import com.amap.api.services.weather.LocalWeatherLiveResult
 import com.amap.api.services.weather.WeatherSearch
 import com.amap.api.services.weather.WeatherSearchQuery
 import com.amap.api.trace.*
-import com.autoselect.maper.MapCommon.toLatLng
-import com.autoselect.maper.MapErrorToast.show
-import com.autoselect.maper.MapErrorToast.showError
-import com.autoselect.maper.MapErrorToast.showTvToast
+import com.autoselect.helper.AHelper
 import com.autoselect.helper.DateHelper
 import com.autoselect.helper.DateHelper.sdfDateByFullX
 import com.autoselect.helper.DensityHelper.dip2px
@@ -83,6 +82,10 @@ import com.autoselect.helper.ImageHelper.compressByScale
 import com.autoselect.helper.PathHelper.pathExternal
 import com.autoselect.helper.StringHelper.isEmptyTrim
 import com.autoselect.helper.ToastHelper.showShort
+import com.autoselect.maper.MapCommon.toLatLng
+import com.autoselect.maper.MapErrorToast.show
+import com.autoselect.maper.MapErrorToast.showError
+import com.autoselect.maper.MapErrorToast.showTvToast
 import kotlinx.android.synthetic.main.activity_map.*
 import kotlinx.android.synthetic.main.busline_dialog.*
 import org.jetbrains.anko.*
@@ -96,8 +99,6 @@ import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.ConcurrentMap
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
-import kotlin.collections.ArrayList
-import kotlin.math.abs
 import kotlin.math.cos
 import kotlin.math.sin
 import kotlin.math.sqrt
@@ -1970,7 +1971,7 @@ class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListene
         }.searchWeatherAsyn()
 
     var urlView: WebView? = null//TODO
-    private val shareSearch: ShareSearch = ShareSearch(applicationContext).apply {
+    private val shareSearch: ShareSearch = ShareSearch(AHelper.app).apply {
         setOnShareSearchListener(object : ShareSearch.OnShareSearchListener {
             override fun onBusRouteShareUrlSearched(url: String, errorCode: Int) {
                 dismissProgressDialog
@@ -2205,50 +2206,51 @@ class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListene
         })
     }
     private val offlineMapManager: OfflineMapManager? = null
-        get() = OfflineMapManager(this, object : OfflineMapManager.OfflineMapDownloadListener {
-            override fun onDownload(status: Int, completeCode: Int, downName: String) {
-                when (status) {
-                    OfflineMapStatus.SUCCESS -> {
+        get() = OfflineMapManager(
+            AHelper.app, object : OfflineMapManager.OfflineMapDownloadListener {
+                override fun onDownload(status: Int, completeCode: Int, downName: String) {
+                    when (status) {
+                        OfflineMapStatus.SUCCESS -> {
+                        }
+                        OfflineMapStatus.LOADING -> debug("$loggerTag->download: $completeCode%,$downName")
+                        OfflineMapStatus.UNZIP -> debug("$loggerTag->unzip: $completeCode%,$downName")
+                        OfflineMapStatus.WAITING -> debug("$loggerTag->waiting: $completeCode%,$downName")
+                        OfflineMapStatus.PAUSE -> debug("$loggerTag->pause: $completeCode%,$downName")
+                        OfflineMapStatus.STOP -> {
+                        }
+                        OfflineMapStatus.ERROR -> error("$loggerTag->download:ERROR $downName")
+                        OfflineMapStatus.EXCEPTION_AMAP -> error("$loggerTag->download:EXCEPTION_AMAP $downName")
+                        OfflineMapStatus.EXCEPTION_NETWORK_LOADING -> {
+                            error("$loggerTag->download:EXCEPTION_NETWORK_LOADING $downName")
+                            Toast.makeText(this@MapActivity, "网络异常", Toast.LENGTH_SHORT).show()
+                            field?.pause()
+                        }
+                        OfflineMapStatus.EXCEPTION_SDCARD -> error("$loggerTag->download:EXCEPTION_SDCARD $downName")
+                        else -> {
+                        }
                     }
-                    OfflineMapStatus.LOADING -> debug("$loggerTag->download: $completeCode%,$downName")
-                    OfflineMapStatus.UNZIP -> debug("$loggerTag->unzip: $completeCode%,$downName")
-                    OfflineMapStatus.WAITING -> debug("$loggerTag->waiting: $completeCode%,$downName")
-                    OfflineMapStatus.PAUSE -> debug("$loggerTag->pause: $completeCode%,$downName")
-                    OfflineMapStatus.STOP -> {
-                    }
-                    OfflineMapStatus.ERROR -> error("$loggerTag->download:ERROR $downName")
-                    OfflineMapStatus.EXCEPTION_AMAP -> error("$loggerTag->download:EXCEPTION_AMAP $downName")
-                    OfflineMapStatus.EXCEPTION_NETWORK_LOADING -> {
-                        error("$loggerTag->download:EXCEPTION_NETWORK_LOADING $downName")
-                        Toast.makeText(this@MapActivity, "网络异常", Toast.LENGTH_SHORT).show()
-                        field?.pause()
-                    }
-                    OfflineMapStatus.EXCEPTION_SDCARD -> error("$loggerTag->download:EXCEPTION_SDCARD $downName")
-                    else -> {
-                    }
+                    offlineHandler.sendEmptyMessage(LIST_UPDATE)
                 }
-                offlineHandler.sendEmptyMessage(LIST_UPDATE)
-            }
 
-            override fun onCheckUpdate(hasNew: Boolean, name: String) {
-                info("$loggerTag->onCheckUpdate $name : $hasNew")
-                offlineHandler.sendMessage(Message().apply {
-                    what = MSG_SHOW
-                    obj = "CheckUpdate $name : $hasNew"
-                })
-            }
-
-            override fun onRemove(success: Boolean, name: String, describe: String) {
-                info("$loggerTag->onRemove $name : $success , $describe")
-                offlineHandler.run {
-                    sendEmptyMessage(LIST_UPDATE)
-                    sendMessage(Message().apply {
+                override fun onCheckUpdate(hasNew: Boolean, name: String) {
+                    info("$loggerTag->onCheckUpdate $name : $hasNew")
+                    offlineHandler.sendMessage(Message().apply {
                         what = MSG_SHOW
-                        obj = "onRemove $name : $success , $describe"
+                        obj = "CheckUpdate $name : $hasNew"
                     })
                 }
-            }
-        }).apply {
+
+                override fun onRemove(success: Boolean, name: String, describe: String) {
+                    info("$loggerTag->onRemove $name : $success , $describe")
+                    offlineHandler.run {
+                        sendEmptyMessage(LIST_UPDATE)
+                        sendMessage(Message().apply {
+                            what = MSG_SHOW
+                            obj = "onRemove $name : $success , $describe"
+                        })
+                    }
+                }
+            }).apply {
             setOnOfflineLoadedListener {
                 initAllCityList
                 initDownloadedList
@@ -2421,33 +2423,40 @@ class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListene
             infoWindowLayout = this
         }
 
-    private val sensor: Sensor = sensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION)
-    val register: Boolean =
-        sensorManager.registerListener(this, sensor, SensorManager.SENSOR_DELAY_NORMAL)
-    val unRegister: Unit = sensorManager.unregisterListener(this, sensor)
+    private val accelerometer: Sensor? = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
+    private val magneticField: Sensor? = sensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD)
+    val register = {
+        sensorManager.registerListener(this, accelerometer, SensorManager.SENSOR_DELAY_NORMAL)
+        sensorManager.registerListener(this, magneticField, SensorManager.SENSOR_DELAY_NORMAL)
+    }
+    val unRegister: Unit = sensorManager.unregisterListener(this)
     override fun onAccuracyChanged(sensor: Sensor, accuracy: Int) {}
-    private var timeLast: Long = 0
-    private val timeSensor = 100
-    private var angle = 0f
+    private var accelerometerValues = FloatArray(3)//加速度值
+    private var magneticValues = FloatArray(3)//地磁值
+
+    interface OnOrientationListener {
+        fun onOrientationChanged(azimuth: Float, pitch: Float, roll: Float)
+    }
+
     var markerRotate: Marker? = null
+    var onOrientationListener: OnOrientationListener? = object : OnOrientationListener {
+        override fun onOrientationChanged(azimuth: Float, pitch: Float, roll: Float) {
+            markerRotate?.rotateAngle = azimuth
+        }
+    }//TODO
+
     override fun onSensorChanged(event: SensorEvent) {
-        if (System.currentTimeMillis() - timeLast >= timeSensor) when (event.sensor.type) {
-            Sensor.TYPE_ORIENTATION -> {
-                var x = event.values[0]
-                x += when (windowManager.defaultDisplay.rotation) {
-                    Surface.ROTATION_0 -> 0f
-                    Surface.ROTATION_90 -> 90f
-                    Surface.ROTATION_180 -> 180f
-                    Surface.ROTATION_270 -> -90f
-                    else -> 0f
-                }
-                x %= 360f
-                if (x > 180f) x -= 360f else if (x < -180f) x += 360f
-                if (abs(angle - x) >= 3f) {
-                    angle = if (java.lang.Float.isNaN(x)) 0f else x
-                    markerRotate?.rotateAngle = 360 - angle
-                    timeLast = System.currentTimeMillis()
-                }
+        if (event.sensor.type == Sensor.TYPE_ACCELEROMETER) accelerometerValues = event.values
+        if (event.sensor.type == Sensor.TYPE_MAGNETIC_FIELD) magneticValues = event.values
+        FloatArray(9).apply {
+            SensorManager.getRotationMatrix(this, null, accelerometerValues, magneticValues)
+        }.let { rArray ->
+            FloatArray(3).apply { SensorManager.getOrientation(rArray, this) }.run {
+                val azimuth = Math.toDegrees(this[0].toDouble()).toFloat()
+                    .let { if (it < 0) it + 360f else it } / 5 * 5//航向角，正北左负右正,处理表示以5°为幅度
+                val pitch = Math.toDegrees(this[1].toDouble()).toFloat()//俯仰角
+                val roll = Math.toDegrees(this[2].toDouble()).toFloat()//翻滚角
+                onOrientationListener?.onOrientationChanged(azimuth, pitch, roll)
             }
         }
     }
