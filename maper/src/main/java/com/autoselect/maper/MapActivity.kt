@@ -200,11 +200,11 @@ class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListene
             "${pathExternal}amapsdk/offlineMap/".apply { createDirNone(this) }
         map.onCreate(savedInstanceState)//必须重写
         init
+        manager = sensorManager
         AHelper.app.registerReceiver(alarmReceiver, IntentFilter().apply { addAction("LOCATION") })
         AHelper.app.registerReceiver(geoFenceReceiver,
             IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION)
                 .apply { addAction(GEO_FENCE_BROADCAST_ACTION) })
-        manager = sensorManager
     }
 
     override fun onResume() {
