@@ -1,13 +1,13 @@
 # ***库文档***
 | 序号 | 类库                                          | 功能 |
 |:-----|:---------------------------------------------|:-----|
-| 001  | ### *00.MapActivity(3037)*                   | 地图 |
+| 001  | ### *00.MapActivity(3032)*                   | 地图 |
 ## **地图库maper**
 ### *00.地图MapActivity*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |01. selectMapCustomStyleFile                      |功能
-02 |02. selectTypeMap                                 |功能
+01 |01. selectMapCustomStyleFile                      |选择地图自定义风格文件
+02 |02. selectTypeMap                                 |选择地图类型：普通、卫星、夜景、导航、公交
 03 |03. selectTypeLocationSpinner                     |功能
 04 |04. selectPositionLogo                            |功能
 05 |05. selectPositionControls                        |功能

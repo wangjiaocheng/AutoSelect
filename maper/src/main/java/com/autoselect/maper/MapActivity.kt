@@ -146,12 +146,7 @@ class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListene
             .let { aMap?.apply { setCustomMapStyle(it) }?.showMapText(false) }
     }
 
-    @JvmOverloads
-    fun selectTypeMap(type: Int = AMap.MAP_TYPE_NORMAL, isCustom: Boolean = true) = aMap?.apply {
-        setMapCustomEnable(isCustom)
-        mapType = type
-    }//MAP_TYPE_NORMAL、MAP_TYPE_SATELLITE、MAP_TYPE_NIGHT、MAP_TYPE_NAVI、MAP_TYPE_BUS
-
+    fun selectTypeMap(type: Int = AMap.MAP_TYPE_NORMAL) = aMap?.apply { mapType = type }
     var selectTypeLocationSpinner: Spinner? = null//TODO
     private val selectTypeLocation = {
         arrayOf("展示", "定位", "追随", "旋转", "旋转位置", "追随不移动到中心点", "旋转不移动到中心点", "旋转位置不移动到中心点").let {
