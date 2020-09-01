@@ -392,7 +392,7 @@ class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListene
         private const val MSG_LOCATION_FINISH = 1
         private const val MSG_LOCATION_STOP = 2
         private const val GEO_FENCE_BROADCAST_ACTION: String =
-            "com.autoselect.autoget.geofence.multiple"
+            "com.autoselect.maper.geofence.multiple"
     }
 
     @JvmOverloads
