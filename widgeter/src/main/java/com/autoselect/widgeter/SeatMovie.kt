@@ -581,7 +581,7 @@ class SeatMovie
     private var isPointer: Boolean = false
     private var downX: Int = 0
     private var downY: Int = 0
-    private val mHandler = Handler()
+    private val mHandler = Handler(Looper.getMainLooper())
     private val hideOverviewRunnable = Runnable {
         isDrawOverview = false
         invalidate()

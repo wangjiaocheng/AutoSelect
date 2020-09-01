@@ -15,10 +15,7 @@ import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
 import android.hardware.SensorManager
 import android.net.ConnectivityManager
-import android.os.Bundle
-import android.os.Handler
-import android.os.Message
-import android.os.SystemClock
+import android.os.*
 import android.text.Editable
 import android.text.TextUtils
 import android.text.TextWatcher
@@ -342,7 +339,7 @@ class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListene
 
     private var indoorBuildingInfo: IndoorBuildingInfo? = null
     var mapIndoorFloorSwitchView: MapIndoorFloorSwitchView? = null//TODO
-    private val indoorHandler = Handler()
+    private val indoorHandler = Handler(Looper.getMainLooper())
     fun showIndoor(position: LatLng) = aMap?.run {
         setOnIndoorBuildingActiveListener {
             info("$loggerTag->indoor OnIndoorBuilding $it")
@@ -622,7 +619,7 @@ class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListene
             val start = SystemClock.uptimeMillis()
             aMap?.projection?.run { fromScreenLocation(Point(toScreenLocation(position).x, 0)) }
                 ?.let { latLng ->
-                    val handler = Handler()
+                    val handler = Handler(Looper.getMainLooper())
                     handler.post(object : Runnable {
                         override fun run() {
                             AccelerateInterpolator().getInterpolation((SystemClock.uptimeMillis() - start) / 800f)
@@ -645,7 +642,7 @@ class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListene
         get() = run {
             isVisible = false
             val start = SystemClock.uptimeMillis()
-            val handler = Handler()
+            val handler = Handler(Looper.getMainLooper())
             val bitMap = icons[0].bitmap
             var lastMarkerBitMap: Bitmap? = null
             var count = 1
@@ -699,7 +696,7 @@ class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListene
             aMap?.projection?.run {
                 fromScreenLocation(toScreenLocation(position)?.apply { offset(0, -100) })
             }?.let { latLng ->
-                val handler = Handler()
+                val handler = Handler(Looper.getMainLooper())
                 handler.post(object : Runnable {
                     override fun run() {
                         BounceInterpolator().getInterpolation((SystemClock.uptimeMillis() - start) / 1500f)
@@ -1373,7 +1370,7 @@ class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListene
             }
         }
     private var executorService: ExecutorService? = null
-    private val msgHandler: Handler = object : Handler() {
+    private val msgHandler: Handler = object : Handler(Looper.getMainLooper()) {
         override fun handleMessage(msg: Message) = showError(this@MapActivity, msg.arg1)
     }
 
@@ -2094,7 +2091,7 @@ class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListene
     private var offlineListAdapter: MapOfflineListAdapter? = null
     private var offlineDownloadedAdapter: MapOfflineDownloadedAdapter? = null
     var contentViewPage: ViewPager? = null//TODO
-    private val offlineHandler: Handler = object : Handler() {
+    private val offlineHandler: Handler = object : Handler(Looper.getMainLooper()) {
         override fun handleMessage(msg: Message) {
             super.handleMessage(msg)
             when (msg.what) {
@@ -2724,7 +2721,7 @@ class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListene
                 )
             }.toString()
         }
-    private val locationHandler: Handler = object : Handler() {
+    private val locationHandler: Handler = object : Handler(Looper.getMainLooper()) {
         override fun dispatchMessage(msg: Message) {
             locationMsg = when (msg?.what) {
                 MSG_LOCATION_START -> "正在定位..."
@@ -2916,7 +2913,7 @@ class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListene
     }
 
     var locationInfo: String = ""
-    private val fenceHandler: Handler = object : Handler() {
+    private val fenceHandler: Handler = object : Handler(Looper.getMainLooper()) {
         override fun handleMessage(msg: Message) {
             when (msg?.what) {
                 0 -> {

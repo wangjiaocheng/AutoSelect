@@ -211,7 +211,7 @@ object ToastHelper : AnkoLogger {
     }
 
     internal class SystemToast(toast: Toast) : AbsToast(toast) {
-        internal class SafeHandler(private val handler: Handler) : Handler() {
+        internal class SafeHandler(private val handler: Handler) : Handler(Looper.getMainLooper()) {
             override fun handleMessage(msg: Message) = handler.handleMessage(msg)
             override fun dispatchMessage(msg: Message) = try {
                 handler.dispatchMessage(msg)

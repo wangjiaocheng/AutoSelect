@@ -11,7 +11,7 @@ import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.info
 
 object MapErrorToast : AnkoLogger {
-    private val handler = Handler()
+    private val handler = Handler(Looper.getMainLooper())
     private var toast: Toast? = null
     private val runnable = Runnable {
         toast?.run {

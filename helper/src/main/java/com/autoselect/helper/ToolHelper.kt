@@ -27,7 +27,7 @@ object ToolHelper {
     }
 
     fun delayToDo(delayTime: Long, onSimpleListener: OnSimpleListener) =
-        Handler().postDelayed({ onSimpleListener.doSomething() }, delayTime)
+        Handler(Looper.getMainLooper()).postDelayed({ onSimpleListener.doSomething() }, delayTime)
 
     interface OnDoListener {
         fun doSomething()

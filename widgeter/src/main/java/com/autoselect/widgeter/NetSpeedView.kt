@@ -33,7 +33,7 @@ class NetSpeedView
             sumTV?.visibility = if (field) View.GONE else View.VISIBLE
             bigRL?.visibility = if (field) View.VISIBLE else View.GONE
         }
-    private val mHandler = Handler()
+    private val mHandler = Handler(Looper.getMainLooper())
     var timeInterval: Long = 500//5秒
     private var timeSpan = 2000.0
     private var totalTX: Long = 0

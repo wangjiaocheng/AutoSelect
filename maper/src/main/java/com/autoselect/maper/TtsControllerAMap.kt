@@ -27,7 +27,7 @@ class TtsControllerAMap private constructor(context: Context?) {
     private var isPlaying: Boolean = false
     private val wordList: LinkedList<String?> = LinkedList<String?>()
     private var ttsHandler: Handler? = null
-        get() = object : Handler() {
+        get() = object : Handler(Looper.getMainLooper()) {
             override fun handleMessage(msg: Message) {
                 super.handleMessage(msg)
                 when (msg?.what) {

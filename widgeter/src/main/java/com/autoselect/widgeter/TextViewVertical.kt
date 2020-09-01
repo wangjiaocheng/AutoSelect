@@ -67,7 +67,7 @@ class TextViewVertical
         get() = mHandler?.sendEmptyMessage(FLAG_AUTO_SCROLL_STOP)
 
     fun setTimeTextStill(time: Long) {
-        mHandler = object : Handler() {
+        mHandler = object : Handler(Looper.getMainLooper()) {
             override fun handleMessage(msg: Message) {
                 when (msg.what) {
                     FLAG_AUTO_SCROLL_START -> {

@@ -837,7 +837,7 @@ class SeatAirplane
     }
 
     private val fixedThreadPool: ExecutorService = Executors.newFixedThreadPool(3)
-    private val mHandler: Handler = object : Handler() {
+    private val mHandler: Handler = object : Handler(Looper.getMainLooper()) {
         override fun handleMessage(msg: Message) {
             super.handleMessage(msg)
             msg.data?.run {

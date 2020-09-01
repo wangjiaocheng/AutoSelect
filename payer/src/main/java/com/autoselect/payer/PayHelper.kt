@@ -532,7 +532,7 @@ object PayHelper {
             private const val PAY_RESULT_MSG = 0
         }
 
-        private val handler: Handler = object : Handler() {
+        private val handler: Handler = object : Handler(Looper.getMainLooper()) {
             override fun handleMessage(msg: Message) {
                 super.handleMessage(msg)
                 if (msg?.what == PAY_RESULT_MSG) {

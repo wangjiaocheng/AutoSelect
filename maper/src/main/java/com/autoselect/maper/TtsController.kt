@@ -21,7 +21,7 @@ class TtsController private constructor(context: Context?) : TtsCallBack, AMapNa
     private val ttsPlay: Int = 1
     private val ttsPlayCheck: Int = 2
     private var ttsHandler: Handler? = null
-        get() = object : Handler() {
+        get() = object : Handler(Looper.getMainLooper()) {
             override fun handleMessage(msg: Message) {
                 super.handleMessage(msg)
                 when (msg?.what) {

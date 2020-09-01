@@ -26,7 +26,7 @@ class AutoImageView @JvmOverloads constructor(
                 typedArray.recycle()
             }.let { if (it != 0) setImageResource(it) }
         }.run {
-            Handler().postDelayed({
+            Handler(Looper.getMainLooper()).postDelayed({
                 startAnimation(AnimationUtils.loadAnimation(context, R.anim.anim_translate))
             }, 200)
         }

@@ -114,7 +114,7 @@ class MapOfflineChild(private val context: Context, offlineMapManager: OfflineMa
             setImageResource(R.mipmap.offlinearrow_download)
         }
     }
-    private val handler: Handler = object : Handler() {
+    private val handler: Handler = object : Handler(Looper.getMainLooper()) {
         override fun handleMessage(msg: Message) {
             msg.run {
                 super.handleMessage(this)
@@ -161,7 +161,7 @@ class MapOfflineChild(private val context: Context, offlineMapManager: OfflineMa
     override fun onClick(view: View) {
         offLineChildView?.apply {
             isEnabled = false
-            Handler().postDelayed({ isEnabled = true }, 100)
+            Handler(Looper.getMainLooper()).postDelayed({ isEnabled = true }, 100)
         }//避免频繁点击不断从头开始和暂停下载
         mMapCity?.run {
             val completeCode = getcompleteCode()

@@ -33,7 +33,7 @@ object InputMethodHelper : AnkoLogger {
         requestFocus()
     }.let {
         app.inputMethodManager.showSoftInput(it, InputMethodManager.SHOW_FORCED,
-            object : ResultReceiver(Handler()) {
+            object : ResultReceiver(Handler(Looper.getMainLooper())) {
                 override fun onReceiveResult(resultCode: Int, resultData: Bundle) {
                     if (resultCode == InputMethodManager.RESULT_UNCHANGED_HIDDEN || resultCode == InputMethodManager.RESULT_HIDDEN)
                         toggleInputMethod()
@@ -51,7 +51,7 @@ object InputMethodHelper : AnkoLogger {
     }.let { view ->
         view.context.inputMethodManager
             .showSoftInput(view, InputMethodManager.SHOW_FORCED,
-                object : ResultReceiver(Handler()) {
+                object : ResultReceiver(Handler(Looper.getMainLooper())) {
                     override fun onReceiveResult(resultCode: Int, resultData: Bundle) {
                         if (resultCode == InputMethodManager.RESULT_UNCHANGED_HIDDEN || resultCode == InputMethodManager.RESULT_HIDDEN)
                             toggleInputMethod(view)
@@ -71,7 +71,7 @@ object InputMethodHelper : AnkoLogger {
 
     fun hideInputMethod(view: View) = app.inputMethodManager.run {
         if (isActive) hideSoftInputFromWindow(view.windowToken, 0,
-            object : ResultReceiver(Handler()) {
+            object : ResultReceiver(Handler(Looper.getMainLooper())) {
                 override fun onReceiveResult(resultCode: Int, resultData: Bundle) {
                     if (resultCode == InputMethodManager.RESULT_UNCHANGED_SHOWN || resultCode == InputMethodManager.RESULT_SHOWN)
                         toggleInputMethod()
@@ -82,7 +82,7 @@ object InputMethodHelper : AnkoLogger {
     fun hideInputMethod(editText: EditText) = editText.apply { clearFocus() }.let { view ->
         view.context.inputMethodManager.run {
             if (isActive) hideSoftInputFromWindow(view.windowToken, 0,
-                object : ResultReceiver(Handler()) {
+                object : ResultReceiver(Handler(Looper.getMainLooper())) {
                     override fun onReceiveResult(resultCode: Int, resultData: Bundle) {
                         if (resultCode == InputMethodManager.RESULT_UNCHANGED_SHOWN || resultCode == InputMethodManager.RESULT_SHOWN)
                             toggleInputMethod(view)
@@ -98,7 +98,7 @@ object InputMethodHelper : AnkoLogger {
         override fun run() {
             view.context.inputMethodManager.run {
                 if (isActive) hideSoftInputFromWindow(view.applicationWindowToken, 0,
-                    object : ResultReceiver(Handler()) {
+                    object : ResultReceiver(Handler(Looper.getMainLooper())) {
                         override fun onReceiveResult(resultCode: Int, resultData: Bundle) {
                             if (resultCode == InputMethodManager.RESULT_UNCHANGED_SHOWN || resultCode == InputMethodManager.RESULT_SHOWN)
                                 toggleInputMethod()
@@ -113,7 +113,7 @@ object InputMethodHelper : AnkoLogger {
             editText.apply { clearFocus() }.let { view ->
                 view.context.inputMethodManager.run {
                     if (isActive) hideSoftInputFromWindow(view.applicationWindowToken, 0,
-                        object : ResultReceiver(Handler()) {
+                        object : ResultReceiver(Handler(Looper.getMainLooper())) {
                             override fun onReceiveResult(resultCode: Int, resultData: Bundle) {
                                 if (resultCode == InputMethodManager.RESULT_UNCHANGED_SHOWN || resultCode == InputMethodManager.RESULT_SHOWN)
                                     toggleInputMethod(view)

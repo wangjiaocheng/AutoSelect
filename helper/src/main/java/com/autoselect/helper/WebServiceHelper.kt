@@ -49,7 +49,7 @@ object WebServiceHelper {
                 } catch (e: XmlPullParserException) {
                     e.printStackTrace()
                 } finally {
-                    object : Handler() {
+                    object : Handler(Looper.getMainLooper()) {
                         override fun handleMessage(msg: Message) {
                             super.handleMessage(msg)
                             webServiceCallBack.callBack(msg.obj as Any)
