@@ -456,7 +456,7 @@ class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListene
             false
         }
         showProgressDialog
-        Thread(Runnable {
+        Thread {
             mutableListOf<MultiPointItem>().apply {
                 try {
                     this@MapActivity.resources.openRawResource(res).use { inputStream ->
@@ -484,7 +484,7 @@ class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListene
                 }
             }
             dismissProgressDialog
-        }).start()
+        }.start()
     }
 
     fun showNavigateArrow(
