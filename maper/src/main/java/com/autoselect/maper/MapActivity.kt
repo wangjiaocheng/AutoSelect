@@ -2958,7 +2958,7 @@ class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListene
             }
         }
     }
-    private var geoFenceClient: GeoFenceClient = GeoFenceClient(AHelper.app).apply {
+    private val geoFenceClient: GeoFenceClient = GeoFenceClient(AHelper.app).apply {
         createPendingIntent(GEO_FENCE_BROADCAST_ACTION)
         setGeoFenceListener { geoFenceList, errorCode, customId ->
             Message.obtain().apply {
