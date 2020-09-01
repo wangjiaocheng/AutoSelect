@@ -123,6 +123,7 @@ class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListene
         selectMapCustomStyleFile()
         selectTypeMap()
         selectTypeLocation
+        selectTypeLanguage()
         selectPositionLogo()
         selectPositionControls()
     }
@@ -186,6 +187,9 @@ class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListene
             } ?: error("$loggerTag->定位失败")
         }
     }
+
+    fun selectTypeLanguage(language: String = AMap.CHINESE) =
+        aMap?.apply { setMapLanguage(language) }//CHINESE、ENGLISH
 
     fun selectPositionLogo(position: Int = AMapOptions.LOGO_POSITION_BOTTOM_LEFT) =
         aMap?.uiSettings?.apply { logoPosition = position }//LEFT、CENTER、RIGHT
