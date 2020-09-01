@@ -2807,16 +2807,9 @@ class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListene
         aMapLocationClientOption = null
         webView?.destroy()
         webView = null
-        alarmReceiver?.let {
-            AHelper.app.unregisterReceiver(it)
-            alarmReceiver = null
-        }
-        geoFenceReceiver?.let {
-            AHelper.app.unregisterReceiver(it)
-            geoFenceReceiver = null
-        }
-        geoFenceClient.removeGeoFence()
-    }
+        alarmReceiver?.let { alarmReceiver = null }//在此取消注册出错unregisterReceiver(it)
+        geoFenceReceiver?.let { geoFenceReceiver = null }//在此取消注册出错unregisterReceiver(it)
+    }//在此移除地理围栏出错geoFenceClient.removeGeoFence()
     val DPoint.isAvailable: Boolean
         get() = com.amap.api.location.CoordinateConverter.isAMapDataAvailable(latitude, longitude)
 
@@ -2965,7 +2958,7 @@ class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListene
             }
         }
     }
-    private val geoFenceClient: GeoFenceClient = GeoFenceClient(applicationContext).apply {
+    private var geoFenceClient: GeoFenceClient = GeoFenceClient(AHelper.app).apply {
         createPendingIntent(GEO_FENCE_BROADCAST_ACTION)
         setGeoFenceListener { geoFenceList, errorCode, customId ->
             Message.obtain().apply {
@@ -2989,7 +2982,7 @@ class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListene
     var customId: String = ""
     val addPolygonFence = when {
         polygonPoints.size < 3 ->
-            Toast.makeText(applicationContext, "参数不全", Toast.LENGTH_SHORT).show()
+            Toast.makeText(AHelper.app, "参数不全", Toast.LENGTH_SHORT).show()
         else -> mutableListOf<DPoint?>().apply {
             for (latLng in polygonPoints) {
                 add(latLng?.toDPoint)
@@ -2999,14 +2992,14 @@ class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListene
     var keyword: String = ""
     val addDistrictFence = when {
         TextUtils.isEmpty(keyword) ->
-            Toast.makeText(applicationContext, "参数不全", Toast.LENGTH_SHORT).show()
+            Toast.makeText(AHelper.app, "参数不全", Toast.LENGTH_SHORT).show()
         else -> geoFenceClient.addGeoFence(keyword, customId)
     }
     var centerLatLng: LatLng? = null
     var radiusStr: String = ""
     val addRoundFence = when {
         centerLatLng == null || TextUtils.isEmpty(radiusStr) ->
-            Toast.makeText(applicationContext, "参数不全", Toast.LENGTH_SHORT).show()
+            Toast.makeText(AHelper.app, "参数不全", Toast.LENGTH_SHORT).show()
         else -> geoFenceClient.addGeoFence(centerLatLng?.toDPoint, radiusStr.toFloat(), customId)
     }
     var poiType: String = ""
@@ -3025,7 +3018,7 @@ class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListene
         geoFenceClient.addGeoFence(
             keyword, poiType, DPoint(latitude, longitude), aroundRadius, size, customId
         )
-    } ?: Toast.makeText(applicationContext, "参数不全", Toast.LENGTH_SHORT).show()
+    } ?: Toast.makeText(AHelper.app, "参数不全", Toast.LENGTH_SHORT).show()
     var city: String = ""
     val addKeywordFence = {
         var size = 10
@@ -3037,7 +3030,7 @@ class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListene
         }
         when {
             TextUtils.isEmpty(keyword) || TextUtils.isEmpty(poiType) ->
-                Toast.makeText(applicationContext, "参数不全", Toast.LENGTH_SHORT).show()
+                Toast.makeText(AHelper.app, "参数不全", Toast.LENGTH_SHORT).show()
             else -> geoFenceClient.addGeoFence(keyword, poiType, city, size, customId)
         }
     }
