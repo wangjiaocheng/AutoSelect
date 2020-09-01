@@ -8,9 +8,9 @@
 ---|--------------------------------------------------|---
 01 |01. selectMapCustomStyleFile                      |选择地图自定义风格文件
 02 |02. selectTypeMap                                 |选择地图类型：普通、卫星、夜景、导航、公交
-03 |03. selectTypeLocationSpinner                     |功能
-04 |04. selectPositionLogo                            |功能
-05 |05. selectPositionControls                        |功能
+03 |03. selectTypeLocationSpinner                     |选择定位类型：功能已实现，只需创建选择器
+04 |04. selectPositionLogo                            |选择logo位置：下左、下中、下右
+05 |05. selectPositionControls                        |选择控件位置：右中、右下
 06 |06. changeStop                                    |功能
 07 |07. changeCamera                                  |功能
 08 |08. changePosition                                |功能
