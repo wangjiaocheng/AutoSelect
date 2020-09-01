@@ -178,7 +178,7 @@ class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListene
                 extras?.run {
                     error(
                         """$loggerTag->定位信息：
-                        |code: ${getInt(MyLocationStyle.ERROR_CODE)}；
+                        |errorCode: ${getInt(MyLocationStyle.ERROR_CODE)}；
                         |errorInfo: ${getString(MyLocationStyle.ERROR_INFO)}；
                         |locationType: ${getInt(MyLocationStyle.LOCATION_TYPE)}""".trimMargin()
                     )
