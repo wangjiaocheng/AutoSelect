@@ -51,7 +51,7 @@
 | 048  | ### *47.SingletonHelper. Singleton(16)*                                                                                                                                                                                                         | 单例 |
 | 049  | ### *48.AnyHelper(70)*                                                                                                                                                                                                                          | 对象 |
 | 050  | ### *49.BusHelper(239)*                                                                                                                                                                                                                         | 总线 |
-| 051  | ### *50.InputMethodHelper(251)*                                                                                                                                                                                                                 | 输入 |
+| 051  | ### *50.InputMethodHelper(252)*                                                                                                                                                                                                                 | 输入 |
 | 052  | ### *51.ClipboardHelper(21)*                                                                                                                                                                                                                    | 剪贴 |
 | 053  | ### *52.StringHelper(120)*                                                                                                                                                                                                                      | 字串 |
 | 054  | ### *53.SpanHelper(767)*                                                                                                                                                                                                                        | 富文 |
@@ -967,7 +967,7 @@
 07 |7. removeSticky                                   |功能
 08 |8. ThreadMode                                     |功能
 09 |9. Bus                                            |功能
-### *50.输入InputMethodHelper(251)*
+### *50.输入InputMethodHelper(252)*
 序号|方法|功能
 ---|--------------------------------------------------|---
 01 |1. showInputMethod                                |功能
