@@ -60,7 +60,7 @@
 | 057  | ### *56.IdCardHelper(398)*                                                                                                                                                                                                                      | 身份 |
 | 058  | ### *57.BankCardHelper(1720)*                                                                                                                                                                                                                   | 银行 |
 | 059  | ### *58.BarQRHelper(149)*                                                                                                                                                                                                                       | 图码 |
-| 060  | ### *59.ToolHelper(136)*                                                                                                                                                                                                                        | 工具 |
+| 060  | ### *59.ToolHelper(137)*                                                                                                                                                                                                                        | 工具 |
 | 061  | ### *60.EncodeHelper(114)*                                                                                                                                                                                                                      | 编码 |
 | 062  | ### *61.EncryptHelper(510)*                                                                                                                                                                                                                     | 加密 |
 | 063  | ### *62.BitHelper(37)*                                                                                                                                                                                                                          | 位算 |
@@ -1186,7 +1186,7 @@
 04 |4. builderQRCode                                  |功能
 05 |5. createQRCode                                   |功能
 >implementation 'com.google.zxing:core:3.4.0'
-### *59.工具ToolHelper(136)*
+### *59.工具ToolHelper(137)*
 序号|方法|功能
 ---|--------------------------------------------------|---
 01 |1. backgroundHandler                              |功能
