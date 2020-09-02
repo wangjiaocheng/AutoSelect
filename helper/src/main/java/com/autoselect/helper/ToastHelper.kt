@@ -10,6 +10,7 @@ import android.graphics.PorterDuffColorFilter
 import android.graphics.drawable.ColorDrawable
 import android.os.Build
 import android.os.Handler
+import android.os.Looper
 import android.os.Message
 import android.view.Gravity
 import android.view.View
@@ -48,6 +49,7 @@ object ToastHelper : AnkoLogger {
     private var mGravity = -1
     private var mXOffset = -1
     private var mYOffset = -1
+
     @JvmOverloads
     fun setGravity(gravity: Int = BottomCenter, xOffset: Int = 0, yOffset: Int = 0) {
         mGravity = gravity
@@ -64,6 +66,7 @@ object ToastHelper : AnkoLogger {
     val COLOR_TEXT_DEFAULT: Int = Color.parseColor("#FFFFFF")
     private const val COLOR_DEFAULT = -0x1000001
     private var mMsgColor = COLOR_DEFAULT
+
     @JvmOverloads
     fun setMsgColor(@ColorInt msgColor: Int = COLOR_TEXT_DEFAULT) {
         mMsgColor = msgColor
@@ -76,13 +79,17 @@ object ToastHelper : AnkoLogger {
 
     @ColorInt
     val COLOR_BG_INFO: Int = Color.parseColor("#3F51B5")
+
     @ColorInt
     val COLOR_BG_SUCCESS: Int = Color.parseColor("#388E3C")
+
     @ColorInt
     val COLOR_BG_WARNING: Int = Color.parseColor("#FFA900")
+
     @ColorInt
     val COLOR_BG_ERROR: Int = Color.parseColor("#FD4C5B")
     private var mBgColor: Int = COLOR_DEFAULT
+
     @JvmOverloads
     fun setBgColor(@ColorInt bgColor: Int = COLOR_BG_INFO) {
         mBgColor = bgColor

@@ -36,7 +36,7 @@
 | 033  | ### *32.BarHelper(527)*                                                                                                                                                                                                                         | 多栏 |
 | 034  | ### *33.ViewHelper：ViewTouch、ViewClick、ViewShadow(945)*                                                                                                                                                                                       | 视图 |
 | 035  | ### *34.WebViewHelper(76)*                                                                                                                                                                                                                      | 网视 |
-| 036  | ### *35.ToastHelper(357)*                                                                                                                                                                                                                       | 吐司 |
+| 036  | ### *35.ToastHelper(364)*                                                                                                                                                                                                                       | 吐司 |
 | 037  | ### *36.SnackbarHelper(104)*                                                                                                                                                                                                                    | 零食 |
 | 038  | ### *37.ColorHelper(75)*                                                                                                                                                                                                                        | 着色 |
 | 039  | ### *38.UiMessageHelper(168)*                                                                                                                                                                                                                   | 消息 |
@@ -94,7 +94,7 @@
 | 091  | ### *90.HtmlHelper(59)*                                                                                                                                                                                                                         | 超文 |
 | 092  | ### *91.UriHelper(93)*                                                                                                                                                                                                                          | 标识 |
 | 093  | ### *92.SslHelper(57)*                                                                                                                                                                                                                          | 安全 |
-| 094  | ### *93.WebServiceHelper(62)*                                                                                                                                                                                                                   | 网服 |
+| 094  | ### *93.WebServiceHelper(63)*                                                                                                                                                                                                                   | 网服 |
 | 095  | ### *94.HttpUrlConnectionHelper(107)*                                                                                                                                                                                                           | 网连 |
 | 096  | ### *95.DbHelper(32)*                                                                                                                                                                                                                           | 数库 |
 | 097  | ### *96.MapHelper(69)*                                                                                                                                                                                                                          | 地图 |
@@ -724,7 +724,7 @@
 02 |2. userAgent                                      |功能
 03 |3. loadData                                       |功能
 04 |4. goBack                                         |功能
-### *35.吐司ToastHelper(357)*
+### *35.吐司ToastHelper(364)*
 序号|方法|功能
 ---|--------------------------------------------------|---
 01 |1. TopCenter                                      |功能
@@ -1977,7 +1977,7 @@
 ---|--------------------------------------------------|---
 01 |1. getSslSocketFactory                            |功能
 02 |2. getKeyManagers                                 |功能
-### *93.网服WebServiceHelper(62)*
+### *93.网服WebServiceHelper(63)*
 序号|方法|功能
 ---|--------------------------------------------------|---
 01 |1. WebServiceCallBack                             |功能
