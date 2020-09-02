@@ -93,31 +93,31 @@
 85 |85. keywordText                                   |关键词文本输入框：AutoCompleteTextView类型
 86 |86. poiSearchList                                 |兴趣点搜索列表视图：ListView类型
 87 |87. searchPoiSub                                  |搜索子兴趣点：MapPoiListAdapter、MapPoiSubAdapter
-88 |88. detailMarker                                  |功能
-89 |89. mPoiName                                      |功能
-90 |90. mPoiAddress                                   |功能
-91 |91. mPoiInfo                                      |功能
-92 |92. mPoiDetail                                    |功能
-93 |93. searchPoiId                                   |功能
-94 |94. searchPoiKeyword                              |MapPoiOverlay
-95 |95. nextPagePoiKeyword                            |功能
-96 |96. resetLastMarker                               |功能
-97 |97. searchPoiAround                               |功能
-98 |98. cityNameTv                                    |功能
-99 |99. reportTimeLive                                |功能
-100|100 weatherTv                                     |功能
-101|101.temperatureTv                                 |功能
-102|102.windTv                                        |功能
-103|103.humidityTv                                    |功能
-104|104.reportTimeForecast                            |功能
-105|105.forecastTv                                    |功能
-106|106.searchWeatherLiveOrForecast                   |功能
-107|107.urlView                                       |功能
-108|108.shareRoute                                    |功能
-109|109.sharePoi                                      |功能
-110|110.shareLocation                                 |功能
-111|111.shareNavi                                     |功能
-112|112.contentViewPage                               |功能
+88 |88. detailMarker                                  |详情Marker：需要创建
+89 |89. mPoiName                                      |兴趣点名称：需要创建TextView
+90 |90. mPoiAddress                                   |兴趣点地址：需要创建TextView
+91 |91. mPoiInfo                                      |兴趣点信息：需要创建TextView
+92 |92. mPoiDetail                                    |兴趣点详情：需要创建RelativeLayout
+93 |93. searchPoiId                                   |搜索兴趣点以ID
+94 |94. searchPoiKeyword                              |搜索兴趣点以关键词：MapPoiOverlay
+95 |95. nextPagePoiKeyword                            |下一页兴趣点关键词
+96 |96. resetLastMarker                               |重置最近Marker
+97 |97. searchPoiAround                               |搜索兴趣点周边
+98 |98. cityNameTv                                    |城市名称：需要创建TextView
+99 |99. reportTimeLive                                |即报时间：需要创建TextView
+100|100 weatherTv                                     |天气：需要创建TextView
+101|101.temperatureTv                                 |温度：需要创建TextView
+102|102.windTv                                        |风力：需要创建TextView
+103|103.humidityTv                                    |湿度：需要创建TextView
+104|104.reportTimeForecast                            |预报时间：需要创建TextView
+105|105.forecastTv                                    |预报：需要创建TextView
+106|106.searchWeatherLiveOrForecast                   |搜索天气即报或预报
+107|107.urlView                                       |路线WebView：需要创建
+108|108.shareRoute                                    |分享路线：起点、终点
+109|109.sharePoi                                      |分享兴趣点：坐标、标题、详情
+110|110.shareLocation                                 |分享定位：坐标、标题、详情
+111|111.shareNavi                                     |分享导航：起点、终点
+112|112.contentViewPage                               |内容视图页面：功能已实现，需要创建ViewPager
 113|113.textDownload                                  |功能
 114|114.textDownloaded                                |功能
 115|115.offlineStartInPause                           |MapOfflineListAdapter
