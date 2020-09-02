@@ -7,6 +7,7 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.net.NetworkInfo
 import android.os.Handler
+import android.os.Looper
 import android.os.Message
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.alipay.sdk.app.PayTask
