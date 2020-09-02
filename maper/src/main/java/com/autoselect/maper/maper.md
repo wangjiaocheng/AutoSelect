@@ -1,7 +1,7 @@
 # ***库文档***
 | 序号 | 类库                                          | 功能 |
 |:-----|:---------------------------------------------|:-----|
-| 001  | ### *00.MapActivity(3036)*                   | 地图 |
+| 001  | ### *00.MapActivity(3033)*                   | 地图 |
 ## **地图库maper**
 ### *00.地图MapActivity*
 序号|方法|功能
@@ -57,130 +57,134 @@
 49 |49. showColorsPolyline                            |显示多彩线段：坐标、偏移、边框宽度、边框颜色、纹理、渐变、虚线、大地
 50 |50. showTexturePolyline                           |显示纹理线段：坐标、偏移、边框宽度
 51 |51. showPolylineInPlayGround                      |显示操场线段：中心坐标、半径、边框宽度、渐变、虚线、大地
-52 |52. listenerEvent                                 |功能
-53 |53. listenerShot                                  |功能
-54 |54. cityCode                                      |功能
-55 |55. searchStation                                 |功能
-56 |56. searchLine                                    |MapBusLineAdapter、MapBusLineOverlay
-57 |57. tableId                                       |功能
-58 |58. lineId                                        |功能
-59 |59. searchById                                    |功能
-60 |60. keyWord                                       |功能
-61 |61. pointCenter                                   |功能
-62 |62. searchByBound                                 |功能
-63 |63. point1                                        |功能
-64 |64. point2                                        |功能
-65 |65. point3                                        |功能
-66 |66. point4                                        |功能
-67 |67. searchByPolygon                               |功能
-68 |68. localCityName                                 |功能
-69 |69. searchByLocal                                 |MapCloudOverlay、MapCloudImageCache、MapCloudDetailActivity、MapCloudPreviewActivity
-70 |70. searchLatLngByAddress                         |功能
-71 |71. toLatLonPoints                                |功能
-72 |72. searchAddressesByLatLonList                   |功能
-73 |73. point                                         |功能
-74 |74. searchAddressByLatLon                         |功能
-75 |75. isWithBoundary                                |功能
-76 |76. searchDistrict                                |功能
-77 |77. searchDistrictWithBoundary                    |功能
-78 |78. infoCountry                                   |功能
-79 |79. infoProvince                                  |功能
-80 |80. infoCity                                      |功能
-81 |81. infoDistrict                                  |功能
-82 |82. keywordText                                   |功能
-83 |83. poiSearchList                                 |功能
-84 |84. searchPoiSub                                  |MapPoiListAdapter、MapPoiSubAdapter
-85 |85. detailMarker                                  |功能
-86 |86. mPoiName                                      |功能
-87 |87. mPoiAddress                                   |功能
-88 |88. mPoiInfo                                      |功能
-89 |89. mPoiDetail                                    |功能
-90 |90. searchPoiId                                   |功能
-91 |91. searchPoiKeyword                              |MapPoiOverlay
-92 |92. nextPagePoiKeyword                            |功能
-93 |93. resetLastMarker                               |功能
-94 |94. searchPoiAround                               |功能
-95 |95. cityNameTv                                    |功能
-96 |96. reportTimeLive                                |功能
-97 |97. weatherTv                                     |功能
-98 |98. temperatureTv                                 |功能
-99 |99. windTv                                        |功能
-100|100 humidityTv                                    |功能
-101|101.reportTimeForecast                            |功能
-102|102.forecastTv                                    |功能
-103|103.searchWeatherLiveOrForecast                   |功能
-104|104.urlView                                       |功能
-105|105.shareRoute                                    |功能
-106|106.sharePoi                                      |功能
-107|107.shareLocation                                 |功能
-108|108.shareNavi                                     |功能
-109|109.contentViewPage                               |功能
-110|110.textDownload                                  |功能
-111|111.textDownloaded                                |功能
-112|112.offlineStartInPause                           |MapOfflineListAdapter
-113|113.offlineCancelInPause                          |MapOfflineChild
-114|114.offlineStop                                   |MapOfflineDownloadedAdapter
-115|115.offlineLog                                    |MapOfflinePagerAdapter
-116|116.backImage                                     |功能
-117|117.metrePerPixel                                 |功能
-118|118.distance                                      |功能
-119|119.markersList                                   |功能
-120|120.markersSize                                   |功能
-121|121.isContain                                     |指定多边形是否包含坐标
-122|122.isContain                                     |显示范围内是否包含坐标
-123|123.toPoint                                       |功能
-124|124.toLatLng                                      |功能
-125|125.types                                         |功能
-126|126.Convert                                       |功能
-127|127.startNavi                                     |功能
-128|128.watchText                                     |功能
-129|129.startMove                                     |功能
-130|130.register                                      |功能
-131|131.unRegister                                    |功能
-132|132.markerRotate                                  |功能
-133|133.onOrientationListener                         |功能
-134|134.startTrace                                    |功能
-135|135.stopTrace                                     |功能
-136|136.distanceSum                                   |功能
-137|137.timeWait                                      |功能
-138|138.coordinateType                                |功能
-139|139.traceGrasp                                    |功能
-140|140.cleanFinishTrace                              |功能
-141|141.setMapFragment                                |功能
-142|142.aMapLocationClientOption                      |功能
-143|143.locationMsg                                   |功能
-144|144.locationStr                                   |功能
-145|145.errorStr                                      |功能
-146|146.alarmInterval                                 |功能
-147|147.locationStart                                 |功能
-148|148.locationStop                                  |功能
-149|149.assistantStart                                |功能
-150|150.assistantStop                                 |功能
-151|151.locationLast                                  |功能
-152|152.locationDestroy                               |功能
-153|153.isAvailable                                   |功能
-154|154.Convert                                       |功能
-155|155.addCenterMarker                               |功能
-156|156.addPolygonMarker                              |功能
-157|157.locationInfo                                  |功能
-158|158.toDPoint                                      |功能
-159|159.customId                                      |功能
-160|160.addPolygonFence                               |功能
-161|161.keyword                                       |功能
-162|162.addDistrictFence                              |功能
-163|163.centerLatLng                                  |功能
-164|164.radiusStr                                     |功能
-165|165.addRoundFence                                 |功能
-166|166.poiType                                       |功能
-167|167.sizeStr                                       |功能
-168|168.addNearbyFence                                |功能
-169|169.city                                          |功能
-170|170.addKeywordFence                               |功能
-171|171.NoScrollGridView                              |功能
-172|172.MapCommon                                     |功能
-173|173.MapErrorToast                                 |功能
-174|174.MapRouteCalculateActivity                     |MapRouteSearchActivity、MapTipListAdapter
-175|175.MapRouteActivity                              |MapRouteBusDetailActivity、MapRouteDriveDetailActivity、MapRouteRideDetailActivity、MapRouteWalkDetailActivity
-176|176.MapRouteBusResultListAdapter                  |MapRouteBusSegmentListAdapter、MapRouteDriveSegmentListAdapter、MapRouteRideSegmentListAdapter、MapRouteWalkSegmentListAdapter
-177|177.MapRouteOverlay                               |MapRouteBusOverlay、MapRouteDriveOverlay、MapRouteRideOverlay、MapRouteWalkOverlay
-178|178.MapNaviActivity                               |MapNaviDriveActivity、MapNaviRideActivity、MapNaviWalkActivity、MapNaviComponentActivity、TtsControllerAMap、TtsController、TtsSystem、TtsIFly、Tts、TtsCallBack
+52 |52. listenerEvent                                 |启用事件监听：加载、移动、点击、长按、触摸、兴趣点点击、Marker拖动、Marker点击、信息窗口点击
+53 |53. listenerShot                                  |地图截屏
+54 |54. cityCode                                      |城市代码处理：截取“-”后部分，搜索公交站点线路需要
+55 |55. searchStation                                 |搜索公交站点
+56 |56. searchLine                                    |搜索公交线路：MapBusLineAdapter、MapBusLineOverlay
+57 |57. tableId                                       |搜索云详情需要
+58 |58. lineId                                        |搜索云详情需要
+59 |59. searchById                                    |搜索云详情：通过tableId和lineId
+60 |60. keyWord                                       |搜索周边范围关键词
+61 |61. pointCenter                                   |搜索周边范围中心坐标
+62 |62. searchByBound                                 |搜索周边范围：通过tableId、关键词和中心坐标
+63 |63. point1                                        |多边形坐标1
+64 |64. point2                                        |多边形坐标2
+65 |65. point3                                        |多边形坐标3
+66 |66. point4                                        |多边形坐标4
+67 |67. searchByPolygon                               |搜索多边形范围：通过tableId、关键词和中心坐标
+68 |68. localCityName                                 |本地城市名称
+69 |69. searchByLocal                                 |搜索城市范围：MapCloudOverlay、MapCloudImageCache、MapCloudDetailActivity、MapCloudPreviewActivity
+70 |70. searchLatLngByAddress                         |搜索城市地址：地址、城市
+71 |71. toLatLonPoints                                |双精度数组转经纬度点列表
+72 |72. searchAddressesByLatLonList                   |搜索地址以经纬度点列表
+73 |73. point                                         |经纬度点
+74 |74. searchAddressByLatLon                         |搜索地址以经纬度点
+75 |75. isWithBoundary                                |是否带行政区划边界
+76 |76. searchDistrict                                |搜索行政区划
+77 |77. searchDistrictWithBoundary                    |搜索行政区划带边界
+78 |78. infoCountry                                   |国家信息：用于获取，而非赋值
+79 |79. infoProvince                                  |省州信息：用于获取，而非赋值
+80 |80. infoCity                                      |城市信息：用于获取，而非赋值
+81 |81. infoDistrict                                  |区划信息：用于获取，而非赋值
+82 |82. spinnerProvince                               |选择省州：功能已实现，只需创建选择器
+83 |83. spinnerCity                                   |选择城市：功能已实现，只需创建选择器
+84 |84. spinnerDistrict                               |选择区划：功能已实现，只需创建选择器
+85 |85. keywordText                                   |关键词文本输入框：AutoCompleteTextView类型
+86 |86. poiSearchList                                 |兴趣点搜索列表视图：ListView类型
+87 |87. searchPoiSub                                  |搜索子兴趣点：MapPoiListAdapter、MapPoiSubAdapter
+88 |88. detailMarker                                  |功能
+89 |89. mPoiName                                      |功能
+90 |90. mPoiAddress                                   |功能
+91 |91. mPoiInfo                                      |功能
+92 |92. mPoiDetail                                    |功能
+93 |93. searchPoiId                                   |功能
+94 |94. searchPoiKeyword                              |MapPoiOverlay
+95 |95. nextPagePoiKeyword                            |功能
+96 |96. resetLastMarker                               |功能
+97 |97. searchPoiAround                               |功能
+98 |98. cityNameTv                                    |功能
+99 |99. reportTimeLive                                |功能
+100|100 weatherTv                                     |功能
+101|101.temperatureTv                                 |功能
+102|102.windTv                                        |功能
+103|103.humidityTv                                    |功能
+104|104.reportTimeForecast                            |功能
+105|105.forecastTv                                    |功能
+106|106.searchWeatherLiveOrForecast                   |功能
+107|107.urlView                                       |功能
+108|108.shareRoute                                    |功能
+109|109.sharePoi                                      |功能
+110|110.shareLocation                                 |功能
+111|111.shareNavi                                     |功能
+112|112.contentViewPage                               |功能
+113|113.textDownload                                  |功能
+114|114.textDownloaded                                |功能
+115|115.offlineStartInPause                           |MapOfflineListAdapter
+116|116.offlineCancelInPause                          |MapOfflineChild
+117|117.offlineStop                                   |MapOfflineDownloadedAdapter
+118|118.offlineLog                                    |MapOfflinePagerAdapter
+119|119.backImage                                     |功能
+120|120.metrePerPixel                                 |功能
+121|121.distance                                      |功能
+122|122.markersList                                   |功能
+123|123.markersSize                                   |功能
+124|124.isContain                                     |指定多边形是否包含坐标
+125|125.isContain                                     |显示范围内是否包含坐标
+126|126.toPoint                                       |功能
+127|127.toLatLng                                      |功能
+128|128.types                                         |功能
+129|129.Convert                                       |功能
+130|130.startNavi                                     |功能
+131|131.watchText                                     |功能
+132|132.startMove                                     |功能
+133|133.register                                      |功能
+134|134.unRegister                                    |功能
+135|135.markerRotate                                  |功能
+136|136.onOrientationListener                         |功能
+137|137.startTrace                                    |功能
+138|138.stopTrace                                     |功能
+139|139.distanceSum                                   |功能
+140|140.timeWait                                      |功能
+141|141.coordinateType                                |功能
+142|142.traceGrasp                                    |功能
+143|143.cleanFinishTrace                              |功能
+144|144.setMapFragment                                |功能
+145|145.aMapLocationClientOption                      |功能
+146|146.locationMsg                                   |功能
+147|147.locationStr                                   |功能
+148|148.errorStr                                      |功能
+149|149.alarmInterval                                 |功能
+150|150.locationStart                                 |功能
+151|151.locationStop                                  |功能
+152|152.assistantStart                                |功能
+153|153.assistantStop                                 |功能
+154|154.locationLast                                  |功能
+155|155.locationDestroy                               |功能
+156|156.isAvailable                                   |功能
+157|157.Convert                                       |功能
+158|158.addCenterMarker                               |功能
+159|159.addPolygonMarker                              |功能
+160|160.locationInfo                                  |功能
+161|161.toDPoint                                      |功能
+162|162.customId                                      |功能
+163|163.addPolygonFence                               |功能
+164|164.keyword                                       |功能
+165|165.addDistrictFence                              |功能
+166|166.centerLatLng                                  |功能
+167|167.radiusStr                                     |功能
+168|168.addRoundFence                                 |功能
+169|169.poiType                                       |功能
+170|170.sizeStr                                       |功能
+171|171.addNearbyFence                                |功能
+172|172.city                                          |功能
+173|173.addKeywordFence                               |功能
+174|174.clearGeoFence                                 |功能
+175|175.NoScrollGridView                              |功能
+176|176.MapCommon                                     |功能
+177|177.MapErrorToast                                 |功能
+178|178.MapRouteCalculateActivity                     |MapRouteSearchActivity、MapTipListAdapter
+179|179.MapRouteActivity                              |MapRouteBusDetailActivity、MapRouteDriveDetailActivity、MapRouteRideDetailActivity、MapRouteWalkDetailActivity
+180|180.MapRouteBusResultListAdapter                  |MapRouteBusSegmentListAdapter、MapRouteDriveSegmentListAdapter、MapRouteRideSegmentListAdapter、MapRouteWalkSegmentListAdapter
+181|181.MapRouteOverlay                               |MapRouteBusOverlay、MapRouteDriveOverlay、MapRouteRideOverlay、MapRouteWalkOverlay
+182|182.MapNaviActivity                               |MapNaviDriveActivity、MapNaviRideActivity、MapNaviWalkActivity、MapNaviComponentActivity、TtsControllerAMap、TtsController、TtsSystem、TtsIFly、Tts、TtsCallBack

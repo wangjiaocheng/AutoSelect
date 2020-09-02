@@ -211,17 +211,17 @@ class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListene
     override fun onResume() {
         super.onResume()
         map.onResume()
-    } //必须重写
+    }//必须重写
 
     override fun onPause() {
         super.onPause()
         map.onPause()
-    } //必须重写
+    }//必须重写
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         map.onSaveInstanceState(outState)
-    } //必须重写
+    }//必须重写
 
     override fun onDestroy() {
         super.onDestroy()
@@ -235,7 +235,7 @@ class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListene
             AHelper.app.unregisterReceiver(it)
             geoFenceReceiver = null
         }
-    } //必须重写
+    }//必须重写
 
     val changeStop = aMap?.stopAnimation()
 
@@ -1432,7 +1432,6 @@ class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListene
             query = DistrictSearchQuery().apply {
                 keywords = district
                 isShowBoundary = true
-                keywordsLevel = "country"//过时不再需要设置
             }
             setOnDistrictSearchListener(this@MapActivity)
         }.searchDistrictAsyn()
@@ -1453,8 +1452,8 @@ class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListene
             false -> {
                 var subDistrictList: MutableList<DistrictItem>? = null
                 result?.let {
-                    when {
-                        result.aMapException.errorCode === AMapException.CODE_AMAP_SUCCESS -> {
+                    when (result.aMapException.errorCode) {
+                        AMapException.CODE_AMAP_SUCCESS -> {
                             val district: MutableList<DistrictItem> = it.district
                             if (!isInit) {
                                 isInit = true
@@ -1473,8 +1472,8 @@ class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListene
             }
             true -> result?.run {
                 district?.let {
-                    when {
-                        aMapException?.errorCode === AMapException.CODE_AMAP_SUCCESS -> it[0].let { districtItem ->
+                    when (aMapException?.errorCode) {
+                        AMapException.CODE_AMAP_SUCCESS -> it[0].let { districtItem ->
                             districtItem.center.toLatLng.let { latLng ->
                                 aMap?.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 8f))
                             }
@@ -1515,9 +1514,9 @@ class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListene
     private var listProvince: MutableList<DistrictItem> = mutableListOf()
     private var listCity: MutableList<DistrictItem> = mutableListOf()
     private var listDistrict: MutableList<DistrictItem> = mutableListOf()
-    private var spinnerProvince: Spinner? = null//TODO
-    private var spinnerCity: Spinner? = null//TODO
-    private var spinnerDistrict: Spinner? = null//TODO
+    var spinnerProvince: Spinner? = null//TODO
+    var spinnerCity: Spinner? = null//TODO
+    var spinnerDistrict: Spinner? = null//TODO
     var infoProvince: String? = null
     var infoCity: String? = null
     var infoDistrict: String? = null
@@ -2915,7 +2914,7 @@ class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListene
     var locationInfo: String = ""
     private val fenceHandler: Handler = object : Handler(Looper.getMainLooper()) {
         override fun handleMessage(msg: Message) {
-            when (msg?.what) {
+            when (msg.what) {
                 0 -> {
                     StringBuffer().apply {
                         append("添加围栏成功")
@@ -3030,4 +3029,5 @@ class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListene
             else -> geoFenceClient.addGeoFence(keyword, poiType, city, size, customId)
         }
     }
+    val clearGeoFence = geoFenceClient.removeGeoFence()
 }
