@@ -3,6 +3,7 @@ package com.autoselect.widgeter
 import android.content.Context
 import android.content.res.TypedArray
 import android.os.Handler
+import android.os.Looper
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.animation.AnimationUtils

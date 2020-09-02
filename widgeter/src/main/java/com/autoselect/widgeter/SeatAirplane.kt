@@ -7,6 +7,7 @@ import android.content.Context
 import android.graphics.*
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import android.os.Message
 import android.util.AttributeSet
 import android.view.GestureDetector

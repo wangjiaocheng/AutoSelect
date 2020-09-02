@@ -8,18 +8,18 @@
 | 105  | ### *04.ProgressRound(165)*                                                                                                                                                                                                                     | 弧度 |
 | 106  | ### *05.RunTextView(12)*                                                                                                                                                                                                                        | 跑马 |
 | 107  | ### *06.TextAutoZoom(210)*                                                                                                                                                                                                                      | 字调 |
-| 108  | ### *07.TextViewVertical(99)*                                                                                                                                                                                                                   | 单滚 |
+| 108  | ### *07.TextViewVertical(100)*                                                                                                                                                                                                                   | 单滚 |
 | 109  | ### *08.TextViewVerticalMore(40)*                                                                                                                                                                                                               | 多滚 |
-| 110  | ### *09.AutoImageView(34)*                                                                                                                                                                                                                      | 平滚 |
+| 110  | ### *09.AutoImageView(35)*                                                                                                                                                                                                                      | 平滚 |
 | 111  | ### *10.PinView：ScaleImageView、ImageSource、ImageViewState、DecoderFactory、ImageDecoder、RegionDecoder(34+2108)*                                                                                                                              | 图调 |
 | 112  | ### *11.Captcha(117)*                                                                                                                                                                                                                           | 验证 |
 | 113  | ### *12.SwipeCaptcha(392)*                                                                                                                                                                                                                      | 滑块 |
 | 114  | ### *13.ScratchCard(48)*                                                                                                                                                                                                                        | 刮刮 |
 | 115  | ### *14.CardStackView：AdapterAnimator、AdapterAllMoveDownAnimator、AdapterUpDownAnimator、AdapterUpDownStackAnimator、ViewDataObserver、AdapterDataObservable、ViewHolder、Adapter、AdapterStack、DelegateScrollStack、DelegateScroll(861+36+7)* | 卡组 |
 | 116  | ### *15.CobwebView：RotateInfo(411)*                                                                                                                                                                                                            | 蛛网 |
-| 117  | ### *16.NetSpeedView(154)*                                                                                                                                                                                                                      | 网速 |
-| 118  | ### *17.SeatAirplane(891)*                                                                                                                                                                                                                      | 机座 |
-| 119  | ### *18.SeatMovie(716)*                                                                                                                                                                                                                         | 影座 |
+| 117  | ### *16.NetSpeedView(155)*                                                                                                                                                                                                                      | 网速 |
+| 118  | ### *17.SeatAirplane(892)*                                                                                                                                                                                                                      | 机座 |
+| 119  | ### *18.SeatMovie(717)*                                                                                                                                                                                                                         | 影座 |
 | 120  | ### *19.RulerWheelView(464)*                                                                                                                                                                                                                    | 刻度 |
 | 121  | ### *20.ShoppingView(362)*                                                                                                                                                                                                                      | 商品 |
 | 122  | ### *21.ShineView：ShineButton、PorterShapeImageView、PorterImageView、ShineAnimator、EasingInterpolator、EasingProvider、Ease(699)*                                                                                                             | 点赞 |
@@ -167,7 +167,7 @@
 02 |2. minTextSize                                    |功能
 03 |3. enableSizeCache                                |功能
 >Title
-### *07.单滚TextViewVertical(99)*
+### *07.单滚TextViewVertical(100)*
 序号|方法|功能
 ---|--------------------------------------------------|---
 01 |1. mTextSize                                      |功能
@@ -190,7 +190,7 @@
 >anim资源
 >>1. anim_marquee_in.xml
 >>2. anim_marquee_out.xml
-### *09.平滚AutoImageView(34)*
+### *09.平滚AutoImageView(35)*
 序号|方法|功能
 ---|--------------------------------------------------|---
 01 |1. imageView                                      |功能
@@ -373,7 +373,7 @@
 15 |3. getAngle                                       |功能
 16 |4. CIRCLE_ANGLE                                   |功能
 17 |5. getAngleNormalized                             |功能
-### *16.网速NetSpeedView(154)*
+### *16.网速NetSpeedView(155)*
 序号|方法|功能
 ---|--------------------------------------------------|---
 01 |1. isMulti                                        |功能
@@ -382,7 +382,7 @@
 04 |4. setTextColor                                   |功能
 05 |5. setTextSize                                    |功能
 >netspeed_view.xml
-### *17.机座SeatAirplane(891)*
+### *17.机座SeatAirplane(892)*
 序号|方法|功能
 ---|--------------------------------------------------|---
 01 |1. setEmptySelecting                              |功能
@@ -399,7 +399,7 @@
 >>1. seat_gray.png
 >>2. seat_green.png
 >>3. seat_sold.png
-### *18.影座SeatMovie(716)*
+### *18.影座SeatMovie(717)*
 序号|方法|功能
 ---|--------------------------------------------------|---
 01 |1. numRow                                         |功能
