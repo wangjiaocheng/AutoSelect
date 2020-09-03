@@ -2722,7 +2722,7 @@ class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListene
         }
     private val locationHandler: Handler = object : Handler(Looper.getMainLooper()) {
         override fun dispatchMessage(msg: Message) {
-            locationMsg = when (msg?.what) {
+            locationMsg = when (msg.what) {
                 MSG_LOCATION_START -> "正在定位..."
                 MSG_LOCATION_FINISH -> (msg.obj as AMapLocation).locationStr
                 MSG_LOCATION_STOP -> "定位停止"
