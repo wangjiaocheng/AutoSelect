@@ -22,6 +22,7 @@ import com.autoselect.widgeter.banner.trans.TransformerMz
 import com.autoselect.widgeter.banner.trans.TransformerZoomOutPage
 import com.autoselect.widgeter.banner.view.*
 import com.autoselect.widgeter.banner.view.RecyclerViewHolder
+import com.autoselect.widgeter.banner.view.ViewPagerHelper.initSwitchTime
 
 class Banner @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null) :
     FrameLayout(context, attrs) {
@@ -49,7 +50,7 @@ class Banner @JvmOverloads constructor(context: Context, attrs: AttributeSet? = 
         addView(viewPager2)//Viewpager2为final类不能继承，只能通过FrameLayout添加
         initAttrs(attrs)
         mInflater = LayoutInflater.from(context)
-        ViewPagerHelper.initSwitchTime(getContext(), viewPager2, mSmoothTime)
+        initSwitchTime(getContext(), viewPager2, mSmoothTime)
         DisplayMetrics().apply {
             (context.getSystemService(Context.WINDOW_SERVICE) as WindowManager)
                 .defaultDisplay.getMetrics(this)
@@ -181,7 +182,7 @@ class Banner @JvmOverloads constructor(context: Context, attrs: AttributeSet? = 
         }
 
         override fun getItemCount(): Int =
-            if (isCycle) list.size + ViewPagerHelper.LOOP_COUNT else list.size
+            if (isCycle) list.size + LOOP_COUNT else list.size
     }
 
     private var mLastTime: Long = 0
@@ -203,7 +204,7 @@ class Banner @JvmOverloads constructor(context: Context, attrs: AttributeSet? = 
     private fun getStartSelectItem(readCount: Int): Int = when {
         readCount == 0 -> 0
         isCycle -> {
-            val count = ViewPagerHelper.LOOP_COUNT / 2
+            val count = LOOP_COUNT / 2
             var currentItem = count
             when {
                 count % readCount == 0 -> currentItem
