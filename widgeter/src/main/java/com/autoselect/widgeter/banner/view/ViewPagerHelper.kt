@@ -1,4 +1,4 @@
-package com.autoselect.widgeter.banner
+package com.autoselect.widgeter.banner.view
 
 import android.content.Context
 import android.widget.Scroller

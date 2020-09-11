@@ -1,4 +1,4 @@
-package com.autoselect.widgeter.banner.view
+package com.autoselect.widgeter.banner
 
 import android.content.Context
 import android.graphics.Rect
@@ -13,7 +13,6 @@ import android.widget.FrameLayout
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.autoselect.widgeter.R
-import com.autoselect.widgeter.banner.ViewPagerHelper
 import com.autoselect.widgeter.banner.indicator.IndicatorCircle
 import com.autoselect.widgeter.banner.indicator.IndicatorRect
 import com.autoselect.widgeter.banner.indicator.IndicatorText
@@ -21,6 +20,8 @@ import com.autoselect.widgeter.banner.trans.TransformerCard
 import com.autoselect.widgeter.banner.trans.TransformerDepthPage
 import com.autoselect.widgeter.banner.trans.TransformerMz
 import com.autoselect.widgeter.banner.trans.TransformerZoomOutPage
+import com.autoselect.widgeter.banner.view.*
+import com.autoselect.widgeter.banner.view.RecyclerViewHolder
 
 class Banner @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null) :
     FrameLayout(context, attrs) {
