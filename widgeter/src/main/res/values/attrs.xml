@@ -137,4 +137,43 @@
         <attr name="animLength" format="dimension" />
         <attr name="anim_duration" format="integer" />
     </declare-styleable>
+    <declare-styleable name="IndicatorCircle">
+        <attr name="cir_normalColor" format="color" />
+        <attr name="cir_selectedColor" format="color" />
+        <attr name="cir_horizon_margin" format="dimension" />
+        <attr name="cir_canMove" format="boolean" />
+        <attr name="cir_size" format="dimension" />
+        <attr name="cir_rect_width" format="dimension" />
+        <attr name="cir_scale_factor" format="float" />
+        <attr name="cir_type">
+            <enum name="normal" value="0" />
+            <enum name="cirToRect" value="1" />
+            <enum name="scale" value="2" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="IndicatorRect">
+        <attr name="rect_normalColor" format="color" />
+        <attr name="rect_selectedColor" format="color" />
+        <attr name="rect_horizon_margin" format="dimension" />
+        <attr name="rect_canMove" format="boolean" />
+        <attr name="rect_height" format="dimension" />
+        <attr name="rect_width" format="dimension" />
+        <attr name="rect_round_size" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="Banner">
+        <attr name="banner_isAutoLoop" format="boolean" />
+        <attr name="banner_isCycle" format="boolean" />
+        <attr name="banner_loopTime" format="integer" />
+        <attr name="banner_switchTime" format="integer" />
+        <attr name="banner_loop_max_count" format="integer" />
+        <attr name="banner_l_margin" format="dimension" />
+        <attr name="banner_r_margin" format="dimension" />
+        <attr name="banner_card_height" format="integer|dimension" />
+        <attr name="banner_transformer">
+            <enum name="card" value="0" />
+            <enum name="mz" value="1" />
+            <enum name="zoom" value="2" />
+            <enum name="depth" value="3" />
+        </attr>
+    </declare-styleable>
 </resources>

@@ -24,6 +24,7 @@
 | 121  | ### *20.ShoppingView(362)*                                                                                                                                                                                                                      | 商品 |
 | 122  | ### *21.ShineView：ShineButton、PorterShapeImageView、PorterImageView、ShineAnimator、EasingInterpolator、EasingProvider、Ease(699)*                                                                                                             | 点赞 |
 | 123  | ### *22.HeartLayout：FloatAnimation、PathAnimator、HeartView(238)*                                                                                                                                                                               | 爱心 |
+| 123  | ### *22.Banner：ViewPagerHelper、TypeBannerTrans、BeanPage、PageListener、RecyclerViewHolder、RecyclerBaseAdapter、TypeTrans、Transformer、TransformerCard、TransformerDepthPage、TransformerMz、TransformerZoomOutPage、BeanCircle、BeanRect、TypeIndicatorCircle、IndicatorCircle、IndicatorRect、IndicatorText(1076)*| 横幅 |
 ## **控件库widgeter**
 >xml资源
 >>1. attrs.xml
@@ -456,3 +457,16 @@
 >mipmap
 >>1. anim_heart.png
 >>2. anim_heart_border.png
+### *23.横幅Banner：ViewPagerHelper、TypeBannerTrans、BeanPage、PageListener、RecyclerViewHolder、RecyclerBaseAdapter、TypeTrans、Transformer、TransformerCard、TransformerDepthPage、TransformerMz、TransformerZoomOutPage、BeanCircle、BeanRect、TypeIndicatorCircle、IndicatorCircle、IndicatorRect、IndicatorText(1076)*
+序号|方法|功能
+---|--------------------------------------------------|---
+01 |1. viewPager2                                     |功能
+02 |2. setCurrentPosition                             |功能
+03 |3. addIndicator                                   |功能
+04 |4. addPageBean                                    |功能
+05 |5. isOutVisibleWindow                             |功能
+06 |6. stopAnim                                       |功能
+07 |7. startAnim                                      |功能
+08 |8. setPageListener                                |功能
+09 |9. addPagerData                                   |Indicator
+10 |10. addRectBean                                   |Indicator
