@@ -1,4 +1,4 @@
-package com.autoselect.widgeter.banner.indicator
+package com.autoselect.widgeter.banner.indicat
 
 import android.content.Context
 import android.util.AttributeSet

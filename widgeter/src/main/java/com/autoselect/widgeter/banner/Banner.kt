@@ -13,16 +13,15 @@ import android.widget.FrameLayout
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.autoselect.widgeter.R
-import com.autoselect.widgeter.banner.indicator.IndicatorCircle
-import com.autoselect.widgeter.banner.indicator.IndicatorRect
-import com.autoselect.widgeter.banner.indicator.IndicatorText
+import com.autoselect.widgeter.banner.indicat.IndicatorCircle
+import com.autoselect.widgeter.banner.indicat.IndicatorRect
+import com.autoselect.widgeter.banner.indicat.IndicatorText
 import com.autoselect.widgeter.banner.trans.TransformerCard
 import com.autoselect.widgeter.banner.trans.TransformerDepthPage
 import com.autoselect.widgeter.banner.trans.TransformerMz
 import com.autoselect.widgeter.banner.trans.TransformerZoomOutPage
-import com.autoselect.widgeter.banner.view.*
-import com.autoselect.widgeter.banner.view.RecyclerViewHolder
-import com.autoselect.widgeter.banner.view.ViewPagerHelper.initSwitchTime
+import com.autoselect.widgeter.banner.listen.*
+import com.autoselect.widgeter.banner.listen.RecyclerViewHolder
 
 class Banner @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null) :
     FrameLayout(context, attrs) {
@@ -50,7 +49,7 @@ class Banner @JvmOverloads constructor(context: Context, attrs: AttributeSet? = 
         addView(viewPager2)//Viewpager2为final类不能继承，只能通过FrameLayout添加
         initAttrs(attrs)
         mInflater = LayoutInflater.from(context)
-        initSwitchTime(getContext(), viewPager2, mSmoothTime)
+        BannerHelper.initSwitchTime(getContext(), viewPager2, mSmoothTime)
         DisplayMetrics().apply {
             (context.getSystemService(Context.WINDOW_SERVICE) as WindowManager)
                 .defaultDisplay.getMetrics(this)

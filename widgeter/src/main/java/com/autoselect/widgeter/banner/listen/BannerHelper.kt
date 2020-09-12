@@ -1,14 +1,12 @@
-package com.autoselect.widgeter.banner.view
+package com.autoselect.widgeter.banner.listen
 
 import android.content.Context
-import android.widget.Scroller
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSmoothScroller
 import androidx.recyclerview.widget.RecyclerView
-import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.widget.ViewPager2
 
-object ViewPagerHelper {
+object BannerHelper {
     const val LOOP_COUNT = 5000
     const val LOOP_TAIL_MODE = 0x1001
     const val LOOP_MODE = 0x1002
@@ -16,21 +14,6 @@ object ViewPagerHelper {
     const val VIEWPAGER_DATA_URL = 0x2002
     const val VIEWPAGER_DATA_RES = 0x2003
     const val VIEWPAGER_DATA_VIEW = 0x2004
-    fun initSwitchTime(context: Context?, viewPager: ViewPager?, time: Int) {
-        try {
-            ViewPager::class.java.getDeclaredField("mScroller")
-                .apply { isAccessible = true }
-                .let { it[viewPager] = ViewPagerScroller(context, time) }
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
-    }
-
-    internal class ViewPagerScroller(context: Context?, var time: Int) : Scroller(context) {
-        override fun startScroll(startX: Int, startY: Int, dx: Int, dy: Int, duration: Int) =
-            super.startScroll(startX, startY, dx, dy, time)
-    }
-
     fun initSwitchTime(context: Context?, viewPager2: ViewPager2, time: Int) = try {
         val recyclerView = viewPager2.getChildAt(0) as RecyclerView
         recyclerView.overScrollMode = RecyclerView.OVER_SCROLL_NEVER

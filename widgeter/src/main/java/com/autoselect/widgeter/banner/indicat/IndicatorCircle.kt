@@ -1,4 +1,4 @@
-package com.autoselect.widgeter.banner.indicator
+package com.autoselect.widgeter.banner.indicat
 
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator

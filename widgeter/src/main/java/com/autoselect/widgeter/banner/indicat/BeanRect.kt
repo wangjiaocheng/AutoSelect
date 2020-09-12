@@ -1,4 +1,4 @@
-package com.autoselect.widgeter.banner.indicator
+package com.autoselect.widgeter.banner.indicat
 
 data class BeanRect(
     var normalColor: Int = -2,//矩形默认颜色

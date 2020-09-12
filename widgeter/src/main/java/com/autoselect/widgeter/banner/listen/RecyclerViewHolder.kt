@@ -1,4 +1,4 @@
-package com.autoselect.widgeter.banner.view
+package com.autoselect.widgeter.banner.listen
 
 import android.content.Context
 import android.util.SparseArray

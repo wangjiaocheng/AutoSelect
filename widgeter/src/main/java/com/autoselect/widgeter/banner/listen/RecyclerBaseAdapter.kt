@@ -1,4 +1,4 @@
-package com.autoselect.widgeter.banner.view
+package com.autoselect.widgeter.banner.listen
 
 import android.view.View
 import android.view.ViewGroup

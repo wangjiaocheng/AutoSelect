@@ -1,4 +1,4 @@
-package com.autoselect.widgeter.banner.indicator
+package com.autoselect.widgeter.banner.indicat
 
 data class BeanCircle(
     var normalColor: Int = -2,//圆点默认颜色

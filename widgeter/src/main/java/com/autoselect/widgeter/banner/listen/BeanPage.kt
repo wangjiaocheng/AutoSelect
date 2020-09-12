@@ -1,4 +1,4 @@
-package com.autoselect.widgeter.banner.view
+package com.autoselect.widgeter.banner.listen
 
 data class BeanPage(
     var isAutoLoop: Boolean = false,//是否开始自动轮播
