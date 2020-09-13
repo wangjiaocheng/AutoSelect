@@ -25,6 +25,7 @@
 | 122  | ### *21.ShineView：ShineButton、PorterShapeImageView、PorterImageView、ShineAnimator、EasingInterpolator、EasingProvider、Ease(699)*                                                                                                             | 点赞 |
 | 123  | ### *22.HeartLayout：FloatAnimation、PathAnimator、HeartView(238)*                                                                                                                                                                               | 爱心 |
 | 124  | ### *23.Banner：BannerHelper、TypeBannerTrans、BeanPage、PageListener、RecyclerViewHolder、RecyclerBaseAdapter、TypeTrans、Transformer、TransformerCard、TransformerDepthPage、TransformerMz、TransformerZoomOutPage、BeanCircle、BeanRect、TypeIndicatorCircle、IndicatorCircle、IndicatorRect、IndicatorText(1060)*| 横幅 |
+| 125  | ### *24.LayoutFlowTab、LayoutFlowLabel：LayoutFlowScroll、LayoutFlow、AttrsHelper、AdapterFlowTab、AdapterFlowLabel、AdapterTemplate、AdapterFlowBase、FlowListener、FlowListenerAdapter、ActionRect、ActionTri、ActionRound、ActionColor、ActionRes、ActionBase、TextViewTabColor、BeanTab、BeanLabel、TabValue、TabTypeEvaluator、ConstantsFlow、ViewPagerHelper()*| 流式 |
 ## **控件库widgeter**
 >xml资源
 >>1. attrs.xml
@@ -470,3 +471,16 @@
 08 |8. setPageListener                                |功能
 09 |9. addPagerData                                   |Indicator
 10 |10. addRectBean                                   |Indicator
+### *24.流式LayoutFlowTab、LayoutFlowLabel：LayoutFlowScroll、LayoutFlow、AttrsHelper、AdapterFlowTab、AdapterFlowLabel、AdapterTemplate、AdapterFlowBase、FlowListener、FlowListenerAdapter、ActionRect、ActionTri、ActionRound、ActionColor、ActionRes、ActionBase、TextViewTabColor、BeanTab、BeanLabel、TabValue、TabTypeEvaluator、ConstantsFlow、ViewPagerHelper()*
+序号|方法|功能
+---|--------------------------------------------------|---
+01 |1.                                                |功能
+02 |2.                                                |功能
+03 |3.                                                |功能
+04 |4.                                                |功能
+05 |5.                                                |功能
+06 |6.                                                |功能
+07 |7.                                                |功能
+08 |8.                                                |功能
+09 |9.                                                |功能
+10 |10.                                               |功能
