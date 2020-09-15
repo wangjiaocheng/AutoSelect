@@ -474,23 +474,23 @@
 ### *24.流式LayoutTab、LayoutLabel：LayoutScroll、LayoutFlow、AttrsHelper、AdapterTab、AdapterLabel、AdapterTemplate、AdapterFlow、FlowListener、FlowListenerAdapter、ActionRect、ActionTri、ActionRound、ActionColor、ActionRes、ActionBase、TextViewTabColor、BeanTab、BeanLabel、TabValue、TabTypeEvaluator、ConstantsFlow、ViewPagerHelper(2052)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. isLabelFlow                                    |LayoutFlowTab
-02 |2. setItemAnim                                    |LayoutFlowTab
-03 |3. isItemClick                                    |LayoutFlowTab
-04 |4. setSelectedColor                               |LayoutFlowTab
-05 |5. setItemClickByOutSet                           |LayoutFlowTab
-06 |6. setDefaultPosition                             |LayoutFlowTab
-07 |7. setTextId                                      |LayoutFlowTab
-08 |8. setCusAction                                   |LayoutFlowTab
-09 |9. mAdapter                                       |LayoutFlowTab
-10 |10.setTabBean                                     |LayoutFlowTab
-11 |11.isTabAutoScroll                                |LayoutFlowTab
-12 |12.setUnSelectedColor                             |LayoutFlowTab
-13 |13.setViewPager                                   |LayoutFlowTab
-14 |14.mMaxSelectCount                                |LayoutFlowLabel
-15 |15.isAutoScroll                                   |LayoutFlowLabel
-16 |16.isLabelAutoScroll                              |LayoutFlowLabel
-17 |17.setLabelBean                                   |LayoutFlowLabel
-18 |18.setSelects                                     |LayoutFlowLabel
-19 |19.setAdapter                                     |LayoutFlowLabel
+01 |1. isLabelFlow                                    |LayoutTab
+02 |2. setItemAnim                                    |LayoutTab
+03 |3. isItemClick                                    |LayoutTab
+04 |4. setSelectedColor                               |LayoutTab
+05 |5. setItemClickByOutSet                           |LayoutTab
+06 |6. setDefaultPosition                             |LayoutTab
+07 |7. setTextId                                      |LayoutTab
+08 |8. setCusAction                                   |LayoutTab
+09 |9. mAdapter                                       |LayoutTab
+10 |10.setTabBean                                     |LayoutTab
+11 |11.isTabAutoScroll                                |LayoutTab
+12 |12.setUnSelectedColor                             |LayoutTab
+13 |13.setViewPager                                   |LayoutTab
+14 |14.mMaxSelectCount                                |LayoutLabel
+15 |15.isAutoScroll                                   |LayoutLabel
+16 |16.isLabelAutoScroll                              |LayoutLabel
+17 |17.setLabelBean                                   |LayoutLabel
+18 |18.setSelects                                     |LayoutLabel
+19 |19.setAdapter                                     |LayoutLabel
 >implementation "androidx.constraintlayout:constraintlayout:2.0.1"
