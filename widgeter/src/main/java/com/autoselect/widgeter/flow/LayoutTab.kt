@@ -42,7 +42,7 @@ class LayoutTab//表格流式布局：数据封装重绘
     init {
         isClickable = true
         mBeanTab =
-            AttrsHelper.getBeanTab(context.obtainStyledAttributes(attrs, R.styleable.LayoutFlowTab))
+            AttrsHelper.getBeanTab(context.obtainStyledAttributes(attrs, R.styleable.LayoutTab))
         mScroller = Scroller(getContext())
         visualCount = mBeanTab?.visualCount ?: 0
         tabOrientation = mBeanTab?.tabOrientation ?: 0

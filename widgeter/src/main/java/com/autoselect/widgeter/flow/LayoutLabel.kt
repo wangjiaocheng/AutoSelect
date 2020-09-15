@@ -26,19 +26,19 @@ class LayoutLabel//标签流式布局：支持单选多选
     private var mHandUpView: View? = null
 
     init {
-        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.LayoutFlowLabel)
+        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.LayoutLabel)
         try {
             typedArray.run {
-                mMaxSelectCount = getInteger(R.styleable.LayoutFlowLabel_label_maxSelectCount, 1)
-                isAutoScroll = getBoolean(R.styleable.LayoutFlowLabel_label_isAutoScroll, true)
-                mShowMoreLines = getInteger(R.styleable.LayoutFlowLabel_label_showLine, -1)
+                mMaxSelectCount = getInteger(R.styleable.LayoutLabel_label_maxSelectCount, 1)
+                isAutoScroll = getBoolean(R.styleable.LayoutLabel_label_isAutoScroll, true)
+                mShowMoreLines = getInteger(R.styleable.LayoutLabel_label_showLine, -1)
                 labelLines = mShowMoreLines
                 mShowMoreColor =
-                    getColor(R.styleable.LayoutFlowLabel_label_showMore_Color, Color.RED)
+                    getColor(R.styleable.LayoutLabel_label_showMore_Color, Color.RED)
                 mShowMoreLayoutId =
-                    getResourceId(R.styleable.LayoutFlowLabel_label_showMore_layoutId, -1)
+                    getResourceId(R.styleable.LayoutLabel_label_showMore_layoutId, -1)
                 mHandUpLayoutId =
-                    getResourceId(R.styleable.LayoutFlowLabel_label_handUp_layoutId, -1)
+                    getResourceId(R.styleable.LayoutLabel_label_handUp_layoutId, -1)
             }
         } finally {
             typedArray.recycle()
