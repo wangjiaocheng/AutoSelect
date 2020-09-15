@@ -3,10 +3,10 @@ package com.autoselect.widgeter.flow.action
 import android.graphics.Canvas
 import android.graphics.Paint
 import com.autoselect.widgeter.flow.bean.TabValue
-import com.autoselect.widgeter.flow.LayoutFlowTab
+import com.autoselect.widgeter.flow.LayoutTab
 
 class ActionRect : ActionBase() {
-    override fun config(parentView: LayoutFlowTab) {
+    override fun config(parentView: LayoutTab) {
         super.config(parentView)
         mPaint.strokeCap = Paint.Cap.ROUND
         parentView.getChildAt(mCurrentIndex)?.let { child ->

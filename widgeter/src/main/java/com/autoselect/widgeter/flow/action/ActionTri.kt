@@ -3,11 +3,11 @@ package com.autoselect.widgeter.flow.action
 import android.graphics.Canvas
 import android.graphics.Path
 import com.autoselect.widgeter.flow.bean.TabValue
-import com.autoselect.widgeter.flow.LayoutFlowTab
+import com.autoselect.widgeter.flow.LayoutTab
 
 class ActionTri : ActionBase() {
     private var mPath: Path? = null
-    override fun config(parentView: LayoutFlowTab) {
+    override fun config(parentView: LayoutTab) {
         super.config(parentView)
         mPath = Path()
         parentView.getChildAt(0)?.let { child ->

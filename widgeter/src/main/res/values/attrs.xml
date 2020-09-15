@@ -180,7 +180,7 @@
         <attr name="colorText_default_color" format="color|reference" />
         <attr name="colorText_change_color" format="color|reference" />
     </declare-styleable>
-    <declare-styleable name="LayoutFlowTab">
+    <declare-styleable name="LayoutTab">
         <attr name="tab_type">
             <enum name="rect" value="0" />
             <enum name="tri" value="1" />
@@ -211,7 +211,7 @@
         <attr name="tab_isAutoScroll" format="boolean" />
         <attr name="tab_visual_count" format="integer" />
     </declare-styleable>
-    <declare-styleable name="LayoutFlowLabel">
+    <declare-styleable name="LayoutLabel">
         <attr name="label_maxSelectCount" format="integer" />
         <attr name="label_isAutoScroll" format="boolean" />
         <attr name="label_showLine" format="integer" />

@@ -2,7 +2,7 @@ package com.autoselect.widgeter.flow.adapter
 
 import android.view.View
 
-abstract class AdapterFlowBase<T>(mLayoutId: Int, mDataList: MutableList<*>?) {
+abstract class AdapterFlow<T>(mLayoutId: Int, mDataList: MutableList<*>?) {
     val layoutId: Int = mLayoutId//获取id
     val dataList: MutableList<*>? = mDataList//获取数据
     val itemCount: Int = mDataList?.size ?: 0//获取个数

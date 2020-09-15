@@ -6,13 +6,13 @@ import android.widget.ImageView
 import android.widget.TextView
 
 abstract class AdapterTemplate<T>(layoutId: Int, data: MutableList<*>?) :
-    AdapterFlowBase<T?>(layoutId, data) {
-    fun addChildrenClick(view: View?, viewId: Int, position: Int): AdapterFlowBase<*>? = apply {
+    AdapterFlow<T?>(layoutId, data) {
+    fun addChildrenClick(view: View?, viewId: Int, position: Int): AdapterFlow<*>? = apply {
         val child = view?.findViewById<View?>(viewId)
         child?.setOnClickListener { onItemChildClick(child, position) }
     }
 
-    fun addChildrenLongClick(view: View?, viewId: Int, position: Int): AdapterFlowBase<*>? = apply {
+    fun addChildrenLongClick(view: View?, viewId: Int, position: Int): AdapterFlow<*>? = apply {
         val child = view?.findViewById<View?>(viewId)
         child?.setOnLongClickListener { onItemChildLongClick(child, position) }
     }

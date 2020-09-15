@@ -3,7 +3,7 @@ package com.autoselect.widgeter.flow.action
 import android.graphics.Canvas
 import com.autoselect.widgeter.flow.bean.BeanTab
 import com.autoselect.widgeter.flow.bean.TabValue
-import com.autoselect.widgeter.flow.LayoutFlowTab
+import com.autoselect.widgeter.flow.LayoutTab
 
 class ActionRound : ActionBase() {
     private var mRound = 0f
@@ -12,7 +12,7 @@ class ActionRound : ActionBase() {
         if (beanTab?.tabRoundSize != -1) mRound = beanTab?.tabRoundSize?.toFloat() ?: -1f
     }
 
-    override fun config(parentView: LayoutFlowTab) {
+    override fun config(parentView: LayoutTab) {
         super.config(parentView)
         parentView.getChildAt(0)?.let { child ->
             val l = (mBeanTab?.tabMarginLeft ?: 0) + child.left.toFloat()

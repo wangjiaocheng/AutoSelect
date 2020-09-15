@@ -9,12 +9,12 @@ import android.view.View
 import com.autoselect.widgeter.R
 import com.autoselect.widgeter.flow.bean.BeanLabel
 import com.autoselect.widgeter.flow.adapter.FlowListenerAdapter
-import com.autoselect.widgeter.flow.adapter.AdapterFlowLabel
-import com.autoselect.widgeter.flow.layout.LayoutFlowScroll
+import com.autoselect.widgeter.flow.adapter.AdapterLabel
+import com.autoselect.widgeter.flow.layout.LayoutScroll
 
-class LayoutFlowLabel//标签流式布局：支持单选多选
+class LayoutLabel//标签流式布局：支持单选多选
 @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) :
-    LayoutFlowScroll(context, attrs, defStyleAttr) {
+    LayoutScroll(context, attrs, defStyleAttr) {
     var mMaxSelectCount: Int
     var isAutoScroll: Boolean
     private var mShowMoreLines = -1
@@ -46,11 +46,11 @@ class LayoutFlowLabel//标签流式布局：支持单选多选
         if (mShowMoreLayoutId != -1) {
             isHasMoreView = true
             mMoreView = LayoutInflater.from(getContext())
-                .inflate(mShowMoreLayoutId, this@LayoutFlowLabel, false)
+                .inflate(mShowMoreLayoutId, this@LayoutLabel, false)
         }
         if (mHandUpLayoutId != -1)
             mHandUpView = LayoutInflater.from(getContext())
-                .inflate(mHandUpLayoutId, this@LayoutFlowLabel, false)
+                .inflate(mHandUpLayoutId, this@LayoutLabel, false)
         isClickable = true
         setWillNotDraw(false)
     }
@@ -76,7 +76,7 @@ class LayoutFlowLabel//标签流式布局：支持单选多选
         }
     }//设置自定义属性
 
-    private var mAdapter: AdapterFlowLabel<*>? = null
+    private var mAdapter: AdapterLabel<*>? = null
     private val notifyData = {
         removeAllViews()
         for (i in 0 until (mAdapter?.itemCount ?: 0)) {
@@ -103,7 +103,7 @@ class LayoutFlowLabel//标签流式布局：支持单选多选
         }
     }//设置要选中的数据
 
-    private fun onItemViewConfig(flowAdapter: AdapterFlowLabel<*>?, view: View?, position: Int) {
+    private fun onItemViewConfig(flowAdapter: AdapterLabel<*>?, view: View?, position: Int) {
         view?.setOnLongClickListener { flowAdapter?.onItemLongClick(it, position) ?: false }
         view?.setOnClickListener OnClickListener@{
             flowAdapter?.onItemClick(it, flowAdapter.dataList?.get(position), position)
@@ -168,7 +168,7 @@ class LayoutFlowLabel//标签流式布局：支持单选多选
         }
     }//获取选中数据
 
-    fun setAdapter(adapter: AdapterFlowLabel<*>?) {
+    fun setAdapter(adapter: AdapterLabel<*>?) {
         mAdapter = adapter
         mAdapter?.flowListenerAdapter = LabelListener()
         notifyData

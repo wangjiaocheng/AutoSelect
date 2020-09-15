@@ -2,7 +2,7 @@ package com.autoselect.widgeter.flow.adapter
 
 import android.view.View
 
-abstract class AdapterFlowLabel<T>(layoutId: Int, data: MutableList<T?>?) :
+abstract class AdapterLabel<T>(layoutId: Int, data: MutableList<T?>?) :
     AdapterTemplate<T?>(layoutId, data) {
     val resetStatus = flowListenerAdapter?.resetAllStatus()//恢复所有状态
     open fun onReachMaxCount(ids: MutableList<Int?>, count: Int) {}//达到最大值

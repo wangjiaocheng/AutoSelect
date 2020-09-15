@@ -17,12 +17,12 @@ import com.autoselect.widgeter.flow.common.ConstantsFlow
 import com.autoselect.widgeter.flow.bean.BeanTab
 import com.autoselect.widgeter.flow.bean.TabTypeEvaluator
 import com.autoselect.widgeter.flow.bean.TabValue
-import com.autoselect.widgeter.flow.LayoutFlowTab
+import com.autoselect.widgeter.flow.LayoutTab
 import kotlin.math.abs
 
 abstract class ActionBase : OnPageChangeListener {
     var mPaint: Paint = Paint().apply { isAntiAlias = true }
-    private var mParentView: LayoutFlowTab? = null
+    private var mParentView: LayoutTab? = null
     var mBeanTab: BeanTab? = null
     open fun configAttrs(beanTab: BeanTab?) {
         mBeanTab = beanTab
@@ -42,7 +42,7 @@ abstract class ActionBase : OnPageChangeListener {
     private var mOffset = 0f
     private var isColorText = false
     private var isTextView = false
-    open fun config(parentView: LayoutFlowTab) {
+    open fun config(parentView: LayoutTab) {
         mParentView = parentView
         if (parentView.childCount > 0) mBeanTab?.let {
             mContext = mParentView?.context

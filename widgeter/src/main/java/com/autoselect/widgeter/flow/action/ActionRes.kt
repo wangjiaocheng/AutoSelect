@@ -7,7 +7,7 @@ import android.graphics.drawable.Drawable
 import androidx.core.content.ContextCompat
 import com.autoselect.widgeter.flow.bean.BeanTab
 import com.autoselect.widgeter.flow.bean.TabValue
-import com.autoselect.widgeter.flow.LayoutFlowTab
+import com.autoselect.widgeter.flow.LayoutTab
 
 class ActionRes : ActionBase() {
     private var mRes = -1
@@ -19,7 +19,7 @@ class ActionRes : ActionBase() {
     private var mDrawable: Drawable? = null
     private var mBitmap: Bitmap? = null
     private var mSrcRect: Rect? = null
-    override fun config(parentView: LayoutFlowTab) {
+    override fun config(parentView: LayoutTab) {
         super.config(parentView)
         if (mRes != -1) mDrawable = mContext?.let { ContextCompat.getDrawable(it, mRes) }
         parentView.getChildAt(0)?.let { child ->

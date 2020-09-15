@@ -13,16 +13,16 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.viewpager.widget.ViewPager
 import com.autoselect.widgeter.R
 import com.autoselect.widgeter.flow.action.*
-import com.autoselect.widgeter.flow.adapter.AdapterFlowTab
+import com.autoselect.widgeter.flow.adapter.AdapterTab
 import com.autoselect.widgeter.flow.adapter.FlowListenerAdapter
 import com.autoselect.widgeter.flow.bean.BeanTab
 import com.autoselect.widgeter.flow.common.ConstantsFlow
 import com.autoselect.widgeter.flow.layout.AttrsHelper
-import com.autoselect.widgeter.flow.layout.LayoutFlowScroll
+import com.autoselect.widgeter.flow.layout.LayoutScroll
 
-class LayoutFlowTab//表格流式布局：数据封装重绘
+class LayoutTab//表格流式布局：数据封装重绘
 @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) :
-    LayoutFlowScroll(context, attrs, defStyleAttr) {
+    LayoutScroll(context, attrs, defStyleAttr) {
     private var mBeanTab: BeanTab?
     private val mScroller: Scroller?
     private val reAdjustLayoutParams = {
@@ -55,7 +55,7 @@ class LayoutFlowTab//表格流式布局：数据封装重绘
                 if (isFirst) {
                     isFirst = false
                     mActionBase?.run {
-                        config(this@LayoutFlowTab)
+                        config(this@LayoutTab)
                         chooseIndex(mLastIndex, mCurrentIndex)
                         if (mViewPager == null)
                             getChildAt(mCurrentIndex)?.let { updateScroll(it, false) }//滚动对应位置
@@ -81,7 +81,7 @@ class LayoutFlowTab//表格流式布局：数据封装重绘
         }//配置自定义属性给action
     }
 
-    fun setTabBean(beanTab: BeanTab?): LayoutFlowTab? = beanTab?.let {
+    fun setTabBean(beanTab: BeanTab?): LayoutTab? = beanTab?.let {
         apply {
             mBeanTab = mBeanTab?.let { AttrsHelper.diffBeanTab(it, beanTab) }
             if (beanTab.tabType != -1) chooseTabType(beanTab.tabType)
@@ -97,23 +97,23 @@ class LayoutFlowTab//表格流式布局：数据封装重绘
         }
     }//自定义属性配置覆盖xml属性
 
-    fun setViewPager(viewPager: ViewPager?): LayoutFlowTab? = apply {
+    fun setViewPager(viewPager: ViewPager?): LayoutTab? = apply {
         mViewPager = viewPager
         mActionBase?.setViewPager(viewPager)
     }
 
-    fun setDefaultPosition(position: Int): LayoutFlowTab? = apply { mCurrentIndex = position }
-    fun setTextId(textId: Int): LayoutFlowTab? = apply {
+    fun setDefaultPosition(position: Int): LayoutTab? = apply { mCurrentIndex = position }
+    fun setTextId(textId: Int): LayoutTab? = apply {
         mTextId = textId
         mActionBase?.setTextId(textId)
     }//不设置textId颜色选择不起作用
 
-    fun setSelectedColor(selectedColor: Int): LayoutFlowTab? = apply {
+    fun setSelectedColor(selectedColor: Int): LayoutTab? = apply {
         mSelectedColor = selectedColor
         mActionBase?.setSelectedColor(selectedColor)
     }//设置选中颜色，在TabTextColorView不起作用
 
-    fun setUnSelectedColor(unSelectedColor: Int): LayoutFlowTab? = apply {
+    fun setUnSelectedColor(unSelectedColor: Int): LayoutTab? = apply {
         mUnSelectedColor = unSelectedColor
         mActionBase?.setUnSelectedColor(unSelectedColor)
     }//设置默认颜色，在TabTextColorView不起作用
@@ -136,7 +136,7 @@ class LayoutFlowTab//表格流式布局：数据封装重绘
                 if (childCount > 0) {
                     reAdjustLayoutParams
                     mActionBase?.let {
-                        it.config(this@LayoutFlowTab)
+                        it.config(this@LayoutTab)
                         mViewPager?.setCurrentItem(mCurrentIndex, false)
                         it.chooseIndex(mLastIndex, mCurrentIndex)
                         updateScroll(getChildAt(mCurrentIndex), false)
@@ -239,7 +239,7 @@ class LayoutFlowTab//表格流式布局：数据封装重绘
         }//超过中间让父控件跟着移动
     }
 
-    var mAdapter: AdapterFlowTab<*>? = null
+    var mAdapter: AdapterTab<*>? = null
         set(adapter) {
             field = adapter
             field?.flowListenerAdapter = FlowListener()

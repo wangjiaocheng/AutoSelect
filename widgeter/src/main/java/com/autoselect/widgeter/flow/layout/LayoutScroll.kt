@@ -10,7 +10,7 @@ import com.autoselect.helper.ScreenHelper.statusBarHeight
 import com.autoselect.helper.ScreenHelper.toolbarHeight
 import kotlin.math.abs
 
-open class LayoutFlowScroll//流式布局：滚动用来移动
+open class LayoutScroll//流式布局：滚动用来移动
 @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) :
     LayoutFlow(context, attrs, defStyleAttr) {
     protected var mRightBound = 0
