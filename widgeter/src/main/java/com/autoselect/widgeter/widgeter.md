@@ -33,7 +33,7 @@
 >>3. dimens.xml
 >>4. integers.xml
 ### *00.分隔Divider(32)*
->implementation 'com.google.android.material:material:1.0.0'
+>implementation "com.google.android.material:material:1.2.1"
 ### *01.标题Title(203)*
 序号|方法|功能
 ---|--------------------------------------------------|---
@@ -493,3 +493,4 @@
 17 |17.setLabelBean                                   |LayoutFlowLabel
 18 |18.setSelects                                     |LayoutFlowLabel
 19 |19.setAdapter                                     |LayoutFlowLabel
+>implementation "androidx.constraintlayout:constraintlayout:2.0.1"
