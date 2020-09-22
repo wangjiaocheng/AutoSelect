@@ -54,7 +54,7 @@
             android:textColor="@color/white" />
     </LinearLayout>
 
-    <com.vondear.rxui.view.TextAutoZoom
+    <coTextAutoZoom
         android:id="@+id/text_auto_zoom"
         android:layout_width="200dp"
         android:layout_height="match_parent"

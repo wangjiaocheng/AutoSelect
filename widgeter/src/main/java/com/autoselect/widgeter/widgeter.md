@@ -505,7 +505,7 @@
  05 |5. BaseAdapterNode                                |功能
  06 |6. BaseAdapterMultiQuick                          |功能
  07 |7. BaseAdapterSectionQuick                        |功能
->layout:recycler_quick_view_load_more.xml
+>layout:recycler_load_more.xml
 >values:ids.xml
 >strings
 >>CN

@@ -8,17 +8,17 @@ import com.autoselect.widgeter.recycler.common.ViewHolderBase
 
 class LoadMoreViewSimple : LoadMoreViewBase() {
     override fun getRootView(parent: ViewGroup): View =
-        parent.getItemView(R.layout.recycler_quick_view_load_more)
+        parent.getItemView(R.layout.recycler_load_more)
 
     override fun getLoadingView(holder: ViewHolderBase): View =
-        holder.getView(R.id.load_more_loading_view)
-
-    override fun getLoadComplete(holder: ViewHolderBase): View =
-        holder.getView(R.id.load_more_load_complete_view)
+        holder.getView(R.id.load_more_loading)
 
     override fun getLoadFailView(holder: ViewHolderBase): View =
-        holder.getView(R.id.load_more_load_fail_view)
+        holder.getView(R.id.load_more_fail)
+
+    override fun getLoadComplete(holder: ViewHolderBase): View =
+        holder.getView(R.id.load_more_complete)
 
     override fun getLoadEndView(holder: ViewHolderBase): View =
-        holder.getView(R.id.load_more_load_end_view)
+        holder.getView(R.id.load_more_end)
 }
