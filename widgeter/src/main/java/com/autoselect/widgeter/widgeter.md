@@ -28,13 +28,13 @@
 | 125  | ### *24.LayoutTab、LayoutLabel：LayoutScroll、LayoutFlow、AttrsHelper、AdapterTab、AdapterLabel、AdapterTemplate、AdapterFlow、FlowListener、FlowListenerAdapter、ActionRect、ActionTri、ActionRound、ActionColor、ActionRes、ActionBase、ActionDot、TextViewTabColor、BeanTab、BeanLabel、TabValue、TabTypeEvaluator、ConstantsFlow、ViewPagerHelper(2080)*| 流式 |
 | 126  | ### *25.BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)：......(2670)*                                                                  | 回收 |
 ## **控件库widgeter**
->xml资源
+>- xml资源
 >>1. attrs.xml
 >>2. colors.xml
 >>3. dimens.xml
 >>4. integers.xml
 ### *00.分隔Divider(32)*
->implementation "com.google.android.material:material:1.2.1"
+>- implementation "com.google.android.material:material:1.2.1"
 ### *01.标题Title(203)*
 序号|方法|功能
 ---|--------------------------------------------------|---
@@ -149,7 +149,7 @@
 05 |5. resetProgress                                  |功能
 06 |6. toggle                                         |功能
 07 |7. setStop                                        |功能
->flicker.png
+>- flicker.png
 ### *04.弧度ProgressRound(165)*
 序号|方法|功能
 ---|--------------------------------------------------|---
@@ -169,7 +169,7 @@
 01 |1. setNormalization                               |功能
 02 |2. minTextSize                                    |功能
 03 |3. enableSizeCache                                |功能
->Title
+>- Title
 ### *07.单滚TextViewVertical(100)*
 序号|方法|功能
 ---|--------------------------------------------------|---
@@ -190,7 +190,7 @@
 03 |3. isSetAnimDuration                              |功能
 04 |4. onItemClickListener                            |功能
 05 |5. setViews                                       |功能
->anim资源
+>- anim资源
 >>1. anim_marquee_in.xml
 >>2. anim_marquee_out.xml
 ### *09.平滚AutoImageView(35)*
@@ -266,7 +266,7 @@
 62 |62. tileSizeAuto                                  |功能
 63 |#### PinView                                      |功能
 64 |1. pinS                                           |功能
->mipmap资源
+>- mipmap资源
 >>1. pushpin_blue.png
 >>2. tooltip_arrow_down.9.png
 >>3. tooltip_arrow_down_left.9.png
@@ -302,7 +302,7 @@
 05 |5. resetCaptcha                                   |功能
 06 |6. setCurrentSwipeValue                           |功能
 ### *13.刮刮ScratchCard(48)*
->img_loading.png
+>- img_loading.png
 ### *14.卡组CardStackView：AdapterAnimator、AdapterAllMoveDownAnimator、AdapterUpDownAnimator、AdapterUpDownStackAnimator、ViewDataObserver、AdapterDataObservable、ViewHolder、Adapter、AdapterStack、DelegateScrollStack、DelegateScroll(861+36+7)*
 序号|方法|功能
 ---|--------------------------------------------------|---
@@ -384,7 +384,7 @@
 03 |3. updateViewData                                 |功能
 04 |4. setTextColor                                   |功能
 05 |5. setTextSize                                    |功能
->netspeed_view.xml
+>- netspeed_view.xml
 ### *17.机座SeatAirplane(892)*
 序号|方法|功能
 ---|--------------------------------------------------|---
@@ -398,7 +398,7 @@
 08 |8. getFontHeight                                  |功能
 09 |9. setBitmap                                      |功能
 10 |10. goCabinPosition                               |功能
->mipmap资源（Seat共用）
+>- mipmap资源（Seat共用）
 >>1. seat_gray.png
 >>2. seat_green.png
 >>3. seat_sold.png
@@ -456,7 +456,7 @@
 序号|方法|功能
 ---|--------------------------------------------------|---
 01 |1. addHeart                                       |功能
->mipmap
+>- mipmap
 >>1. anim_heart.png
 >>2. anim_heart_border.png
 ### *23.横幅Banner：BannerHelper、TypeBannerTrans、BeanPage、PageListener、RecyclerViewHolder、RecyclerBaseAdapter、TypeTrans、Transformer、TransformerCard、TransformerDepthPage、TransformerMz、TransformerZoomOutPage、BeanCircle、BeanRect、TypeIndicatorCircle、IndicatorCircle、IndicatorRect、IndicatorText(1060)*
@@ -494,7 +494,7 @@
 17 |17.setLabelBean                                   |LayoutLabel
 18 |18.setSelects                                     |LayoutLabel
 19 |19.setAdapter                                     |LayoutLabel
->implementation "androidx.constraintlayout:constraintlayout:2.0.1"
+>- implementation "androidx.constraintlayout:constraintlayout:2.0.1"
 ### *25.回收BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)：......(2670)*
  序号|方法|功能
  ---|--------------------------------------------------|---
@@ -505,10 +505,10 @@
  05 |5. BaseAdapterNode                                |功能
  06 |6. BaseAdapterMultiQuick                          |功能
  07 |7. BaseAdapterSectionQuick                        |功能
->drawable
->>recycler_loading_progress.xml
->>recycler_loading.png
->layout:recycler_load_more.xml
->values:ids.xml
->>strings:CN
->>strings:HK
+>- drawable
+>>1. recycler_loading_progress.xml
+>>2. recycler_loading.png
+>- layout:recycler_load_more.xml
+>- values:ids.xml
+>>1. strings:CN
+>>2. strings:HK
