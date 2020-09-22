@@ -505,8 +505,10 @@
  05 |5. BaseAdapterNode                                |功能
  06 |6. BaseAdapterMultiQuick                          |功能
  07 |7. BaseAdapterSectionQuick                        |功能
+>drawable
+>>recycler_loading_progress.xml
+>>recycler_loading.png
 >layout:recycler_load_more.xml
 >values:ids.xml
->strings
->>CN
->>HK
+>>strings:CN
+>>strings:HK
