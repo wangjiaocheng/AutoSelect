@@ -137,17 +137,17 @@ open class LoadMoreModuleBase(private val baseQuickAdapter: BaseAdapterQuick<*, 
         }
     }
 
+    val loadMoreFail = {
+        if (hasLoadMoreView) {
+            loadMoreStatus = LoadMoreStatus.Fail
+            baseQuickAdapter.notifyItemChanged(loadMoreViewPosition)
+        }
+    }
     val loadMoreComplete = {
         if (hasLoadMoreView) {
             loadMoreStatus = LoadMoreStatus.Complete
             baseQuickAdapter.notifyItemChanged(loadMoreViewPosition)
             checkDisableLoadMoreIfNotFullPage
-        }
-    }
-    val loadMoreFail = {
-        if (hasLoadMoreView) {
-            loadMoreStatus = LoadMoreStatus.Fail
-            baseQuickAdapter.notifyItemChanged(loadMoreViewPosition)
         }
     }
 
