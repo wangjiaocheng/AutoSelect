@@ -26,7 +26,7 @@
 | 123  | ### *22.HeartLayout：FloatAnimation、PathAnimator、HeartView(238)*                                                                                                                                                                               | 爱心 |
 | 124  | ### *23.Banner：BannerHelper、TypeBannerTrans、BeanPage、PageListener、RecyclerViewHolder、RecyclerBaseAdapter、TypeTrans、Transformer、TransformerCard、TransformerDepthPage、TransformerMz、TransformerZoomOutPage、BeanCircle、BeanRect、TypeIndicatorCircle、IndicatorCircle、IndicatorRect、IndicatorText(1060)*| 横幅 |
 | 125  | ### *24.LayoutTab、LayoutLabel：LayoutScroll、LayoutFlow、AttrsHelper、AdapterTab、AdapterLabel、AdapterTemplate、AdapterFlow、FlowListener、FlowListenerAdapter、ActionRect、ActionTri、ActionRound、ActionColor、ActionRes、ActionBase、ActionDot、TextViewTabColor、BeanTab、BeanLabel、TabValue、TabTypeEvaluator、ConstantsFlow、ViewPagerHelper(2080)*| 流式 |
-| 126  | ### *25.BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)：......(2673)*                                                                  | 回收 |
+| 126  | ### *25.BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)：......(2670)*                                                                  | 回收 |
 ## **控件库widgeter**
 >xml资源
 >>1. attrs.xml
@@ -495,7 +495,7 @@
 18 |18.setSelects                                     |LayoutLabel
 19 |19.setAdapter                                     |LayoutLabel
 >implementation "androidx.constraintlayout:constraintlayout:2.0.1"
-### *25.回收BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)：......(2673)*
+### *25.回收BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)：......(2670)*
  序号|方法|功能
  ---|--------------------------------------------------|---
  01 |1. BaseAdapterQuick                               |功能
