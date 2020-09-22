@@ -14,7 +14,7 @@ abstract class BaseAdapterSectionQuick<T : EntitySection, VH : ViewHolderBase>
         if (layoutResId != 0) setNormalLayout(layoutResId)
     }
 
-    private fun setNormalLayout(@LayoutRes layoutResId: Int) =//如果item不是多布局，此方法快速设置item layout；如果需要多布局item用addItemType
+    fun setNormalLayout(@LayoutRes layoutResId: Int) =//如果item不是多布局，此方法快速设置item layout；如果需要多布局item用addItemType
         addItemType(EntitySection.NORMAL_TYPE, layoutResId)
 
     protected abstract fun convertHeader(helper: VH, item: T)//重写设置Header
