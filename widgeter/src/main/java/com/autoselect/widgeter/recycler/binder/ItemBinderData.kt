@@ -7,8 +7,8 @@ import com.autoselect.widgeter.recycler.common.ViewHolderBase
 
 abstract class ItemBinderData<T, DB : ViewDataBinding> :
     ItemBinderBase<T, ItemBinderData.BinderDataBindingHolder<DB>>() {
-    class BinderDataBindingHolder<DB : ViewDataBinding>(dataBinding: DB) :
-        ViewHolderBase(dataBinding.root)//仅适用BaseAdapterBinder
+    class BinderDataBindingHolder<DB : ViewDataBinding>(val dataBinding: DB) :
+        ViewHolderBase(dataBinding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BinderDataBindingHolder<DB> =
         BinderDataBindingHolder(
@@ -18,4 +18,4 @@ abstract class ItemBinderData<T, DB : ViewDataBinding> :
     abstract fun onCreateDataBinding(
         layoutInflater: LayoutInflater, parent: ViewGroup, viewType: Int
     ): DB
-}//使用DataBinding快速构建Binder
+}//使用DataBinding快速构建Binder，仅适用BaseAdapterBinder；BinderDataBindingHolder中val不能少
