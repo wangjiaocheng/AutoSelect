@@ -488,12 +488,12 @@
 11 |11.isTabAutoScroll                                |LayoutTab
 12 |12.setUnSelectedColor                             |LayoutTab
 13 |13.setViewPager                                   |LayoutTab
-14 |14.mMaxSelectCount                                |LayoutLabel
-15 |15.isAutoScroll                                   |LayoutLabel
-16 |16.isLabelAutoScroll                              |LayoutLabel
-17 |17.setLabelBean                                   |LayoutLabel
-18 |18.setSelects                                     |LayoutLabel
-19 |19.setAdapter                                     |LayoutLabel
+14 |1 .mMaxSelectCount                                |LayoutLabel
+15 |2. isAutoScroll                                   |LayoutLabel
+16 |3. isLabelAutoScroll                              |LayoutLabel
+17 |4. setLabelBean                                   |LayoutLabel
+18 |5. setSelects                                     |LayoutLabel
+19 |6. setAdapter                                     |LayoutLabel
 >- implementation "androidx.constraintlayout:constraintlayout:2.0.1"
 ### *25.回收BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)：......(2670)*
 序号|方法|功能
