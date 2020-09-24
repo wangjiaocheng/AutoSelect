@@ -497,14 +497,106 @@
 >- implementation "androidx.constraintlayout:constraintlayout:2.0.1"
 ### *25.回收BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)：......(2670)*
  序号|方法|功能
- ---|--------------------------------------------------|---
- 01 |1. BaseAdapterQuick                               |功能
- 02 |2. BaseAdapterBinder                              |功能
- 03 |3. BaseAdapterMultiDelegate                       |功能
- 04 |4. BaseAdapterMultiProvider                       |功能
- 05 |5. BaseAdapterNode                                |功能
- 06 |6. BaseAdapterMultiQuick                          |功能
- 07 |7. BaseAdapterSectionQuick                        |功能
+---|--------------------------------------------------|---
+01 |1. data                                           |BaseAdapterQuick
+02 |2. loadMoreModule                                 |BaseAdapterQuick
+03 |3. upFetchModule                                  |BaseAdapterQuick
+04 |4. draggableModule                                |BaseAdapterQuick
+05 |5. convert                                        |BaseAdapterQuick
+06 |6. onCreateDefViewHolder                          |BaseAdapterQuick
+07 |7. headerLayoutCount                              |BaseAdapterQuick
+08 |8. getItem                                        |BaseAdapterQuick
+09 |9. getItemOrNull                                  |BaseAdapterQuick
+10 |10.getItemPosition                                |BaseAdapterQuick
+11 |11.animationEnable                                |BaseAdapterQuick
+12 |12.adapterAnimation                               |BaseAdapterQuick
+13 |13.setAnimationWithDefault                        |BaseAdapterQuick
+14 |14.isAnimationFirstOnly                           |BaseAdapterQuick
+15 |15.recyclerView                                   |BaseAdapterQuick
+16 |16.headerViewAsFlow                               |BaseAdapterQuick
+17 |17.footerViewAsFlow                               |BaseAdapterQuick
+18 |18.isUseEmpty                                     |BaseAdapterQuick
+19 |19.hasEmptyView                                   |BaseAdapterQuick
+20 |20.headerWithEmptyEnable                          |BaseAdapterQuick
+21 |21.footerWithEmptyEnable                          |BaseAdapterQuick
+22 |22.hasHeaderLayout                                |BaseAdapterQuick
+23 |23.hasFooterLayout                                |BaseAdapterQuick
+24 |24.footerLayoutCount                              |BaseAdapterQuick
+25 |25.getItemCount                                   |BaseAdapterQuick
+26 |26.getDefItemCount                                |BaseAdapterQuick
+27 |27.getItemId                                      |BaseAdapterQuick
+28 |28.getItemViewType                                |BaseAdapterQuick
+29 |29.getDefItemViewType                             |BaseAdapterQuick
+30 |30.setGridSpanSizeLookup                          |BaseAdapterQuick
+31 |31.onItemClickListener                            |BaseAdapterQuick
+32 |32.setOnItemClickListener                         |BaseAdapterQuick
+33 |33.onItemLongClickListener                        |BaseAdapterQuick
+34 |34.setOnItemLongClickListener                     |BaseAdapterQuick
+35 |35.onItemChildClickListener                       |BaseAdapterQuick
+36 |36.setOnItemChildClickListener                    |BaseAdapterQuick
+37 |37.onItemChildLongClickListener                   |BaseAdapterQuick
+38 |38.setOnItemChildLongClickListener                |BaseAdapterQuick
+39 |39.childClickViewIds                              |BaseAdapterQuick
+40 |40.addChildClickViewIds                           |BaseAdapterQuick
+41 |41.childLongClickViewIds                          |BaseAdapterQuick
+42 |42.addChildLongClickViewIds                       |BaseAdapterQuick
+43 |43.headerLayout                                   |BaseAdapterQuick
+44 |44.setHeaderView                                  |BaseAdapterQuick
+45 |45.headerViewPosition                             |BaseAdapterQuick
+46 |46.addHeaderView                                  |BaseAdapterQuick
+47 |47.removeHeaderView                               |BaseAdapterQuick
+48 |48.removeAllHeaderView                            |BaseAdapterQuick
+49 |49.footerLayout                                   |BaseAdapterQuick
+50 |50.setFooterView                                  |BaseAdapterQuick
+51 |51.footerViewPosition                             |BaseAdapterQuick
+52 |52.addFooterView                                  |BaseAdapterQuick
+53 |53.removeFooterView                               |BaseAdapterQuick
+54 |54.removeAllFooterView                            |BaseAdapterQuick
+55 |55.emptyLayout                                    |BaseAdapterQuick
+56 |56.setEmptyView                                   |BaseAdapterQuick
+57 |57.removeEmptyView                                |BaseAdapterQuick
+58 |58.setDiffCallback                                |BaseAdapterQuick
+59 |59.differ                                         |BaseAdapterQuick
+60 |60.setDiffConfig                                  |BaseAdapterQuick
+61 |61.setDiffNewData                                 |BaseAdapterQuick
+62 |62.setNewInstance                                 |BaseAdapterQuick
+63 |63.setList                                        |BaseAdapterQuick
+64 |64.setData                                        |BaseAdapterQuick
+65 |65.addData                                        |BaseAdapterQuick
+66 |66.removeAt                                       |BaseAdapterQuick
+67 |67.remove                                         |BaseAdapterQuick
+68 |1. getItemBinder                                  |BaseAdapterBinder
+69 |2. addItemBinder                                  |BaseAdapterBinder
+70 |3. convert                                        |BaseAdapterBinder
+71 |4. getItemBinderOrNull                            |BaseAdapterBinder
+72 |1. multiTypeDelegate                              |BaseAdapterMultiDelegate
+73 |1. getItemType                                    |BaseAdapterMultiProvider
+74 |2. getItemProvider                                |BaseAdapterMultiProvider
+75 |3. addItemProvider                                |BaseAdapterMultiProvider
+76 |1. addFooterNodeProvider                          |BaseAdapterNode
+77 |2. addFullSpanNodeProvider                        |BaseAdapterNode
+78 |3. addNodeProvider                                |BaseAdapterNode
+79 |4. addItemProvider                                |BaseAdapterNode
+80 |5. setDiffNewData                                 |BaseAdapterNode
+81 |6. setNewInstance                                 |BaseAdapterNode
+82 |7. setList                                        |BaseAdapterNode
+83 |8. addData                                        |BaseAdapterNode
+84 |9. setData                                        |BaseAdapterNode
+85 |10.removeAt                                       |BaseAdapterNode
+86 |11.nodeAddData                                    |BaseAdapterNode
+87 |12.nodeRemoveData                                 |BaseAdapterNode
+88 |13.nodeSetData                                    |BaseAdapterNode
+89 |14.nodeReplaceChildData                           |BaseAdapterNode
+90 |15.collapse                                       |BaseAdapterNode
+91 |16.expand                                         |BaseAdapterNode
+92 |17.expandOrCollapse                               |BaseAdapterNode
+93 |18.collapseAndChild                               |BaseAdapterNode
+94 |19.expandAndChild                                 |BaseAdapterNode
+95 |20.expandAndCollapseOther                         |BaseAdapterNode
+96 |21.findParentNode                                 |BaseAdapterNode
+97 |1. addItemType                                    |BaseAdapterMultiQuick
+98 |1. setNormalLayout                                |BaseAdapterSectionQuick
+99 |2. convertHeader                                  |BaseAdapterSectionQuick
 >- drawable
 >>1. recycler_loading_progress.xml
 >>2. recycler_loading.png
