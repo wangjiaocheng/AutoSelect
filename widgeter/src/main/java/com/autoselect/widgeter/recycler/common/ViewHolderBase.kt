@@ -11,7 +11,6 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.RecyclerView
 
-@Keep
 open class ViewHolderBase(view: View) : RecyclerView.ViewHolder(view) {
     private val views: SparseArray<View> = SparseArray()
 
@@ -32,7 +31,7 @@ open class ViewHolderBase(view: View) : RecyclerView.ViewHolder(view) {
     open fun setText(@IdRes viewId: Int, value: CharSequence?): ViewHolderBase =
         apply { getView<TextView>(viewId).text = value }
 
-    open fun setText(@IdRes viewId: Int, @StringRes strId: Int): ViewHolderBase? =
+    open fun setTextRes(@IdRes viewId: Int, @StringRes strId: Int): ViewHolderBase? =
         apply { getView<TextView>(viewId).setText(strId) }
 
     open fun setTextColor(@IdRes viewId: Int, @ColorInt color: Int): ViewHolderBase =

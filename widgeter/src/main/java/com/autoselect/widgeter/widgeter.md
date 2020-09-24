@@ -26,7 +26,7 @@
 | 123  | ### *22.HeartLayout：FloatAnimation、PathAnimator、HeartView(238)*                                                                                                                                                                               | 爱心 |
 | 124  | ### *23.Banner：BannerHelper、TypeBannerTrans、BeanPage、PageListener、RecyclerViewHolder、RecyclerBaseAdapter、TypeTrans、Transformer、TransformerCard、TransformerDepthPage、TransformerMz、TransformerZoomOutPage、BeanCircle、BeanRect、TypeIndicatorCircle、IndicatorCircle、IndicatorRect、IndicatorText(1060)*| 横幅 |
 | 125  | ### *24.LayoutTab、LayoutLabel：LayoutScroll、LayoutFlow、AttrsHelper、AdapterTab、AdapterLabel、AdapterTemplate、AdapterFlow、FlowListener、FlowListenerAdapter、ActionRect、ActionTri、ActionRound、ActionColor、ActionRes、ActionBase、ActionDot、TextViewTabColor、BeanTab、BeanLabel、TabValue、TabTypeEvaluator、ConstantsFlow、ViewPagerHelper(2080)*| 流式 |
-| 126  | ### *25.BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)：......(2670)*                                                                  | 回收 |
+| 126  | ### *25.BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)、ViewHolderBase：......(2669)*                                                  | 回收 |
 ## **控件库widgeter**
 >- xml资源
 >>1. attrs.xml
@@ -495,7 +495,7 @@
 18 |5. setSelects                                     |LayoutLabel
 19 |6. setAdapter                                     |LayoutLabel
 >- implementation "androidx.constraintlayout:constraintlayout:2.0.1"
-### *25.回收BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)：......(2670)*
+### *25.回收BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)、ViewHolderBase：......(2669)*
 序号|方法|功能
 ---|--------------------------------------------------|---
 01 |1. data                                           |BaseAdapterQuick
@@ -597,6 +597,21 @@
 97 |1. addItemType                                    |BaseAdapterMultiQuick
 98 |1. setNormalLayout                                |BaseAdapterSectionQuick
 99 |2. convertHeader                                  |BaseAdapterSectionQuick
+100|1. getView                                        |ViewHolderBase
+100|2. getViewOrNull                                  |ViewHolderBase
+100|3. findView                                       |ViewHolderBase
+100|4. setText                                        |ViewHolderBase
+100|5. setTextRes                                     |ViewHolderBase
+100|6. setTextColor                                   |ViewHolderBase
+100|7. setTextColorRes                                |ViewHolderBase
+100|8. setImageResource                               |ViewHolderBase
+100|9. setImageDrawable                               |ViewHolderBase
+100|10.setImageBitmap                                 |ViewHolderBase
+100|11.setBackgroundColor                             |ViewHolderBase
+100|12.setBackgroundResource                          |ViewHolderBase
+100|13.setVisible                                     |ViewHolderBase
+100|14.setGone                                        |ViewHolderBase
+100|15.setEnabled                                     |ViewHolderBase
 >- drawable
 >>1. recycler_loading_progress.xml
 >>2. recycler_loading.png
