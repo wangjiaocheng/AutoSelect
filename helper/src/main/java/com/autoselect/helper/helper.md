@@ -26,7 +26,7 @@
 | 023  | ### *22.ServiceHelper(67)*                                                                                                                                                                                                                      | 服务 |
 | 024  | ### *23.BroadcastHelper(22)*                                                                                                                                                                                                                    | 广播 |
 | 025  | ### *24.IntentHelper(317)*                                                                                                                                                                                                                      | 意图 |
-| 026  | ### *25.ContextHelper(11)*                                                                                                                                                                                                                      | 环境 |
+| 026  | ### *25.ClickableHelper(35)*                                                                                                                                                                                                                    | 滑动 |
 | 027  | ### *26.MetaDataHelper(53)*                                                                                                                                                                                                                     | 元数 |
 | 028  | ### *27.PermissionHelper(442)*                                                                                                                                                                                                                  | 权限 |
 | 029  | ### *28.PackageHelper(18)*                                                                                                                                                                                                                      | 软包 |
@@ -553,10 +553,10 @@
 17 |17. shutdownIntent                                |功能
 18 |18. getShutdownIntent                             |功能
 19 |19. getComponentIntent                            |功能
-### *25.环境ContextHelper(11)*
+### *25.滑动ClickableHelper(35)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. applicationContext                             |功能
+01 |1. ClickableHelper                                |EditText内容滑动，Span赋值text后直接赋值movementMethod
 ### *26.元数MetaDataHelper(53)*
 序号|方法|功能
 ---|--------------------------------------------------|---
