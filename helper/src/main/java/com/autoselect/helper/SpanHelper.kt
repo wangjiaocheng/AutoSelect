@@ -154,7 +154,7 @@ object SpanHelper {
 
         private var mVerticalAlign: Int = -1//垂直对齐
         @JvmOverloads
-        fun setVerticalAlign(@Align verticalAlign: Int = -1): SpanBuilder =
+        fun setVerticalAlign(verticalAlign: Int = -1): SpanBuilder =
             apply { mVerticalAlign = verticalAlign }
 
         private var mClickableSpan: ClickableSpan? = null//点击时间
