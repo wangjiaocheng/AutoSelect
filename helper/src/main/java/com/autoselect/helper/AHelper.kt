@@ -286,4 +286,4 @@ object AHelper {
 
     fun runOnUiThreadDelayed(runnable: Runnable, delayMillis: Long): Boolean =
         handler.postDelayed(runnable, delayMillis)
-}
+}//applicationContext
