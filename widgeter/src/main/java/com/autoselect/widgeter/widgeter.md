@@ -496,7 +496,7 @@
 19 |19.setAdapter                                     |LayoutLabel
 >- implementation "androidx.constraintlayout:constraintlayout:2.0.1"
 ### *25.回收BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)：......(2670)*
- 序号|方法|功能
+序号|方法|功能
 ---|--------------------------------------------------|---
 01 |1. data                                           |BaseAdapterQuick
 02 |2. loadMoreModule                                 |BaseAdapterQuick
