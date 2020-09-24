@@ -598,20 +598,20 @@
 98 |1. setNormalLayout                                |BaseAdapterSectionQuick
 99 |2. convertHeader                                  |BaseAdapterSectionQuick
 100|1. getView                                        |ViewHolderBase
-100|2. getViewOrNull                                  |ViewHolderBase
-100|3. findView                                       |ViewHolderBase
-100|4. setText                                        |ViewHolderBase
-100|5. setTextRes                                     |ViewHolderBase
-100|6. setTextColor                                   |ViewHolderBase
-100|7. setTextColorRes                                |ViewHolderBase
-100|8. setImageResource                               |ViewHolderBase
-100|9. setImageDrawable                               |ViewHolderBase
-100|10.setImageBitmap                                 |ViewHolderBase
-100|11.setBackgroundColor                             |ViewHolderBase
-100|12.setBackgroundResource                          |ViewHolderBase
-100|13.setVisible                                     |ViewHolderBase
-100|14.setGone                                        |ViewHolderBase
-100|15.setEnabled                                     |ViewHolderBase
+101|2. getViewOrNull                                  |ViewHolderBase
+102|3. findView                                       |ViewHolderBase
+103|4. setText                                        |ViewHolderBase
+104|5. setTextRes                                     |ViewHolderBase
+105|6. setTextColor                                   |ViewHolderBase
+106|7. setTextColorRes                                |ViewHolderBase
+107|8. setImageResource                               |ViewHolderBase
+108|9. setImageDrawable                               |ViewHolderBase
+109|10.setImageBitmap                                 |ViewHolderBase
+110|11.setBackgroundColor                             |ViewHolderBase
+111|12.setBackgroundResource                          |ViewHolderBase
+112|13.setVisible                                     |ViewHolderBase
+113|14.setGone                                        |ViewHolderBase
+114|15.setEnabled                                     |ViewHolderBase
 >- drawable
 >>1. recycler_loading_progress.xml
 >>2. recycler_loading.png
