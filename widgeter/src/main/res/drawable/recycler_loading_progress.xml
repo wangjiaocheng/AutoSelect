@@ -2,7 +2,7 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <rotate
-            android:drawable="@drawable/recycler_loading"
+            android:drawable="@mipmap/recycler_loading"
             android:duration="500"
             android:fromDegrees="0.0"
             android:pivotX="50.0%"

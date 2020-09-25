@@ -184,9 +184,9 @@ class PopupViewManager @JvmOverloads constructor(tipListener: TipListener? = nul
             setBgTip(tipView, R.mipmap.tooltip_no_arrow, color)
 
         private fun setBgTip(tipView: View, drawableRes: Int, color: Int) =
-            setBgiew(tipView, getDrawableTinted(tipView.context, drawableRes, color))
+            setBgView(tipView, getDrawableTinted(tipView.context, drawableRes, color))
 
-        private fun setBgiew(view: View, drawable: Drawable?) = when {
+        private fun setBgView(view: View, drawable: Drawable?) = when {
             aboveLollipop -> view.background = drawable
             else -> ViewCompat.setBackground(view, drawable)
         }
