@@ -12,7 +12,7 @@ class PageInfo {
     val reset = { page = 0 }//刷新重置
     val isFirstPage: Boolean
         get() = page == 0//首页setList非首页addData
-}
+}//加载更多翻页信息
 
 interface LoadMoreModule//需要向下加载更多BaseQuickAdapter继承
 object LoadMoreModuleConfig {
