@@ -26,7 +26,7 @@
 | 123  | ### *22.HeartLayout：FloatAnimation、PathAnimator、HeartView(238)*                                                                                                                                                                               | 爱心 |
 | 124  | ### *23.Banner：BannerHelper、TypeBannerTrans、BeanPage、PageListener、RecyclerViewHolder、RecyclerBaseAdapter、TypeTrans、Transformer、TransformerCard、TransformerDepthPage、TransformerMz、TransformerZoomOutPage、BeanCircle、BeanRect、TypeIndicatorCircle、IndicatorCircle、IndicatorRect、IndicatorText(1060)*| 横幅 |
 | 125  | ### *24.LayoutTab、LayoutLabel：LayoutScroll、LayoutFlow、AttrsHelper、AdapterTab、AdapterLabel、AdapterTemplate、AdapterFlow、FlowListener、FlowListenerAdapter、ActionRect、ActionTri、ActionRound、ActionColor、ActionRes、ActionBase、ActionDot、TextViewTabColor、BeanTab、BeanLabel、TabValue、TabTypeEvaluator、ConstantsFlow、ViewPagerHelper(2080)*| 流式 |
-| 126  | ### *25.BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)、ViewHolderBase：......(2724)*                                                  | 回收 |
+| 126  | ### *25.BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)、ViewHolderBase：......(2732)*                                                  | 回收 |
 ## **控件库widgeter**
 >- xml资源
 >>1. attrs.xml
@@ -495,7 +495,7 @@
 18 |5. setSelects                                     |LayoutLabel
 19 |6. setAdapter                                     |LayoutLabel
 >- implementation "androidx.constraintlayout:constraintlayout:2.0.1"
-### *25.回收BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)、ViewHolderBase：......(2724)*
+### *25.回收BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)、ViewHolderBase：......(2732)*
 序号|方法|功能（RecyclerView可嵌套：setHasFixedSize(true)、layoutManager、adapter）
 ---|--------------------------------------------------|---
 01 |1. data                                           |BaseAdapterQuick需要适配的数据
@@ -612,21 +612,21 @@
 112|13.setVisible                                     |ViewHolderBase设置控件可见性，INVISIBLE占位不可见
 113|14.setGone                                        |ViewHolderBase设置控件隐藏性，GONE隐藏不可见
 114|15.setEnabled                                     |ViewHolderBase设置控件可用性
-115|1. loadMoreView                                   |LoadMoreModuleBase
+115|1. loadMoreView                                   |LoadMoreModuleBase重设加载更多视图
 116|2. loadMoreStatus                                 |LoadMoreModuleBase
 117|3. isLoading                                      |LoadMoreModuleBase
-118|4. isEnableLoadMore                               |LoadMoreModuleBase
+118|4. isEnableLoadMore                               |LoadMoreModuleBase是否能够加载更多，临时false防止下拉刷新同时上拉加载
 119|5. isLoadEndMoreGone                              |LoadMoreModuleBase
 120|6. hasLoadMoreView                                |LoadMoreModuleBase
-121|7. setOnLoadMoreListener                          |LoadMoreModuleBase
+121|7. setOnLoadMoreListener                          |LoadMoreModuleBase设置加载更多监听器
 122|8. enableLoadMoreEndClick                         |LoadMoreModuleBase
-123|9. isAutoLoadMore                                 |LoadMoreModuleBase
+123|9. isAutoLoadMore                                 |LoadMoreModuleBase是否自动加载更多
 124|10.preLoadNumber                                  |LoadMoreModuleBase
-125|11.isEnableLoadMoreIfNotFullPage                  |LoadMoreModuleBase
+125|11.isEnableLoadMoreIfNotFullPage                  |LoadMoreModuleBase数据不满一屏是否继续自动加载更多
 126|12.checkDisableLoadMoreIfNotFullPage              |LoadMoreModuleBase
-127|13.loadMoreFail                                   |LoadMoreModuleBase
-128|14.loadMoreComplete                               |LoadMoreModuleBase
-129|15.loadMoreEnd                                    |LoadMoreModuleBase
+127|13.loadMoreFail                                   |LoadMoreModuleBase加载更多失败处理
+128|14.loadMoreComplete                               |LoadMoreModuleBase加载更多完成处理
+129|15.loadMoreEnd                                    |LoadMoreModuleBase加载更多结束处理，最后一页
 130|1. setOnUpFetchListener                           |UpFetchModuleBase
 131|2. isUpFetchEnable                                |UpFetchModuleBase
 132|3. isUpFetching                                   |UpFetchModuleBase

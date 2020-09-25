@@ -6,6 +6,14 @@ import com.autoselect.widgeter.recycler.BaseAdapterQuick
 import com.autoselect.widgeter.recycler.common.ViewHolderBase
 import kotlin.math.max
 
+class PageInfo {
+    var page = 0
+    val nextPage = page++//每次加载成功
+    val reset = { page = 0 }//刷新重置
+    val isFirstPage: Boolean
+        get() = page == 0//首页setList非首页addData
+}
+
 interface LoadMoreModule//需要向下加载更多BaseQuickAdapter继承
 object LoadMoreModuleConfig {
     @JvmStatic
