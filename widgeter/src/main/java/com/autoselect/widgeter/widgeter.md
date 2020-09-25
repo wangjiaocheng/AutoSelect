@@ -496,22 +496,22 @@
 19 |6. setAdapter                                     |LayoutLabel
 >- implementation "androidx.constraintlayout:constraintlayout:2.0.1"
 ### *25.回收BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)、ViewHolderBase：......(2724)*
-序号|方法|功能
+序号|方法|功能（RecyclerView可嵌套：setHasFixedSize(true)、layoutManager、adapter）
 ---|--------------------------------------------------|---
-01 |1. data                                           |BaseAdapterQuick
-02 |2. loadMoreModule                                 |BaseAdapterQuick
-03 |3. upFetchModule                                  |BaseAdapterQuick
-04 |4. draggableModule                                |BaseAdapterQuick
-05 |5. convert                                        |BaseAdapterQuick
+01 |1. data                                           |BaseAdapterQuick需要适配的数据
+02 |2. loadMoreModule                                 |BaseAdapterQuick加载更多模块，需继承LoadMoreModule
+03 |3. upFetchModule                                  |BaseAdapterQuick向上加载模块，需继承UpFetchModule
+04 |4. draggableModule                                |BaseAdapterQuick拖拽模块，需继承DraggableModule
+05 |5. convert                                        |BaseAdapterQuick适配器必须实现，用Diff时必须实现带payloads方法
 06 |6. onCreateDefViewHolder                          |BaseAdapterQuick
 07 |7. headerLayoutCount                              |BaseAdapterQuick
-08 |8. getItem                                        |BaseAdapterQuick
+08 |8. getItem                                        |BaseAdapterQuick获取data中数据项
 09 |9. getItemOrNull                                  |BaseAdapterQuick
 10 |10.getItemPosition                                |BaseAdapterQuick
-11 |11.animationEnable                                |BaseAdapterQuick
-12 |12.adapterAnimation                               |BaseAdapterQuick
-13 |13.setAnimationWithDefault                        |BaseAdapterQuick
-14 |14.isAnimationFirstOnly                           |BaseAdapterQuick
+11 |11.animationEnable                                |BaseAdapterQuick动画设置启用
+12 |12.adapterAnimation                               |BaseAdapterQuick动画自定义赋值
+13 |13.setAnimationWithDefault                        |BaseAdapterQuick动画设置默认类型
+14 |14.isAnimationFirstOnly                           |BaseAdapterQuick动画是否仅首次运行，改变后适配器notifyDataSetChanged()
 15 |15.recyclerView                                   |BaseAdapterQuick
 16 |16.headerViewAsFlow                               |BaseAdapterQuick
 17 |17.footerViewAsFlow                               |BaseAdapterQuick
@@ -528,43 +528,43 @@
 28 |28.getItemViewType                                |BaseAdapterQuick
 29 |29.getDefItemViewType                             |BaseAdapterQuick
 30 |30.setGridSpanSizeLookup                          |BaseAdapterQuick
-31 |31.onItemClickListener                            |BaseAdapterQuick
-32 |32.setOnItemClickListener                         |BaseAdapterQuick
-33 |33.onItemLongClickListener                        |BaseAdapterQuick
-34 |34.setOnItemLongClickListener                     |BaseAdapterQuick
-35 |35.onItemChildClickListener                       |BaseAdapterQuick
-36 |36.setOnItemChildClickListener                    |BaseAdapterQuick
-37 |37.onItemChildLongClickListener                   |BaseAdapterQuick
-38 |38.setOnItemChildLongClickListener                |BaseAdapterQuick
-39 |39.childClickViewIds                              |BaseAdapterQuick
-40 |40.addChildClickViewIds                           |BaseAdapterQuick
-41 |41.childLongClickViewIds                          |BaseAdapterQuick
-42 |42.addChildLongClickViewIds                       |BaseAdapterQuick
+31 |31.onItemClickListener                            |BaseAdapterQuick控件点击监听器
+32 |32.setOnItemClickListener                         |BaseAdapterQuick控件点击监听器设置
+33 |33.onItemLongClickListener                        |BaseAdapterQuick控件长按监听器
+34 |34.setOnItemLongClickListener                     |BaseAdapterQuick控件长按监听器设置
+35 |35.onItemChildClickListener                       |BaseAdapterQuick子控件点击监听器
+36 |36.setOnItemChildClickListener                    |BaseAdapterQuick子控件点击监听器设置
+37 |37.onItemChildLongClickListener                   |BaseAdapterQuick子控件长按监听器
+38 |38.setOnItemChildLongClickListener                |BaseAdapterQuick子控件长按监听器设置
+39 |39.childClickViewIds                              |BaseAdapterQuick可点击子控件ID列表
+40 |40.addChildClickViewIds                           |BaseAdapterQuick必须先添加可点击子控件ID
+41 |41.childLongClickViewIds                          |BaseAdapterQuick可长按子控件ID列表
+42 |42.addChildLongClickViewIds                       |BaseAdapterQuick必须先添加可长按子控件ID
 43 |43.headerLayout                                   |BaseAdapterQuick
-44 |44.setHeaderView                                  |BaseAdapterQuick
+44 |44.setHeaderView                                  |BaseAdapterQuick设置空布局layoutInflater.inflate(R.layout.empty_view, recyclerView, false)
 45 |45.headerViewPosition                             |BaseAdapterQuick
-46 |46.addHeaderView                                  |BaseAdapterQuick
-47 |47.removeHeaderView                               |BaseAdapterQuick
+46 |46.addHeaderView                                  |BaseAdapterQuick添加头布局layoutInflater.inflate(R.layout.head_view, recyclerView, false)
+47 |47.removeHeaderView                               |BaseAdapterQuick移除头布局
 48 |48.removeAllHeaderView                            |BaseAdapterQuick
 49 |49.footerLayout                                   |BaseAdapterQuick
 50 |50.setFooterView                                  |BaseAdapterQuick
 51 |51.footerViewPosition                             |BaseAdapterQuick
-52 |52.addFooterView                                  |BaseAdapterQuick
-53 |53.removeFooterView                               |BaseAdapterQuick
+52 |52.addFooterView                                  |BaseAdapterQuick添加脚布局layoutInflater.inflate(R.layout.footer_view, recyclerView, false)
+53 |53.removeFooterView                               |BaseAdapterQuick移除脚布局
 54 |54.removeAllFooterView                            |BaseAdapterQuick
 55 |55.emptyLayout                                    |BaseAdapterQuick
 56 |56.setEmptyView                                   |BaseAdapterQuick
 57 |57.removeEmptyView                                |BaseAdapterQuick
-58 |58.setDiffCallback                                |BaseAdapterQuick
-59 |59.differ                                         |BaseAdapterQuick
-60 |60.setDiffConfig                                  |BaseAdapterQuick
-61 |61.setDiffNewData                                 |BaseAdapterQuick
-62 |62.setNewInstance                                 |BaseAdapterQuick
-63 |63.setList                                        |BaseAdapterQuick
-64 |64.setData                                        |BaseAdapterQuick
-65 |65.addData                                        |BaseAdapterQuick
-66 |66.removeAt                                       |BaseAdapterQuick
-67 |67.remove                                         |BaseAdapterQuick
+58 |58.setDiffCallback                                |BaseAdapterQuick设置Diff回调生成Diff配置，setDiffNewData之前使用
+59 |59.differ                                         |BaseAdapterQuick获取Diff
+60 |60.setDiffConfig                                  |BaseAdapterQuick设置Diff配置，setDiffNewData之前使用
+61 |61.setDiffNewData                                 |BaseAdapterQuick设置新实例用Diff或DiffResult（差异更新），先setDiffCallback或setDiffConfig
+62 |62.setNewInstance                                 |BaseAdapterQuick设置新实例
+63 |63.setList                                        |BaseAdapterQuick设置新data数据
+64 |64.setData                                        |BaseAdapterQuick改变指定位置data数据
+65 |65.addData                                        |BaseAdapterQuick添加指定或不指定位置单条或批量data数据
+66 |66.removeAt                                       |BaseAdapterQuick删除data数据根据指定位置
+67 |67.remove                                         |BaseAdapterQuick删除data数据根据指定数据
 68 |1. getItemBinder                                  |BaseAdapterBinder
 69 |2. addItemBinder                                  |BaseAdapterBinder
 70 |3. convert                                        |BaseAdapterBinder
@@ -597,21 +597,54 @@
 97 |1. addItemType                                    |BaseAdapterMultiQuick
 98 |1. setNormalLayout                                |BaseAdapterSectionQuick
 99 |2. convertHeader                                  |BaseAdapterSectionQuick
-100|1. getView                                        |ViewHolderBase
-101|2. getViewOrNull                                  |ViewHolderBase
-102|3. findView                                       |ViewHolderBase
-103|4. setText                                        |ViewHolderBase
-104|5. setTextRes                                     |ViewHolderBase
-105|6. setTextColor                                   |ViewHolderBase
-106|7. setTextColorRes                                |ViewHolderBase
-107|8. setImageResource                               |ViewHolderBase
-108|9. setImageDrawable                               |ViewHolderBase
-109|10.setImageBitmap                                 |ViewHolderBase
-110|11.setBackgroundColor                             |ViewHolderBase
-111|12.setBackgroundResource                          |ViewHolderBase
-112|13.setVisible                                     |ViewHolderBase
-113|14.setGone                                        |ViewHolderBase
-114|15.setEnabled                                     |ViewHolderBase
+100|1. getView                                        |ViewHolderBase根据ID从数组获取控件，LoadMoreViewBase需用，LayoutInflater.from(parent.context).inflate(R.layout.view_load_more, parent, false)
+101|2. getViewOrNull                                  |ViewHolderBase根据ID从数组获取控件，无则放入数组
+102|3. findView                                       |ViewHolderBase根据ID获取控件
+103|4. setText                                        |ViewHolderBase设置控件文本
+104|5. setTextRes                                     |ViewHolderBase设置控件文本资源
+105|6. setTextColor                                   |ViewHolderBase设置控件颜色
+106|7. setTextColorRes                                |ViewHolderBase设置控件颜色资源
+107|8. setImageResource                               |ViewHolderBase设置控件资源
+108|9. setImageDrawable                               |ViewHolderBase设置控件Drawable
+109|10.setImageBitmap                                 |ViewHolderBase设置控件Bitmap
+110|11.setBackgroundColor                             |ViewHolderBase设置控件背景颜色
+111|12.setBackgroundResource                          |ViewHolderBase设置控件背景资源
+112|13.setVisible                                     |ViewHolderBase设置控件可见性，INVISIBLE占位不可见
+113|14.setGone                                        |ViewHolderBase设置控件隐藏性，GONE隐藏不可见
+114|15.setEnabled                                     |ViewHolderBase设置控件可用性
+115|1. loadMoreView                                   |LoadMoreModuleBase
+116|2. loadMoreStatus                                 |LoadMoreModuleBase
+117|3. isLoading                                      |LoadMoreModuleBase
+118|4. isEnableLoadMore                               |LoadMoreModuleBase
+119|5. isLoadEndMoreGone                              |LoadMoreModuleBase
+120|6. hasLoadMoreView                                |LoadMoreModuleBase
+121|7. setOnLoadMoreListener                          |LoadMoreModuleBase
+122|8. enableLoadMoreEndClick                         |LoadMoreModuleBase
+123|9. isAutoLoadMore                                 |LoadMoreModuleBase
+124|10.preLoadNumber                                  |LoadMoreModuleBase
+125|11.isEnableLoadMoreIfNotFullPage                  |LoadMoreModuleBase
+126|12.checkDisableLoadMoreIfNotFullPage              |LoadMoreModuleBase
+127|13.loadMoreFail                                   |LoadMoreModuleBase
+128|14.loadMoreComplete                               |LoadMoreModuleBase
+129|15.loadMoreEnd                                    |LoadMoreModuleBase
+130|1. setOnUpFetchListener                           |UpFetchModuleBase
+131|2. isUpFetchEnable                                |UpFetchModuleBase
+132|3. isUpFetching                                   |UpFetchModuleBase
+133|4. startUpFetchPosition                           |UpFetchModuleBase
+134|1. toggleViewId                                   |DraggableModuleBase
+135|2. hasToggleView                                  |DraggableModuleBase
+136|3. isDragEnabled                                  |DraggableModuleBase
+137|4. isDragOnLongPressEnabled                       |DraggableModuleBase
+138|5. setOnItemDragListener                          |DraggableModuleBase
+139|6. isSwipeEnabled                                 |DraggableModuleBase
+140|7. setOnItemSwipeListener                         |DraggableModuleBase
+```xml
+    <data>
+        <variable
+            name="name"
+            type="com.autoselect.widgeter.Name" />
+    </data><!--DataBindingHolderBase-->
+```
 >- drawable
 >>1. recycler_loading_progress.xml
 >>2. recycler_loading.png
@@ -619,3 +652,12 @@
 >- values:ids.xml
 >>1. strings:CN
 >>2. strings:HK
+### *附*
+```kotlin
+        setSupportActionBar(toolbar)//FloatingActionButton
+        supportActionBar?.apply {
+            setDisplayHomeAsUpEnabled(false)
+            setDisplayShowTitleEnabled(false)
+        }//Toolbar
+        swipeRefreshLayout?.isRefreshing = true//SwipeRefreshLayout
+```

@@ -35,8 +35,8 @@ private interface BaseAdapterQuickModule {
     fun addLoadMoreModule(baseQuickAdapter: BaseAdapterQuick<*, *>): LoadMoreModuleBase =
         LoadMoreModuleBase(baseQuickAdapter)
 
-    fun addUpFetchModule(baseQuickAdapter: BaseAdapterQuick<*, *>): BaseUpFetchModule =
-        BaseUpFetchModule(baseQuickAdapter)
+    fun addUpFetchModule(baseQuickAdapter: BaseAdapterQuick<*, *>): UpFetchModuleBase =
+        UpFetchModuleBase(baseQuickAdapter)
 
     fun addDraggableModule(baseQuickAdapter: BaseAdapterQuick<*, *>): DraggableModuleBase =
         DraggableModuleBase(baseQuickAdapter)
@@ -50,8 +50,8 @@ abstract class BaseAdapterQuick<T, VH : ViewHolderBase>
     internal var mLoadMoreModule: LoadMoreModuleBase? = null
     val loadMoreModule: LoadMoreModuleBase
         get() = checkNotNull(mLoadMoreModule) { "Please first implements LoadMoreModule" }//加载更多模块
-    private var mUpFetchModule: BaseUpFetchModule? = null
-    val upFetchModule: BaseUpFetchModule
+    private var mUpFetchModule: UpFetchModuleBase? = null
+    val upFetchModule: UpFetchModuleBase
         get() = checkNotNull(mUpFetchModule) { "Please first implements UpFetchModule" }//向上加载模块
     private var mDraggableModule: DraggableModuleBase? = null
     val draggableModule: DraggableModuleBase

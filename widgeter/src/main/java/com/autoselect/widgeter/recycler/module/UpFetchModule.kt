@@ -3,7 +3,7 @@ package com.autoselect.widgeter.recycler.module
 import com.autoselect.widgeter.recycler.BaseAdapterQuick
 
 interface UpFetchModule//需要向上加载更多BaseQuickAdapter继承
-open class BaseUpFetchModule(private val baseQuickAdapter: BaseAdapterQuick<*, *>) :
+open class UpFetchModuleBase(private val baseQuickAdapter: BaseAdapterQuick<*, *>) :
     UpFetchListener {
     private var mUpFetchListener: OnUpFetchListener? = null
     override fun setOnUpFetchListener(listener: OnUpFetchListener?) {
