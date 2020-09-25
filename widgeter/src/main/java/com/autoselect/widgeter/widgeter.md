@@ -627,10 +627,10 @@
 127|13.loadMoreFail                                   |LoadMoreModuleBase加载更多失败处理
 128|14.loadMoreComplete                               |LoadMoreModuleBase加载更多完成处理
 129|15.loadMoreEnd                                    |LoadMoreModuleBase加载更多结束处理，最后一页
-130|1. setOnUpFetchListener                           |UpFetchModuleBase
-131|2. isUpFetchEnable                                |UpFetchModuleBase
-132|3. isUpFetching                                   |UpFetchModuleBase
-133|4. startUpFetchPosition                           |UpFetchModuleBase
+130|1. setOnUpFetchListener                           |UpFetchModuleBase设置向上加载监听器
+131|2. isUpFetchEnable                                |UpFetchModuleBase是否能够向上加载
+132|3. isUpFetching                                   |UpFetchModuleBase是否正在向上加载
+133|4. startUpFetchPosition                           |UpFetchModuleBase开始向上加载位置
 134|1. toggleViewId                                   |DraggableModuleBase
 135|2. hasToggleView                                  |DraggableModuleBase
 136|3. isDragEnabled                                  |DraggableModuleBase
@@ -644,6 +644,23 @@
             name="name"
             type="com.autoselect.widgeter.Name" />
     </data><!--DataBindingHolderBase-->
+```
+```kotlin
+    val bottomDataPosition: Int
+        get() = (upFetchAdapter?.headerLayoutCount ?: 0) + (upFetchAdapter?.data?.size ?: 0) - 1//底部数据位置
+    (recyclerView?.layoutManager as LinearLayoutManager?)?.scrollToPositionWithOffset(bottomDataPosition, 0)//滚动到底部不带动画
+    recyclerView?.post { recyclerView?.smoothScrollToPosition(bottomDataPosition) }//滚动到底部带动画
+    fun requestUpFetch(data: List<E>) {
+        count++//记录加载次数
+        upFetchAdapter?.apply {
+            upFetchModule.isUpFetching = true//设置正在加载
+            recyclerView.postDelayed({
+                addData(0, data)//向上加载数据
+                upFetchModule.isUpFetching = false//设置未正加载
+                if (count > countMax) upFetchModule.isUpFetchEnable = false//全部加载后禁止向上加载
+            }, 300)
+        }
+    }//请求向上加载
 ```
 >- drawable
 >>1. recycler_loading_progress.xml
