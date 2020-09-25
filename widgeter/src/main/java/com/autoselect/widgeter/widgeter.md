@@ -613,17 +613,17 @@
 113|14.setGone                                        |ViewHolderBase设置控件隐藏性，GONE隐藏不可见
 114|15.setEnabled                                     |ViewHolderBase设置控件可用性
 115|1. loadMoreView                                   |LoadMoreModuleBase重设加载更多视图
-116|2. loadMoreStatus                                 |LoadMoreModuleBase
-117|3. isLoading                                      |LoadMoreModuleBase
+116|2. loadMoreStatus                                 |LoadMoreModuleBase加载更多状态：正在加载、完成、失败、结束
+117|3. isLoading                                      |LoadMoreModuleBase获取是否正在加载
 118|4. isEnableLoadMore                               |LoadMoreModuleBase是否能够加载更多，临时false防止下拉刷新同时上拉加载
-119|5. isLoadEndMoreGone                              |LoadMoreModuleBase
-120|6. hasLoadMoreView                                |LoadMoreModuleBase
+119|5. isLoadEndMoreGone                              |LoadMoreModuleBase加载更多是否隐藏
+120|6. hasLoadMoreView                                |LoadMoreModuleBase是否存在加载更多视图
 121|7. setOnLoadMoreListener                          |LoadMoreModuleBase设置加载更多监听器
-122|8. enableLoadMoreEndClick                         |LoadMoreModuleBase
+122|8. enableLoadMoreEndClick                         |LoadMoreModuleBase是否启用加载更多结束点击
 123|9. isAutoLoadMore                                 |LoadMoreModuleBase是否自动加载更多
-124|10.preLoadNumber                                  |LoadMoreModuleBase
+124|10.preLoadNumber                                  |LoadMoreModuleBase预加载数量
 125|11.isEnableLoadMoreIfNotFullPage                  |LoadMoreModuleBase数据不满一屏是否继续自动加载更多
-126|12.checkDisableLoadMoreIfNotFullPage              |LoadMoreModuleBase
+126|12.checkDisableLoadMoreIfNotFullPage              |LoadMoreModuleBase如果不能满页，取消加载更多
 127|13.loadMoreFail                                   |LoadMoreModuleBase加载更多失败处理
 128|14.loadMoreComplete                               |LoadMoreModuleBase加载更多完成处理
 129|15.loadMoreEnd                                    |LoadMoreModuleBase加载更多结束处理，最后一页
@@ -631,13 +631,13 @@
 131|2. isUpFetchEnable                                |UpFetchModuleBase是否能够向上加载
 132|3. isUpFetching                                   |UpFetchModuleBase是否正在向上加载
 133|4. startUpFetchPosition                           |UpFetchModuleBase开始向上加载位置
-134|1. toggleViewId                                   |DraggableModuleBase
-135|2. hasToggleView                                  |DraggableModuleBase
-136|3. isDragEnabled                                  |DraggableModuleBase
-137|4. isDragOnLongPressEnabled                       |DraggableModuleBase
-138|5. setOnItemDragListener                          |DraggableModuleBase
-139|6. isSwipeEnabled                                 |DraggableModuleBase
-140|7. setOnItemSwipeListener                         |DraggableModuleBase
+134|1. toggleViewId                                   |DraggableModuleBase切换视图ID
+135|2. hasToggleView                                  |DraggableModuleBase是否具有切换视图
+136|3. isDragEnabled                                  |DraggableModuleBase设置是否可拖拽
+137|4. isDragOnLongPressEnabled                       |DraggableModuleBase切换长按拖拽状态
+138|5. setOnItemDragListener                          |DraggableModuleBase设置条目拖拽监听器
+139|6. isSwipeEnabled                                 |DraggableModuleBase设置是否可侧滑
+140|7. setOnItemSwipeListener                         |DraggableModuleBase设置条目侧滑监听器
 ```xml
     <data>
         <variable
@@ -660,7 +660,34 @@
                 if (count > countMax) upFetchModule.isUpFetchEnable = false//全部加载后禁止向上加载
             }, 300)
         }
-    }//向上加载监听器内执行
+    }//向上加载监听器内加载实现
+
+    override fun onItemDragStart(viewHolder: RecyclerView.ViewHolder?, pos: Int) {
+        val startColor = Color.WHITE
+        val endColor = Color.rgb(245, 245, 245)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
+            ValueAnimator.ofArgb(startColor, endColor).apply {
+                addUpdateListener { (viewHolder as ViewHolderBase?)?.itemView?.setBackgroundColor(it.animatedValue as Int) }
+                duration = 300
+            }.start()
+    }//拖拽监听器方法内动画实现
+    override fun onItemDragEnd(viewHolder: RecyclerView.ViewHolder?, pos: Int) {
+        val startColor = Color.rgb(245, 245, 245)
+        val endColor = Color.WHITE
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
+            ValueAnimator.ofArgb(startColor, endColor).apply {
+                addUpdateListener { (viewHolder as ViewHolderBase?)?.itemView?.setBackgroundColor(it.animatedValue as Int) }
+                duration = 300
+            }.start()
+    }//拖拽监听器方法内动画实现
+    override fun onItemSwipeMoving(canvas: Canvas?, viewHolder: RecyclerView.ViewHolder?, dX: Float, dY: Float, isCurrentlyActive: Boolean) {
+        canvas?.drawColor(Color.parseColor("#00DDB6"))
+    }//侧滑监听器方法内变色实现
+    dragAndSwipeAdapter?.draggableModule?.itemTouchHelperCallback?.setDragMoveFlags(
+            ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT or
+                    ItemTouchHelper.UP or ItemTouchHelper.DOWN)//设置拖拽监听器后设置
+    dragAndSwipeAdapter?.draggableModule?.itemTouchHelperCallback
+            ?.setSwipeMoveFlags(ItemTouchHelper.START or ItemTouchHelper.END)//设置侧滑监听器后设置
 ```
 >- drawable
 >>1. recycler_loading_progress.xml
