@@ -660,7 +660,7 @@
                 if (count > countMax) upFetchModule.isUpFetchEnable = false//全部加载后禁止向上加载
             }, 300)
         }
-    }//向上加载监听执行
+    }//向上加载监听器内执行
 ```
 >- drawable
 >>1. recycler_loading_progress.xml
