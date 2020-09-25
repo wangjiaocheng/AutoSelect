@@ -627,7 +627,7 @@
 127|13.loadMoreFail                                   |LoadMoreModuleBase加载更多失败处理
 128|14.loadMoreComplete                               |LoadMoreModuleBase加载更多完成处理
 129|15.loadMoreEnd                                    |LoadMoreModuleBase加载更多结束处理，最后一页
-130|1. setOnUpFetchListener                           |UpFetchModuleBase设置向上加载监听器
+130|1. setOnUpFetchListener                           |UpFetchModuleBase设置向上加载监听器，执行requestUpFetch
 131|2. isUpFetchEnable                                |UpFetchModuleBase是否能够向上加载
 132|3. isUpFetching                                   |UpFetchModuleBase是否正在向上加载
 133|4. startUpFetchPosition                           |UpFetchModuleBase开始向上加载位置
