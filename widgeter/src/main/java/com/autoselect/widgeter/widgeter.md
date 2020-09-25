@@ -654,10 +654,18 @@
 >>2. strings:HK
 ### *附*
 ```kotlin
-        setSupportActionBar(toolbar)//FloatingActionButton
+        setSupportActionBar(toolbar)//先设置才能使用
         supportActionBar?.apply {
-            setDisplayHomeAsUpEnabled(false)
-            setDisplayShowTitleEnabled(false)
+            setHomeButtonEnabled(false)//不可点左上角图标
+            setDisplayHomeAsUpEnabled(false)//不显示左上角返回图标
+            setDisplayShowHomeEnabled(false)//不显示左上角程序图标
+            setDisplayShowTitleEnabled(false)//不显示标题
+            setDisplayShowCustomEnabled(false)//不显示普通View
         }//Toolbar
-        swipeRefreshLayout?.isRefreshing = true//SwipeRefreshLayout
+        swipeRefreshLayout?.apply {
+            isRefreshing = true//可刷新
+            setColorSchemeColors()//刷新进度条颜色
+            setColorSchemeResources()//刷新进度条颜色资源
+            setOnRefreshListener { refresh() }//刷新监听
+        }//SwipeRefreshLayout、FloatingActionButton
 ```
