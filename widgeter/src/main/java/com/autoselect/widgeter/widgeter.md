@@ -588,77 +588,76 @@
 67 |67.remove                                         |BaseAdapterQuick删除data数据根据指定数据
 68 |1. getItemBinder                                  |BaseAdapterBinder获取已添加Binder，无则异常
 69 |2. addItemBinder                                  |BaseAdapterBinder添加Binder可附加DiffUtil.ItemCallback实现convert：ItemBinderBase实现onCreateViewHolder、ItemBinderQuick实现getLayoutId、ItemBinderView实现onCreateViewBinding、ItemBinderData实现onCreateDataBinding（convert内executePendingBindings()）
-70 |3. convert                                        |BaseAdapterBinder适配器必须实现，用Diff时必须实现带payloads方法
-71 |4. getItemBinderOrNull                            |BaseAdapterBinder获取已添加Binder，无则null
-72 |1. multiTypeDelegate                              |BaseAdapterMultiDelegate
-73 |1. getItemType                                    |BaseAdapterMultiProvider
-74 |2. getItemProvider                                |BaseAdapterMultiProvider
-75 |3. addItemProvider                                |BaseAdapterMultiProvider
-76 |1. addFooterNodeProvider                          |BaseAdapterNode
-77 |2. addFullSpanNodeProvider                        |BaseAdapterNode
-78 |3. addNodeProvider                                |BaseAdapterNode
-79 |4. addItemProvider                                |BaseAdapterNode
-80 |5. setDiffNewData                                 |BaseAdapterNode
-81 |6. setNewInstance                                 |BaseAdapterNode
-82 |7. setList                                        |BaseAdapterNode
-83 |8. addData                                        |BaseAdapterNode
-84 |9. setData                                        |BaseAdapterNode
-85 |10.removeAt                                       |BaseAdapterNode
-86 |11.nodeAddData                                    |BaseAdapterNode
-87 |12.nodeRemoveData                                 |BaseAdapterNode
-88 |13.nodeSetData                                    |BaseAdapterNode
-89 |14.nodeReplaceChildData                           |BaseAdapterNode
-90 |15.collapse                                       |BaseAdapterNode
-91 |16.expand                                         |BaseAdapterNode
-92 |17.expandOrCollapse                               |BaseAdapterNode
-93 |18.collapseAndChild                               |BaseAdapterNode
-94 |19.expandAndChild                                 |BaseAdapterNode
-95 |20.expandAndCollapseOther                         |BaseAdapterNode
-96 |21.findParentNode                                 |BaseAdapterNode
-97 |1. addItemType                                    |BaseAdapterMultiQuick
-98 |1. setNormalLayout                                |BaseAdapterSectionQuick
-99 |2. convertHeader                                  |BaseAdapterSectionQuick
-100|1. getView                                        |ViewHolderBase根据ID从数组获取控件，LoadMoreViewBase需用，LayoutInflater.from(parent.context).inflate(R.layout.view_load_more, parent, false)
-101|2. getViewOrNull                                  |ViewHolderBase根据ID从数组获取控件，无则放入数组
-102|3. findView                                       |ViewHolderBase根据ID获取控件
-103|4. setText                                        |ViewHolderBase设置控件文本
-104|5. setTextRes                                     |ViewHolderBase设置控件文本资源
-105|6. setTextColor                                   |ViewHolderBase设置控件颜色
-106|7. setTextColorRes                                |ViewHolderBase设置控件颜色资源
-107|8. setImageResource                               |ViewHolderBase设置控件资源
-108|9. setImageDrawable                               |ViewHolderBase设置控件Drawable
-109|10.setImageBitmap                                 |ViewHolderBase设置控件Bitmap
-110|11.setBackgroundColor                             |ViewHolderBase设置控件背景颜色
-111|12.setBackgroundResource                          |ViewHolderBase设置控件背景资源
-112|13.setVisible                                     |ViewHolderBase设置控件可见性，INVISIBLE占位不可见
-113|14.setGone                                        |ViewHolderBase设置控件隐藏性，GONE隐藏不可见
-114|15.setEnabled                                     |ViewHolderBase设置控件可用性
-115|1. loadMoreView                                   |LoadMoreModuleBase重设加载更多视图
-116|2. loadMoreStatus                                 |LoadMoreModuleBase加载更多状态：正在加载、完成、失败、结束
-117|3. isLoading                                      |LoadMoreModuleBase获取是否正在加载
-118|4. isEnableLoadMore                               |LoadMoreModuleBase是否能够加载更多，临时false防止下拉刷新同时上拉加载
-119|5. isLoadEndMoreGone                              |LoadMoreModuleBase加载更多是否隐藏
-120|6. hasLoadMoreView                                |LoadMoreModuleBase是否存在加载更多视图
-121|7. setOnLoadMoreListener                          |LoadMoreModuleBase设置加载更多监听器
-122|8. enableLoadMoreEndClick                         |LoadMoreModuleBase是否启用加载更多结束点击
-123|9. isAutoLoadMore                                 |LoadMoreModuleBase是否自动加载更多
-124|10.preLoadNumber                                  |LoadMoreModuleBase预加载数量
-125|11.isEnableLoadMoreIfNotFullPage                  |LoadMoreModuleBase数据不满一屏是否继续自动加载更多
-126|12.checkDisableLoadMoreIfNotFullPage              |LoadMoreModuleBase如果不能满页，取消加载更多
-127|13.loadMoreFail                                   |LoadMoreModuleBase加载更多失败处理
-128|14.loadMoreComplete                               |LoadMoreModuleBase加载更多完成处理
-129|15.loadMoreEnd                                    |LoadMoreModuleBase加载更多结束处理，最后一页
-130|1. setOnUpFetchListener                           |UpFetchModuleBase设置向上加载监听器
-131|2. isUpFetchEnable                                |UpFetchModuleBase是否能够向上加载
-132|3. isUpFetching                                   |UpFetchModuleBase是否正在向上加载
-133|4. startUpFetchPosition                           |UpFetchModuleBase开始向上加载位置
-134|1. toggleViewId                                   |DraggableModuleBase切换视图ID
-135|2. hasToggleView                                  |DraggableModuleBase是否具有切换视图
-136|3. isDragEnabled                                  |DraggableModuleBase设置是否可拖拽
-137|4. isDragOnLongPressEnabled                       |DraggableModuleBase切换长按拖拽状态
-138|5. setOnItemDragListener                          |DraggableModuleBase设置条目拖拽监听器
-139|6. isSwipeEnabled                                 |DraggableModuleBase设置是否可侧滑
-140|7. setOnItemSwipeListener                         |DraggableModuleBase设置条目侧滑监听器
+70 |3. getItemBinderOrNull                            |BaseAdapterBinder获取已添加Binder，无则null
+71 |1. multiTypeDelegate                              |BaseAdapterMultiDelegate
+72 |1. getItemType                                    |BaseAdapterMultiProvider
+73 |2. getItemProvider                                |BaseAdapterMultiProvider
+74 |3. addItemProvider                                |BaseAdapterMultiProvider
+75 |1. addFooterNodeProvider                          |BaseAdapterNode
+76 |2. addFullSpanNodeProvider                        |BaseAdapterNode
+77 |3. addNodeProvider                                |BaseAdapterNode
+78 |4. addItemProvider                                |BaseAdapterNode
+79 |5. setDiffNewData                                 |BaseAdapterNode
+80 |6. setNewInstance                                 |BaseAdapterNode
+81 |7. setList                                        |BaseAdapterNode
+82 |8. addData                                        |BaseAdapterNode
+83 |9. setData                                        |BaseAdapterNode
+84 |10.removeAt                                       |BaseAdapterNode
+85 |11.nodeAddData                                    |BaseAdapterNode
+86 |12.nodeRemoveData                                 |BaseAdapterNode
+87 |13.nodeSetData                                    |BaseAdapterNode
+88 |14.nodeReplaceChildData                           |BaseAdapterNode
+89 |15.collapse                                       |BaseAdapterNode
+90 |16.expand                                         |BaseAdapterNode
+91 |17.expandOrCollapse                               |BaseAdapterNode
+92 |18.collapseAndChild                               |BaseAdapterNode
+93 |19.expandAndChild                                 |BaseAdapterNode
+94 |20.expandAndCollapseOther                         |BaseAdapterNode
+95 |21.findParentNode                                 |BaseAdapterNode
+96 |1. addItemType                                    |BaseAdapterMultiQuick
+97 |1. setNormalLayout                                |BaseAdapterSectionQuick
+98 |2. convertHeader                                  |BaseAdapterSectionQuick
+99 |1. getView                                        |ViewHolderBase根据ID从数组获取控件，LoadMoreViewBase需用，LayoutInflater.from(parent.context).inflate(R.layout.view_load_more, parent, false)
+100|2. getViewOrNull                                  |ViewHolderBase根据ID从数组获取控件，无则放入数组
+101|3. findView                                       |ViewHolderBase根据ID获取控件
+102|4. setText                                        |ViewHolderBase设置控件文本
+103|5. setTextRes                                     |ViewHolderBase设置控件文本资源
+104|6. setTextColor                                   |ViewHolderBase设置控件颜色
+105|7. setTextColorRes                                |ViewHolderBase设置控件颜色资源
+106|8. setImageResource                               |ViewHolderBase设置控件资源
+107|9. setImageDrawable                               |ViewHolderBase设置控件Drawable
+108|10.setImageBitmap                                 |ViewHolderBase设置控件Bitmap
+109|11.setBackgroundColor                             |ViewHolderBase设置控件背景颜色
+110|12.setBackgroundResource                          |ViewHolderBase设置控件背景资源
+111|13.setVisible                                     |ViewHolderBase设置控件可见性，INVISIBLE占位不可见
+112|14.setGone                                        |ViewHolderBase设置控件隐藏性，GONE隐藏不可见
+113|15.setEnabled                                     |ViewHolderBase设置控件可用性
+114|1. loadMoreView                                   |LoadMoreModuleBase重设加载更多视图
+115|2. loadMoreStatus                                 |LoadMoreModuleBase加载更多状态：正在加载、完成、失败、结束
+116|3. isLoading                                      |LoadMoreModuleBase获取是否正在加载
+117|4. isEnableLoadMore                               |LoadMoreModuleBase是否能够加载更多，临时false防止下拉刷新同时上拉加载
+118|5. isLoadEndMoreGone                              |LoadMoreModuleBase加载更多是否隐藏
+119|6. hasLoadMoreView                                |LoadMoreModuleBase是否存在加载更多视图
+120|7. setOnLoadMoreListener                          |LoadMoreModuleBase设置加载更多监听器
+121|8. enableLoadMoreEndClick                         |LoadMoreModuleBase是否启用加载更多结束点击
+122|9. isAutoLoadMore                                 |LoadMoreModuleBase是否自动加载更多
+123|10.preLoadNumber                                  |LoadMoreModuleBase预加载数量
+124|11.isEnableLoadMoreIfNotFullPage                  |LoadMoreModuleBase数据不满一屏是否继续自动加载更多
+125|12.checkDisableLoadMoreIfNotFullPage              |LoadMoreModuleBase如果不能满页，取消加载更多
+126|13.loadMoreFail                                   |LoadMoreModuleBase加载更多失败处理
+127|14.loadMoreComplete                               |LoadMoreModuleBase加载更多完成处理
+128|15.loadMoreEnd                                    |LoadMoreModuleBase加载更多结束处理，最后一页
+129|1. setOnUpFetchListener                           |UpFetchModuleBase设置向上加载监听器
+130|2. isUpFetchEnable                                |UpFetchModuleBase是否能够向上加载
+131|3. isUpFetching                                   |UpFetchModuleBase是否正在向上加载
+132|4. startUpFetchPosition                           |UpFetchModuleBase开始向上加载位置
+133|1. toggleViewId                                   |DraggableModuleBase切换视图ID
+134|2. hasToggleView                                  |DraggableModuleBase是否具有切换视图
+135|3. isDragEnabled                                  |DraggableModuleBase设置是否可拖拽
+136|4. isDragOnLongPressEnabled                       |DraggableModuleBase切换长按拖拽状态
+137|5. setOnItemDragListener                          |DraggableModuleBase设置条目拖拽监听器
+138|6. isSwipeEnabled                                 |DraggableModuleBase设置是否可侧滑
+139|7. setOnItemSwipeListener                         |DraggableModuleBase设置条目侧滑监听器
 ```xml
     <data>
         <variable
