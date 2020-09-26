@@ -63,8 +63,7 @@ open class BaseAdapterBinder(list: MutableList<Any>? = null) :
     fun <T : Any> addItemBinder(
         clazz: Class<out T>, baseItemBinder: ItemBinderBase<T, *>,
         callback: DiffUtil.ItemCallback<T>? = null
-    )
-            : BaseAdapterBinder = apply {
+    ): BaseAdapterBinder = apply {
         val itemType = mTypeMap.size + 1
         mTypeMap[clazz] = itemType
         mBinderArray.append(itemType, baseItemBinder as ItemBinderBase<Any, *>)

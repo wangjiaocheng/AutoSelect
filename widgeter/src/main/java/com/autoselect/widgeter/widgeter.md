@@ -28,7 +28,7 @@
 | 125  | ### *24.HeartLayout：FloatAnimation、PathAnimator、HeartView(238)*                                                                                                                                                                               | 爱心 |
 | 126  | ### *25.Banner：BannerHelper、TypeBannerTrans、BeanPage、PageListener、RecyclerViewHolder、RecyclerBaseAdapter、TypeTrans、Transformer、TransformerCard、TransformerDepthPage、TransformerMz、TransformerZoomOutPage、BeanCircle、BeanRect、TypeIndicatorCircle、IndicatorCircle、IndicatorRect、IndicatorText(1060)*| 横幅 |
 | 127  | ### *26.LayoutTab、LayoutLabel：LayoutScroll、LayoutFlow、AttrsHelper、AdapterTab、AdapterLabel、AdapterTemplate、AdapterFlow、FlowListener、FlowListenerAdapter、ActionRect、ActionTri、ActionRound、ActionColor、ActionRes、ActionBase、ActionDot、TextViewTabColor、BeanTab、BeanLabel、TabValue、TabTypeEvaluator、ConstantsFlow、ViewPagerHelper(2080)*| 流式 |
-| 128  | ### *27.BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)、ViewHolderBase：......(2732)*                                                  | 回收 |
+| 128  | ### *27.BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)、ViewHolderBase：......(2731)*                                                  | 回收 |
 ## **控件库widgeter**
 >- xml资源
 >>1. attrs.xml
@@ -516,7 +516,7 @@
 18 |5. setSelects                                     |LayoutLabel
 19 |6. setAdapter                                     |LayoutLabel
 >- implementation "androidx.constraintlayout:constraintlayout:2.0.1"
-### *27.回收BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)、ViewHolderBase：......(2732)*
+### *27.回收BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)、ViewHolderBase：......(2731)*
 序号|方法|功能（RecyclerView可嵌套：setHasFixedSize(true)、layoutManager、adapter）
 ---|--------------------------------------------------|---
 01 |1. data                                           |BaseAdapterQuick需要适配的数据
@@ -586,10 +586,10 @@
 65 |65.addData                                        |BaseAdapterQuick添加指定或不指定位置单条或批量data数据
 66 |66.removeAt                                       |BaseAdapterQuick删除data数据根据指定位置
 67 |67.remove                                         |BaseAdapterQuick删除data数据根据指定数据
-68 |1. getItemBinder                                  |BaseAdapterBinder
-69 |2. addItemBinder                                  |BaseAdapterBinder
-70 |3. convert                                        |BaseAdapterBinder
-71 |4. getItemBinderOrNull                            |BaseAdapterBinder
+68 |1. getItemBinder                                  |BaseAdapterBinder获取已添加Binder，无则异常
+69 |2. addItemBinder                                  |BaseAdapterBinder添加Binder可附加DiffUtil.ItemCallback实现convert：ItemBinderBase实现onCreateViewHolder、ItemBinderQuick实现getLayoutId、ItemBinderView实现onCreateViewBinding、ItemBinderData实现onCreateDataBinding（convert内executePendingBindings()）
+70 |3. convert                                        |BaseAdapterBinder适配器必须实现，用Diff时必须实现带payloads方法
+71 |4. getItemBinderOrNull                            |BaseAdapterBinder获取已添加Binder，无则null
 72 |1. multiTypeDelegate                              |BaseAdapterMultiDelegate
 73 |1. getItemType                                    |BaseAdapterMultiProvider
 74 |2. getItemProvider                                |BaseAdapterMultiProvider
