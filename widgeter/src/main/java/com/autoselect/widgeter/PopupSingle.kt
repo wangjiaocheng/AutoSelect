@@ -11,7 +11,7 @@ import android.widget.*
 import com.autoselect.helper.DensityHelper
 import com.autoselect.helper.ScreenHelper
 
-open class PopupSingle(
+class PopupSingle(
     private val context: Context, layout: Int = R.layout.popup_list_layout,
     width: Int = ViewGroup.LayoutParams.WRAP_CONTENT,
     height: Int = ViewGroup.LayoutParams.WRAP_CONTENT
