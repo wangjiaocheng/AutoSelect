@@ -589,7 +589,7 @@
 68 |1. getItemBinder                                  |BaseAdapterBinder获取已添加Binder，无则异常
 69 |2. addItemBinder                                  |BaseAdapterBinder添加Binder可附加DiffUtil.ItemCallback实现convert：ItemBinderBase实现onCreateViewHolder、ItemBinderQuick实现getLayoutId、ItemBinderView实现onCreateViewBinding、ItemBinderData实现onCreateDataBinding（convert内executePendingBindings()）
 70 |3. getItemBinderOrNull                            |BaseAdapterBinder获取已添加Binder，无则null
-71 |1. typeMultiDelegate                              |BaseAdapterMultiDelegate实现BaseTypeMultiDelegate赋值
+71 |1. typeMultiDelegate                              |BaseAdapterMultiDelegate实现BaseTypeMultiDelegate赋值：getItemType指定位置对应指定类型列表类型，addItemType添加指定类型和对应布局；convert内根据指定类型匹配VH的itemViewType，自动选择布局，设置布局内控件数据，实现EntityMultiItem包含指定类型和控件数据
 72 |1. getItemType                                    |BaseAdapterMultiProvider
 73 |2. getItemProvider                                |BaseAdapterMultiProvider
 74 |3. addItemProvider                                |BaseAdapterMultiProvider
@@ -614,7 +614,7 @@
 93 |19.expandAndChild                                 |BaseAdapterNode
 94 |20.expandAndCollapseOther                         |BaseAdapterNode
 95 |21.findParentNode                                 |BaseAdapterNode
-96 |1. addItemType                                    |BaseAdapterMultiQuick
+96 |1. addItemType                                    |BaseAdapterMultiQuick添加指定类型和对应布局，直接添加无需Delegate添加也无需Binder添加
 97 |1. setNormalLayout                                |BaseAdapterSectionQuick
 98 |2. convertHeader                                  |BaseAdapterSectionQuick
 99 |1. getView                                        |ViewHolderBase根据ID从数组获取控件，LoadMoreViewBase需用，LayoutInflater.from(parent.context).inflate(R.layout.view_load_more, parent, false)

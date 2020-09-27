@@ -18,4 +18,4 @@ abstract class BaseAdapterMultiQuick<T : EntityMultiItem, VH : ViewHolderBase>(d
             require(this != 0)
             { "ViewType: $viewType found layoutResId，please use addItemType() first!" }
         })
-}//多类型布局适用：类型较少，业务不复杂场景，data<T>必须实现EntityMultiItem，无法实现用BaseAdapterMultiDelegate；类型较多，为离各类型业务逻辑用BaseAdapterMultiProvider
+}//多类型布局适用：类型较少，业务不复杂场景，data<T>必须实现EntityMultiItem，无法实现用BaseAdapterMultiDelegate；类型较多，分离各类型业务逻辑用BaseAdapterMultiProvider
