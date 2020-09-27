@@ -589,10 +589,10 @@
 68 |1. getItemBinder                                  |BaseAdapterBinder获取已添加Binder，无则异常
 69 |2. addItemBinder                                  |BaseAdapterBinder添加Binder可附加DiffUtil.ItemCallback实现convert：ItemBinderBase实现onCreateViewHolder、ItemBinderQuick实现getLayoutId、ItemBinderView实现onCreateViewBinding、ItemBinderData实现onCreateDataBinding（convert内executePendingBindings()）
 70 |3. getItemBinderOrNull                            |BaseAdapterBinder获取已添加Binder，无则null
-71 |1. typeMultiDelegate                              |BaseAdapterMultiDelegate实现BaseTypeMultiDelegate赋值：getItemType指定位置对应指定类型列表类型，addItemType添加指定类型和对应布局；convert内根据指定类型匹配VH的itemViewType，自动选择布局，设置布局内控件数据，实现EntityMultiItem包含指定类型和控件数据
-72 |1. getItemType                                    |BaseAdapterMultiProvider
-73 |2. getItemProvider                                |BaseAdapterMultiProvider
-74 |3. addItemProvider                                |BaseAdapterMultiProvider
+71 |1. typeMultiDelegate                              |BaseAdapterMultiDelegate实现BaseTypeMultiDelegate赋值：getItemType指定位置对应指定项类型列表项类型，addItemType添加指定项类型和对应布局；convert内根据指定项类型匹配VH的itemViewType，自动选择布局，设置布局内控件数据，实现EntityMultiItem包含项类型和控件数据
+72 |1. getItemType                                    |BaseAdapterMultiProvider根据位置指定不同项类型，数据类包含各种项类型
+73 |2. getItemProvider                                |BaseAdapterMultiProvider获取已添加BaseProviderItem
+74 |3. addItemProvider                                |BaseAdapterMultiProvider添加自定义BaseProviderItem：layoutId设置布局；itemViewType设置项类型；convert适配器必须实现，用Diff时必须实现带payloads方法
 75 |1. addFooterNodeProvider                          |BaseAdapterNode
 76 |2. addFullSpanNodeProvider                        |BaseAdapterNode
 77 |3. addNodeProvider                                |BaseAdapterNode
@@ -615,8 +615,8 @@
 94 |20.expandAndCollapseOther                         |BaseAdapterNode
 95 |21.findParentNode                                 |BaseAdapterNode
 96 |1. addItemType                                    |BaseAdapterMultiQuick添加指定类型和对应布局，直接添加无需Delegate添加也无需Binder添加
-97 |1. setNormalLayout                                |BaseAdapterSectionQuick
-98 |2. convertHeader                                  |BaseAdapterSectionQuick
+97 |1. setNormalLayout                                |BaseAdapterSectionQuick如果item不是多布局，此方法快速设置item layout；如果需要多布局item用addItemType
+98 |2. convertHeader                                  |BaseAdapterSectionQuick数据项实现EntitySection，convertHeader和convert共用，根据isHeader配置不同数据
 99 |1. getView                                        |ViewHolderBase根据ID从数组获取控件，LoadMoreViewBase需用，LayoutInflater.from(parent.context).inflate(R.layout.view_load_more, parent, false)
 100|2. getViewOrNull                                  |ViewHolderBase根据ID从数组获取控件，无则放入数组
 101|3. findView                                       |ViewHolderBase根据ID获取控件
