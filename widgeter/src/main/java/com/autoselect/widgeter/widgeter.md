@@ -1,34 +1,34 @@
 # ***库文档***
 | 序号 | 类库                                                                                                                                                                                                                                             | 功能 |
 |:-----|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----|
-| 101  | ### *00.Divider(32)*                                                                                                                                                                                                                            | 分隔 |
-| 102  | ### *01.Title(203)*                                                                                                                                                                                                                             | 标题 |
-| 103  | ### *02.PopupImply(31)*                                                                                                                                                                                                                         | 说明 |
-| 104  | ### *03.PopupSingle(111)*                                                                                                                                                                                                                       | 弹表 |
-| 105  | ### *04.PopupViewManager：PopupView、BackgroundConstructor、Coordinates、CoordinatesFinder(528)*                                                                                                                                                 | 弹框 |
-| 106  | ### *05.ProgressBar(258)*                                                                                                                                                                                                                       | 进度 |
-| 107  | ### *06.ProgressRound(165)*                                                                                                                                                                                                                     | 弧度 |
-| 108  | ### *07.RunTextView(12)*                                                                                                                                                                                                                        | 跑马 |
-| 109  | ### *08.TextAutoZoom(210)*                                                                                                                                                                                                                      | 字调 |
-| 110  | ### *09.TextViewVertical(100)*                                                                                                                                                                                                                   | 单滚 |
-| 111  | ### *10.TextViewVerticalMore(40)*                                                                                                                                                                                                               | 多滚 |
-| 112  | ### *11.AutoImageView(35)*                                                                                                                                                                                                                      | 平滚 |
-| 113  | ### *12.PinView：ScaleImageView、ImageSource、ImageViewState、DecoderFactory、ImageDecoder、RegionDecoder(34+2108)*                                                                                                                              | 图调 |
-| 114  | ### *13.Captcha(117)*                                                                                                                                                                                                                           | 验证 |
-| 115  | ### *14.SwipeCaptcha(392)*                                                                                                                                                                                                                      | 滑块 |
-| 116  | ### *15.ScratchCard(48)*                                                                                                                                                                                                                        | 刮刮 |
-| 117  | ### *16.CardStackView：AdapterAnimator、AdapterAllMoveDownAnimator、AdapterUpDownAnimator、AdapterUpDownStackAnimator、ViewDataObserver、AdapterDataObservable、ViewHolder、Adapter、AdapterStack、DelegateScrollStack、DelegateScroll(861+36+7)* | 卡组 |
-| 118  | ### *17.CobwebView：RotateInfo(411)*                                                                                                                                                                                                            | 蛛网 |
-| 119  | ### *18.NetSpeedView(155)*                                                                                                                                                                                                                      | 网速 |
-| 120  | ### *19.SeatAirplane(892)*                                                                                                                                                                                                                      | 机座 |
-| 121  | ### *20.SeatMovie(717)*                                                                                                                                                                                                                         | 影座 |
-| 122  | ### *21.RulerWheelView(464)*                                                                                                                                                                                                                    | 刻度 |
-| 123  | ### *22.ShoppingView(362)*                                                                                                                                                                                                                      | 商品 |
-| 124  | ### *23.ShineView：ShineButton、PorterShapeImageView、PorterImageView、ShineAnimator、EasingInterpolator、EasingProvider、Ease(699)*                                                                                                             | 点赞 |
-| 125  | ### *24.HeartLayout：FloatAnimation、PathAnimator、HeartView(238)*                                                                                                                                                                               | 爱心 |
-| 126  | ### *25.Banner：BannerHelper、TypeBannerTrans、BeanPage、PageListener、RecyclerViewHolder、RecyclerBaseAdapter、TypeTrans、Transformer、TransformerCard、TransformerDepthPage、TransformerMz、TransformerZoomOutPage、BeanCircle、BeanRect、TypeIndicatorCircle、IndicatorCircle、IndicatorRect、IndicatorText(1060)*| 横幅 |
-| 127  | ### *26.LayoutTab、LayoutLabel：LayoutScroll、LayoutFlow、AttrsHelper、AdapterTab、AdapterLabel、AdapterTemplate、AdapterFlow、FlowListener、FlowListenerAdapter、ActionRect、ActionTri、ActionRound、ActionColor、ActionRes、ActionBase、ActionDot、TextViewTabColor、BeanTab、BeanLabel、TabValue、TabTypeEvaluator、ConstantsFlow、ViewPagerHelper(2080)*| 流式 |
-| 128  | ### *27.BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)、ViewHolderBase：......(2731)*                                                  | 回收 |
+| 001  | ### *00.Divider(32)*                                                                                                                                                                                                                            | 分隔 |
+| 002  | ### *01.Title(203)*                                                                                                                                                                                                                             | 标题 |
+| 003  | ### *02.PopupImply(31)*                                                                                                                                                                                                                         | 说明 |
+| 004  | ### *03.PopupSingle(111)*                                                                                                                                                                                                                       | 弹表 |
+| 005  | ### *04.PopupViewManager：PopupView、BackgroundConstructor、Coordinates、CoordinatesFinder(528)*                                                                                                                                                 | 弹框 |
+| 006  | ### *05.ProgressBar(258)*                                                                                                                                                                                                                       | 进度 |
+| 007  | ### *06.ProgressRound(165)*                                                                                                                                                                                                                     | 弧度 |
+| 008  | ### *07.RunTextView(12)*                                                                                                                                                                                                                        | 跑马 |
+| 009  | ### *08.TextAutoZoom(210)*                                                                                                                                                                                                                      | 字调 |
+| 010  | ### *09.TextViewVertical(100)*                                                                                                                                                                                                                   | 单滚 |
+| 011  | ### *10.TextViewVerticalMore(40)*                                                                                                                                                                                                               | 多滚 |
+| 012  | ### *11.AutoImageView(35)*                                                                                                                                                                                                                      | 平滚 |
+| 013  | ### *12.PinView：ScaleImageView、ImageSource、ImageViewState、DecoderFactory、ImageDecoder、RegionDecoder(34+2108)*                                                                                                                              | 图调 |
+| 014  | ### *13.Captcha(117)*                                                                                                                                                                                                                           | 验证 |
+| 015  | ### *14.SwipeCaptcha(392)*                                                                                                                                                                                                                      | 滑块 |
+| 016  | ### *15.ScratchCard(48)*                                                                                                                                                                                                                        | 刮刮 |
+| 017  | ### *16.CardStackView：AdapterAnimator、AdapterAllMoveDownAnimator、AdapterUpDownAnimator、AdapterUpDownStackAnimator、ViewDataObserver、AdapterDataObservable、ViewHolder、Adapter、AdapterStack、DelegateScrollStack、DelegateScroll(861+36+7)* | 卡组 |
+| 018  | ### *17.CobwebView：RotateInfo(411)*                                                                                                                                                                                                            | 蛛网 |
+| 019  | ### *18.NetSpeedView(155)*                                                                                                                                                                                                                      | 网速 |
+| 020  | ### *19.SeatAirplane(892)*                                                                                                                                                                                                                      | 机座 |
+| 021  | ### *20.SeatMovie(717)*                                                                                                                                                                                                                         | 影座 |
+| 022  | ### *21.RulerWheelView(464)*                                                                                                                                                                                                                    | 刻度 |
+| 023  | ### *22.ShoppingView(362)*                                                                                                                                                                                                                      | 商品 |
+| 024  | ### *23.ShineView：ShineButton、PorterShapeImageView、PorterImageView、ShineAnimator、EasingInterpolator、EasingProvider、Ease(699)*                                                                                                             | 点赞 |
+| 025  | ### *24.HeartLayout：FloatAnimation、PathAnimator、HeartView(238)*                                                                                                                                                                               | 爱心 |
+| 026  | ### *25.Banner：BannerHelper、TypeBannerTrans、BeanPage、PageListener、RecyclerViewHolder、RecyclerBaseAdapter、TypeTrans、Transformer、TransformerCard、TransformerDepthPage、TransformerMz、TransformerZoomOutPage、BeanCircle、BeanRect、TypeIndicatorCircle、IndicatorCircle、IndicatorRect、IndicatorText(1060)*| 横幅 |
+| 027  | ### *26.LayoutTab、LayoutLabel：LayoutScroll、LayoutFlow、AttrsHelper、AdapterTab、AdapterLabel、AdapterTemplate、AdapterFlow、FlowListener、FlowListenerAdapter、ActionRect、ActionTri、ActionRound、ActionColor、ActionRes、ActionBase、ActionDot、TextViewTabColor、BeanTab、BeanLabel、TabValue、TabTypeEvaluator、ConstantsFlow、ViewPagerHelper(2080)*| 流式 |
+| 028  | ### *27.BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)、ViewHolderBase：......(2731)*                                                  | 回收 |
 ## **控件库widgeter**
 >- xml资源
 >>1. attrs.xml
@@ -524,31 +524,31 @@
 03 |3. upFetchModule                                  |BaseAdapterQuick向上加载模块，需继承UpFetchModule
 04 |4. draggableModule                                |BaseAdapterQuick拖拽模块，需继承DraggableModule
 05 |5. convert                                        |BaseAdapterQuick适配器必须实现，用Diff时必须实现带payloads方法
-06 |6. onCreateDefViewHolder                          |BaseAdapterQuick
-07 |7. headerLayoutCount                              |BaseAdapterQuick
+06 |6. onCreateDefViewHolder                          |BaseAdapterQuick实现自定义VH
+07 |7. headerLayoutCount                              |BaseAdapterQuick头布局计数
 08 |8. getItem                                        |BaseAdapterQuick获取data中数据项
-09 |9. getItemOrNull                                  |BaseAdapterQuick
-10 |10.getItemPosition                                |BaseAdapterQuick
+09 |9. getItemOrNull                                  |BaseAdapterQuick获取data中数据项，可为空
+10 |10.getItemPosition                                |BaseAdapterQuick获取data中数据项位置
 11 |11.animationEnable                                |BaseAdapterQuick动画设置启用
 12 |12.adapterAnimation                               |BaseAdapterQuick动画自定义赋值
 13 |13.setAnimationWithDefault                        |BaseAdapterQuick动画设置默认类型
 14 |14.isAnimationFirstOnly                           |BaseAdapterQuick动画是否仅首次运行，改变后适配器notifyDataSetChanged()
-15 |15.recyclerView                                   |BaseAdapterQuick
-16 |16.headerViewAsFlow                               |BaseAdapterQuick
-17 |17.footerViewAsFlow                               |BaseAdapterQuick
-18 |18.isUseEmpty                                     |BaseAdapterQuick
-19 |19.hasEmptyView                                   |BaseAdapterQuick
-20 |20.headerWithEmptyEnable                          |BaseAdapterQuick
-21 |21.footerWithEmptyEnable                          |BaseAdapterQuick
-22 |22.hasHeaderLayout                                |BaseAdapterQuick
-23 |23.hasFooterLayout                                |BaseAdapterQuick
-24 |24.footerLayoutCount                              |BaseAdapterQuick
-25 |25.getItemCount                                   |BaseAdapterQuick
-26 |26.getDefItemCount                                |BaseAdapterQuick
-27 |27.getItemId                                      |BaseAdapterQuick
-28 |28.getItemViewType                                |BaseAdapterQuick
-29 |29.getDefItemViewType                             |BaseAdapterQuick
-30 |30.setGridSpanSizeLookup                          |BaseAdapterQuick
+15 |15.recyclerView                                   |BaseAdapterQuick回收视图赋值
+16 |16.headerViewAsFlow                               |BaseAdapterQuick为true页眉排列方式与普通项目视图相同，仅GridLayoutManager时有效忽略跨距大小
+17 |17.footerViewAsFlow                               |BaseAdapterQuick为true页脚排列方式与普通项目视图相同，仅GridLayoutManager时有效忽略跨距大小
+18 |18.isUseEmpty                                     |BaseAdapterQuick是否使用空布局
+19 |19.hasEmptyView                                   |BaseAdapterQuick是否存在空布局
+20 |20.headerWithEmptyEnable                          |BaseAdapterQuick当显示空布局时，是否显示Header
+21 |21.footerWithEmptyEnable                          |BaseAdapterQuick当显示空布局时，是否显示Foot
+22 |22.hasHeaderLayout                                |BaseAdapterQuick是否存在头布局
+23 |23.hasFooterLayout                                |BaseAdapterQuick是否存在脚布局
+24 |24.footerLayoutCount                              |BaseAdapterQuick脚布局计数
+25 |25.getItemCount                                   |BaseAdapterQuick获取项计数
+26 |26.getDefItemCount                                |BaseAdapterQuick获取自定义项计数
+27 |27.getItemId                                      |BaseAdapterQuick获取项ID
+28 |28.getItemViewType                                |BaseAdapterQuick获取项视图类型
+29 |29.getDefItemViewType                             |BaseAdapterQuick获取自定义项视图类型
+30 |30.setGridSpanSizeLookup                          |BaseAdapterQuick设置网格大小
 31 |31.onItemClickListener                            |BaseAdapterQuick控件点击监听器
 32 |32.setOnItemClickListener                         |BaseAdapterQuick控件点击监听器设置
 33 |33.onItemLongClickListener                        |BaseAdapterQuick控件长按监听器
@@ -561,21 +561,21 @@
 40 |40.addChildClickViewIds                           |BaseAdapterQuick必须先添加可点击子控件ID
 41 |41.childLongClickViewIds                          |BaseAdapterQuick可长按子控件ID列表
 42 |42.addChildLongClickViewIds                       |BaseAdapterQuick必须先添加可长按子控件ID
-43 |43.headerLayout                                   |BaseAdapterQuick
+43 |43.headerLayout                                   |BaseAdapterQuick获取头布局
 44 |44.setHeaderView                                  |BaseAdapterQuick设置空布局layoutInflater.inflate(R.layout.empty_view, recyclerView, false)
-45 |45.headerViewPosition                             |BaseAdapterQuick
+45 |45.headerViewPosition                             |BaseAdapterQuick头布局位置
 46 |46.addHeaderView                                  |BaseAdapterQuick添加头布局layoutInflater.inflate(R.layout.head_view, recyclerView, false)
 47 |47.removeHeaderView                               |BaseAdapterQuick移除头布局
-48 |48.removeAllHeaderView                            |BaseAdapterQuick
-49 |49.footerLayout                                   |BaseAdapterQuick
-50 |50.setFooterView                                  |BaseAdapterQuick
-51 |51.footerViewPosition                             |BaseAdapterQuick
+48 |48.removeAllHeaderView                            |BaseAdapterQuick移除所有头布局
+49 |49.footerLayout                                   |BaseAdapterQuick获取脚布局
+50 |50.setFooterView                                  |BaseAdapterQuick设置脚布局
+51 |51.footerViewPosition                             |BaseAdapterQuick脚布局位置
 52 |52.addFooterView                                  |BaseAdapterQuick添加脚布局layoutInflater.inflate(R.layout.footer_view, recyclerView, false)
 53 |53.removeFooterView                               |BaseAdapterQuick移除脚布局
-54 |54.removeAllFooterView                            |BaseAdapterQuick
-55 |55.emptyLayout                                    |BaseAdapterQuick
-56 |56.setEmptyView                                   |BaseAdapterQuick
-57 |57.removeEmptyView                                |BaseAdapterQuick
+54 |54.removeAllFooterView                            |BaseAdapterQuick移除所有脚布局
+55 |55.emptyLayout                                    |BaseAdapterQuick获取空布局
+56 |56.setEmptyView                                   |BaseAdapterQuick设置空布局
+57 |57.removeEmptyView                                |BaseAdapterQuick移除空布局
 58 |58.setDiffCallback                                |BaseAdapterQuick设置Diff回调生成Diff配置，setDiffNewData之前使用
 59 |59.differ                                         |BaseAdapterQuick获取Diff
 60 |60.setDiffConfig                                  |BaseAdapterQuick设置Diff配置，setDiffNewData之前使用
@@ -593,27 +593,27 @@
 72 |1. getItemType                                    |BaseAdapterMultiProvider根据位置指定不同项类型，数据类包含各种项类型
 73 |2. getItemProvider                                |BaseAdapterMultiProvider获取已添加BaseProviderItem
 74 |3. addItemProvider                                |BaseAdapterMultiProvider添加自定义BaseProviderItem：layoutId设置布局；itemViewType设置项类型；convert适配器必须实现，用Diff时必须实现带payloads方法
-75 |1. addFooterNodeProvider                          |BaseAdapterNode
-76 |2. addFullSpanNodeProvider                        |BaseAdapterNode
-77 |3. addNodeProvider                                |BaseAdapterNode
-78 |4. addItemProvider                                |BaseAdapterNode
-79 |5. setDiffNewData                                 |BaseAdapterNode
-80 |6. setNewInstance                                 |BaseAdapterNode
-81 |7. setList                                        |BaseAdapterNode
-82 |8. addData                                        |BaseAdapterNode
-83 |9. setData                                        |BaseAdapterNode
-84 |10.removeAt                                       |BaseAdapterNode
-85 |11.nodeAddData                                    |BaseAdapterNode
-86 |12.nodeRemoveData                                 |BaseAdapterNode
-87 |13.nodeSetData                                    |BaseAdapterNode
-88 |14.nodeReplaceChildData                           |BaseAdapterNode
-89 |15.collapse                                       |BaseAdapterNode
-90 |16.expand                                         |BaseAdapterNode
-91 |17.expandOrCollapse                               |BaseAdapterNode
-92 |18.collapseAndChild                               |BaseAdapterNode
-93 |19.expandAndChild                                 |BaseAdapterNode
-94 |20.expandAndCollapseOther                         |BaseAdapterNode
-95 |21.findParentNode                                 |BaseAdapterNode
+75 |1. addFooterNodeProvider                          |BaseAdapterNode添加铺满一行或一列脚部NodeProvider
+76 |2. addFullSpanNodeProvider                        |BaseAdapterNode添加需要铺满NodeProvider
+77 |3. addNodeProvider                                |BaseAdapterNode添加NodeProvider
+78 |4. addItemProvider                                |BaseAdapterNode添加自定义BaseProviderItem
+79 |5. setDiffNewData                                 |BaseAdapterNode一级节点设置新实例用Diff或DiffResult（差异更新），先setDiffCallback或setDiffConfig
+80 |6. setNewInstance                                 |BaseAdapterNode一级节点设置新实例
+81 |7. setList                                        |BaseAdapterNode一级节点设置新data数据
+82 |8. addData                                        |BaseAdapterNode一级节点添加指定或不指定位置单条或批量data数据
+83 |9. setData                                        |BaseAdapterNode一级节点改变指定位置data数据
+84 |10.removeAt                                       |BaseAdapterNode一级节点删除data数据根据指定位置
+85 |11.nodeAddData                                    |BaseAdapterNode添加父节点下子节点或子节点集合，可指定位置
+86 |12.nodeRemoveData                                 |BaseAdapterNode移除父节点下子节点，可指定位置
+87 |13.nodeSetData                                    |BaseAdapterNode替换父节点下指定位置子节点数据
+88 |14.nodeReplaceChildData                           |BaseAdapterNode替换父节点下子节点集合
+89 |15.collapse                                       |BaseAdapterNode收起本节点
+90 |16.expand                                         |BaseAdapterNode展开本节点
+91 |17.expandOrCollapse                               |BaseAdapterNode切换收起展开本节点
+92 |18.collapseAndChild                               |BaseAdapterNode收起本节点和子节点
+93 |19.expandAndChild                                 |BaseAdapterNode展开本节点和子节点
+94 |20.expandAndCollapseOther                         |BaseAdapterNode切换收起展开本节点和子节点
+95 |21.findParentNode                                 |BaseAdapterNode查找父节点
 96 |1. addItemType                                    |BaseAdapterMultiQuick添加指定类型和对应布局，直接添加无需Delegate添加也无需Binder添加
 97 |1. setNormalLayout                                |BaseAdapterSectionQuick如果item不是多布局，此方法快速设置item layout；如果需要多布局item用addItemType
 98 |2. convertHeader                                  |BaseAdapterSectionQuick数据项实现EntitySection，convertHeader和convert共用，根据isHeader配置不同数据
@@ -708,6 +708,17 @@
                     ItemTouchHelper.UP or ItemTouchHelper.DOWN)//设置拖拽监听器后设置
     dragAndSwipeAdapter?.draggableModule?.itemTouchHelperCallback
             ?.setSwipeMoveFlags(ItemTouchHelper.START or ItemTouchHelper.END)//设置侧滑监听器后设置
+
+    when {
+        node.isExpanded -> when {
+            isAnimate -> ViewCompat.animate(imageView).setDuration(200).setInterpolator(DecelerateInterpolator()).rotation(0f).start()
+            else -> imageView.rotation = 0f
+        }
+        else -> when {
+            isAnimate -> ViewCompat.animate(imageView).setDuration(200).setInterpolator(DecelerateInterpolator()).rotation(90f).start()
+            else -> imageView.rotation = 90f
+        }
+    }//Node展开收起箭头方向动画改变
 ```
 >- drawable:recycler_loading_progress.xml
 >- mipmap:recycler_loading.png
