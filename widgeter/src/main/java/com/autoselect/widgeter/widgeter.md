@@ -28,7 +28,7 @@
 | 025  | ### *24.HeartLayout：FloatAnimation、PathAnimator、HeartView(238)*                                                                                                                                                                               | 爱心 |
 | 026  | ### *25.Banner：BannerHelper、TypeBannerTrans、BeanPage、PageListener、RecyclerViewHolder、RecyclerBaseAdapter、TypeTrans、Transformer、TransformerCard、TransformerDepthPage、TransformerMz、TransformerZoomOutPage、BeanCircle、BeanRect、TypeIndicatorCircle、IndicatorCircle、IndicatorRect、IndicatorText(1060)*| 横幅 |
 | 027  | ### *26.LayoutTab、LayoutLabel：LayoutScroll、LayoutFlow、AttrsHelper、AdapterTab、AdapterLabel、AdapterTemplate、AdapterFlow、FlowListener、FlowListenerAdapter、ActionRect、ActionTri、ActionRound、ActionColor、ActionRes、ActionBase、ActionDot、TextViewTabColor、BeanTab、BeanLabel、TabValue、TabTypeEvaluator、ConstantsFlow、ViewPagerHelper(2080)*| 流式 |
-| 028  | ### *27.BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)、ViewHolderBase：......(2731)*                                                  | 回收 |
+| 028  | ### *27.BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)、ViewHolderBase：......(2926)*                                                  | 回收 |
 ## **控件库widgeter**
 >- xml资源
 >>1. attrs.xml
@@ -73,8 +73,8 @@
 31 |31. setRightTextListener                          |功能
 >- include_helper_title.xml
 >- mipmap资源
->>1. previous_icon.png
->>2. set.png与PopupSingle共用
+>>1. icon_previous.png
+>>2. icon_set.png与PopupSingle共用
 ### *02.说明PopupImply(31)*
 序号|方法|功能
 ---|--------------------------------------------------|---
@@ -93,7 +93,7 @@
 >- layout
 >>1. popup_list_layout.xml
 >>2. popup_list_item.xml
->- mipmap:set.png与Title共用
+>- mipmap:icon_set.png与Title共用
 ### *04.弹框PopupViewManager：PopupView、BackgroundConstructor、Coordinates、CoordinatesFinder(528)*
 序号|方法|功能
 ---|--------------------------------------------------|---
@@ -516,7 +516,7 @@
 18 |5. setSelects                                     |LayoutLabel
 19 |6. setAdapter                                     |LayoutLabel
 >- implementation "androidx.constraintlayout:constraintlayout:2.0.1"
-### *27.回收BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)、ViewHolderBase：......(2731)*
+### *27.回收BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)、ViewHolderBase：......(2926)*
 序号|方法|功能（RecyclerView可嵌套：setHasFixedSize(true)、layoutManager、adapter）
 ---|--------------------------------------------------|---
 01 |1. data                                           |BaseAdapterQuick需要适配的数据
@@ -722,6 +722,13 @@
 ```
 >- drawable:recycler_loading_progress.xml
 >- mipmap:recycler_loading.png
+>- mipmap备用
+>>1. icon_add.png
+>>2. icon_rm.png
+>>3. icon_reset.png
+>>4. icon_back.png
+>>5. icon_arrow_r.png
+>>6. icon_arrow_b.png
 >- layout:recycler_load_more.xml
 >- values:ids.xml
 >>1. strings:CN

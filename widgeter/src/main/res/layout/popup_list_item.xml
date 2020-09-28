@@ -10,7 +10,7 @@
         android:id="@+id/iv_pop"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:src="@mipmap/set" />
+        android:src="@mipmap/icon_set" />
 
     <TextView
         android:id="@+id/tv_pop"

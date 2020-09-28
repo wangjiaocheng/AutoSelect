@@ -133,14 +133,14 @@ class Title @JvmOverloads constructor(context: Context, attrs: AttributeSet? = n
         val typedArray: TypedArray = getContext().obtainStyledAttributes(attrs, R.styleable.Title)
         try {
             typedArray.run {
-                leftIcon = getResourceId(R.styleable.Title_leftIcon, R.mipmap.previous_icon)
+                leftIcon = getResourceId(R.styleable.Title_leftIcon, R.mipmap.icon_previous)
                 isLeftIconVisibility = getBoolean(R.styleable.Title_leftIconVisibility, true)
                 leftText = getString(R.styleable.Title_leftText)
                 leftTextColor =
                     getColor(R.styleable.Title_leftTextColor, resources.getColor(R.color.white))
                 leftTextSize = getDimensionPixelSize(R.styleable.Title_leftTextSize, dip2px(8f))
                 isLeftTextVisibility = getBoolean(R.styleable.Title_leftTextVisibility, false)
-                rightIcon = getResourceId(R.styleable.Title_rightIcon, R.mipmap.set)
+                rightIcon = getResourceId(R.styleable.Title_rightIcon, R.mipmap.icon_set)
                 isRightIconVisibility = getBoolean(R.styleable.Title_rightIconVisibility, false)
                 rightText = getString(R.styleable.Title_rightText)
                 rightTextColor =
