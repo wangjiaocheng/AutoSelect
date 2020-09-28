@@ -12,8 +12,8 @@ import androidx.recyclerview.widget.RecyclerView.ItemDecoration
 import com.autoselect.widgeter.recycler.BaseAdapterSectionQuick
 
 class ItemDecorationGridSectionAverageGap(
-    private val gapHorizontalDp: Float, private val gapVerticalDp: Float,
-    private val sectionEdgeHPaddingDp: Float, private val sectionEdgeVPaddingDp: Float
+    private val gapHorizontalDp: Float = 10f, private val gapVerticalDp: Float = 10f,
+    private val sectionEdgeHPaddingDp: Float = 20f, private val sectionEdgeVPaddingDp: Float = 15f
 ) : ItemDecoration() {
     private var mAdapter: BaseAdapterSectionQuick<*, *>? = null
     private var gapHSizePx = -1

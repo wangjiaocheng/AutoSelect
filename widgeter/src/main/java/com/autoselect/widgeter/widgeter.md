@@ -517,7 +517,7 @@
 19 |6. setAdapter                                     |LayoutLabel
 >- implementation "androidx.constraintlayout:constraintlayout:2.0.1"
 ### *27.回收BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)、ViewHolderBase：......(2926)*
-序号|方法|功能（RecyclerView可嵌套：setHasFixedSize(true)、layoutManager、adapter）
+序号|方法|功能（RecyclerView可嵌套：setHasFixedSize(true)、layoutManager、adapter、addItemDecoration）
 ---|--------------------------------------------------|---
 01 |1. data                                           |BaseAdapterQuick需要适配的数据
 02 |2. loadMoreModule                                 |BaseAdapterQuick加载更多模块，需继承LoadMoreModule
