@@ -6,29 +6,30 @@
 | 003  | ### *02.PopupImply(31)*                                                                                                                                                                                                                         | 说明 |
 | 004  | ### *03.PopupSingle(111)*                                                                                                                                                                                                                       | 弹表 |
 | 005  | ### *04.PopupViewManager：PopupView、BackgroundConstructor、Coordinates、CoordinatesFinder(528)*                                                                                                                                                 | 弹框 |
-| 006  | ### *05.ProgressBar(258)*                                                                                                                                                                                                                       | 进度 |
-| 007  | ### *06.ProgressRound(165)*                                                                                                                                                                                                                     | 弧度 |
-| 008  | ### *07.RunTextView(12)*                                                                                                                                                                                                                        | 跑马 |
-| 009  | ### *08.TextAutoZoom(210)*                                                                                                                                                                                                                      | 字调 |
-| 010  | ### *09.TextViewVertical(100)*                                                                                                                                                                                                                   | 单滚 |
-| 011  | ### *10.TextViewVerticalMore(40)*                                                                                                                                                                                                               | 多滚 |
-| 012  | ### *11.AutoImageView(35)*                                                                                                                                                                                                                      | 平滚 |
-| 013  | ### *12.PinView：ScaleImageView、ImageSource、ImageViewState、DecoderFactory、ImageDecoder、RegionDecoder(34+2108)*                                                                                                                              | 图调 |
-| 014  | ### *13.Captcha(117)*                                                                                                                                                                                                                           | 验证 |
-| 015  | ### *14.SwipeCaptcha(392)*                                                                                                                                                                                                                      | 滑块 |
-| 016  | ### *15.ScratchCard(48)*                                                                                                                                                                                                                        | 刮刮 |
-| 017  | ### *16.CardStackView：AdapterAnimator、AdapterAllMoveDownAnimator、AdapterUpDownAnimator、AdapterUpDownStackAnimator、ViewDataObserver、AdapterDataObservable、ViewHolder、Adapter、AdapterStack、DelegateScrollStack、DelegateScroll(861+36+7)* | 卡组 |
-| 018  | ### *17.CobwebView：RotateInfo(411)*                                                                                                                                                                                                            | 蛛网 |
-| 019  | ### *18.NetSpeedView(155)*                                                                                                                                                                                                                      | 网速 |
-| 020  | ### *19.SeatAirplane(892)*                                                                                                                                                                                                                      | 机座 |
-| 021  | ### *20.SeatMovie(717)*                                                                                                                                                                                                                         | 影座 |
-| 022  | ### *21.RulerWheelView(464)*                                                                                                                                                                                                                    | 刻度 |
-| 023  | ### *22.ShoppingView(362)*                                                                                                                                                                                                                      | 商品 |
-| 024  | ### *23.ShineView：ShineButton、PorterShapeImageView、PorterImageView、ShineAnimator、EasingInterpolator、EasingProvider、Ease(699)*                                                                                                             | 点赞 |
-| 025  | ### *24.HeartLayout：FloatAnimation、PathAnimator、HeartView(238)*                                                                                                                                                                               | 爱心 |
-| 026  | ### *25.Banner：BannerHelper、TypeBannerTrans、BeanPage、PageListener、RecyclerViewHolder、RecyclerBaseAdapter、TypeTrans、Transformer、TransformerCard、TransformerDepthPage、TransformerMz、TransformerZoomOutPage、BeanCircle、BeanRect、TypeIndicatorCircle、IndicatorCircle、IndicatorRect、IndicatorText(1060)*| 横幅 |
-| 027  | ### *26.LayoutTab、LayoutLabel：LayoutScroll、LayoutFlow、AttrsHelper、AdapterTab、AdapterLabel、AdapterTemplate、AdapterFlow、FlowListener、FlowListenerAdapter、ActionRect、ActionTri、ActionRound、ActionColor、ActionRes、ActionBase、ActionDot、TextViewTabColor、BeanTab、BeanLabel、TabValue、TabTypeEvaluator、ConstantsFlow、ViewPagerHelper(2080)*| 流式 |
-| 028  | ### *27.BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)、ViewHolderBase：......(2926)*                                                  | 回收 |
+| 006  | ### *05.NotificationHelper：NotificationBase、NotificationBigPic、NotificationBigText、NotificationMailbox、NotificationProgress、NotificationCustomView(473)*                                                                                   | 通知 |
+| 007  | ### *06.ProgressBar(258)*                                                                                                                                                                                                                       | 进度 |
+| 008  | ### *07.ProgressRound(165)*                                                                                                                                                                                                                     | 弧度 |
+| 009  | ### *08.RunTextView(12)*                                                                                                                                                                                                                        | 跑马 |
+| 010  | ### *09.TextAutoZoom(210)*                                                                                                                                                                                                                      | 字调 |
+| 011  | ### *10.TextViewVertical(100)*                                                                                                                                                                                                                   | 单滚 |
+| 012  | ### *11.TextViewVerticalMore(40)*                                                                                                                                                                                                               | 多滚 |
+| 013  | ### *12.AutoImageView(35)*                                                                                                                                                                                                                      | 平滚 |
+| 014  | ### *13.PinView：ScaleImageView、ImageSource、ImageViewState、DecoderFactory、ImageDecoder、RegionDecoder(34+2108)*                                                                                                                              | 图调 |
+| 015  | ### *14.Captcha(117)*                                                                                                                                                                                                                           | 验证 |
+| 016  | ### *15.SwipeCaptcha(392)*                                                                                                                                                                                                                      | 滑块 |
+| 017  | ### *16.ScratchCard(48)*                                                                                                                                                                                                                        | 刮刮 |
+| 018  | ### *17.CardStackView：AdapterAnimator、AdapterAllMoveDownAnimator、AdapterUpDownAnimator、AdapterUpDownStackAnimator、ViewDataObserver、AdapterDataObservable、ViewHolder、Adapter、AdapterStack、DelegateScrollStack、DelegateScroll(861+36+7)* | 卡组 |
+| 019  | ### *18.CobwebView：RotateInfo(411)*                                                                                                                                                                                                            | 蛛网 |
+| 020  | ### *19.NetSpeedView(155)*                                                                                                                                                                                                                      | 网速 |
+| 021  | ### *20.SeatAirplane(892)*                                                                                                                                                                                                                      | 机座 |
+| 022  | ### *21.SeatMovie(717)*                                                                                                                                                                                                                         | 影座 |
+| 023  | ### *22.RulerWheelView(464)*                                                                                                                                                                                                                    | 刻度 |
+| 024  | ### *23.ShoppingView(362)*                                                                                                                                                                                                                      | 商品 |
+| 025  | ### *24.ShineView：ShineButton、PorterShapeImageView、PorterImageView、ShineAnimator、EasingInterpolator、EasingProvider、Ease(699)*                                                                                                             | 点赞 |
+| 026  | ### *25.HeartLayout：FloatAnimation、PathAnimator、HeartView(238)*                                                                                                                                                                               | 爱心 |
+| 027  | ### *26.Banner：BannerHelper、TypeBannerTrans、BeanPage、PageListener、RecyclerViewHolder、RecyclerBaseAdapter、TypeTrans、Transformer、TransformerCard、TransformerDepthPage、TransformerMz、TransformerZoomOutPage、BeanCircle、BeanRect、TypeIndicatorCircle、IndicatorCircle、IndicatorRect、IndicatorText(1060)*| 横幅 |
+| 028  | ### *27.LayoutTab、LayoutLabel：LayoutScroll、LayoutFlow、AttrsHelper、AdapterTab、AdapterLabel、AdapterTemplate、AdapterFlow、FlowListener、FlowListenerAdapter、ActionRect、ActionTri、ActionRound、ActionColor、ActionRes、ActionBase、ActionDot、TextViewTabColor、BeanTab、BeanLabel、TabValue、TabTypeEvaluator、ConstantsFlow、ViewPagerHelper(2080)*| 流式 |
+| 029  | ### *28.BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)、ViewHolderBase：......(2926)*                                                  | 回收 |
 ## **控件库widgeter**
 >- xml资源
 >>1. attrs.xml
@@ -160,7 +161,22 @@
 61 |15. mPosition                                     |功能
 62 |16. BuilderPopupView                              |功能
 63 |17. buildPopupView                                |功能
-### *05.进度ProgressBar(258)*
+### *05.通知NotificationHelper：NotificationBase、NotificationBigPic、NotificationBigText、NotificationMailbox、NotificationProgress、NotificationCustomView(473)*
+序号|方法|功能
+---|--------------------------------------------------|---
+01 |1. buildSimple                                    |构建简单通知
+02 |2. buildBigPic                                    |构建带图片通知
+03 |3. buildBigText                                   |构建多文本通知
+04 |4. buildMailBox                                   |构建带多条消息合并的消息盒通知
+05 |5. buildProgress                                  |构建带进度条通知，可无精确进度
+06 |6. buildCustomView                                |构建自定义通知
+07 |7. isNotifyPermissionOpen                         |通知栏权限是否获取
+08 |8. openNotifyPermissionSetting                    |打开通知栏权限设置页面
+09 |9. getManager                                     |获取通知管理器
+10 |10. notify                                        |通知
+11 |11. cancel                                        |取消通知
+12 |12. cancelAll                                     |取消所有通知
+### *06.进度ProgressBar(258)*
 序号|方法|功能
 ---|--------------------------------------------------|---
 01 |1. isStop                                         |功能
@@ -171,7 +187,7 @@
 06 |6. toggle                                         |功能
 07 |7. setStop                                        |功能
 >- flicker.png
-### *06.弧度ProgressRound(165)*
+### *07.弧度ProgressRound(165)*
 序号|方法|功能
 ---|--------------------------------------------------|---
 01 |1. circleColor                                    |功能
@@ -183,15 +199,15 @@
 07 |7. STROKE                                         |功能
 08 |8. FILL                                           |功能
 09 |9. progress                                       |功能
-### *07.跑马RunTextView(12)*
-### *08.字调TextAutoZoom(210)*
+### *08.跑马RunTextView(12)*
+### *09.字调TextAutoZoom(210)*
 序号|方法|功能
 ---|--------------------------------------------------|---
 01 |1. setNormalization                               |功能
 02 |2. minTextSize                                    |功能
 03 |3. enableSizeCache                                |功能
 >- Title
-### *09.单滚TextViewVertical(100)*
+### *10.单滚TextViewVertical(100)*
 序号|方法|功能
 ---|--------------------------------------------------|---
 01 |1. mTextSize                                      |功能
@@ -203,7 +219,7 @@
 07 |7. autoScrollStop                                 |功能
 08 |8. setTimeTextStill                               |功能
 09 |9. setTimeAnim                                    |功能
-### *10.多滚TextViewVerticalMore(40)*
+### *11.多滚TextViewVerticalMore(40)*
 序号|方法|功能
 ---|--------------------------------------------------|---
 01 |1. interval                                       |功能
@@ -214,13 +230,13 @@
 >- anim资源
 >>1. anim_marquee_in.xml
 >>2. anim_marquee_out.xml
-### *11.平滚AutoImageView(35)*
+### *12.平滚AutoImageView(35)*
 序号|方法|功能
 ---|--------------------------------------------------|---
 01 |1. imageView                                      |功能
 >1. anim_translate.xml
 >2. layout_auto_imageview.xml
-### *12.图调PinView：ScaleImageView、ImageSource、ImageViewState、DecoderFactory、ImageDecoder、RegionDecoder(34+2108)*
+### *13.图调PinView：ScaleImageView、ImageSource、ImageViewState、DecoderFactory、ImageDecoder、RegionDecoder(34+2108)*
 序号|方法|功能
 ---|--------------------------------------------------|---
 01 |1. scaleMax                                       |功能
@@ -298,7 +314,7 @@
 >>8. tooltip_arrow_up_left.9.png
 >>9. tooltip_arrow_up_right.9.png
 >>10. tooltip_no_arrow.9.png
-### *13.验证Captcha(117)*
+### *14.验证Captcha(117)*
 序号|方法|功能
 ---|--------------------------------------------------|---
 01 |1. build                                          |功能
@@ -313,7 +329,7 @@
 10 |10. lineNumber                                    |功能
 11 |11. makeBitmap                                    |功能
 12 |12. into                                          |功能
-### *14.滑块SwipeCaptcha(392)*
+### *15.滑块SwipeCaptcha(392)*
 序号|方法|功能
 ---|--------------------------------------------------|---
 01 |1. maxSwipeValue                                  |功能
@@ -322,9 +338,9 @@
 04 |4. matchCaptcha                                   |功能
 05 |5. resetCaptcha                                   |功能
 06 |6. setCurrentSwipeValue                           |功能
-### *15.刮刮ScratchCard(48)*
+### *16.刮刮ScratchCard(48)*
 >- img_loading.png
-### *16.卡组CardStackView：AdapterAnimator、AdapterAllMoveDownAnimator、AdapterUpDownAnimator、AdapterUpDownStackAnimator、ViewDataObserver、AdapterDataObservable、ViewHolder、Adapter、AdapterStack、DelegateScrollStack、DelegateScroll(861+36+7)*
+### *17.卡组CardStackView：AdapterAnimator、AdapterAllMoveDownAnimator、AdapterUpDownAnimator、AdapterUpDownStackAnimator、ViewDataObserver、AdapterDataObservable、ViewHolder、Adapter、AdapterStack、DelegateScrollStack、DelegateScroll(861+36+7)*
 序号|方法|功能
 ---|--------------------------------------------------|---
 01 |1. overlapGaps                                    |功能
@@ -377,7 +393,7 @@
 48 |4. onBindViewHolder                               |功能
 49 |5. getItem                                        |功能
 50 |6. bindView                                       |功能
-### *17.蛛网CobwebView：RotateInfo(411)*
+### *18.蛛网CobwebView：RotateInfo(411)*
 序号|方法|功能
 ---|--------------------------------------------------|---
 01 |1. spiderNameSize                                 |功能
@@ -397,7 +413,7 @@
 15 |3. getAngle                                       |功能
 16 |4. CIRCLE_ANGLE                                   |功能
 17 |5. getAngleNormalized                             |功能
-### *18.网速NetSpeedView(155)*
+### *19.网速NetSpeedView(155)*
 序号|方法|功能
 ---|--------------------------------------------------|---
 01 |1. isMulti                                        |功能
@@ -406,7 +422,7 @@
 04 |4. setTextColor                                   |功能
 05 |5. setTextSize                                    |功能
 >- netspeed_view.xml
-### *19.机座SeatAirplane(892)*
+### *20.机座SeatAirplane(892)*
 序号|方法|功能
 ---|--------------------------------------------------|---
 01 |1. setEmptySelecting                              |功能
@@ -423,7 +439,7 @@
 >>1. seat_gray.png
 >>2. seat_green.png
 >>3. seat_sold.png
-### *20.影座SeatMovie(717)*
+### *21.影座SeatMovie(717)*
 序号|方法|功能
 ---|--------------------------------------------------|---
 01 |1. numRow                                         |功能
@@ -440,7 +456,7 @@
 12 |12. screenName                                    |功能
 13 |13. isNeedDrawSeatBitmap                          |功能
 14 |14. maxSelected                                   |功能
-### *21.刻度RulerWheelView(464)*
+### *22.刻度RulerWheelView(464)*
 序号|方法|功能
 ---|--------------------------------------------------|---
 01 |1. markAdditionCenter                             |功能
@@ -451,12 +467,12 @@
 06 |6. maxSelectableIndex                             |功能
 07 |7. smoothSelectIndex                              |功能
 08 |8. fling                                          |功能
-### *22.商品ShoppingView(362)*
+### *23.商品ShoppingView(362)*
 序号|方法|功能
 ---|--------------------------------------------------|---
 01 |1. onShoppingClickListener                        |功能
 02 |2. setTextNum                                     |功能
-### *23.点赞ShineView：ShineButton、PorterShapeImageView、PorterImageView、ShineAnimator、EasingInterpolator、EasingProvider、Ease(699)*
+### *24.点赞ShineView：ShineButton、PorterShapeImageView、PorterImageView、ShineAnimator、EasingInterpolator、EasingProvider、Ease(699)*
 序号|方法|功能
 ---|--------------------------------------------------|---
 01 |1. clickValue                                     |功能
@@ -473,14 +489,14 @@
 12 |12. smallShineOffsetAngle                         |功能
 13 |13. shineDistanceMultiple                         |功能
 14 |14. showAnimation                                 |功能
-### *24.爱心HeartLayout：FloatAnimation、PathAnimator、HeartView(238)*
+### *25.爱心HeartLayout：FloatAnimation、PathAnimator、HeartView(238)*
 序号|方法|功能
 ---|--------------------------------------------------|---
 01 |1. addHeart                                       |功能
 >- mipmap
 >>1. anim_heart.png
 >>2. anim_heart_border.png
-### *25.横幅Banner：BannerHelper、TypeBannerTrans、BeanPage、PageListener、RecyclerViewHolder、RecyclerBaseAdapter、TypeTrans、Transformer、TransformerCard、TransformerDepthPage、TransformerMz、TransformerZoomOutPage、BeanCircle、BeanRect、TypeIndicatorCircle、IndicatorCircle、IndicatorRect、IndicatorText(1060)*
+### *26.横幅Banner：BannerHelper、TypeBannerTrans、BeanPage、PageListener、RecyclerViewHolder、RecyclerBaseAdapter、TypeTrans、Transformer、TransformerCard、TransformerDepthPage、TransformerMz、TransformerZoomOutPage、BeanCircle、BeanRect、TypeIndicatorCircle、IndicatorCircle、IndicatorRect、IndicatorText(1060)*
 序号|方法|功能
 ---|--------------------------------------------------|---
 01 |1. viewPager2                                     |功能
@@ -493,7 +509,7 @@
 08 |8. setPageListener                                |功能
 09 |9. addPagerData                                   |Indicator
 10 |10. addRectBean                                   |Indicator
-### *26.流式LayoutTab、LayoutLabel：LayoutScroll、LayoutFlow、AttrsHelper、AdapterTab、AdapterLabel、AdapterTemplate、AdapterFlow、FlowListener、FlowListenerAdapter、ActionRect、ActionTri、ActionRound、ActionColor、ActionRes、ActionBase、ActionDot、TextViewTabColor、BeanTab、BeanLabel、TabValue、TabTypeEvaluator、ConstantsFlow、ViewPagerHelper(2080)*
+### *27.流式LayoutTab、LayoutLabel：LayoutScroll、LayoutFlow、AttrsHelper、AdapterTab、AdapterLabel、AdapterTemplate、AdapterFlow、FlowListener、FlowListenerAdapter、ActionRect、ActionTri、ActionRound、ActionColor、ActionRes、ActionBase、ActionDot、TextViewTabColor、BeanTab、BeanLabel、TabValue、TabTypeEvaluator、ConstantsFlow、ViewPagerHelper(2080)*
 序号|方法|功能
 ---|--------------------------------------------------|---
 01 |1. isLabelFlow                                    |LayoutTab
@@ -516,7 +532,7 @@
 18 |5. setSelects                                     |LayoutLabel
 19 |6. setAdapter                                     |LayoutLabel
 >- implementation "androidx.constraintlayout:constraintlayout:2.0.1"
-### *27.回收BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)、ViewHolderBase：......(2926)*
+### *28.回收BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)、ViewHolderBase：......(2926)*
 序号|方法|功能（RecyclerView可嵌套：setHasFixedSize(true)、layoutManager、adapter、addItemDecoration）
 ---|--------------------------------------------------|---
 01 |1. data                                           |BaseAdapterQuick需要适配的数据
