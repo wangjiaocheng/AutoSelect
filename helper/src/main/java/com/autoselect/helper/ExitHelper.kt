@@ -22,8 +22,8 @@ object ExitHelper : AnkoLogger {
     }//退出点击监听
 
     fun exitApp(
-        context: Context = app, intervalMillis: Long = 2000,
-        onExitClickListener: OnExitClickListener? = null
+        intervalMillis: Long = 2000, onExitClickListener: OnExitClickListener? = null,
+        context: Context = app,
     ): Boolean {
         var isExit = false
         when (isExit) {
