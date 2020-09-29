@@ -4,7 +4,7 @@
 | 001  | ### *00.DeviceHelper(449)*                                                                                                                                                                                                                      | 设备 |
 | 002  | ### *01.SdCardHelper(181)*                                                                                                                                                                                                                      | 存储 |
 | 003  | ### *02.NetworkHelper(580)*                                                                                                                                                                                                                     | 网络 |
-| 004  | ### *03.WiFiHelper(87)*                                                                                                                                                                                                                         | 无线 |
+| 004  | ### *03.WifiHelper(256)*                                                                                                                                                                                                                         | 无线 |
 | 005  | ### *04.LocationHelper(291)*                                                                                                                                                                                                                    | 定位 |
 | 006  | ### *05.BrightnessHelper(48)*                                                                                                                                                                                                                   | 亮度 |
 | 007  | ### *06.FlashlightHelper(60)*                                                                                                                                                                                                                   | 闪光 |
@@ -234,34 +234,46 @@
 77 |77. macBluetooth                                  |功能
 78 |78. addressMac                                    |功能
 79 |79. getAddressMac                                 |功能
-### *03.无线WiFiHelper(87)*
+### *03.无线WifiHelper(256)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. isWifiEnabled                                  |功能
-02 |2. openWifi                                       |功能
-03 |3. closeWifi                                      |功能
-04 |4. netWorkLinkAdd                                 |功能
-05 |5. netWorkLinkRemove                              |功能
-06 |6. netWorkLinkDisable                             |功能
-07 |7. mac                                            |功能
-08 |8. ip                                             |功能
-09 |9. ssid                                           |功能
-10 |10. bssid                                         |功能
-11 |11. currentNetId                                  |功能
-12 |12. wifiInfoStr                                   |功能
-13 |13. wifiLock                                      |功能
-14 |14. wifiUnLock                                    |功能
-15 |15. wifiList                                      |功能
-16 |16. wifiConfigList                                |功能
-17 |17. startScan                                     |功能
-18 |18. lookupScanInfo                                |功能
-19 |19. getSSID                                       |功能
-20 |20. getBSSID                                      |功能
-21 |21. getFrequency                                  |功能
-22 |22. getLevel                                      |功能
-23 |23. getCapabilities                               |功能
-24 |24. hiddenSSID                                    |功能
-25 |25. displaySSID                                   |功能
+01 |1. connectWifi                                    |功能
+02 |2. checkState                                     |功能
+03 |3. openWifi                                       |功能
+04 |4. closeWifi                                      |功能
+05 |5. wifiConfigList                                 |功能
+06 |6. hiddenSSID                                     |功能
+07 |7. displaySSID                                    |功能
+08 |8. configWifiList                                 |功能
+09 |9. timeOut                                        |功能
+10 |10. onWifiConnectStateListener                    |功能
+11 |11. wifiInfo                                      |功能
+12 |12. mac                                           |功能
+13 |13. ip                                            |功能
+14 |14. currentNetId                                  |功能
+15 |15. bssId                                         |功能
+16 |16. ssId                                          |功能
+17 |17. checkSSIDState                                |功能
+18 |18. isConnectSuccess                              |功能
+19 |19. wifiList                                      |功能
+20 |20. getSSID                                       |功能
+21 |21. getBSSID                                      |功能
+22 |22. getFrequency                                  |功能
+23 |23. getLevel                                      |功能
+24 |24. getCapabilities                               |功能
+25 |25. scanResultList                                |功能
+26 |26. lookUpScan                                    |功能
+27 |27. checkScanResult                               |功能
+28 |28. startScan                                     |功能
+29 |29. isExistSSID                                   |功能
+30 |30. connectConfigurationWifi                      |功能
+31 |31. addNetwork                                    |功能
+32 |32. removeWifi                                    |功能
+33 |33. disconnectWifi                                |功能
+34 |34. connectConfiguration                          |功能
+35 |35. releaseWifiLock                               |功能
+36 |36. acquireWifiLock                               |功能
+37 |37. release                                       |功能
 ### *04.定位LocationHelper(291)*
 序号|方法|功能
 ---|--------------------------------------------------|---
