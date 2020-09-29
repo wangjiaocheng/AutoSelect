@@ -15,7 +15,7 @@
 | 012  | ### *11.RootHelper(43)*                                                                                                                                                                                                                         | 破解 |
 | 013  | ### *12.ApplicationHelper(603)*                                                                                                                                                                                                                 | 应用 |
 | 014  | ### *13.CrashHelper(144)*                                                                                                                                                                                                                       | 崩溃 |
-| 015  | ### *14.ExitHelper(54)*                                                                                                                                                                                                                         | 退出 |
+| 015  | ### *14.ExitHelper(62)*                                                                                                                                                                                                                         | 退出 |
 | 016  | ### *15.CleanHelper(50)*                                                                                                                                                                                                                        | 清理 |
 | 017  | ### *16.RebootHelper(33)*                                                                                                                                                                                                                       | 重启 |
 | 018  | ### *17.ShortCutHelper(40)*                                                                                                                                                                                                                     | 快捷 |
@@ -44,7 +44,7 @@
 | 041  | ### *40.CacheMemoryHelper(76)*                                                                                                                                                                                                                  | 内存 |
 | 042  | ### *41.CacheDiskHelper(521)*                                                                                                                                                                                                                   | 磁盘 |
 | 043  | ### *42.CacheDoubleHelper(246)*                                                                                                                                                                                                                 | 双重 |
-| 044  | ### *43.ThreadHelper(326)*                                                                                                                                                                                                                      | 线程 |
+| 044  | ### *43.ThreadHelper(325)*                                                                                                                                                                                                                      | 线程 |
 | 045  | ### *44.ProcessHelper(151)*                                                                                                                                                                                                                     | 进程 |
 | 046  | ### *45.ReflectionHelper(63)*                                                                                                                                                                                                                   | 反射 |
 | 047  | ### *46.ApiHelper(45)*                                                                                                                                                                                                                          | 接口 |
@@ -380,10 +380,11 @@
 01 |1. init                                           |功能
 02 |2. crashTip                                       |功能
 03 |3. OnCrashListener                                |功能
-### *14.退出ExitHelper(54)*
+### *14.退出ExitHelper(62)*
 序号|方法|功能
 ---|--------------------------------------------------|---
 01 |1. exitApp                                        |功能
+01 |1. OnExitClickListener                            |功能
 ### *15.清理CleanHelper(50)*
 序号|方法|功能
 ---|--------------------------------------------------|---
@@ -873,7 +874,7 @@
 21 |15. getParcelable                                 |功能
 22 |16. remove                                        |功能
 23 |17. clear                                         |功能
-### *43.线程ThreadHelper(326)*
+### *43.线程ThreadHelper(325)*
 序号|方法|功能
 ---|--------------------------------------------------|---
 01 |1. defaultThreadPoolSize                          |功能

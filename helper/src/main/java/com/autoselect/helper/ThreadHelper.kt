@@ -263,8 +263,7 @@ object ThreadHelper : AnkoLogger {
         )//定数目
     }
 
-    private class ThreadFactoryWithAtomic
-    internal constructor(prefix: String, private val priorityLevel: Int) :
+    private class ThreadFactoryWithAtomic(prefix: String, private val priorityLevel: Int) :
         ThreadFactory, AtomicLong(), Serializable {
         companion object {
             private val poolNumber = AtomicInteger(1)

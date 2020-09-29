@@ -16,19 +16,27 @@ object ExitHelper : AnkoLogger {
     val exitApp: Boolean
         get() = exitApp()
 
-    fun exitApp(context: Context = app): Boolean {
+    interface OnExitClickListener {
+        fun onRetry()//再点击一次
+        fun onExit()//退出
+    }//退出点击监听
+
+    fun exitApp(
+        context: Context = app, intervalMillis: Long = 2000,
+        onExitClickListener: OnExitClickListener? = null
+    ): Boolean {
         var isExit = false
         when (isExit) {
             false -> {
                 isExit = true
-                showShort("再按一次退出程序")
+                onExitClickListener?.onRetry() ?: showShort("再按一次退出程序")
                 Timer().schedule(object : TimerTask() {
                     override fun run() {
                         isExit = false
                     }
-                }, 2000)
+                }, intervalMillis)
             }
-            else -> try {
+            else -> onExitClickListener?.onExit() ?: try {
                 finishAllActivities()
                 Intent().apply {
                     action = Intent.ACTION_MAIN
