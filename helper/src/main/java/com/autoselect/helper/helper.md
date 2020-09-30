@@ -285,11 +285,38 @@
 ### *005.热点WifiApHelper(186)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1.                                                |功能
+01 |1. isWifiConnectSuccess                           |功能
+02 |2. wifiApState                                    |功能
+03 |3. isWifiApEnable                                 |功能
+04 |4. onWifiAPStatusChangedListener                  |功能
+05 |5. wifiAPSsid                                     |功能
+06 |6. wifiAPPassword                                 |功能
+07 |7. startWifiAp                                    |功能
+08 |8. closeWifiAp                                    |功能
+09 |9. startAp                                        |功能
+10 |10. closeAp                                       |功能
+11 |11. securityType                                  |功能
+12 |12. release                                       |功能
 ### *006.蓝牙BluetoothHelper(201)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1.                                                |功能
+01 |1. bluetoothAdapter                               |功能
+02 |2. getBluetoothDevice                             |功能
+03 |3. isOpenBluetooth                                |功能
+04 |4. onBluetoothDeviceListener                      |功能
+05 |5. openBluetooth                                  |功能
+06 |6. bluetoothDeviceFilter                          |功能
+07 |7. isCorrectDevice                                |功能
+08 |8. stopSearch                                     |功能
+09 |9. startSearch                                    |功能
+10 |10. searchDevices                                 |功能
+11 |11. createBind                                    |功能
+12 |12. createBind                                    |功能
+13 |13. pairBtDevice                                  |功能
+14 |14. isCorrectDevice                               |功能
+15 |15. isBluetoothBond                               |功能
+16 |16. isBtAddressValid                              |功能
+17 |17. release                                       |功能
 ### *007.定位LocationHelper(291)*
 序号|方法|功能
 ---|--------------------------------------------------|---
@@ -495,7 +522,18 @@
 ### *023.路由RouteHelper(142)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1.                                                |功能
+01 |1. requestCode                                    |功能
+02 |2. newIntent                                      |功能
+03 |3. addFlags                                       |功能
+04 |4. putExtraParam                                  |功能
+05 |5. setCallback                                    |功能
+06 |6. to                                             |功能
+07 |7. putBundle                                      |功能
+08 |8. putBundleParam                                 |功能
+09 |9. options                                        |功能
+10 |10. anim                                          |功能
+11 |11. launch                                        |功能
+12 |12. pop                                           |功能
 ### *024.活动ActivityHelper(668)*
 序号|方法|功能
 ---|--------------------------------------------------|---
@@ -521,7 +559,26 @@
 ### *025.分享ShareHelper(238)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1.                                                |功能
+01 |1. shareMultiplePicture                           |功能
+02 |2. shareMultiplePictureForResult                  |功能
+03 |3. shareMultiplePictureToWeChatCircle             |功能
+04 |4. shareMultiplePictureToWeChatCircleForResult    |功能
+05 |5. shareMultiplePictureToWeChatContacts           |功能
+06 |6. shareMultiplePictureToWeChatContactsForResult  |功能
+07 |7. sharePicture                                   |功能
+08 |8. sharePictureToWeChatCircle                     |功能
+09 |9. sharePictureToWeChatContacts                   |功能
+10 |10. sharePictureForResult                         |功能
+11 |11. sharePictureToWeChatCircleForResult           |功能
+12 |12. sharePictureToWeChatContactsForResult         |功能
+13 |13. shareVideo                                    |功能
+14 |14. shareVideoToWeChatContacts                    |功能
+15 |15. shareVideoForResult                           |功能
+16 |16. shareVideoToWeChatContactsForResult           |功能
+17 |17. shareFile                                     |功能
+18 |18. shareFileToWeChatContacts                     |功能
+19 |19. shareFileForResult                            |功能
+20 |20. shareFileToWeChatContactsForResult            |功能
 ### *026.片段FragmentHelper(487)*
 序号|方法|功能
 ---|--------------------------------------------------|---
@@ -567,7 +624,9 @@
 ### *028.轮询PollingHelper(40)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1.                                                |功能
+01 |1. isExistPollingService                          |功能
+02 |2. startPollingService                            |功能
+03 |3. stopPollingService                             |功能
 ### *029.广播BroadcastHelper(22)*
 序号|方法|功能
 ---|--------------------------------------------------|---
@@ -757,11 +816,13 @@
 ### *039.连点ClickHelper(40)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1.                                                |功能
+01 |1. isFastDoubleClick                              |功能
+02 |2. doClick                                        |功能
 ### *040.抖动ShakeHelper(26)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1.                                                |功能
+01 |1. shakeAnimation                                 |功能
+02 |2. shake                                          |功能
 ### *041.网视WebViewHelper(76)*
 序号|方法|功能
 ---|--------------------------------------------------|---
@@ -1119,7 +1180,14 @@
 ### *062.随机RandomHelper(78)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1.                                                |功能
+01 |1. getRandomNumbersAndLetters                     |功能
+02 |2. getRandomNumbers                               |功能
+03 |3. getRandomLetters                               |功能
+04 |4. getRandomCapitalLetters                        |功能
+05 |5. getRandomLowerCaseLetters                      |功能
+06 |6. getRandom                                      |功能
+07 |7. randomColor                                    |功能
+08 |8. shuffle                                        |功能
 ### *063.验证ValidationHelper(280)*
 序号|方法|功能
 ---|--------------------------------------------------|---
@@ -1994,7 +2062,19 @@
 ### *097.主题ThemeHelper(157)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. fileName                                       |功能
+01 |1. resolveColor                                   |功能
+02 |2. resolveDimension                               |功能
+03 |3. resolveBoolean                                 |功能
+04 |4. resolveDrawable                                |功能
+05 |5. resolveString                                  |功能
+06 |6. resolveFloat                                   |功能
+07 |7. resolveInt                                     |功能
+08 |8. getColorFromAttrRes                            |功能
+09 |9. resolveActionTextColorStateList                |功能
+10 |10. getActionTextColorStateList                   |功能
+11 |11. getActionTextStateList                        |功能
+12 |12. getColorArray                                 |功能
+13 |13. isNightMode                                   |功能
 ### *098.共享SharePreferenceHelper(109)*
 序号|方法|功能
 ---|--------------------------------------------------|---
