@@ -1,4 +1,4 @@
-package com.autoselect.helper
+package com.autoselect.widgeter.recycler.common
 
 import android.text.Selection
 import android.text.Spannable
@@ -7,7 +7,7 @@ import android.text.style.ClickableSpan
 import android.view.MotionEvent
 import android.widget.TextView
 
-object ClickableHelper : BaseMovementMethod() {
+object MovementMethodRecycler : BaseMovementMethod() {
     override fun initialize(widget: TextView, text: Spannable) = Selection.removeSelection(text)
     override fun onTouchEvent(widget: TextView, buffer: Spannable, event: MotionEvent): Boolean {
         val action = event.actionMasked
