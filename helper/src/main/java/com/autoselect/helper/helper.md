@@ -1,4 +1,5 @@
 # ***库文档***
+## **工具库helper**
 | 序号 | 类库                                                                                                                                                                                                                                             | 功能 |
 |:-----|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----|
 | 001  | ### *001.DeviceHelper(449)*                                                                                                                                                                                                                     | 设备 |
@@ -109,19 +110,18 @@
 | 106  | ### *106.ContactsHelper(219)*                                                                                                                                                                                                                   | 通讯 |
 | 107  | ### *107.SystemHelper：SystemLanguage(232)*                                                                                                                                                                                                     | 系统 |
 | 108  | ### *108.CloseHelper(25)*                                                                                                                                                                                                                       | 关闭 |
-## **工具库helper**
 ### *001.设备DeviceHelper(449)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. isAdbEnabled                                   |功能
-02 |2. numberCpuSerial                                |功能
-03 |3. statePhone                                     |android.permission.READ_PRIVILEGED_PHONE_STATE
-04 |4. imsi                                           |android.permission.READ_PRIVILEGED_PHONE_STATE
-05 |5. carrierDevice                                  |功能
-06 |6. androidId                                      |功能
-07 |7. deviceId                                       |android.permission.READ_PRIVILEGED_PHONE_STATE
-08 |8. imei                                           |android.permission.READ_PRIVILEGED_PHONE_STATE
-09 |9. getImei                                        |android.permission.READ_PRIVILEGED_PHONE_STATE
+01 |01. isAdbEnabled                                  |功能
+02 |02. numberCpuSerial                               |功能
+03 |03. statePhone                                    |android.permission.READ_PRIVILEGED_PHONE_STATE
+04 |04. imsi                                          |android.permission.READ_PRIVILEGED_PHONE_STATE
+05 |05. carrierDevice                                 |功能
+06 |06. androidId                                     |功能
+07 |07. deviceId                                      |android.permission.READ_PRIVILEGED_PHONE_STATE
+08 |08. imei                                          |android.permission.READ_PRIVILEGED_PHONE_STATE
+09 |09. getImei                                       |android.permission.READ_PRIVILEGED_PHONE_STATE
 10 |10. meid                                          |android.permission.READ_PRIVILEGED_PHONE_STATE
 11 |11. getMeid                                       |android.permission.READ_PRIVILEGED_PHONE_STATE
 12 |12. deviceSoftVersion                             |功能
@@ -148,30 +148,30 @@
 ### *002.存储SdCardHelper(181)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. isSdCardEnable                                 |功能
-02 |2. isSdCardDisable                                |功能
-03 |3. isSdCardAvailable                              |功能
-04 |4. isSdCardUnavailable                            |功能
-05 |5. sdCardPathEx                                   |功能
-06 |6. sdCardPath                                     |功能
-07 |7. getAllBytes                                    |功能
-08 |8. getAvailableBytes                              |功能
-09 |9. getFreeBytes                                   |功能
+01 |01. isSdCardEnable                                |功能
+02 |02. isSdCardDisable                               |功能
+03 |03. isSdCardAvailable                             |功能
+04 |04. isSdCardUnavailable                           |功能
+05 |05. sdCardPathEx                                  |功能
+06 |06. sdCardPath                                    |功能
+07 |07. getAllBytes                                   |功能
+08 |08. getAvailableBytes                             |功能
+09 |09. getFreeBytes                                  |功能
 10 |10. getStatFs                                     |功能
 11 |11. sdCardInfo                                    |功能
 12 |12. sdCardInfoList                                |功能
 ### *003.网络NetworkHelper(580)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. openSettingsWireless                           |功能
-02 |2. settingsWireless                               |功能
-03 |3. currentNetworkState                            |功能
-04 |4. isConnectingByState                            |功能
-05 |5. isConnectedByState                             |功能
-06 |6. isSuspendedByState                             |功能
-07 |7. isDisconnectingByState                         |功能
-08 |8. isDisconnectedByState                          |功能
-09 |9. isUnknownByState                               |功能
+01 |01. openSettingsWireless                          |功能
+02 |02. settingsWireless                              |功能
+03 |03. currentNetworkState                           |功能
+04 |04. isConnectingByState                           |功能
+05 |05. isConnectedByState                            |功能
+06 |06. isSuspendedByState                            |功能
+07 |07. isDisconnectingByState                        |功能
+08 |08. isDisconnectedByState                         |功能
+09 |09. isUnknownByState                              |功能
 10 |10. currentNetworkType                            |功能
 11 |11. isWifiByType                                  |功能
 12 |12. isMobileByType                                |功能
@@ -245,15 +245,15 @@
 ### *004.无线WifiHelper(256)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. connectWifi                                    |功能
-02 |2. checkState                                     |功能
-03 |3. openWifi                                       |功能
-04 |4. closeWifi                                      |功能
-05 |5. wifiConfigList                                 |功能
-06 |6. hiddenSSID                                     |功能
-07 |7. displaySSID                                    |功能
-08 |8. configWifiList                                 |功能
-09 |9. timeOut                                        |功能
+01 |01. connectWifi                                   |功能
+02 |02. checkState                                    |功能
+03 |03. openWifi                                      |功能
+04 |04. closeWifi                                     |功能
+05 |05. wifiConfigList                                |功能
+06 |06. hiddenSSID                                    |功能
+07 |07. displaySSID                                   |功能
+08 |08. configWifiList                                |功能
+09 |09. timeOut                                       |功能
 10 |10. onWifiConnectStateListener                    |功能
 11 |11. wifiInfo                                      |功能
 12 |12. mac                                           |功能
@@ -285,30 +285,30 @@
 ### *005.热点WifiApHelper(186)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. isWifiConnectSuccess                           |功能
-02 |2. wifiApState                                    |功能
-03 |3. isWifiApEnable                                 |功能
-04 |4. onWifiAPStatusChangedListener                  |功能
-05 |5. wifiAPSsid                                     |功能
-06 |6. wifiAPPassword                                 |功能
-07 |7. startWifiAp                                    |功能
-08 |8. closeWifiAp                                    |功能
-09 |9. startAp                                        |功能
+01 |01. isWifiConnectSuccess                          |功能
+02 |02. wifiApState                                   |功能
+03 |03. isWifiApEnable                                |功能
+04 |04. onWifiAPStatusChangedListener                 |功能
+05 |05. wifiAPSsid                                    |功能
+06 |06. wifiAPPassword                                |功能
+07 |07. startWifiAp                                   |功能
+08 |08. closeWifiAp                                   |功能
+09 |09. startAp                                       |功能
 10 |10. closeAp                                       |功能
 11 |11. securityType                                  |功能
 12 |12. release                                       |功能
 ### *006.蓝牙BluetoothHelper(201)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. bluetoothAdapter                               |功能
-02 |2. getBluetoothDevice                             |功能
-03 |3. isOpenBluetooth                                |功能
-04 |4. onBluetoothDeviceListener                      |功能
-05 |5. openBluetooth                                  |功能
-06 |6. bluetoothDeviceFilter                          |功能
-07 |7. isCorrectDevice                                |功能
-08 |8. stopSearch                                     |功能
-09 |9. startSearch                                    |功能
+01 |01. bluetoothAdapter                              |功能
+02 |02. getBluetoothDevice                            |功能
+03 |03. isOpenBluetooth                               |功能
+04 |04. onBluetoothDeviceListener                     |功能
+05 |05. openBluetooth                                 |功能
+06 |06. bluetoothDeviceFilter                         |功能
+07 |07. isCorrectDevice                               |功能
+08 |08. stopSearch                                    |功能
+09 |09. startSearch                                   |功能
 10 |10. searchDevices                                 |功能
 11 |11. createBind                                    |功能
 12 |12. createBind                                    |功能
@@ -320,15 +320,15 @@
 ### *007.定位LocationHelper(291)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. settingsGps                                    |功能
-02 |2. LocationService                                |功能
-03 |3. registerLocation                               |功能
-04 |4. unRegisterLocation                             |功能
-05 |5. getAddress                                     |功能
-06 |6. getCountryName                                 |功能
-07 |7. getLocality                                    |功能
-08 |8. getStreet                                      |功能
-09 |9. isMove                                         |功能
+01 |01. settingsGps                                   |功能
+02 |02. LocationService                               |功能
+03 |03. registerLocation                              |功能
+04 |04. unRegisterLocation                            |功能
+05 |05. getAddress                                    |功能
+06 |06. getCountryName                                |功能
+07 |07. getLocality                                   |功能
+08 |08. getStreet                                     |功能
+09 |09. isMove                                        |功能
 10 |10. isBetterLocation                              |功能
 11 |11. isSameProvider                                |功能
 12 |12. isLocationEnabled                             |功能
@@ -338,56 +338,56 @@
 ### *008.亮度BrightnessHelper(48)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. isAutoBrightnessEnabled                        |功能
-02 |2. setAutoBrightnessEnabled                       |功能
-03 |3. brightness                                     |功能
-04 |4. setBrightness                                  |功能
-05 |5. getWindowBrightness                            |功能
-06 |6. setWindowBrightness                            |功能
+01 |01. isAutoBrightnessEnabled                       |功能
+02 |02. setAutoBrightnessEnabled                      |功能
+03 |03. brightness                                    |功能
+04 |04. setBrightness                                 |功能
+05 |05. getWindowBrightness                           |功能
+06 |06. setWindowBrightness                           |功能
 ### *009.闪光FlashlightHelper(60)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. isFlashlightEnable                             |功能
-02 |2. isFlashlightOn                                 |功能
-03 |3. setFlashlightStatus                            |功能
-04 |4. destroy                                        |功能
+01 |01. isFlashlightEnable                            |功能
+02 |02. isFlashlightOn                                |功能
+03 |03. setFlashlightStatus                           |功能
+04 |04. destroy                                       |功能
 ### *010.振动VibrateHelper(20)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. vibrateOnce                                    |功能
-02 |2. vibrateComplicated                             |功能
-03 |3. vibrateStop                                    |功能
+01 |01. vibrateOnce                                   |功能
+02 |02. vibrateComplicated                            |功能
+03 |03. vibrateStop                                   |功能
 ### *011.蜂鸣BeepHelper(39)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. playBeep                                       |功能
+01 |01. playBeep                                      |功能
 >beep.ogg
 ### *012.防抖AntiShakeHelper(19)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. isValid                                        |功能
+01 |01. isValid                                       |功能
 ### *013.命令ShellHelper(86)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. execCmd                                        |功能
+01 |01. execCmd                                       |功能
 ### *014.破解RootHelper(43)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. isRoot                                         |功能
-02 |2. isRooted                                       |功能
-03 |3. rootPermission                                 |功能
+01 |01. isRoot                                        |功能
+02 |02. isRooted                                      |功能
+03 |03. rootPermission                                |功能
 ### *015.应用ApplicationHelper(603)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. numCores                                       |功能
-02 |2. isServiceRunning                               |功能
-03 |3. stopRunningService                             |功能
-04 |4. runScript                                      |功能
-05 |5. killProcess                                    |功能
-06 |6. registerAppStatusChangedListener               |功能
-07 |7. unregisterAppStatusChangedListener             |功能
-08 |8. appPackageName                                 |功能
-09 |9. installApp                                     |功能
+01 |01. numCores                                      |功能
+02 |02. isServiceRunning                              |功能
+03 |03. stopRunningService                            |功能
+04 |04. runScript                                     |功能
+05 |05. killProcess                                   |功能
+06 |06. registerAppStatusChangedListener              |功能
+07 |07. unregisterAppStatusChangedListener            |功能
+08 |08. appPackageName                                |功能
+09 |09. installApp                                    |功能
 10 |10. installAppSilent                              |功能
 11 |11. uninstallApp                                  |功能
 12 |12. uninstallAppSilent                            |功能
@@ -432,51 +432,51 @@
 ### *016.崩溃CrashHelper(144)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. init                                           |功能
-02 |2. crashTip                                       |功能
-03 |3. OnCrashListener                                |功能
+01 |01. init                                          |功能
+02 |02. crashTip                                      |功能
+03 |03. OnCrashListener                               |功能
 ### *017.退出ExitHelper(62)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. exitApp                                        |功能
-02 |2. OnExitClickListener                            |功能
+01 |01. exitApp                                       |功能
+02 |02. OnExitClickListener                           |功能
 ### *018.清理CleanHelper(50)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. cleanAppData                                   |功能
-02 |2. cleanInternalFiles                             |功能
-03 |3. cleanInternalCache                             |功能
-04 |4. cleanExternalCache                             |功能
-05 |5. cleanInternalSP                                |功能
-06 |6. cleanInternalDbs                               |功能
-07 |7. cleanInternalDbByName                          |功能
-08 |8. cleanCustomCache                               |功能
-09 |9. totalCacheSize                                 |功能
+01 |01. cleanAppData                                  |功能
+02 |02. cleanInternalFiles                            |功能
+03 |03. cleanInternalCache                            |功能
+04 |04. cleanExternalCache                            |功能
+05 |05. cleanInternalSP                               |功能
+06 |06. cleanInternalDbs                              |功能
+07 |07. cleanInternalDbByName                         |功能
+08 |08. cleanCustomCache                              |功能
+09 |09. totalCacheSize                                |功能
 ### *019.重启RebootHelper(33)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. reboot                                         |功能
-02 |2. reboot2Recovery                                |功能
-03 |3. reboot2Bootloader                              |功能
-04 |4. shutdown                                       |功能
+01 |01. reboot                                        |功能
+02 |02. reboot2Recovery                               |功能
+03 |03. reboot2Bootloader                             |功能
+04 |04. shutdown                                      |功能
 ### *020.快捷ShortCutHelper(40)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. hasShortcut                                    |功能
-02 |2. addShortcut                                    |功能
-03 |3. delShortcut                                    |功能
+01 |01. hasShortcut                                   |功能
+02 |02. addShortcut                                   |功能
+03 |03. delShortcut                                   |功能
 ### *021.机型RomHelper(215)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. isHuawei                                       |功能
-02 |2. isVivo                                         |功能
-03 |3. isXiaomi                                       |功能
-04 |4. isOppo                                         |功能
-05 |5. isLeeco                                        |功能
-06 |6. is360                                          |功能
-07 |7. isZte                                          |功能
-08 |8. isOneplus                                      |功能
-09 |9. isNubia                                        |功能
+01 |01. isHuawei                                      |功能
+02 |02. isVivo                                        |功能
+03 |03. isXiaomi                                      |功能
+04 |04. isOppo                                        |功能
+05 |05. isLeeco                                       |功能
+06 |06. is360                                         |功能
+07 |07. isZte                                         |功能
+08 |08. isOneplus                                     |功能
+09 |09. isNubia                                       |功能
 10 |10. isCoolpad                                     |功能
 11 |11. isLg                                          |功能
 12 |12. isGoogle                                      |功能
@@ -490,15 +490,15 @@
 ### *022.版本VersionHelper(64)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. aboveAstro                                     |功能
-02 |2. aboveBender                                    |功能
-03 |3. aboveCupcake                                   |功能
-04 |4. aboveDonut                                     |功能
-05 |5. aboveEclair                                    |功能
-06 |6. aboveEclair01                                  |功能
-07 |7. aboveEclairMR1                                 |功能
-08 |8. aboveFroyo                                     |功能
-09 |9. aboveGingerbread                               |功能
+01 |01. aboveAstro                                    |功能
+02 |02. aboveBender                                   |功能
+03 |03. aboveCupcake                                  |功能
+04 |04. aboveDonut                                    |功能
+05 |05. aboveEclair                                   |功能
+06 |06. aboveEclair01                                 |功能
+07 |07. aboveEclairMR1                                |功能
+08 |08. aboveFroyo                                    |功能
+09 |09. aboveGingerbread                              |功能
 10 |10. aboveGingerbreadMR1                           |功能
 11 |11. aboveHoneycomb                                |功能
 12 |12. aboveHoneycombMR1                             |功能
@@ -522,30 +522,30 @@
 ### *023.路由RouteHelper(142)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. requestCode                                    |功能
-02 |2. newIntent                                      |功能
-03 |3. addFlags                                       |功能
-04 |4. putExtraParam                                  |功能
-05 |5. setCallback                                    |功能
-06 |6. to                                             |功能
-07 |7. putBundle                                      |功能
-08 |8. putBundleParam                                 |功能
-09 |9. options                                        |功能
+01 |01. requestCode                                   |功能
+02 |02. newIntent                                     |功能
+03 |03. addFlags                                      |功能
+04 |04. putExtraParam                                 |功能
+05 |05. setCallback                                   |功能
+06 |06. to                                            |功能
+07 |07. putBundle                                     |功能
+08 |08. putBundleParam                                |功能
+09 |09. options                                       |功能
 10 |10. anim                                          |功能
 11 |11. launch                                        |功能
 12 |12. pop                                           |功能
 ### *024.活动ActivityHelper(668)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. startActivity                                  |功能
-02 |2. startActivityForResult                         |功能
-03 |3. startActivities                                |功能
-04 |4. startHomeActivity                              |功能
-05 |5. activityList                                   |功能
-06 |6. currentActivity                                |功能
-07 |7. topActivityName                                |功能
-08 |8. launcherActivityName                           |功能
-09 |9. getLauncherActivityName                        |功能
+01 |01. startActivity                                 |功能
+02 |02. startActivityForResult                        |功能
+03 |03. startActivities                               |功能
+04 |04. startHomeActivity                             |功能
+05 |05. activityList                                  |功能
+06 |06. currentActivity                               |功能
+07 |07. topActivityName                               |功能
+08 |08. launcherActivityName                          |功能
+09 |09. getLauncherActivityName                       |功能
 10 |10. getActivityByView                             |功能
 11 |11. isActivityExists                              |功能
 12 |12. isActivityExistsInList                        |功能
@@ -559,15 +559,15 @@
 ### *025.分享ShareHelper(238)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. shareMultiplePicture                           |功能
-02 |2. shareMultiplePictureForResult                  |功能
-03 |3. shareMultiplePictureToWeChatCircle             |功能
-04 |4. shareMultiplePictureToWeChatCircleForResult    |功能
-05 |5. shareMultiplePictureToWeChatContacts           |功能
-06 |6. shareMultiplePictureToWeChatContactsForResult  |功能
-07 |7. sharePicture                                   |功能
-08 |8. sharePictureToWeChatCircle                     |功能
-09 |9. sharePictureToWeChatContacts                   |功能
+01 |01. shareMultiplePicture                          |功能
+02 |02. shareMultiplePictureForResult                 |功能
+03 |03. shareMultiplePictureToWeChatCircle            |功能
+04 |04. shareMultiplePictureToWeChatCircleForResult   |功能
+05 |05. shareMultiplePictureToWeChatContacts          |功能
+06 |06. shareMultiplePictureToWeChatContactsForResult |功能
+07 |07. sharePicture                                  |功能
+08 |08. sharePictureToWeChatCircle                    |功能
+09 |09. sharePictureToWeChatContacts                  |功能
 10 |10. sharePictureForResult                         |功能
 11 |11. sharePictureToWeChatCircleForResult           |功能
 12 |12. sharePictureToWeChatContactsForResult         |功能
@@ -582,15 +582,15 @@
 ### *026.片段FragmentHelper(487)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. addFragment                                    |功能
-02 |2. addFragments                                   |功能
-03 |3. hideAddFragment                                |功能
-04 |4. popAddFragment                                 |功能
-05 |5. replaceFragment                                |功能
-06 |6. showFragment                                   |功能
-07 |7. showFragments                                  |功能
-08 |8. hideFragment                                   |功能
-09 |9. hideFragments                                  |功能
+01 |01. addFragment                                   |功能
+02 |02. addFragments                                  |功能
+03 |03. hideAddFragment                               |功能
+04 |04. popAddFragment                                |功能
+05 |05. replaceFragment                               |功能
+06 |06. showFragment                                  |功能
+07 |07. showFragments                                 |功能
+08 |08. hideFragment                                  |功能
+09 |09. hideFragments                                 |功能
 10 |10. hideAllShowFragment                           |功能
 11 |11. hideOthersShowFragment                        |功能
 12 |12. hideShowFragment                              |功能
@@ -615,34 +615,34 @@
 ### *027.服务ServiceHelper(67)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. allRunningServices                             |功能
-02 |2. isServiceRunning                               |功能
-03 |3. startService                                   |功能
-04 |4. stopService                                    |功能
-05 |5. bindService                                    |功能
-06 |6. unbindService                                  |功能
+01 |01. allRunningServices                            |功能
+02 |02. isServiceRunning                              |功能
+03 |03. startService                                  |功能
+04 |04. stopService                                   |功能
+05 |05. bindService                                   |功能
+06 |06. unbindService                                 |功能
 ### *028.轮询PollingHelper(40)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. isExistPollingService                          |功能
-02 |2. startPollingService                            |功能
-03 |3. stopPollingService                             |功能
+01 |01. isExistPollingService                         |功能
+02 |02. startPollingService                           |功能
+03 |03. stopPollingService                            |功能
 ### *029.广播BroadcastHelper(22)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. registerReceiverNetWork                        |功能
+01 |01. registerReceiverNetWork                       |功能
 ### *030.意图IntentHelper(317)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. isIntentAvailable                              |功能
-02 |2. getInstallAppIntent                            |功能
-03 |3. getUninstallAppIntent                          |功能
-04 |4. getLaunchAppIntent                             |功能
-05 |5. getAppDetailsSettingsIntent                    |功能
-06 |6. getAppStoreIntent                              |功能
-07 |7. getCaptureIntent                               |功能
-08 |8. getPickIntentWithGallery                       |功能
-09 |9. getPickIntentWithDocuments                     |功能
+01 |01. isIntentAvailable                             |功能
+02 |02. getInstallAppIntent                           |功能
+03 |03. getUninstallAppIntent                         |功能
+04 |04. getLaunchAppIntent                            |功能
+05 |05. getAppDetailsSettingsIntent                   |功能
+06 |06. getAppStoreIntent                             |功能
+07 |07. getCaptureIntent                              |功能
+08 |08. getPickIntentWithGallery                      |功能
+09 |09. getPickIntentWithDocuments                    |功能
 10 |10. buildImageGetIntent                           |功能
 11 |11. buildImageCropIntent                          |功能
 12 |12. getShareImageIntent                           |功能
@@ -656,22 +656,22 @@
 ### *031.元数MetaDataHelper(53)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. getMetaDataInApp                               |功能
-02 |2. getMetaDataInActivity                          |功能
-03 |3. getMetaDataInService                           |功能
-04 |4. getMetaDataInReceiver                          |功能
+01 |01. getMetaDataInApp                              |功能
+02 |02. getMetaDataInActivity                         |功能
+03 |03. getMetaDataInService                          |功能
+04 |04. getMetaDataInReceiver                         |功能
 ### *032.权限PermissionHelper(442)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. builderSimple                                  |功能
-02 |2. addPermission                                  |功能
-03 |3. initPermission                                 |功能
-04 |4. builderPermissions                             |功能
-05 |5. PermissionConstants                            |功能
-06 |6. request                                        |功能
-07 |7. rationale                                      |功能
-08 |8. simple                                         |功能
-09 |9. full                                           |功能
+01 |01. builderSimple                                 |功能
+02 |02. addPermission                                 |功能
+03 |03. initPermission                                |功能
+04 |04. builderPermissions                            |功能
+05 |05. PermissionConstants                           |功能
+06 |06. request                                       |功能
+07 |07. rationale                                     |功能
+08 |08. simple                                        |功能
+09 |09. full                                          |功能
 10 |10. theme                                         |功能
 11 |11. permission                                    |功能
 12 |12. getPermissions                                |功能
@@ -682,39 +682,39 @@
 17 |17. requestDrawOverlays                           |功能
 18 |18. isGranted                                     |功能
 19 |#### PermissionConstants                          |功能
-20 |1. PHONE                                          |功能
-21 |2. SENSORS                                        |功能
-22 |3. LOCATION                                       |功能
-23 |4. MICROPHONE                                     |功能
-24 |5. CAMERA                                         |功能
-25 |6. STORAGE                                        |功能
-26 |7. CALENDAR                                       |功能
-27 |8. CONTACTS                                       |功能
-28 |9. SMS                                            |功能
+20 |01. PHONE                                         |功能
+21 |02. SENSORS                                       |功能
+22 |03. LOCATION                                      |功能
+23 |04. MICROPHONE                                    |功能
+24 |05. CAMERA                                        |功能
+25 |06. STORAGE                                       |功能
+26 |07. CALENDAR                                      |功能
+27 |08. CONTACTS                                      |功能
+28 |09. SMS                                           |功能
 29 |10. getPermissions                                |功能
 ### *033.软包PackageHelper(18)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. isExistPackageName                             |功能
-02 |2. getInstalledPackageInfo                        |功能
+01 |01. isExistPackageName                            |功能
+02 |02. getInstalledPackageInfo                       |功能
 ### *034.属性PropertiesHelper(42)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. propertiesAll                                  |功能
-02 |2. getPropertyByKey                               |功能
-03 |3. init                                           |功能
+01 |01. propertiesAll                                 |功能
+02 |02. getPropertyByKey                              |功能
+03 |03. init                                          |功能
 ### *035.屏幕ScreenHelper(261)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. isScreenLock                                   |功能
-02 |2. sleepDuration                                  |功能
-03 |3. noShootScreen                                  |功能
-04 |4. shootScreenWithStatusBar                       |功能
-05 |5. shootScreenWithoutStatusBar                    |功能
-06 |6. shootWebView                                   |功能
-07 |7. realScreenHeight                               |功能
-08 |8. screenWidthByPoint                             |功能
-09 |9. screenHeightByPoint                            |功能
+01 |01. isScreenLock                                  |功能
+02 |02. sleepDuration                                 |功能
+03 |03. noShootScreen                                 |功能
+04 |04. shootScreenWithStatusBar                      |功能
+05 |05. shootScreenWithoutStatusBar                   |功能
+06 |06. shootWebView                                  |功能
+07 |07. realScreenHeight                              |功能
+08 |08. screenWidthByPoint                            |功能
+09 |09. screenHeightByPoint                           |功能
 10 |10. screenWidth                                   |功能
 11 |11. screenWidth8                                  |功能
 12 |12. screenHeight                                  |功能
@@ -735,28 +735,28 @@
 ### *036.窗口WindowHelper(61)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. displayRotation                                |功能
-02 |2. isLandscape                                    |功能
-03 |3. setLandscape                                   |功能
-04 |4. isPortrait                                     |功能
-05 |5. setPortrait                                    |功能
-06 |6. toggleFullScreen                               |功能
-07 |7. isFullScreen                                   |功能
-08 |8. setNoFullScreen                                |功能
-09 |9. setFullScreen                                  |功能
+01 |01. displayRotation                               |功能
+02 |02. isLandscape                                   |功能
+03 |03. setLandscape                                  |功能
+04 |04. isPortrait                                    |功能
+05 |05. setPortrait                                   |功能
+06 |06. toggleFullScreen                              |功能
+07 |07. isFullScreen                                  |功能
+08 |08. setNoFullScreen                               |功能
+09 |09. setFullScreen                                 |功能
 10 |10. dimBackground                                 |功能
 ### *037.多栏BarHelper(527)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. isStatusBarExists                              |功能
-02 |2. isStatusBarVisible                             |功能
-03 |3. setStatusBarVisibility                         |功能
-04 |4. isStatusBarModeDark                            |功能
-05 |5. Mode                                           |功能
-06 |6. setStatusBarModeDark                           |功能
-07 |7. getStatusBarColor                              |功能
-08 |8. setStatusBarColor                              |功能
-09 |9. setStatusBarColorDiff                          |功能
+01 |01. isStatusBarExists                             |功能
+02 |02. isStatusBarVisible                            |功能
+03 |03. setStatusBarVisibility                        |功能
+04 |04. isStatusBarModeDark                           |功能
+05 |05. Mode                                          |功能
+06 |06. setStatusBarModeDark                          |功能
+07 |07. getStatusBarColor                             |功能
+08 |08. setStatusBarColor                             |功能
+09 |09. setStatusBarColorDiff                         |功能
 10 |10. setStatusBarColorForDrawerLayout              |功能
 11 |11. setStatusBarColorForDrawerLayoutDiff          |功能
 12 |12. setStatusBarColorForSwipeBack                 |功能
@@ -778,15 +778,15 @@
 ### *038.视图ViewHelper：ViewTouch、ViewClick、ViewShadow(945)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. showPopupWindow                                |功能
-02 |2. dismissPopupWindow                             |功能
-03 |3. setTVUnderLine                                 |功能
-04 |4. setViewEnabled                                 |功能
-05 |5. isLayoutRtl                                    |功能
-06 |6. isTouchInView                                  |功能
-07 |7. fixScrollViewTopping                           |功能
-08 |8. removeSelfFromParent                           |功能
-09 |9. requestLayoutParent                            |功能
+01 |01. showPopupWindow                               |功能
+02 |02. dismissPopupWindow                            |功能
+03 |03. setTVUnderLine                                |功能
+04 |04. setViewEnabled                                |功能
+05 |05. isLayoutRtl                                   |功能
+06 |06. isTouchInView                                 |功能
+07 |07. fixScrollViewTopping                          |功能
+08 |08. removeSelfFromParent                          |功能
+09 |09. requestLayoutParent                           |功能
 10 |10. getActivity                                   |功能
 11 |11. bitmapView                                    |功能
 12 |12. shootView                                     |功能
@@ -794,54 +794,54 @@
 14 |14. captureActivity                               |功能
 15 |15. bigImage                                      |功能
 16 |#### ViewTouch                                    |功能
-17 |1. UNKNOWN                                        |功能
-18 |2. LEFT                                           |功能
-19 |3. UP                                             |功能
-20 |4. RIGHT                                          |功能
-21 |5. DOWN                                           |功能
-22 |6. Direction                                      |功能
-23 |7. setOnTouchListener                             |功能
-24 |8. OnTouchUtilsListener                           |功能
+17 |01. UNKNOWN                                       |功能
+18 |02. LEFT                                          |功能
+19 |03. UP                                            |功能
+20 |04. RIGHT                                         |功能
+21 |05. DOWN                                          |功能
+22 |06. Direction                                     |功能
+23 |07. setOnTouchListener                            |功能
+24 |08. OnTouchUtilsListener                          |功能
 25 |#### ViewClick                                    |功能
-26 |1. applyPressedViewScale                          |功能
-27 |2. applyPressedViewAlpha                          |功能
-28 |3. applyPressedBgAlpha                            |功能
-29 |4. applyPressedBgDark                             |功能
-30 |5. applyDebouncingGlobal                          |功能
-31 |6. OnDebouncingClickListener                      |功能
-32 |7. applyDebouncingSingle                          |功能
-33 |8. OnMultiClickListener                           |功能
+26 |01. applyPressedViewScale                         |功能
+27 |02. applyPressedViewAlpha                         |功能
+28 |03. applyPressedBgAlpha                           |功能
+29 |04. applyPressedBgDark                            |功能
+30 |05. applyDebouncingGlobal                         |功能
+31 |06. OnDebouncingClickListener                     |功能
+32 |07. applyDebouncingSingle                         |功能
+33 |08. OnMultiClickListener                          |功能
 34 |#### ViewShadow                                   |功能
-35 |1. apply                                          |功能
+35 |01. apply                                         |功能
 ### *039.连点ClickHelper(40)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. isFastDoubleClick                              |功能
-02 |2. doClick                                        |功能
+01 |01. isFastDoubleClick                             |功能
+02 |02. doClick                                       |功能
 ### *040.抖动ShakeHelper(26)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. shakeAnimation                                 |功能
-02 |2. shake                                          |功能
+01 |01. shakeAnimation                                |功能
+02 |02. shake                                         |功能
 ### *041.网视WebViewHelper(76)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. init                                           |功能
-02 |2. userAgent                                      |功能
-03 |3. loadData                                       |功能
-04 |4. goBack                                         |功能
+01 |01. init                                          |功能
+02 |02. userAgent                                     |功能
+03 |03. loadData                                      |功能
+04 |04. goBack                                        |功能
 ### *042.吐司ToastHelper(364)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. TopCenter                                      |功能
-02 |2. TopLeft                                        |功能
-03 |3. TopRight                                       |功能
-04 |4. Center                                         |功能
-05 |5. CenterLeft                                     |功能
-06 |6. CenterRight                                    |功能
-07 |7. BottomCenter                                   |功能
-08 |8. BottomLeft                                     |功能
-09 |9. BottomRight                                    |功能
+01 |01. TopCenter                                     |功能
+02 |02. TopLeft                                       |功能
+03 |03. TopRight                                      |功能
+04 |04. Center                                        |功能
+05 |05. CenterLeft                                    |功能
+06 |06. CenterRight                                   |功能
+07 |07. BottomCenter                                  |功能
+08 |08. BottomLeft                                    |功能
+09 |09. BottomRight                                   |功能
 10 |10. setGravity                                    |功能
 11 |11. setMsgTextSize                                |功能
 12 |12. COLOR_TEXT_DEFAULT                            |功能
@@ -860,15 +860,15 @@
 ### *043.零食SnackbarHelper(104)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. colorSnackbar                                  |功能
-02 |2. typeSnackbar                                   |功能
-03 |3. DEFAULT_INFO_BLUE                              |功能
-04 |4. SUCCESS_CONFIRM_GREEN                          |功能
-05 |5. WARNING_ORANGE                                 |功能
-06 |6. ERROR_ALERT_RED                                |功能
-07 |7. ERROR_ALERT_YELLOW                             |功能
-08 |8. switchType                                     |功能
-09 |9. setColor                                       |功能
+01 |01. colorSnackbar                                 |功能
+02 |02. typeSnackbar                                  |功能
+03 |03. DEFAULT_INFO_BLUE                             |功能
+04 |04. SUCCESS_CONFIRM_GREEN                         |功能
+05 |05. WARNING_ORANGE                                |功能
+06 |06. ERROR_ALERT_RED                               |功能
+07 |07. ERROR_ALERT_YELLOW                            |功能
+08 |08. switchType                                    |功能
+09 |09. setColor                                      |功能
 10 |10. setBottomMargin                               |功能
 11 |11. setBackgroundResource                         |功能
 12 |12. setAction                                     |功能
@@ -878,75 +878,75 @@
 ### *044.着色ColorHelper(75)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. randomColor                                    |功能
-02 |2. getRandomColor                                 |功能
-03 |3. getColor                                       |功能
-04 |4. setAlphaComponent                              |功能
-05 |5. setRedComponent                                |功能
-06 |6. setGreenComponent                              |功能
-07 |7. setBlueComponent                               |功能
-08 |8. string2ColorInt                                |功能
-09 |9. int2ArgbOrRgbString                            |功能
+01 |01. randomColor                                   |功能
+02 |02. getRandomColor                                |功能
+03 |03. getColor                                      |功能
+04 |04. setAlphaComponent                             |功能
+05 |05. setRedComponent                               |功能
+06 |06. setGreenComponent                             |功能
+07 |07. setBlueComponent                              |功能
+08 |08. string2ColorInt                               |功能
+09 |09. int2ArgbOrRgbString                           |功能
 10 |10. tintCursorDrawable                            |功能
 11 |11. tintDrawable                                  |功能
 ### *045.消息UiMessageHelper(168)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. send                                           |功能
-02 |2. UiMessage                                      |功能
-03 |3. UiMessageCallback                              |功能
-04 |4. addListener                                    |功能
-05 |5. removeListener                                 |功能
+01 |01. send                                          |功能
+02 |02. UiMessage                                     |功能
+03 |03. UiMessageCallback                             |功能
+04 |04. addListener                                   |功能
+05 |05. removeListener                                |功能
 ### *046.全局AHelper(289)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. FileProvider4Helper                            |功能
-02 |2. ContentProvider4Helper                         |功能
-03 |3. initContext                                    |功能
-04 |4. app                                            |功能
-05 |5. activityLifecycle                              |功能
-06 |6. activityLinkedList                             |功能
-07 |7. isForegroundApp                                |功能
-08 |8. topActivityOrApp                               |功能
-09 |9. handler                                        |功能
+01 |01. FileProvider4Helper                           |功能
+02 |02. ContentProvider4Helper                        |功能
+03 |03. initContext                                   |功能
+04 |04. app                                           |功能
+05 |05. activityLifecycle                             |功能
+06 |06. activityLinkedList                            |功能
+07 |07. isForegroundApp                               |功能
+08 |08. topActivityOrApp                              |功能
+09 |09. handler                                       |功能
 10 |10. runOnUiThread                                 |功能
 11 |11. runOnUiThreadDelayed                          |功能
 ### *047.内存CacheMemoryHelper(76)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. SEC                                            |功能
-02 |2. MIN                                            |功能
-03 |3. HOUR                                           |功能
-04 |4. DAY                                            |功能
-05 |5. getInstance                                    |功能
-06 |6. toString                                       |功能
+01 |01. SEC                                           |功能
+02 |02. MIN                                           |功能
+03 |03. HOUR                                          |功能
+04 |04. DAY                                           |功能
+05 |05. getInstance                                   |功能
+06 |06. toString                                      |功能
 07 |#### CacheMemory                                  |功能
-08 |1. cacheCount                                     |功能
-09 |2. getCacheCount                                  |功能
-10 |3. put                                            |功能
-11 |4. get                                            |功能
-12 |5. remove                                         |功能
-13 |6. clear                                          |功能
+08 |01. cacheCount                                    |功能
+09 |02. getCacheCount                                 |功能
+10 |03. put                                           |功能
+11 |04. get                                           |功能
+12 |05. remove                                        |功能
+13 |06. clear                                         |功能
 ### *048.磁盘CacheDiskHelper(521)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. SEC                                            |功能
-02 |2. MIN                                            |功能
-03 |3. HOUR                                           |功能
-04 |4. DAY                                            |功能
-05 |5. getInstance                                    |功能
-06 |6. toString                                       |功能
-07 |7. XFileOutputStream                              |功能
+01 |01. SEC                                           |功能
+02 |02. MIN                                           |功能
+03 |03. HOUR                                          |功能
+04 |04. DAY                                           |功能
+05 |05. getInstance                                   |功能
+06 |06. toString                                      |功能
+07 |07. XFileOutputStream                             |功能
 08 |#### CacheDisk                                    |功能
-09 |1. cacheCount                                     |功能
-10 |2. getCacheCount                                  |功能
-11 |3. cacheSize                                      |功能
-12 |4. getCacheSize                                   |功能
-13 |5. put                                            |功能
-14 |6. getBytes                                       |功能
-15 |7. getString                                      |功能
-16 |8. getJSONObject                                  |功能
-17 |9. getJSONArray                                   |功能
+09 |01. cacheCount                                    |功能
+10 |02. getCacheCount                                 |功能
+11 |03. cacheSize                                     |功能
+12 |04. getCacheSize                                  |功能
+13 |05. put                                           |功能
+14 |06. getBytes                                      |功能
+15 |07. getString                                     |功能
+16 |08. getJSONObject                                 |功能
+17 |09. getJSONArray                                  |功能
 18 |10. getBitmap                                     |功能
 19 |11. getDrawable                                   |功能
 20 |12. getSerializable                               |功能
@@ -956,21 +956,21 @@
 ### *049.双重CacheDoubleHelper(246)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. SEC                                            |功能
-02 |2. MIN                                            |功能
-03 |3. HOUR                                           |功能
-04 |4. DAY                                            |功能
-05 |5. getInstance                                    |功能
+01 |01. SEC                                           |功能
+02 |02. MIN                                           |功能
+03 |03. HOUR                                          |功能
+04 |04. DAY                                           |功能
+05 |05. getInstance                                   |功能
 06 |#### CacheDouble                                  |功能
-07 |1. cacheMemoryCount                               |功能
-08 |2. getCacheMemoryCount                            |功能
-09 |3. cacheDiskCount                                 |功能
-10 |4. getCacheDiskCount                              |功能
-11 |5. cacheDiskSize                                  |功能
-12 |6. getCacheDiskSize                               |功能
-13 |7. put                                            |功能
-14 |8. getBytes                                       |功能
-15 |9. getString                                      |功能
+07 |01. cacheMemoryCount                              |功能
+08 |02. getCacheMemoryCount                           |功能
+09 |03. cacheDiskCount                                |功能
+10 |04. getCacheDiskCount                             |功能
+11 |05. cacheDiskSize                                 |功能
+12 |06. getCacheDiskSize                              |功能
+13 |07. put                                           |功能
+14 |08. getBytes                                      |功能
+15 |09. getString                                     |功能
 16 |10. getJSONObject                                 |功能
 17 |11. getJSONArray                                  |功能
 18 |12. getBitmap                                     |功能
@@ -982,15 +982,15 @@
 ### *050.线程ThreadHelper(325)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. defaultThreadPoolSize                          |功能
-02 |2. isMainThread                                   |功能
-03 |3. SimpleTask                                     |功能
-04 |4. Task                                           |功能
-05 |5. cancel                                         |功能
-06 |6. executeBySingleWithDelay                       |功能
-07 |7. executeByCachedWithDelay                       |功能
-08 |8. executeByIOWithDelay                           |功能
-09 |9. executeByCPUWithDelay                          |功能
+01 |01. defaultThreadPoolSize                         |功能
+02 |02. isMainThread                                  |功能
+03 |03. SimpleTask                                    |功能
+04 |04. Task                                          |功能
+05 |05. cancel                                        |功能
+06 |06. executeBySingleWithDelay                      |功能
+07 |07. executeByCachedWithDelay                      |功能
+08 |08. executeByIOWithDelay                          |功能
+09 |09. executeByCPUWithDelay                         |功能
 10 |10. executeByFixedWithDelay                       |功能
 11 |11. executeWithDelay                              |功能
 12 |12. executeBySingleAtFixRate                      |功能
@@ -1021,91 +1021,91 @@
 ### *051.进程ProcessHelper(151)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. isMainProcess                                  |功能
-02 |2. currentProcessName                             |功能
-03 |3. foregroundProcessName                          |功能
-04 |4. allBackgroundProcesses                         |功能
-05 |5. killBackgroundProcesses                        |功能
-06 |6. killAllBackgroundProcesses                     |功能
+01 |01. isMainProcess                                 |功能
+02 |02. currentProcessName                            |功能
+03 |03. foregroundProcessName                         |功能
+04 |04. allBackgroundProcesses                        |功能
+05 |05. killBackgroundProcesses                       |功能
+06 |06. killAllBackgroundProcesses                    |功能
 ### *052.反射ReflectionHelper(63)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. getClassListByPackage                          |功能
-02 |2. isInstance                                     |功能
-03 |3. newInstance                                    |功能
-04 |4. invokeMethod                                   |功能
-05 |5. invokeStaticMethod                             |功能
-06 |6. getProperty                                    |功能
-07 |7. getStaticProperty                              |功能
-08 |8. setProperty                                    |功能
-09 |9. setStaticProperty                              |功能
+01 |01. getClassListByPackage                         |功能
+02 |02. isInstance                                    |功能
+03 |03. newInstance                                   |功能
+04 |04. invokeMethod                                  |功能
+05 |05. invokeStaticMethod                            |功能
+06 |06. getProperty                                   |功能
+07 |07. getStaticProperty                             |功能
+08 |08. setProperty                                   |功能
+09 |09. setStaticProperty                             |功能
 ### *053.接口ApiHelper(45)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. registerApi                                    |功能
-02 |2. toString                                       |功能
-03 |3. BaseApi                                        |功能
-04 |4. getApi                                         |功能
-05 |5. Api                                            |功能
+01 |01. registerApi                                   |功能
+02 |02. toString                                      |功能
+03 |03. BaseApi                                       |功能
+04 |04. getApi                                        |功能
+05 |05. Api                                           |功能
 ### *054.单例SingletonHelper. Singleton(16)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. newInstance                                    |功能
-02 |2. getInstance                                    |功能
+01 |01. newInstance                                   |功能
+02 |02. getInstance                                   |功能
 ### *055.对象AnyHelper(70)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. isEmptyAny                                     |功能
-02 |2. isNotEmptyAny                                  |功能
-03 |3. hashCode                                       |功能
-04 |4. getOrDefault                                   |功能
-05 |5. equalsAny                                      |功能
-06 |6. requireNonNull                                 |功能
+01 |01. isEmptyAny                                    |功能
+02 |02. isNotEmptyAny                                 |功能
+03 |03. hashCode                                      |功能
+04 |04. getOrDefault                                  |功能
+05 |05. equalsAny                                     |功能
+06 |06. requireNonNull                                |功能
 ### *056.总线BusHelper(239)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. registerBus                                    |功能
-02 |2. toString                                       |功能
-03 |3. register                                       |功能
-04 |4. post                                           |功能
-05 |5. unregister                                     |功能
-06 |6. postSticky                                     |功能
-07 |7. removeSticky                                   |功能
-08 |8. ThreadMode                                     |功能
-09 |9. Bus                                            |功能
+01 |01. registerBus                                   |功能
+02 |02. toString                                      |功能
+03 |03. register                                      |功能
+04 |04. post                                          |功能
+05 |05. unregister                                    |功能
+06 |06. postSticky                                    |功能
+07 |07. removeSticky                                  |功能
+08 |08. ThreadMode                                    |功能
+09 |09. Bus                                           |功能
 ### *057.输入InputMethodHelper(252)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. showInputMethod                                |功能
-02 |2. toggleInputMethod                              |功能
-03 |3. hideInputMethod                                |功能
-04 |4. hideInputMethodTimer                           |功能
-05 |5. isInputMethodActive                            |功能
-06 |6. isInputMethodVisible                           |功能
-07 |7. OnSoftInputChangedListener                     |功能
-08 |8. registerSoftInputChangedListener               |功能
-09 |9. unregisterSoftInputChangedListener             |功能
+01 |01. showInputMethod                               |功能
+02 |02. toggleInputMethod                             |功能
+03 |03. hideInputMethod                               |功能
+04 |04. hideInputMethodTimer                          |功能
+05 |05. isInputMethodActive                           |功能
+06 |06. isInputMethodVisible                          |功能
+07 |07. OnSoftInputChangedListener                    |功能
+08 |08. registerSoftInputChangedListener              |功能
+09 |09. unregisterSoftInputChangedListener            |功能
 10 |10. fixSoftInputLeaks                             |功能
 11 |11. fixAndroidBug5497                             |功能
 12 |12. clickBlankArea2HideSoftInput                  |功能
 ### *058.剪贴ClipboardHelper(21)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. textClip                                       |功能
-02 |2. uriClip                                        |功能
-03 |3. intentClip                                     |功能
+01 |01. textClip                                      |功能
+02 |02. uriClip                                       |功能
+03 |03. intentClip                                    |功能
 ### *059.字串StringHelper(120)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. isEmptyNoTrim                                  |功能
-02 |2. isEmptyTrim                                    |功能
-03 |3. isNotNull                                      |功能
-04 |4. isNull                                         |功能
-05 |5. isNotSpace                                     |功能
-06 |6. isSpace                                        |功能
-07 |7. isNumberStr                                    |功能
-08 |8. isIntegerStr                                   |功能
-09 |9. isDoubleStr                                    |功能
+01 |01. isEmptyNoTrim                                 |功能
+02 |02. isEmptyTrim                                   |功能
+03 |03. isNotNull                                     |功能
+04 |04. isNull                                        |功能
+05 |05. isNotSpace                                    |功能
+06 |06. isSpace                                       |功能
+07 |07. isNumberStr                                   |功能
+08 |08. isIntegerStr                                  |功能
+09 |09. isDoubleStr                                   |功能
 10 |10. isCnCharContains                              |功能
 11 |11. isCnCharAll                                   |功能
 12 |12. isNotCnChar                                   |功能
@@ -1121,15 +1121,15 @@
 ### *060.富文SpanHelper(767)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. builderSpan                                    |功能
-02 |2. setFlag                                        |功能
-03 |3. setForegroundColor                             |功能
-04 |4. setBackgroundColor                             |功能
-05 |5. ALIGN_BOTTOM                                   |功能
-06 |6. ALIGN_BASELINE                                 |功能
-07 |7. ALIGN_CENTER                                   |功能
-08 |8. ALIGN_TOP                                      |功能
-09 |9. setLineHeight                                  |功能
+01 |01. builderSpan                                   |功能
+02 |02. setFlag                                       |功能
+03 |03. setForegroundColor                            |功能
+04 |04. setBackgroundColor                            |功能
+05 |05. ALIGN_BOTTOM                                  |功能
+06 |06. ALIGN_BASELINE                                |功能
+07 |07. ALIGN_CENTER                                  |功能
+08 |08. ALIGN_TOP                                     |功能
+09 |09. setLineHeight                                 |功能
 10 |10. setQuoteColor                                 |功能
 11 |11. setMargin                                     |功能
 12 |12. setLeadingMargin                              |功能
@@ -1162,15 +1162,15 @@
 ### *061.文本TextHelper(445)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. string2Unicode                                 |功能
-02 |2. string2Ascii                                   |功能
-03 |3. string2Dbc                                     |功能
-04 |4. string2Sbc                                     |功能
-05 |5. reverseStr                                     |功能
-06 |6. underLine2Camel                                |功能
-07 |7. camel2UnderLine                                |功能
-08 |8. upperFirstLetter                               |功能
-09 |9. lowerFirstLetter                               |功能
+01 |01. string2Unicode                                |功能
+02 |02. string2Ascii                                  |功能
+03 |03. string2Dbc                                    |功能
+04 |04. string2Sbc                                    |功能
+05 |05. reverseStr                                    |功能
+06 |06. underLine2Camel                               |功能
+07 |07. camel2UnderLine                               |功能
+08 |08. upperFirstLetter                              |功能
+09 |09. lowerFirstLetter                              |功能
 10 |10. getPyFirstLetters                             |功能
 11 |11. allGb2Py                                      |功能
 12 |12. oneGb2Py                                      |功能
@@ -1180,26 +1180,26 @@
 ### *062.随机RandomHelper(78)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. getRandomNumbersAndLetters                     |功能
-02 |2. getRandomNumbers                               |功能
-03 |3. getRandomLetters                               |功能
-04 |4. getRandomCapitalLetters                        |功能
-05 |5. getRandomLowerCaseLetters                      |功能
-06 |6. getRandom                                      |功能
-07 |7. randomColor                                    |功能
-08 |8. shuffle                                        |功能
+01 |01. getRandomNumbersAndLetters                    |功能
+02 |02. getRandomNumbers                              |功能
+03 |03. getRandomLetters                              |功能
+04 |04. getRandomCapitalLetters                       |功能
+05 |05. getRandomLowerCaseLetters                     |功能
+06 |06. getRandom                                     |功能
+07 |07. randomColor                                   |功能
+08 |08. shuffle                                       |功能
 ### *063.验证ValidationHelper(280)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. cutStringFromChar                              |功能
-02 |2. cutString                                      |功能
-03 |3. getStringLength                                |功能
-04 |4. getReplaceFirst                                |功能
-05 |5. getReplaceAll                                  |功能
-06 |6. getSplits                                      |功能
-07 |7. getMatches                                     |功能
-08 |8. isMatch                                        |功能
-09 |9. isDigit                                        |功能
+01 |01. cutStringFromChar                             |功能
+02 |02. cutString                                     |功能
+03 |03. getStringLength                               |功能
+04 |04. getReplaceFirst                               |功能
+05 |05. getReplaceAll                                 |功能
+06 |06. getSplits                                     |功能
+07 |07. getMatches                                    |功能
+08 |08. isMatch                                       |功能
+09 |09. isDigit                                       |功能
 10 |10. isPositiveDigit                               |功能
 11 |11. isNegativeDigit                               |功能
 12 |12. isNotNegativeDigit                            |功能
@@ -1265,15 +1265,15 @@
 ### *064.身份IdCardHelper(398)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. isIdCard15                                     |功能
-02 |2. isIdCard18                                     |功能
-03 |3. isIdCard                                       |功能
-04 |4. isIdCardExact                                  |功能
-05 |5. validateCard                                   |功能
-06 |6. cnCityCode                                     |功能
-07 |7. validateIdCard18                               |功能
-08 |8. validateIdCard15                               |功能
-09 |9. card15ToCard18                                 |功能
+01 |01. isIdCard15                                    |功能
+02 |02. isIdCard18                                    |功能
+03 |03. isIdCard                                      |功能
+04 |04. isIdCardExact                                 |功能
+05 |05. validateCard                                  |功能
+06 |06. cnCityCode                                    |功能
+07 |07. validateIdCard18                              |功能
+08 |08. validateIdCard15                              |功能
+09 |09. card15ToCard18                                |功能
 10 |10. getProvinceByIdCard                           |功能
 11 |11. getBirthdayByIdCard                           |功能
 12 |12. getBirthByIdCard                              |功能
@@ -1291,30 +1291,30 @@
 ### *065.银行BankCardHelper(1720)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. getNameOfBank                                  |功能
-02 |2. checkBankCard                                  |功能
-03 |3. getBankCardCheckCode                           |功能
+01 |01. getNameOfBank                                 |功能
+02 |02. checkBankCard                                 |功能
+03 |03. getBankCardCheckCode                          |功能
 ### *066.图码BarQRHelper(149)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. decodeFromBitmap                               |功能
-02 |2. builderBarCode                                 |功能
-03 |3. createBarCode                                  |功能
-04 |4. builderQRCode                                  |功能
-05 |5. createQRCode                                   |功能
+01 |01. decodeFromBitmap                              |功能
+02 |02. builderBarCode                                |功能
+03 |03. createBarCode                                 |功能
+04 |04. builderQRCode                                 |功能
+05 |05. createQRCode                                  |功能
 >implementation 'com.google.zxing:core:3.4.0'
 ### *067.工具ToolHelper(137)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. backgroundHandler                              |功能
-02 |2. OnSimpleListener                               |功能
-03 |3. delayToDo                                      |功能
-04 |4. OnDoListener                                   |功能
-05 |5. initFastClickAndVibrate                        |功能
-06 |6. isFastClick                                    |功能
-07 |7. getResIdByName                                 |功能
-08 |8. fixListViewHeight                              |功能
-09 |9. countDown                                      |功能
+01 |01. backgroundHandler                             |功能
+02 |02. OnSimpleListener                              |功能
+03 |03. delayToDo                                     |功能
+04 |04. OnDoListener                                  |功能
+05 |05. initFastClickAndVibrate                       |功能
+06 |06. isFastClick                                   |功能
+07 |07. getResIdByName                                |功能
+08 |08. fixListViewHeight                             |功能
+09 |09. countDown                                     |功能
 10 |10. setEditNumberAuto                             |功能
 11 |11. setEditNumber                                 |功能
 12 |12. setEditDecimal                                |功能
@@ -1323,28 +1323,28 @@
 ### *068.编码EncodeHelper(114)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. base64Encode2String                            |功能
-02 |2. base64EncodeUrlSafe                            |功能
-03 |3. base64Encode                                   |功能
-04 |4. base64Decode                                   |功能
-05 |5. binEncode                                      |功能
-06 |6. binDecode                                      |功能
-07 |7. urlEncode                                      |功能
-08 |8. urlDecode                                      |功能
-09 |9. htmlEncode                                     |功能
+01 |01. base64Encode2String                           |功能
+02 |02. base64EncodeUrlSafe                           |功能
+03 |03. base64Encode                                  |功能
+04 |04. base64Decode                                  |功能
+05 |05. binEncode                                     |功能
+06 |06. binDecode                                     |功能
+07 |07. urlEncode                                     |功能
+08 |08. urlDecode                                     |功能
+09 |09. htmlEncode                                    |功能
 10 |10. htmlDecode                                    |功能
 ### *069.加密EncryptHelper(510)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. xorEncode                                      |功能
-02 |2. xorDecode                                      |功能
-03 |3. checkMD2                                       |功能
-04 |4. encryptMD2ToString                             |功能
-05 |5. encryptMD2                                     |功能
-06 |6. checkMD5                                       |功能
-07 |7. encryptMD5ToString                             |功能
-08 |8. encryptMD5                                     |功能
-09 |9. encryptMD5ToStringWithSalt                     |功能
+01 |01. xorEncode                                     |功能
+02 |02. xorDecode                                     |功能
+03 |03. checkMD2                                      |功能
+04 |04. encryptMD2ToString                            |功能
+05 |05. encryptMD2                                    |功能
+06 |06. checkMD5                                      |功能
+07 |07. encryptMD5ToString                            |功能
+08 |08. encryptMD5                                    |功能
+09 |09. encryptMD5ToStringWithSalt                    |功能
 10 |10. checkSHA1                                     |功能
 11 |11. encryptSHA1ToString                           |功能
 12 |12. encryptSHA1                                   |功能
@@ -1415,72 +1415,72 @@
 ### *070.位算BitHelper(37)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. checkBitValue                                  |功能
-02 |2. getBitValue                                    |功能
-03 |3. reverseBitValue                                |功能
-04 |4. setBitValue                                    |功能
+01 |01. checkBitValue                                 |功能
+02 |02. getBitValue                                   |功能
+03 |03. reverseBitValue                               |功能
+04 |04. setBitValue                                   |功能
 ### *071.压缩CompressHelper(92)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. compress                                       |功能
-02 |2. decompress                                     |功能
+01 |01. compress                                      |功能
+02 |02. decompress                                    |功能
 ### *072.平面PlaneHelper(15)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. pointToDegrees                                 |功能
-02 |2. distance                                       |功能
-03 |3. checkInRound                                   |功能
+01 |01. pointToDegrees                                |功能
+02 |02. distance                                      |功能
+03 |03. checkInRound                                  |功能
 ### *073.计算CalculateHelper(221)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. add                                            |功能
-02 |2. subtract                                       |功能
-03 |3. multiply                                       |功能
-04 |4. divide                                         |功能
-05 |5. remainder                                      |功能
-06 |6. round                                          |功能
-07 |7. compareBigDecimal                              |功能
-08 |8. formatMoney                                    |功能
-09 |9. adjustDouble                                   |功能
+01 |01. add                                           |功能
+02 |02. subtract                                      |功能
+03 |03. multiply                                      |功能
+04 |04. divide                                        |功能
+05 |05. remainder                                     |功能
+06 |06. round                                         |功能
+07 |07. compareBigDecimal                             |功能
+08 |08. formatMoney                                   |功能
+09 |09. adjustDouble                                  |功能
 ### *074.尺寸DensityHelper(58)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. dip2px                                         |功能
-02 |2. sp2px                                          |功能
-03 |3. value2px                                       |功能
-04 |4. px2dip                                         |功能
-05 |5. px2sp                                          |功能
-06 |6. px2value                                       |功能
-07 |7. OnGetSizeListener                              |功能
-08 |8. forceGetViewSize                               |功能
-09 |9. getViewWidth                                   |功能
+01 |01. dip2px                                        |功能
+02 |02. sp2px                                         |功能
+03 |03. value2px                                      |功能
+04 |04. px2dip                                        |功能
+05 |05. px2sp                                         |功能
+06 |06. px2value                                      |功能
+07 |07. OnGetSizeListener                             |功能
+08 |08. forceGetViewSize                              |功能
+09 |09. getViewWidth                                  |功能
 10 |10. getViewHeight                                 |功能
 11 |11. measureView                                   |功能
 ### *075.坐标CoordinateHelper(94)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. bd09ToWgs84                                    |功能
-02 |2. bd09ToGcj02                                    |功能
-03 |3. gcj02ToWgs84                                   |功能
-04 |4. outOfChina                                     |功能
-05 |5. transformLng                                   |功能
-06 |6. transformLat                                   |功能
-07 |7. transform                                      |功能
-08 |8. wgs84ToBd09                                    |功能
-09 |9. wgs84ToGcj02                                   |功能
+01 |01. bd09ToWgs84                                   |功能
+02 |02. bd09ToGcj02                                   |功能
+03 |03. gcj02ToWgs84                                  |功能
+04 |04. outOfChina                                    |功能
+05 |05. transformLng                                  |功能
+06 |06. transformLat                                  |功能
+07 |07. transform                                     |功能
+08 |08. wgs84ToBd09                                   |功能
+09 |09. wgs84ToGcj02                                  |功能
 10 |10. gcj02ToBd09                                   |功能
 ### *076.转换ConvertHelper(515)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. BYTE                                           |功能
-02 |2. KB                                             |功能
-03 |3. MB                                             |功能
-04 |4. GB                                             |功能
-05 |5. MemoryUnit                                     |功能
-06 |6. memorySize2ByteSize                            |功能
-07 |7. byteSize2MemorySize                            |功能
-08 |8. byteSize2MemorySizeFit                         |功能
-09 |9. byteSize2MemorySizeDesc                        |功能
+01 |01. BYTE                                          |功能
+02 |02. KB                                            |功能
+03 |03. MB                                            |功能
+04 |04. GB                                            |功能
+05 |05. MemoryUnit                                    |功能
+06 |06. memorySize2ByteSize                           |功能
+07 |07. byteSize2MemorySize                           |功能
+08 |08. byteSize2MemorySizeFit                        |功能
+09 |09. byteSize2MemorySizeDesc                       |功能
 10 |10. MSEC                                          |功能
 11 |11. SEC                                           |功能
 12 |12. MIN                                           |功能
@@ -1548,21 +1548,21 @@
 ### *077.迁移MigrationHelper(99)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. isDebug                                        |功能
-02 |2. migrate                                        |功能
+01 |01. isDebug                                       |功能
+02 |02. migrate                                       |功能
 >implementation 'org.greenrobot:greendao:3.2.2'
 ### *078.文件FileHelper(911)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. zip                                            |功能
-02 |2. unzip                                          |功能
-03 |3. bitmap2JpegFile                                |功能
-04 |4. bitmap2PngFile                                 |功能
-05 |5. encodeFile2Base64String                        |功能
-06 |6. decoderBase64String2File                       |功能
-07 |7. pathCacheImageAppIcon                          |功能
-08 |8. pathCacheImageMainGallery                      |功能
-09 |9. pathCacheImageBrowse                           |功能
+01 |01. zip                                           |功能
+02 |02. unzip                                         |功能
+03 |03. bitmap2JpegFile                               |功能
+04 |04. bitmap2PngFile                                |功能
+05 |05. encodeFile2Base64String                       |功能
+06 |06. decoderBase64String2File                      |功能
+07 |07. pathCacheImageAppIcon                         |功能
+08 |08. pathCacheImageMainGallery                     |功能
+09 |09. pathCacheImageBrowse                          |功能
 10 |10. pathCacheImageChooseHead                      |功能
 11 |11. pathCacheImage                                |功能
 12 |12. getCacheSdCard                                |功能
@@ -1640,65 +1640,65 @@
 ### *079.存取FileIoHelper(366)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. writeFileFromIS                                |功能
-02 |2. writeFileFromString                            |功能
-03 |3. writeAppFileFormBytes                          |功能
-04 |4. writeFileFromBytesByStream                     |功能
-05 |5. writeFileFromBytesByChannel                    |功能
-06 |6. writeFileFromBytesByMap                        |功能
-07 |7. readFile2List                                  |功能
-08 |8. readFile2StringByLine                          |功能
-09 |9. readFile2StringByBytes                         |功能
+01 |01. writeFileFromIS                               |功能
+02 |02. writeFileFromString                           |功能
+03 |03. writeAppFileFormBytes                         |功能
+04 |04. writeFileFromBytesByStream                    |功能
+05 |05. writeFileFromBytesByChannel                   |功能
+06 |06. writeFileFromBytesByMap                       |功能
+07 |07. readFile2List                                 |功能
+08 |08. readFile2StringByLine                         |功能
+09 |09. readFile2StringByBytes                        |功能
 10 |10. readFile2BytesByStream                        |功能
 11 |11. readFile2BytesByChannel                       |功能
 12 |12. readFile2BytesByMap                           |功能
 ### *080.压制ZipHelper(337)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. zipFiles                                       |功能
-02 |2. zipFile                                        |功能
-03 |3. ZipListener                                    |功能
-04 |4. isStopZip                                      |功能
-05 |5. fileToZip                                      |功能
-06 |6. unzipSelectedFile                              |功能
-07 |7. unzipOneFile                                   |功能
-08 |8. getFilesPath                                   |功能
-09 |9. getComments                                    |功能
+01 |01. zipFiles                                      |功能
+02 |02. zipFile                                       |功能
+03 |03. ZipListener                                   |功能
+04 |04. isStopZip                                     |功能
+05 |05. fileToZip                                     |功能
+06 |06. unzipSelectedFile                             |功能
+07 |07. unzipOneFile                                  |功能
+08 |08. getFilesPath                                  |功能
+09 |09. getComments                                   |功能
 10 |10. getEntries                                    |功能
 ### *081.密压ZipPlusHelper(321)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. zipEncrypt                                     |功能
-02 |2. zipEncryptRargo                                |功能
-03 |3. zipInfo                                        |功能
-04 |4. unzipFilesByKeyword                            |功能
-05 |5. unzipFileByKeyword                             |功能
-06 |6. unzipFile                                      |功能
-07 |7. unzipFileWithMonitor                           |功能
-08 |8. removeDirFromZipArchive                        |功能
+01 |01. zipEncrypt                                    |功能
+02 |02. zipEncryptRargo                               |功能
+03 |03. zipInfo                                       |功能
+04 |04. unzipFilesByKeyword                           |功能
+05 |05. unzipFileByKeyword                            |功能
+06 |06. unzipFile                                     |功能
+07 |07. unzipFileWithMonitor                          |功能
+08 |08. removeDirFromZipArchive                       |功能
 >implementation 'net.lingala.zip4j:zip4j:2.3.2'
 ### *082.打开OpenHelper(102)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. openInputStreamByUrlString                     |功能
-02 |2. openWebSite                                    |功能
-03 |3. openImage                                      |功能
-04 |4. openVideo                                      |功能
-05 |5. openPdfFile                                    |功能
-06 |6. openWordFile                                   |功能
-07 |7. openOfficeFileByWps                            |功能
+01 |01. openInputStreamByUrlString                    |功能
+02 |02. openWebSite                                   |功能
+03 |03. openImage                                     |功能
+04 |04. openVideo                                     |功能
+05 |05. openPdfFile                                   |功能
+06 |06. openWordFile                                  |功能
+07 |07. openOfficeFileByWps                           |功能
 ### *083.图像ImageHelper(1296)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. makeKey                                        |功能
-02 |2. isSameKey                                      |功能
-03 |3. crc64Long                                      |功能
-04 |4. getColorByInt                                  |功能
-05 |5. getColorHexString                              |功能
-06 |6. getAlphaPercent                                |功能
-07 |7. setColorAlphaByInt                             |功能
-08 |8. setColorAlphaByFloat                           |功能
-09 |9. getColorLightness                              |功能
+01 |01. makeKey                                       |功能
+02 |02. isSameKey                                     |功能
+03 |03. crc64Long                                     |功能
+04 |04. getColorByInt                                 |功能
+05 |05. getColorHexString                             |功能
+06 |06. getAlphaPercent                               |功能
+07 |07. setColorAlphaByInt                            |功能
+08 |08. setColorAlphaByFloat                          |功能
+09 |09. getColorLightness                             |功能
 10 |10. setColorLightness                             |功能
 11 |11. getDrawableFromMap                            |功能
 12 |12. getBitmapFromMap                              |功能
@@ -1745,29 +1745,29 @@
 ### *084.照片PhotoHelper(125)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. openGalleryMedia                               |功能
-02 |2. openGalleryImage                               |功能
-03 |3. openCameraImage                                |功能
-04 |4. cropImage                                      |功能
-05 |5. getCropIntent                                  |功能
+01 |01. openGalleryMedia                              |功能
+02 |02. openGalleryImage                              |功能
+03 |03. openCameraImage                               |功能
+04 |04. cropImage                                     |功能
+05 |05. getCropIntent                                 |功能
 ### *085.图片PictureHelper(43)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. getChoosedImagePath                            |功能
-02 |2. getChoosedImage                                |功能
-03 |3. getTakePictureFile                             |功能
+01 |01. getChoosedImagePath                           |功能
+02 |02. getChoosedImage                               |功能
+03 |03. getTakePictureFile                            |功能
 ### *086.动画AnimationHelper(210)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. isRunning                                      |功能
-02 |2. isStarted                                      |功能
-03 |3. start                                          |功能
-04 |4. stop                                           |功能
-05 |5. popupAppear                                    |功能
-06 |6. popupDisappear                                 |功能
-07 |7. animationCardFlip                              |功能
-08 |8. animationZoomIn                                |功能
-09 |9. animationZoomOut                               |功能
+01 |01. isRunning                                     |功能
+02 |02. isStarted                                     |功能
+03 |03. start                                         |功能
+04 |04. stop                                          |功能
+05 |05. popupAppear                                   |功能
+06 |06. popupDisappear                                |功能
+07 |07. animationCardFlip                             |功能
+08 |08. animationZoomIn                               |功能
+09 |09. animationZoomOut                              |功能
 10 |10. ScaleUpDown                                   |功能
 11 |11. animateHeight                                 |功能
 12 |12. OnDoIntListener                               |功能
@@ -1777,19 +1777,19 @@
 ### *087.信息ExifHelper(43)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. writeLatLonIntoJpeg                            |功能
+01 |01. writeLatLonIntoJpeg                           |功能
 ### *088.日期DateHelper(514)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-001|1. timeZoneNameCurrent                            |功能
-002|2. createGmtOffsetString                          |功能
-003|3. sdfDateExcel                                   |功能
-004|4. sdfDateByFullFileName                          |功能
-005|5. sdfYear                                        |功能
-006|6. sdfMonth                                       |功能
-007|7. sdfDay                                         |功能
-008|8. sdfHour                                        |功能
-009|9. sdfMinute                                      |功能
+001|01. timeZoneNameCurrent                           |功能
+002|02. createGmtOffsetString                         |功能
+003|03. sdfDateExcel                                  |功能
+004|04. sdfDateByFullFileName                         |功能
+005|05. sdfYear                                       |功能
+006|06. sdfMonth                                      |功能
+007|07. sdfDay                                        |功能
+008|08. sdfHour                                       |功能
+009|09. sdfMinute                                     |功能
 010|10. sdfSecond                                     |功能
 011|11. sdfMillisecond                                |功能
 012|12. sdfTimeCn                                     |功能
@@ -1889,23 +1889,23 @@
 ### *089.农历LunarHelper(177)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. getZodiac                                      |功能
-02 |2. getZodiacCn                                    |功能
-03 |3. lunarYear2GanZhi                               |功能
-04 |4. solar2Lunar                                    |功能
-05 |5. lunar2Solar                                    |功能
+01 |01. getZodiac                                     |功能
+02 |02. getZodiacCn                                   |功能
+03 |03. lunarYear2GanZhi                              |功能
+04 |04. solar2Lunar                                   |功能
+05 |05. lunar2Solar                                   |功能
 ### *090.日志LogHelper(677)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. IFormatter                                     |功能
-02 |2. config                                         |功能
-03 |3. v                                              |功能
-04 |4. d                                              |功能
-05 |5. i                                              |功能
-06 |6. w                                              |功能
-07 |7. e                                              |功能
-08 |8. a                                              |功能
-09 |9. vTag                                           |功能
+01 |01. IFormatter                                    |功能
+02 |02. config                                        |功能
+03 |03. v                                             |功能
+04 |04. d                                             |功能
+05 |05. i                                             |功能
+06 |06. w                                             |功能
+07 |07. e                                             |功能
+08 |08. a                                             |功能
+09 |09. vTag                                          |功能
 10 |10. dTag                                          |功能
 11 |11. iTag                                          |功能
 12 |12. wTag                                          |功能
@@ -1918,15 +1918,15 @@
 ### *091.数据DataHelper(145)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. . toDoubleWithDefault                          |功能
-02 |2. isNumberByAny                                  |功能
-03 |3. isIntegerByAny                                 |功能
-04 |4. isDecimalByAny                                 |功能
-05 |5. isNullOrEmpty                                  |功能
-06 |6. compileRegex                                   |功能
-07 |7. toIntWithDefault                               |功能
-08 |8. toLongWithDefault                              |功能
-09 |9. toStringWithDefault                            |功能
+01 |01. . toDoubleWithDefault                         |功能
+02 |02. isNumberByAny                                 |功能
+03 |03. isIntegerByAny                                |功能
+04 |04. isDecimalByAny                                |功能
+05 |05. isNullOrEmpty                                 |功能
+06 |06. compileRegex                                  |功能
+07 |07. toIntWithDefault                              |功能
+08 |08. toLongWithDefault                             |功能
+09 |09. toStringWithDefault                           |功能
 10 |10. isTrue                                        |功能
 11 |11. isFalse                                       |功能
 12 |12. isBoolean                                     |功能
@@ -1949,15 +1949,15 @@
 ### *092.解析JsonHelper(275)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. getInt                                         |功能
-02 |2. getLong                                        |功能
-03 |3. getDouble                                      |功能
-04 |4. getBoolean                                     |功能
-05 |5. getString                                      |功能
-06 |6. getJSONObject                                  |功能
-07 |7. getJSONArray                                   |功能
-08 |8. string2JSONObject                              |功能
-09 |9. any2JsonArray                                  |功能
+01 |01. getInt                                        |功能
+02 |02. getLong                                       |功能
+03 |03. getDouble                                     |功能
+04 |04. getBoolean                                    |功能
+05 |05. getString                                     |功能
+06 |06. getJSONObject                                 |功能
+07 |07. getJSONArray                                  |功能
+08 |08. string2JSONObject                             |功能
+09 |09. any2JsonArray                                 |功能
 10 |10. collection2JsonArray                          |功能
 11 |11. map2JsonObject                                |功能
 12 |12. any2json                                      |功能
@@ -1970,34 +1970,34 @@
 ### *093.处理GsonHelper(50)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. gson                                           |功能
-02 |2. gsonNoNulls                                    |功能
-03 |3. deepClone                                      |功能
-04 |4. toJson                                         |功能
-05 |5. fromJson                                       |功能
-06 |6. getArrayType                                   |功能
-07 |7. getListType                                    |功能
-08 |8. getSetType                                     |功能
-09 |9. getMapType                                     |功能
+01 |01. gson                                          |功能
+02 |02. gsonNoNulls                                   |功能
+03 |03. deepClone                                     |功能
+04 |04. toJson                                        |功能
+05 |05. fromJson                                      |功能
+06 |06. getArrayType                                  |功能
+07 |07. getListType                                   |功能
+08 |08. getSetType                                    |功能
+09 |09. getMapType                                    |功能
 10 |10. getType                                       |功能
 >implementation 'com.google.code.gson:gson:2.8.6'
 ### *094.标记XmlParseHelper(140)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. getXmlList                                     |功能
-02 |2. getXmlObject                                   |功能
+01 |01. getXmlList                                    |功能
+02 |02. getXmlObject                                  |功能
 ### *095.路径PathHelper(178)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. pathRoot                                       |功能
-02 |2. pathData                                       |功能
-03 |3. pathDownloadCache                              |功能
-04 |4. pathInternalAppData                            |功能
-05 |5. pathInternalAppCache                           |功能
-06 |6. pathInternalAppCodeCache                       |功能
-07 |7. pathInternalAppFiles                           |功能
-08 |8. pathInternalAppNoBackupFiles                   |功能
-09 |9. pathInternalAppSp                              |功能
+01 |01. pathRoot                                      |功能
+02 |02. pathData                                      |功能
+03 |03. pathDownloadCache                             |功能
+04 |04. pathInternalAppData                           |功能
+05 |05. pathInternalAppCache                          |功能
+06 |06. pathInternalAppCodeCache                      |功能
+07 |07. pathInternalAppFiles                          |功能
+08 |08. pathInternalAppNoBackupFiles                  |功能
+09 |09. pathInternalAppSp                             |功能
 10 |10. pathInternalAppDbs                            |功能
 11 |11. getPathInternalAppDb                          |功能
 12 |12. pathExternal                                  |功能
@@ -2028,15 +2028,15 @@
 ### *096.资源ResourceHelper(247)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. ID                                             |功能
-02 |2. LAYOUT                                         |功能
-03 |3. MENU                                           |功能
-04 |4. DRAWABLE                                       |功能
-05 |5. MIPMAP                                         |功能
-06 |6. ANIM                                           |功能
-07 |7. RAW                                            |功能
-08 |8. STYLE                                          |功能
-09 |9. STYLEABLE                                      |功能
+01 |01. ID                                            |功能
+02 |02. LAYOUT                                        |功能
+03 |03. MENU                                          |功能
+04 |04. DRAWABLE                                      |功能
+05 |05. MIPMAP                                        |功能
+06 |06. ANIM                                          |功能
+07 |07. RAW                                           |功能
+08 |08. STYLE                                         |功能
+09 |09. STYLEABLE                                     |功能
 10 |10. DIMEN                                         |功能
 11 |11. COLOR                                         |功能
 12 |12. INTEGER                                       |功能
@@ -2062,15 +2062,15 @@
 ### *097.主题ThemeHelper(157)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. resolveColor                                   |功能
-02 |2. resolveDimension                               |功能
-03 |3. resolveBoolean                                 |功能
-04 |4. resolveDrawable                                |功能
-05 |5. resolveString                                  |功能
-06 |6. resolveFloat                                   |功能
-07 |7. resolveInt                                     |功能
-08 |8. getColorFromAttrRes                            |功能
-09 |9. resolveActionTextColorStateList                |功能
+01 |01. resolveColor                                  |功能
+02 |02. resolveDimension                              |功能
+03 |03. resolveBoolean                                |功能
+04 |04. resolveDrawable                               |功能
+05 |05. resolveString                                 |功能
+06 |06. resolveFloat                                  |功能
+07 |07. resolveInt                                    |功能
+08 |08. getColorFromAttrRes                           |功能
+09 |09. resolveActionTextColorStateList               |功能
 10 |10. getActionTextColorStateList                   |功能
 11 |11. getActionTextStateList                        |功能
 12 |12. getColorArray                                 |功能
@@ -2078,90 +2078,90 @@
 ### *098.共享SharePreferenceHelper(109)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. fileName                                       |功能
-02 |2. all                                            |功能
-03 |3. putAll                                         |功能
-04 |4. getImage                                       |功能
-05 |5. putImage                                       |功能
-06 |6. get                                            |功能
-07 |7. put                                            |功能
-08 |8. getStringSet                                   |功能
-09 |9. putStringSet                                   |功能
+01 |01. fileName                                      |功能
+02 |02. all                                           |功能
+03 |03. putAll                                        |功能
+04 |04. getImage                                      |功能
+05 |05. putImage                                      |功能
+06 |06. get                                           |功能
+07 |07. put                                           |功能
+08 |08. getStringSet                                  |功能
+09 |09. putStringSet                                  |功能
 10 |10. contains                                      |功能
 11 |11. remove                                        |功能
 12 |12. clear                                         |功能
 ### *099.超文HtmlHelper(59)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. keywordMadeRed                                 |功能
-02 |2. addHtmlRedFlag                                 |功能
-03 |3. getJson                                        |功能
-04 |4. getForm                                        |功能
-05 |5. postJson                                       |功能
-06 |6. postForm                                       |功能
+01 |01. keywordMadeRed                                |功能
+02 |02. addHtmlRedFlag                                |功能
+03 |03. getJson                                       |功能
+04 |04. getForm                                       |功能
+05 |05. postJson                                      |功能
+06 |06. postForm                                      |功能
 ### *100.标识UriHelper(93)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. getURLWithParams                               |功能
-02 |2. file2Uri                                       |功能
-03 |3. uri2File                                       |功能
+01 |01. getURLWithParams                              |功能
+02 |02. file2Uri                                      |功能
+03 |03. uri2File                                      |功能
 ### *101.安全SslHelper(57)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. getSslSocketFactory                            |功能
-02 |2. getKeyManagers                                 |功能
+01 |01. getSslSocketFactory                           |功能
+02 |02. getKeyManagers                                |功能
 ### *102.网服WebServiceHelper(63)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. WebServiceCallBack                             |功能
-02 |2. callWebService                                 |功能
+01 |01. WebServiceCallBack                            |功能
+02 |02. callWebService                                |功能
 >implementation files('libs/ksoap2-android-assembly-3.6.4-jar-with-dependencies.jar')
 ### *103.网连HttpUrlConnectionHelper(107)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. CallBack                                       |功能
-02 |2. doGetAsyn                                      |功能
-03 |3. doGet                                          |功能
-04 |4. doPostAsyn                                     |功能
-05 |5. doPost                                         |功能
+01 |01. CallBack                                      |功能
+02 |02. doGetAsyn                                     |功能
+03 |03. doGet                                         |功能
+04 |04. doPostAsyn                                    |功能
+05 |05. doPost                                        |功能
 ### *104.数库DbHelper(32)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. exportDb2SdCard                                |功能
+01 |01. exportDb2SdCard                               |功能
 ### *105.地图MapHelper(69)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. openMap                                        |功能
-02 |2. openGaodeMapToGuide                            |功能
-03 |3. openBaiduMapToGuide                            |功能
-04 |4. openBrowserToGuide                             |功能
-05 |5. metreToScreenPixel                             |功能
-06 |6. screenPixelToMetre                             |功能
+01 |01. openMap                                       |功能
+02 |02. openGaodeMapToGuide                           |功能
+03 |03. openBaiduMapToGuide                           |功能
+04 |04. openBrowserToGuide                            |功能
+05 |05. metreToScreenPixel                            |功能
+06 |06. screenPixelToMetre                            |功能
 ### *106.通讯ContactsHelper(219)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. call                                           |功能
-02 |2. dial                                           |功能
-03 |3. sendSmsActivity                                |功能
-04 |4. sendSmsSilent                                  |功能
-05 |5. sendSmsWithReceiver                            |功能
-06 |6. allSms2Xml                                     |功能
-07 |7. toContantNumberActivity                        |功能
-08 |8. toContactsChooseActivity                       |功能
-09 |9. getContantNumberChoosed                        |功能
+01 |01. call                                          |功能
+02 |02. dial                                          |功能
+03 |03. sendSmsActivity                               |功能
+04 |04. sendSmsSilent                                 |功能
+05 |05. sendSmsWithReceiver                           |功能
+06 |06. allSms2Xml                                    |功能
+07 |07. toContantNumberActivity                       |功能
+08 |08. toContactsChooseActivity                      |功能
+09 |09. getContantNumberChoosed                       |功能
 10 |10. contacts                                      |功能
 ### *107.系统SystemHelper：SystemLanguage(232)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. buildManufacturer                              |功能
-02 |2. buildModel                                     |功能
-03 |3. serial                                         |功能
-04 |4. uniqueSerial                                   |功能
-05 |5. uniqueId                                       |功能
-06 |6. buildSerial                                    |功能
-07 |7. buildBrand                                     |功能
-08 |8. buildHost                                      |功能
-09 |9. buildUser                                      |功能
+01 |01. buildManufacturer                             |功能
+02 |02. buildModel                                    |功能
+03 |03. serial                                        |功能
+04 |04. uniqueSerial                                  |功能
+05 |05. uniqueId                                      |功能
+06 |06. buildSerial                                   |功能
+07 |07. buildBrand                                    |功能
+08 |08. buildHost                                     |功能
+09 |09. buildUser                                     |功能
 10 |10. buildTags                                     |功能
 11 |11. buildTime                                     |功能
 12 |12. buildFingerprint                              |功能
@@ -2184,15 +2184,15 @@
 29 |29. gsfId                                         |功能
 30 |30. googleAccounts                                |功能
 31 |#### SystemLanguage                               |功能
-32 |1. applyLanguageSystem                            |功能
-33 |2. applyLanguageCustom                            |功能
-34 |3. isAppliedLanguageSystem                        |功能
-35 |4. applyLanguageSystemInAppOnCreate               |功能
-36 |5. isAppliedLanguageCustom                        |功能
-37 |6. applyLanguageCustomInAppOnCreate               |功能
-38 |7. applyLanguage                                  |功能
+32 |01. applyLanguageSystem                           |功能
+33 |02. applyLanguageCustom                           |功能
+34 |03. isAppliedLanguageSystem                       |功能
+35 |04. applyLanguageSystemInAppOnCreate              |功能
+36 |05. isAppliedLanguageCustom                       |功能
+37 |06. applyLanguageCustomInAppOnCreate              |功能
+38 |07. applyLanguage                                 |功能
 ### *108.关闭CloseHelper(25)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |1. closeIo                                        |功能
-02 |2. closeIoQuietly                                 |功能
+01 |01. closeIo                                       |功能
+02 |02. closeIoQuietly                                |功能
