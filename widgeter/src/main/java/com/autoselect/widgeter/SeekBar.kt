@@ -699,7 +699,7 @@ class SeekBar @JvmOverloads constructor(
                 })
             }?.start()
         }
-        val typeEvaluator = TypeEvaluator<Int> { fraction, startValue, endValue ->
+        private val typeEvaluator = TypeEvaluator<Int> { fraction, startValue, endValue ->
             val alpha = (Color.alpha(startValue) + fraction * (Color.alpha(endValue) -
                     Color.alpha(startValue))).toInt()
             val red = (Color.red(startValue) + fraction * (Color.red(endValue) -
