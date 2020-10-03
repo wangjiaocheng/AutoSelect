@@ -23,7 +23,7 @@ class SeekBar @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0, defStyleRes: Int = 0
 ) : View(context, attrs, defStyleAttr, defStyleRes) {
     init {
-        initView(context, attrs)
+        initAttrs(context, attrs)
     }
 
     private var cellsCount = 1//默认1，大于1自动切回刻度模式
@@ -65,7 +65,7 @@ class SeekBar @JvmOverloads constructor(
 
     private var defaultPaddingLeftAndRight = 0
     private var defaultPaddingTop = 0
-    private fun initView(context: Context, attrs: AttributeSet?) {
+    private fun initAttrs(context: Context, attrs: AttributeSet?) {
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.SeekBar)
         try {
             typedArray.run {
