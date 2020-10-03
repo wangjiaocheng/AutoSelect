@@ -22,17 +22,6 @@ import kotlin.math.roundToLong
 class SeekBar @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0, defStyleRes: Int = 0
 ) : View(context, attrs, defStyleAttr, defStyleRes) {
-    private val line = RectF()
-    private val mMainPaint = Paint().apply {
-        style = Paint.Style.FILL
-        color = colorLineEdge
-    }
-    private val mCursorPaint = Paint().apply {
-        style = Paint.Style.FILL
-        color = colorLineEdge
-        textSize = mTextSize.toFloat()
-    }
-
     init {
         initView(context, attrs)
     }
@@ -44,8 +33,6 @@ class SeekBar @JvmOverloads constructor(
     var max = 0f
         private set//真实最大值
     private var mThumbResId = 0//按钮背景
-    private var mCursorTextHeight =
-        mCursorPaint.fontMetrics.run { (ceil(descent - ascent.toDouble()) + 2).toInt() }
     private var mProgressHintBGId = 0//进度提示背景
     private var mProgressHintBG: Bitmap = when (mProgressHintBGId) {
         0 -> BitmapFactory.decodeResource(resources, R.mipmap.seekbar_hint)
@@ -127,7 +114,7 @@ class SeekBar @JvmOverloads constructor(
         }
         defaultPaddingLeftAndRight = when (mHintBGWith) {
             0f -> dip2px(25f)
-            else -> max((mHintBGWith / 2 + dip2px(5f)) as Int, dip2px(25f))
+            else -> max((mHintBGWith / 2 + dip2px(5f)).toInt(), dip2px(25f))
         }
         setRules(min, max, reserveValue, cellsCount)
         defaultPaddingTop = mSeekBarHeight / 2
@@ -217,6 +204,7 @@ class SeekBar @JvmOverloads constructor(
     private var lineLeft = 0
     private var lineRight = 0
     private var lineBottom = 0
+    private val line = RectF()
     private var lineCorners = 0
     private var lineWidth = 0
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
@@ -234,9 +222,9 @@ class SeekBar @JvmOverloads constructor(
         if (mSeekBarMode == 2) rightSV?.onSizeChanged(
             lineLeft, lineBottom, mThumbSize, lineWidth, cellsCount > 1, mThumbResId, context
         )
-
     }//计算进度条位置，根据它初始化两个按钮位置
 
+    private var mPartLength = 0
     private var maxValue = 0f
     private var minValue = 0f
     private var offsetValue = 0f
@@ -253,7 +241,16 @@ class SeekBar @JvmOverloads constructor(
                 )
             }
         }
-    private var mPartLength = 0
+    private val mCursorPaint = Paint().apply {
+        style = Paint.Style.FILL
+        color = colorLineEdge
+        textSize = mTextSize.toFloat()
+    }
+    private val mMainPaint = Paint().apply {
+        style = Paint.Style.FILL
+        color = colorLineEdge
+    }
+
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
         mTextArray?.let {
@@ -553,6 +550,9 @@ class SeekBar @JvmOverloads constructor(
     companion object {
         private const val DEFAULT_RADIUS = 0.5f
     }
+
+    private var mCursorTextHeight =
+        mCursorPaint.fontMetrics.run { (ceil(descent - ascent.toDouble()) + 2).toInt() }
 
     private inner class SeekView(position: Int) {
         private var heightSize = 0
