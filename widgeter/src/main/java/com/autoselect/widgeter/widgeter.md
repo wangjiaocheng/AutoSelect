@@ -29,9 +29,11 @@
 | 025  | ### *025.ShoppingView(362)*                                                                                                                                                                                                                     | 商品 |
 | 026  | ### *026.ShineView：ShineButton、PorterShapeImageView、PorterImageView、ShineAnimator、EasingInterpolator、EasingProvider、Ease(699)*                                                                                                            | 点赞 |
 | 027  | ### *027.HeartLayout：FloatAnimation、PathAnimator、HeartView(238)*                                                                                                                                                                              | 爱心 |
-| 028  | ### *028.Banner：BannerHelper、TypeBannerTrans、BeanPage、PageListener、RecyclerViewHolder、RecyclerBaseAdapter、TypeTrans、Transformer、TransformerCard、TransformerDepthPage、TransformerMz、TransformerZoomOutPage、BeanCircle、BeanRect、TypeIndicatorCircle、IndicatorCircle、IndicatorRect、IndicatorText(1060)*| 横幅 |
-| 029  | ### *029.LayoutTab、LayoutLabel：LayoutScroll、LayoutFlow、AttrsHelper、AdapterTab、AdapterLabel、AdapterTemplate、AdapterFlow、FlowListener、FlowListenerAdapter、ActionRect、ActionTri、ActionRound、ActionColor、ActionRes、ActionBase、ActionDot、TextViewTabColor、BeanTab、BeanLabel、TabValue、TabTypeEvaluator、ConstantsFlow、ViewPagerHelper(2080)*| 流式 |
-| 030  | ### *030.BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)、ViewHolderBase：......(2961)*                                                 | 回收 |
+| 028  | ### *028.WaveView(231)*                                                                                                                                                                                                                         | 水波 |
+| 029  | ### *029.SideBar(240)*                                                                                                                                                                                                                          | 侧边 |
+| 030  | ### *030.Banner：BannerHelper、TypeBannerTrans、BeanPage、PageListener、RecyclerViewHolder、RecyclerBaseAdapter、TypeTrans、Transformer、TransformerCard、TransformerDepthPage、TransformerMz、TransformerZoomOutPage、BeanCircle、BeanRect、TypeIndicatorCircle、IndicatorCircle、IndicatorRect、IndicatorText(1060)*| 横幅 |
+| 031  | ### *031.LayoutTab、LayoutLabel：LayoutScroll、LayoutFlow、AttrsHelper、AdapterTab、AdapterLabel、AdapterTemplate、AdapterFlow、FlowListener、FlowListenerAdapter、ActionRect、ActionTri、ActionRound、ActionColor、ActionRes、ActionBase、ActionDot、TextViewTabColor、BeanTab、BeanLabel、TabValue、TabTypeEvaluator、ConstantsFlow、ViewPagerHelper(2080)*| 流式 |
+| 032  | ### *032.BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)、ViewHolderBase：......(2961)*                                                 | 回收 |
 >- xml资源
 >>1. attrs.xml
 >>2. colors.xml
@@ -515,7 +517,35 @@
 >- mipmap
 >>1. anim_heart.png
 >>2. anim_heart_border.png
-### *028.横幅Banner：BannerHelper、TypeBannerTrans、BeanPage、PageListener、RecyclerViewHolder、RecyclerBaseAdapter、TypeTrans、Transformer、TransformerCard、TransformerDepthPage、TransformerMz、TransformerZoomOutPage、BeanCircle、BeanRect、TypeIndicatorCircle、IndicatorCircle、IndicatorRect、IndicatorText(1060)*
+### *028.水波WaveView(231)*
+序号|方法|功能
+---|--------------------------------------------------|---
+01 |01. shapeType                                     |功能
+02 |02. frontWaveColor                                |功能
+03 |03. borderWidth                                   |功能
+04 |04. behindWaveColor                               |功能
+05 |05. borderColor                                   |功能
+06 |06. start                                         |功能
+07 |07. cancel                                        |功能
+08 |08. setWaveColor                                  |功能
+09 |09. setBorder                                     |功能
+10 |10. isShowWave                                    |功能
+11 |11. waveLengthRatio                               |功能
+12 |12. amplitudeRatio                                |功能
+13 |13. waveShiftRatio                                |功能
+14 |14. waterLevelRatio                               |功能
+### *029.侧边SideBar(240)*
+序号|方法|功能
+---|--------------------------------------------------|---
+01 |01. lazyRespond                                   |功能
+02 |02. textColor                                     |功能
+03 |03. textSize                                      |功能
+04 |04. maxOffset                                     |功能
+05 |05. sideBarPosition                               |功能
+06 |06. sideTextAlignment                             |功能
+07 |07. indexItems                                    |功能
+08 |08. onSelectIndexItemListener                     |功能
+### *030.横幅Banner：BannerHelper、TypeBannerTrans、BeanPage、PageListener、RecyclerViewHolder、RecyclerBaseAdapter、TypeTrans、Transformer、TransformerCard、TransformerDepthPage、TransformerMz、TransformerZoomOutPage、BeanCircle、BeanRect、TypeIndicatorCircle、IndicatorCircle、IndicatorRect、IndicatorText(1060)*
 序号|方法|功能
 ---|--------------------------------------------------|---
 01 |01. viewPager2                                    |功能
@@ -528,7 +558,7 @@
 08 |08. setPageListener                               |功能
 09 |09. addPagerData                                  |Indicator
 10 |10. addRectBean                                   |Indicator
-### *029.流式LayoutTab、LayoutLabel：LayoutScroll、LayoutFlow、AttrsHelper、AdapterTab、AdapterLabel、AdapterTemplate、AdapterFlow、FlowListener、FlowListenerAdapter、ActionRect、ActionTri、ActionRound、ActionColor、ActionRes、ActionBase、ActionDot、TextViewTabColor、BeanTab、BeanLabel、TabValue、TabTypeEvaluator、ConstantsFlow、ViewPagerHelper(2080)*
+### *031.流式LayoutTab、LayoutLabel：LayoutScroll、LayoutFlow、AttrsHelper、AdapterTab、AdapterLabel、AdapterTemplate、AdapterFlow、FlowListener、FlowListenerAdapter、ActionRect、ActionTri、ActionRound、ActionColor、ActionRes、ActionBase、ActionDot、TextViewTabColor、BeanTab、BeanLabel、TabValue、TabTypeEvaluator、ConstantsFlow、ViewPagerHelper(2080)*
 序号|方法|功能
 ---|--------------------------------------------------|---
 01 |01. isLabelFlow                                   |LayoutTab
@@ -551,7 +581,7 @@
 18 |05. setSelects                                    |LayoutLabel
 19 |06. setAdapter                                    |LayoutLabel
 >- implementation "androidx.constraintlayout:constraintlayout:2.0.1"
-### *030.回收BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)、ViewHolderBase：......(2961)*
+### *032.回收BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)、ViewHolderBase：......(2961)*
 序号|方法|功能（RecyclerView可嵌套：setHasFixedSize(true)、layoutManager、adapter、addItemDecoration）
 ---|--------------------------------------------------|---
 01 |01. data                                          |BaseAdapterQuick需要适配的数据

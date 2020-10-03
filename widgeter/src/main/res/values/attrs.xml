@@ -167,6 +167,29 @@
         <attr name="animLength" format="dimension" />
         <attr name="anim_duration" format="integer" />
     </declare-styleable>
+    <declare-styleable name="WaveView">
+        <attr name="WaveShapeType">
+            <enum name="CIRCLE" value="0" />
+            <enum name="SQUARE" value="1" />
+        </attr>
+        <attr name="WaveColor" format="color" />
+        <attr name="WaveBorder" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="SideBar">
+        <attr name="sidebar_lazy_respond" format="boolean" />
+        <attr name="sidebar_text_color" format="color" />
+        <attr name="sidebar_text_size" format="dimension" />
+        <attr name="sidebar_max_offset" format="dimension" />
+        <attr name="sidebar_position" format="enum">
+            <enum name="right" value="0" />
+            <enum name="left" value="1" />
+        </attr>
+        <attr name="sidebar_text_alignment" format="enum">
+            <enum name="center" value="0" />
+            <enum name="left" value="1" />
+            <enum name="right" value="2" />
+        </attr>
+    </declare-styleable>
     <declare-styleable name="IndicatorCircle">
         <attr name="cir_normalColor" format="color" />
         <attr name="cir_selectedColor" format="color" />
