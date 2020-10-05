@@ -801,15 +801,15 @@
 ## **附1.原生Layouts布局**
 | 序号 | 布局                                               | 功能 |
 |:-----|:--------------------------------------------------|:-----|
-| 001  | ### *001.ConstraintLayout*                        | 约束布局 |
-| 002  | ### *002.Guideline(horizontal)*                   | 水平引导线 |
-| 003  | ### *003.Guideline(vertical)*                     | 垂直引导线 |
-| 004  | ### *004.LinearLayout(horizontal)*                | 水平线性布局 |
-| 005  | ### *005.LinearLayout(vertical)*                  | 垂直线性布局 |
-| 006  | ### *006.FrameLayout*                             | 帧布局 |
-| 007  | ### *007.TableLayout*                             | 表格布局 |
-| 008  | ### *008.TableRow*                                | 表格行 |
-| 009  | ### *009.Space*                                   | 空白 |
+| 001  | ### *001.ConstraintLayout*                        | A约束布局 |
+| 002  | ### *002.Guideline(horizontal)*                   | A水平引导线 |
+| 003  | ### *003.Guideline(vertical)*                     | A垂直引导线 |
+| 004  | ### *004.LinearLayout(horizontal)*                | B水平线性布局 |
+| 005  | ### *005.LinearLayout(vertical)*                  | B垂直线性布局 |
+| 006  | ### *006.FrameLayout*                             | C帧布局 |
+| 007  | ### *007.TableLayout*                             | D表格布局 |
+| 008  | ### *008.TableRow*                                | D表格行 |
+| 009  | ### *009.Space*                                   | E空白 |
 | 010  | ### *010.RelativeLayout*                          | 淘汰：相对布局（遗留） |
 | 011  | ### *011.CoordinatorLayout*                       | 淘汰：协调布局，增强型帧布局 |
 | 012  | ### *012.GridLayout*                              | 淘汰：网格布局（遗留） |
@@ -817,25 +817,25 @@
 ## **附2.原生Containers容器**
 | 序号 | 容器                                               | 功能 |
 |:-----|:--------------------------------------------------|:-----|
-| 001  | ### *001.Spinner*                                 | 下拉列表 |
-| 002  | ### *002.RecyclerView*                            | 回收视图，取代列表视图 |
-| 003  | ### *003.ScrollView*                              | 滚动视图 |
-| 004  | ### *004.HorizontalScrollView*                    | 水平滚动视图 |
-| 005  | ### *005.NestedScrollView*                        | 嵌套滚动视图，兼容新控件 |
-| 006  | ### *006.ViewPager2*                              | 视图寻呼机 |
-| 007  | ### *007.GardView*                                | 卡牌视图 |
-| 008  | ### *008.AppBarLayout*                            | 应用程序栏布局，垂直线性布局支持滚动手势 |
-| 009  | ### *009.BottomAppBar*                            | 底部工具栏 |
-| 010  | ### *010.NavigationView*                          | 导航视图 |
-| 011  | ### *011.BottomNavigationView*                    | 底部导航视图 |
-| 012  | ### *012.Toolbar*                                 | 导航栏，取代Actionbar |
-| 013  | ### *013.TabLayout*                               | 标签布局 |
-| 014  | ### *014.TabItem*                                 | 标签项 |
-| 015  | ### *015.ViewStub*                                | 占位视图 |
-| 016  | ### *016.<include>*                               | 引用布局 |
-| 017  | ### *017.<fragment>*                              | 片段 |
-| 018  | ### *018.<view>*                                  | 视图 |
-| 019  | ### *019.<requestFocus>*                          | 指定焦点视图 |
+| 001  | ### *001.Spinner*                                 | A下拉列表 |
+| 002  | ### *002.RecyclerView*                            | B回收视图，取代列表视图 |
+| 003  | ### *003.ScrollView*                              | B滚动视图 |
+| 004  | ### *004.HorizontalScrollView*                    | B水平滚动视图 |
+| 005  | ### *005.NestedScrollView*                        | B嵌套滚动视图，兼容新控件 |
+| 006  | ### *006.ViewPager2*                              | C视图寻呼机 |
+| 007  | ### *007.GardView*                                | D卡牌视图 |
+| 008  | ### *008.AppBarLayout*                            | E应用程序栏布局，垂直线性布局支持滚动手势 |
+| 009  | ### *009.BottomAppBar*                            | E底部工具栏 |
+| 010  | ### *010.NavigationView*                          | F导航视图 |
+| 011  | ### *011.BottomNavigationView*                    | F底部导航视图 |
+| 012  | ### *012.Toolbar*                                 | F导航栏，取代Actionbar |
+| 013  | ### *013.TabLayout*                               | G标签布局 |
+| 014  | ### *014.TabItem*                                 | G标签项 |
+| 015  | ### *015.ViewStub*                                | H占位视图 |
+| 016  | ### *016.<include>*                               | H引用布局 |
+| 017  | ### *017.<fragment>*                              | H片段 |
+| 018  | ### *018.<view>*                                  | H视图 |
+| 019  | ### *019.<requestFocus>*                          | H指定焦点视图 |
 | 020  | ### *020.ListView*                                | 淘汰：列表视图（遗留） |
 | 021  | ### *021.ExpandableListView*                      | 淘汰：可展开列表视图 |
 | 022  | ### *022.GridView*                                | 淘汰：网格视图（遗留） |
@@ -852,21 +852,21 @@
 ## **附3.原生Widgets组件**
 | 序号 | 组件                                               | 功能 |
 |:-----|:--------------------------------------------------|:-----|
-| 001  | ### *001.View*                                    | 视图 |
-| 002  | ### *002.ImageView*                               | 图片视图 |
-| 003  | ### *003.WebView*                                 | 网页视图 |
-| 004  | ### *004.VideoView*                               | 视频视图 |
-| 005  | ### *005.CalendarView*                            | 日历视图 |
-| 006  | ### *006.ProgressBar*                             | 进度条 |
-| 007  | ### *007.ProgressBar(Horizontal)*                 | 水平进度条 |
-| 008  | ### *008.SeekBar*                                 | 拖动条 |
-| 009  | ### *009.SeekBar(Discrete)*                       | 分离拖动条 |
-| 010  | ### *010.RatingBar*                               | 星级评分条 |
-| 011  | ### *011.SearchView*                              | 搜索视图 |
-| 012  | ### *012.TextureView*                             | 结构视图 |
-| 013  | ### *013.SurfaceView*                             | 表面视图 |
-| 014  | ### *014.Horizontal Divider*                      | 水平分隔条 |
-| 015  | ### *015.Vertical Divider*                        | 垂直分隔条 |
+| 001  | ### *001.View*                                    | A视图 |
+| 002  | ### *002.ImageView*                               | A图片视图 |
+| 003  | ### *003.WebView*                                 | A网页视图 |
+| 004  | ### *004.VideoView*                               | A视频视图 |
+| 005  | ### *005.CalendarView*                            | A日历视图 |
+| 006  | ### *006.ProgressBar*                             | B进度条 |
+| 007  | ### *007.ProgressBar(Horizontal)*                 | B水平进度条 |
+| 008  | ### *008.SeekBar*                                 | B拖动条 |
+| 009  | ### *009.SeekBar(Discrete)*                       | B分离拖动条 |
+| 010  | ### *010.RatingBar*                               | B星级评分条 |
+| 011  | ### *011.SearchView*                              | B搜索视图 |
+| 012  | ### *012.TextureView*                             | C结构视图 |
+| 013  | ### *013.SurfaceView*                             | C表面视图 |
+| 014  | ### *014.Horizontal Divider*                      | D水平分隔条 |
+| 015  | ### *015.Vertical Divider*                        | D垂直分隔条 |
 | 016  | ### *016.AnalogClock*                             | 淘汰：模拟时钟 |
 | 017  | ### *017.TextClock*                               | 淘汰：文本时钟 |
 | 018  | ### *018.Chronometer*                             | 淘汰：计时器 |
@@ -882,50 +882,50 @@
 ## **附4.原生Buttons按钮**
 | 序号 | 按钮                                               | 功能 |
 |:-----|:--------------------------------------------------|:-----|
-| 001  | ### *001.Button*                                  | 按钮 |
-| 002  | ### *002.ImageButton*                             | 图片按钮 |
-| 003  | ### *003.CheckBox*                                | 复选框 |
-| 004  | ### *004.ChipGroup*                               | 流式布局标签组 |
-| 005  | ### *005.Chip*                                    | 流式布局标签 |
-| 006  | ### *006.RadioGroup*                              | 单选框组 |
-| 007  | ### *007.RadioButton*                             | 单选按钮 |
-| 008  | ### *008.ToggleButton*                            | 切换按钮 |
-| 009  | ### *009.Switch*                                  | 开关 |
-| 010  | ### *010.FloatingActionButton*                    | 浮动操作按钮 |
+| 001  | ### *001.Button*                                  | A按钮 |
+| 002  | ### *002.ImageButton*                             | A图片按钮 |
+| 003  | ### *003.CheckBox*                                | B复选框 |
+| 004  | ### *004.ChipGroup*                               | B流式布局标签组 |
+| 005  | ### *005.Chip*                                    | B流式布局标签 |
+| 006  | ### *006.RadioGroup*                              | B单选框组 |
+| 007  | ### *007.RadioButton*                             | B单选按钮 |
+| 008  | ### *008.ToggleButton*                            | C切换按钮 |
+| 009  | ### *009.Switch*                                  | C开关 |
+| 010  | ### *010.FloatingActionButton*                    | C浮动操作按钮 |
 ## **附5.原生Text文本**
 | 序号 | 文本                                               | 功能 |
 |:-----|:--------------------------------------------------|:-----|
-| 001  | ### *001.TextView*                                | 文本视图 |
-| 002  | ### *002.Plain Text*                              | 输入普通文本 |
-| 003  | ### *003.Password*                                | 输入任意字符密码 |
-| 004  | ### *004.Password(Numeric)*                       | 输入数字密码 |
-| 005  | ### *005.E-mail*                                  | 输入邮箱地址 |
-| 006  | ### *006.Phone*                                   | 输入电话 |
-| 007  | ### *007.Postal Address*                          | 输入邮政地址 |
-| 008  | ### *008.Multiline Text*                          | 输入多行文本 |
-| 009  | ### *009.Time*                                    | 输入时间 |
-| 010  | ### *010.Date*                                    | 输入日期 |
-| 011  | ### *011.Number*                                  | 输入数字 |
-| 012  | ### *012.Number(Signed)*                          | 输入带正负号数字 |
-| 013  | ### *013.Number(Decimal)*                         | 输入带小数点数字 |
-| 014  | ### *014.AutoCompleteTextView*                    | 单选自动完成文本框 |
-| 015  | ### *015.MultiAutoCompleteTextView*               | 多选自动完成文本框 |
-| 016  | ### *016.CheckedTextView*                         | 文本复选框 |
-| 017  | ### *017.TextInputLayout*                         | 文本输入布局，包含EditView默认生成浮动Label |
+| 001  | ### *001.TextView*                                | A文本视图 |
+| 002  | ### *002.Plain Text*                              | B输入普通文本 |
+| 003  | ### *003.Password*                                | B输入任意字符密码 |
+| 004  | ### *004.Password(Numeric)*                       | B输入数字密码 |
+| 005  | ### *005.E-mail*                                  | B输入邮箱地址 |
+| 006  | ### *006.Phone*                                   | B输入电话 |
+| 007  | ### *007.Postal Address*                          | B输入邮政地址 |
+| 008  | ### *008.Multiline Text*                          | B输入多行文本 |
+| 009  | ### *009.Time*                                    | B输入时间 |
+| 010  | ### *010.Date*                                    | B输入日期 |
+| 011  | ### *011.Number*                                  | B输入数字 |
+| 012  | ### *012.Number(Signed)*                          | B输入带正负号数字 |
+| 013  | ### *013.Number(Decimal)*                         | B输入带小数点数字 |
+| 014  | ### *014.AutoCompleteTextView*                    | C单选自动完成文本框 |
+| 015  | ### *015.MultiAutoCompleteTextView*               | C多选自动完成文本框 |
+| 016  | ### *016.CheckedTextView*                         | D文本复选框 |
+| 017  | ### *017.TextInputLayout*                         | E文本输入布局，包含EditView默认生成浮动Label |
 ## **附6.原生其它**
 | 序号 | 其它                                               | 功能 |
 |:-----|:--------------------------------------------------|:-----|
-| 001  | ### *001.Menu*                                    | 菜单 |
-| 002  | ### *002.PopupWindow*                             | 弹窗 |
-| 003  | ### *003.Dialog*                                  | 对话框 |
-| 004  | ### *004.DatePickerDialog*                        | 日期选择对话框 |
-| 005  | ### *005.TimePickerDialog*                        | 时间选择对话框 |
-| 006  | ### *006.ProgressDialog*                          | 进度对话框 |
-| 007  | ### *007.AlertDialog*                             | 警告对话框 |
-| 008  | ### *008.Toast*                                   | 吐司 |
-| 009  | ### *009.Snackbar*                                | 快餐 |
-| 010  | ### *010.Notification*                            | 通知 |
-| 011  | ### *011.RemoteViews*                             | 桌面控件 |
+| 001  | ### *001.Menu*                                    | A菜单 |
+| 002  | ### *002.PopupWindow*                             | A弹窗 |
+| 003  | ### *003.Dialog*                                  | B对话框 |
+| 004  | ### *004.DatePickerDialog*                        | B日期选择对话框 |
+| 005  | ### *005.TimePickerDialog*                        | B时间选择对话框 |
+| 006  | ### *006.ProgressDialog*                          | B进度对话框 |
+| 007  | ### *007.AlertDialog*                             | B警告对话框 |
+| 008  | ### *008.Toast*                                   | C吐司 |
+| 009  | ### *009.Snackbar*                                | C快餐 |
+| 010  | ### *010.Notification*                            | D通知 |
+| 011  | ### *011.RemoteViews*                             | E桌面控件 |
 ## *附*
 ```kotlin
         setSupportActionBar(toolbar)//先设置才能使用
