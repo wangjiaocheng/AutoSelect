@@ -548,16 +548,17 @@
 ### *030.横幅Banner：BannerHelper、TypeBannerTrans、BeanPage、PageListener、RecyclerViewHolder、RecyclerBaseAdapter、TypeTrans、Transformer、TransformerCard、TransformerDepthPage、TransformerMz、TransformerZoomOutPage、BeanCircle、BeanRect、TypeIndicatorCircle、IndicatorCircle、IndicatorRect、IndicatorText(1060)*
 序号|方法|功能
 ---|--------------------------------------------------|---
-01 |01. viewPager2                                    |功能
-02 |02. setCurrentPosition                            |功能
-03 |03. addIndicator                                  |功能
-04 |04. addPageBean                                   |功能
-05 |05. isOutVisibleWindow                            |功能
-06 |06. stopAnim                                      |功能
-07 |07. startAnim                                     |功能
-08 |08. setPageListener                               |功能
-09 |09. addPagerData                                  |Indicator
-10 |10. addRectBean                                   |Indicator
+01 |01. viewPager2                                    |暴露给addPagerData添加，无需创建
+02 |02. setCurrentPosition                            |设置当前页目
+03 |03. addIndicator                                  |添加指示器IndicatorCircle、IndicatorRect、IndicatorText
+04 |04. addPageBean                                   |添加页面设置BeanPage
+05 |05. isOutVisibleWindow                            |判断是否超出屏幕
+06 |06. stopAnim                                      |停止翻页动画
+07 |07. startAnim                                     |开始翻页动画
+08 |08. setPageListener                               |设置页面监听
+09 |01. addPagerData                                  |IndicatorCircle、IndicatorRect、IndicatorText暴露给Banner添加页面数量和viewPager2，无需添加
+10 |02. addCircleBean                                 |IndicatorCircle添加BeanCircle
+11 |03. addRectBean                                   |IndicatorRect添加BeanRect
 ### *031.流式LayoutTab、LayoutLabel：LayoutScroll、LayoutFlow、AttrsHelper、AdapterTab、AdapterLabel、AdapterTemplate、AdapterFlow、FlowListener、FlowListenerAdapter、ActionRect、ActionTri、ActionRound、ActionColor、ActionRes、ActionBase、ActionDot、TextViewTabColor、BeanTab、BeanLabel、TabValue、TabTypeEvaluator、ConstantsFlow、ViewPagerHelper(2080)*
 序号|方法|功能
 ---|--------------------------------------------------|---
