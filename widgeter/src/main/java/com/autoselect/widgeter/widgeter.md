@@ -49,12 +49,12 @@
 | 031  | *031.LayoutTab、LayoutLabel：LayoutScroll、LayoutFlow、AttrsHelper、AdapterTab、AdapterLabel、AdapterTemplate、AdapterFlow、FlowListener、FlowListenerAdapter、ActionRect、ActionTri、ActionRound、ActionColor、ActionRes、ActionBase、ActionDot、TextViewTabColor、BeanTab、BeanLabel、TabValue、TabTypeEvaluator、ConstantsFlow、ViewPagerHelper(2080)* | 流式 |
 | 032  | *032.BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)、ViewHolderBase：......(2961)*                                                                                                                                                           | 回收 |
 
->- xml资源
+>- values
 >
->>1. attrs.xml
->>2. colors.xml
->>3. dimens.xml
->>4. integers.xml
+>>1. [attrs.xml](../../../../res/values/attrs.xml)
+>>2. [colors.xml](../../../../res/values/colors.xml)
+>>3. [dimens.xml](../../../../res/values/dimens.xml)
+>>4. [integers.xml](../../../../res/values/integers.xml)
 
 ### *001.分隔Divider(32)*
 
@@ -96,11 +96,11 @@
 | 30   | 30. setRightIconListener  | 功能 |
 | 31   | 31. setRightTextListener  | 功能 |
 
->- include_helper_title.xml
->- mipmap资源
+>- layout:[include_helper_title.xml](../../../../res/layout/include_helper_title.xml)
+>- mipmap
 >
->>1. icon_previous.png
->>2. icon_set.png与PopupSingle共用
+>>1. ![icon_previous](../../../../res/mipmap/icon_previous.png)
+>>2. ![icon_set](../../../../res/mipmap/icon_set.png)与PopupSingle共用
 
 ### *003.说明PopupImply(31)*
 
@@ -108,8 +108,8 @@
 |:-----|:---------|:--------|
 | 01   | 01. show | 显示说明 |
 
->- layout:popup_imply.xml
->- mipmap:popup_imply.9.png
+>- layout:[popup_imply.xml](../../../../res/layout/popup_imply.xml)
+>- mipmap:![popup_imply.9](../../../../res/mipmap/popup_imply.9.png)
 
 ### *004.弹表PopupSingle(111)*
 
@@ -122,11 +122,11 @@
 | 05   | 05. colorItemText       | 弹表文本颜色   |
 | 06   | 06. show                | 显示可选弹表   |
 
->- mipmap:icon_set.png与Title共用
+>- mipmap:![icon_set](../../../../res/mipmap/icon_set.png)与Title共用
 >- layout
 >
->>1. popup_list_layout.xml
->>2. popup_list_item.xml
+>>1. [popup_list_layout.xml](../../../../res/layout/popup_list_layout.xml)
+>>2. [popup_list_item.xml](../../../../res/layout/popup_list_item.xml)
 
 ### *005.弹框PopupViewManager：PopupView、BackgroundConstructor、Coordinates、CoordinatesFinder(528)*
 
@@ -232,8 +232,8 @@
 
 >- mipmap
 >
->>1. seekbar_thumb.png
->>2. seekbar_hint.9.png
+>>1. ![seekbar_thumb](../../../../res/mipmap/seekbar_thumb.png)
+>>2. ![seekbar_hint.9](../../../../res/mipmap/seekbar_hint.9.png)
 
 ### *008.进度ProgressBar(258)*
 
@@ -247,7 +247,7 @@
 | 06   | 06. toggle        | 功能 |
 | 07   | 07. setStop       | 功能 |
 
->- flicker.png
+>- ![flicker](../../../../res/mipmap/flicker.png)
 
 ### *009.弧度ProgressRound(165)*
 
@@ -273,7 +273,7 @@
 | 02   | 02. minTextSize      | 功能 |
 | 03   | 03. enableSizeCache  | 功能 |
 
->- Title
+>- [Title.kt](Title.kt)
 
 ### *012.单滚TextViewVertical(100)*
 
@@ -299,10 +299,10 @@
 | 04   | 04. onItemClickListener | 功能 |
 | 05   | 05. setViews            | 功能 |
 
->- anim资源
+>- anim
 >
->>1. anim_marquee_in.xml
->>2. anim_marquee_out.xml
+>>1. [anim_marquee_in.xml](../../../../res/anim/anim_marquee_in.xml)
+>>2. [anim_marquee_out.xml](../../../../res/anim/anim_marquee_out.xml)
 
 ### *014.平滚AutoImageView(35)*
 
@@ -310,8 +310,8 @@
 |:-----|:--------------|:----|
 | 01   | 01. imageView | 功能 |
 
->1. anim_translate.xml
->2. layout_auto_imageview.xml
+>1. anim:[anim_translate.xml](../../../../res/anim/anim_translate.xml)
+>2. layout:[layout_auto_imageview.xml](../../../../res/layout/layout_auto_imageview.xml)
 
 ### *015.图调PinView：ScaleImageView、ImageSource、ImageViewState、DecoderFactory、ImageDecoder、RegionDecoder(34+2108)*
 
@@ -382,18 +382,18 @@
 | 63   | #### PinView                    | 功能 |
 | 64   | 01. pinS                        | 功能 |
 
->- mipmap资源
+>- mipmap
 >
->>1. pushpin_blue.png
->>2. tooltip_arrow_down.9.png
->>3. tooltip_arrow_down_left.9.png
->>4. tooltip_arrow_down_right.9.png
->>5. tooltip_arrow_left.9.png
->>6. tooltip_arrow_right.9.png
->>7. tooltip_arrow_up.9.png
->>8. tooltip_arrow_up_left.9.png
->>9. tooltip_arrow_up_right.9.png
->>10. tooltip_no_arrow.9.png
+>>1. ![pushpin_blue](../../../../res/mipmap/pushpin_blue.png)
+>>2. ![tooltip_arrow_down.9](../../../../res/mipmap/tooltip_arrow_down.9.png)
+>>3. ![tooltip_arrow_down_left.9](../../../../res/mipmap/tooltip_arrow_down_left.9.png)
+>>4. ![tooltip_arrow_down_right.9](../../../../res/mipmap/tooltip_arrow_down_right.9.png)
+>>5. ![tooltip_arrow_left.9](../../../../res/mipmap/tooltip_arrow_left.9.png)
+>>6. ![tooltip_arrow_right.9](../../../../res/mipmap/tooltip_arrow_right.9.png)
+>>7. ![tooltip_arrow_up.9](../../../../res/mipmap/tooltip_arrow_up.9.png)
+>>8. ![tooltip_arrow_up_left.9](../../../../res/mipmap/tooltip_arrow_up_left.9.png)
+>>9. ![tooltip_arrow_up_right.9](../../../../res/mipmap/tooltip_arrow_up_right.9.png)
+>>10. ![tooltip_no_arrow.9](../../../../res/mipmap/tooltip_no_arrow.9.png)
 
 ### *016.验证Captcha(117)*
 
@@ -425,7 +425,7 @@
 
 ### *018.刮刮ScratchCard(48)*
 
->- img_loading.png
+>- mipmap:![img_loading](../../../../res/mipmap/img_loading.png)
 
 ### *019.卡组CardStackView：AdapterAnimator、AdapterAllMoveDownAnimator、AdapterUpDownAnimator、AdapterUpDownStackAnimator、ViewDataObserver、AdapterDataObservable、ViewHolder、Adapter、AdapterStack、DelegateScrollStack、DelegateScroll(861+36+7)*
 
@@ -514,7 +514,7 @@
 | 04   | 04. setTextColor   | 功能 |
 | 05   | 05. setTextSize    | 功能 |
 
->- netspeed_view.xml
+>- layout:[netspeed_view.xml](../../../../res/layout/netspeed_view.xml)
 
 ### *022.机座SeatAirplane(892)*
 
@@ -531,11 +531,11 @@
 | 09   | 09. setBitmap           | 功能 |
 | 10   | 10. goCabinPosition     | 功能 |
 
->- mipmap资源（Seat共用）
+>- mipmap（SeatMovie共用）
 >
->>1. seat_gray.png
->>2. seat_green.png
->>3. seat_sold.png
+>>1. ![seat_gray](../../../../res/mipmap/seat_gray.png)
+>>2. ![seat_green](../../../../res/mipmap/seat_green.png)
+>>3. ![seat_sold](../../../../res/mipmap/seat_sold.png)
 
 ### *023.影座SeatMovie(717)*
 
@@ -603,8 +603,8 @@
 
 >- mipmap
 >
->>1. anim_heart.png
->>2. anim_heart_border.png
+>>1. ![anim_heart](../../../../res/mipmap/anim_heart.png)
+>>2. ![anim_heart_border](../../../../res/mipmap/anim_heart_border.png)
 
 ### *028.水波WaveView(231)*
 
@@ -675,7 +675,90 @@
 | 15   | 04. setSelects           | LayoutLabel设置选中标签                                          |
 | 16   | 05. setAdapter           | LayoutLabel设置AdapterLabel                                      |
 
+```kotlin
+class LabelShowMoreActivity : AppCompatActivity() {
+    private val showMore: MutableList<String?>? =
+        ArrayList(listOf(*"0 1 2 3 4 5 6 7 8 9 ".split(" ".toRegex()).toTypedArray()))
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_label_show_more)
+        val flowLayout = findViewById<LayoutLabel?>(R.id.label_flow_show_more)
+        flowLayout.setLabelBean(BeanLabel().apply {
+            maxSelectCount = 3
+            isAutoScroll = true
+            showLines = 3
+            showMoreLayoutId = R.layout.flow_label_show
+            showMoreColor = Color.WHITE
+            handUpLayoutId = R.layout.flow_label_handup
+        })
+        flowLayout.setSelects(0, 1, 2)
+        flowLayout.setAdapter(object :
+            AdapterLabel<String?>(R.layout.flow_item_textview, showMore) {
+            override fun bindView(view: View?, data: Any?, position: Int) {
+                setText(view, R.id.item_text_label, data as String)
+                    ?.setTextColor(view, R.id.item_text_label, Color.BLACK)
+            }
+
+            override fun onItemSelectState(view: View?, isSelected: Boolean) {
+                super.onItemSelectState(view, isSelected)
+                when {
+                    isSelected -> setTextColor(
+                        view, R.id.item_text_label, resources.getColor(R.color.colorPrimary)
+                    )
+                    else -> setTextColor(view, R.id.item_text_label, Color.BLACK)
+                }
+            }
+
+            override fun onShowMoreClick(view: View?) {
+                super.onShowMoreClick(view)
+            }
+
+            override fun onHandUpClick(view: View?) {
+                super.onHandUpClick(view)
+            }
+        })
+    }
+}
+```
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".LabelShowMoreActivity">
+
+    <com.autoselect.widgeter.flow.LayoutLabel
+        android:id="@+id/label_flow_show_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</ConstraintLayout>
+```
+
 >- implementation "androidx.constraintlayout:constraintlayout:2.0.1"
+>- drawable备用
+>
+>>1. [flow_item_selector_tag.xml](../../../../res/drawable/flow_item_selector_tag.xml)
+>>2. [flow_item_selector_color.xml](../../../../res/drawable/flow_item_selector_color.xml)
+>
+>- layout备用
+>
+>>1. [flow_item_textview.xml](../../../../res/layout/flow_item_textview.xml)
+>>2. [flow_label_show.xml](../../../../res/layout/flow_label_show.xml)
+>>3. [flow_label_handup.xml](../../../../res/layout/flow_label_handup.xml)
+>
+>- mipmap备用
+>
+>>1. ![flow_label_show](../../../../res/mipmap/flow_label_show.png)
+>>2. ![flow_label_handup](../../../../res/mipmap/flow_label_handup.png)
 
 ### *032.回收BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)、ViewHolderBase：......(2961)*
 
@@ -885,22 +968,24 @@
     }//Node展开收起箭头方向动画改变
 ```
 
->- layout:recycler_load_more.xml
->- drawable:recycler_loading_progress.xml
->- mipmap:recycler_loading.png
+>- layout:[recycler_load_more.xml](../../../../res/layout/recycler_load_more.xml)
+>- drawable:[recycler_loading_progress.xml](../../../../res/drawable/recycler_loading_progress.xml)
+>- mipmap:![recycler_loading](../../../../res/mipmap/recycler_loading.png)
 >- mipmap备用
 >
->>1. icon_add.png
->>2. icon_rm.png
->>3. icon_reset.png
->>4. icon_back.png
->>5. icon_arrow_r.png
->>6. icon_arrow_b.png
+>>1. ![icon_add](../../../../res/mipmap/icon_add.png)
+>>2. ![icon_rm](../../../../res/mipmap/icon_rm.png)
+>>3. ![icon_reset](../../../../res/mipmap/icon_reset.png)
+>>4. ![icon_back](../../../../res/mipmap/icon_back.png)
+>>5. ![icon_arrow_r](../../../../res/mipmap/icon_arrow_r.png)
+>>6. ![icon_arrow_b](../../../../res/mipmap/icon_arrow_b.png)
 >
->- values:ids.xml
+>- values:[ids.xml](../../../../res/values/ids.xml)
+>- strings
 >
->>1. strings:CN
->>2. strings:HK
+>>1. 默认[strings.xml](../../../../res/values/strings.xml)
+>>2. CN:[strings.xml](../../../../res/values-zh-rCN/strings.xml)
+>>3. HK:[strings.xml](../../../../res/values-zh-rHK/strings.xml)
 
 ## **附1.原生Layouts布局（行、列、格、面）**
 
