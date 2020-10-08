@@ -676,6 +676,205 @@
 | 16   | 05. setAdapter           | LayoutLabel设置AdapterLabel                                      |
 
 ```kotlin
+class LabelActivity : AppCompatActivity() {
+    private val titleOld: MutableList<String?>? =
+        ArrayList(listOf("零", "一", "二", "三", "四", "五", "六", "七", "八", "九"))
+    private val titleNew: MutableList<String?>? =
+        ArrayList(listOf(*"0 1 2 3 4 5 6 7 8 9 ".split(" ".toRegex()).toTypedArray()))
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_label)
+        singleFlow
+        searchFlow
+        multiFlow
+        longFlow
+    }
+
+    private val singleFlow = {
+        val adapter: AdapterLabel<*>?
+        findViewById<LayoutLabel?>(R.id.single_flow).setAdapter(object :
+            AdapterLabel<String?>(R.layout.flow_item_textview, titleOld) {
+            override fun bindView(view: View?, data: Any?, position: Int) {
+                setText(view, R.id.flow_item_text, data as String)?.setTextColor(
+                    view, R.id.flow_item_text, resources.getColor(R.color.grey_500)
+                )
+            }
+
+            override fun onItemSelectState(view: View?, isSelected: Boolean) {
+                super.onItemSelectState(view, isSelected)
+                when {
+                    isSelected -> setTextColor(view, R.id.flow_item_text, Color.BLACK)
+                    else -> setTextColor(
+                        view, R.id.flow_item_text, resources.getColor(R.color.grey_500)
+                    )
+                }
+            }
+        }.also { adapter = it })
+        findViewById<View?>(R.id.update).setOnClickListener {
+            titleOld?.clear()
+            titleNew?.let { titleOld?.addAll(it) }
+            adapter?.notifyDataChanged
+        }
+    }
+
+    private val searchFlow = {
+        findViewById<LayoutLabel?>(R.id.search_flow).setAdapter(object :
+            AdapterLabel<String?>(R.layout.flow_item_textview, titleOld) {
+            override fun bindView(view: View?, data: Any?, position: Int) {
+                setText(view, R.id.flow_item_text, data as String)
+                    ?.setTextColor(view, R.id.flow_item_text, Color.WHITE)
+                view?.background = RandomColor.getColorDrawable(10)
+            }
+        })
+    }
+
+    private val multiFlow = {
+        findViewById<LayoutLabel?>(R.id.multi_flow).apply {
+            mMaxSelectCount = (3)
+            setSelects(2, 3, 5)
+        }.setAdapter(object : AdapterLabel<String?>(R.layout.flow_item_textview, titleNew) {
+            override fun bindView(view: View?, data: Any?, position: Int) {
+                setText(view, R.id.flow_item_text, data as String)
+            }
+
+            override fun onReachMaxCount(ids: MutableList<Int?>, count: Int) {
+                super.onReachMaxCount(ids, count)
+            }
+        })
+    }
+
+    private val longFlow = {
+        findViewById<LayoutLabel?>(R.id.long_flow).setAdapter(object :
+            AdapterLabel<String?>(R.layout.flow_label_select, titleNew) {
+            override fun bindView(view: View?, data: Any?, position: Int) {
+                setText(view, R.id.search_msg_tv, data as String)
+                    ?.addChildrenClick(view, R.id.search_delete_iv, position)
+            }
+
+            override fun onItemSelectState(view: View?, isSelected: Boolean) {
+                super.onItemSelectState(view, isSelected)
+                if (!isSelected) {
+                    view?.setBackgroundResource(R.drawable.flow_item_shape_unselect)
+                    setVisible(view, R.id.search_delete_iv, false)
+                }
+            }
+
+            override fun onItemClick(view: View?, data: Any?, position: Int) {
+                super.onItemClick(view, data, position)
+            }
+
+            override fun onItemChildClick(childView: View?, position: Int) {
+                super.onItemChildClick(childView, position)
+                if (childView?.id == R.id.search_delete_iv) {
+                    titleNew?.removeAt(position)
+                    notifyDataChanged
+                }
+            }
+
+            override fun onItemLongClick(view: View?, position: Int): Boolean {
+                resetStatus
+                view?.setBackgroundResource(R.drawable.flow_item_shape_select)
+                setVisible(view, R.id.search_delete_iv, true)
+                return super.onItemLongClick(view, position)
+            }
+        })
+    }
+}
+```
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#506E7A"
+    android:orientation="vertical"
+    tools:context=".view.LabelActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/single"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="单选"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <com.autoselect.widgeter.flow.LayoutLabel
+            android:id="@+id/single_flow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="4dp" />
+
+        <Button
+            android:id="@+id/update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="更新数据" />
+
+        <TextView
+            android:id="@+id/search_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="热搜"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <com.autoselect.widgeter.flow.LayoutLabel
+            android:id="@+id/search_flow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp" />
+
+        <TextView
+            android:id="@+id/multi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="多选"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <com.autoselect.widgeter.flow.LayoutLabel
+            android:id="@+id/multi_flow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp" />
+
+        <TextView
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="长按"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <com.autoselect.widgeter.flow.LayoutLabel
+            android:id="@+id/long_flow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            app:label_maxSelectCount="3" />
+    </LinearLayout>
+</ScrollView>
+```
+
+```kotlin
 class LabelShowMoreActivity : AppCompatActivity() {
     private val showMore: MutableList<String?>? =
         ArrayList(listOf(*"0 1 2 3 4 5 6 7 8 9 ".split(" ".toRegex()).toTypedArray()))
@@ -746,19 +945,23 @@ class LabelShowMoreActivity : AppCompatActivity() {
 >- implementation "androidx.constraintlayout:constraintlayout:2.0.1"
 >- drawable备用
 >
->>1. [flow_item_selector_tag.xml](../../../../res/drawable/flow_item_selector_tag.xml)
->>2. [flow_item_selector_color.xml](../../../../res/drawable/flow_item_selector_color.xml)
+>>1. [flow_item_shape_unselect.xml](../../../../res/drawable/flow_item_shape_unselect.xml)
+>>2. [flow_item_shape_select.xml](../../../../res/drawable/flow_item_shape_select.xml)
+>>3. [flow_item_selector_tag.xml](../../../../res/drawable/flow_item_selector_tag.xml)
+>>4. [flow_item_selector_color.xml](../../../../res/drawable/flow_item_selector_color.xml)
 >
 >- layout备用
 >
 >>1. [flow_item_textview.xml](../../../../res/layout/flow_item_textview.xml)
->>2. [flow_label_show.xml](../../../../res/layout/flow_label_show.xml)
->>3. [flow_label_handup.xml](../../../../res/layout/flow_label_handup.xml)
+>>2. [flow_label_select.xml](../../../../res/layout/flow_label_select.xml)
+>>3. [flow_label_show.xml](../../../../res/layout/flow_label_show.xml)
+>>4. [flow_label_handup.xml](../../../../res/layout/flow_label_handup.xml)
 >
 >- mipmap备用
 >
->>1. ![flow_label_show](../../../../res/mipmap/flow_label_show.png)
->>2. ![flow_label_handup](../../../../res/mipmap/flow_label_handup.png)
+>>1. ![flow_label_delete](../../../../res/mipmap/flow_label_delete.png)
+>>2. ![flow_label_show](../../../../res/mipmap/flow_label_show.png)
+>>3. ![flow_label_handup](../../../../res/mipmap/flow_label_handup.png)
 
 ### *032.回收BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)、ViewHolderBase：......(2961)*
 
