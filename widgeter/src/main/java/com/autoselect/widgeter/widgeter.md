@@ -696,17 +696,17 @@ class LabelShowMoreActivity : AppCompatActivity() {
         flowLayout.setAdapter(object :
             AdapterLabel<String?>(R.layout.flow_item_textview, showMore) {
             override fun bindView(view: View?, data: Any?, position: Int) {
-                setText(view, R.id.item_text_label, data as String)
-                    ?.setTextColor(view, R.id.item_text_label, Color.BLACK)
+                setText(view, R.id.flow_item_text, data as String)
+                    ?.setTextColor(view, R.id.flow_item_text, Color.BLACK)
             }
 
             override fun onItemSelectState(view: View?, isSelected: Boolean) {
                 super.onItemSelectState(view, isSelected)
                 when {
                     isSelected -> setTextColor(
-                        view, R.id.item_text_label, resources.getColor(R.color.colorPrimary)
+                        view, R.id.flow_item_text, resources.getColor(R.color.colorPrimary)
                     )
-                    else -> setTextColor(view, R.id.item_text_label, Color.BLACK)
+                    else -> setTextColor(view, R.id.flow_item_text, Color.BLACK)
                 }
             }
 
