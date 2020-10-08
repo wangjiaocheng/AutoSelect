@@ -398,7 +398,7 @@
 |:-----|:-------------|:----|
 | 01   | 01. playBeep | 功能 |
 
->beep.ogg
+>- beep.ogg
 
 ### *012.防抖AntiShakeHelper(19)*
 
@@ -976,7 +976,7 @@
 | 13   | 13. getView               | 功能 |
 | 14   | 14. addView               | 功能 |
 
->implementation 'com.google.android.material:material:1.0.0'
+>- implementation "com.google.android.material:material:1.2.1"
 
 ### *044.着色ColorHelper(75)*
 
@@ -1452,7 +1452,7 @@
 | 04   | 04. builderQRCode    | 功能 |
 | 05   | 05. createQRCode     | 功能 |
 
->implementation 'com.google.zxing:core:3.4.0'
+>- implementation "com.google.zxing:core:3.4.1"
 
 ### *067.工具ToolHelper(137)*
 
@@ -1723,7 +1723,7 @@
 | 01   | 01. isDebug | 功能 |
 | 02   | 02. migrate | 功能 |
 
->implementation 'org.greenrobot:greendao:3.2.2'
+>- implementation "org.greenrobot:greendao:3.2.2"
 
 ### *078.文件FileHelper(911)*
 
@@ -1858,7 +1858,7 @@
 | 07   | 07. unzipFileWithMonitor    | 功能 |
 | 08   | 08. removeDirFromZipArchive | 功能 |
 
->implementation 'net.lingala.zip4j:zip4j:2.3.2'
+>- implementation "net.lingala.zip4j:zip4j:2.6.3"
 
 ### *082.打开OpenHelper(102)*
 
@@ -2115,7 +2115,7 @@
 | 16   | 16. json       | 功能 |
 | 17   | 17. xml        | 功能 |
 
->implementation 'com.google.code.gson:gson:2.8.6'
+>- implementation "com.google.code.gson:gson:2.8.6"
 
 ### *091.数据DataHelper(145)*
 
@@ -2188,7 +2188,7 @@
 | 09   | 09. getMapType   | 功能 |
 | 10   | 10. getType      | 功能 |
 
->implementation 'com.google.code.gson:gson:2.8.6'
+>- implementation "com.google.code.gson:gson:2.8.6"
 
 ### *094.标记XmlParseHelper(140)*
 
@@ -2342,8 +2342,7 @@
 | 01   | 01. WebServiceCallBack | 功能 |
 | 02   | 02. callWebService     | 功能 |
 
->implementation
->files('libs/ksoap2-android-assembly-3.6.4-jar-with-dependencies.jar')
+>- implementation "com.google.code.ksoap2-android:ksoap2-android:3.6.4"
 
 ### *103.网连HttpUrlConnectionHelper(107)*
 

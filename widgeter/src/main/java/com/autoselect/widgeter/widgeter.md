@@ -122,12 +122,11 @@
 | 05   | 05. colorItemText       | 弹表文本颜色   |
 | 06   | 06. show                | 显示可选弹表   |
 
+>- mipmap:icon_set.png与Title共用
 >- layout
 >
 >>1. popup_list_layout.xml
 >>2. popup_list_item.xml
->
->- mipmap:icon_set.png与Title共用
 
 ### *005.弹框PopupViewManager：PopupView、BackgroundConstructor、Coordinates、CoordinatesFinder(528)*
 
@@ -683,147 +682,147 @@
 
 ### *032.回收BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)、ViewHolderBase：......(2961)*
 
-| 序号 | 方法                                 | 功能（RecyclerView可嵌套：setHasFixedSize(true)、layoutManager、adapter、addItemDecoration）                                                                                                                                                              |
-|:-----|:-------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 01   | 01. data                             | BaseAdapterQuick需要适配的数据                                                                                                                                                                                                                           |
-| 02   | 02. loadMoreModule                   | BaseAdapterQuick加载更多模块，需继承LoadMoreModule                                                                                                                                                                                                       |
-| 03   | 03. upFetchModule                    | BaseAdapterQuick向上加载模块，需继承UpFetchModule                                                                                                                                                                                                        |
-| 04   | 04. draggableModule                  | BaseAdapterQuick拖拽模块，需继承DraggableModule                                                                                                                                                                                                          |
-| 05   | 05. convert                          | BaseAdapterQuick适配器必须实现，用Diff时必须实现带payloads方法                                                                                                                                                                                            |
-| 06   | 06. onCreateDefViewHolder            | BaseAdapterQuick实现自定义VH                                                                                                                                                                                                                            |
-| 07   | 07. headerLayoutCount                | BaseAdapterQuick头布局计数                                                                                                                                                                                                                              |
-| 08   | 08. getItem                          | BaseAdapterQuick获取data中数据项                                                                                                                                                                                                                        |
-| 09   | 09. getItemOrNull                    | BaseAdapterQuick获取data中数据项，可为空                                                                                                                                                                                                                 |
-| 10   | 10.getItemPosition                   | BaseAdapterQuick获取data中数据项位置                                                                                                                                                                                                                     |
-| 11   | 11.animationEnable                   | BaseAdapterQuick动画设置启用                                                                                                                                                                                                                            |
-| 12   | 12.adapterAnimation                  | BaseAdapterQuick动画自定义赋值                                                                                                                                                                                                                           |
-| 13   | 13.setAnimationWithDefault           | BaseAdapterQuick动画设置默认类型                                                                                                                                                                                                                         |
-| 14   | 14.isAnimationFirstOnly              | BaseAdapterQuick动画是否仅首次运行，改变后适配器notifyDataSetChanged()                                                                                                                                                                                    |
-| 15   | 15.recyclerView                      | BaseAdapterQuick回收视图赋值                                                                                                                                                                                                                            |
-| 16   | 16.headerViewAsFlow                  | BaseAdapterQuick为true页眉排列方式与普通项目视图相同，仅GridLayoutManager时有效忽略跨距大小                                                                                                                                                                |
-| 17   | 17.footerViewAsFlow                  | BaseAdapterQuick为true页脚排列方式与普通项目视图相同，仅GridLayoutManager时有效忽略跨距大小                                                                                                                                                                |
-| 18   | 18.isUseEmpty                        | BaseAdapterQuick是否使用空布局                                                                                                                                                                                                                           |
-| 19   | 19.hasEmptyView                      | BaseAdapterQuick是否存在空布局                                                                                                                                                                                                                           |
-| 20   | 20.headerWithEmptyEnable             | BaseAdapterQuick当显示空布局时，是否显示Header                                                                                                                                                                                                           |
-| 21   | 21.footerWithEmptyEnable             | BaseAdapterQuick当显示空布局时，是否显示Foot                                                                                                                                                                                                             |
-| 22   | 22.hasHeaderLayout                   | BaseAdapterQuick是否存在头布局                                                                                                                                                                                                                           |
-| 23   | 23.hasFooterLayout                   | BaseAdapterQuick是否存在脚布局                                                                                                                                                                                                                           |
-| 24   | 24.footerLayoutCount                 | BaseAdapterQuick脚布局计数                                                                                                                                                                                                                              |
-| 25   | 25.getItemCount                      | BaseAdapterQuick获取项计数                                                                                                                                                                                                                              |
-| 26   | 26.getDefItemCount                   | BaseAdapterQuick获取自定义项计数                                                                                                                                                                                                                         |
-| 27   | 27.getItemId                         | BaseAdapterQuick获取项ID                                                                                                                                                                                                                                |
-| 28   | 28.getItemViewType                   | BaseAdapterQuick获取项视图类型                                                                                                                                                                                                                           |
-| 29   | 29.getDefItemViewType                | BaseAdapterQuick获取自定义项视图类型                                                                                                                                                                                                                     |
-| 30   | 30.setGridSpanSizeLookup             | BaseAdapterQuick设置网格大小                                                                                                                                                                                                                            |
-| 31   | 31.onItemClickListener               | BaseAdapterQuick控件点击监听器                                                                                                                                                                                                                           |
-| 32   | 32.setOnItemClickListener            | BaseAdapterQuick控件点击监听器设置                                                                                                                                                                                                                       |
-| 33   | 33.onItemLongClickListener           | BaseAdapterQuick控件长按监听器                                                                                                                                                                                                                           |
-| 34   | 34.setOnItemLongClickListener        | BaseAdapterQuick控件长按监听器设置                                                                                                                                                                                                                       |
-| 35   | 35.onItemChildClickListener          | BaseAdapterQuick子控件点击监听器                                                                                                                                                                                                                         |
-| 36   | 36.setOnItemChildClickListener       | BaseAdapterQuick子控件点击监听器设置                                                                                                                                                                                                                     |
-| 37   | 37.onItemChildLongClickListener      | BaseAdapterQuick子控件长按监听器                                                                                                                                                                                                                         |
-| 38   | 38.setOnItemChildLongClickListener   | BaseAdapterQuick子控件长按监听器设置                                                                                                                                                                                                                     |
-| 39   | 39.childClickViewIds                 | BaseAdapterQuick可点击子控件ID列表                                                                                                                                                                                                                       |
-| 40   | 40.addChildClickViewIds              | BaseAdapterQuick必须先添加可点击子控件ID                                                                                                                                                                                                                 |
-| 41   | 41.childLongClickViewIds             | BaseAdapterQuick可长按子控件ID列表                                                                                                                                                                                                                       |
-| 42   | 42.addChildLongClickViewIds          | BaseAdapterQuick必须先添加可长按子控件ID                                                                                                                                                                                                                 |
-| 43   | 43.headerLayout                      | BaseAdapterQuick获取头布局                                                                                                                                                                                                                              |
-| 44   | 44.setHeaderView                     | BaseAdapterQuick设置空布局layoutInflater.inflate(R.layout.empty_view, recyclerView, false)                                                                                                                                                              |
-| 45   | 45.headerViewPosition                | BaseAdapterQuick头布局位置                                                                                                                                                                                                                              |
-| 46   | 46.addHeaderView                     | BaseAdapterQuick添加头布局layoutInflater.inflate(R.layout.head_view, recyclerView, false)                                                                                                                                                               |
-| 47   | 47.removeHeaderView                  | BaseAdapterQuick移除头布局                                                                                                                                                                                                                              |
-| 48   | 48.removeAllHeaderView               | BaseAdapterQuick移除所有头布局                                                                                                                                                                                                                           |
-| 49   | 49.footerLayout                      | BaseAdapterQuick获取脚布局                                                                                                                                                                                                                              |
-| 50   | 50.setFooterView                     | BaseAdapterQuick设置脚布局                                                                                                                                                                                                                              |
-| 51   | 51.footerViewPosition                | BaseAdapterQuick脚布局位置                                                                                                                                                                                                                              |
-| 52   | 52.addFooterView                     | BaseAdapterQuick添加脚布局layoutInflater.inflate(R.layout.footer_view, recyclerView, false)                                                                                                                                                             |
-| 53   | 53.removeFooterView                  | BaseAdapterQuick移除脚布局                                                                                                                                                                                                                              |
-| 54   | 54.removeAllFooterView               | BaseAdapterQuick移除所有脚布局                                                                                                                                                                                                                           |
-| 55   | 55.emptyLayout                       | BaseAdapterQuick获取空布局                                                                                                                                                                                                                              |
-| 56   | 56.setEmptyView                      | BaseAdapterQuick设置空布局                                                                                                                                                                                                                              |
-| 57   | 57.removeEmptyView                   | BaseAdapterQuick移除空布局                                                                                                                                                                                                                              |
-| 58   | 58.setDiffCallback                   | BaseAdapterQuick设置Diff回调生成Diff配置，setDiffNewData之前使用                                                                                                                                                                                         |
-| 59   | 59.differ                            | BaseAdapterQuick获取Diff                                                                                                                                                                                                                                |
-| 60   | 60.setDiffConfig                     | BaseAdapterQuick设置Diff配置，setDiffNewData之前使用                                                                                                                                                                                                     |
-| 61   | 61.setDiffNewData                    | BaseAdapterQuick设置新实例用Diff或DiffResult（差异更新），先setDiffCallback或setDiffConfig                                                                                                                                                                |
-| 62   | 62.setNewInstance                    | BaseAdapterQuick设置新实例                                                                                                                                                                                                                              |
-| 63   | 63.setList                           | BaseAdapterQuick设置新data数据                                                                                                                                                                                                                          |
-| 64   | 64.setData                           | BaseAdapterQuick改变指定位置data数据                                                                                                                                                                                                                     |
-| 65   | 65.addData                           | BaseAdapterQuick添加指定或不指定位置单条或批量data数据                                                                                                                                                                                                    |
-| 66   | 66.removeAt                          | BaseAdapterQuick删除data数据根据指定位置                                                                                                                                                                                                                 |
-| 67   | 67.remove                            | BaseAdapterQuick删除data数据根据指定数据                                                                                                                                                                                                                 |
-| 68   | 01. getItemBinder                    | BaseAdapterBinder获取已添加Binder，无则异常                                                                                                                                                                                                              |
-| 69   | 02. addItemBinder                    | BaseAdapterBinder添加Binder可附加DiffUtil.ItemCallback实现convert：ItemBinderBase实现onCreateViewHolder、ItemBinderQuick实现getLayoutId、ItemBinderView实现onCreateViewBinding、ItemBinderData实现onCreateDataBinding（convert内executePendingBindings()） |
-| 70   | 03. getItemBinderOrNull              | BaseAdapterBinder获取已添加Binder，无则null                                                                                                                                                                                                              |
-| 71   | 01. typeMultiDelegate                | BaseAdapterMultiDelegate实现BaseTypeMultiDelegate赋值：getItemType指定位置对应指定项类型列表项类型，addItemType添加指定项类型和对应布局；convert内根据指定项类型匹配VH的itemViewType，自动选择布局，设置布局内控件数据，实现EntityMultiItem包含项类型和控件数据   |
-| 72   | 01. getItemType                      | BaseAdapterMultiProvider根据位置指定不同项类型，数据类包含各种项类型                                                                                                                                                                                       |
-| 73   | 02. getItemProvider                  | BaseAdapterMultiProvider获取已添加BaseProviderItem                                                                                                                                                                                                      |
-| 74   | 03. addItemProvider                  | BaseAdapterMultiProvider添加自定义BaseProviderItem：layoutId设置布局；itemViewType设置项类型；convert适配器必须实现，用Diff时必须实现带payloads方法                                                                                                         |
-| 75   | 01. addFooterNodeProvider            | BaseAdapterNode添加铺满一行或一列脚部NodeProvider                                                                                                                                                                                                        |
-| 76   | 02. addFullSpanNodeProvider          | BaseAdapterNode添加需要铺满NodeProvider                                                                                                                                                                                                                 |
-| 77   | 03. addNodeProvider                  | BaseAdapterNode添加NodeProvider                                                                                                                                                                                                                         |
-| 78   | 04. addItemProvider                  | BaseAdapterNode添加自定义BaseProviderItem                                                                                                                                                                                                               |
-| 79   | 05. setDiffNewData                   | BaseAdapterNode一级节点设置新实例用Diff或DiffResult（差异更新），先setDiffCallback或setDiffConfig                                                                                                                                                         |
-| 80   | 06. setNewInstance                   | BaseAdapterNode一级节点设置新实例                                                                                                                                                                                                                        |
-| 81   | 07. setList                          | BaseAdapterNode一级节点设置新data数据                                                                                                                                                                                                                    |
-| 82   | 08. addData                          | BaseAdapterNode一级节点添加指定或不指定位置单条或批量data数据                                                                                                                                                                                              |
-| 83   | 09. setData                          | BaseAdapterNode一级节点改变指定位置data数据                                                                                                                                                                                                              |
-| 84   | 10.removeAt                          | BaseAdapterNode一级节点删除data数据根据指定位置                                                                                                                                                                                                           |
-| 85   | 11.nodeAddData                       | BaseAdapterNode添加父节点下子节点或子节点集合，可指定位置                                                                                                                                                                                                  |
-| 86   | 12.nodeRemoveData                    | BaseAdapterNode移除父节点下子节点，可指定位置                                                                                                                                                                                                             |
-| 87   | 13.nodeSetData                       | BaseAdapterNode替换父节点下指定位置子节点数据                                                                                                                                                                                                             |
-| 88   | 14.nodeReplaceChildData              | BaseAdapterNode替换父节点下子节点集合                                                                                                                                                                                                                    |
-| 89   | 15.collapse                          | BaseAdapterNode收起本节点                                                                                                                                                                                                                               |
-| 90   | 16.expand                            | BaseAdapterNode展开本节点                                                                                                                                                                                                                               |
-| 91   | 17.expandOrCollapse                  | BaseAdapterNode切换收起展开本节点                                                                                                                                                                                                                        |
-| 92   | 18.collapseAndChild                  | BaseAdapterNode收起本节点和子节点                                                                                                                                                                                                                        |
-| 93   | 19.expandAndChild                    | BaseAdapterNode展开本节点和子节点                                                                                                                                                                                                                        |
-| 94   | 20.expandAndCollapseOther            | BaseAdapterNode切换收起展开本节点和子节点                                                                                                                                                                                                                |
-| 95   | 21.findParentNode                    | BaseAdapterNode查找父节点                                                                                                                                                                                                                               |
-| 96   | 01. addItemType                      | BaseAdapterMultiQuick添加指定类型和对应布局，直接添加无需Delegate添加也无需Binder添加                                                                                                                                                                      |
-| 97   | 01. setNormalLayout                  | BaseAdapterSectionQuick如果item不是多布局，此方法快速设置item layout；如果需要多布局item用addItemType                                                                                                                                                      |
-| 98   | 02. convertHeader                    | BaseAdapterSectionQuick数据项实现EntitySection，convertHeader和convert共用，根据isHeader配置不同数据                                                                                                                                                      |
-| 99   | 01. getView                          | ViewHolderBase根据ID从数组获取控件，LoadMoreViewBase需用，LayoutInflater.from(parent.context).inflate(R.layout.view_load_more, parent, false)                                                                                                            |
-| 100  | 02. getViewOrNull                    | ViewHolderBase根据ID从数组获取控件，无则放入数组                                                                                                                                                                                                          |
-| 101  | 03. findView                         | ViewHolderBase根据ID获取控件                                                                                                                                                                                                                            |
-| 102  | 04. setText                          | ViewHolderBase设置控件文本                                                                                                                                                                                                                              |
-| 103  | 05. setTextRes                       | ViewHolderBase设置控件文本资源                                                                                                                                                                                                                           |
-| 104  | 06. setTextColor                     | ViewHolderBase设置控件颜色                                                                                                                                                                                                                              |
-| 105  | 07. setTextColorRes                  | ViewHolderBase设置控件颜色资源                                                                                                                                                                                                                           |
-| 106  | 08. setImageResource                 | ViewHolderBase设置控件资源                                                                                                                                                                                                                              |
-| 107  | 09. setImageDrawable                 | ViewHolderBase设置控件Drawable                                                                                                                                                                                                                          |
-| 108  | 10.setImageBitmap                    | ViewHolderBase设置控件Bitmap                                                                                                                                                                                                                            |
-| 109  | 11.setBackgroundColor                | ViewHolderBase设置控件背景颜色                                                                                                                                                                                                                           |
-| 110  | 12.setBackgroundResource             | ViewHolderBase设置控件背景资源                                                                                                                                                                                                                           |
-| 111  | 13.setVisible                        | ViewHolderBase设置控件可见性，INVISIBLE占位不可见                                                                                                                                                                                                        |
-| 112  | 14.setGone                           | ViewHolderBase设置控件隐藏性，GONE隐藏不可见                                                                                                                                                                                                             |
-| 113  | 15.setEnabled                        | ViewHolderBase设置控件可用性                                                                                                                                                                                                                             |
-| 114  | 01. loadMoreView                     | LoadMoreModuleBase重设加载更多视图                                                                                                                                                                                                                       |
-| 115  | 02. loadMoreStatus                   | LoadMoreModuleBase加载更多状态：正在加载、完成、失败、结束                                                                                                                                                                                                |
-| 116  | 03. isLoading                        | LoadMoreModuleBase获取是否正在加载                                                                                                                                                                                                                       |
-| 117  | 04. isEnableLoadMore                 | LoadMoreModuleBase是否能够加载更多，临时false防止下拉刷新同时上拉加载                                                                                                                                                                                      |
-| 118  | 05. isLoadEndMoreGone                | LoadMoreModuleBase加载更多是否隐藏                                                                                                                                                                                                                       |
-| 119  | 06. hasLoadMoreView                  | LoadMoreModuleBase是否存在加载更多视图                                                                                                                                                                                                                   |
-| 120  | 07. setOnLoadMoreListener            | LoadMoreModuleBase设置加载更多监听器                                                                                                                                                                                                                     |
-| 121  | 08. enableLoadMoreEndClick           | LoadMoreModuleBase是否启用加载更多结束点击                                                                                                                                                                                                               |
-| 122  | 09. isAutoLoadMore                   | LoadMoreModuleBase是否自动加载更多                                                                                                                                                                                                                       |
-| 123  | 10.preLoadNumber                     | LoadMoreModuleBase预加载数量                                                                                                                                                                                                                            |
-| 124  | 11.isEnableLoadMoreIfNotFullPage     | LoadMoreModuleBase数据不满一屏是否继续自动加载更多                                                                                                                                                                                                        |
-| 125  | 12.checkDisableLoadMoreIfNotFullPage | LoadMoreModuleBase如果不能满页，取消加载更多                                                                                                                                                                                                             |
-| 126  | 13.loadMoreFail                      | LoadMoreModuleBase加载更多失败处理                                                                                                                                                                                                                       |
-| 127  | 14.loadMoreComplete                  | LoadMoreModuleBase加载更多完成处理                                                                                                                                                                                                                       |
-| 128  | 15.loadMoreEnd                       | LoadMoreModuleBase加载更多结束处理，最后一页                                                                                                                                                                                                             |
-| 129  | 01. setOnUpFetchListener             | UpFetchModuleBase设置向上加载监听器                                                                                                                                                                                                                      |
-| 130  | 02. isUpFetchEnable                  | UpFetchModuleBase是否能够向上加载                                                                                                                                                                                                                        |
-| 131  | 03. isUpFetching                     | UpFetchModuleBase是否正在向上加载                                                                                                                                                                                                                        |
-| 132  | 04. startUpFetchPosition             | UpFetchModuleBase开始向上加载位置                                                                                                                                                                                                                        |
-| 133  | 01. toggleViewId                     | DraggableModuleBase切换视图ID                                                                                                                                                                                                                           |
-| 134  | 02. hasToggleView                    | DraggableModuleBase是否具有切换视图                                                                                                                                                                                                                      |
-| 135  | 03. isDragEnabled                    | DraggableModuleBase设置是否可拖拽                                                                                                                                                                                                                        |
-| 136  | 04. isDragOnLongPressEnabled         | DraggableModuleBase切换长按拖拽状态                                                                                                                                                                                                                      |
-| 137  | 05. setOnItemDragListener            | DraggableModuleBase设置条目拖拽监听器                                                                                                                                                                                                                    |
-| 138  | 06. isSwipeEnabled                   | DraggableModuleBase设置是否可侧滑                                                                                                                                                                                                                        |
-| 139  | 07. setOnItemSwipeListener           | DraggableModuleBase设置条目侧滑监听器                                                                                                                                                                                                                    |
+| 序号 | 方法                                  | 功能（RecyclerView可嵌套：setHasFixedSize(true)、layoutManager、adapter、addItemDecoration）                                                                                                                                                              |
+|:-----|:--------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 001  | 01. data                              | BaseAdapterQuick需要适配的数据                                                                                                                                                                                                                           |
+| 002  | 02. loadMoreModule                    | BaseAdapterQuick加载更多模块，需继承LoadMoreModule                                                                                                                                                                                                       |
+| 003  | 03. upFetchModule                     | BaseAdapterQuick向上加载模块，需继承UpFetchModule                                                                                                                                                                                                        |
+| 004  | 04. draggableModule                   | BaseAdapterQuick拖拽模块，需继承DraggableModule                                                                                                                                                                                                          |
+| 005  | 05. convert                           | BaseAdapterQuick适配器必须实现，用Diff时必须实现带payloads方法                                                                                                                                                                                            |
+| 006  | 06. onCreateDefViewHolder             | BaseAdapterQuick实现自定义VH                                                                                                                                                                                                                            |
+| 007  | 07. headerLayoutCount                 | BaseAdapterQuick头布局计数                                                                                                                                                                                                                              |
+| 008  | 08. getItem                           | BaseAdapterQuick获取data中数据项                                                                                                                                                                                                                        |
+| 009  | 09. getItemOrNull                     | BaseAdapterQuick获取data中数据项，可为空                                                                                                                                                                                                                 |
+| 010  | 10. getItemPosition                   | BaseAdapterQuick获取data中数据项位置                                                                                                                                                                                                                     |
+| 011  | 11. animationEnable                   | BaseAdapterQuick动画设置启用                                                                                                                                                                                                                            |
+| 012  | 12. adapterAnimation                  | BaseAdapterQuick动画自定义赋值                                                                                                                                                                                                                           |
+| 013  | 13. setAnimationWithDefault           | BaseAdapterQuick动画设置默认类型                                                                                                                                                                                                                         |
+| 014  | 14. isAnimationFirstOnly              | BaseAdapterQuick动画是否仅首次运行，改变后适配器notifyDataSetChanged()                                                                                                                                                                                    |
+| 015  | 15. recyclerView                      | BaseAdapterQuick回收视图赋值                                                                                                                                                                                                                            |
+| 016  | 16. headerViewAsFlow                  | BaseAdapterQuick为true页眉排列方式与普通项目视图相同，仅GridLayoutManager时有效忽略跨距大小                                                                                                                                                                |
+| 017  | 17. footerViewAsFlow                  | BaseAdapterQuick为true页脚排列方式与普通项目视图相同，仅GridLayoutManager时有效忽略跨距大小                                                                                                                                                                |
+| 018  | 18. isUseEmpty                        | BaseAdapterQuick是否使用空布局                                                                                                                                                                                                                           |
+| 019  | 19. hasEmptyView                      | BaseAdapterQuick是否存在空布局                                                                                                                                                                                                                           |
+| 020  | 20. headerWithEmptyEnable             | BaseAdapterQuick当显示空布局时，是否显示Header                                                                                                                                                                                                           |
+| 021  | 21. footerWithEmptyEnable             | BaseAdapterQuick当显示空布局时，是否显示Foot                                                                                                                                                                                                             |
+| 022  | 22. hasHeaderLayout                   | BaseAdapterQuick是否存在头布局                                                                                                                                                                                                                           |
+| 023  | 23. hasFooterLayout                   | BaseAdapterQuick是否存在脚布局                                                                                                                                                                                                                           |
+| 024  | 24. footerLayoutCount                 | BaseAdapterQuick脚布局计数                                                                                                                                                                                                                              |
+| 025  | 25. getItemCount                      | BaseAdapterQuick获取项计数                                                                                                                                                                                                                              |
+| 026  | 26. getDefItemCount                   | BaseAdapterQuick获取自定义项计数                                                                                                                                                                                                                         |
+| 027  | 27. getItemId                         | BaseAdapterQuick获取项ID                                                                                                                                                                                                                                |
+| 028  | 28. getItemViewType                   | BaseAdapterQuick获取项视图类型                                                                                                                                                                                                                           |
+| 029  | 29. getDefItemViewType                | BaseAdapterQuick获取自定义项视图类型                                                                                                                                                                                                                     |
+| 030  | 30. setGridSpanSizeLookup             | BaseAdapterQuick设置网格大小                                                                                                                                                                                                                            |
+| 031  | 31. onItemClickListener               | BaseAdapterQuick控件点击监听器                                                                                                                                                                                                                           |
+| 032  | 32. setOnItemClickListener            | BaseAdapterQuick控件点击监听器设置                                                                                                                                                                                                                       |
+| 033  | 33. onItemLongClickListener           | BaseAdapterQuick控件长按监听器                                                                                                                                                                                                                           |
+| 034  | 34. setOnItemLongClickListener        | BaseAdapterQuick控件长按监听器设置                                                                                                                                                                                                                       |
+| 035  | 35. onItemChildClickListener          | BaseAdapterQuick子控件点击监听器                                                                                                                                                                                                                         |
+| 036  | 36. setOnItemChildClickListener       | BaseAdapterQuick子控件点击监听器设置                                                                                                                                                                                                                     |
+| 037  | 37. onItemChildLongClickListener      | BaseAdapterQuick子控件长按监听器                                                                                                                                                                                                                         |
+| 038  | 38. setOnItemChildLongClickListener   | BaseAdapterQuick子控件长按监听器设置                                                                                                                                                                                                                     |
+| 039  | 39. childClickViewIds                 | BaseAdapterQuick可点击子控件ID列表                                                                                                                                                                                                                       |
+| 040  | 40. addChildClickViewIds              | BaseAdapterQuick必须先添加可点击子控件ID                                                                                                                                                                                                                 |
+| 041  | 41. childLongClickViewIds             | BaseAdapterQuick可长按子控件ID列表                                                                                                                                                                                                                       |
+| 042  | 42. addChildLongClickViewIds          | BaseAdapterQuick必须先添加可长按子控件ID                                                                                                                                                                                                                 |
+| 043  | 43. headerLayout                      | BaseAdapterQuick获取头布局                                                                                                                                                                                                                              |
+| 044  | 44. setHeaderView                     | BaseAdapterQuick设置空布局layoutInflater.inflate(R.layout.empty_view, recyclerView, false)                                                                                                                                                              |
+| 045  | 45. headerViewPosition                | BaseAdapterQuick头布局位置                                                                                                                                                                                                                              |
+| 046  | 46. addHeaderView                     | BaseAdapterQuick添加头布局layoutInflater.inflate(R.layout.head_view, recyclerView, false)                                                                                                                                                               |
+| 047  | 47. removeHeaderView                  | BaseAdapterQuick移除头布局                                                                                                                                                                                                                              |
+| 048  | 48. removeAllHeaderView               | BaseAdapterQuick移除所有头布局                                                                                                                                                                                                                           |
+| 049  | 49. footerLayout                      | BaseAdapterQuick获取脚布局                                                                                                                                                                                                                              |
+| 050  | 50. setFooterView                     | BaseAdapterQuick设置脚布局                                                                                                                                                                                                                              |
+| 051  | 51. footerViewPosition                | BaseAdapterQuick脚布局位置                                                                                                                                                                                                                              |
+| 052  | 52. addFooterView                     | BaseAdapterQuick添加脚布局layoutInflater.inflate(R.layout.footer_view, recyclerView, false)                                                                                                                                                             |
+| 053  | 53. removeFooterView                  | BaseAdapterQuick移除脚布局                                                                                                                                                                                                                              |
+| 054  | 54. removeAllFooterView               | BaseAdapterQuick移除所有脚布局                                                                                                                                                                                                                           |
+| 055  | 55. emptyLayout                       | BaseAdapterQuick获取空布局                                                                                                                                                                                                                              |
+| 056  | 56. setEmptyView                      | BaseAdapterQuick设置空布局                                                                                                                                                                                                                              |
+| 057  | 57. removeEmptyView                   | BaseAdapterQuick移除空布局                                                                                                                                                                                                                              |
+| 058  | 58. setDiffCallback                   | BaseAdapterQuick设置Diff回调生成Diff配置，setDiffNewData之前使用                                                                                                                                                                                         |
+| 059  | 59. differ                            | BaseAdapterQuick获取Diff                                                                                                                                                                                                                                |
+| 060  | 60. setDiffConfig                     | BaseAdapterQuick设置Diff配置，setDiffNewData之前使用                                                                                                                                                                                                     |
+| 061  | 61. setDiffNewData                    | BaseAdapterQuick设置新实例用Diff或DiffResult（差异更新），先setDiffCallback或setDiffConfig                                                                                                                                                                |
+| 062  | 62. setNewInstance                    | BaseAdapterQuick设置新实例                                                                                                                                                                                                                              |
+| 063  | 63. setList                           | BaseAdapterQuick设置新data数据                                                                                                                                                                                                                          |
+| 064  | 64. setData                           | BaseAdapterQuick改变指定位置data数据                                                                                                                                                                                                                     |
+| 065  | 65. addData                           | BaseAdapterQuick添加指定或不指定位置单条或批量data数据                                                                                                                                                                                                    |
+| 066  | 66. removeAt                          | BaseAdapterQuick删除data数据根据指定位置                                                                                                                                                                                                                 |
+| 067  | 67. remove                            | BaseAdapterQuick删除data数据根据指定数据                                                                                                                                                                                                                 |
+| 068  | 01. getItemBinder                     | BaseAdapterBinder获取已添加Binder，无则异常                                                                                                                                                                                                              |
+| 069  | 02. addItemBinder                     | BaseAdapterBinder添加Binder可附加DiffUtil.ItemCallback实现convert：ItemBinderBase实现onCreateViewHolder、ItemBinderQuick实现getLayoutId、ItemBinderView实现onCreateViewBinding、ItemBinderData实现onCreateDataBinding（convert内executePendingBindings()） |
+| 070  | 03. getItemBinderOrNull               | BaseAdapterBinder获取已添加Binder，无则null                                                                                                                                                                                                              |
+| 071  | 01. typeMultiDelegate                 | BaseAdapterMultiDelegate实现BaseTypeMultiDelegate赋值：getItemType指定位置对应指定项类型列表项类型，addItemType添加指定项类型和对应布局；convert内根据指定项类型匹配VH的itemViewType，自动选择布局，设置布局内控件数据，实现EntityMultiItem包含项类型和控件数据   |
+| 072  | 01. getItemType                       | BaseAdapterMultiProvider根据位置指定不同项类型，数据类包含各种项类型                                                                                                                                                                                       |
+| 073  | 02. getItemProvider                   | BaseAdapterMultiProvider获取已添加BaseProviderItem                                                                                                                                                                                                      |
+| 074  | 03. addItemProvider                   | BaseAdapterMultiProvider添加自定义BaseProviderItem：layoutId设置布局；itemViewType设置项类型；convert适配器必须实现，用Diff时必须实现带payloads方法                                                                                                         |
+| 075  | 01. addFooterNodeProvider             | BaseAdapterNode添加铺满一行或一列脚部NodeProvider                                                                                                                                                                                                        |
+| 076  | 02. addFullSpanNodeProvider           | BaseAdapterNode添加需要铺满NodeProvider                                                                                                                                                                                                                 |
+| 077  | 03. addNodeProvider                   | BaseAdapterNode添加NodeProvider                                                                                                                                                                                                                         |
+| 078  | 04. addItemProvider                   | BaseAdapterNode添加自定义BaseProviderItem                                                                                                                                                                                                               |
+| 079  | 05. setDiffNewData                    | BaseAdapterNode一级节点设置新实例用Diff或DiffResult（差异更新），先setDiffCallback或setDiffConfig                                                                                                                                                         |
+| 080  | 06. setNewInstance                    | BaseAdapterNode一级节点设置新实例                                                                                                                                                                                                                        |
+| 081  | 07. setList                           | BaseAdapterNode一级节点设置新data数据                                                                                                                                                                                                                    |
+| 082  | 08. addData                           | BaseAdapterNode一级节点添加指定或不指定位置单条或批量data数据                                                                                                                                                                                              |
+| 083  | 09. setData                           | BaseAdapterNode一级节点改变指定位置data数据                                                                                                                                                                                                              |
+| 084  | 10. removeAt                          | BaseAdapterNode一级节点删除data数据根据指定位置                                                                                                                                                                                                           |
+| 085  | 11. nodeAddData                       | BaseAdapterNode添加父节点下子节点或子节点集合，可指定位置                                                                                                                                                                                                  |
+| 086  | 12. nodeRemoveData                    | BaseAdapterNode移除父节点下子节点，可指定位置                                                                                                                                                                                                             |
+| 087  | 13. nodeSetData                       | BaseAdapterNode替换父节点下指定位置子节点数据                                                                                                                                                                                                             |
+| 088  | 14. nodeReplaceChildData              | BaseAdapterNode替换父节点下子节点集合                                                                                                                                                                                                                    |
+| 089  | 15. collapse                          | BaseAdapterNode收起本节点                                                                                                                                                                                                                               |
+| 090  | 16. expand                            | BaseAdapterNode展开本节点                                                                                                                                                                                                                               |
+| 091  | 17. expandOrCollapse                  | BaseAdapterNode切换收起展开本节点                                                                                                                                                                                                                        |
+| 092  | 18. collapseAndChild                  | BaseAdapterNode收起本节点和子节点                                                                                                                                                                                                                        |
+| 093  | 19. expandAndChild                    | BaseAdapterNode展开本节点和子节点                                                                                                                                                                                                                        |
+| 094  | 20. expandAndCollapseOther            | BaseAdapterNode切换收起展开本节点和子节点                                                                                                                                                                                                                |
+| 095  | 21. findParentNode                    | BaseAdapterNode查找父节点                                                                                                                                                                                                                               |
+| 096  | 01. addItemType                       | BaseAdapterMultiQuick添加指定类型和对应布局，直接添加无需Delegate添加也无需Binder添加                                                                                                                                                                      |
+| 097  | 01. setNormalLayout                   | BaseAdapterSectionQuick如果item不是多布局，此方法快速设置item layout；如果需要多布局item用addItemType                                                                                                                                                      |
+| 098  | 02. convertHeader                     | BaseAdapterSectionQuick数据项实现EntitySection，convertHeader和convert共用，根据isHeader配置不同数据                                                                                                                                                      |
+| 099  | 01. getView                           | ViewHolderBase根据ID从数组获取控件，LoadMoreViewBase需用，LayoutInflater.from(parent.context).inflate(R.layout.view_load_more, parent, false)                                                                                                            |
+| 100  | 02. getViewOrNull                     | ViewHolderBase根据ID从数组获取控件，无则放入数组                                                                                                                                                                                                          |
+| 101  | 03. findView                          | ViewHolderBase根据ID获取控件                                                                                                                                                                                                                            |
+| 102  | 04. setText                           | ViewHolderBase设置控件文本                                                                                                                                                                                                                              |
+| 103  | 05. setTextRes                        | ViewHolderBase设置控件文本资源                                                                                                                                                                                                                           |
+| 104  | 06. setTextColor                      | ViewHolderBase设置控件颜色                                                                                                                                                                                                                              |
+| 105  | 07. setTextColorRes                   | ViewHolderBase设置控件颜色资源                                                                                                                                                                                                                           |
+| 106  | 08. setImageResource                  | ViewHolderBase设置控件资源                                                                                                                                                                                                                              |
+| 107  | 09. setImageDrawable                  | ViewHolderBase设置控件Drawable                                                                                                                                                                                                                          |
+| 108  | 10. setImageBitmap                    | ViewHolderBase设置控件Bitmap                                                                                                                                                                                                                            |
+| 109  | 11. setBackgroundColor                | ViewHolderBase设置控件背景颜色                                                                                                                                                                                                                           |
+| 110  | 12. setBackgroundResource             | ViewHolderBase设置控件背景资源                                                                                                                                                                                                                           |
+| 111  | 13. setVisible                        | ViewHolderBase设置控件可见性，INVISIBLE占位不可见                                                                                                                                                                                                        |
+| 112  | 14. setGone                           | ViewHolderBase设置控件隐藏性，GONE隐藏不可见                                                                                                                                                                                                             |
+| 113  | 15. setEnabled                        | ViewHolderBase设置控件可用性                                                                                                                                                                                                                             |
+| 114  | 01. loadMoreView                      | LoadMoreModuleBase重设加载更多视图                                                                                                                                                                                                                       |
+| 115  | 02. loadMoreStatus                    | LoadMoreModuleBase加载更多状态：正在加载、完成、失败、结束                                                                                                                                                                                                |
+| 116  | 03. isLoading                         | LoadMoreModuleBase获取是否正在加载                                                                                                                                                                                                                       |
+| 117  | 04. isEnableLoadMore                  | LoadMoreModuleBase是否能够加载更多，临时false防止下拉刷新同时上拉加载                                                                                                                                                                                      |
+| 118  | 05. isLoadEndMoreGone                 | LoadMoreModuleBase加载更多是否隐藏                                                                                                                                                                                                                       |
+| 119  | 06. hasLoadMoreView                   | LoadMoreModuleBase是否存在加载更多视图                                                                                                                                                                                                                   |
+| 120  | 07. setOnLoadMoreListener             | LoadMoreModuleBase设置加载更多监听器                                                                                                                                                                                                                     |
+| 121  | 08. enableLoadMoreEndClick            | LoadMoreModuleBase是否启用加载更多结束点击                                                                                                                                                                                                               |
+| 122  | 09. isAutoLoadMore                    | LoadMoreModuleBase是否自动加载更多                                                                                                                                                                                                                       |
+| 123  | 10. preLoadNumber                     | LoadMoreModuleBase预加载数量                                                                                                                                                                                                                            |
+| 124  | 11. isEnableLoadMoreIfNotFullPage     | LoadMoreModuleBase数据不满一屏是否继续自动加载更多                                                                                                                                                                                                        |
+| 125  | 12. checkDisableLoadMoreIfNotFullPage | LoadMoreModuleBase如果不能满页，取消加载更多                                                                                                                                                                                                             |
+| 126  | 13. loadMoreFail                      | LoadMoreModuleBase加载更多失败处理                                                                                                                                                                                                                       |
+| 127  | 14. loadMoreComplete                  | LoadMoreModuleBase加载更多完成处理                                                                                                                                                                                                                       |
+| 128  | 15. loadMoreEnd                       | LoadMoreModuleBase加载更多结束处理，最后一页                                                                                                                                                                                                             |
+| 129  | 01. setOnUpFetchListener              | UpFetchModuleBase设置向上加载监听器                                                                                                                                                                                                                      |
+| 130  | 02. isUpFetchEnable                   | UpFetchModuleBase是否能够向上加载                                                                                                                                                                                                                        |
+| 131  | 03. isUpFetching                      | UpFetchModuleBase是否正在向上加载                                                                                                                                                                                                                        |
+| 132  | 04. startUpFetchPosition              | UpFetchModuleBase开始向上加载位置                                                                                                                                                                                                                        |
+| 133  | 01. toggleViewId                      | DraggableModuleBase切换视图ID                                                                                                                                                                                                                           |
+| 134  | 02. hasToggleView                     | DraggableModuleBase是否具有切换视图                                                                                                                                                                                                                      |
+| 135  | 03. isDragEnabled                     | DraggableModuleBase设置是否可拖拽                                                                                                                                                                                                                        |
+| 136  | 04. isDragOnLongPressEnabled          | DraggableModuleBase切换长按拖拽状态                                                                                                                                                                                                                      |
+| 137  | 05. setOnItemDragListener             | DraggableModuleBase设置条目拖拽监听器                                                                                                                                                                                                                    |
+| 138  | 06. isSwipeEnabled                    | DraggableModuleBase设置是否可侧滑                                                                                                                                                                                                                        |
+| 139  | 07. setOnItemSwipeListener            | DraggableModuleBase设置条目侧滑监听器                                                                                                                                                                                                                    |
 
 ```xml
     <data>
@@ -889,6 +888,7 @@
     }//Node展开收起箭头方向动画改变
 ```
 
+>- layout:recycler_load_more.xml
 >- drawable:recycler_loading_progress.xml
 >- mipmap:recycler_loading.png
 >- mipmap备用
@@ -900,7 +900,6 @@
 >>5. icon_arrow_r.png
 >>6. icon_arrow_b.png
 >
->- layout:recycler_load_more.xml
 >- values:ids.xml
 >
 >>1. strings:CN
@@ -908,143 +907,143 @@
 
 ## **附1.原生Layouts布局（行、列、格、面）**
 
-| 序号 | 布局                               | 功能                        |
-|:-----|:-----------------------------------|:---------------------------|
-| 001  | ### *001.ConstraintLayout*         | A约束布局                  |
-| 002  | ### *002.Guideline(horizontal)*    | A水平引导线                |
-| 003  | ### *003.Guideline(vertical)*      | A垂直引导线                |
-| 004  | ### *004.LinearLayout(horizontal)* | B水平线性布局               |
-| 005  | ### *005.LinearLayout(vertical)*   | B垂直线性布局               |
-| 006  | ### *006.FrameLayout*              | C帧布局                    |
-| 007  | ### *007.TableLayout*              | D表格布局                  |
-| 008  | ### *008.TableRow*                 | D表格行                    |
-| 009  | ### *009.Space*                    | E空白                      |
-| 010  | ### *010.RelativeLayout*           | 淘汰：相对布局（遗留）      |
-| 011  | ### *011.CoordinatorLayout*        | 淘汰：协调布局，增强型帧布局 |
-| 012  | ### *012.GridLayout*               | 淘汰：网格布局（遗留）      |
-| 013  | ### *013.AbsoluteLayout*           | 淘汰：绝对布局              |
+| 序号 | 布局                           | 功能                        |
+|:-----|:-------------------------------|:---------------------------|
+| 001  | *001.ConstraintLayout*         | A约束布局                  |
+| 002  | *002.Guideline(horizontal)*    | A水平引导线                |
+| 003  | *003.Guideline(vertical)*      | A垂直引导线                |
+| 004  | *004.LinearLayout(horizontal)* | B水平线性布局               |
+| 005  | *005.LinearLayout(vertical)*   | B垂直线性布局               |
+| 006  | *006.FrameLayout*              | C帧布局                    |
+| 007  | *007.TableLayout*              | D表格布局                  |
+| 008  | *008.TableRow*                 | D表格行                    |
+| 009  | *009.Space*                    | E空白                      |
+| 010  | *010.RelativeLayout*           | 淘汰：相对布局（遗留）      |
+| 011  | *011.CoordinatorLayout*        | 淘汰：协调布局，增强型帧布局 |
+| 012  | *012.GridLayout*               | 淘汰：网格布局（遗留）      |
+| 013  | *013.AbsoluteLayout*           | 淘汰：绝对布局              |
 
 ## **附2.原生Containers容器（条目、栏目、页目）**
 
-| 序号 | 容器                           | 功能                                               |
-|:-----|:-------------------------------|:--------------------------------------------------|
-| 001  | ### *001.Spinner*              | A下拉列表                                          |
-| 002  | ### *002.RecyclerView*         | B回收视图，取代列表视图：032自制BaseAdapterQuick等等 |
-| 003  | ### *003.ScrollView*           | B滚动视图                                          |
-| 004  | ### *004.HorizontalScrollView* | B水平滚动视图                                      |
-| 005  | ### *005.NestedScrollView*     | B嵌套滚动视图，兼容新控件                           |
-| 006  | ### *006.ViewPager2*           | C视图寻呼机：030自制Banner                          |
-| 007  | ### *007.GardView*             | D卡牌视图：018自制CardStackView                    |
-| 008  | ### *008.AppBarLayout*         | E应用程序栏布局，垂直线性布局支持滚动手势            |
-| 009  | ### *009.BottomAppBar*         | E底部工具栏                                        |
-| 010  | ### *010.NavigationView*       | E导航视图：029自制SideBar                          |
-| 011  | ### *011.BottomNavigationView* | E底部导航视图                                      |
-| 012  | ### *012.Toolbar*              | E导航栏，取代Actionbar：002自制Title                |
-| 013  | ### *013.TabLayout*            | F标签布局：031自制LayoutTab和LayoutLabel            |
-| 014  | ### *014.TabItem*              | F标签项                                            |
-| 015  | ### *015.ViewStub*             | G占位视图                                          |
-| 016  | ### *016.\<include\>*          | G引用布局                                          |
-| 017  | ### *017.\<fragment\>*         | G片段                                              |
-| 018  | ### *018.\<view\>*             | G视图                                              |
-| 019  | ### *019.\<requestFocus\>*     | G指定焦点视图                                      |
-| 020  | ### *020.ListView*             | 淘汰：列表视图（遗留）                              |
-| 021  | ### *021.ExpandableListView*   | 淘汰：可展开列表视图                                |
-| 022  | ### *022.GridView*             | 淘汰：网格视图（遗留）                              |
-| 023  | ### *023.ActionBar*            | 淘汰：操作条                                       |
-| 024  | ### *024.Tabs*                 | 淘汰：标签组                                       |
-| 025  | ### *025.TabHost*              | 淘汰：标签栏（遗留）                                |
-| 026  | ### *026.StackView*            | 淘汰：堆叠视图                                     |
-| 027  | ### *027.ViewAnimator*         | 淘汰：视图动画                                     |
-| 028  | ### *028.TextSwitcher*         | 淘汰：文本切换器                                    |
-| 029  | ### *029.ImageSwitcher*        | 淘汰：图片切换器                                    |
-| 030  | ### *030.ViewSwitcher*         | 淘汰：视图切换器                                    |
-| 031  | ### *031.ViewFlipper*          | 淘汰：视图翻转器                                    |
-| 032  | ### *032.AdapterViewFlipper*   | 淘汰：适配器视图翻转器                              |
+| 序号 | 容器                       | 功能                                               |
+|:-----|:---------------------------|:--------------------------------------------------|
+| 001  | *001.Spinner*              | A下拉列表                                          |
+| 002  | *002.RecyclerView*         | B回收视图，取代列表视图：032自制BaseAdapterQuick等等 |
+| 003  | *003.ScrollView*           | B滚动视图                                          |
+| 004  | *004.HorizontalScrollView* | B水平滚动视图                                      |
+| 005  | *005.NestedScrollView*     | B嵌套滚动视图，兼容新控件                           |
+| 006  | *006.ViewPager2*           | C视图寻呼机：030自制Banner                          |
+| 007  | *007.GardView*             | D卡牌视图：018自制CardStackView                    |
+| 008  | *008.AppBarLayout*         | E应用程序栏布局，垂直线性布局支持滚动手势            |
+| 009  | *009.BottomAppBar*         | E底部工具栏                                        |
+| 010  | *010.NavigationView*       | E导航视图：029自制SideBar                          |
+| 011  | *011.BottomNavigationView* | E底部导航视图                                      |
+| 012  | *012.Toolbar*              | E导航栏，取代Actionbar：002自制Title                |
+| 013  | *013.TabLayout*            | F标签布局：031自制LayoutTab和LayoutLabel            |
+| 014  | *014.TabItem*              | F标签项                                            |
+| 015  | *015.ViewStub*             | G占位视图                                          |
+| 016  | *016.\<include\>*          | G引用布局                                          |
+| 017  | *017.\<fragment\>*         | G片段                                              |
+| 018  | *018.\<view\>*             | G视图                                              |
+| 019  | *019.\<requestFocus\>*     | G指定焦点视图                                      |
+| 020  | *020.ListView*             | 淘汰：列表视图（遗留）                              |
+| 021  | *021.ExpandableListView*   | 淘汰：可展开列表视图                                |
+| 022  | *022.GridView*             | 淘汰：网格视图（遗留）                              |
+| 023  | *023.ActionBar*            | 淘汰：操作条                                       |
+| 024  | *024.Tabs*                 | 淘汰：标签组                                       |
+| 025  | *025.TabHost*              | 淘汰：标签栏（遗留）                                |
+| 026  | *026.StackView*            | 淘汰：堆叠视图                                     |
+| 027  | *027.ViewAnimator*         | 淘汰：视图动画                                     |
+| 028  | *028.TextSwitcher*         | 淘汰：文本切换器                                    |
+| 029  | *029.ImageSwitcher*        | 淘汰：图片切换器                                    |
+| 030  | *030.ViewSwitcher*         | 淘汰：视图切换器                                    |
+| 031  | *031.ViewFlipper*          | 淘汰：视图翻转器                                    |
+| 032  | *032.AdapterViewFlipper*   | 淘汰：适配器视图翻转器                              |
 
 ## **附3.原生Widgets组件（通用、图片、条框）**
 
-| 序号 | 组件                              | 功能                                                                                                                      |
-|:-----|:----------------------------------|:--------------------------------------------------------------------------------------------------------------------------|
-| 001  | ### *001.View*                    | A视图：020自制CobwebView、021自制NetSpeedView、022自制SeatAirplane、023自制SeatMovie                                        |
-| 002  | ### *002.ImageView*               | A图片视图：014自制AutoImageView、015自制PinView、016自制Captcha、017自制SwipeCaptcha、017自制ScratchCard、027自制HeartLayout |
-| 003  | ### *003.WebView*                 | A网页视图                                                                                                                 |
-| 004  | ### *004.VideoView*               | A视频视图                                                                                                                 |
-| 005  | ### *005.CalendarView*            | A日历视图                                                                                                                 |
-| 006  | ### *006.ProgressBar*             | B进度条：009自制ProgressRound                                                                                             |
-| 007  | ### *007.ProgressBar(Horizontal)* | B水平进度条：008自制ProgressBar、028自制WaveView                                                                           |
-| 008  | ### *008.SeekBar*                 | B拖动条：007自制SeekBar                                                                                                   |
-| 009  | ### *009.SeekBar(Discrete)*       | B分离拖动条：024自制RulerWheelView                                                                                         |
-| 010  | ### *010.RatingBar*               | B星级评分条                                                                                                               |
-| 011  | ### *011.SearchView*              | B搜索视图                                                                                                                 |
-| 012  | ### *012.TextureView*             | C结构视图                                                                                                                 |
-| 013  | ### *013.SurfaceView*             | C表面视图                                                                                                                 |
-| 014  | ### *014.Horizontal Divider*      | D水平分隔条：001自制Divider                                                                                                |
-| 015  | ### *015.Vertical Divider*        | D垂直分隔条：001自制Divider                                                                                                |
-| 016  | ### *016.AnalogClock*             | 淘汰：模拟时钟                                                                                                             |
-| 017  | ### *017.TextClock*               | 淘汰：文本时钟                                                                                                             |
-| 018  | ### *018.Chronometer*             | 淘汰：计时器                                                                                                              |
-| 019  | ### *019.TimePicker*              | 淘汰：时间选择器                                                                                                           |
-| 020  | ### *020.DatePicker*              | 淘汰：日期选择器                                                                                                           |
-| 021  | ### *021.NumberPicker*            | 淘汰：数字选择器                                                                                                           |
-| 022  | ### *022.ZoomButton*              | 淘汰：缩放按钮                                                                                                             |
-| 023  | ### *023.ZoomControls*            | 淘汰：缩放控制                                                                                                             |
-| 024  | ### *024.QuickContactBadge*       | 淘汰：快捷联系人标识                                                                                                       |
-| 025  | ### *025.AdView*                  | 淘汰：广告视图                                                                                                             |
-| 026  | ### *026.MapView*                 | 淘汰：地图视图                                                                                                             |
-| 027  | ### *027.MapFragment*             | 淘汰：地图片段                                                                                                             |
+| 序号 | 组件                          | 功能                                                                                                                      |
+|:-----|:------------------------------|:--------------------------------------------------------------------------------------------------------------------------|
+| 001  | *001.View*                    | A视图：020自制CobwebView、021自制NetSpeedView、022自制SeatAirplane、023自制SeatMovie                                        |
+| 002  | *002.ImageView*               | A图片视图：014自制AutoImageView、015自制PinView、016自制Captcha、017自制SwipeCaptcha、017自制ScratchCard、027自制HeartLayout |
+| 003  | *003.WebView*                 | A网页视图                                                                                                                 |
+| 004  | *004.VideoView*               | A视频视图                                                                                                                 |
+| 005  | *005.CalendarView*            | A日历视图                                                                                                                 |
+| 006  | *006.ProgressBar*             | B进度条：009自制ProgressRound                                                                                             |
+| 007  | *007.ProgressBar(Horizontal)* | B水平进度条：008自制ProgressBar、028自制WaveView                                                                           |
+| 008  | *008.SeekBar*                 | B拖动条：007自制SeekBar                                                                                                   |
+| 009  | *009.SeekBar(Discrete)*       | B分离拖动条：024自制RulerWheelView                                                                                         |
+| 010  | *010.RatingBar*               | B星级评分条                                                                                                               |
+| 011  | *011.SearchView*              | B搜索视图                                                                                                                 |
+| 012  | *012.TextureView*             | C结构视图                                                                                                                 |
+| 013  | *013.SurfaceView*             | C表面视图                                                                                                                 |
+| 014  | *014.Horizontal Divider*      | D水平分隔条：001自制Divider                                                                                                |
+| 015  | *015.Vertical Divider*        | D垂直分隔条：001自制Divider                                                                                                |
+| 016  | *016.AnalogClock*             | 淘汰：模拟时钟                                                                                                             |
+| 017  | *017.TextClock*               | 淘汰：文本时钟                                                                                                             |
+| 018  | *018.Chronometer*             | 淘汰：计时器                                                                                                              |
+| 019  | *019.TimePicker*              | 淘汰：时间选择器                                                                                                           |
+| 020  | *020.DatePicker*              | 淘汰：日期选择器                                                                                                           |
+| 021  | *021.NumberPicker*            | 淘汰：数字选择器                                                                                                           |
+| 022  | *022.ZoomButton*              | 淘汰：缩放按钮                                                                                                             |
+| 023  | *023.ZoomControls*            | 淘汰：缩放控制                                                                                                             |
+| 024  | *024.QuickContactBadge*       | 淘汰：快捷联系人标识                                                                                                       |
+| 025  | *025.AdView*                  | 淘汰：广告视图                                                                                                             |
+| 026  | *026.MapView*                 | 淘汰：地图视图                                                                                                             |
+| 027  | *027.MapFragment*             | 淘汰：地图片段                                                                                                             |
 
 ## **附4.原生Buttons按钮（执行、选择）**
 
-| 序号 | 按钮                           | 功能                                            |
-|:-----|:-------------------------------|:-----------------------------------------------|
-| 001  | ### *001.Button*               | A按钮                                           |
-| 002  | ### *002.ImageButton*          | A图片按钮：025自制ShoppingView、026自制ShineView |
-| 003  | ### *003.CheckBox*             | B复选框                                         |
-| 004  | ### *004.ChipGroup*            | B流式布局标签组                                 |
-| 005  | ### *005.Chip*                 | B流式布局标签                                   |
-| 006  | ### *006.RadioGroup*           | B单选框组                                       |
-| 007  | ### *007.RadioButton*          | B单选按钮                                       |
-| 008  | ### *008.ToggleButton*         | C切换按钮                                       |
-| 009  | ### *009.Switch*               | C开关                                           |
-| 010  | ### *010.FloatingActionButton* | C浮动操作按钮                                   |
+| 序号 | 按钮                       | 功能                                            |
+|:-----|:---------------------------|:-----------------------------------------------|
+| 001  | *001.Button*               | A按钮                                           |
+| 002  | *002.ImageButton*          | A图片按钮：025自制ShoppingView、026自制ShineView |
+| 003  | *003.CheckBox*             | B复选框                                         |
+| 004  | *004.ChipGroup*            | B流式布局标签组                                 |
+| 005  | *005.Chip*                 | B流式布局标签                                   |
+| 006  | *006.RadioGroup*           | B单选框组                                       |
+| 007  | *007.RadioButton*          | B单选按钮                                       |
+| 008  | *008.ToggleButton*         | C切换按钮                                       |
+| 009  | *009.Switch*               | C开关                                           |
+| 010  | *010.FloatingActionButton* | C浮动操作按钮                                   |
 
 ## **附5.原生Text文本（显示、输入）**
 
-| 序号 | 文本                                | 功能                                                                                                   |
-|:-----|:------------------------------------|:------------------------------------------------------------------------------------------------------|
-| 001  | ### *001.TextView*                  | A文本视图：010自制RunTextView、011自制TextAutoZoom、012自制TextViewVertical、013自制TextViewVerticalMore |
-| 002  | ### *002.Plain Text*                | B输入普通文本                                                                                          |
-| 003  | ### *003.Password*                  | B输入任意字符密码                                                                                       |
-| 004  | ### *004.Password(Numeric)*         | B输入数字密码                                                                                          |
-| 005  | ### *005.E-mail*                    | B输入邮箱地址                                                                                          |
-| 006  | ### *006.Phone*                     | B输入电话                                                                                              |
-| 007  | ### *007.Postal Address*            | B输入邮政地址                                                                                          |
-| 008  | ### *008.Multiline Text*            | B输入多行文本                                                                                          |
-| 009  | ### *009.Time*                      | B输入时间                                                                                              |
-| 010  | ### *010.Date*                      | B输入日期                                                                                              |
-| 011  | ### *011.Number*                    | B输入数字                                                                                              |
-| 012  | ### *012.Number(Signed)*            | B输入带正负号数字                                                                                       |
-| 013  | ### *013.Number(Decimal)*           | B输入带小数点数字                                                                                       |
-| 014  | ### *014.AutoCompleteTextView*      | C单选自动完成文本框                                                                                     |
-| 015  | ### *015.MultiAutoCompleteTextView* | C多选自动完成文本框                                                                                     |
-| 016  | ### *016.CheckedTextView*           | D文本复选框                                                                                            |
-| 017  | ### *017.TextInputLayout*           | E文本输入布局，包含EditView默认生成浮动Label                                                             |
+| 序号 | 文本                            | 功能                                                                                                   |
+|:-----|:--------------------------------|:------------------------------------------------------------------------------------------------------|
+| 001  | *001.TextView*                  | A文本视图：010自制RunTextView、011自制TextAutoZoom、012自制TextViewVertical、013自制TextViewVerticalMore |
+| 002  | *002.Plain Text*                | B输入普通文本                                                                                          |
+| 003  | *003.Password*                  | B输入任意字符密码                                                                                       |
+| 004  | *004.Password(Numeric)*         | B输入数字密码                                                                                          |
+| 005  | *005.E-mail*                    | B输入邮箱地址                                                                                          |
+| 006  | *006.Phone*                     | B输入电话                                                                                              |
+| 007  | *007.Postal Address*            | B输入邮政地址                                                                                          |
+| 008  | *008.Multiline Text*            | B输入多行文本                                                                                          |
+| 009  | *009.Time*                      | B输入时间                                                                                              |
+| 010  | *010.Date*                      | B输入日期                                                                                              |
+| 011  | *011.Number*                    | B输入数字                                                                                              |
+| 012  | *012.Number(Signed)*            | B输入带正负号数字                                                                                       |
+| 013  | *013.Number(Decimal)*           | B输入带小数点数字                                                                                       |
+| 014  | *014.AutoCompleteTextView*      | C单选自动完成文本框                                                                                     |
+| 015  | *015.MultiAutoCompleteTextView* | C多选自动完成文本框                                                                                     |
+| 016  | *016.CheckedTextView*           | D文本复选框                                                                                            |
+| 017  | *017.TextInputLayout*           | E文本输入布局，包含EditView默认生成浮动Label                                                             |
 
 ## **附6.原生Remind提醒（强烈、安静）**
 
-| 序号 | 其它                       | 功能                                                                 |
-|:-----|:---------------------------|:--------------------------------------------------------------------|
-| 001  | ### *001.Menu*             | A菜单                                                               |
-| 002  | ### *002.PopupWindow*      | A弹窗：003自制PopupImply、004自制PopupSingle、005自制PopupViewManager |
-| 003  | ### *003.Dialog*           | B对话框                                                              |
-| 004  | ### *004.DatePickerDialog* | B日期选择对话框                                                      |
-| 005  | ### *005.TimePickerDialog* | B时间选择对话框                                                      |
-| 006  | ### *006.ProgressDialog*   | B进度对话框                                                          |
-| 007  | ### *007.AlertDialog*      | B警告对话框                                                          |
-| 008  | ### *008.Toast*            | C吐司：042工具ToastHelper                                            |
-| 009  | ### *009.Snackbar*         | C快餐：043工具SnackbarHelper                                         |
-| 010  | ### *010.Notification*     | D通知：006自制NotificationHelper                                     |
-| 011  | ### *011.RemoteViews*      | E桌面控件                                                            |
+| 序号 | 其它                   | 功能                                                                 |
+|:-----|:-----------------------|:--------------------------------------------------------------------|
+| 001  | *001.Menu*             | A菜单                                                               |
+| 002  | *002.PopupWindow*      | A弹窗：003自制PopupImply、004自制PopupSingle、005自制PopupViewManager |
+| 003  | *003.Dialog*           | B对话框                                                              |
+| 004  | *004.DatePickerDialog* | B日期选择对话框                                                      |
+| 005  | *005.TimePickerDialog* | B时间选择对话框                                                      |
+| 006  | *006.ProgressDialog*   | B进度对话框                                                          |
+| 007  | *007.AlertDialog*      | B警告对话框                                                          |
+| 008  | *008.Toast*            | C吐司：042工具ToastHelper                                            |
+| 009  | *009.Snackbar*         | C快餐：043工具SnackbarHelper                                         |
+| 010  | *010.Notification*     | D通知：006自制NotificationHelper                                     |
+| 011  | *011.RemoteViews*      | E桌面控件                                                            |
 
 ## *附*
 
