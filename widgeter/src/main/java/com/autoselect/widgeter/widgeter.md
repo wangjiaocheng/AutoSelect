@@ -46,7 +46,7 @@
 | 028  | *028.WaveView(231)*                                                                                                                                                                                                                                                                                                                                   | 水波 |
 | 029  | *029.SideBar(240)*                                                                                                                                                                                                                                                                                                                                    | 侧边 |
 | 030  | *030.Banner：BannerHelper、TypeBannerTrans、BeanPage、PageListener、RecyclerViewHolder、RecyclerBaseAdapter、TypeTrans、Transformer、TransformerCard、TransformerDepthPage、TransformerMz、TransformerZoomOutPage、BeanCircle、BeanRect、TypeIndicatorCircle、IndicatorCircle、IndicatorRect、IndicatorText(1060)*                                       | 横幅 |
-| 031  | *031.LayoutTab、LayoutLabel：LayoutScroll、LayoutFlow、AttrsHelper、AdapterTab、AdapterLabel、AdapterTemplate、AdapterFlow、FlowListener、FlowListenerAdapter、ActionRect、ActionTri、ActionRound、ActionColor、ActionRes、ActionBase、ActionDot、TextViewTabColor、BeanTab、BeanLabel、TabValue、TabTypeEvaluator、ConstantsFlow、ViewPagerHelper(2080)* | 流式 |
+| 031  | *031.LayoutTab、LayoutLabel：LayoutScroll、LayoutFlow、AttrsHelper、AdapterTab、AdapterLabel、AdapterTemplate、AdapterFlow、FlowListener、FlowListenerAdapter、ActionRect、ActionTri、ActionRound、ActionColor、ActionRes、ActionBase、ActionDot、TextViewTabColor、BeanTab、BeanLabel、TabValue、TabTypeEvaluator、ConstantsFlow、ViewPagerHelper(2110)* | 流式 |
 | 032  | *032.BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)、ViewHolderBase：......(2961)*                                                                                                                                                           | 回收 |
 
 >- values
@@ -654,7 +654,7 @@
 | 10   | 02. addCircleBean      | IndicatorCircle添加BeanCircle                                                             |
 | 11   | 03. addRectBean        | IndicatorRect添加BeanRect                                                                 |
 
-### *031.流式LayoutTab、LayoutLabel：LayoutScroll、LayoutFlow、AttrsHelper、AdapterTab、AdapterLabel、AdapterTemplate、AdapterFlow、FlowListener、FlowListenerAdapter、ActionRect、ActionTri、ActionRound、ActionColor、ActionRes、ActionBase、ActionDot、TextViewTabColor、BeanTab、BeanLabel、TabValue、TabTypeEvaluator、ConstantsFlow、ViewPagerHelper(2080)*
+### *031.流式LayoutTab、LayoutLabel：LayoutScroll、LayoutFlow、AttrsHelper、AdapterTab、AdapterLabel、AdapterTemplate、AdapterFlow、FlowListener、FlowListenerAdapter、ActionRect、ActionTri、ActionRound、ActionColor、ActionRes、ActionBase、ActionDot、TextViewTabColor、BeanTab、BeanLabel、TabValue、TabTypeEvaluator、ConstantsFlow、ViewPagerHelper(2110)*
 
 | 序号 | 方法                     | 功能                                                             |
 |:-----|:-------------------------|:----------------------------------------------------------------|
@@ -674,6 +674,18 @@
 | 14   | 03. setLabelBean         | LayoutLabel设置BeanLabel                                         |
 | 15   | 04. setSelects           | LayoutLabel设置选中标签                                          |
 | 16   | 05. setAdapter           | LayoutLabel设置AdapterLabel                                      |
+| 17   | 01. LOOP_COUNT           | ViewPagerHelper循环计数                                          |
+| 18   | 02. LOOP_TAIL_MODE       | ViewPagerHelper循环跟踪模式                                      |
+| 19   | 03. LOOP_MODE            | ViewPagerHelper循环模式                                          |
+| 20   | 04. GLIDE_MODE           | ViewPagerHelper“Glide”模式                                       |
+| 21   | 05. VIEWPAGER_DATA_URL   | ViewPagerHelper数据类型URL                                       |
+| 22   | 06. VIEWPAGER_DATA_RES   | ViewPagerHelper数据类型res                                       |
+| 23   | 07. VIEWPAGER_DATA_VIEW  | ViewPagerHelper数据类型View                                      |
+| 24   | 08. getViewPageClickItem | ViewPagerHelper获取当前点击item                                  |
+| 25   | 09. initSwitchTime       | ViewPagerHelper重设切换时间                                      |
+| 26   | 10. tabColors            | RandomColor随机颜色列表                                          |
+| 27   | 11. randomTagColor       | RandomColor获取随机颜色                                          |
+| 28   | 12. getColorDrawable     | RandomColor获取随机颜色GradientDrawable                          |
 
 ```kotlin
 class LabelActivity : AppCompatActivity() {
