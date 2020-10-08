@@ -667,7 +667,7 @@
 | 07   | 07. mAdapter             | LayoutTab设置AdapterTab                                          |
 | 08   | 08. isItemClick          | LayoutTab是否item被点击                                          |
 | 09   | 09. setItemClickByOutSet | LayoutTab由外部设置位置，为不是自身点击，常用于recyclerview联动效果 |
-| 10   | 10. setCusAction         | LayoutTab设置自定义ActionBase                                    |
+| 10   | 10. setCusAction         | LayoutTab设置自定义ActionBase，替代库内Action                     |
 | 11   | 11. setItemAnim          | LayoutTab设置某个item动画                                        |
 | 12   | 01. mMaxSelectCount      | LayoutLabel多选最大个数                                          |
 | 13   | 02. isAutoScroll         | LayoutLabel是否自动滚动                                          |
