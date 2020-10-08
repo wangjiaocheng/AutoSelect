@@ -14,4 +14,4 @@
     android:paddingBottom="6dp"
     android:textColor="@drawable/flow_item_selector_color"
     android:textSize="14sp"
-    tools:text="FlowLabelItem" />
+    tools:text="FlowItem" />

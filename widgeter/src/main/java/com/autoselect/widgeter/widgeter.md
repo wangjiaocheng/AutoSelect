@@ -894,7 +894,7 @@ class LabelShowMoreActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_label_show_more)
-        val flowLayout = findViewById<LayoutLabel?>(R.id.label_flow_show_more)
+        val flowLayout = findViewById<LayoutLabel?>(R.id.more_flow)
         flowLayout.setLabelBean(BeanLabel().apply {
             maxSelectCount = 3
             isAutoScroll = true
@@ -944,7 +944,7 @@ class LabelShowMoreActivity : AppCompatActivity() {
     tools:context=".LabelShowMoreActivity">
 
     <com.autoselect.widgeter.flow.LayoutLabel
-        android:id="@+id/label_flow_show_more"
+        android:id="@+id/more_flow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
