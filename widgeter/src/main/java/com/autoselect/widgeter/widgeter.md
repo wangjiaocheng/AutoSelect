@@ -667,11 +667,11 @@
 | 07   | 07. setTextId            | LayoutTab   |
 | 08   | 08. setCusAction         | LayoutTab   |
 | 09   | 09. mAdapter             | LayoutTab   |
-| 10   | 10.setTabBean            | LayoutTab   |
-| 11   | 11.isTabAutoScroll       | LayoutTab   |
-| 12   | 12.setUnSelectedColor    | LayoutTab   |
-| 13   | 13.setViewPager          | LayoutTab   |
-| 14   | 01 .mMaxSelectCount      | LayoutLabel |
+| 10   | 10. setTabBean           | LayoutTab   |
+| 11   | 11. isTabAutoScroll      | LayoutTab   |
+| 12   | 12. setUnSelectedColor   | LayoutTab   |
+| 13   | 13. setViewPager         | LayoutTab   |
+| 14   | 01. mMaxSelectCount      | LayoutLabel |
 | 15   | 02. isAutoScroll         | LayoutLabel |
 | 16   | 03. isLabelAutoScroll    | LayoutLabel |
 | 17   | 04. setLabelBean         | LayoutLabel |
