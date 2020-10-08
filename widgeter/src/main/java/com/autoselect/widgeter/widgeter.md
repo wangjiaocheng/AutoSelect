@@ -656,27 +656,24 @@
 
 ### *031.流式LayoutTab、LayoutLabel：LayoutScroll、LayoutFlow、AttrsHelper、AdapterTab、AdapterLabel、AdapterTemplate、AdapterFlow、FlowListener、FlowListenerAdapter、ActionRect、ActionTri、ActionRound、ActionColor、ActionRes、ActionBase、ActionDot、TextViewTabColor、BeanTab、BeanLabel、TabValue、TabTypeEvaluator、ConstantsFlow、ViewPagerHelper(2080)*
 
-| 序号 | 方法                     | 功能         |
-|:-----|:-------------------------|:------------|
-| 01   | 01. isLabelFlow          | LayoutTab   |
-| 02   | 02. setItemAnim          | LayoutTab   |
-| 03   | 03. isItemClick          | LayoutTab   |
-| 04   | 04. setSelectedColor     | LayoutTab   |
-| 05   | 05. setItemClickByOutSet | LayoutTab   |
-| 06   | 06. setDefaultPosition   | LayoutTab   |
-| 07   | 07. setTextId            | LayoutTab   |
-| 08   | 08. setCusAction         | LayoutTab   |
-| 09   | 09. mAdapter             | LayoutTab   |
-| 10   | 10. setTabBean           | LayoutTab   |
-| 11   | 11. isTabAutoScroll      | LayoutTab   |
-| 12   | 12. setUnSelectedColor   | LayoutTab   |
-| 13   | 13. setViewPager         | LayoutTab   |
-| 14   | 01. mMaxSelectCount      | LayoutLabel |
-| 15   | 02. isAutoScroll         | LayoutLabel |
-| 16   | 03. isLabelAutoScroll    | LayoutLabel |
-| 17   | 04. setLabelBean         | LayoutLabel |
-| 18   | 05. setSelects           | LayoutLabel |
-| 19   | 06. setAdapter           | LayoutLabel |
+| 序号 | 方法                     | 功能                                                             |
+|:-----|:-------------------------|:----------------------------------------------------------------|
+| 01   | 01. setTabBean           | LayoutTab设置BeanTab，覆盖xml默认                                |
+| 02   | 02. setViewPager         | LayoutTab设置ViewPager                                           |
+| 03   | 03. setDefaultPosition   | LayoutTab设置默认位置                                            |
+| 04   | 04. setTextId            | LayoutTab不设置颜色选择不起作用                                   |
+| 05   | 05. setSelectedColor     | LayoutTab设置选中颜色，在TabTextColorView不起作用                 |
+| 06   | 06. setUnSelectedColor   | LayoutTab设置默认颜色，在TabTextColorView不起作用                 |
+| 07   | 07. mAdapter             | LayoutTab设置AdapterTab                                          |
+| 08   | 08. isItemClick          | LayoutTab是否item被点击                                          |
+| 09   | 09. setItemClickByOutSet | LayoutTab由外部设置位置，为不是自身点击，常用于recyclerview联动效果 |
+| 10   | 10. setCusAction         | LayoutTab设置自定义ActionBase                                    |
+| 11   | 11. setItemAnim          | LayoutTab设置某个item动画                                        |
+| 12   | 01. mMaxSelectCount      | LayoutLabel多选最大个数                                          |
+| 13   | 02. isAutoScroll         | LayoutLabel是否自动滚动                                          |
+| 14   | 03. setLabelBean         | LayoutLabel设置BeanLabel                                         |
+| 15   | 04. setSelects           | LayoutLabel设置选中标签                                          |
+| 16   | 05. setAdapter           | LayoutLabel设置AdapterLabel                                      |
 
 >- implementation "androidx.constraintlayout:constraintlayout:2.0.1"
 
