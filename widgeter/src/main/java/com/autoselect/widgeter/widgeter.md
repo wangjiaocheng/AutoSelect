@@ -688,6 +688,117 @@
 | 28   | 12. getColorDrawable     | RandomColor获取随机颜色GradientDrawable                          |
 
 ```kotlin
+class TabActivity : AppCompatActivity() {
+    private val mTitle: MutableList<String?> =
+        ArrayList(listOf(*"0 1 2 3 n4 5 6 7 8 9 ".split(" ".toRegex()).toTypedArray()))
+    private val mFragments: MutableList<Fragment> = mutableListOf()
+    private var mViewPager: ViewPager? = null
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_tab)
+        for (s in mTitle) {
+            mFragments.add(TabFragment.newInStance(s))
+        }
+        mViewPager = findViewById(R.id.tab_viewpager)
+        mViewPager?.adapter = TabViewPagerAdapter(supportFragmentManager)
+        mViewPager?.offscreenPageLimit = 3
+        resFlow
+    }
+
+    private val resFlow = {
+        findViewById<LayoutTab?>(R.id.res_flow)//setCusAction(ActionDot())
+            .setViewPager(mViewPager)?.setTextId(R.id.flow_color_text)?.setDefaultPosition(2)
+            ?.setSelectedColor(Color.WHITE)?.setUnSelectedColor(resources.getColor(R.color.white))
+            ?.setTabBean(BeanTab().apply {
+                tabType = ConstantsFlow.RES
+                tabItemRes = R.drawable.flow_item_shape_round
+                tabClickAnimTime = 300
+                tabMarginLeft = 5
+                tabMarginTop = 12
+                tabMarginRight = 5
+                tabMarginBottom = 10
+                autoScale = true
+                scaleFactor = 1.2f
+            })?.mAdapter = object : AdapterTab<String?>(R.layout.flow_color_textview, mTitle) {
+            override fun bindView(view: View?, data: Any?, position: Int) {
+                setText(view, R.id.flow_color_text, data as String)?.setTextColor(
+                    view, R.id.flow_color_text, resources.getColor(R.color.white)
+                )
+                if (position == 0) setVisible(view, R.id.flow_color_msg, true)
+                addChildrenClick(view, R.id.flow_color_text, position)
+                addChildrenLongClick(view, R.id.flow_color_text, position)
+            }
+
+            override fun onItemSelectState(view: View?, isSelected: Boolean) {
+                super.onItemSelectState(view, isSelected)
+                when {
+                    isSelected -> setTextColor(view, R.id.flow_color_text, Color.WHITE)
+                    else -> setTextColor(
+                        view, R.id.flow_color_text, resources.getColor(R.color.white)
+                    )
+                }
+            }
+
+            override fun onItemClick(view: View?, data: Any?, position: Int) {
+                super.onItemClick(view, data, position)
+                mViewPager?.currentItem = position
+            }
+        }
+    }
+
+    internal inner class TabViewPagerAdapter(fm: FragmentManager) :
+        FragmentPagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
+        override fun getItem(position: Int): Fragment = mFragments[position]
+        override fun getCount(): Int = mFragments.size
+    }
+}
+
+class TabFragment : Fragment() {
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
+    ): View? = TextView(activity).apply {
+        text = arguments?.getString(ARGUMENT) ?: "nothing here"
+        textSize = 30f
+        gravity = Gravity.CENTER
+        setTextColor(Color.WHITE)
+    }
+
+    companion object {
+        val ARGUMENT: String? = "argument"
+        fun newInStance(key: String?): TabFragment = TabFragment().apply {
+            arguments = Bundle().apply { putString(ARGUMENT, key) }
+        }
+    }
+}
+```
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#506E7A"
+    android:orientation="vertical"
+    tools:context=".view.TabActivity">
+
+    <com.autoselect.widgeter.flow.LayoutTab
+        android:id="@+id/res_flow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="#6D8FB0" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/tab_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:background="#15323232" />
+</LinearLayout>
+```
+
+```kotlin
 class TabVerticalActivity : AppCompatActivity() {
     private val menuList: MutableList<BeanMenu?> = mutableListOf()
     private var mTabFlowLayout: LayoutTab? = null
@@ -1105,19 +1216,22 @@ class LabelShowMoreActivity : AppCompatActivity() {
 >- implementation "androidx.constraintlayout:constraintlayout:2.0.1"
 >- drawable备用
 >
->>1. [flow_item_shape_unselect.xml](../../../../res/drawable/flow_item_shape_unselect.xml)
->>2. [flow_item_shape_select.xml](../../../../res/drawable/flow_item_shape_select.xml)
->>3. [flow_item_selector_tag.xml](../../../../res/drawable/flow_item_selector_tag.xml)
->>4. [flow_item_selector_color.xml](../../../../res/drawable/flow_item_selector_color.xml)
+>>1. [flow_item_shape_red.xml](../../../../res/drawable/flow_item_shape_red.xml)
+>>2. [flow_item_shape_round.xml](../../../../res/drawable/flow_item_shape_round.xml)
+>>3. [flow_item_shape_unselect.xml](../../../../res/drawable/flow_item_shape_unselect.xml)
+>>4. [flow_item_shape_select.xml](../../../../res/drawable/flow_item_shape_select.xml)
+>>5. [flow_item_selector_tag.xml](../../../../res/drawable/flow_item_selector_tag.xml)
+>>6. [flow_item_selector_color.xml](../../../../res/drawable/flow_item_selector_color.xml)
 >
 >- layout备用
 >
->>1. [flow_item_textview.xml](../../../../res/layout/flow_item_textview.xml)
->>2. [flow_menu_textview.xml](../../../../res/layout/flow_menu_textview.xml)
->>3. [flow_detail_textview.xml](../../../../res/layout/flow_detail_textview.xml)
->>4. [flow_label_select.xml](../../../../res/layout/flow_label_select.xml)
->>5. [flow_label_show.xml](../../../../res/layout/flow_label_show.xml)
->>6. [flow_label_handup.xml](../../../../res/layout/flow_label_handup.xml)
+>>1. [flow_color_textview.xml](../../../../res/layout/flow_color_textview.xml)
+>>2. [flow_item_textview.xml](../../../../res/layout/flow_item_textview.xml)
+>>3. [flow_menu_textview.xml](../../../../res/layout/flow_menu_textview.xml)
+>>4. [flow_detail_textview.xml](../../../../res/layout/flow_detail_textview.xml)
+>>5. [flow_label_select.xml](../../../../res/layout/flow_label_select.xml)
+>>6. [flow_label_show.xml](../../../../res/layout/flow_label_show.xml)
+>>7. [flow_label_handup.xml](../../../../res/layout/flow_label_handup.xml)
 >
 >- mipmap备用
 >
