@@ -804,7 +804,7 @@ class LabelActivity : AppCompatActivity() {
     android:layout_height="match_parent"
     android:background="#506E7A"
     android:orientation="vertical"
-    tools:context=".view.LabelActivity">
+    tools:context=".LabelActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
