@@ -46,7 +46,7 @@
 | 028  | *028.WaveView(231)*                                                                                                                                                                                                                                                                                                                                   | 水波 |
 | 029  | *029.SideBar(240)*                                                                                                                                                                                                                                                                                                                                    | 侧边 |
 | 030  | *030.Banner：BannerHelper、TypeBannerTrans、BeanPage、PageListener、RecyclerViewHolder、RecyclerBaseAdapter、TypeTrans、Transformer、TransformerCard、TransformerDepthPage、TransformerMz、TransformerZoomOutPage、BeanCircle、BeanRect、TypeIndicatorCircle、IndicatorCircle、IndicatorRect、IndicatorText(1060)*                                       | 横幅 |
-| 031  | *031.LayoutTab、LayoutLabel：LayoutScroll、LayoutFlow、AttrsHelper、AdapterTab、AdapterLabel、AdapterTemplate、AdapterFlow、FlowListener、FlowListenerAdapter、ActionRect、ActionTri、ActionRound、ActionColor、ActionRes、ActionBase、ActionDot、TextViewTabColor、BeanTab、BeanLabel、TabValue、TabTypeEvaluator、ConstantsFlow、ViewPagerHelper(2110)* | 流式 |
+| 031  | *031.LayoutTab、LayoutLabel：LayoutScroll、LayoutFlow、AttrsHelper、AdapterTab、AdapterLabel、AdapterTemplate、AdapterFlow、FlowListener、FlowListenerAdapter、ActionRect、ActionTri、ActionRound、ActionColor、ActionRes、ActionBase、ActionDot、TextViewTabColor、BeanTab、BeanLabel、TabValue、TabTypeEvaluator、ConstantsFlow、ViewPagerHelper(2121)* | 流式 |
 | 032  | *032.BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)、ViewHolderBase：......(2961)*                                                                                                                                                           | 回收 |
 
 >- values
@@ -654,7 +654,7 @@
 | 10   | 02. addCircleBean      | IndicatorCircle添加BeanCircle                                                             |
 | 11   | 03. addRectBean        | IndicatorRect添加BeanRect                                                                 |
 
-### *031.流式LayoutTab、LayoutLabel：LayoutScroll、LayoutFlow、AttrsHelper、AdapterTab、AdapterLabel、AdapterTemplate、AdapterFlow、FlowListener、FlowListenerAdapter、ActionRect、ActionTri、ActionRound、ActionColor、ActionRes、ActionBase、ActionDot、TextViewTabColor、BeanTab、BeanLabel、TabValue、TabTypeEvaluator、ConstantsFlow、ViewPagerHelper(2110)*
+### *031.流式LayoutTab、LayoutLabel：LayoutScroll、LayoutFlow、AttrsHelper、AdapterTab、AdapterLabel、AdapterTemplate、AdapterFlow、FlowListener、FlowListenerAdapter、ActionRect、ActionTri、ActionRound、ActionColor、ActionRes、ActionBase、ActionDot、TextViewTabColor、BeanTab、BeanLabel、TabValue、TabTypeEvaluator、ConstantsFlow、ViewPagerHelper(2121)*
 
 | 序号 | 方法                     | 功能                                                             |
 |:-----|:-------------------------|:----------------------------------------------------------------|
@@ -686,6 +686,154 @@
 | 26   | 10. tabColors            | RandomColor随机颜色列表                                          |
 | 27   | 11. randomTagColor       | RandomColor获取随机颜色                                          |
 | 28   | 12. getColorDrawable     | RandomColor获取随机颜色GradientDrawable                          |
+
+```kotlin
+class TabVerticalActivity : AppCompatActivity() {
+    private val menuList: MutableList<BeanMenu?> = mutableListOf()
+    private var mTabFlowLayout: LayoutTab? = null
+    private var mRecyclerView: RecyclerView? = null
+    private var mManager: LinearLayoutManager? = null
+    private var mCurPosition = 0
+    private var isNeedScroll = false
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_tab_vertical)
+        mTabFlowLayout = findViewById(R.id.tab_flow)
+        mRecyclerView = findViewById(R.id.detail_recycler)
+        mManager = LinearLayoutManager(this)
+        mRecyclerView?.layoutManager = mManager
+        handleData(menuList)
+    }
+
+    private fun handleData(menuList: MutableList<BeanMenu?>?) {
+        mTabFlowLayout?.mAdapter =
+            object : AdapterTab<BeanMenu?>(R.layout.flow_menu_textview, menuList) {
+                override fun bindView(view: View?, data: Any?, position: Int) {
+                    setText(view, R.id.flow_menu_text, (data as BeanMenu).menu)
+                    setTextColor(
+                        view, R.id.flow_menu_text, resources.getColor(R.color.grey_800)
+                    )
+                }
+
+                override fun onItemSelectState(view: View?, isSelected: Boolean) {
+                    super.onItemSelectState(view, isSelected)
+                    when {
+                        isSelected -> setTextColor(
+                            view, R.id.flow_menu_text, resources.getColor(R.color.colorPrimary)
+                        )
+                        else -> setTextColor(
+                            view, R.id.flow_menu_text, resources.getColor(R.color.grey_800)
+                        )
+                    }
+                }
+
+                override fun onItemClick(view: View?, data: Any?, position: Int) {
+                    super.onItemClick(view, data, position)
+                    val firstPosition = mManager?.findFirstVisibleItemPosition() ?: 0
+                    val lastPosition = mManager?.findLastVisibleItemPosition() ?: 0
+                    mCurPosition = position
+                    mRecyclerView?.apply {
+                        when {
+                            position <= firstPosition -> {
+                                smoothScrollToPosition(position)
+                                requestLayout()//防止不刷新视图
+                            }//目标在可见视图上面
+                            position <= lastPosition -> {
+                                val top =
+                                    mRecyclerView?.getChildAt(position - firstPosition)?.top ?: 0
+                                if (top > 0) mRecyclerView?.smoothScrollBy(0, top)
+                            }//目标在first和last中间；往下点且position在中间，但lastPosition数据也能看到所以把它置顶
+                            else -> {
+                                mRecyclerView?.scrollToPosition(position)//滚动到可视界面
+                                isNeedScroll = true//此时recycler的item还未滚动到顶端，重新再让它滚动改一下
+                            }//目标在可视视图下面
+                        }
+                    }
+                }
+            }
+        mRecyclerView?.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
+                super.onScrollStateChanged(recyclerView, newState)
+                if (newState == RecyclerView.SCROLL_STATE_IDLE) mTabFlowLayout?.apply {
+                    isItemClick = when {
+                        isItemClick -> false
+                        else -> {
+                            setItemClickByOutSet(mManager?.findFirstVisibleItemPosition() ?: 0)
+                            true
+                        }
+                    }//如果上次为点击事件，则先还原，下次滑动时，监听即可
+                }
+            }
+
+            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                super.onScrolled(recyclerView, dx, dy)
+                if (isNeedScroll) {
+                    isNeedScroll = false
+                    val index = mCurPosition - (mManager?.findFirstVisibleItemPosition() ?: 0)
+                    mRecyclerView?.apply {
+                        if (index in 0 until childCount) smoothScrollBy(0, getChildAt(index).top)
+                    }
+                }
+            }
+        })
+        mRecyclerView?.adapter = RecyclerAdapter(R.layout.flow_detail_textview, menuList)
+    }
+
+    internal inner class RecyclerAdapter(layoutResId: Int, data: MutableList<BeanMenu?>?) :
+        BaseAdapterQuick<BeanMenu?, ViewHolderBase>(layoutResId, data) {
+        override fun convert(holder: ViewHolderBase, item: BeanMenu?) {
+            holder.setText(R.id.flow_detail_text, item?.menu)
+            holder.getView<LayoutLabel>(R.id.label_flow)
+                .setAdapter(LabelAdapter(R.layout.flow_item_textview, item?.details))
+        }
+    }
+
+    internal inner class LabelAdapter(layoutId: Int, data: MutableList<BeanDetail?>?) :
+        AdapterLabel<BeanDetail?>(layoutId, data) {
+        override fun bindView(view: View?, data: Any?, position: Int) {
+            setText(view, R.id.flow_menu_text, (data as BeanDetail).detail)
+                ?.setTextColor(view, R.id.flow_menu_text, Color.WHITE)
+            view?.background = RandomColor.getColorDrawable(10)
+        }
+    }
+}
+```
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/normal_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TabVerticalActivity">
+
+    <com.autoselect.widgeter.flow.LayoutTab
+        android:id="@+id/tab_flow"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@color/grey_500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tab_action_orientation="left"
+        app:tab_color="@color/colorPrimary"
+        app:tab_height="20dp"
+        app:tab_orientation="vertical"
+        app:tab_type="rect"
+        app:tab_width="2dp" />
+
+    <RecyclerView
+        android:id="@+id/detail_recycler"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tab_flow"
+        app:layout_constraintTop_toTopOf="parent" />
+</ConstraintLayout>
+```
 
 ```kotlin
 class LabelActivity : AppCompatActivity() {
@@ -965,9 +1113,11 @@ class LabelShowMoreActivity : AppCompatActivity() {
 >- layout备用
 >
 >>1. [flow_item_textview.xml](../../../../res/layout/flow_item_textview.xml)
->>2. [flow_label_select.xml](../../../../res/layout/flow_label_select.xml)
->>3. [flow_label_show.xml](../../../../res/layout/flow_label_show.xml)
->>4. [flow_label_handup.xml](../../../../res/layout/flow_label_handup.xml)
+>>2. [flow_menu_textview.xml](../../../../res/layout/flow_menu_textview.xml)
+>>3. [flow_detail_textview.xml](../../../../res/layout/flow_detail_textview.xml)
+>>4. [flow_label_select.xml](../../../../res/layout/flow_label_select.xml)
+>>5. [flow_label_show.xml](../../../../res/layout/flow_label_show.xml)
+>>6. [flow_label_handup.xml](../../../../res/layout/flow_label_handup.xml)
 >
 >- mipmap备用
 >
