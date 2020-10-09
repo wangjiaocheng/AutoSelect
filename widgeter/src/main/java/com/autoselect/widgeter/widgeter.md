@@ -828,22 +828,19 @@ class TabActivity : AppCompatActivity() {
     private val mTitle: MutableList<String?> =
         ArrayList(listOf(*"0 1 2 3 n4 5 6 7 8 9 ".split(" ".toRegex()).toTypedArray()))
     private val mFragments: MutableList<Fragment> = mutableListOf()
-    private var mViewPager: ViewPager? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tab)
         for (s in mTitle) {
             mFragments.add(TabFragment.newInStance(s))
         }
-        mViewPager = findViewById(R.id.tab_viewpager)
-        mViewPager?.adapter = TabViewPagerAdapter(supportFragmentManager)
-        mViewPager?.offscreenPageLimit = 3
+        tab_viewpager.adapter = TabViewPagerAdapter(supportFragmentManager)
+        tab_viewpager.offscreenPageLimit = 3
         resFlow
     }
 
     private val resFlow = {
-        findViewById<LayoutTab?>(R.id.res_flow)//setCusAction(ActionDot())
-            .setViewPager(mViewPager)?.setTextId(R.id.flow_color_text)?.setDefaultPosition(2)
+        res_flow//setCusAction(ActionDot())
+            .setViewPager(tab_viewpager)?.setTextId(R.id.flow_color_text)?.setDefaultPosition(2)
             ?.setSelectedColor(Color.WHITE)?.setUnSelectedColor(resources.getColor(R.color.white))
             ?.setTabBean(BeanTab().apply {
                 tabType = ConstantsFlow.RES
@@ -877,7 +874,7 @@ class TabActivity : AppCompatActivity() {
 
             override fun onItemClick(view: View?, data: Any?, position: Int) {
                 super.onItemClick(view, data, position)
-                mViewPager?.currentItem = position
+                tab_viewpager.currentItem = position
             }
         }
     }
@@ -937,75 +934,68 @@ class TabFragment : Fragment() {
 ```kotlin
 class TabVerticalActivity : AppCompatActivity() {
     private val menuList: MutableList<BeanMenu?> = mutableListOf()
-    private var layoutTab: LayoutTab? = null
-    private var detailRecycler: RecyclerView? = null
-    private var layoutManager: LinearLayoutManager? = null
+    private var linearManager: LinearLayoutManager? = null
     private var curPosition = 0
     private var isNeedScroll = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tab_vertical)
-        layoutTab = findViewById(R.id.tab_flow)
-        detailRecycler = findViewById(R.id.detail_recycler)
-        layoutManager = LinearLayoutManager(this)
-        detailRecycler?.layoutManager = layoutManager
+        linearManager = LinearLayoutManager(this)
+        detail_recycler.layoutManager = linearManager
         handleData(menuList)
     }
 
     private fun handleData(menuList: MutableList<BeanMenu?>?) {
-        layoutTab?.mAdapter =
-            object : AdapterTab<BeanMenu?>(R.layout.flow_menu_textview, menuList) {
-                override fun bindView(view: View?, data: Any?, position: Int) {
-                    setText(view, R.id.flow_menu_text, (data as BeanMenu).menu)
-                    setTextColor(
+        tab_flow.mAdapter = object : AdapterTab<BeanMenu?>(R.layout.flow_menu_textview, menuList) {
+            override fun bindView(view: View?, data: Any?, position: Int) {
+                setText(view, R.id.flow_menu_text, (data as BeanMenu).menu)
+                setTextColor(
+                    view, R.id.flow_menu_text, resources.getColor(R.color.grey_800)
+                )
+            }
+
+            override fun onItemSelectState(view: View?, isSelected: Boolean) {
+                super.onItemSelectState(view, isSelected)
+                when {
+                    isSelected -> setTextColor(
+                        view, R.id.flow_menu_text, resources.getColor(R.color.colorPrimary)
+                    )
+                    else -> setTextColor(
                         view, R.id.flow_menu_text, resources.getColor(R.color.grey_800)
                     )
                 }
+            }
 
-                override fun onItemSelectState(view: View?, isSelected: Boolean) {
-                    super.onItemSelectState(view, isSelected)
+            override fun onItemClick(view: View?, data: Any?, position: Int) {
+                super.onItemClick(view, data, position)
+                val firstPosition = linearManager?.findFirstVisibleItemPosition() ?: 0
+                val lastPosition = linearManager?.findLastVisibleItemPosition() ?: 0
+                curPosition = position
+                detail_recycler.apply {
                     when {
-                        isSelected -> setTextColor(
-                            view, R.id.flow_menu_text, resources.getColor(R.color.colorPrimary)
-                        )
-                        else -> setTextColor(
-                            view, R.id.flow_menu_text, resources.getColor(R.color.grey_800)
-                        )
-                    }
-                }
-
-                override fun onItemClick(view: View?, data: Any?, position: Int) {
-                    super.onItemClick(view, data, position)
-                    val firstPosition = layoutManager?.findFirstVisibleItemPosition() ?: 0
-                    val lastPosition = layoutManager?.findLastVisibleItemPosition() ?: 0
-                    curPosition = position
-                    detailRecycler?.apply {
-                        when {
-                            position <= firstPosition -> {
-                                smoothScrollToPosition(position)
-                                requestLayout()//防止不刷新视图
-                            }//目标在可见视图上面
-                            position <= lastPosition -> {
-                                val top =
-                                    detailRecycler?.getChildAt(position - firstPosition)?.top ?: 0
-                                if (top > 0) detailRecycler?.smoothScrollBy(0, top)
-                            }//目标在first和last中间；往下点且position在中间，但lastPosition数据也能看到所以把它置顶
-                            else -> {
-                                detailRecycler?.scrollToPosition(position)//滚动到可视界面
-                                isNeedScroll = true//此时recycler的item还未滚动到顶端，重新再让它滚动改一下
-                            }//目标在可视视图下面
-                        }
+                        position <= firstPosition -> {
+                            smoothScrollToPosition(position)
+                            requestLayout()//防止不刷新视图
+                        }//目标在可见视图上面
+                        position <= lastPosition -> {
+                            val top = getChildAt(position - firstPosition)?.top ?: 0
+                            if (top > 0) smoothScrollBy(0, top)
+                        }//目标在first和last中间；往下点且position在中间，但lastPosition数据也能看到所以把它置顶
+                        else -> {
+                            scrollToPosition(position)//滚动到可视界面
+                            isNeedScroll = true//此时recycler的item还未滚动到顶端，重新再让它滚动改一下
+                        }//目标在可视视图下面
                     }
                 }
             }
-        detailRecycler?.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+        }
+        detail_recycler.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
                 super.onScrollStateChanged(recyclerView, newState)
-                if (newState == RecyclerView.SCROLL_STATE_IDLE) layoutTab?.apply {
+                if (newState == RecyclerView.SCROLL_STATE_IDLE) tab_flow.apply {
                     isItemClick = when {
                         isItemClick -> false
                         else -> {
-                            setItemClickByOutSet(layoutManager?.findFirstVisibleItemPosition() ?: 0)
+                            setItemClickByOutSet(linearManager?.findFirstVisibleItemPosition() ?: 0)
                             true
                         }
                     }//如果上次为点击事件，则先还原，下次滑动时，监听即可
@@ -1016,14 +1006,14 @@ class TabVerticalActivity : AppCompatActivity() {
                 super.onScrolled(recyclerView, dx, dy)
                 if (isNeedScroll) {
                     isNeedScroll = false
-                    val index = curPosition - (layoutManager?.findFirstVisibleItemPosition() ?: 0)
-                    detailRecycler?.apply {
+                    val index = curPosition - (linearManager?.findFirstVisibleItemPosition() ?: 0)
+                    detail_recycler.apply {
                         if (index in 0 until childCount) smoothScrollBy(0, getChildAt(index).top)
                     }
                 }
             }
         })
-        detailRecycler?.adapter = RecyclerAdapter(R.layout.flow_detail_textview, menuList)
+        detail_recycler.adapter = RecyclerAdapter(R.layout.flow_detail_textview, menuList)
     }
 
     internal inner class RecyclerAdapter(layoutResId: Int, data: MutableList<BeanMenu?>?) :
@@ -1051,7 +1041,6 @@ class TabVerticalActivity : AppCompatActivity() {
 <ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/normal_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TabVerticalActivity">
@@ -1071,7 +1060,7 @@ class TabVerticalActivity : AppCompatActivity() {
         app:tab_type="rect"
         app:tab_width="2dp" />
 
-    <RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/detail_recycler"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -1091,7 +1080,6 @@ class LabelActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_label)
         singleFlow
         searchFlow
         multiFlow
@@ -1100,7 +1088,7 @@ class LabelActivity : AppCompatActivity() {
 
     private val singleFlow = {
         val adapter: AdapterLabel<*>?
-        findViewById<LayoutLabel?>(R.id.single_flow).setAdapter(object :
+        single_flow.setAdapter(object :
             AdapterLabel<String?>(R.layout.flow_item_textview, titleOld) {
             override fun bindView(view: View?, data: Any?, position: Int) {
                 setText(view, R.id.flow_item_text, data as String)?.setTextColor(
@@ -1118,7 +1106,7 @@ class LabelActivity : AppCompatActivity() {
                 }
             }
         }.also { adapter = it })
-        findViewById<View?>(R.id.update).setOnClickListener {
+        update.setOnClickListener {
             titleOld?.clear()
             titleNew?.let { titleOld?.addAll(it) }
             adapter?.notifyDataChanged
@@ -1126,7 +1114,7 @@ class LabelActivity : AppCompatActivity() {
     }
 
     private val searchFlow = {
-        findViewById<LayoutLabel?>(R.id.search_flow).setAdapter(object :
+        search_flow.setAdapter(object :
             AdapterLabel<String?>(R.layout.flow_item_textview, titleOld) {
             override fun bindView(view: View?, data: Any?, position: Int) {
                 setText(view, R.id.flow_item_text, data as String)
@@ -1137,7 +1125,7 @@ class LabelActivity : AppCompatActivity() {
     }
 
     private val multiFlow = {
-        findViewById<LayoutLabel?>(R.id.multi_flow).apply {
+        multi_flow.apply {
             mMaxSelectCount = (3)
             setSelects(2, 3, 5)
         }.setAdapter(object : AdapterLabel<String?>(R.layout.flow_item_textview, titleNew) {
@@ -1152,7 +1140,7 @@ class LabelActivity : AppCompatActivity() {
     }
 
     private val longFlow = {
-        findViewById<LayoutLabel?>(R.id.long_flow).setAdapter(object :
+        long_flow.setAdapter(object :
             AdapterLabel<String?>(R.layout.flow_label_select, titleNew) {
             override fun bindView(view: View?, data: Any?, position: Int) {
                 setText(view, R.id.search_msg_tv, data as String)
@@ -1288,9 +1276,7 @@ class LabelShowMoreActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_label_show_more)
-        val layoutLabel = findViewById<LayoutLabel?>(R.id.more_flow)
-        layoutLabel.setLabelBean(BeanLabel().apply {
+        more_flow.setLabelBean(BeanLabel().apply {
             maxSelectCount = 3
             isAutoScroll = true
             showLines = 3
@@ -1298,8 +1284,8 @@ class LabelShowMoreActivity : AppCompatActivity() {
             showMoreColor = Color.WHITE
             handUpLayoutId = R.layout.flow_label_handup
         })
-        layoutLabel.setSelects(0, 1, 2)
-        layoutLabel.setAdapter(object :
+        more_flow.setSelects(0, 1, 2)
+        more_flow.setAdapter(object :
             AdapterLabel<String?>(R.layout.flow_item_textview, showMore) {
             override fun bindView(view: View?, data: Any?, position: Int) {
                 setText(view, R.id.flow_item_text, data as String)
