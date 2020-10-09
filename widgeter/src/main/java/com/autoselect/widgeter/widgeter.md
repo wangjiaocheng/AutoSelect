@@ -654,6 +654,142 @@
 | 10   | 02. addCircleBean      | IndicatorCircle添加BeanCircle                                                             |
 | 11   | 03. addRectBean        | IndicatorRect添加BeanRect                                                                 |
 
+```kotlin
+class GuideActivity : AppCompatActivity() {
+    private data class Guide(var text: String? = null, var resId: Int = 0)
+    companion object {
+        private val guideTexts = arrayOf("引导1", "引导2", "引导3")
+        private val guideIds = intArrayOf(R.mipmap.guide1, R.mipmap.guide2, R.mipmap.guide3)
+    }
+
+    private var guides: MutableList<Guide?>? = null
+    private val initGuides = {
+        guides = mutableListOf<Guide?>().apply {
+            for ((index, guideText) in guideTexts.withIndex()) {
+                Guide().apply {
+                    text = guideText
+                    resId = guideIds[index]
+                }.let { add(it) }
+            }
+        }
+    }
+    private val initBanner = {
+        indicator.apply {
+            addCircleBean(BeanCircle().apply {
+                normalColor = Color.GRAY
+                selectedColor = Color.WHITE
+                horizonMargin = 40
+                circleSize = 20
+                scaleFactor = 1.5f
+                typeIndicatorCircle = TypeIndicatorCircle.CIR_TO_RECT
+            })
+        }
+        banner.setCurrentPosition(1).addIndicator(indicator).addPageBean(BeanPage().apply {
+            isAutoLoop = true
+            smoothScrollTime = 400
+            loopTime = 5000
+            typeBannerTrans = TypeBannerTrans.DEPTH
+        }).setPageListener(R.layout.layout_guide, guides, object : PageListener<Guide?>() {
+            override fun bindView(view: View?, data: Any?, position: Int) {
+                view?.let {
+                    (data as Guide).run {
+                        setText(view, R.id.loop_text, text)
+                        setImageView(view, R.id.loop_icon, resId)
+                    }
+                }
+            }
+        })
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        initGuides
+        initBanner
+        enter.setOnClickListener { finish() }
+    }
+}
+```
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GuideActivity">
+
+    <FrameLayout
+        android:id="@+id/guide"
+        android:layout_width="409dp"
+        android:layout_height="601dp"
+        app:layout_constraintBottom_toTopOf="@+id/enter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.autoselect.widgeter.banner.Banner
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.autoselect.widgeter.banner.indicat.IndicatorCircle
+            android:id="@+id/indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="end|bottom"
+            android:layout_marginEnd="20dp" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="结束引导"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+```
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:descendantFocusability="blocksDescendants"
+    android:focusable="true"
+    android:orientation="vertical"
+    app:cardCornerRadius="4dp">
+
+    <ImageView
+        android:id="@+id/loop_icon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_gravity="bottom"
+        android:background="@color/black">
+
+        <TextView
+            android:id="@+id/loop_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </FrameLayout>
+</CardView><!--layout_guide-->
+```
+
 ### *031.流式LayoutTab、LayoutLabel：LayoutScroll、LayoutFlow、AttrsHelper、AdapterTab、AdapterLabel、AdapterTemplate、AdapterFlow、FlowListener、FlowListenerAdapter、ActionRect、ActionTri、ActionRound、ActionColor、ActionRes、ActionBase、ActionDot、TextViewTabColor、BeanTab、BeanLabel、TabValue、TabTypeEvaluator、ConstantsFlow、ViewPagerHelper(2121)*
 
 | 序号 | 方法                     | 功能                                                             |
