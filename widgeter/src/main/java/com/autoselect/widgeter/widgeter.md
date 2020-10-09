@@ -937,23 +937,23 @@ class TabFragment : Fragment() {
 ```kotlin
 class TabVerticalActivity : AppCompatActivity() {
     private val menuList: MutableList<BeanMenu?> = mutableListOf()
-    private var mTabFlowLayout: LayoutTab? = null
-    private var mRecyclerView: RecyclerView? = null
-    private var mManager: LinearLayoutManager? = null
-    private var mCurPosition = 0
+    private var layoutTab: LayoutTab? = null
+    private var detailRecycler: RecyclerView? = null
+    private var layoutManager: LinearLayoutManager? = null
+    private var curPosition = 0
     private var isNeedScroll = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tab_vertical)
-        mTabFlowLayout = findViewById(R.id.tab_flow)
-        mRecyclerView = findViewById(R.id.detail_recycler)
-        mManager = LinearLayoutManager(this)
-        mRecyclerView?.layoutManager = mManager
+        layoutTab = findViewById(R.id.tab_flow)
+        detailRecycler = findViewById(R.id.detail_recycler)
+        layoutManager = LinearLayoutManager(this)
+        detailRecycler?.layoutManager = layoutManager
         handleData(menuList)
     }
 
     private fun handleData(menuList: MutableList<BeanMenu?>?) {
-        mTabFlowLayout?.mAdapter =
+        layoutTab?.mAdapter =
             object : AdapterTab<BeanMenu?>(R.layout.flow_menu_textview, menuList) {
                 override fun bindView(view: View?, data: Any?, position: Int) {
                     setText(view, R.id.flow_menu_text, (data as BeanMenu).menu)
@@ -976,10 +976,10 @@ class TabVerticalActivity : AppCompatActivity() {
 
                 override fun onItemClick(view: View?, data: Any?, position: Int) {
                     super.onItemClick(view, data, position)
-                    val firstPosition = mManager?.findFirstVisibleItemPosition() ?: 0
-                    val lastPosition = mManager?.findLastVisibleItemPosition() ?: 0
-                    mCurPosition = position
-                    mRecyclerView?.apply {
+                    val firstPosition = layoutManager?.findFirstVisibleItemPosition() ?: 0
+                    val lastPosition = layoutManager?.findLastVisibleItemPosition() ?: 0
+                    curPosition = position
+                    detailRecycler?.apply {
                         when {
                             position <= firstPosition -> {
                                 smoothScrollToPosition(position)
@@ -987,25 +987,25 @@ class TabVerticalActivity : AppCompatActivity() {
                             }//目标在可见视图上面
                             position <= lastPosition -> {
                                 val top =
-                                    mRecyclerView?.getChildAt(position - firstPosition)?.top ?: 0
-                                if (top > 0) mRecyclerView?.smoothScrollBy(0, top)
+                                    detailRecycler?.getChildAt(position - firstPosition)?.top ?: 0
+                                if (top > 0) detailRecycler?.smoothScrollBy(0, top)
                             }//目标在first和last中间；往下点且position在中间，但lastPosition数据也能看到所以把它置顶
                             else -> {
-                                mRecyclerView?.scrollToPosition(position)//滚动到可视界面
+                                detailRecycler?.scrollToPosition(position)//滚动到可视界面
                                 isNeedScroll = true//此时recycler的item还未滚动到顶端，重新再让它滚动改一下
                             }//目标在可视视图下面
                         }
                     }
                 }
             }
-        mRecyclerView?.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+        detailRecycler?.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
                 super.onScrollStateChanged(recyclerView, newState)
-                if (newState == RecyclerView.SCROLL_STATE_IDLE) mTabFlowLayout?.apply {
+                if (newState == RecyclerView.SCROLL_STATE_IDLE) layoutTab?.apply {
                     isItemClick = when {
                         isItemClick -> false
                         else -> {
-                            setItemClickByOutSet(mManager?.findFirstVisibleItemPosition() ?: 0)
+                            setItemClickByOutSet(layoutManager?.findFirstVisibleItemPosition() ?: 0)
                             true
                         }
                     }//如果上次为点击事件，则先还原，下次滑动时，监听即可
@@ -1016,14 +1016,14 @@ class TabVerticalActivity : AppCompatActivity() {
                 super.onScrolled(recyclerView, dx, dy)
                 if (isNeedScroll) {
                     isNeedScroll = false
-                    val index = mCurPosition - (mManager?.findFirstVisibleItemPosition() ?: 0)
-                    mRecyclerView?.apply {
+                    val index = curPosition - (layoutManager?.findFirstVisibleItemPosition() ?: 0)
+                    detailRecycler?.apply {
                         if (index in 0 until childCount) smoothScrollBy(0, getChildAt(index).top)
                     }
                 }
             }
         })
-        mRecyclerView?.adapter = RecyclerAdapter(R.layout.flow_detail_textview, menuList)
+        detailRecycler?.adapter = RecyclerAdapter(R.layout.flow_detail_textview, menuList)
     }
 
     internal inner class RecyclerAdapter(layoutResId: Int, data: MutableList<BeanMenu?>?) :
@@ -1289,8 +1289,8 @@ class LabelShowMoreActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_label_show_more)
-        val flowLayout = findViewById<LayoutLabel?>(R.id.more_flow)
-        flowLayout.setLabelBean(BeanLabel().apply {
+        val layoutLabel = findViewById<LayoutLabel?>(R.id.more_flow)
+        layoutLabel.setLabelBean(BeanLabel().apply {
             maxSelectCount = 3
             isAutoScroll = true
             showLines = 3
@@ -1298,8 +1298,8 @@ class LabelShowMoreActivity : AppCompatActivity() {
             showMoreColor = Color.WHITE
             handUpLayoutId = R.layout.flow_label_handup
         })
-        flowLayout.setSelects(0, 1, 2)
-        flowLayout.setAdapter(object :
+        layoutLabel.setSelects(0, 1, 2)
+        layoutLabel.setAdapter(object :
             AdapterLabel<String?>(R.layout.flow_item_textview, showMore) {
             override fun bindView(view: View?, data: Any?, position: Int) {
                 setText(view, R.id.flow_item_text, data as String)
