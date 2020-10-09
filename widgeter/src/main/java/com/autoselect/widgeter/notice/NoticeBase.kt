@@ -1,4 +1,4 @@
-package com.autoselect.widgeter.notification
+package com.autoselect.widgeter.notice
 
 import android.app.Notification
 import android.app.NotificationChannel
@@ -11,26 +11,26 @@ import androidx.core.app.NotificationCompat
 import android.text.TextUtils
 import com.autoselect.helper.AHelper
 
-open class NotificationBase {
+open class NoticeBase {
     var builder: NotificationCompat.Builder? = null
         private set
     private var mSmallIcon = 0//顶部状态栏小图标
-    fun <T : NotificationBase?> setSmallIcon(smallIcon: Int): T? =
+    fun <T : NoticeBase?> setSmallIcon(smallIcon: Int): T? =
         apply { mSmallIcon = smallIcon } as T
 
     protected var mContentTitle: CharSequence? = null//通知中心标题
-    fun <T : NotificationBase?> setContentTitle(contentTitle: CharSequence?): T? =
+    fun <T : NoticeBase?> setContentTitle(contentTitle: CharSequence?): T? =
         apply { mContentTitle = contentTitle } as T
 
     protected var mContentText: CharSequence? = null//通知中心内容
-    fun <T : NotificationBase?> setContentText(contentText: CharSequence?): T? =
+    fun <T : NoticeBase?> setContentText(contentText: CharSequence?): T? =
         apply { mContentText = contentText } as T
 
     protected var mSummaryText: CharSequence? = null//概要内容
-    fun <T : NotificationBase?> setSummaryText(summaryText: CharSequence?): T? =
+    fun <T : NoticeBase?> setSummaryText(summaryText: CharSequence?): T? =
         apply { mSummaryText = summaryText } as T
 
-    fun <T : NotificationBase?> setBaseInfo(
+    fun <T : NoticeBase?> setBaseInfo(
         icon: Int, contentTitle: CharSequence?, contentText: CharSequence?
     ): T? = apply {
         mSmallIcon = icon
@@ -39,49 +39,49 @@ open class NotificationBase {
     } as T
 
     private var mHeadUp = false
-    fun <T : NotificationBase?> setHeadUp(headUp: Boolean): T? = apply { mHeadUp = headUp } as T
+    fun <T : NoticeBase?> setHeadUp(headUp: Boolean): T? = apply { mHeadUp = headUp } as T
     private var mContentIntent: PendingIntent? = null//通知点击的件
-    fun <T : NotificationBase?> setContentIntent(contentIntent: PendingIntent?): T? =
+    fun <T : NoticeBase?> setContentIntent(contentIntent: PendingIntent?): T? =
         apply { mContentIntent = contentIntent } as T
 
     private var mDeleteIntent: PendingIntent? = null//通知删除事件
-    fun <T : NotificationBase?> setDeleteIntent(deleteIntent: PendingIntent?): T? =
+    fun <T : NoticeBase?> setDeleteIntent(deleteIntent: PendingIntent?): T? =
         apply { mDeleteIntent = deleteIntent } as T
 
     private var mFullscreenIntent: PendingIntent? = null//通知全屏事件
-    fun <T : NotificationBase?> setFullScreenIntent(fullscreenIntent: PendingIntent?): T? =
+    fun <T : NoticeBase?> setFullScreenIntent(fullscreenIntent: PendingIntent?): T? =
         apply { mFullscreenIntent = fullscreenIntent } as T
 
     private var mId = 0//通知ID
-    fun <T : NotificationBase?> setId(id: Int): T? = apply { mId = id } as T
+    fun <T : NoticeBase?> setId(id: Int): T? = apply { mId = id } as T
     private var mChannelId: String? = null//通知渠道ID
-    fun <T : NotificationBase?> setChannelId(channelId: String?): T? =
+    fun <T : NoticeBase?> setChannelId(channelId: String?): T? =
         apply { mChannelId = channelId } as T
 
     private var mChannelName: String? = null//通知渠道名称
-    fun <T : NotificationBase?> setChannelName(channelName: String?): T? =
+    fun <T : NoticeBase?> setChannelName(channelName: String?): T? =
         apply { mChannelName = channelName } as T
 
     private var mBigIcon = 0//大图标
-    fun <T : NotificationBase?> setBigIcon(bigIcon: Int): T? = apply { mBigIcon = bigIcon } as T
+    fun <T : NoticeBase?> setBigIcon(bigIcon: Int): T? = apply { mBigIcon = bigIcon } as T
     private var mTicker: CharSequence? = "您有新的消息"//顶部状态栏提示信息
-    fun <T : NotificationBase?> setTicker(ticker: CharSequence?): T? =
+    fun <T : NoticeBase?> setTicker(ticker: CharSequence?): T? =
         apply { mTicker = ticker } as T
 
     private var mSubText: CharSequence? = null
-    fun <T : NotificationBase?> setSubtext(subText: CharSequence?): T? =
+    fun <T : NoticeBase?> setSubtext(subText: CharSequence?): T? =
         apply { mSubText = subText } as T
 
     private var mTime: Long = 0//通知时间
-    fun <T : NotificationBase?> setTime(time: Long): T? = apply { mTime = time } as T
+    fun <T : NoticeBase?> setTime(time: Long): T? = apply { mTime = time } as T
     private var mIsShowTime = true//是否显示通知时间
-    fun <T : NotificationBase?> setIsShowWhen(isShowWhen: Boolean): T? =
+    fun <T : NoticeBase?> setIsShowWhen(isShowWhen: Boolean): T? =
         apply { mIsShowTime = isShowWhen } as T
 
     class BtnActionBean(val icon: Int, val text: CharSequence?, val pendingIntent: PendingIntent?)
 
     private var mBtnActionBeans: MutableList<BtnActionBean?>? = null//通知栏上按钮
-    fun <T : NotificationBase?> addAction(
+    fun <T : NoticeBase?> addAction(
         icon: Int, text: CharSequence?, pendingIntent: PendingIntent?
     ): T? = apply {
         if (mBtnActionBeans == null) mBtnActionBeans = mutableListOf()
@@ -90,11 +90,11 @@ open class NotificationBase {
     } as T//增加按钮点击
 
     private var mPriority = NotificationCompat.PRIORITY_DEFAULT//通知优先级
-    fun <T : NotificationBase?> setPriority(priority: Int): T? = apply { mPriority = priority } as T
+    fun <T : NoticeBase?> setPriority(priority: Int): T? = apply { mPriority = priority } as T
     private var mIsSound = true//是否有声音
     private var mIsVibrate = true//是否震动
     private var mLights = true//是否闪烁
-    fun <T : NotificationBase?> setDisplayForm(
+    fun <T : NoticeBase?> setDisplayForm(
         sound: Boolean, vibrate: Boolean, lights: Boolean
     ): T? = apply {
         mIsSound = sound
@@ -103,33 +103,33 @@ open class NotificationBase {
     } as T//设置表现形式
 
     private var mSoundUri: Uri? = null//声音资源地址
-    fun <T : NotificationBase?> setSoundUri(soundUri: Uri?): T? =
+    fun <T : NoticeBase?> setSoundUri(soundUri: Uri?): T? =
         apply { mSoundUri = soundUri } as T
 
     private var mVibratePatten: LongArray? = null
-    fun <T : NotificationBase?> setVibratePatten(vibratePatten: LongArray?): T? =
+    fun <T : NoticeBase?> setVibratePatten(vibratePatten: LongArray?): T? =
         apply { mVibratePatten = vibratePatten } as T
 
     private var mIsOnGoing = false//通知是否不可侧滑删除
-    fun <T : NotificationBase?> setIsOnGoing(isOnGoing: Boolean): T? =
+    fun <T : NoticeBase?> setIsOnGoing(isOnGoing: Boolean): T? =
         apply { mIsOnGoing = isOnGoing } as T
 
     private var mIsForeGroundService = false//是否显示是前台服务通知
-    fun <T : NotificationBase?> setForegroundService(): T? = apply {
+    fun <T : NoticeBase?> setForegroundService(): T? = apply {
         mIsForeGroundService = true
         mIsOnGoing = true
     } as T
 
     private var mVisibility = NotificationCompat.VISIBILITY_SECRET//通知可见度
-    fun <T : NotificationBase?> setVisibility(visibility: Int): T? =
+    fun <T : NoticeBase?> setVisibility(visibility: Int): T? =
         apply { mVisibility = visibility } as T
 
     private var mStyle: NotificationCompat.Style? = null//通知拓展样式
-    fun <T : NotificationBase?> setStyle(style: NotificationCompat.Style?): T? =
+    fun <T : NoticeBase?> setStyle(style: NotificationCompat.Style?): T? =
         apply { mStyle = style } as T
 
     private var mIsPolling = false//是否一直提示
-    fun <T : NotificationBase?> setIsPolling(isPolling: Boolean): T? =
+    fun <T : NoticeBase?> setIsPolling(isPolling: Boolean): T? =
         apply { mIsPolling = isPolling } as T
 
     companion object {
@@ -201,7 +201,7 @@ open class NotificationBase {
             ?: 0) or Notification.FLAG_INSISTENT
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
             NotificationChannel(mChannelId, mChannelName, NotificationManager.IMPORTANCE_HIGH)
-                .let { NotificationHelper.getManager()?.createNotificationChannel(it) }
-        NotificationHelper.notify(mId, notification)
+                .let { NoticeHelper.getManager()?.createNotificationChannel(it) }
+        NoticeHelper.notify(mId, notification)
     }//显示通知
 }

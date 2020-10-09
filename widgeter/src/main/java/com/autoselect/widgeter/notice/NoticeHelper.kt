@@ -1,4 +1,4 @@
-package com.autoselect.widgeter.notification
+package com.autoselect.widgeter.notice
 
 import android.app.Activity
 import android.app.Notification
@@ -12,45 +12,45 @@ import android.provider.Settings
 import androidx.core.app.NotificationManagerCompat
 import com.autoselect.helper.AHelper
 
-object NotificationHelper {
+object NoticeHelper {
     private var mNotificationManager: NotificationManager? = null
     fun buildSimple(
         id: Int, smallIcon: Int, contentTitle: CharSequence?,
         contentText: CharSequence?, contentIntent: PendingIntent?
-    ): NotificationBase? = NotificationBase().setId<NotificationBase?>(id)
-        ?.setBaseInfo<NotificationBase?>(smallIcon, contentTitle, contentText)
+    ): NoticeBase? = NoticeBase().setId<NoticeBase?>(id)
+        ?.setBaseInfo<NoticeBase?>(smallIcon, contentTitle, contentText)
         ?.setContentIntent(contentIntent)
 
     fun buildBigPic(
         id: Int, smallIcon: Int, contentTitle: CharSequence?, summaryText: CharSequence?
-    ): NotificationBigPic? = NotificationBigPic().setId<NotificationBase?>(id)
-        ?.setSmallIcon<NotificationBase?>(smallIcon)
-        ?.setContentTitle<NotificationBase?>(contentTitle)?.setSummaryText(summaryText)
+    ): NoticeBigPic? = NoticeBigPic().setId<NoticeBase?>(id)
+        ?.setSmallIcon<NoticeBase?>(smallIcon)
+        ?.setContentTitle<NoticeBase?>(contentTitle)?.setSummaryText(summaryText)
 
     fun buildBigText(
         id: Int, smallIcon: Int, contentTitle: CharSequence?, contentText: CharSequence?
-    ): NotificationBigText? = NotificationBigText().setId<NotificationBase?>(id)
+    ): NoticeBigText? = NoticeBigText().setId<NoticeBase?>(id)
         ?.setBaseInfo(smallIcon, contentTitle, contentText)
 
-    fun buildMailBox(id: Int, smallIcon: Int, contentTitle: CharSequence?): NotificationMailbox? =
-        NotificationMailbox().setId<NotificationBase?>(id)
-            ?.setSmallIcon<NotificationBase?>(smallIcon)?.setContentTitle(contentTitle)
+    fun buildMailBox(id: Int, smallIcon: Int, contentTitle: CharSequence?): NoticeMailbox? =
+        NoticeMailbox().setId<NoticeBase?>(id)
+            ?.setSmallIcon<NoticeBase?>(smallIcon)?.setContentTitle(contentTitle)
 
     fun buildProgress(
         id: Int, smallIcon: Int, contentTitle: CharSequence?, max: Int, progress: Int
-    ): NotificationProgress? = NotificationProgress().setProgress(max, progress)
-        ?.setId<NotificationBase?>(id)
-        ?.setSmallIcon<NotificationBase?>(smallIcon)?.setContentTitle(contentTitle)
+    ): NoticeProgress? = NoticeProgress().setProgress(max, progress)
+        ?.setId<NoticeBase?>(id)
+        ?.setSmallIcon<NoticeBase?>(smallIcon)?.setContentTitle(contentTitle)
 
-    fun buildProgress(id: Int, smallIcon: Int, contentTitle: CharSequence?): NotificationProgress? =
-        NotificationProgress().setIndeterminate(true)?.setId<NotificationBase?>(id)
-            ?.setSmallIcon<NotificationBase?>(smallIcon)?.setContentTitle(contentTitle)
+    fun buildProgress(id: Int, smallIcon: Int, contentTitle: CharSequence?): NoticeProgress? =
+        NoticeProgress().setIndeterminate(true)?.setId<NoticeBase?>(id)
+            ?.setSmallIcon<NoticeBase?>(smallIcon)?.setContentTitle(contentTitle)
 
     fun buildCustomView(
         id: Int, smallIcon: Int, contentTitle: CharSequence?, packageName: String?, layoutId: Int
-    ): NotificationCustomView? = NotificationCustomView(packageName, layoutId)
-        .setId<NotificationBase?>(id)
-        ?.setSmallIcon<NotificationBase?>(smallIcon)?.setContentTitle(contentTitle)
+    ): NoticeCustomView? = NoticeCustomView(packageName, layoutId)
+        .setId<NoticeBase?>(id)
+        ?.setSmallIcon<NoticeBase?>(smallIcon)?.setContentTitle(contentTitle)
 
     fun isNotifyPermissionOpen(context: Context): Boolean = when {
         Build.VERSION.SDK_INT >= Build.VERSION_CODES.O ->

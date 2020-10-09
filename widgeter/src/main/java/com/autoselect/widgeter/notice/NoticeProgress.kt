@@ -1,42 +1,42 @@
-package com.autoselect.widgeter.notification
+package com.autoselect.widgeter.notice
 
 import androidx.core.app.NotificationCompat
 
-class NotificationProgress : NotificationBase() {
+class NoticeProgress : NoticeBase() {
     companion object {
         private const val DEFAULT_FORMAT: String = "进度:%d/%d"
     }
 
     private var mFormat = DEFAULT_FORMAT//模版
-    fun setFormat(format: String): NotificationProgress? = apply { mFormat = format }
+    fun setFormat(format: String): NoticeProgress? = apply { mFormat = format }
     private var mMax = 0//最大进度
-    fun setMaxProgress(max: Int): NotificationProgress? = apply { mMax = max }
+    fun setMaxProgress(max: Int): NoticeProgress? = apply { mMax = max }
     private var mProgress = 0//进度条
-    fun setProgress(max: Int, progress: Int): NotificationProgress? = apply {
+    fun setProgress(max: Int, progress: Int): NoticeProgress? = apply {
         mMax = max
         mProgress = progress
-        setContentText<NotificationBase?>(String.format(DEFAULT_FORMAT, mProgress, mMax))
+        setContentText<NoticeBase?>(String.format(DEFAULT_FORMAT, mProgress, mMax))
     }
 
     private var mIndeterminate = false//是否无进度条
-    fun setIndeterminate(indeterminate: Boolean): NotificationProgress? = apply {
+    fun setIndeterminate(indeterminate: Boolean): NoticeProgress? = apply {
         mIndeterminate = indeterminate
         if (mIndeterminate) {
             mMax = 0
             mProgress = 0
-            setContentText<NotificationBase?>(null)
+            setContentText<NoticeBase?>(null)
         }
     }
 
     fun updateProgress(progress: Int, format: String, vararg args: Any?) {
         mProgress = progress
         mFormat = format
-        setContentText<NotificationBase?>(String.format(mFormat, *args))
+        setContentText<NoticeBase?>(String.format(mFormat, *args))
     }
 
     fun updateProgress(progress: Int) {
         mProgress = progress
-        setContentText<NotificationBase?>(String.format(DEFAULT_FORMAT, mProgress, mMax))
+        setContentText<NoticeBase?>(String.format(DEFAULT_FORMAT, mProgress, mMax))
     }
 
     private val updateProgress = builder?.setProgress(mMax, mProgress, mIndeterminate)

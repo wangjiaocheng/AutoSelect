@@ -21,7 +21,7 @@
 | 003  | *003.PopupImply(31)*                                                                                                                                                                                                                                                                                                                                  | 说明 |
 | 004  | *004.PopupSingle(111)*                                                                                                                                                                                                                                                                                                                                | 弹表 |
 | 005  | *005.PopupViewManager：PopupView、BackgroundConstructor、Coordinates、CoordinatesFinder(528)*                                                                                                                                                                                                                                                          | 弹框 |
-| 006  | *006.NotificationHelper：NotificationBase、NotificationBigPic、NotificationBigText、NotificationMailbox、NotificationProgress、NotificationCustomView(473)*                                                                                                                                                                                            | 通知 |
+| 006  | *006.NoticeHelper：NoticeBase、NoticeBigPic、NoticeBigText、NoticeMailbox、NoticeProgress、NoticeCustomView(473)*                                                                                                                                                                                                                                      | 通知 |
 | 007  | *007.SeekBar(755)*                                                                                                                                                                                                                                                                                                                                    | 拖动 |
 | 008  | *008.ProgressBar(258)*                                                                                                                                                                                                                                                                                                                                | 进度 |
 | 009  | *009.ProgressRound(165)*                                                                                                                                                                                                                                                                                                                              | 弧度 |
@@ -196,7 +196,7 @@
 | 62   | 16. BuilderPopupView       | 功能 |
 | 63   | 17. buildPopupView         | 功能 |
 
-### *006.通知NotificationHelper：NotificationBase、NotificationBigPic、NotificationBigText、NotificationMailbox、NotificationProgress、NotificationCustomView(473)*
+### *006.通知NoticeHelper：NoticeBase、NoticeBigPic、NoticeBigText、NoticeMailbox、NoticeProgress、NoticeCustomView(473)*
 
 | 序号 | 方法                            | 功能                         |
 |:-----|:--------------------------------|:-----------------------------|
@@ -1725,7 +1725,7 @@ class LabelShowMoreActivity : AppCompatActivity() {
 | 007  | *007.AlertDialog*      | B警告对话框                                                          |
 | 008  | *008.Toast*            | C吐司：042工具ToastHelper                                            |
 | 009  | *009.Snackbar*         | C快餐：043工具SnackbarHelper                                         |
-| 010  | *010.Notification*     | D通知：006自制NotificationHelper                                     |
+| 010  | *010.Notification*     | D通知：006自制NoticeHelper                                           |
 | 011  | *011.RemoteViews*      | E桌面控件                                                            |
 
 ## *附*

@@ -1,13 +1,13 @@
-package com.autoselect.widgeter.notification
+package com.autoselect.widgeter.notice
 
 import androidx.core.app.NotificationCompat
 
-class NotificationMailbox : NotificationBase() {
+class NoticeMailbox : NoticeBase() {
     private var mMessages: MutableList<String?>? = null
-    fun setMessages(messages: MutableList<String?>?): NotificationMailbox? =
+    fun setMessages(messages: MutableList<String?>?): NoticeMailbox? =
         apply { mMessages = messages }
 
-    fun addMsg(msg: String?): NotificationMailbox? = apply {
+    fun addMsg(msg: String?): NoticeMailbox? = apply {
         if (mMessages == null) mMessages = mutableListOf()
         mMessages?.add(msg)
     }
@@ -21,9 +21,9 @@ class NotificationMailbox : NotificationBase() {
                     for (msg in this) {
                         inboxStyle.addLine(msg)
                     }
-                    setStyle<NotificationBase?>(inboxStyle)
+                    setStyle<NoticeBase?>(inboxStyle)
                 }
-                else -> setContentText<NotificationBase?>(this[0])
+                else -> setContentText<NoticeBase?>(this[0])
             }
         }
     }

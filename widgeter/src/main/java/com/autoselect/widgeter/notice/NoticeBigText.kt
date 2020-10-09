@@ -1,10 +1,10 @@
-package com.autoselect.widgeter.notification
+package com.autoselect.widgeter.notice
 
 import androidx.core.app.NotificationCompat
 
-class NotificationBigText : NotificationBase() {
+class NoticeBigText : NoticeBase() {
     override fun beforeBuild() {
         NotificationCompat.BigTextStyle().setBigContentTitle(mContentTitle).bigText(mContentText)
-            .setSummaryText(mSummaryText).let { setStyle<NotificationBase?>(it) }
+            .setSummaryText(mSummaryText).let { setStyle<NoticeBase?>(it) }
     }
 }
