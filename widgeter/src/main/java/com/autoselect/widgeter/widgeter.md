@@ -780,7 +780,7 @@ class TabFragment : Fragment() {
     android:layout_height="match_parent"
     android:background="#506E7A"
     android:orientation="vertical"
-    tools:context=".view.TabActivity">
+    tools:context=".TabActivity">
 
     <com.autoselect.widgeter.flow.LayoutTab
         android:id="@+id/res_flow"
