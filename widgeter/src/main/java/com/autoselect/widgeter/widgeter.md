@@ -826,7 +826,7 @@ class GuideActivity : AppCompatActivity() {
 ```kotlin
 class TabActivity : AppCompatActivity() {
     private val mTitle: MutableList<String?> =
-        ArrayList(listOf(*"0 1 2 3 n4 5 6 7 8 9 ".split(" ".toRegex()).toTypedArray()))
+        ArrayList(listOf(*"0 1 2 3 4 5 6 7 8 9 ".split(" ".toRegex()).toTypedArray()))
     private val mFragments: MutableList<Fragment> = mutableListOf()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
