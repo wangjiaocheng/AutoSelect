@@ -2167,12 +2167,7 @@
 | 06   | 06. warn                | 功能 |
 | 07   | 07. error               | 功能 |
 | 08   | 08. wtf                 | 功能 |
-| 09   | 09. verbose             | 功能 |
-| 10   | 10. debug               | 功能 |
-| 11   | 11. info                | 功能 |
-| 12   | 12. warn                | 功能 |
-| 13   | 13. error               | 功能 |
-| 14   | 14. getStackTraceString | 功能 |
+| 09   | 09. getStackTraceString | 功能 |
 
 ### *092.日志LogHelper(681)*
 
