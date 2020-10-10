@@ -33,8 +33,7 @@ abstract class AdapterTemplate<T>(layoutId: Int, data: MutableList<*>?) :
         apply { view?.findViewById<ImageView?>(viewId)?.setImageBitmap(bitmap) }
 
     fun setVisible(view: View?, viewId: Int, isVisible: Boolean): AdapterTemplate<*>? = apply {
-        view?.findViewById<View?>(viewId)?.visibility =
-            if (isVisible) View.VISIBLE else View.GONE
+        view?.findViewById<View?>(viewId)?.visibility = if (isVisible) View.VISIBLE else View.GONE
     }
 
     fun setVisible(view: View?, viewId: Int, visible: Int): AdapterTemplate<*>? =
