@@ -1,11 +1,13 @@
 package com.autoselect.helper
 
+import android.Manifest
 import android.content.Intent
+import androidx.annotation.RequiresPermission
 import com.autoselect.helper.AHelper.app
 import com.autoselect.helper.ShellHelper.execCmd
-import org.jetbrains.anko.powerManager
 
 object RebootHelper {
+    @RequiresPermission(Manifest.permission.REBOOT)
     fun reboot(reason: String) = app.powerManager.reboot(reason)
     val reboot
         get() = run {

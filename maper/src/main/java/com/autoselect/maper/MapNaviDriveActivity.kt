@@ -8,8 +8,8 @@ import android.os.Bundle
 import com.amap.api.navi.enums.AimLessMode
 import com.amap.api.navi.model.*
 import com.amap.api.navi.view.RouteOverLay
+import com.autoselect.helper.ToastHelper.showLong
 import kotlinx.android.synthetic.main.activity_navi_basic.*
-import org.jetbrains.anko.longToast
 
 class MapNaviDriveActivity : MapNaviActivity() {
     var isTurn: Boolean = false
@@ -210,7 +210,7 @@ class MapNaviDriveActivity : MapNaviActivity() {
                     }
                 }
             }
-        }.run { longToast(toString()) }
+        }.run { showLong(toString()) }
     }
 
     private var aMapNaviPath: AMapNaviPath? = null

@@ -1,7 +1,7 @@
 package com.autoselect.maper
 
 import android.os.Bundle
-import org.jetbrains.anko.toast
+import com.autoselect.helper.ToastHelper.showShort
 
 class MapNaviWalkActivity : MapNaviActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,7 +13,7 @@ class MapNaviWalkActivity : MapNaviActivity() {
     }
 
     val calculateWalkRoute =
-        aMapNavi?.calculateWalkRoute(startPoints[0], endPoints[0]) ?: toast("路线计算失败,检查参数情况")
+        aMapNavi?.calculateWalkRoute(startPoints[0], endPoints[0]) ?: showShort("路线计算失败,检查参数情况")
 
     override fun onInitNaviSuccess() {
         calculateWalkRoute

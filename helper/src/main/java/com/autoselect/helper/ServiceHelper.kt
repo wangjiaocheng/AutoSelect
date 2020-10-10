@@ -4,7 +4,6 @@ import android.content.ComponentName
 import android.content.Intent
 import android.content.ServiceConnection
 import com.autoselect.helper.AHelper.app
-import org.jetbrains.anko.activityManager
 
 object ServiceHelper {
     val allRunningServices: MutableSet<*>?

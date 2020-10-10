@@ -29,7 +29,6 @@ import com.autoselect.helper.StringHelper.isNotSpace
 import com.autoselect.helper.StringHelper.isSpace
 import com.autoselect.helper.VersionHelper.aboveGingerbread
 import com.autoselect.helper.VersionHelper.aboveLollipopMR1
-import org.jetbrains.anko.*
 import java.io.BufferedReader
 import java.io.File
 import java.io.IOException
@@ -40,7 +39,7 @@ import java.util.*
 import java.util.regex.Pattern
 import kotlin.system.exitProcess
 
-object ApplicationHelper : AnkoLogger {
+object ApplicationHelper : LoggerHelper {
     val numCores: Int
         get() = try {
             File("/sys/devices/system/cpu/")
@@ -117,7 +116,8 @@ object ApplicationHelper : AnkoLogger {
     @RequiresPermission(KILL_BACKGROUND_PROCESSES)
     fun killProcess(processName: String) = try {
         when {
-            processName.contains(":") -> processName.split(":".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()[0]
+            processName.contains(":") -> processName.split(":".toRegex())
+                .dropLastWhile { it.isEmpty() }.toTypedArray()[0]
             else -> processName
         }.let { packageName ->
             app.activityManager.run {

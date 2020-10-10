@@ -16,13 +16,13 @@ import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
+import com.autoselect.helper.connectivityManager
 import com.google.gson.Gson
 import com.google.gson.annotations.SerializedName
 import com.tencent.mm.opensdk.modelpay.PayReq
 import com.tencent.mm.opensdk.openapi.WXAPIFactory
 import com.unionpay.UPPayAssistEx
 import okhttp3.*
-import org.jetbrains.anko.connectivityManager
 import retrofit2.Retrofit
 import retrofit2.http.GET
 import retrofit2.http.POST

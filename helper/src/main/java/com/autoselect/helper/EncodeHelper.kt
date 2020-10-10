@@ -43,7 +43,8 @@ object EncodeHelper {
 
     fun binDecode(input: String?): String = input?.run {
         if (isEmpty()) "" else StringBuilder().apply {
-            for (string in input.split(" ".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()) {
+            for (string in input.split(" ".toRegex()).dropLastWhile { it.isEmpty() }
+                .toTypedArray()) {
                 append(string.replace(" ", "").toInt(2).toChar())
             }
         }.toString()

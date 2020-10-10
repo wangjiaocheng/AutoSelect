@@ -16,13 +16,12 @@ import com.amap.api.maps.AMapException
 import com.amap.api.maps.offlinemap.OfflineMapCity
 import com.amap.api.maps.offlinemap.OfflineMapManager
 import com.amap.api.maps.offlinemap.OfflineMapStatus
-import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.debug
-import org.jetbrains.anko.error
-import org.jetbrains.anko.layoutInflater
+import com.autoselect.helper.LoggerHelper
+import com.autoselect.helper.debug
+import com.autoselect.helper.layoutInflater
 
 class MapOfflineChild(private val context: Context, offlineMapManager: OfflineMapManager?) :
-    AnkoLogger, View.OnClickListener, View.OnLongClickListener {
+    LoggerHelper, View.OnClickListener, View.OnLongClickListener {
     var offLineChildView: View? = null
         private set
     private var mOffLineCityName: TextView? = null

@@ -1,14 +1,12 @@
 package com.autoselect.helper
 
 import androidx.annotation.IntRange
-import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.debug
 import kotlin.experimental.and
 import kotlin.experimental.inv
 import kotlin.experimental.or
 import kotlin.experimental.xor
 
-object BitHelper : AnkoLogger {
+object BitHelper : LoggerHelper {
     fun checkBitValue(source: Byte, @IntRange(from = 0, to = 7) pos: Int): Boolean =
         source.toInt() ushr pos and 1 == 1
 

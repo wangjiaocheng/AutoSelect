@@ -27,15 +27,13 @@ import com.autoselect.helper.StringHelper.isSpace
 import com.autoselect.helper.VersionHelper.aboveHoneycombMR1
 import com.autoselect.helper.VersionHelper.aboveJellyBeanMR2
 import com.autoselect.helper.VersionHelper.aboveKitKat
-import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.debug
 import java.io.*
 import java.lang.ref.WeakReference
 import java.net.URL
 import java.util.*
 import kotlin.math.*
 
-object ImageHelper : AnkoLogger {
+object ImageHelper : LoggerHelper {
     fun makeKey(httpUrl: String): ByteArray = httpUrl.toByteArray()
     fun isSameKey(key: ByteArray, buffer: ByteArray): Boolean {
         when {
@@ -74,6 +72,7 @@ object ImageHelper : AnkoLogger {
     }
 
     fun getColorByInt(colorInt: Int): Int = colorInt or -16777216
+
     @JvmOverloads
     fun getColorHexString(color: Int, showAlpha: Boolean = true): String = String.format(
         if (showAlpha) "#%08X" else "#%06X", if (showAlpha) -0x1 else 0xFFFFFF and color
@@ -563,7 +562,8 @@ object ImageHelper : AnkoLogger {
     @JvmOverloads
     fun toAlpha(src: Bitmap, recycle: Boolean = false): Bitmap? = when {
         isEmptyBitmap(src) -> null
-        else -> src.extractAlpha().apply { if (recycle && !src.isRecycled && this != src) src.recycle() }
+        else -> src.extractAlpha()
+            .apply { if (recycle && !src.isRecycled && this != src) src.recycle() }
     }
 
     @JvmOverloads
@@ -623,7 +623,9 @@ object ImageHelper : AnkoLogger {
                     while (i < height - 1) {
                         var j = 1
                         while (j < width - 1) {
-                            if ((j - x).toDouble().pow(2) + (i - y).toDouble().pow(2) > radius.pow(2)) {
+                            if ((j - x).toDouble().pow(2) + (i - y).toDouble().pow(2)
+                                > radius.pow(2)
+                            ) {
                                 newR = 0
                                 newG = 0
                                 newB = 0

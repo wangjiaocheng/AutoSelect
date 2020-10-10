@@ -18,10 +18,13 @@ import android.view.GestureDetector
 import android.view.MotionEvent
 import android.view.View
 import androidx.annotation.AnyThread
+import com.autoselect.helper.LoggerHelper
 import com.autoselect.helper.VersionHelper.aboveHoneycomb
 import com.autoselect.helper.VersionHelper.aboveIceCreamSandwich
+import com.autoselect.helper.debug
+import com.autoselect.helper.info
+import com.autoselect.helper.warn
 import com.autoselect.widgeter.R
-import org.jetbrains.anko.*
 import java.io.File
 import java.io.Serializable
 import java.io.UnsupportedEncodingException
@@ -32,7 +35,7 @@ import java.util.concurrent.Executor
 import kotlin.math.*
 
 open class ScaleImageView @JvmOverloads constructor(context: Context, attr: AttributeSet? = null) :
-    View(context, attr), AnkoLogger {
+    View(context, attr), LoggerHelper {
     var scaleMax = 2f
         set(dpi) {
             field = resources.displayMetrics.run { xdpi + ydpi } / 2 / dpi
@@ -245,7 +248,7 @@ open class ScaleImageView @JvmOverloads constructor(context: Context, attr: Attr
 
     private class TaskTileLoad
     constructor(view: ScaleImageView, decoder: RegionDecoder, tile: Tile) :
-        AsyncTask<Void, Void, Bitmap>(), AnkoLogger {
+        AsyncTask<Void, Void, Bitmap>(), LoggerHelper {
         private val refView: WeakReference<ScaleImageView> = WeakReference(view)
         private val refDecoder: WeakReference<RegionDecoder> = WeakReference(decoder)
         private val refTile: WeakReference<Tile> = WeakReference(tile)
@@ -347,6 +350,7 @@ open class ScaleImageView @JvmOverloads constructor(context: Context, attr: Attr
     }
 
     var isDebug: Boolean = false
+
     @AnyThread
     private fun debugScale(message: String, vararg args: Any) {
         if (isDebug) debug("$loggerTag->${String.format(message, *args)}")
@@ -819,7 +823,7 @@ open class ScaleImageView @JvmOverloads constructor(context: Context, attr: Attr
         view: ScaleImageView, context: Context,
         decoderFactory: DecoderFactory<out ImageDecoder>,
         private val source: Uri, private val preview: Boolean
-    ) : AsyncTask<Void, Void, Int>(), AnkoLogger {
+    ) : AsyncTask<Void, Void, Int>(), LoggerHelper {
         private val refView: WeakReference<ScaleImageView> = WeakReference(view)
         private val refContext: WeakReference<Context> = WeakReference(context)
         private val refImageDecoder: WeakReference<DecoderFactory<out ImageDecoder>> =
@@ -909,7 +913,7 @@ open class ScaleImageView @JvmOverloads constructor(context: Context, attr: Attr
     private class TaskTilesInit internal constructor(
         view: ScaleImageView, context: Context,
         decoderFactory: DecoderFactory<out RegionDecoder>, private val source: Uri
-    ) : AsyncTask<Void, Void, IntArray>(), AnkoLogger {
+    ) : AsyncTask<Void, Void, IntArray>(), LoggerHelper {
         private val refView: WeakReference<ScaleImageView> = WeakReference(view)
         private val refContext: WeakReference<Context> = WeakReference(context)
         private val refRegionDecoder: WeakReference<DecoderFactory<out RegionDecoder>> =
@@ -989,6 +993,7 @@ open class ScaleImageView @JvmOverloads constructor(context: Context, attr: Attr
 
     var maxTileWidth: Int = tileSizeAuto
     var maxTileHeight: Int = tileSizeAuto
+
     @Synchronized
     private fun onTilesInited(
         regionDecoder: RegionDecoder, width: Int, height: Int, orientation: Int
@@ -1133,6 +1138,7 @@ open class ScaleImageView @JvmOverloads constructor(context: Context, attr: Attr
     }
 
     var regionDecoder: DecoderFactory<out RegionDecoder> = DecoderFactory(RegionDecoder::class.java)
+
     @JvmOverloads
     fun setImage(
         imageSource: ImageSource?, previewSource: ImageSource? = null, state: ImageViewState? = null
@@ -1843,20 +1849,20 @@ open class ScaleImageView @JvmOverloads constructor(context: Context, attr: Attr
                     )
                     vTranslate?.let {
                         drawText(
-                            "Translate: ${String.format(
-                                Locale.ENGLISH, "%.2f", it.x
-                            )}:${String.format(
-                                Locale.ENGLISH, "%.2f", it.y
-                            )}", 5f, 35f, this
+                            "Translate: ${
+                                String.format(Locale.ENGLISH, "%.2f", it.x)
+                            }:${
+                                String.format(Locale.ENGLISH, "%.2f", it.y)
+                            }", 5f, 35f, this
                         )
                     }
                     center?.let {
                         drawText(
-                            "Source center: ${String.format(
-                                Locale.ENGLISH, "%.2f", it.x
-                            )}:${String.format(
-                                Locale.ENGLISH, "%.2f", it.y
-                            )}", 5f, 55f, this
+                            "Source center: ${
+                                String.format(Locale.ENGLISH, "%.2f", it.x)
+                            }:${
+                                String.format(Locale.ENGLISH, "%.2f", it.y)
+                            }", 5f, 55f, this
                         )
                     }
                     strokeWidth = 2f
@@ -2028,13 +2034,14 @@ open class ScaleImageView @JvmOverloads constructor(context: Context, attr: Attr
                         reqWidth == 0 || reqHeight == 0 -> 32
                         else -> {
                             if (sHeightSelect > reqHeight || sWidthSelect > reqWidth)
-                                (sHeightSelect.toFloat() / reqHeight.toFloat()).roundToInt().let { heightRatio ->
-                                    (sWidthSelect.toFloat() / reqWidth.toFloat()).roundToInt()
-                                        .let { widthRatio ->
-                                            inSampleSize =
-                                                if (heightRatio < widthRatio) heightRatio else widthRatio
-                                        }
-                                }
+                                (sHeightSelect.toFloat() / reqHeight.toFloat()).roundToInt()
+                                    .let { heightRatio ->
+                                        (sWidthSelect.toFloat() / reqWidth.toFloat()).roundToInt()
+                                            .let { widthRatio ->
+                                                inSampleSize =
+                                                    if (heightRatio < widthRatio) heightRatio else widthRatio
+                                            }
+                                    }
                             var power = 1
                             while (power * 2 < inSampleSize) {
                                 power *= 2

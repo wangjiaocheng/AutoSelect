@@ -1,14 +1,12 @@
 package com.autoselect.helper
 
 import android.util.Xml
-import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.error
 import org.xmlpull.v1.XmlPullParser
 import java.io.StringReader
 import java.lang.reflect.Field
 import java.lang.reflect.ParameterizedType
 
-object XmlParseHelper : AnkoLogger {
+object XmlParseHelper : LoggerHelper {
     fun getXmlList(xml: String, clazz: Class<*>, startName: String): MutableList<*>? =
         Xml.newPullParser().apply { StringReader(xml).use { setInput(it) } }.let { xmlPullParser ->
             var mutableList: MutableList<Any>? = null

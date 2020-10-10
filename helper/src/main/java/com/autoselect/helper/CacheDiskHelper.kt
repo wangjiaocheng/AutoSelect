@@ -12,8 +12,6 @@ import com.autoselect.helper.ConvertHelper.drawable2Bytes
 import com.autoselect.helper.FileHelper.createDirNone
 import com.autoselect.helper.FileIoHelper.writeFileFromBytesByChannel
 import com.autoselect.helper.StringHelper.isSpace
-import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.error
 import org.json.JSONArray
 import org.json.JSONObject
 import java.io.*
@@ -26,7 +24,7 @@ object CacheDiskHelper {
     class CacheDisk private constructor(
         private val cacheKey: String, private val cacheDir: File,
         private val maxCount: Int, private val maxSize: Long
-    ) : AnkoLogger {
+    ) : LoggerHelper {
         private val diskCacheManager: DiskCacheManager?
             get() = when {
                 createDirNone(cacheDir) -> DiskCacheManager(cacheDir, maxCount, maxSize)
@@ -86,8 +84,8 @@ object CacheDiskHelper {
             null
         }
 
-        private fun isDue(data: ByteArray): Boolean =
-            getDueTime(data).toInt().let { millis -> millis != -1 && System.currentTimeMillis() > millis }
+        private fun isDue(data: ByteArray): Boolean = getDueTime(data).toInt()
+            .let { millis -> millis != -1 && System.currentTimeMillis() > millis }
 
         private fun getDueTime(data: ByteArray): Long = when {
             hasTimeInfo(data) -> try {
@@ -110,11 +108,13 @@ object CacheDiskHelper {
             put(key, string2Bytes(value), saveTime)
 
         private fun string2Bytes(string: String?): ByteArray? = string?.toByteArray()
+
         @JvmOverloads
         fun getString(key: String, defaultValue: String? = null): String? =
             getBytes(key)?.let { bytes2String(it) } ?: defaultValue
 
         private fun bytes2String(bytes: ByteArray?): String? = bytes?.let { String(it) }
+
         @JvmOverloads
         fun put(key: String, value: JSONObject, saveTime: Int = -1) =
             put(key, jsonObject2Bytes(value), saveTime)
@@ -408,6 +408,7 @@ object CacheDiskHelper {
             }.let { getInstance(File(app.cacheDir, it), maxCount, maxSize) }
 
             private val CACHE_MAP: MutableMap<String, CacheDisk> = mutableMapOf()
+
             @JvmOverloads
             fun getInstance(
                 cacheDir: File, maxCount: Int = DEFAULT_MAX_COUNT, maxSize: Long = DEFAULT_MAX_SIZE
@@ -430,6 +431,7 @@ object CacheDiskHelper {
         get() = getCacheSize(defaultCacheDisk)
 
     fun getCacheSize(cacheDisk: CacheDisk?): Long = cacheDisk?.cacheSize ?: 0
+
     @JvmOverloads
     fun put(
         key: String, value: ByteArray?, saveTime: Int = -1, cacheDisk: CacheDisk? = defaultCacheDisk

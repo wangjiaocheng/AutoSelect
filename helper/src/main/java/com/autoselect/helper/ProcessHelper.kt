@@ -14,9 +14,8 @@ import androidx.annotation.RequiresPermission
 import com.autoselect.helper.AHelper.app
 import com.autoselect.helper.ApplicationHelper.appPackageName
 import com.autoselect.helper.VersionHelper.aboveLollipopMR1
-import org.jetbrains.anko.*
 
-object ProcessHelper : AnkoLogger {
+object ProcessHelper : LoggerHelper {
     val isMainProcess: Boolean
         get() = appPackageName == currentProcessName
     val currentProcessName: String

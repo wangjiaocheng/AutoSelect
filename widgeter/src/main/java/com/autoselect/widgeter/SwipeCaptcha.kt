@@ -11,9 +11,8 @@ import android.util.AttributeSet
 import android.util.TypedValue
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.interpolator.view.animation.FastOutLinearInInterpolator
-import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.debug
-import org.jetbrains.anko.error
+import com.autoselect.helper.LoggerHelper
+import com.autoselect.helper.debug
 import java.util.*
 import kotlin.math.abs
 import kotlin.math.pow
@@ -21,7 +20,7 @@ import kotlin.math.sqrt
 
 class SwipeCaptcha
 @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) :
-    AppCompatImageView(context, attrs, defStyleAttr), AnkoLogger {
+    AppCompatImageView(context, attrs, defStyleAttr), LoggerHelper {
     init {
         init(context, attrs, defStyleAttr)
     }
@@ -237,7 +236,9 @@ class SwipeCaptcha
 
     private fun drawPartCircle(start: PointF, end: PointF, path: Path, outer: Boolean) =
         PointF(start.x + (end.x - start.x) / 2, start.y + (end.y - start.y) / 2).let { middle ->
-            sqrt((middle.x - start.x).toDouble().pow(2.0) + (middle.y - start.y).toDouble().pow(2.0)).toFloat()
+            sqrt(
+                (middle.x - start.x).toDouble().pow(2.0) + (middle.y - start.y).toDouble().pow(2.0)
+            ).toFloat()
                 .let { radius ->
                     (radius * 0.551915024494f).let { gap ->
                         when (start.x) {

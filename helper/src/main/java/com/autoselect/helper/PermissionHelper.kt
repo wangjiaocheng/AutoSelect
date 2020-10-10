@@ -24,9 +24,6 @@ import com.autoselect.helper.IntentHelper.isIntentAvailable
 import com.autoselect.helper.StringHelper.isSpace
 import com.autoselect.helper.VersionHelper.aboveMarshmallow
 import com.autoselect.helper.VersionHelper.aboveOreo
-import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.appOpsManager
-import org.jetbrains.anko.error
 
 object PermissionHelper {
     fun builderSimple(activity: Activity): BuilderSimple = BuilderSimple(activity)
@@ -212,6 +209,7 @@ object PermissionHelper {
 
         private var permissionsDenied: MutableList<String>? = null
         private var permissionsDeniedForever: MutableList<String>? = null
+
         @RequiresApi(M)
         private fun startPermissionActivity() {
             permissionsDenied = mutableListOf()
@@ -220,7 +218,7 @@ object PermissionHelper {
         }
 
         @RequiresApi(M)
-        class PermissionActivity : Activity(), AnkoLogger {
+        class PermissionActivity : Activity(), LoggerHelper {
             override fun onCreate(savedInstanceState: Bundle?) {
                 window.addFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE or WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH)
                 when (intent.getIntExtra(TYPE, TYPE_RUNTIME)) {
@@ -280,6 +278,7 @@ object PermissionHelper {
                 const val TYPE_WRITE_SETTINGS = 0x02
                 const val TYPE_DRAW_OVERLAYS = 0x03
                 private const val TYPE = "TYPE"
+
                 @JvmOverloads
                 fun start(context: Context, type: Int, isNewTask: Boolean = true) =
                     context.startActivity(Intent().apply {
@@ -383,6 +382,7 @@ object PermissionHelper {
                 @RequiresApi(M)
                 get() = Settings.System.canWrite(app)
             private var simpleCallback4WriteSettings: SimpleCallback? = null
+
             @RequiresApi(M)
             fun requestWriteSettings(simpleCallback: SimpleCallback?) = when {
                 isGrantedWriteSettings -> simpleCallback?.onGranted()
@@ -402,6 +402,7 @@ object PermissionHelper {
                     else -> Settings.canDrawOverlays(app)
                 }
             private var simpleCallback4DrawOverlays: SimpleCallback? = null
+
             @RequiresApi(M)
             fun requestDrawOverlays(simpleCallback: SimpleCallback?) = when {
                 isGrantedDrawOverlays -> simpleCallback?.onGranted()

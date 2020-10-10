@@ -1,11 +1,9 @@
 package com.autoselect.helper
 
-import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.error
 import java.io.IOException
 import java.util.*
 
-object PropertiesHelper : AnkoLogger {
+object PropertiesHelper : LoggerHelper {
     private const val FILE_NAME = "/App.properties"
     val propertiesAll: MutableMap<String, String>?
         get() = try {

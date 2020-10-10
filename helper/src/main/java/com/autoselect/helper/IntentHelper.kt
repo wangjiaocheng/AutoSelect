@@ -20,12 +20,10 @@ import com.autoselect.helper.RomHelper.isSamsung
 import com.autoselect.helper.VersionHelper.aboveGingerbread
 import com.autoselect.helper.VersionHelper.aboveKitKat
 import com.autoselect.helper.VersionHelper.aboveNougat
-import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.error
 import java.io.File
 import java.util.*
 
-object IntentHelper : AnkoLogger {
+object IntentHelper : LoggerHelper {
     fun isIntentAvailable(intent: Intent): Boolean = app.packageManager
         .queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY).size > 0
 
@@ -87,6 +85,7 @@ object IntentHelper : AnkoLogger {
     }
 
     private const val GOOGLE_PLAY_APP_STORE_PACKAGE_NAME = "com.android.vending"
+
     @JvmOverloads
     fun getAppStoreIntent(
         isIncludeGooglePlayStore: Boolean = false, packageName: String = appPackageName

@@ -7,6 +7,7 @@ object ReflectionHelper {
         Package.getPackage(packageName).javaClass
 
     fun isInstance(clazz: Class<*>, any: Any): Boolean = clazz.isInstance(any)
+
     @Throws(
         NoSuchMethodException::class, SecurityException::class,
         ClassNotFoundException::class, InstantiationException::class,

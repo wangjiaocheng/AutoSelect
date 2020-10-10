@@ -6,12 +6,10 @@ import org.greenrobot.greendao.AbstractDao
 import org.greenrobot.greendao.database.Database
 import org.greenrobot.greendao.database.StandardDatabase
 import org.greenrobot.greendao.internal.DaoConfig
-import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.debug
 import java.lang.reflect.InvocationTargetException
 import java.util.*
 
-object MigrationHelper : AnkoLogger {
+object MigrationHelper : LoggerHelper {
     fun migrate(db: SQLiteDatabase, vararg daoClasses: Class<out AbstractDao<*, *>>) =
         migrate(StandardDatabase(db), *daoClasses)
             .apply { printLog("【The Old Database Version】${db.version}") }

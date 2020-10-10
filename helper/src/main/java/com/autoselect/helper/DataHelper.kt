@@ -108,6 +108,7 @@ object DataHelper {
     val formatE: DecimalFormat = formatDefault.apply { applyPattern("#.##E0") }//整数带两位小数科计
     val formatSplit: DecimalFormat = formatDefault.apply { applyPattern(",###") }//逗号分隔每三位数
     val formatAdd: DecimalFormat = formatDefault.apply { applyPattern("0000000000.00") }//十位整数带两位小数
+
     @JvmOverloads
     fun formatAmount(value: Double?, decimalFormat: DecimalFormat = formatDefault): String =
         (value?.run { decimalFormat.format(this) } ?: "0")

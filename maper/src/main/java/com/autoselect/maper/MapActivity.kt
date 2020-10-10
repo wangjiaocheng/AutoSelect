@@ -69,8 +69,7 @@ import com.amap.api.services.weather.LocalWeatherLiveResult
 import com.amap.api.services.weather.WeatherSearch
 import com.amap.api.services.weather.WeatherSearchQuery
 import com.amap.api.trace.*
-import com.autoselect.helper.AHelper
-import com.autoselect.helper.DateHelper
+import com.autoselect.helper.*
 import com.autoselect.helper.DateHelper.sdfDateByFullX
 import com.autoselect.helper.DensityHelper.dip2px
 import com.autoselect.helper.FileHelper.createDirNone
@@ -85,7 +84,6 @@ import com.autoselect.maper.MapErrorToast.showError
 import com.autoselect.maper.MapErrorToast.showTvToast
 import kotlinx.android.synthetic.main.activity_map.*
 import kotlinx.android.synthetic.main.busline_dialog.*
-import org.jetbrains.anko.*
 import org.json.JSONException
 import org.json.JSONObject
 import java.io.*
@@ -100,7 +98,7 @@ import kotlin.math.cos
 import kotlin.math.sin
 import kotlin.math.sqrt
 
-class MapActivity : AppCompatActivity(), AnkoLogger, AMap.OnMapScreenShotListener,
+class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListener,
     BusLineSearch.OnBusLineSearchListener, BusStationSearch.OnBusStationSearchListener,
     OnCloudSearchListener, AMap.InfoWindowAdapter, AMap.OnInfoWindowClickListener,
     GeocodeSearch.OnGeocodeSearchListener,

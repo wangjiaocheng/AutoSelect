@@ -14,7 +14,7 @@ import com.google.android.material.snackbar.BaseTransientBottomBar
 import com.google.android.material.snackbar.Snackbar
 import java.lang.ref.WeakReference
 
-object SnackbarHelper {
+object SnackHelper {
     @JvmOverloads
     fun colorSnackbar(
         view: View, message: String,
@@ -56,6 +56,7 @@ object SnackbarHelper {
     var WARNING_ORANGE = -0x3EF9//-0x3F00
     var ERROR_ALERT_RED = -0xBBCCA//-0x10000
     var ERROR_ALERT_YELLOW = Color.YELLOW//-0x1
+
     @JvmOverloads
     fun switchType(snackBar: Snackbar, type: Int = OTHER_MESSAGE) = when (type) {
         DEFAULT_INFO -> setColor(snackBar, DEFAULT_INFO_BLUE)
@@ -67,9 +68,11 @@ object SnackbarHelper {
     }
 
     @JvmOverloads
-    fun setColor(snackBar: Snackbar, @ColorInt backgroundColor: Int = Color.BLACK, @ColorInt messageColor: Int = Color.WHITE) =
-        snackBar.view.apply { setBackgroundColor(backgroundColor) }
-            .let { (it.findViewById<View>(R.id.snackbar_text) as TextView).setTextColor(messageColor) }
+    fun setColor(
+        snackBar: Snackbar,
+        @ColorInt backgroundColor: Int = Color.BLACK, @ColorInt messageColor: Int = Color.WHITE
+    ) = snackBar.view.apply { setBackgroundColor(backgroundColor) }
+        .let { (it.findViewById<View>(R.id.snackbar_text) as TextView).setTextColor(messageColor) }
 
     fun setBottomMargin(snackBar: Snackbar, marginBottom: Int = 0) =
         (snackBar.view.layoutParams as ViewGroup.MarginLayoutParams)

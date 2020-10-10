@@ -65,19 +65,24 @@ object ConvertHelper {
 
     fun byteSize2MemorySizeDesc(byteSize: Double): String {
         val kByte = byteSize / 1024
-        if (kByte < 1) return "${byteSize.toBigDecimal()
-            .setScale(2, BigDecimal.ROUND_HALF_UP).toPlainString()}BYTE"
+        if (kByte < 1) return "${
+            byteSize.toBigDecimal().setScale(2, BigDecimal.ROUND_HALF_UP).toPlainString()
+        }BYTE"
         val mByte = kByte / 1024
-        if (mByte < 1) return "${kByte.toBigDecimal()
-            .setScale(2, BigDecimal.ROUND_HALF_UP).toPlainString()}KB"
+        if (mByte < 1) return "${
+            kByte.toBigDecimal().setScale(2, BigDecimal.ROUND_HALF_UP).toPlainString()
+        }KB"
         val gByte = mByte / 1024
-        if (gByte < 1) return "${mByte.toBigDecimal()
-            .setScale(2, BigDecimal.ROUND_HALF_UP).toPlainString()}MB"
+        if (gByte < 1) return "${
+            mByte.toBigDecimal().setScale(2, BigDecimal.ROUND_HALF_UP).toPlainString()
+        }MB"
         val tByte = gByte / 1024
-        if (tByte < 1) return "${gByte.toBigDecimal()
-            .setScale(2, BigDecimal.ROUND_HALF_UP).toPlainString()}GB"
-        return "${tByte.toBigDecimal()
-            .setScale(2, BigDecimal.ROUND_HALF_UP).toPlainString()}TB"
+        if (tByte < 1) return "${
+            gByte.toBigDecimal().setScale(2, BigDecimal.ROUND_HALF_UP).toPlainString()
+        }GB"
+        return "${
+            tByte.toBigDecimal().setScale(2, BigDecimal.ROUND_HALF_UP).toPlainString()
+        }TB"
     }
 
     const val MSEC = 1

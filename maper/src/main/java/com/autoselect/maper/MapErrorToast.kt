@@ -8,10 +8,10 @@ import android.view.Gravity
 import android.widget.TextView
 import android.widget.Toast
 import com.amap.api.services.core.AMapException
-import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.info
+import com.autoselect.helper.LoggerHelper
+import com.autoselect.helper.info
 
-object MapErrorToast : AnkoLogger {
+object MapErrorToast : LoggerHelper {
     private val handler = Handler(Looper.getMainLooper())
     private var toast: Toast? = null
     private val runnable = Runnable {

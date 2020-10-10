@@ -6,12 +6,12 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import com.amap.api.maps.offlinemap.OfflineMapCity
 import com.amap.api.maps.offlinemap.OfflineMapManager
-import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.debug
+import com.autoselect.helper.LoggerHelper
+import com.autoselect.helper.debug
 
 class MapOfflineDownloadedAdapter(
     private val context: Context, private val offlineMapManager: OfflineMapManager?
-) : AnkoLogger, BaseAdapter() {
+) : LoggerHelper, BaseAdapter() {
     private val cities: MutableList<OfflineMapCity> = mutableListOf()
     private val initCityList = {
         var start = System.currentTimeMillis()

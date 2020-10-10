@@ -42,6 +42,7 @@ object CacheMemoryHelper {
             val instance: CacheMemory
                 get() = getInstance(DEFAULT_MAX_COUNT)
             private val CACHE_MAP: MutableMap<String, CacheMemory> = mutableMapOf()
+
             @JvmOverloads
             fun getInstance(maxCount: Int, cacheKey: String = maxCount.toString()): CacheMemory =
                 CACHE_MAP[cacheKey] ?: synchronized(CacheMemory::class.java) {
@@ -57,6 +58,7 @@ object CacheMemoryHelper {
         get() = getCacheCount(defaultCacheMemory)
 
     fun getCacheCount(cacheMemory: CacheMemory?): Int = cacheMemory?.cacheCount ?: 0
+
     @JvmOverloads
     fun put(
         key: String, value: Any?, saveTime: Int = -1, cacheMemory: CacheMemory? = defaultCacheMemory

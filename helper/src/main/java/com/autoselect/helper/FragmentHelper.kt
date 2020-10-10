@@ -11,10 +11,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import com.autoselect.helper.VersionHelper.aboveJellyBean
-import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.error
 
-object FragmentHelper : AnkoLogger {
+object FragmentHelper : LoggerHelper {
     @JvmOverloads
     fun addFragment(
         fragmentManager: FragmentManager, add: Fragment, @IdRes containerId: Int,

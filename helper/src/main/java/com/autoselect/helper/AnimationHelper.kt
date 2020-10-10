@@ -6,10 +6,8 @@ import android.view.MotionEvent
 import android.view.View
 import android.view.animation.*
 import android.widget.ImageView
-import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.error
 
-object AnimationHelper : AnkoLogger {
+object AnimationHelper : LoggerHelper {
     fun isRunning(valueAnimator: ValueAnimator?): Boolean = valueAnimator?.isRunning ?: false
     fun isStarted(valueAnimator: ValueAnimator?): Boolean = valueAnimator?.isStarted ?: false
     fun start(animator: Animator?) = animator?.run { if (!isStarted) start() }
@@ -122,7 +120,8 @@ object AnimationHelper : AnkoLogger {
     fun animationColorGradient(
         beforeColor: Int, afterColor: Int, onDoIntListener: OnDoIntListener
     ) = ValueAnimator.ofObject(ArgbEvaluator(), beforeColor, afterColor).setDuration(3000)
-        .apply { addUpdateListener { onDoIntListener.doSomething(it.animatedValue as Int) } }.start()
+        .apply { addUpdateListener { onDoIntListener.doSomething(it.animatedValue as Int) } }
+        .start()
 
     private val VIEW_TOUCH_DARK: View.OnTouchListener = object : View.OnTouchListener {
         val BT_SELECTED: FloatArray = floatArrayOf(

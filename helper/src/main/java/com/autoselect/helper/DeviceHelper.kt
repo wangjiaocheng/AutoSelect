@@ -11,15 +11,12 @@ import androidx.annotation.RequiresPermission
 import com.autoselect.helper.AHelper.app
 import com.autoselect.helper.StringHelper.isNotSpace
 import com.autoselect.helper.VersionHelper.aboveLollipop
-import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.error
-import org.jetbrains.anko.telephonyManager
 import java.io.IOException
 import java.io.InputStreamReader
 import java.io.LineNumberReader
 import java.util.*
 
-object DeviceHelper : AnkoLogger {
+object DeviceHelper : LoggerHelper {
     val isAdbEnabled: Boolean
         get() = Settings.Secure.getInt(app.contentResolver, Settings.Global.ADB_ENABLED, 0) > 0
     val numberCpuSerial: String

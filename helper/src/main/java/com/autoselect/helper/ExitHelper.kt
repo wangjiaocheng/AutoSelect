@@ -6,13 +6,10 @@ import android.os.Process
 import com.autoselect.helper.AHelper.app
 import com.autoselect.helper.ActivityHelper.finishAllActivities
 import com.autoselect.helper.ToastHelper.showShort
-import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.activityManager
-import org.jetbrains.anko.info
 import java.util.*
 import kotlin.system.exitProcess
 
-object ExitHelper : AnkoLogger {
+object ExitHelper : LoggerHelper {
     val exitApp: Boolean
         get() = exitApp()
 

@@ -1,6 +1,5 @@
 package com.autoselect.helper
 
-import android.content.Context
 import android.net.wifi.WifiConfiguration
 import android.net.wifi.WifiConfiguration.KeyMgmt
 import android.net.wifi.WifiManager
@@ -15,7 +14,7 @@ import com.autoselect.helper.WifiHelper.checkState
 import java.lang.reflect.InvocationTargetException
 
 object WifiApHelper {
-    private val wifiManager = AHelper.app.getSystemService(Context.WIFI_SERVICE) as WifiManager
+    private val wifiManager = AHelper.app.wifiManager
     fun isWifiConnectSuccess(ssid: String?): Boolean =
         checkState && checkSSIDState(ssid) && isConnectedNetwork
 

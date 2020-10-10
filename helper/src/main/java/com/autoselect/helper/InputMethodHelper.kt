@@ -17,14 +17,10 @@ import androidx.annotation.RequiresApi
 import com.autoselect.helper.AHelper.app
 import com.autoselect.helper.ScreenHelper.navigationBarHeight
 import com.autoselect.helper.ScreenHelper.statusBarHeight
-import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.debug
-import org.jetbrains.anko.info
-import org.jetbrains.anko.inputMethodManager
 import java.util.*
 import kotlin.math.abs
 
-object InputMethodHelper : AnkoLogger {
+object InputMethodHelper : LoggerHelper {
     fun showInputMethod(activity: Activity) =
         showInputMethod(activity.currentFocus ?: View(activity))
 

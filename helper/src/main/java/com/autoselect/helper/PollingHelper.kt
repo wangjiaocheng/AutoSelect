@@ -17,24 +17,22 @@ object PollingHelper {
     fun startPollingService(
         context: Context?, interval: Int, cls: Class<*>?, action: String? = null
     ) {
-        val manager = context?.getSystemService(Context.ALARM_SERVICE) as AlarmManager?
         val intent =
             Intent(context, cls).apply { if (!TextUtils.isEmpty(action)) this.action = action }
         val pendingIntent =
             PendingIntent.getService(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT)
         val triggerAtTime = SystemClock.elapsedRealtime()
-        manager?.setRepeating(
+        context?.alarmManager?.setRepeating(
             AlarmManager.ELAPSED_REALTIME, triggerAtTime, interval * 1000L, pendingIntent
         )
     }//开启轮询服务
 
     @JvmOverloads
     fun stopPollingService(context: Context?, cls: Class<*>?, action: String? = null) {
-        val manager = context?.getSystemService(Context.ALARM_SERVICE) as AlarmManager?
         val intent =
             Intent(context, cls).apply { if (!TextUtils.isEmpty(action)) this.action = action }
         val pendingIntent =
             PendingIntent.getService(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT)
-        manager?.cancel(pendingIntent)
+        context?.alarmManager?.cancel(pendingIntent)
     }//停止轮询服务
 }

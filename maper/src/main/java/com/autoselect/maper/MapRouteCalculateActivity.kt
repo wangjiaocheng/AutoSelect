@@ -17,11 +17,11 @@ import com.amap.api.navi.model.AMapNaviPath
 import com.amap.api.navi.model.NaviLatLng
 import com.amap.api.navi.view.PoiInputItemWidget
 import com.amap.api.navi.view.RouteOverLay
+import com.autoselect.helper.LoggerHelper
+import com.autoselect.helper.ToastHelper.showShort
 import kotlinx.android.synthetic.main.activity_route_calculate.*
-import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.toast
 
-class MapRouteCalculateActivity : AnkoLogger, MapNaviActivity(),
+class MapRouteCalculateActivity : LoggerHelper, MapNaviActivity(),
     View.OnClickListener, CompoundButton.OnCheckedChangeListener {
     private var aMap: AMap? = null
     private var startMarker: Marker? = null
@@ -93,13 +93,13 @@ class MapRouteCalculateActivity : AnkoLogger, MapNaviActivity(),
             poi?.coordinate?.run {
                 when (requestCode) {
                     100 -> {
-                        toast("100")
+                        showShort("100")
                         startMarker?.position = LatLng(latitude, longitude)
                         startPoints.apply { clear() }
                             .add(NaviLatLng(latitude, longitude).apply { startLatLng = this })
                     }//起点选择完成
                     200 -> {
-                        toast("200")
+                        showShort("200")
                         endMarker?.position = LatLng(latitude, longitude)
                         endPoints.apply { clear() }
                             .add(NaviLatLng(latitude, longitude).apply { endLatLng = this })
@@ -131,12 +131,12 @@ class MapRouteCalculateActivity : AnkoLogger, MapNaviActivity(),
     private var routeIndex: Int = 0
     private var zindex: Int = 1
     val changeRoute: Any? = when {
-        !isSuccessCalculate -> toast("请先算路")
+        !isSuccessCalculate -> showShort("请先算路")
         routeOverlays.size() == 1 -> {
             isSuccessChooseRoute = true
             aMapNavi?.run {
                 selectRouteId(routeOverlays.keyAt(0))
-                toast(naviPath.run { "导航距离:${allLength}m\n导航时间:${allTime}s" })
+                showShort(naviPath.run { "导航距离:${allLength}m\n导航时间:${allTime}s" })
             }
         }
         else -> {
@@ -153,11 +153,11 @@ class MapRouteCalculateActivity : AnkoLogger, MapNaviActivity(),
                     aMapNavi?.selectRouteId(routeID)
                 }
             }
-            toast("路线标签:${aMapNavi?.naviPath?.labels}")
+            showShort("路线标签:${aMapNavi?.naviPath?.labels}")
             routeIndex++
             isSuccessChooseRoute = true
             aMapNavi?.naviPath?.restrictionInfo?.restrictionTitle
-                .let { if (!TextUtils.isEmpty(it)) toast(it ?: "") else Unit }
+                .let { if (!TextUtils.isEmpty(it)) showShort(it ?: "") else Unit }
         }
     }
 
@@ -171,8 +171,8 @@ class MapRouteCalculateActivity : AnkoLogger, MapNaviActivity(),
             }.let { startActivityForResult(it, 200) }
             R.id.calculate -> {
                 clearRoute
-                if (isAvoidHeightSpeed && isHeightSpeed) toast("不走高速与高速优先不能同时为true.")
-                if (isCost && isHeightSpeed) toast("高速优先与避免收费不能同时为true.")
+                if (isAvoidHeightSpeed && isHeightSpeed) showShort("不走高速与高速优先不能同时为true.")
+                if (isCost && isHeightSpeed) showShort("高速优先与避免收费不能同时为true.")
                 val strategy = try {
                     aMapNavi?.strategyConvert(
                         isCongestion, isAvoidHeightSpeed, isCost, isHeightSpeed, true
@@ -186,7 +186,7 @@ class MapRouteCalculateActivity : AnkoLogger, MapNaviActivity(),
                         carNumber = car_number.text.toString()
                         isRestriction = true
                     })
-                    toast("策略:$strategy")
+                    showShort("策略:$strategy")
                 }?.calculateDriveRoute(startPoints, endPoints, endPoints, strategy)
             }
             R.id.selectroute -> changeRoute

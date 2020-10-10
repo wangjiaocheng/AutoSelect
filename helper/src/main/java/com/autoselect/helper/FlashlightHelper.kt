@@ -6,11 +6,9 @@ import android.hardware.Camera
 import android.hardware.Camera.Parameters.FLASH_MODE_OFF
 import android.hardware.Camera.Parameters.FLASH_MODE_TORCH
 import com.autoselect.helper.AHelper.app
-import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.error
 import java.io.IOException
 
-object FlashlightHelper : AnkoLogger {
+object FlashlightHelper : LoggerHelper {
     val isFlashlightEnable: Boolean
         get() = app.packageManager.hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH)
     private var camera: Camera? = null

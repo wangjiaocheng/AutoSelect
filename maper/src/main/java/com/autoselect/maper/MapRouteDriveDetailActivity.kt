@@ -5,13 +5,13 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.amap.api.services.route.DrivePath
 import com.amap.api.services.route.DriveRouteResult
+import com.autoselect.helper.LoggerHelper
+import com.autoselect.helper.info
 import com.autoselect.maper.MapCommon.getFriendlyLength
 import com.autoselect.maper.MapCommon.getFriendlyTime
 import kotlinx.android.synthetic.main.activity_route_detail.*
-import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.info
 
-class MapRouteDriveDetailActivity : AppCompatActivity(), AnkoLogger {
+class MapRouteDriveDetailActivity : AppCompatActivity(), LoggerHelper {
     private var drivePath: DrivePath? = intent.getParcelableExtra("drive_path")
     private var driveRouteResult: DriveRouteResult? = intent.getParcelableExtra("drive_result")
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -48,10 +48,13 @@ class PopupViewManager @JvmOverloads constructor(tipListener: TipListener? = nul
             var mElevation: Float = 0f
             var mOffsetX: Int = 0
             var mOffsetY: Int = 0
+
             @Gravity
             var mTextGravity: Int = GRAVITY_LEFT
+
             @Align
             var mAlign: Int = ALIGN_CENTER
+
             @Position
             var mPosition: Int = 0
 
@@ -164,7 +167,9 @@ class PopupViewManager @JvmOverloads constructor(tipListener: TipListener? = nul
 
     companion object {
         private val isRtl: Boolean
-            get() = Character.getDirectionality(Locale.getDefault().run { getDisplayName(this)[0] }) == Character.DIRECTIONALITY_RIGHT_TO_LEFT
+            get() = Character.getDirectionality(
+                Locale.getDefault()
+                    .run { getDisplayName(this)[0] }) == Character.DIRECTIONALITY_RIGHT_TO_LEFT
     }
 
     object BackgroundConstructor {

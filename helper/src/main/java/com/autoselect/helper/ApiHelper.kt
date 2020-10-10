@@ -1,10 +1,8 @@
 package com.autoselect.helper
 
-import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.error
 import java.util.concurrent.ConcurrentHashMap
 
-object ApiHelper : AnkoLogger {
+object ApiHelper : LoggerHelper {
     private val apiMapInject: MutableMap<Class<*>?, Class<*>> = hashMapOf()
     fun registerApi(apiClass: Class<*>) {
         apiMapInject[apiClass.superclass] = apiClass
@@ -39,6 +37,7 @@ object ApiHelper : AnkoLogger {
     }
 
     private fun inject() {}
+
     @Target(AnnotationTarget.ANNOTATION_CLASS, AnnotationTarget.CLASS)
     @Retention(AnnotationRetention.BINARY)
     annotation class Api(val isMock: Boolean = false)

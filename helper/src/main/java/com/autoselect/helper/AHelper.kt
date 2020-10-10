@@ -16,8 +16,6 @@ import android.view.View
 import android.view.inputmethod.InputMethodManager
 import androidx.core.content.FileProvider
 import com.autoselect.helper.ApplicationHelper.appPackageName
-import org.jetbrains.anko.activityManager
-import org.jetbrains.anko.inputMethodManager
 import java.lang.reflect.InvocationTargetException
 import java.util.*
 

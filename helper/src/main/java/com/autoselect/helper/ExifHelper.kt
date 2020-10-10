@@ -3,11 +3,9 @@ package com.autoselect.helper
 import android.location.Location
 import android.media.ExifInterface
 import com.autoselect.helper.FileHelper.isExistsTimestamp
-import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.debug
 import kotlin.math.abs
 
-object ExifHelper : AnkoLogger {
+object ExifHelper : LoggerHelper {
     fun writeLatLonIntoJpeg(picPath: String, dLat: Double, dLon: Double) {
         if (isExistsTimestamp(picPath)) try {
             ExifInterface(picPath).run {

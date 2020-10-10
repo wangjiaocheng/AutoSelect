@@ -21,11 +21,9 @@ import com.autoselect.helper.ApplicationHelper.appPackageName
 import com.autoselect.helper.IntentHelper.isIntentAvailable
 import com.autoselect.helper.VersionHelper.aboveJellyBean
 import com.autoselect.helper.VersionHelper.aboveLollipop
-import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.error
 import java.util.*
 
-object ActivityHelper : AnkoLogger {
+object ActivityHelper : LoggerHelper {
     private fun startActivityBase(
         context: Context, extras: Bundle?, pkg: String, cls: String, options: Bundle?
     ): Boolean = Intent().apply {
@@ -61,15 +59,16 @@ object ActivityHelper : AnkoLogger {
             )
         }
 
-    fun startActivity(clz: Class<out Activity>, @AnimRes enterAnim: Int, @AnimRes exitAnim: Int): Boolean =
-        topActivityOrApp.let {
-            startActivityBase(
-                it, null, it.packageName, clz.name, getOptionsBundle(it, enterAnim, exitAnim)
-            ).apply {
-                if (this && Build.VERSION.SDK_INT < Build.VERSION_CODES.JELLY_BEAN && it is Activity)
-                    it.overridePendingTransition(enterAnim, exitAnim)
-            }
+    fun startActivity(
+        clz: Class<out Activity>, @AnimRes enterAnim: Int, @AnimRes exitAnim: Int
+    ): Boolean = topActivityOrApp.let {
+        startActivityBase(
+            it, null, it.packageName, clz.name, getOptionsBundle(it, enterAnim, exitAnim)
+        ).apply {
+            if (this && Build.VERSION.SDK_INT < Build.VERSION_CODES.JELLY_BEAN && it is Activity)
+                it.overridePendingTransition(enterAnim, exitAnim)
         }
+    }
 
     @JvmOverloads
     fun startActivity(
@@ -606,7 +605,9 @@ object ActivityHelper : AnkoLogger {
         }
     }
 
-    fun finishOtherActivities(clz: Class<out Activity>, @AnimRes enterAnim: Int, @AnimRes exitAnim: Int) {
+    fun finishOtherActivities(
+        clz: Class<out Activity>, @AnimRes enterAnim: Int, @AnimRes exitAnim: Int
+    ) {
         for (activity in activityList.reversed()) {
             if (activity.javaClass != clz) finishActivity(activity, enterAnim, exitAnim)
         }

@@ -20,7 +20,7 @@
 | 002  | *002.Title(203)*                                                                                                                                                                                                                                                                                                                                      | 标题 |
 | 003  | *003.PopupImply(31)*                                                                                                                                                                                                                                                                                                                                  | 说明 |
 | 004  | *004.PopupSingle(111)*                                                                                                                                                                                                                                                                                                                                | 弹表 |
-| 005  | *005.PopupViewManager：PopupView、BackgroundConstructor、Coordinates、CoordinatesFinder(528)*                                                                                                                                                                                                                                                          | 弹框 |
+| 005  | *005.PopupViewManager：PopupView、BackgroundConstructor、Coordinates、CoordinatesFinder(533)*                                                                                                                                                                                                                                                          | 弹框 |
 | 006  | *006.NoticeHelper：NoticeBase、NoticeBigPic、NoticeBigText、NoticeMailbox、NoticeProgress、NoticeCustomView(473)*                                                                                                                                                                                                                                      | 通知 |
 | 007  | *007.SeekBar(755)*                                                                                                                                                                                                                                                                                                                                    | 拖动 |
 | 008  | *008.ProgressBar(258)*                                                                                                                                                                                                                                                                                                                                | 进度 |
@@ -30,19 +30,19 @@
 | 012  | *012.TextViewVertical(100)*                                                                                                                                                                                                                                                                                                                           | 单滚 |
 | 013  | *013.TextViewVerticalMore(40)*                                                                                                                                                                                                                                                                                                                        | 多滚 |
 | 014  | *014.AutoImageView(35)*                                                                                                                                                                                                                                                                                                                               | 平滚 |
-| 015  | *015.PinView：ScaleImageView、ImageSource、ImageViewState、DecoderFactory、ImageDecoder、RegionDecoder(34+2108)*                                                                                                                                                                                                                                       | 图调 |
+| 015  | *015.PinView：ScaleImageView、ImageSource、ImageViewState、DecoderFactory、ImageDecoder、RegionDecoder(34+2115)*                                                                                                                                                                                                                                       | 图调 |
 | 016  | *016.Captcha(117)*                                                                                                                                                                                                                                                                                                                                    | 验证 |
-| 017  | *017.SwipeCaptcha(392)*                                                                                                                                                                                                                                                                                                                               | 滑块 |
+| 017  | *017.SwipeCaptcha(393)*                                                                                                                                                                                                                                                                                                                               | 滑块 |
 | 018  | *018.ScratchCard(48)*                                                                                                                                                                                                                                                                                                                                 | 刮刮 |
 | 019  | *019.CardStackView：AdapterAnimator、AdapterAllMoveDownAnimator、AdapterUpDownAnimator、AdapterUpDownStackAnimator、ViewDataObserver、AdapterDataObservable、ViewHolder、Adapter、AdapterStack、DelegateScrollStack、DelegateScroll(861+36+7)*                                                                                                          | 卡组 |
 | 020  | *020.CobwebView：RotateInfo(411)*                                                                                                                                                                                                                                                                                                                     | 蛛网 |
 | 021  | *021.NetSpeedView(155)*                                                                                                                                                                                                                                                                                                                               | 网速 |
-| 022  | *022.SeatAirplane(892)*                                                                                                                                                                                                                                                                                                                               | 机座 |
+| 022  | *022.SeatAirplane(890)*                                                                                                                                                                                                                                                                                                                               | 机座 |
 | 023  | *023.SeatMovie(717)*                                                                                                                                                                                                                                                                                                                                  | 影座 |
 | 024  | *024.RulerWheelView(464)*                                                                                                                                                                                                                                                                                                                             | 刻度 |
 | 025  | *025.ShoppingView(362)*                                                                                                                                                                                                                                                                                                                               | 商品 |
 | 026  | *026.ShineView：ShineButton、PorterShapeImageView、PorterImageView、ShineAnimator、EasingInterpolator、EasingProvider、Ease(699)*                                                                                                                                                                                                                      | 点赞 |
-| 027  | *027.HeartLayout：FloatAnimation、PathAnimator、HeartView(238)*                                                                                                                                                                                                                                                                                        | 爱心 |
+| 027  | *027.HeartLayout：FloatAnimation、PathAnimator、HeartView(241)*                                                                                                                                                                                                                                                                                        | 爱心 |
 | 028  | *028.WaveView(231)*                                                                                                                                                                                                                                                                                                                                   | 水波 |
 | 029  | *029.SideBar(240)*                                                                                                                                                                                                                                                                                                                                    | 侧边 |
 | 030  | *030.Banner：BannerHelper、TypeBannerTrans、BeanPage、PageListener、RecyclerViewHolder、RecyclerBaseAdapter、TypeTrans、Transformer、TransformerCard、TransformerDepthPage、TransformerMz、TransformerZoomOutPage、BeanCircle、BeanRect、TypeIndicatorCircle、IndicatorCircle、IndicatorRect、IndicatorText(1060)*                                       | 横幅 |
@@ -128,7 +128,7 @@
 >>1. [popup_list_layout.xml](../../../../res/layout/popup_list_layout.xml)
 >>2. [popup_list_item.xml](../../../../res/layout/popup_list_item.xml)
 
-### *005.弹框PopupViewManager：PopupView、BackgroundConstructor、Coordinates、CoordinatesFinder(528)*
+### *005.弹框PopupViewManager：PopupView、BackgroundConstructor、Coordinates、CoordinatesFinder(533)*
 
 | 序号 | 方法                       | 功能 |
 |:-----|:---------------------------|:----|
@@ -313,7 +313,7 @@
 >1. anim:[anim_translate.xml](../../../../res/anim/anim_translate.xml)
 >2. layout:[layout_auto_imageview.xml](../../../../res/layout/layout_auto_imageview.xml)
 
-### *015.图调PinView：ScaleImageView、ImageSource、ImageViewState、DecoderFactory、ImageDecoder、RegionDecoder(34+2108)*
+### *015.图调PinView：ScaleImageView、ImageSource、ImageViewState、DecoderFactory、ImageDecoder、RegionDecoder(34+2115)*
 
 | 序号 | 方法                            | 功能 |
 |:-----|:--------------------------------|:----|
@@ -412,7 +412,7 @@
 | 11   | 11. makeBitmap | 功能 |
 | 12   | 12. into       | 功能 |
 
-### *017.滑块SwipeCaptcha(392)*
+### *017.滑块SwipeCaptcha(393)*
 
 | 序号 | 方法                       | 功能 |
 |:-----|:---------------------------|:----|
@@ -516,7 +516,7 @@
 
 >- layout:[netspeed_view.xml](../../../../res/layout/netspeed_view.xml)
 
-### *022.机座SeatAirplane(892)*
+### *022.机座SeatAirplane(890)*
 
 | 序号 | 方法                    | 功能 |
 |:-----|:------------------------|:----|
@@ -595,7 +595,7 @@
 | 13   | 13. shineDistanceMultiple | 功能 |
 | 14   | 14. showAnimation         | 功能 |
 
-### *027.爱心HeartLayout：FloatAnimation、PathAnimator、HeartView(238)*
+### *027.爱心HeartLayout：FloatAnimation、PathAnimator、HeartView(241)*
 
 | 序号 | 方法         | 功能 |
 |:-----|:-------------|:----|
@@ -1335,7 +1335,7 @@ class LabelShowMoreActivity : AppCompatActivity() {
 </ConstraintLayout>
 ```
 
->- implementation "androidx.constraintlayout:constraintlayout:2.0.1"
+>- implementation "androidx.constraintlayout:constraintlayout:2.0.2"
 >- drawable备用
 >
 >>1. [flow_item_shape_red.xml](../../../../res/drawable/flow_item_shape_red.xml)

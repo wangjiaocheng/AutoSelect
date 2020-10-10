@@ -3,15 +3,13 @@ package com.autoselect.helper
 import com.autoselect.helper.FileHelper.createFileNone
 import com.autoselect.helper.FileHelper.getFileByPath
 import com.autoselect.helper.StringHelper.isSpace
-import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.error
 import java.io.*
 import java.util.*
 import java.util.zip.ZipEntry
 import java.util.zip.ZipFile
 import java.util.zip.ZipOutputStream
 
-object ZipHelper : AnkoLogger {
+object ZipHelper : LoggerHelper {
     @Throws(IOException::class)
     @JvmOverloads
     fun zipFiles(
@@ -88,6 +86,7 @@ object ZipHelper : AnkoLogger {
 
     var isStopZip: Boolean = false
     private const val BUFFER_SIZE: Int = 1024 * 1024
+
     @Throws(IOException::class)
     private fun zipFile(
         srcFile: File, zipOutputStream: ZipOutputStream,

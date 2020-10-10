@@ -30,13 +30,9 @@ import com.autoselect.helper.AHelper.topActivityOrApp
 import com.autoselect.helper.ApplicationHelper.appPackageName
 import com.autoselect.helper.VersionHelper.aboveJellyBean
 import com.autoselect.helper.VersionHelper.aboveJellyBeanMR1
-import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.error
-import org.jetbrains.anko.layoutInflater
-import org.jetbrains.anko.windowManager
 import java.lang.reflect.Field
 
-object ToastHelper : AnkoLogger {
+object ToastHelper : LoggerHelper {
     const val TopCenter: Int = Gravity.TOP
     const val TopLeft: Int = Gravity.TOP or Gravity.START
     const val TopRight: Int = Gravity.TOP or Gravity.END

@@ -1,7 +1,5 @@
 package com.autoselect.helper
 
-import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.error
 import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
@@ -10,7 +8,7 @@ import java.math.BigDecimal
 import java.math.BigInteger
 import java.util.*
 
-object JsonHelper : AnkoLogger {
+object JsonHelper : LoggerHelper {
     @JvmOverloads
     fun getInt(json: String, key: String, defaultValue: Int = -1): Int =
         getValueByType(json, key, defaultValue, TYPE_INT) as Int

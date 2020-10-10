@@ -5,11 +5,8 @@ import android.os.Looper
 import android.os.Message
 import android.util.SparseArray
 import com.autoselect.helper.ApplicationHelper.isAppDebug
-import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.verbose
-import org.jetbrains.anko.warn
 
-object UiMessageHelper : AnkoLogger, Handler.Callback {
+object UiMessageHelper : LoggerHelper, Handler.Callback {
     private val handler = Handler(Looper.getMainLooper(), this)
     fun send(id: Int): Boolean = handler.sendEmptyMessage(id)
     fun send(id: Int, obj: Any): Boolean = handler.sendMessage(handler.obtainMessage(id, obj))
@@ -116,12 +113,13 @@ object UiMessageHelper : AnkoLogger, Handler.Callback {
             }
         }
         synchronized(listenersUniversal) {
-            if (listenersUniversal.size > 0) defensiveCopyList.apply { addAll(listenersUniversal) }.run {
-                for (uiMessageCallback in this) {
-                    uiMessageCallback.handleMessage(uiMessage)
+            if (listenersUniversal.size > 0) defensiveCopyList.apply { addAll(listenersUniversal) }
+                .run {
+                    for (uiMessageCallback in this) {
+                        uiMessageCallback.handleMessage(uiMessage)
+                    }
+                    clear()
                 }
-                clear()
-            }
         }
         uiMessage.setMessage(null)
         return true

@@ -24,8 +24,6 @@ import com.autoselect.helper.ThreadHelper.poolSingle
 import com.autoselect.helper.VersionHelper.aboveIceCreamSandwichMR1
 import com.autoselect.helper.VersionHelper.aboveJellyBean
 import com.google.gson.GsonBuilder
-import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.error
 import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
@@ -44,7 +42,7 @@ import javax.xml.transform.stream.StreamResult
 import javax.xml.transform.stream.StreamSource
 import kotlin.math.min
 
-object LogHelper : AnkoLogger {
+object LogHelper : LoggerHelper {
     private val tags: Array<String> = arrayOf("VERBOSE", "DEBUG", "INFO", "WARN", "ERROR", "ASSERT")
 
     abstract class IFormatter {
@@ -176,6 +174,7 @@ object LogHelper : AnkoLogger {
     fun file(tag: String, content: Any) = log(FILE or Log.DEBUG, tag, content)
     fun json(tag: String, content: Any) = log(JSON or Log.DEBUG, tag, content)
     fun xml(tag: String, content: String) = log(XML or Log.DEBUG, tag, content)
+
     @IntDef(Log.VERBOSE, Log.DEBUG, Log.INFO, Log.WARN, Log.ERROR, Log.ASSERT)
     @Retention(AnnotationRetention.SOURCE)
     annotation class TYPE//详细、调试、信息、警告、错误、断言
@@ -214,17 +213,20 @@ object LogHelper : AnkoLogger {
             config.isTagSpace || config.isSwitchLogHead -> Throwable().stackTrace.let { stackTrace ->
                 (3 + config.stackOffset).let { stackIndex ->
                     if (stackIndex >= stackTrace.size) getFileName(stackTrace[3]).let { fileName ->
-                        if (config.isTagSpace && isSpace(tagTemp)) fileName.indexOf('.').let { index ->
-                            tagTemp = if (index == -1) fileName else fileName.substring(0, index)
-                        }//混淆可能不能发现'.'
+                        if (config.isTagSpace && isSpace(tagTemp)) fileName.indexOf('.')
+                            .let { index ->
+                                tagTemp =
+                                    if (index == -1) fileName else fileName.substring(0, index)
+                            }//混淆可能不能发现'.'
                         return TagHead(tagTemp, null, ": ")
                     }
                     stackTrace[stackIndex].run {
                         getFileName(this).let { fileName ->
-                            if (config.isTagSpace && isSpace(tagTemp)) fileName.indexOf('.').let { index ->
-                                tagTemp =
-                                    if (index == -1) fileName else fileName.substring(0, index)
-                            }//混淆可能不能发现'.'
+                            if (config.isTagSpace && isSpace(tagTemp)) fileName.indexOf('.')
+                                .let { index ->
+                                    tagTemp =
+                                        if (index == -1) fileName else fileName.substring(0, index)
+                                }//混淆可能不能发现'.'
                             if (config.isSwitchLogHead) Thread.currentThread().name.let { tName ->
                                 Formatter().format(
                                     "%s, %s.%s(%s:%d)",
@@ -572,7 +574,8 @@ object LogHelper : AnkoLogger {
                         }
                         append("$BORDER_MIDDLE$sepLine")//“├┄┄\n”
                     }
-                    for (line in msg.split(sepLine.toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()) {
+                    for (line in msg.split(sepLine.toRegex()).dropLastWhile { it.isEmpty() }
+                        .toTypedArray()) {
                         append("$BORDER_LEFT$line$sepLine")//“│ *\n”
                     }
                     append(BORDER_BOTTOM)//“└──”
@@ -621,7 +624,8 @@ object LogHelper : AnkoLogger {
     private fun printSubMsg(type: Int, tag: String, msg: String) {
         when {
             config.isSwitchLogBorder ->
-                for (line in msg.split(sepLine.toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()) {
+                for (line in msg.split(sepLine.toRegex()).dropLastWhile { it.isEmpty() }
+                    .toTypedArray()) {
                     Log.println(type, tag, "$BORDER_LEFT$line")//“│ ”
                 }
             else -> Log.println(type, tag, msg)

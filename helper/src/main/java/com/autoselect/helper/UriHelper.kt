@@ -11,11 +11,9 @@ import androidx.core.content.FileProvider
 import com.autoselect.helper.AHelper.app
 import com.autoselect.helper.PathHelper.pathExternal
 import com.autoselect.helper.VersionHelper.aboveKitKat
-import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.debug
 import java.io.File
 
-object UriHelper : AnkoLogger {
+object UriHelper : LoggerHelper {
     fun getURLWithParams(url: String, params: MutableMap<String, String>): String =
         "$url?${joinParam(params)}"
 

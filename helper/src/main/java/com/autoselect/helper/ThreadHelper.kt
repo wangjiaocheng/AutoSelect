@@ -4,14 +4,12 @@ import android.os.Handler
 import android.os.Looper
 import android.util.SparseArray
 import androidx.annotation.IntRange
-import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.error
 import java.io.Serializable
 import java.util.concurrent.*
 import java.util.concurrent.atomic.AtomicInteger
 import java.util.concurrent.atomic.AtomicLong
 
-object ThreadHelper : AnkoLogger {
+object ThreadHelper : LoggerHelper {
     val defaultThreadPoolSize: Int?
         get() = (2 * Runtime.getRuntime().availableProcessors() + 1).let { if (it > 8) 8 else it }
     val isMainThread: Boolean
@@ -40,6 +38,7 @@ object ThreadHelper : AnkoLogger {
         val isCanceled: Boolean
             get() = state == CANCELLED
         var isSchedule: Boolean = false
+
         @Throws(Throwable::class)
         abstract fun doInBackground(): T?
 
@@ -97,6 +96,7 @@ object ThreadHelper : AnkoLogger {
         taskScheduled[task]?.shutdownNow().apply { taskScheduled.remove(task) }
 
     fun cancel(task: Task<*>) = task.cancel()
+
     @JvmOverloads
     fun <T> executeBySingleWithDelay(
         task: Task<T>, delay: Long = 0, unit: TimeUnit = TimeUnit.MILLISECONDS,
@@ -140,6 +140,7 @@ object ThreadHelper : AnkoLogger {
     }//设置延迟时间，或者立即执行
 
     private val taskScheduled: MutableMap<Task<*>, ScheduledExecutorService> = mutableMapOf()
+
     @Synchronized
     private fun getScheduledByTask(task: Task<*>): ScheduledExecutorService =
         taskScheduled[task] ?: Executors.newScheduledThreadPool(
@@ -226,6 +227,7 @@ object ThreadHelper : AnkoLogger {
     ): ExecutorService? = getPool(size, priority)
 
     private val typePriorityPools = SparseArray<SparseArray<ExecutorService>>()
+
     @JvmOverloads
     @Synchronized
     fun getPool(type: Int, priority: Int = Thread.NORM_PRIORITY): ExecutorService? =
@@ -307,6 +309,7 @@ object ThreadHelper : AnkoLogger {
     fun submit(task: Runnable): Future<*>? = executorService?.submit(task)
     fun <T> submit(task: Runnable, result: T): Future<T>? = executorService?.submit(task, result)
     fun <T> submit(task: Callable<T>): Future<T>? = executorService?.submit(task)//再get()获取result
+
     @Throws(InterruptedException::class, ExecutionException::class)//正常异常返回取消未完成任务
     fun <T> invokeAny(tasks: Collection<Callable<T>>): T? = executorService?.invokeAny(tasks)
 

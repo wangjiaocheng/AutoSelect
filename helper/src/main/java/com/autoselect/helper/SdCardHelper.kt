@@ -12,7 +12,6 @@ import com.autoselect.helper.FileHelper.getFreeSize
 import com.autoselect.helper.PathHelper.pathData
 import com.autoselect.helper.PathHelper.pathExternal
 import com.autoselect.helper.VersionHelper.aboveJellyBeanMR2
-import org.jetbrains.anko.storageManager
 import java.io.*
 import java.lang.reflect.Array
 import java.lang.reflect.InvocationTargetException
@@ -38,13 +37,17 @@ object SdCardHelper {
                                     if (!line.contains("secure") && !line.contains("asec"))
                                         when {
                                             line.contains("fat") ->
-                                                line.split(" ".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray().let { columns ->
-                                                    if (columns.size > 1) add("*${columns[1]}")
-                                                }
+                                                line.split(" ".toRegex())
+                                                    .dropLastWhile { it.isEmpty() }.toTypedArray()
+                                                    .let { columns ->
+                                                        if (columns.size > 1) add("*${columns[1]}")
+                                                    }
                                             line.contains("fuse") ->
-                                                line.split(" ".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray().let { columns ->
-                                                    if (columns.size > 1) add(columns[1])
-                                                }
+                                                line.split(" ".toRegex())
+                                                    .dropLastWhile { it.isEmpty() }.toTypedArray()
+                                                    .let { columns ->
+                                                        if (columns.size > 1) add(columns[1])
+                                                    }
                                         }
                                 }
                             }
@@ -67,7 +70,8 @@ object SdCardHelper {
                                 while (true) {
                                     bufferedReader.readLine()?.let { line ->
                                         if (line.contains("sdcard") && line.contains(".android_secure"))
-                                            line.split(" ".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray().let { strings ->
+                                            line.split(" ".toRegex()).dropLastWhile { it.isEmpty() }
+                                                .toTypedArray().let { strings ->
                                                 if (strings.size >= 5) return strings[1]
                                                     .replace("/.android_secure", "")
                                             }
@@ -133,7 +137,8 @@ object SdCardHelper {
                     for (storageVolume in app.storageManager.storageVolumes) {
                         add(
                             SdCardInfoItem(
-                                (StorageVolume::class.java.getMethod("getPath").invoke(storageVolume) as String),
+                                (StorageVolume::class.java.getMethod("getPath")
+                                    .invoke(storageVolume) as String),
                                 storageVolume.state, storageVolume.isRemovable
                             )
                         )
@@ -151,7 +156,8 @@ object SdCardHelper {
                             Class.forName("android.os.storage.StorageVolume").let { clazz ->
                                 for (i in 0 until Array.getLength(result)) {
                                     Array.get(result, i).let { element ->
-                                        (clazz.getMethod("getPath").invoke(element) as String).let { path ->
+                                        (clazz.getMethod("getPath")
+                                            .invoke(element) as String).let { path ->
                                             add(
                                                 SdCardInfoItem(
                                                     path, StorageManager::class.java.getMethod(
@@ -159,7 +165,8 @@ object SdCardHelper {
                                                     ).invoke(
                                                         app.storageManager, path
                                                     ) as String,
-                                                    clazz.getMethod("isRemovable").invoke(element) as Boolean
+                                                    clazz.getMethod("isRemovable")
+                                                        .invoke(element) as Boolean
                                                 )
                                             )
                                         }

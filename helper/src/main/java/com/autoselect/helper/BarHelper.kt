@@ -20,7 +20,6 @@ import com.autoselect.helper.VersionHelper.aboveJellyBeanMR1
 import com.autoselect.helper.VersionHelper.aboveJellyBeanMR2
 import com.autoselect.helper.VersionHelper.aboveKitKat
 import com.autoselect.helper.VersionHelper.aboveMarshmallow
-import org.jetbrains.anko.windowManager
 
 object BarHelper {
     fun isStatusBarExists(activity: Activity): Boolean =
@@ -32,6 +31,7 @@ object BarHelper {
 
     private const val TAG_STATUS_BAR = "TAG_STATUS_BAR"
     private const val TAG_OFFSET = "TAG_OFFSET"
+
     @JvmOverloads
     fun setStatusBarVisibility(activity: Activity, isVisible: Boolean = true) =
         activity.window.run {
@@ -139,6 +139,7 @@ object BarHelper {
 
     fun getStatusBarColor(activity: Activity): Int = activity.window.statusBarColor
     private const val ALPHA = 112
+
     @JvmOverloads
     fun setStatusBarColor(activity: Activity, @ColorInt color: Int, alpha: Int = ALPHA) =
         activity.window.run {
@@ -209,13 +210,14 @@ object BarHelper {
         }
     }//5.0以上状态栏不透明颜色
 
-    private fun createStatusBarViewByColor(activity: Activity, @ColorInt color: Int): StatusBarView =
-        StatusBarView(activity).apply {
-            tag = TAG_STATUS_BAR
-            layoutParams =
-                ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, statusBarHeight)
-            setBackgroundColor(color)
-        }
+    private fun createStatusBarViewByColor(
+        activity: Activity, @ColorInt color: Int
+    ): StatusBarView = StatusBarView(activity).apply {
+        tag = TAG_STATUS_BAR
+        layoutParams =
+            ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, statusBarHeight)
+        setBackgroundColor(color)
+    }
 
     @JvmOverloads
     fun setStatusBarColorForDrawerLayout(
@@ -486,8 +488,9 @@ object BarHelper {
         var i = 0
         while (i < vg.childCount) {
             vg.getChildAt(i).apply {
-                if (id != View.NO_ID && Resources.getSystem().getResourceEntryName(id) == "navigationBarBackground" && visibility == View.VISIBLE)
-                    return vg.systemUiVisibility and View.SYSTEM_UI_FLAG_HIDE_NAVIGATION == 0
+                if (id != View.NO_ID && Resources.getSystem()
+                        .getResourceEntryName(id) == "navigationBarBackground" && visibility == View.VISIBLE
+                ) return vg.systemUiVisibility and View.SYSTEM_UI_FLAG_HIDE_NAVIGATION == 0
             }
             i++
         }
@@ -504,8 +507,9 @@ object BarHelper {
             var i = 0
             while (i < vg.childCount) {
                 vg.getChildAt(i).apply {
-                    if (id != View.NO_ID && Resources.getSystem().getResourceEntryName(id) == "navigationBarBackground")
-                        visibility = if (isVisible) View.VISIBLE else View.INVISIBLE
+                    if (id != View.NO_ID && Resources.getSystem()
+                            .getResourceEntryName(id) == "navigationBarBackground"
+                    ) visibility = if (isVisible) View.VISIBLE else View.INVISIBLE
                 }
                 i++
             }

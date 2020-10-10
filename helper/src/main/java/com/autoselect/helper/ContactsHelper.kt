@@ -18,7 +18,7 @@ import com.autoselect.helper.AHelper.app
 import com.autoselect.helper.IntentHelper.isIntentAvailable
 import com.autoselect.helper.PathHelper.pathExternal
 import com.autoselect.helper.StringHelper.isNotSpace
-import org.jetbrains.anko.toast
+import com.autoselect.helper.ToastHelper.showShort
 import java.io.File
 import java.io.FileOutputStream
 
@@ -67,7 +67,7 @@ object ContactsHelper {
         registerReceiver(object : BroadcastReceiver() {
             override fun onReceive(_context: Context, _intent: Intent) {
                 when (resultCode) {
-                    Activity.RESULT_OK -> toast("短信发送成功")
+                    Activity.RESULT_OK -> showShort("短信发送成功")
                     SmsManager.RESULT_ERROR_GENERIC_FAILURE -> {
                     }
                     SmsManager.RESULT_ERROR_RADIO_OFF -> {
@@ -79,7 +79,7 @@ object ContactsHelper {
         }, IntentFilter("SENT_SMS_ACTION"))
         registerReceiver(object : BroadcastReceiver() {
             override fun onReceive(_context: Context, _intent: Intent) {
-                toast("${phoneNum}短信接收成功")
+                showShort("${phoneNum}短信接收成功")
             }
         }, IntentFilter("DELIVERED_SMS_ACTION"))
         if (isNotSpace(content)) SmsManager.getDefault().let { smsManager ->
@@ -167,9 +167,11 @@ object ContactsHelper {
                     if (getInt(getColumnIndex(ContactsContract.Contacts.HAS_PHONE_NUMBER)) > 0)
                         activity.contentResolver.query(
                             ContactsContract.CommonDataKinds.Phone.CONTENT_URI, null,
-                            "${ContactsContract.CommonDataKinds.Phone.CONTACT_ID} = ${getString(
-                                getColumnIndex(ContactsContract.Contacts._ID)
-                            )}", null, null
+                            "${ContactsContract.CommonDataKinds.Phone.CONTACT_ID} = ${
+                                getString(
+                                    getColumnIndex(ContactsContract.Contacts._ID)
+                                )
+                            }", null, null
                         )?.use { phones ->
                             if (phones.moveToFirst()) while (!phones.isAfterLast) {
                                 if (phones.getInt(phones.getColumnIndex(ContactsContract.CommonDataKinds.Phone.TYPE)) == 2)

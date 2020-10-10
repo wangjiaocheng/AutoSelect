@@ -1,7 +1,6 @@
 package com.autoselect.helper
 
 import android.Manifest
-import android.content.Context
 import android.net.wifi.ScanResult
 import android.net.wifi.WifiConfiguration
 import android.net.wifi.WifiConfiguration.KeyMgmt
@@ -18,8 +17,7 @@ object WifiHelper {
     fun connectWifi(wifiSsid: String?, wifiPassword: String?) =
         poolSingle?.execute(WifiConnectRunnable(wifiSsid, wifiPassword))
 
-    private val wifiManager: WifiManager? =
-        AHelper.app.getSystemService(Context.WIFI_SERVICE) as WifiManager
+    private val wifiManager: WifiManager? = AHelper.app.wifiManager
     val checkState: Boolean = wifiManager?.isWifiEnabled ?: false
     val openWifi = wifiManager?.run { if (!isWifiEnabled) isWifiEnabled = true }
     val closeWifi = wifiManager?.run { if (isWifiEnabled) isWifiEnabled = false }

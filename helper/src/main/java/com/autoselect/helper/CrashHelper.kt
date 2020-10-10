@@ -16,17 +16,14 @@ import com.autoselect.helper.FileHelper.pathRootData
 import com.autoselect.helper.FileIoHelper.writeFileFromString
 import com.autoselect.helper.StringHelper.isSpace
 import com.autoselect.helper.ThreadHelper.poolSingle
-import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.debug
-import org.jetbrains.anko.error
-import org.jetbrains.anko.toast
+import com.autoselect.helper.ToastHelper.showShort
 import java.io.File
 import java.io.PrintWriter
 import java.io.StringWriter
 import java.util.*
 import kotlin.system.exitProcess
 
-object CrashHelper : AnkoLogger {
+object CrashHelper : LoggerHelper {
     @RequiresPermission(WRITE_EXTERNAL_STORAGE)
     @JvmOverloads
     fun init(crashDir: File, onCrashListener: OnCrashListener? = null) =
@@ -62,7 +59,7 @@ object CrashHelper : AnkoLogger {
             override fun run() {
                 Looper.prepare()
                 it.printStackTrace()
-                app.toast(crashTip)
+                showShort(crashTip)
                 Looper.loop()
             }
         }.start()
@@ -130,9 +127,11 @@ object CrashHelper : AnkoLogger {
         defaultDir = app.run {
             "crash${File.separator}".let { crash ->
                 try {
-                    "${pathRootData}${resources.getString(
-                        packageManager.getPackageInfo(packageName, 0).applicationInfo.labelRes
-                    )}${File.separator}$crash"
+                    "${pathRootData}${
+                        resources.getString(
+                            packageManager.getPackageInfo(packageName, 0).applicationInfo.labelRes
+                        )
+                    }${File.separator}$crash"
                 } catch (e: Exception) {
                     "$pathAppCache$crash"
                 }

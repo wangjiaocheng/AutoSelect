@@ -4,6 +4,7 @@ import java.math.BigDecimal
 
 object CalculateHelper {
     private const val DEF_DIV_SCALE = 10
+
     @JvmOverloads
     fun add(v1: Double, v2: Double, scale: Int = DEF_DIV_SCALE): Double = when {
         scale < 0 -> throw IllegalArgumentException("The scale must be a positive integer or zero")

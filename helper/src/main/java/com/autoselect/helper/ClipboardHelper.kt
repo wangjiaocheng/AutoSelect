@@ -4,7 +4,6 @@ import android.content.ClipData
 import android.content.Intent
 import android.net.Uri
 import com.autoselect.helper.AHelper.app
-import org.jetbrains.anko.clipboardManager
 
 object ClipboardHelper {
     var textClip: CharSequence?

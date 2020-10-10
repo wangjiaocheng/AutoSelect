@@ -16,10 +16,10 @@ import android.view.ViewGroup
 import android.view.Window
 import android.view.animation.LinearInterpolator
 import androidx.appcompat.widget.AppCompatImageView
+import com.autoselect.helper.LoggerHelper
+import com.autoselect.helper.error
 import com.autoselect.helper.ScreenHelper.screenHeight
 import com.autoselect.helper.VersionHelper.aboveLollipop
-import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.error
 import java.util.*
 import kotlin.math.*
 
@@ -235,7 +235,7 @@ class ShineView : View {
 
     class ShineButton @JvmOverloads constructor(
         context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
-    ) : PorterShapeImageView(context, attrs, defStyleAttr), AnkoLogger {
+    ) : PorterShapeImageView(context, attrs, defStyleAttr), LoggerHelper {
         init {
             init(context, attrs)
         }
@@ -461,7 +461,7 @@ class ShineView : View {
 
     abstract class PorterImageView
     @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyle: Int = 0) :
-        AppCompatImageView(context, attrs, defStyle), AnkoLogger {
+        AppCompatImageView(context, attrs, defStyle), LoggerHelper {
         init {
             if (scaleType == ScaleType.FIT_CENTER) scaleType = ScaleType.CENTER_CROP
         }

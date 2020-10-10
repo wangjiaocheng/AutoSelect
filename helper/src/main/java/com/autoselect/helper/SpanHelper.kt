@@ -18,8 +18,6 @@ import androidx.annotation.IntDef
 import androidx.core.content.ContextCompat
 import com.autoselect.helper.AHelper.app
 import com.autoselect.helper.LogHelper.e
-import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.error
 import java.io.File
 import java.lang.ref.WeakReference
 
@@ -27,16 +25,19 @@ object SpanHelper {
     fun builderSpan(textView: TextView?): SpanBuilder = SpanBuilder(textView)
     class SpanBuilder(private val textView: TextView?) {
         private var mFlag: Int = Spanned.SPAN_EXCLUSIVE_EXCLUSIVE//标识
+
         @JvmOverloads
         fun setFlag(flag: Int = Spanned.SPAN_EXCLUSIVE_EXCLUSIVE): SpanBuilder =
             apply { mFlag = flag }
 
         private var mForegroundColor: Int = COLOR_DEFAULT//前景色
+
         @JvmOverloads
         fun setForegroundColor(@ColorInt foregroundColor: Int = COLOR_DEFAULT): SpanBuilder =
             apply { mForegroundColor = foregroundColor }
 
         private var mBackgroundColor: Int = COLOR_DEFAULT//背景色
+
         @JvmOverloads
         fun setBackgroundColor(@ColorInt backgroundColor: Int = COLOR_DEFAULT): SpanBuilder =
             apply { mBackgroundColor = backgroundColor }
@@ -55,6 +56,7 @@ object SpanHelper {
 
         private var mLineHeight: Int = -1
         private var mAlignLine: Int = ALIGN_CENTER
+
         @JvmOverloads
         fun setLineHeight(lineHeight: Int = -1, @Align alignLine: Int = ALIGN_CENTER): SpanBuilder =
             apply {
@@ -65,6 +67,7 @@ object SpanHelper {
         private var mQuoteColor: Int = COLOR_DEFAULT//引用线色
         private var mStripeWidth: Int = 2//1起
         private var mQuoteGapWidth: Int = 2
+
         @JvmOverloads
         fun setQuoteColor(
             @ColorInt quoteColor: Int = COLOR_DEFAULT, stripeWidth: Int = 2, quoteGapWidth: Int = 2
@@ -75,6 +78,7 @@ object SpanHelper {
         }
 
         private var mMargin: Int = -1//间距
+
         @JvmOverloads
         fun setMargin(margin: Int = -1): SpanBuilder = apply {
             mMargin = margin
@@ -84,6 +88,7 @@ object SpanHelper {
         private var mFirst: Int = -1//首行
         private var mRest: Int = -1//余行
         private var isLeadingMargin: Boolean = false//缩进
+
         @JvmOverloads
         fun setLeadingMargin(first: Int = -1, rest: Int = -1): SpanBuilder = apply {
             mFirst = first
@@ -95,6 +100,7 @@ object SpanHelper {
         private var mBulletRadius: Int = 3
         private var mBulletGapWidth: Int = 0//列表标记与文字间距
         private var isBullet: Boolean = false
+
         @JvmOverloads
         fun setBullet(
             @ColorInt bulletColor: Int = COLOR_DEFAULT, bulletRadius: Int = 3,
@@ -108,6 +114,7 @@ object SpanHelper {
 
         private var mFontSize: Int = -1//字号
         private var mFontSizeIsDp: Boolean = false
+
         @JvmOverloads
         fun setFontSize(fontSize: Int = -1, fontSizeIsDp: Boolean = false): SpanBuilder = apply {
             mFontSize = fontSize
@@ -115,11 +122,13 @@ object SpanHelper {
         }
 
         private var mYProportion: Float = -1f//字体比例
+
         @JvmOverloads
         fun setFontProportion(yProportion: Float = -1f): SpanBuilder =
             apply { mYProportion = yProportion }
 
         private var mXProportion: Float = -1f//字体横向比例
+
         @JvmOverloads
         fun setFontXProportion(xProportion: Float = -1f): SpanBuilder =
             apply { mXProportion = xProportion }
@@ -139,25 +148,30 @@ object SpanHelper {
         private var isBoldItalic: Boolean = false//粗斜体
         fun setBoldItalic(): SpanBuilder = apply { isBoldItalic = true }
         private var mFontFamily: String? = null//字体系列
+
         @JvmOverloads
         fun setFontFamily(fontFamily: String? = null): SpanBuilder =
             apply { mFontFamily = fontFamily }
 
         private var mTypeface: Typeface? = null//字体
+
         @JvmOverloads
         fun setTypeface(typeface: Typeface? = null): SpanBuilder = apply { mTypeface = typeface }
 
         private var mHorizontalAlign: Layout.Alignment? = null//水平对齐
+
         @JvmOverloads
         fun setHorizontalAlign(horizontalAlign: Layout.Alignment? = null): SpanBuilder =
             apply { mHorizontalAlign = horizontalAlign }
 
         private var mVerticalAlign: Int = -1//垂直对齐
+
         @JvmOverloads
         fun setVerticalAlign(verticalAlign: Int = -1): SpanBuilder =
             apply { mVerticalAlign = verticalAlign }
 
         private var mClickableSpan: ClickableSpan? = null//点击时间
+
         @JvmOverloads
         fun setClickSpan(clickableSpan: ClickableSpan? = null): SpanBuilder = apply {
             if (textView != null && textView.movementMethod == null)
@@ -166,6 +180,7 @@ object SpanHelper {
         }
 
         private var mUrl: String? = null//超链接
+
         @JvmOverloads
         fun setUrl(url: String? = null): SpanBuilder = apply {
             if (textView != null && textView.movementMethod == null)
@@ -176,6 +191,7 @@ object SpanHelper {
         private var mBlurRadius: Float = -1f//模糊半径
         private var mStyle: BlurMaskFilter.Blur? = null
         private var isBlur: Boolean = false
+
         @JvmOverloads
         fun setBlur(blurRadius: Float = -1f, style: BlurMaskFilter.Blur? = null): SpanBuilder =
             apply {
@@ -185,6 +201,7 @@ object SpanHelper {
             }//bug：其他地方存在相同字体，出现在之前不会模糊，出现在之后一起模糊，推荐所有字体都模糊
 
         private var mShader: Shader? = null
+
         @JvmOverloads
         fun setShader(shader: Shader? = null): SpanBuilder = apply { mShader = shader }
 
@@ -192,6 +209,7 @@ object SpanHelper {
         private var mShadowDx: Float = 0f
         private var mShadowDy: Float = 0f
         private var mShadowColor: Int = 0
+
         @JvmOverloads
         fun setShadow(
             shadowRadius: Float = -1f, shadowDx: Float = 0f, shadowDy: Float = 0f,
@@ -209,6 +227,7 @@ object SpanHelper {
 
         private val mTypeCharSequence = 0
         private var mText: CharSequence = ""
+
         @JvmOverloads
         fun append(text: CharSequence = ""): SpanBuilder = apply {
             apply(mTypeCharSequence)
@@ -225,6 +244,7 @@ object SpanHelper {
         private var mAlignImage: Int = ALIGN_BOTTOM
         private var mBitmap: Bitmap? = null
         private var isBitmap: Boolean = false
+
         @JvmOverloads
         fun appendImage(imageBitmap: Bitmap?, @Align alignImage: Int = ALIGN_BOTTOM): SpanBuilder =
             apply {
@@ -237,18 +257,21 @@ object SpanHelper {
 
         private var mDrawable: Drawable? = null
         private var isDrawable: Boolean = false
+
         @JvmOverloads
-        fun appendImage(imageDrawable: Drawable?, @Align alignImage: Int = ALIGN_BOTTOM): SpanBuilder =
-            apply {
-                apply(mTypeImage)
-                mAlignImage = alignImage
-                mDrawable = imageDrawable
-                mText = " $mText"
-                isDrawable = true
-            }
+        fun appendImage(
+            imageDrawable: Drawable?, @Align alignImage: Int = ALIGN_BOTTOM
+        ): SpanBuilder = apply {
+            apply(mTypeImage)
+            mAlignImage = alignImage
+            mDrawable = imageDrawable
+            mText = " $mText"
+            isDrawable = true
+        }
 
         private var mImageUri: Uri? = null
         private var isUri: Boolean = false
+
         @JvmOverloads
         fun appendImage(imageUri: Uri?, @Align alignImage: Int = ALIGN_BOTTOM): SpanBuilder =
             apply {
@@ -261,26 +284,30 @@ object SpanHelper {
 
         private var mImageResId: Int = -1
         private var isResourceId: Boolean = false
+
         @JvmOverloads
-        fun appendImage(@DrawableRes imageResourceId: Int, @Align alignImage: Int = ALIGN_BOTTOM): SpanBuilder =
-            apply {
-                apply(mTypeImage)
-                mAlignImage = alignImage
-                mImageResId = imageResourceId
-                mText = " $mText"
-                isResourceId = true
-            }
+        fun appendImage(
+            @DrawableRes imageResourceId: Int, @Align alignImage: Int = ALIGN_BOTTOM
+        ): SpanBuilder = apply {
+            apply(mTypeImage)
+            mAlignImage = alignImage
+            mImageResId = imageResourceId
+            mText = " $mText"
+            isResourceId = true
+        }
 
         private val mTypeSpace = 2
         private var mSpaceSize: Int = -1
         private var mSpaceColor: Int = Color.TRANSPARENT
+
         @JvmOverloads
-        fun appendSpace(spaceSize: Int = -1, @ColorInt spaceColor: Int = Color.TRANSPARENT): SpanBuilder =
-            apply {
-                apply(mTypeSpace)
-                mSpaceSize = spaceSize
-                mSpaceColor = spaceColor
-            }
+        fun appendSpace(
+            spaceSize: Int = -1, @ColorInt spaceColor: Int = Color.TRANSPARENT
+        ): SpanBuilder = apply {
+            apply(mTypeSpace)
+            mSpaceSize = spaceSize
+            mSpaceColor = spaceColor
+        }
 
         private var mType: Int = -1
         private fun apply(type: Int = -1) {
@@ -700,7 +727,7 @@ object SpanHelper {
         }
     }
 
-    internal class SpanImage : SpanDrawable, AnkoLogger {
+    internal class SpanImage : SpanDrawable, LoggerHelper {
         private var mDrawable: Drawable? = null
         private var mContentUri: Uri? = null
         private var mResourceId: Int = 0
@@ -736,7 +763,8 @@ object SpanHelper {
             mContentUri = uri
         }
 
-        constructor(@DrawableRes resourceId: Int, verticalAlignment: Int) : super(verticalAlignment) {
+        constructor(@DrawableRes resourceId: Int, verticalAlignment: Int) :
+                super(verticalAlignment) {
             mResourceId = resourceId
         }
     }

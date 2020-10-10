@@ -13,17 +13,17 @@ import android.view.*
 import android.view.animation.AccelerateDecelerateInterpolator
 import android.widget.OverScroller
 import androidx.annotation.RequiresApi
+import com.autoselect.helper.LoggerHelper
+import com.autoselect.helper.error
 import com.autoselect.helper.DensityHelper.dip2px
 import com.autoselect.widgeter.R
-import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.error
 import kotlin.math.abs
 import kotlin.math.max
 
 @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
 class CardStackView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0, defStyleRes: Int = 0
-) : ViewGroup(context, attrs, defStyleAttr, defStyleRes), DelegateScroll, AnkoLogger {
+) : ViewGroup(context, attrs, defStyleAttr, defStyleRes), DelegateScroll, LoggerHelper {
     init {
         init(context, attrs, defStyleAttr, defStyleRes)
     }
@@ -858,4 +858,4 @@ class CardStackView @JvmOverloads constructor(
     val cardPrevious = selectPosition.let {
         if (it != DEFAULT_SELECT_POSITION && it != 0) performItemClick(viewHolders[it - 1])
     }
-}
+}//import com.autoselect.helper.error不能少，默认不可使用

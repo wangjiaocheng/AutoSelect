@@ -1,11 +1,10 @@
 package com.autoselect.helper
 
 import com.autoselect.helper.StringHelper.isNotSpace
-import org.jetbrains.anko.AnkoLogger
 import java.util.*
 import java.util.regex.Pattern
 
-object ValidationHelper : AnkoLogger {
+object ValidationHelper : LoggerHelper {
     fun cutStringFromChar(string: String, sub: String, offset: Int): String = string.run {
         indexOf(sub).let { start ->
             when {
@@ -118,6 +117,7 @@ object ValidationHelper : AnkoLogger {
     private val email: Pattern =
         "^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)+$".toPattern()//"^\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$"
     private val simplePhone: Pattern = "^[1]\\d{10}$".toPattern()//简单手机
+
     /*
      * 移动：【134(0-8)、135、136、137、138、139】【147】【150、151、152、157、158、159】【178】【182、183、184、187、188】【198】
      * 联通：【130、131、132】                    【145】【155、156】             【166】【171、175、176】     【185、186】

@@ -10,14 +10,13 @@ import com.autoselect.helper.ConvertHelper.millis2TimeSpanFitByNow
 import com.autoselect.helper.ConvertHelper.string2Date
 import com.autoselect.helper.ConvertHelper.string2Millis
 import com.autoselect.helper.ConvertHelper.timeSpan2Millis
-import org.jetbrains.anko.AnkoLogger
 import java.text.DateFormat
 import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.util.*
 import java.util.regex.Pattern
 
-object DateHelper : AnkoLogger {
+object DateHelper : LoggerHelper {
     val timeZoneNameCurrent: String
         get() = createGmtOffsetString()
 
@@ -244,6 +243,7 @@ object DateHelper : AnkoLogger {
     fun isLeapYear(millis: Long?): Boolean = isLeapYear(millis2Date(millis))
     fun isLeapYear(date: Date?): Boolean = isLeapYear(getYyyy(date))
     fun isLeapYear(year: Int): Boolean = year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)
+
     @JvmOverloads
     fun getSecondsNightOrMorning(calendar: Calendar, isNight: Boolean = true): Long =
         Calendar.getInstance().apply {

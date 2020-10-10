@@ -146,6 +146,7 @@ object CacheDoubleHelper {
         get() = getCacheDiskSize(defaultCacheDouble)
 
     fun getCacheDiskSize(cacheDouble: CacheDouble?): Long = cacheDouble?.cacheDiskSize ?: 0
+
     @JvmOverloads
     fun put(
         key: String, value: ByteArray?, saveTime: Int = -1,

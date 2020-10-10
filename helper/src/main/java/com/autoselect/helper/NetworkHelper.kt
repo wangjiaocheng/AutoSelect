@@ -21,7 +21,6 @@ import com.autoselect.helper.ShellHelper.execCmd
 import com.autoselect.helper.VersionHelper.aboveGingerbread
 import com.autoselect.helper.VersionHelper.aboveHoneycomb
 import com.autoselect.helper.VersionHelper.aboveHoneycombMR2
-import org.jetbrains.anko.*
 import java.io.BufferedReader
 import java.io.IOException
 import java.io.InputStreamReader
@@ -31,7 +30,7 @@ import java.net.SocketException
 import java.net.UnknownHostException
 import java.util.*
 
-object NetworkHelper : AnkoLogger {
+object NetworkHelper : LoggerHelper {
     fun openSettingsWireless(activity: Activity) = activity.startActivityForResult(Intent().apply {
         action = Intent.ACTION_VIEW
         component = ComponentName("com.android.settings", "com.android.settings.WirelessSettings")

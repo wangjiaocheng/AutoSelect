@@ -16,8 +16,6 @@ import com.autoselect.helper.ActivityHelper.launcherActivityName
 import com.autoselect.helper.StringHelper.isSpace
 import com.autoselect.helper.VersionHelper.aboveIceCreamSandwich
 import com.autoselect.helper.VersionHelper.aboveLollipop
-import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.error
 import java.util.*
 
 object SystemHelper {
@@ -124,7 +122,7 @@ object SystemHelper {
             else -> null
         }
 
-    object SystemLanguage : AnkoLogger {
+    object SystemLanguage : LoggerHelper {
         fun applyLanguageSystem(activityClz: Class<out Activity?>?) =
             applyLanguageBase(currentLocale, activityClz, true, true)
 

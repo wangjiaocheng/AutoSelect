@@ -14,10 +14,9 @@ import net.lingala.zip4j.model.ZipParameters
 import net.lingala.zip4j.model.enums.CompressionLevel
 import net.lingala.zip4j.model.enums.CompressionMethod
 import net.lingala.zip4j.model.enums.EncryptionMethod
-import org.jetbrains.anko.AnkoLogger
 import java.io.File
 
-object ZipPlusHelper : AnkoLogger {
+object ZipPlusHelper : LoggerHelper {
     @JvmOverloads
     fun zipEncrypt(
         srcFilePath: String?, destPath: String?,
@@ -212,12 +211,12 @@ object ZipPlusHelper : AnkoLogger {
         (if (isSpace(passWord)) ZipFile(zipFile) else ZipFile(zipFile, passWord?.toCharArray()))
             .apply { if (isValidZipFile) extractAll(destDir?.absolutePath) else throw ZipException("压缩文件不合法，可能被损坏。") }
             .fileHeaders.let { headers ->
-            mutableListOf<File>().apply {
-                for (fileHeader in headers) {
-                    fileHeader.run { if (!isDirectory) add(File(destDir, fileName)) }
+                mutableListOf<File>().apply {
+                    for (fileHeader in headers) {
+                        fileHeader.run { if (!isDirectory) add(File(destDir, fileName)) }
+                    }
                 }
             }
-        }
     } catch (e: ZipException) {
         e.printStackTrace()
         null

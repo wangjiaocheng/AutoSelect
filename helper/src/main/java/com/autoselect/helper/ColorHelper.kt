@@ -36,6 +36,7 @@ object ColorHelper {
         (colorInt and -0x100) or (blue * 255.0f + 0.5f).toInt()//0.0..1.0
 
     fun string2ColorInt(colorString: String): Int = Color.parseColor(colorString)
+
     @JvmOverloads
     fun int2ArgbOrRgbString(colorInt: Int, isArgb: Boolean = true): String {
         var color = Integer.toHexString(if (isArgb) colorInt else colorInt and 0x00ffffff)

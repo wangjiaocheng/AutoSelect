@@ -16,16 +16,12 @@ import com.autoselect.helper.DataHelper.formatTwo
 import com.autoselect.helper.ToastHelper.COLOR_BG_SUCCESS
 import com.autoselect.helper.ToastHelper.setBgColor
 import com.autoselect.helper.ToastHelper.showShort
-import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.debug
-import org.jetbrains.anko.locationManager
-import org.jetbrains.anko.longToast
 import java.io.IOException
 import java.util.*
 import kotlin.math.abs
 import kotlin.math.floor
 
-object LocationHelper : AnkoLogger {
+object LocationHelper : LoggerHelper {
     val settingsGps
         get() = app.startActivity(Intent().apply {
             action = Settings.ACTION_LOCATION_SOURCE_SETTINGS
@@ -41,6 +37,7 @@ object LocationHelper : AnkoLogger {
         }
 
         var onGetLocationListener: OnGetLocationListener? = null
+
         @RequiresPermission(allOf = [ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION])
         override fun onDestroy() {
             unRegisterLocation()
@@ -147,6 +144,7 @@ object LocationHelper : AnkoLogger {
             powerRequirement = Criteria.POWER_LOW//电源
         }
     private var helperLocationListener: HelperLocationListener? = null
+
     @RequiresPermission(allOf = [ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION])
     fun registerLocation(
         minTime: Long, minDistance: Long, listener: OnLocationChangeListener?
@@ -271,7 +269,7 @@ object LocationHelper : AnkoLogger {
                 }
             }
             else -> {
-                app.longToast("you have to open INTERNET or GPS")
+                showShort("you have to open INTERNET or GPS")
                 null
             }
         }

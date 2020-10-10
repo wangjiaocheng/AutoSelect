@@ -12,12 +12,10 @@ import androidx.annotation.RequiresPermission
 import androidx.fragment.app.Fragment
 import com.autoselect.helper.AHelper.app
 import com.autoselect.helper.SdCardHelper.isSdCardEnable
-import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.info
 import java.text.SimpleDateFormat
 import java.util.*
 
-object PhotoHelper : AnkoLogger {
+object PhotoHelper : LoggerHelper {
     private const val PHOTO_REQUEST_GALLERY = 5001
     fun openGalleryMedia(activity: Activity) = activity.startActivityForResult(Intent().apply {
         action = Intent.ACTION_PICK
@@ -40,6 +38,7 @@ object PhotoHelper : AnkoLogger {
     }, PHOTO_REQUEST_GALLERY)
 
     private const val PHOTO_REQUEST_CAMERA = 5002
+
     @RequiresPermission(WRITE_EXTERNAL_STORAGE)
     fun openCameraImage(activity: Activity) = activity.startActivityForResult(
         getCameraIntent(createImageOutputUri(activity)), PHOTO_REQUEST_CAMERA
@@ -80,6 +79,7 @@ object PhotoHelper : AnkoLogger {
     } ?: Uri.parse("").apply { info("$loggerTag->生成照片输出路径：${this}") }
 
     private const val PHOTO_REQUEST_CUT = 5003
+
     @RequiresPermission(WRITE_EXTERNAL_STORAGE)
     @JvmOverloads
     fun cropImage(

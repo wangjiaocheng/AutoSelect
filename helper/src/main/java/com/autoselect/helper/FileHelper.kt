@@ -30,7 +30,6 @@ import com.autoselect.helper.SdCardHelper.isSdCardEnable
 import com.autoselect.helper.StringHelper.isSpace
 import com.autoselect.helper.VersionHelper.aboveJellyBeanMR2
 import com.autoselect.helper.VersionHelper.aboveKitKat
-import org.jetbrains.anko.*
 import java.io.*
 import java.net.URL
 import java.nio.ByteBuffer
@@ -39,7 +38,7 @@ import java.util.zip.GZIPInputStream
 import java.util.zip.GZIPOutputStream
 import javax.net.ssl.HttpsURLConnection
 
-object FileHelper : AnkoLogger {
+object FileHelper : LoggerHelper {
     fun zip(inputStream: InputStream, outputStream: OutputStream) = try {
         outputStream.use { output ->
             GZIPOutputStream(output).use { gzipOutputStream ->
@@ -519,6 +518,7 @@ object FileHelper : AnkoLogger {
     fun deleteFile(file: File?): Boolean = file?.run { !exists() || (isFile && delete()) } ?: false
     fun deleteFiles(dirPath: String?): Boolean = deleteFiles(getFileByPath(dirPath))
     fun deleteFiles(dir: File?): Boolean = deleteFilesByFilter(dir, FileFilter { it.isFile })
+
     @JvmOverloads
     fun deleteFilesByFilter(dirPath: String?, filter: FileFilter = FileFilter { true }): Boolean =
         deleteFilesByFilter(getFileByPath(dirPath), filter)
@@ -593,7 +593,8 @@ object FileHelper : AnkoLogger {
         file?.run {
             FileInputStream(this).use { fileInputStream ->
                 BufferedInputStream(fileInputStream).use { bufferedInputStream ->
-                    (if (System.getProperty("line.separator")?.endsWith("\n") == true) '\n' else '\r').toByte()
+                    (if (System.getProperty("line.separator")?.endsWith("\n") == true) '\n'
+                    else '\r').toByte()
                         .let {
                             ByteArray(1024).let { bytes ->
                                 var count = 1
@@ -827,7 +828,8 @@ object FileHelper : AnkoLogger {
         when {
             aboveKitKat && DocumentsContract.isDocumentUri(app, uri) -> when {
                 isExternalStorageDocument(uri) -> DocumentsContract.getDocumentId(uri)
-                    .split(":".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray().let { strings ->
+                    .split(":".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
+                    .let { strings ->
                         when {
                             "primary".equals(strings[0], true) -> "${pathExternal}${strings[1]}"
                             else -> ""
@@ -840,7 +842,8 @@ object FileHelper : AnkoLogger {
                     ), null, null
                 )
                 isMediaDocument(uri) -> DocumentsContract.getDocumentId(uri)
-                    .split(":".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray().let { strings ->
+                    .split(":".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
+                    .let { strings ->
                         when (strings[0]) {
                             "audio" -> MediaStore.Audio.Media.EXTERNAL_CONTENT_URI
                             "image" -> MediaStore.Images.Media.EXTERNAL_CONTENT_URI

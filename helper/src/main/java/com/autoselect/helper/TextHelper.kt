@@ -1,10 +1,9 @@
 package com.autoselect.helper
 
 import com.autoselect.helper.StringHelper.isSpace
-import org.jetbrains.anko.AnkoLogger
 import java.io.UnsupportedEncodingException
 
-object TextHelper : AnkoLogger {
+object TextHelper : LoggerHelper {
     fun string2Unicode(string: String?): String? = string?.let {
         StringBuffer().apply {
             for (char in string.toCharArray()) {

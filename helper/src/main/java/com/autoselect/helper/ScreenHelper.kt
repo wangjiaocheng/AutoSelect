@@ -17,7 +17,6 @@ import androidx.annotation.RequiresPermission
 import com.autoselect.helper.AHelper.app
 import com.autoselect.helper.SdCardHelper.isSdCardEnable
 import com.autoselect.helper.VersionHelper.aboveJellyBeanMR1
-import org.jetbrains.anko.*
 import java.io.File
 import java.io.FileNotFoundException
 import java.io.FileOutputStream
@@ -30,7 +29,7 @@ import kotlin.math.floor
 import kotlin.math.min
 import kotlin.math.sqrt
 
-object ScreenHelper : AnkoLogger {
+object ScreenHelper : LoggerHelper {
     val isScreenLock: Boolean
         get() = app.keyguardManager.inKeyguardRestrictedInputMode()
     var sleepDuration: Int

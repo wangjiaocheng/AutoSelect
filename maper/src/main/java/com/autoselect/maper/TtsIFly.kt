@@ -3,8 +3,8 @@ package com.autoselect.maper
 import android.content.Context
 import android.media.AudioManager
 import android.os.Bundle
+import com.autoselect.helper.audioManager
 import com.iflytek.cloud.*
-import org.jetbrains.anko.audioManager
 
 class TtsIFly private constructor(context: Context?) : Tts, SynthesizerListener,
     AudioManager.OnAudioFocusChangeListener {

@@ -15,16 +15,16 @@ import android.view.MotionEvent
 import android.view.ScaleGestureDetector
 import android.view.View
 import android.view.animation.DecelerateInterpolator
+import com.autoselect.helper.LoggerHelper
 import com.autoselect.helper.DensityHelper.dip2px
 import com.autoselect.helper.ToastHelper.showShort
-import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.debug
+import com.autoselect.helper.debug
 import java.util.*
 import kotlin.math.abs
 
 class SeatMovie
 @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) :
-    View(context, attrs, defStyleAttr), AnkoLogger {
+    View(context, attrs, defStyleAttr), LoggerHelper {
     init {
         initData(context, attrs)
     }

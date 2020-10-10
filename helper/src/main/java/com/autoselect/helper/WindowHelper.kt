@@ -9,7 +9,6 @@ import android.view.Surface
 import android.view.Window
 import android.view.WindowManager
 import com.autoselect.helper.AHelper.app
-import org.jetbrains.anko.windowManager
 
 object WindowHelper {
     val displayRotation: Int

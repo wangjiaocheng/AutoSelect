@@ -3,14 +3,12 @@ package com.autoselect.helper
 import com.autoselect.helper.DateHelper.sdfDateEn
 import com.autoselect.helper.ValidationHelper.isDate
 import com.autoselect.helper.ValidationHelper.isNumeric
-import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.error
 import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.util.*
 import java.util.regex.Pattern
 
-object IdCardHelper : AnkoLogger {
+object IdCardHelper : LoggerHelper {
     private val idCard15: Pattern =
         "^[1-9]\\d{7}((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0-1])\\d{3}$".toPattern()
     private val idCard18: Pattern =

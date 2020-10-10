@@ -38,6 +38,7 @@ object AnyHelper {
     fun isEmptyAny(any: SparseBooleanArray?): Boolean = any == null || any.size() == 0
     fun isEmptyAny(any: SparseIntArray?): Boolean = any == null || any.size() == 0
     fun isEmptyAny(any: LongSparseArray<*>?): Boolean = any == null || any.size() == 0
+
     @RequiresApi(JELLY_BEAN_MR2)
     fun isEmptyAny(any: SparseLongArray?): Boolean = any == null || any.size() == 0
 
@@ -53,6 +54,7 @@ object AnyHelper {
     fun isNotEmptyAny(any: SparseBooleanArray): Boolean = !isEmptyAny(any)
     fun isNotEmptyAny(any: SparseIntArray): Boolean = !isEmptyAny(any)
     fun isNotEmptyAny(any: LongSparseArray<*>): Boolean = !isEmptyAny(any)
+
     @RequiresApi(JELLY_BEAN_MR2)
     fun isNotEmptyAny(any: SparseLongArray): Boolean = !isEmptyAny(any)
 

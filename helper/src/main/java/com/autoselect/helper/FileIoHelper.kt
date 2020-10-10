@@ -203,8 +203,8 @@ object FileIoHelper {
 
     @JvmOverloads
     fun readFile2List(
-        file: File?, start: Int = 0, end: Int = 0x7FFFFFFF
-        , charsetName: String = System.getProperty("file.encoding") ?: "UTF-8"
+        file: File?, start: Int = 0, end: Int = 0x7FFFFFFF,
+        charsetName: String = System.getProperty("file.encoding") ?: "UTF-8"
     ): MutableList<String>? = file?.let {
         when {
             isExistsTimestamp(file) && start <= end -> try {

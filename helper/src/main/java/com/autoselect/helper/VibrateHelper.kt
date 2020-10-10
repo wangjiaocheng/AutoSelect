@@ -4,10 +4,10 @@ import android.Manifest.permission.VIBRATE
 import android.os.Vibrator
 import androidx.annotation.RequiresPermission
 import com.autoselect.helper.AHelper.app
-import org.jetbrains.anko.vibrator
 
 object VibrateHelper {
     private val vibrator: Vibrator = app.vibrator
+
     @RequiresPermission(VIBRATE)
     fun vibrateOnce(milliseconds: Int) = vibrator.vibrate(milliseconds.toLong())
 

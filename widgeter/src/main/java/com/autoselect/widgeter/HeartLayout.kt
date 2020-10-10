@@ -75,7 +75,8 @@ class HeartLayout @JvmOverloads constructor(
                         resources.let {
                             xRand = getDimension(
                                 R.styleable.HeartLayout_xRand,
-                                it.getDimensionPixelOffset(R.dimen.heart_anim_bezier_x_rand).toFloat()
+                                it.getDimensionPixelOffset(R.dimen.heart_anim_bezier_x_rand)
+                                    .toFloat()
                             ).toInt()
                             initX = getDimension(
                                 R.styleable.HeartLayout_initX,
@@ -87,7 +88,8 @@ class HeartLayout @JvmOverloads constructor(
                             ).toInt()
                             factorXPoint = getDimension(
                                 R.styleable.HeartLayout_factorXPoint,
-                                it.getDimensionPixelOffset(R.dimen.heart_anim_x_point_factor).toFloat()
+                                it.getDimensionPixelOffset(R.dimen.heart_anim_x_point_factor)
+                                    .toFloat()
                             ).toInt()
                             factorBezier = getInteger(
                                 R.styleable.HeartLayout_factorBezier,
@@ -145,21 +147,22 @@ class HeartLayout @JvmOverloads constructor(
         }
 
         private fun createPath(counter: AtomicInteger, view: View, factor: Int): Path =
-            (counter.toInt() * 15 + config.animLength * factor + random.nextInt(config.animLengthRand)).toFloat().let {
-                val x: Float = config.initX.toFloat()
-                val x1: Float = (random.nextInt(config.xRand) + config.factorXPoint).toFloat()
-                val x2: Float = (random.nextInt(config.xRand) + config.factorXPoint).toFloat()
-                val y: Float = (view.height - config.initY).toFloat()
-                val y1: Float = y - it / 2
-                val y2: Float = y - it
-                val factorTemp: Float = it / config.factorBezier
-                Path().apply {
-                    moveTo(x, y)
-                    cubicTo(x, y - factorTemp, x1, y1 + factorTemp, x1, y1)
-                    moveTo(x1, y1)
-                    cubicTo(x1, y1 - factorTemp, x2, y2 + factorTemp, x2, y2)
+            (counter.toInt() * 15 + config.animLength * factor + random.nextInt(config.animLengthRand)).toFloat()
+                .let {
+                    val x: Float = config.initX.toFloat()
+                    val x1: Float = (random.nextInt(config.xRand) + config.factorXPoint).toFloat()
+                    val x2: Float = (random.nextInt(config.xRand) + config.factorXPoint).toFloat()
+                    val y: Float = (view.height - config.initY).toFloat()
+                    val y1: Float = y - it / 2
+                    val y2: Float = y - it
+                    val factorTemp: Float = it / config.factorBezier
+                    Path().apply {
+                        moveTo(x, y)
+                        cubicTo(x, y - factorTemp, x1, y1 + factorTemp, x1, y1)
+                        moveTo(x1, y1)
+                        cubicTo(x1, y1 - factorTemp, x2, y2 + factorTemp, x2, y2)
+                    }
                 }
-            }
     }
 
     private var animator: PathAnimator? = null

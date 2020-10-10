@@ -8,7 +8,7 @@ import com.autoselect.helper.AHelper.app
 import com.autoselect.helper.FileHelper.getFileByPath
 import com.autoselect.helper.FileHelper.isExistsFile
 import com.autoselect.helper.StringHelper.isSpace
-import org.jetbrains.anko.toast
+import com.autoselect.helper.ToastHelper.showShort
 import java.io.IOException
 import java.io.InputStream
 import java.net.MalformedURLException
@@ -56,11 +56,11 @@ object OpenHelper {
                     data = Uri.fromFile(file)
                     type = "application/pdf"
                 })
-                else -> app.toast("文件路径不存在$filePath")
+                else -> showShort("文件路径不存在$filePath")
             }
-        } ?: app.toast("文件路径不存在$filePath")
+        } ?: showShort("文件路径不存在$filePath")
     } catch (e: Exception) {
-        app.toast("未检测到可打开PDF文档相关软件")
+        showShort("未检测到可打开PDF文档相关软件")
     }
 
     fun openWordFile(filePath: String?) = try {
@@ -73,11 +73,11 @@ object OpenHelper {
                     data = Uri.fromFile(file)
                     type = "application/msword"
                 })
-                else -> app.toast("文件路径不存在$filePath")
+                else -> showShort("文件路径不存在$filePath")
             }
-        } ?: app.toast("文件路径不存在$filePath")
+        } ?: showShort("文件路径不存在$filePath")
     } catch (e: Exception) {
-        app.toast("未检测到可打开Word文档相关软件")
+        showShort("未检测到可打开Word文档相关软件")
     }
 
     fun openOfficeFileByWps(filePath: String?) = try {
@@ -91,12 +91,12 @@ object OpenHelper {
                         "cn.wps.moffice_eng", "cn.wps.moffice.documentmanager.PreStartActivity2"
                     )
                 })
-                else -> app.toast("文件路径不存在$filePath")
+                else -> showShort("文件路径不存在$filePath")
             }
-        } ?: app.toast("文件路径不存在$filePath")
+        } ?: showShort("文件路径不存在$filePath")
     } catch (e: ActivityNotFoundException) {
-        app.toast("本地未安装WPS")
+        showShort("本地未安装WPS")
     } catch (e: Exception) {
-        app.toast("打开文档失败")
+        showShort("打开文档失败")
     }
 }

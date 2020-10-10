@@ -6,13 +6,13 @@ import android.media.AudioManager
 import android.media.MediaPlayer
 import androidx.annotation.RequiresPermission
 import com.autoselect.helper.VibrateHelper.vibrateOnce
-import org.jetbrains.anko.audioManager
 import java.io.IOException
 
 object BeepHelper {
     private const val BEEP_VOLUME = 0.5f
     private const val VIBRATE_DURATION = 200
     private var mediaPlayer: MediaPlayer? = null
+
     @RequiresPermission(VIBRATE)
     fun playBeep(activity: Activity, isVibrate: Boolean = true) = when {
         activity.audioManager.ringerMode == AudioManager.RINGER_MODE_NORMAL && mediaPlayer != null -> {

@@ -1,8 +1,6 @@
 package com.autoselect.helper
 
 import com.autoselect.helper.AHelper.runOnUiThread
-import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.error
 import java.lang.reflect.InvocationTargetException
 import java.lang.reflect.Method
 import java.util.*
@@ -10,7 +8,7 @@ import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.CopyOnWriteArrayList
 import java.util.concurrent.CopyOnWriteArraySet
 
-object BusHelper : AnkoLogger {
+object BusHelper : LoggerHelper {
     private class BusInfo internal constructor(
         var className: String, var funName: String, var paramType: String, var paramName: String,
         var sticky: Boolean, var threadMode: String, var priority: Int
@@ -87,6 +85,7 @@ object BusHelper : AnkoLogger {
     }
 
     private val nullAny: Any = "null"
+
     @JvmOverloads
     fun post(tag: String, arg: Any = nullAny, sticky: Boolean = false) {
         val busInfoList: MutableList<BusInfo>? = mTag_BusInfoListMap[tag]
@@ -227,6 +226,7 @@ object BusHelper : AnkoLogger {
 
     private fun inject() {}
     enum class ThreadMode { MAIN, SINGLE, CACHED, IO, CPU, POSTING }
+
     @Target(
         AnnotationTarget.FUNCTION,
         AnnotationTarget.PROPERTY_GETTER, AnnotationTarget.PROPERTY_SETTER

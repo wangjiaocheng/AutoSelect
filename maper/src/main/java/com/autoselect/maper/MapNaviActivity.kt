@@ -20,10 +20,14 @@ import com.amap.api.navi.enums.NaviType
 import com.amap.api.navi.model.*
 import com.amap.api.navi.view.RouteOverLay
 import com.autonavi.tbt.TrafficFacilityInfo
-import org.jetbrains.anko.*
+import com.autoselect.helper.LoggerHelper
+import com.autoselect.helper.ToastHelper.showLong
+import com.autoselect.helper.ToastHelper.showShort
+import com.autoselect.helper.debug
+import com.autoselect.helper.info
 import java.util.*
 
-open class MapNaviActivity : AnkoLogger, AppCompatActivity(),
+open class MapNaviActivity : LoggerHelper, AppCompatActivity(),
     AMapNaviListener, AMapNaviViewListener, AMapHudViewListener {
     var startStr: String? = null
     var endStr: String? = null
@@ -36,8 +40,8 @@ open class MapNaviActivity : AnkoLogger, AppCompatActivity(),
                 )
             }
         } catch (e: Exception) {
-            toast("e:$e")
-            toast("格式:[lat],[lon]")
+            showShort("e:$e")
+            showShort("格式:[lat],[lon]")
             null
         }
     protected var startLatLng: NaviLatLng? = startStr.toNaviLatLng
@@ -92,7 +96,7 @@ open class MapNaviActivity : AnkoLogger, AppCompatActivity(),
             addAMapNaviListener(ttsController)
             if (!isGps) setEmulatorNaviSpeed(75)
             isUseExtraGPSData = true
-            longToast("点击右下角menu按钮实现设置外部GPS")
+            showLong("点击右下角menu按钮实现设置外部GPS")
         }
         if (isAimless) {
             mapView?.onCreate(savedInstanceState)
@@ -167,7 +171,7 @@ open class MapNaviActivity : AnkoLogger, AppCompatActivity(),
     val overview = aMapNaviView?.displayOverview()
     val goOnNavi = aMapNaviView?.recoverLockMode()
     override fun onInitNaviFailure() {
-        toast("init navi Failed")
+        showShort("init navi Failed")
     }//初始化导航失败回调
 
     override fun onInitNaviSuccess() {}//初始化导航成功回调
@@ -177,7 +181,7 @@ open class MapNaviActivity : AnkoLogger, AppCompatActivity(),
         if (isAimless) location?.coord?.run { LatLng(latitude, longitude) }?.let {
             myLocationMarker?.position = it
             if (isNeedFollow) aMap?.animateCamera(CameraUpdateFactory.changeLatLng(it))
-        } ?: toast("定位出现异常")
+        } ?: showShort("定位出现异常")
     }//定位改变回调
 
     @Deprecated("")
@@ -213,7 +217,7 @@ open class MapNaviActivity : AnkoLogger, AppCompatActivity(),
         info("$loggerTag->路线计算失败：错误码=$errorInfo,Error Message= ${errorInfoMap[errorInfo]}")
         info("$loggerTag->错误码详细链接见：http://lbs.amap.com/api/android-navi-sdk/guide/tools/errorcode/")
         error("$loggerTag->--------------------------------------------")
-        longToast("errorInfo：$errorInfo,Message：${errorInfoMap[errorInfo]}")
+        showLong("errorInfo：$errorInfo,Message：${errorInfoMap[errorInfo]}")
     }//计算路线失败回调
 
     @Deprecated("")
@@ -281,7 +285,7 @@ open class MapNaviActivity : AnkoLogger, AppCompatActivity(),
         if (isAimless) aMapNaviTrafficFacilityInfos?.run {
             for (aMapNaviTrafficFacilityInfo in this) {
                 aMapNaviTrafficFacilityInfo?.run {
-                    toast("(trafficFacilityInfo.coor_X+coor_Y+distance+limitSpeed):${coorX + coorY + getDistance() + getLimitSpeed()}")
+                    showShort("(trafficFacilityInfo.coor_X+coor_Y+distance+limitSpeed):${coorX + coorY + getDistance() + getLimitSpeed()}")
                 }
             }
         }
@@ -290,7 +294,7 @@ open class MapNaviActivity : AnkoLogger, AppCompatActivity(),
     @Deprecated("")
     override fun OnUpdateTrafficFacility(aMapNaviTrafficFacilityInfo: AMapNaviTrafficFacilityInfo?) {
         if (isAimless) aMapNaviTrafficFacilityInfo?.run {
-            toast("(trafficFacilityInfo.coor_X+coor_Y+distance+limitSpeed):${coorX + coorY + getDistance() + getLimitSpeed()}")
+            showShort("(trafficFacilityInfo.coor_X+coor_Y+distance+limitSpeed):${coorX + coorY + getDistance() + getLimitSpeed()}")
         }
     }//更新交通设施信息回调
 
@@ -301,7 +305,7 @@ open class MapNaviActivity : AnkoLogger, AppCompatActivity(),
     @Deprecated("")
     override fun updateAimlessModeStatistics(aimLessModeStat: AimLessModeStat?) {
         if (isAimless) {
-            toast("看log")
+            showShort("看log")
             aimLessModeStat?.run {
                 debug("distance=$aimlessModeDistance")
                 debug("time=$aimlessModeTime")
@@ -312,7 +316,7 @@ open class MapNaviActivity : AnkoLogger, AppCompatActivity(),
     @Deprecated("")
     override fun updateAimlessModeCongestionInfo(aimLessModeCongestionInfo: AimLessModeCongestionInfo?) {
         if (isAimless) {
-            toast("看log")
+            showShort("看log")
             aimLessModeCongestionInfo?.run {
                 debug("roadName=$roadName")
                 debug("CongestionStatus=$congestionStatus")
@@ -366,7 +370,7 @@ open class MapNaviActivity : AnkoLogger, AppCompatActivity(),
         time = System.currentTimeMillis()
     }.run {
         aMapNavi?.setExtraGPSData(1, this)//1为GPS坐标，2为高德坐标
-        toast(toString())
+        showShort(toString())
         i++
     }//缺一不可
 

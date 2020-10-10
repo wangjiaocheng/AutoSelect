@@ -16,8 +16,6 @@ import android.view.View
 import android.view.animation.LinearInterpolator
 import com.autoselect.helper.DensityHelper.dip2px
 import com.autoselect.helper.ToastHelper.showShort
-import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.error
 import java.io.ByteArrayOutputStream
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
@@ -25,7 +23,7 @@ import kotlin.math.abs
 
 class SeatAirplane
 @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) :
-    View(context, attrs, defStyleAttr), AnkoLogger {
+    View(context, attrs, defStyleAttr) {
     init {
         init()
     }

@@ -2,14 +2,11 @@ package com.autoselect.helper
 
 import com.autoselect.helper.PathHelper.getPathInternalAppDb
 import com.autoselect.helper.PathHelper.pathExternal
-import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.error
-import org.jetbrains.anko.info
 import java.io.FileInputStream
 import java.io.FileOutputStream
 import java.io.IOException
 
-object DbHelper : AnkoLogger {
+object DbHelper : LoggerHelper {
     @JvmOverloads
     fun exportDb2SdCard(
         realDbName: String, exportDbName: String = "backup$realDbName", path: String = pathExternal
