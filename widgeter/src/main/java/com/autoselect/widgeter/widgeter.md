@@ -47,7 +47,7 @@
 | 029  | *029.SideBar(240)*                                                                                                                                                                                                                                                                                                                                    | 侧边 |
 | 030  | *030.Banner：BannerHelper、TypeBannerTrans、BeanPage、PageListener、RecyclerViewHolder、RecyclerBaseAdapter、TypeTrans、Transformer、TransformerCard、TransformerDepthPage、TransformerMz、TransformerZoomOutPage、BeanCircle、BeanRect、TypeIndicatorCircle、IndicatorCircle、IndicatorRect、IndicatorText(1060)*                                       | 横幅 |
 | 031  | *031.LayoutTab、LayoutLabel：LayoutScroll、LayoutFlow、AttrsHelper、AdapterTab、AdapterLabel、AdapterTemplate、AdapterFlow、FlowListener、FlowListenerAdapter、ActionRect、ActionTri、ActionRound、ActionColor、ActionRes、ActionBase、ActionDot、TextViewTabColor、BeanTab、BeanLabel、TabValue、TabTypeEvaluator、ConstantsFlow、ViewPagerHelper(2120)* | 流式 |
-| 032  | *032.BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)、ViewHolderBase：......(2961)*                                                                                                                                                           | 回收 |
+| 032  | *032.BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)、ViewHolderBase、LoadMoreModuleBase、UpFetchModuleBase、DraggableModuleBase：......(2961)*                                                                                                | 回收 |
 
 >- values
 >
@@ -1361,7 +1361,7 @@ class LabelShowMoreActivity : AppCompatActivity() {
 >>2. ![flow_label_show](../../../../res/mipmap/flow_label_show.png)
 >>3. ![flow_label_handup](../../../../res/mipmap/flow_label_handup.png)
 
-### *032.回收BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)、ViewHolderBase：......(2961)*
+### *032.回收BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)、ViewHolderBase、LoadMoreModuleBase、UpFetchModuleBase、DraggableModuleBase：......(2961)*
 
 | 序号 | 方法                                  | 功能（RecyclerView可嵌套：setHasFixedSize(true)、layoutManager、adapter、addItemDecoration）                                                                                                                                                              |
 |:-----|:--------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
