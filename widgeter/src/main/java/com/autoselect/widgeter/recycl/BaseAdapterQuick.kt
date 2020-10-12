@@ -18,13 +18,13 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.autoselect.widgeter.recycl.animation.*
+import com.autoselect.widgeter.recycl.common.ViewHolderBase
+import com.autoselect.widgeter.recycl.common.getItemView
 import com.autoselect.widgeter.recycl.diff.DifferAsync
 import com.autoselect.widgeter.recycl.diff.DifferAsyncConfig
 import com.autoselect.widgeter.recycl.diff.ListUpdateCallback
-import com.autoselect.widgeter.recycl.common.ViewHolderBase
 import com.autoselect.widgeter.recycl.listener.*
 import com.autoselect.widgeter.recycl.module.*
-import com.autoselect.widgeter.recycl.common.getItemView
 import java.lang.reflect.InvocationTargetException
 import java.lang.reflect.Modifier
 import java.lang.reflect.ParameterizedType
@@ -256,14 +256,13 @@ abstract class BaseAdapterQuick<T, VH : ViewHolderBase>
         set(recyclerView) {
             mRecyclerView = recyclerView
         }
-    protected lateinit var context: Context
-        private set
+    val context: Context
+        get() = recyclerView.context
     var headerViewAsFlow: Boolean = false//为true页眉/页脚排列方式与普通项目视图相同，仅GridLayoutManager时有效忽略跨距大小
     var footerViewAsFlow: Boolean = false
     override fun onAttachedToRecyclerView(recyclerView: RecyclerView) {
         super.onAttachedToRecyclerView(recyclerView)
         mRecyclerView = recyclerView
-        this.context = recyclerView.context
         mDraggableModule?.attachToRecyclerView(recyclerView)
         val manager = recyclerView.layoutManager
         if (manager is GridLayoutManager) {
