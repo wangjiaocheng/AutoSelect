@@ -1642,21 +1642,22 @@ class LabelShowMoreActivity : AppCompatActivity() {
 | 015  | *015.ViewStub*             | G占位视图                                          |
 | 016  | *016.\<include\>*          | G引用布局                                          |
 | 017  | *017.\<fragment\>*         | G片段                                              |
-| 018  | *018.\<view\>*             | G视图                                              |
-| 019  | *019.\<requestFocus\>*     | G指定焦点视图                                      |
-| 020  | *020.ListView*             | 淘汰：列表视图（遗留）                              |
-| 021  | *021.ExpandableListView*   | 淘汰：可展开列表视图                                |
-| 022  | *022.GridView*             | 淘汰：网格视图（遗留）                              |
-| 023  | *023.ActionBar*            | 淘汰：操作条                                       |
-| 024  | *024.Tabs*                 | 淘汰：标签组                                       |
-| 025  | *025.TabHost*              | 淘汰：标签栏（遗留）                                |
-| 026  | *026.StackView*            | 淘汰：堆叠视图                                     |
-| 027  | *027.ViewAnimator*         | 淘汰：视图动画                                     |
-| 028  | *028.TextSwitcher*         | 淘汰：文本切换器                                    |
-| 029  | *029.ImageSwitcher*        | 淘汰：图片切换器                                    |
-| 030  | *030.ViewSwitcher*         | 淘汰：视图切换器                                    |
-| 031  | *031.ViewFlipper*          | 淘汰：视图翻转器                                    |
-| 032  | *032.AdapterViewFlipper*   | 淘汰：适配器视图翻转器                              |
+| 018  | *018.NavHostFragment*      | G导航主机片段                                      |
+| 019  | *019.\<view\>*             | G视图                                              |
+| 020  | *020.\<requestFocus\>*     | G指定焦点视图                                      |
+| 021  | *021.ListView*             | 淘汰：列表视图（遗留）                              |
+| 022  | *022.ExpandableListView*   | 淘汰：可展开列表视图                                |
+| 023  | *023.GridView*             | 淘汰：网格视图（遗留）                              |
+| 024  | *024.ActionBar*            | 淘汰：操作条                                       |
+| 025  | *025.Tabs*                 | 淘汰：标签组                                       |
+| 026  | *026.TabHost*              | 淘汰：标签主机（遗留）                              |
+| 027  | *027.StackView*            | 淘汰：堆叠视图                                     |
+| 028  | *028.ViewAnimator*         | 淘汰：视图动画                                     |
+| 029  | *029.TextSwitcher*         | 淘汰：文本切换器                                    |
+| 030  | *030.ImageSwitcher*        | 淘汰：图片切换器                                    |
+| 031  | *031.ViewSwitcher*         | 淘汰：视图切换器                                    |
+| 032  | *032.ViewFlipper*          | 淘汰：视图翻转器                                    |
+| 033  | *033.AdapterViewFlipper*   | 淘汰：适配器视图翻转器                              |
 
 ## **附3.原生Widgets组件（通用、图片、条框）**
 
