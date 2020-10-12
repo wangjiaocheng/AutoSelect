@@ -1636,7 +1636,7 @@ class LabelShowMoreActivity : AppCompatActivity() {
 | 009  | *009.BottomAppBar*         | E底部工具栏                                        |
 | 010  | *010.NavigationView*       | E导航视图：029自制SideBar                          |
 | 011  | *011.BottomNavigationView* | E底部导航视图                                      |
-| 012  | *012.Toolbar*              | E导航栏，取代Actionbar：002自制Title                |
+| 012  | *012.Toolbar*              | E工具条，取代Actionbar：002自制Title                |
 | 013  | *013.TabLayout*            | F标签布局：031自制LayoutTab和LayoutLabel            |
 | 014  | *014.TabItem*              | F标签项                                            |
 | 015  | *015.ViewStub*             | G占位视图                                          |
