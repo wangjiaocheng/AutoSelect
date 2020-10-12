@@ -1740,7 +1740,7 @@ class LabelShowMoreActivity : AppCompatActivity() {
 | 006  | *006.ProgressDialog*   | B进度对话框                                                          |
 | 007  | *007.AlertDialog*      | B警告对话框                                                          |
 | 008  | *008.Toast*            | C吐司：042工具ToastHelper                                            |
-| 009  | *009.Snackbar*         | C快餐：043工具SnackbarHelper                                         |
+| 009  | *009.Snackbar*         | C快餐：043工具SnackHelper                                            |
 | 010  | *010.Notification*     | D通知：006自制NoticeHelper                                           |
 | 011  | *011.RemoteViews*      | E桌面控件                                                            |
 
