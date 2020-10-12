@@ -1631,7 +1631,7 @@ class LabelShowMoreActivity : AppCompatActivity() {
 | 004  | *004.HorizontalScrollView* | B水平滚动视图                                      |
 | 005  | *005.NestedScrollView*     | B嵌套滚动视图，兼容新控件                           |
 | 006  | *006.ViewPager2*           | C视图寻呼机：030自制Banner                          |
-| 007  | *007.GardView*             | D卡牌视图：018自制CardStackView                    |
+| 007  | *007.CardView*             | D卡牌视图：018自制CardStackView                    |
 | 008  | *008.AppBarLayout*         | E应用程序栏布局，垂直线性布局支持滚动手势            |
 | 009  | *009.BottomAppBar*         | E底部工具栏                                        |
 | 010  | *010.NavigationView*       | E导航视图：029自制SideBar                          |
@@ -1750,7 +1750,7 @@ class LabelShowMoreActivity : AppCompatActivity() {
 |:-----|:----------------------|:------------------------------------------------------------------------------------------------------------------|
 | 001  | *001.Layouts行列格面4* | 独立活动根布局ConstraintLayout、回收视图子布局LinearLayout、TableLayout、FrameLayout                                |
 | 002  | *001.Containers条目2* | 容器RecyclerView搭配BaseAdapterBinder                                                                              |
-| 003  | *002.Containers页目2* | 引导轮播Banner、轮播内容GardView                                                                                    |
+| 003  | *002.Containers页目2* | 引导轮播Banner、轮播内容CardView                                                                                    |
 | 004  | *003.Containers栏目3* | 回收视图子布局直达LayoutTab、回收视图条目直达Toolbar、回收视图子布局头部Title                                         |
 | 005  | *001.Widgets通用2*    | 月度任务标记CalendarView、综合评分展示CobwebView                                                                    |
 | 006  | *002.Widgets图片4*    | 图片显示ImageView、指定位置固定可缩放图片PinView、输码验证Captcha、滑动验证SwipeCaptcha                               |
@@ -1768,7 +1768,7 @@ class LabelShowMoreActivity : AppCompatActivity() {
 |:-----|:---------------------|:---------------------------------------------------------------------|
 | 001  | *001.布局------成员3* | LinearLayout、TableLayout、FrameLayout                               |
 | 002  | *001.容器-条目-单项1* | RecyclerView                                                         |
-| 003  | *002.容器-页目-单项2* | Banner、GardView                                                     |
+| 003  | *002.容器-页目-单项2* | Banner、CardView                                                     |
 | 004  | *003.容器-栏目-单项2* | Toolbar、Title                                                       |
 | 005  | *001.组件-通用-单项2* | CalendarView、CobwebView                                             |
 | 006  | *002.组件-图片-成员2* | ImageView、PinView                                                   |
