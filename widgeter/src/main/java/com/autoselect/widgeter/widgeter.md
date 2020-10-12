@@ -1603,7 +1603,7 @@ class LabelShowMoreActivity : AppCompatActivity() {
 >>2. CN:[strings.xml](../../../../res/values-zh-rCN/strings.xml)
 >>3. HK:[strings.xml](../../../../res/values-zh-rHK/strings.xml)
 
-## **附1.原生Layouts布局（行、列、格、面）**
+## **附01.原生Layouts布局（行、列、格、面）**
 
 | 序号 | 布局                           | 功能                        |
 |:-----|:-------------------------------|:---------------------------|
@@ -1621,7 +1621,7 @@ class LabelShowMoreActivity : AppCompatActivity() {
 | 012  | *012.GridLayout*               | 淘汰：网格布局（遗留）      |
 | 013  | *013.AbsoluteLayout*           | 淘汰：绝对布局              |
 
-## **附2.原生Containers容器（条目、栏目、页目）**
+## **附02.原生Containers容器（条目、栏目、页目）**
 
 | 序号 | 容器                       | 功能                                               |
 |:-----|:---------------------------|:--------------------------------------------------|
@@ -1659,7 +1659,7 @@ class LabelShowMoreActivity : AppCompatActivity() {
 | 032  | *032.ViewFlipper*          | 淘汰：视图翻转器                                    |
 | 033  | *033.AdapterViewFlipper*   | 淘汰：适配器视图翻转器                              |
 
-## **附3.原生Widgets组件（通用、图片、条框）**
+## **附03.原生Widgets组件（通用、图片、条框）**
 
 | 序号 | 组件                          | 功能                                                                                                                      |
 |:-----|:------------------------------|:--------------------------------------------------------------------------------------------------------------------------|
@@ -1691,7 +1691,7 @@ class LabelShowMoreActivity : AppCompatActivity() {
 | 026  | *026.MapView*                 | 淘汰：地图视图                                                                                                             |
 | 027  | *027.MapFragment*             | 淘汰：地图片段                                                                                                             |
 
-## **附4.原生Buttons按钮（执行、选择）**
+## **附04.原生Buttons按钮（执行、选择）**
 
 | 序号 | 按钮                       | 功能                                            |
 |:-----|:---------------------------|:-----------------------------------------------|
@@ -1706,7 +1706,7 @@ class LabelShowMoreActivity : AppCompatActivity() {
 | 009  | *009.Switch*               | C开关                                           |
 | 010  | *010.FloatingActionButton* | C浮动操作按钮                                   |
 
-## **附5.原生Text文本（显示、输入）**
+## **附05.原生Text文本（显示、输入）**
 
 | 序号 | 文本                            | 功能                                                                                                   |
 |:-----|:--------------------------------|:------------------------------------------------------------------------------------------------------|
@@ -1728,7 +1728,7 @@ class LabelShowMoreActivity : AppCompatActivity() {
 | 016  | *016.CheckedTextView*           | D文本复选框                                                                                            |
 | 017  | *017.TextInputLayout*           | E文本输入布局，包含EditView默认生成浮动Label                                                             |
 
-## **附6.原生Remind提醒（强烈、安静）**
+## **附06.原生Remind提醒（强烈、安静）**
 
 | 序号 | 其它                   | 功能                                                                 |
 |:-----|:-----------------------|:--------------------------------------------------------------------|
@@ -1744,7 +1744,7 @@ class LabelShowMoreActivity : AppCompatActivity() {
 | 010  | *010.Notification*     | D通知：006自制NoticeHelper                                           |
 | 011  | *011.RemoteViews*      | E桌面控件                                                            |
 
-## **附7.UI趋势建议**
+## **附07.UI趋势建议**
 
 | 序号 | 类别                   | 控件（严控有限空间Activity跳转、杜绝扩展空间Fragment切换、优先无限空间RecyclerView滑动）共35个常用                    |
 |:-----|:----------------------|:------------------------------------------------------------------------------------------------------------------|
@@ -1762,11 +1762,11 @@ class LabelShowMoreActivity : AppCompatActivity() {
 | 012  | *001.Remind强烈3*     | 弹出提示PopupImply、弹出操作PopupSingle、弹出对话PopupViewManager                                                   |
 | 013  | *002.Remind安静2*     | 显示提示SnackHelper、发送通知NoticeHelper                                                                           |
 
-## **附8.回收视图可用单项及其成员**
+## **附08.回收视图可用单项及其成员**
 
-| 序号 | 类别                  | 单项17个及其成员13个共30个                                            |
+| 序号 | 类别                  | 单项14个及其成员16个共30个                                            |
 |:-----|:---------------------|:---------------------------------------------------------------------|
-| 001  | *001.布局------单项3* | LinearLayout、TableLayout、FrameLayout                               |
+| 001  | *001.布局------成员3* | LinearLayout、TableLayout、FrameLayout                               |
 | 002  | *001.容器-条目-单项1* | RecyclerView                                                         |
 | 003  | *002.容器-页目-单项2* | Banner、GardView                                                     |
 | 004  | *003.容器-栏目-单项2* | Toolbar、Title                                                       |
@@ -1780,7 +1780,26 @@ class LabelShowMoreActivity : AppCompatActivity() {
 | 012  | *001.提醒-强烈-成员3* | PopupImply、PopupSingle、PopupViewManager                             |
 | 013  | *002.提醒-安静-成员2* | SnackHelper、NoticeHelper                                            |
 
-## **附9.原生使用扼要**
+## **附09.回收视图可备单项**
+
+| 序号 | 根布局xml             | 根布局Binder    |
+|:-----|:----------------------|:---------------|
+| 001  | *001.binder_recycler* | RecyclerBinder |
+| 002  | *002.binder_banner*   | BannerBinder   |
+| 003  | *003.binder_card*     | CardBinder     |
+| 004  | *004.binder_toolbar*  | ToolbarBinder  |
+| 005  | *005.binder_title*    | TitleBinder    |
+| 006  | *006.binder_calendar* | CalendarBinder |
+| 007  | *007.binder_cobweb*   | CobwebBinder   |
+| 008  | *008.binder_progress* | ProgressBinder |
+| 009  | *009.binder_wave*     | WaveBinder     |
+| 010  | *010.binder_seek*     | SeekBinder     |
+| 011  | *011.binder_ruler*    | RulerBinder    |
+| 012  | *012.binder_rating*   | RatingBinder   |
+| 013  | *013.binder_search*   | SearchBinder   |
+| 014  | *014.binder_chip*     | ChipBinder     |
+
+## **附10.原生使用扼要**
 
 ```kotlin
         setSupportActionBar(toolbar)//先设置才能使用
@@ -1791,6 +1810,7 @@ class LabelShowMoreActivity : AppCompatActivity() {
             setDisplayShowTitleEnabled(false)//不显示标题
             setDisplayShowCustomEnabled(false)//不显示普通View
         }//Toolbar
+
         swipeRefreshLayout?.apply {
             isRefreshing = true//可刷新
             setColorSchemeColors()//刷新进度条颜色
