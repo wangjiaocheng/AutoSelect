@@ -1746,23 +1746,23 @@ class LabelShowMoreActivity : AppCompatActivity() {
 
 ## **附7.UI趋势建议**
 
-| 序号 | 类别            | 控件（严控有限空间Activity跳转、杜绝扩展空间Fragment切换、优先无限空间RecyclerView滑动）                                                    |
-|:-----|:---------------|:----------------------------------------------------------------------------------------------------------------------------------------|
-| 01   | Layouts行列格面 | 独立活动根布局常用ConstraintLayout、回收视图子布局常用LinearLayout、TableLayout、FrameLayout                                               |
-| 02   | Containers条目 | 容器常用RecyclerView搭配BaseAdapterBinder                                                                                                |
-| 03   | Containers页目 | 引导轮播常用Banner、轮播内容常用GardView                                                                                                  |
-| 04   | Containers栏目 | 回收视图子布局直达常用LayoutTab、回收视图条目直达常用Toolbar、回收视图子布局头部常用Title                                                    |
-| 05   | Widgets通用    | 月度任务标记常用CalendarView、综合评分展示常用CobwebView                                                                                   |
-| 06   | Widgets图片    | 图片显示常用ImageView、指定位置固定可缩放图片视图常用PinView、输码验证常用Captcha、滑动验证常用SwipeCaptcha                                   |
-| 07   | Widgets条框    | 任务进度常用ProgressBar、进度动画常用WaveView、设置起止值常用SeekBar、设置精确值常用RulerWheelView、任务评分常用RatingBar、搜索常用SearchView |
-| 08   | Buttons执行    | 执行任务常用ImageButton                                                                                                                  |
-| 09   | Buttons选择    | 开关状态常用ChipGroup                                                                                                                    |
-| 10   | Text显示       | 文本显示常用TextView、文本自动缩放常用TextAutoZoom                                                                                         |
-| 11   | Text输入       | 文本输入常用EditText、输入建议常用MultiAutoCompleteTextView、输入提示常用TextInputLayout                                                   |
-| 12   | Remind强烈     | 弹出提示常用PopupImply、弹出操作常用PopupSingle、弹出对话常用PopupViewManager                                                              |
-| 13   | Remind安静     | 显示提示常用SnackHelper、发送通知常用NoticeHelper                                                                                         |
+| 序号 | 类别                   | 控件（严控有限空间Activity跳转、杜绝扩展空间Fragment切换、优先无限空间RecyclerView滑动）共35个常用                    |
+|:-----|:----------------------|:------------------------------------------------------------------------------------------------------------------|
+| 001  | *001.Layouts行列格面4* | 独立活动根布局ConstraintLayout、回收视图子布局LinearLayout、TableLayout、FrameLayout                                |
+| 002  | *001.Containers条目2* | 容器RecyclerView搭配BaseAdapterBinder                                                                              |
+| 003  | *002.Containers页目2* | 引导轮播Banner、轮播内容GardView                                                                                    |
+| 004  | *003.Containers栏目3* | 回收视图子布局直达LayoutTab、回收视图条目直达Toolbar、回收视图子布局头部Title                                         |
+| 005  | *001.Widgets通用2*    | 月度任务标记CalendarView、综合评分展示CobwebView                                                                    |
+| 006  | *002.Widgets图片4*    | 图片显示ImageView、指定位置固定可缩放图片PinView、输码验证Captcha、滑动验证SwipeCaptcha                               |
+| 007  | *003.Widgets条框6*    | 任务进度ProgressBar、进度动效WaveView、设置起止值SeekBar、设置精确值RulerWheelView、任务评分RatingBar、搜索SearchView |
+| 008  | *001.Buttons执行1*    | 执行任务ImageButton                                                                                                |
+| 009  | *002.Buttons选择1*    | 开关状态ChipGroup                                                                                                  |
+| 010  | *001.Text显示2*       | 文本显示TextView、文本自动缩放TextAutoZoom                                                                          |
+| 011  | *002.Text输入3*       | 文本输入EditText、输入建议MultiAutoCompleteTextView、输入提示TextInputLayout                                        |
+| 012  | *001.Remind强烈3*     | 弹出提示PopupImply、弹出操作PopupSingle、弹出对话PopupViewManager                                                   |
+| 013  | *002.Remind安静2*     | 显示提示SnackHelper、发送通知NoticeHelper                                                                           |
 
-## *附8.原生使用扼要*
+## **附8.原生使用扼要**
 
 ```kotlin
         setSupportActionBar(toolbar)//先设置才能使用
@@ -1773,6 +1773,7 @@ class LabelShowMoreActivity : AppCompatActivity() {
             setDisplayShowTitleEnabled(false)//不显示标题
             setDisplayShowCustomEnabled(false)//不显示普通View
         }//Toolbar
+
         swipeRefreshLayout?.apply {
             isRefreshing = true//可刷新
             setColorSchemeColors()//刷新进度条颜色
