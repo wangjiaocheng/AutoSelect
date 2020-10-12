@@ -1744,7 +1744,25 @@ class LabelShowMoreActivity : AppCompatActivity() {
 | 010  | *010.Notification*     | D通知：006自制NoticeHelper                                           |
 | 011  | *011.RemoteViews*      | E桌面控件                                                            |
 
-## *附*
+## **附7.UI趋势建议**
+
+| 序号 | 类别            | 控件（严控有限空间Activity跳转、杜绝扩展空间Fragment切换、优先无限空间RecyclerView滑动）                                                    |
+|:-----|:---------------|:----------------------------------------------------------------------------------------------------------------------------------------|
+| 01   | Layouts行列格面 | 独立活动根布局常用ConstraintLayout、回收视图子布局常用LinearLayout、TableLayout、FrameLayout                                               |
+| 02   | Containers条目 | 容器常用RecyclerView搭配BaseAdapterBinder                                                                                                |
+| 03   | Containers页目 | 引导轮播常用Banner、轮播内容常用GardView                                                                                                  |
+| 04   | Containers栏目 | 回收视图子布局直达常用LayoutTab、回收视图条目直达常用Toolbar、回收视图子布局头部常用Title                                                    |
+| 05   | Widgets通用    | 月度任务标记常用CalendarView、综合评分展示常用CobwebView                                                                                   |
+| 06   | Widgets图片    | 图片显示常用ImageView、指定位置固定可缩放图片视图常用PinView、输码验证常用Captcha、滑动验证常用SwipeCaptcha                                   |
+| 07   | Widgets条框    | 任务进度常用ProgressBar、进度动画常用WaveView、设置起止值常用SeekBar、设置精确值常用RulerWheelView、任务评分常用RatingBar、搜索常用SearchView |
+| 08   | Buttons执行    | 执行任务常用ImageButton                                                                                                                  |
+| 09   | Buttons选择    | 开关状态常用ChipGroup                                                                                                                    |
+| 10   | Text显示       | 文本显示常用TextView、文本自动缩放常用TextAutoZoom                                                                                         |
+| 11   | Text输入       | 文本输入常用EditText、输入建议常用MultiAutoCompleteTextView、输入提示常用TextInputLayout                                                   |
+| 12   | Remind强烈     | 弹出提示常用PopupImply、弹出操作常用PopupSingle、弹出对话常用PopupViewManager                                                              |
+| 13   | Remind安静     | 显示提示常用SnackHelper、发送通知常用NoticeHelper                                                                                         |
+
+## *附8.原生使用扼要*
 
 ```kotlin
         setSupportActionBar(toolbar)//先设置才能使用
