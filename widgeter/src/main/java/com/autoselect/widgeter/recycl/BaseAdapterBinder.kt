@@ -50,11 +50,8 @@ open class BaseAdapterBinder(list: MutableList<Any>? = null) :
         { "getItemBinder: viewType '$viewType' no such Binder found，please use addItemBinder() first!" }
 
     inline fun <reified T : Any> addItemBinder(
-        baseItemBinder: ItemBinderBase<T, *>,
-        callback: DiffUtil.ItemCallback<T>? = null
-    )
-            : BaseAdapterBinder =
-        apply { addItemBinder(T::class.java, baseItemBinder, callback) }//kotlin使用
+        baseItemBinder: ItemBinderBase<T, *>, callback: DiffUtil.ItemCallback<T>? = null
+    ): BaseAdapterBinder = apply { addItemBinder(T::class.java, baseItemBinder, callback) }//kotlin
 
     private val mTypeMap = HashMap<Class<*>, Int>()
     private val mBinderArray = SparseArray<ItemBinderBase<Any, *>>()
