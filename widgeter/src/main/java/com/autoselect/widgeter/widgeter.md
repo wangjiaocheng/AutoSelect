@@ -1762,7 +1762,25 @@ class LabelShowMoreActivity : AppCompatActivity() {
 | 012  | *001.Remind强烈3*     | 弹出提示PopupImply、弹出操作PopupSingle、弹出对话PopupViewManager                                                   |
 | 013  | *002.Remind安静2*     | 显示提示SnackHelper、发送通知NoticeHelper                                                                           |
 
-## **附8.原生使用扼要**
+## **附8.回收视图可用单项及其成员**
+
+| 序号 | 类别                  | 单项17个及其成员13个共30个                                            |
+|:-----|:---------------------|:---------------------------------------------------------------------|
+| 001  | *001.布局------单项3* | LinearLayout、TableLayout、FrameLayout                               |
+| 002  | *001.容器-条目-单项1* | RecyclerView                                                         |
+| 003  | *002.容器-页目-单项2* | Banner、GardView                                                     |
+| 004  | *003.容器-栏目-单项2* | Toolbar、Title                                                       |
+| 005  | *001.组件-通用-单项2* | CalendarView、CobwebView                                             |
+| 006  | *002.组件-图片-成员2* | ImageView、PinView                                                   |
+| 007  | *003.组件-条框-单项6* | ProgressBar、WaveView、SeekBar、RulerWheelView、RatingBar、SearchView |
+| 008  | *001.按钮-执行-成员1* | ImageButton                                                          |
+| 009  | *002.按钮-选择-单项1* | ChipGroup                                                            |
+| 010  | *001.文本-显示-成员2* | TextView、TextAutoZoom                                               |
+| 011  | *002.文本-输入-成员3* | EditText、MultiAutoCompleteTextView、TextInputLayout                  |
+| 012  | *001.提醒-强烈-成员3* | PopupImply、PopupSingle、PopupViewManager                             |
+| 013  | *002.提醒-安静-成员2* | SnackHelper、NoticeHelper                                            |
+
+## **附9.原生使用扼要**
 
 ```kotlin
         setSupportActionBar(toolbar)//先设置才能使用
@@ -1773,7 +1791,6 @@ class LabelShowMoreActivity : AppCompatActivity() {
             setDisplayShowTitleEnabled(false)//不显示标题
             setDisplayShowCustomEnabled(false)//不显示普通View
         }//Toolbar
-
         swipeRefreshLayout?.apply {
             isRefreshing = true//可刷新
             setColorSchemeColors()//刷新进度条颜色
