@@ -96,7 +96,7 @@
 | 30   | 30. setRightIconListener  | 功能 |
 | 31   | 31. setRightTextListener  | 功能 |
 
->- layout:[include_helper_title.xml](../../../../res/layout/include_helper_title.xml)
+>- layout:[title_view.xml](../../../../res/layout/title_view.xml)
 >- mipmap
 >
 >>1. ![icon_previous](../../../../res/mipmap/icon_previous.png)
@@ -311,7 +311,7 @@
 | 01   | 01. imageView | 功能 |
 
 >1. anim:[anim_translate.xml](../../../../res/anim/anim_translate.xml)
->2. layout:[layout_auto_imageview.xml](../../../../res/layout/layout_auto_imageview.xml)
+>2. layout:[autoimage_view.xml](../../../../res/layout/autoimage_view.xml)
 
 ### *015.图调PinView：ScaleImageView、ImageSource、ImageViewState、DecoderFactory、ImageDecoder、RegionDecoder(34+2115)*
 
@@ -689,7 +689,7 @@ class GuideActivity : AppCompatActivity() {
             smoothScrollTime = 400
             loopTime = 5000
             typeBannerTrans = TypeBannerTrans.DEPTH
-        }).setPageListener(R.layout.layout_guide, guides, object : PageListener<Guide?>() {
+        }).setPageListener(R.layout.banner_loop, guides, object : PageListener<Guide?>() {
             override fun bindView(view: View?, data: Any?, position: Int) {
                 view?.let {
                     (data as Guide).run {
@@ -752,43 +752,7 @@ class GuideActivity : AppCompatActivity() {
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
 
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:clickable="true"
-    android:descendantFocusability="blocksDescendants"
-    android:focusable="true"
-    android:orientation="vertical"
-    app:cardCornerRadius="4dp">
-
-    <ImageView
-        android:id="@+id/loop_icon"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop" />
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_gravity="bottom"
-        android:background="@color/black">
-
-        <TextView
-            android:id="@+id/loop_text"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginStart="8dp"
-            android:clickable="true"
-            android:focusable="true"
-            android:gravity="center_vertical"
-            android:textColor="@color/white"
-            android:textSize="16sp" />
-    </FrameLayout>
-</CardView><!--layout_guide-->
-```
+>- layout备用:[banner_loop.xml](../../../../res/layout/banner_loop.xml)
 
 ### *031.流式LayoutTab、LayoutLabel：LayoutScroll、LayoutFlow、AttrsHelper、AdapterTab、AdapterLabel、AdapterTemplate、AdapterFlow、FlowListener、FlowListenerAdapter、ActionRect、ActionTri、ActionRound、ActionColor、ActionRes、ActionBase、ActionDot、TextViewTabColor、BeanTab、BeanLabel、TabValue、TabTypeEvaluator、ConstantsFlow、ViewPagerHelper(2120)*
 
@@ -1782,30 +1746,30 @@ class LabelShowMoreActivity : AppCompatActivity() {
 
 ## **附09.回收视图可备单项**
 
-| 序号 | 根布局xml             | 根布局Binder    |
-|:-----|:----------------------|:---------------|
-| 001  | *001.binder_recycler* | RecyclerBinder |
-| 002  | *002.binder_banner*   | BannerBinder   |
-| 003  | *003.binder_card*     | CardBinder     |
-| 004  | *004.binder_toolbar*  | ToolbarBinder  |
-| 005  | *005.binder_title*    | TitleBinder    |
-| 006  | *006.binder_calendar* | CalendarBinder |
-| 007  | *007.binder_cobweb*   | CobwebBinder   |
-| 008  | *008.binder_image*    | ImageBinder    |
-| 009  | *009.binder_pin*      | PinBinder      |
-| 010  | *010.binder_progress* | ProgressBinder |
-| 011  | *011.binder_wave*     | WaveBinder     |
-| 012  | *012.binder_seek*     | SeekBinder     |
-| 013  | *013.binder_ruler*    | RulerBinder    |
-| 014  | *014.binder_rating*   | RatingBinder   |
-| 015  | *015.binder_search*   | SearchBinder   |
-| 016  | *016.binder_button*   | ButtonBinder   |
-| 017  | *017.binder_chip*     | ChipBinder     |
-| 018  | *018.binder_text*     | TextBinder     |
-| 019  | *019.binder_zoom*     | ZoomBinder     |
-| 020  | *020.binder_edit*     | EditBinder     |
-| 021  | *021.binder_complete* | CompleteBinder |
-| 022  | *022.binder_input*    | InputBinder    |
+| 序号 | 单项布局xml            | 单项布局Binder | 单项布局Bean  |
+|:-----|:----------------------|:---------------|:-------------|
+| 001  | *001.binder_recycler* | RecyclerBinder | RecyclerBean |
+| 002  | *002.binder_banner*   | BannerBinder   | BannerBean   |
+| 003  | *003.binder_card*     | CardBinder     | CardBean     |
+| 004  | *004.binder_toolbar*  | ToolbarBinder  | ToolbarBean  |
+| 005  | *005.binder_title*    | TitleBinder    | TitleBean    |
+| 006  | *006.binder_calendar* | CalendarBinder | CalendarBean |
+| 007  | *007.binder_cobweb*   | CobwebBinder   | CobwebBean   |
+| 008  | *008.binder_image*    | ImageBinder    | ImageBean    |
+| 009  | *009.binder_pin*      | PinBinder      | PinBean      |
+| 010  | *010.binder_progress* | ProgressBinder | ProgressBean |
+| 011  | *011.binder_wave*     | WaveBinder     | WaveBean     |
+| 012  | *012.binder_seek*     | SeekBinder     | SeekBean     |
+| 013  | *013.binder_ruler*    | RulerBinder    | RulerBean    |
+| 014  | *014.binder_rating*   | RatingBinder   | RatingBean   |
+| 015  | *015.binder_search*   | SearchBinder   | SearchBean   |
+| 016  | *016.binder_button*   | ButtonBinder   | ButtonBean   |
+| 017  | *017.binder_chip*     | ChipBinder     | ChipBean     |
+| 018  | *018.binder_text*     | TextBinder     | TextBean     |
+| 019  | *019.binder_zoom*     | ZoomBinder     | ZoomBean     |
+| 020  | *020.binder_edit*     | EditBinder     | EditBean     |
+| 021  | *021.binder_complete* | CompleteBinder | CompleteBean |
+| 022  | *022.binder_input*    | InputBinder    | InputBean    |
 
 ## **附10.原生使用扼要**
 
@@ -1818,7 +1782,6 @@ class LabelShowMoreActivity : AppCompatActivity() {
             setDisplayShowTitleEnabled(false)//不显示标题
             setDisplayShowCustomEnabled(false)//不显示普通View
         }//Toolbar
-
         swipeRefreshLayout?.apply {
             isRefreshing = true//可刷新
             setColorSchemeColors()//刷新进度条颜色

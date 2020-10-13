@@ -121,7 +121,7 @@ class Title @JvmOverloads constructor(context: Context, attrs: AttributeSet? = n
         }
 
     private fun initView(context: Context, attrs: AttributeSet?) {
-        LayoutInflater.from(context).inflate(R.layout.include_helper_title, this)
+        LayoutInflater.from(context).inflate(R.layout.title_view, this)
         rootLayout = findViewById(R.id.root_layout)
         leftLL = findViewById(R.id.ll_left)
         leftIV = findViewById(R.id.iv_left)

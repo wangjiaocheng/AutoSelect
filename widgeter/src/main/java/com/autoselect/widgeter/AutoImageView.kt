@@ -16,7 +16,7 @@ class AutoImageView @JvmOverloads constructor(
     var imageView: ImageView? = null
 
     init {
-        LayoutInflater.from(context).inflate(R.layout.layout_auto_imageview, this)
+        LayoutInflater.from(context).inflate(R.layout.autoimage_view, this)
         imageView = findViewById(R.id.img_backgroud)
         imageView?.apply {
             val typedArray: TypedArray =
