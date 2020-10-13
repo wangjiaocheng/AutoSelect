@@ -1764,19 +1764,19 @@ class LabelShowMoreActivity : AppCompatActivity() {
 
 ## **附08.回收视图可用单项及其成员**
 
-| 序号 | 类别                  | 单项14个及其成员16个共30个                                            |
+| 序号 | 类别                  | 单项22个及其成员8个共30个                                             |
 |:-----|:---------------------|:---------------------------------------------------------------------|
 | 001  | *001.布局------成员3* | LinearLayout、TableLayout、FrameLayout                               |
 | 002  | *001.容器-条目-单项1* | RecyclerView                                                         |
 | 003  | *002.容器-页目-单项2* | Banner、CardView                                                     |
 | 004  | *003.容器-栏目-单项2* | Toolbar、Title                                                       |
 | 005  | *001.组件-通用-单项2* | CalendarView、CobwebView                                             |
-| 006  | *002.组件-图片-成员2* | ImageView、PinView                                                   |
+| 006  | *002.组件-图片-单项2* | ImageView、PinView                                                   |
 | 007  | *003.组件-条框-单项6* | ProgressBar、WaveView、SeekBar、RulerWheelView、RatingBar、SearchView |
-| 008  | *001.按钮-执行-成员1* | ImageButton                                                          |
+| 008  | *001.按钮-执行-单项1* | ImageButton                                                          |
 | 009  | *002.按钮-选择-单项1* | ChipGroup                                                            |
-| 010  | *001.文本-显示-成员2* | TextView、TextAutoZoom                                               |
-| 011  | *002.文本-输入-成员3* | EditText、MultiAutoCompleteTextView、TextInputLayout                  |
+| 010  | *001.文本-显示-单项2* | TextView、TextAutoZoom                                               |
+| 011  | *002.文本-输入-单项3* | EditText、MultiAutoCompleteTextView、TextInputLayout                  |
 | 012  | *001.提醒-强烈-成员3* | PopupImply、PopupSingle、PopupViewManager                             |
 | 013  | *002.提醒-安静-成员2* | SnackHelper、NoticeHelper                                            |
 
@@ -1791,13 +1791,21 @@ class LabelShowMoreActivity : AppCompatActivity() {
 | 005  | *005.binder_title*    | TitleBinder    |
 | 006  | *006.binder_calendar* | CalendarBinder |
 | 007  | *007.binder_cobweb*   | CobwebBinder   |
-| 008  | *008.binder_progress* | ProgressBinder |
-| 009  | *009.binder_wave*     | WaveBinder     |
-| 010  | *010.binder_seek*     | SeekBinder     |
-| 011  | *011.binder_ruler*    | RulerBinder    |
-| 012  | *012.binder_rating*   | RatingBinder   |
-| 013  | *013.binder_search*   | SearchBinder   |
-| 014  | *014.binder_chip*     | ChipBinder     |
+| 008  | *008.binder_image*    | ImageBinder    |
+| 009  | *009.binder_pin*      | PinBinder      |
+| 010  | *010.binder_progress* | ProgressBinder |
+| 011  | *011.binder_wave*     | WaveBinder     |
+| 012  | *012.binder_seek*     | SeekBinder     |
+| 013  | *013.binder_ruler*    | RulerBinder    |
+| 014  | *014.binder_rating*   | RatingBinder   |
+| 015  | *015.binder_search*   | SearchBinder   |
+| 016  | *016.binder_button*   | ButtonBinder   |
+| 017  | *017.binder_chip*     | ChipBinder     |
+| 018  | *018.binder_text*     | TextBinder     |
+| 019  | *019.binder_zoom*     | ZoomBinder     |
+| 020  | *020.binder_edit*     | EditBinder     |
+| 021  | *021.binder_complete* | CompleteBinder |
+| 022  | *022.binder_input*    | InputBinder    |
 
 ## **附10.原生使用扼要**
 
