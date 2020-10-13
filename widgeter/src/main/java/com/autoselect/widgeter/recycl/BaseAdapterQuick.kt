@@ -620,9 +620,15 @@ abstract class BaseAdapterQuick<T, VH : ViewHolderBase>
         differAsync = DifferAsync(this, config)
     }//需自定义线程用，用setDiffNewData前必须用
 
-    open fun setDiffNewData(list: MutableList<T>?) {
-        if (hasEmptyView) setNewInstance(list) else differAsync?.submitList(list)
-    }//使用Diff设置新实例，异步Diff无需考虑性能问题，使用之前设置setDiffCallback或setDiffConfig
+    @JvmOverloads
+    open fun setDiffNewData(list: MutableList<T>?, commitCallback: Runnable? = null) = when {
+        hasEmptyView -> {
+            setNewInstance(list)
+            commitCallback?.run()
+        }
+        else -> differAsync?.submitList(list, commitCallback)
+    }
+    //使用Diff设置新实例，异步Diff无需考虑性能问题，使用之前设置setDiffCallback或setDiffConfig
 
     open fun setDiffNewData(@NonNull diffResult: DiffUtil.DiffResult, list: MutableList<T>) {
         when {

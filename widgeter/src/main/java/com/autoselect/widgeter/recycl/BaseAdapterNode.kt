@@ -2,8 +2,8 @@ package com.autoselect.widgeter.recycl
 
 import androidx.annotation.IntRange
 import androidx.recyclerview.widget.DiffUtil
-import com.autoselect.widgeter.recycl.entity.NodeExpandBase
 import com.autoselect.widgeter.recycl.entity.NodeBase
+import com.autoselect.widgeter.recycl.entity.NodeExpandBase
 import com.autoselect.widgeter.recycl.entity.NodeFooter
 
 abstract class BaseAdapterNode(nodeList: MutableList<NodeBase>? = null) :
@@ -57,9 +57,9 @@ abstract class BaseAdapterNode(nodeList: MutableList<NodeBase>? = null) :
             else -> super.setDiffNewData(diffResult, flatData(list))
         }
 
-    override fun setDiffNewData(list: MutableList<NodeBase>?) = when {
+    override fun setDiffNewData(list: MutableList<NodeBase>?, commitCallback: Runnable?) = when {
         hasEmptyView -> setNewInstance(list)
-        else -> super.setDiffNewData(flatData(list ?: arrayListOf()))
+        else -> super.setDiffNewData(flatData(list ?: arrayListOf()), commitCallback)
     }
 
     override fun setNewInstance(list: MutableList<NodeBase>?) =
