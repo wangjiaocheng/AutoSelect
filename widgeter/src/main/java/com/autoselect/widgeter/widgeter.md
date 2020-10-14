@@ -1645,7 +1645,7 @@ class LabelShowMoreActivity : AppCompatActivity() {
 
 ## **附07.原生Remind提醒（强烈、安静）**
 
-| 序号 | 其它                                                                          | 功能                                                              |
+| 序号 | 提醒                                                                          | 功能                                                              |
 |:-----|:-----------------------------------------------------------------------------|:------------------------------------------------------------------|
 | 001  | *001.Menu、PopupWindow*                                                      | 菜单、弹窗（自制PopupImply、自制PopupSingle、自制PopupViewManager） |
 | 002  | *002.Dialog、DatePickerDialog、TimePickerDialog、ProgressDialog、AlertDialog* | 对话框、日期选择对话框、时间选择对话框、进度对话框、警告对话框        |
