@@ -1550,6 +1550,26 @@ class LabelShowMoreActivity : AppCompatActivity() {
 
 >- layout:[recycler_load_more.xml](../../../../res/layout/recycler_load_more.xml)
 >- drawable:[recycler_loading_progress.xml](../../../../res/drawable/recycler_loading_progress.xml)
+>- drawable备用
+>
+>>1. [recycler_bg_selector.xml](../../../../res/drawable/recycler_bg_selector.xml)
+>>2. [recycler_bg_selector_else.xml](../../../../res/drawable/recycler_bg_selector_else.xml)
+>>3. [recycler_bg_shape_duration.xml](../../../../res/drawable/recycler_bg_shape_duration.xml)
+>>4. [recycler_bottom_line_selector.xml](../../../../res/drawable/recycler_bottom_line_selector.xml)
+>>5. [recycler_bottom_line_shape_dark.xml](../../../../res/drawable/recycler_bottom_line_shape_dark.xml)
+>>6. [recycler_bottom_line_shape_theme.xml](../../../../res/drawable/recycler_bottom_line_shape_theme.xml)
+>>7. [recycler_circle_selector_remove.xml](../../../../res/drawable/recycler_circle_selector_remove.xml)
+>>8. [recycler_circle_shape_press.xml](../../../../res/drawable/recycler_circle_shape_press.xml)
+>>9. [recycler_circle_shape_remove.xml](../../../../res/drawable/recycler_circle_shape_remove.xml)
+>>10. [recycler_circle_shape_theme.xml](../../../../res/drawable/recycler_circle_shape_theme.xml)
+>>11. [recycler_tip_audio.xml](../../../../res/drawable/recycler_tip_audio.xml)
+>>12. [recycler_tip_audio_cover.xml](../../../../res/drawable/recycler_tip_audio_cover.xml)
+>>13. [recycler_tip_edit.xml](../../../../res/drawable/recycler_tip_edit.xml)
+>>14. [recycler_tip_image.xml](../../../../res/drawable/recycler_tip_image.xml)
+>>15. [recycler_tip_remove.xml](../../../../res/drawable/recycler_tip_remove.xml)
+>>16. [recycler_tip_video.xml](../../../../res/drawable/recycler_tip_video.xml)
+>>17. [recycler_tip_video_cover.xml](../../../../res/drawable/recycler_tip_video_cover.xml)
+>
 >- mipmap:![recycler_loading](../../../../res/mipmap/recycler_loading.png)
 >- mipmap备用
 >
