@@ -69,13 +69,8 @@ object LocationHelper : LoggerHelper {
                             locality = getLocality(it0, it1)
                             street = getStreet(it0, it1)
                             onGetLocationListener?.getLocation(
-                                lastLatitude,
-                                lastLongitude,
-                                latitude,
-                                longitude,
-                                country,
-                                locality,
-                                street
+                                lastLatitude, lastLongitude, latitude, longitude,
+                                country, locality, street
                             )
                         }
                     }
@@ -113,7 +108,7 @@ object LocationHelper : LoggerHelper {
         fun onStatusChanged(provider: String, status: Int, extras: Bundle)
     }
 
-    private class HelperLocationListener : LocationListener {
+    class HelperLocationListener : LocationListener {
         override fun onProviderEnabled(provider: String) {}//GPS开启
         override fun onProviderDisabled(provider: String) {}//GPS关闭
         override fun onLocationChanged(location: Location) =
@@ -135,8 +130,7 @@ object LocationHelper : LoggerHelper {
     private var onLocationChangeListener: OnLocationChangeListener? = null
     private val criteria: Criteria
         get() = Criteria().apply {
-            accuracy =
-                Criteria.ACCURACY_FINE//精度：Criteria.ACCURACY_COARSE粗略；Criteria.ACCURACY_FINE精细
+            accuracy = Criteria.ACCURACY_FINE//精度：ACCURACY_COARSE粗略；ACCURACY_FINE精细
             isSpeedRequired = true//速度
             isCostAllowed = true//收费
             isBearingRequired = true//方位

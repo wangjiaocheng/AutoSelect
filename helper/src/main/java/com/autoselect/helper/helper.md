@@ -22,7 +22,7 @@
 | 004  | *004.WifiHelper(254)*                                  | 无线 |
 | 005  | *005.WifiApHelper(185)*                                | 热点 |
 | 006  | *006.BluetoothHelper(201)*                             | 蓝牙 |
-| 007  | *007.LocationHelper(289)*                              | 定位 |
+| 007  | *007.LocationHelper(283)*                              | 定位 |
 | 008  | *008.BrightnessHelper(48)*                             | 亮度 |
 | 009  | *009.FlashlightHelper(58)*                             | 闪光 |
 | 010  | *010.VibrateHelper(20)*                                | 振动 |
@@ -346,25 +346,26 @@
 | 16   | 16. isBtAddressValid          | 功能 |
 | 17   | 17. release                   | 功能 |
 
-### *007.定位LocationHelper(289)*
+### *007.定位LocationHelper(283)*
 
-| 序号 | 方法                   | 功能 |
-|:-----|:-----------------------|:----|
-| 01   | 01. settingsGps        | 功能 |
-| 02   | 02. LocationService    | 功能 |
-| 03   | 03. registerLocation   | 功能 |
-| 04   | 04. unRegisterLocation | 功能 |
-| 05   | 05. getAddress         | 功能 |
-| 06   | 06. getCountryName     | 功能 |
-| 07   | 07. getLocality        | 功能 |
-| 08   | 08. getStreet          | 功能 |
-| 09   | 09. isMove             | 功能 |
-| 10   | 10. isBetterLocation   | 功能 |
-| 11   | 11. isSameProvider     | 功能 |
-| 12   | 12. isLocationEnabled  | 功能 |
-| 13   | 13. isGpsEnabled       | 功能 |
-| 14   | 14. getLocation        | 功能 |
-| 15   | 15. locationToDegree   | 功能 |
+| 序号 | 方法                       | 功能 |
+|:-----|:---------------------------|:----|
+| 01   | 01. settingsGps            | 功能 |
+| 02   | 02. LocationService        | 功能 |
+| 03   | 03. HelperLocationListener | 功能 |
+| 04   | 04. registerLocation       | 功能 |
+| 05   | 05. unRegisterLocation     | 功能 |
+| 06   | 06. getAddress             | 功能 |
+| 07   | 07. getCountryName         | 功能 |
+| 08   | 08. getLocality            | 功能 |
+| 09   | 09. getStreet              | 功能 |
+| 10   | 10. isMove                 | 功能 |
+| 11   | 11. isBetterLocation       | 功能 |
+| 12   | 12. isSameProvider         | 功能 |
+| 13   | 13. isLocationEnabled      | 功能 |
+| 14   | 14. isGpsEnabled           | 功能 |
+| 15   | 15. getLocation            | 功能 |
+| 16   | 16. locationToDegree       | 功能 |
 
 ### *008.亮度BrightnessHelper(48)*
 
