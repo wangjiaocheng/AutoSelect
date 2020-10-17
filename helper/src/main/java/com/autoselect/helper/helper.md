@@ -348,24 +348,24 @@
 
 ### *007.定位LocationHelper(283)*
 
-| 序号 | 方法                       | 功能 |
-|:-----|:---------------------------|:----|
-| 01   | 01. settingsGps            | 功能 |
-| 02   | 02. LocationService        | 功能 |
-| 03   | 03. HelperLocationListener | 功能 |
-| 04   | 04. registerLocation       | 功能 |
-| 05   | 05. unRegisterLocation     | 功能 |
-| 06   | 06. getAddress             | 功能 |
-| 07   | 07. getCountryName         | 功能 |
-| 08   | 08. getLocality            | 功能 |
-| 09   | 09. getStreet              | 功能 |
-| 10   | 10. isMove                 | 功能 |
-| 11   | 11. isBetterLocation       | 功能 |
-| 12   | 12. isSameProvider         | 功能 |
-| 13   | 13. isLocationEnabled      | 功能 |
-| 14   | 14. isGpsEnabled           | 功能 |
-| 15   | 15. getLocation            | 功能 |
-| 16   | 16. locationToDegree       | 功能 |
+| 序号 | 方法                       | 功能           |
+|:-----|:---------------------------|:--------------|
+| 01   | 01. settingsGps            | GPS设置界面   |
+| 02   | 02. LocationService        | 定位服务      |
+| 03   | 03. HelperLocationListener | 定位监听器    |
+| 04   | 04. registerLocation       | 注册定位      |
+| 05   | 05. unRegisterLocation     | 注销定位      |
+| 06   | 06. getAddress             | 获取地址      |
+| 07   | 07. getCountryName         | 获取国家      |
+| 08   | 08. getLocality            | 获取地点      |
+| 09   | 09. getStreet              | 获取街道      |
+| 10   | 10. isMove                 | 是否移动      |
+| 11   | 11. isBetterLocation       | 是否更佳定位   |
+| 12   | 12. isSameProvider         | 是否相同提供者 |
+| 13   | 13. isLocationEnabled      | 是否定位可用   |
+| 14   | 14. isGpsEnabled           | 是否GPS可用   |
+| 15   | 15. getLocation            | 获取定位      |
+| 16   | 16. locationToDegree       | 定位转度数    |
 
 ### *008.亮度BrightnessHelper(48)*
 
