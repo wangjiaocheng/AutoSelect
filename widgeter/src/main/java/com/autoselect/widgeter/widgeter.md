@@ -1709,11 +1709,11 @@ class LabelShowMoreActivity : AppCompatActivity() {
 | 012  | *001.提醒-强烈-成员3* | PopupImply、PopupSingle、PopupViewManager                             |
 | 013  | *002.提醒-安静-成员2* | SnackHelper、NoticeHelper                                            |
 
-## **附10.回收视图可备单项**
+## **附10.回收视图可备单项控件**
 
 | 序号 | 单项布局xml                | 单项布局Binder     | 单项布局Bean      |
 |:-----|:--------------------------|:-------------------|:-----------------|
-| 001  | ~~*001.binder_recycler*~~ | ~~RecyclerBinder~~ | ~~RecyclerBean~~ |
+| 001  | *001.binder_recycler*     | RecyclerBinder     | RecyclerBean     |
 | 002  | ~~*002.binder_banner*~~   | ~~BannerBinder~~   | ~~BannerBean~~   |
 | 003  | ~~*003.binder_card*~~     | ~~CardBinder~~     | ~~CardBean~~     |
 | 004  | ~~*004.binder_toolbar*~~  | ~~ToolbarBinder~~  | ~~ToolbarBean~~  |
@@ -1736,16 +1736,17 @@ class LabelShowMoreActivity : AppCompatActivity() {
 | 021  | ~~*021.binder_complete*~~ | ~~CompleteBinder~~ | ~~CompleteBean~~ |
 | 022  | ~~*022.binder_input*~~    | ~~InputBinder~~    | ~~InputBean~~    |
 
-## **附11.回收视图常用单项**
+## **附11.回收视图常用单项控件**
 
-| 序号 | 单项布局xml          | 单项布局Binder | 单项布局Bean |
-|:-----|:--------------------|:--------------|:-------------|
-| 001  | *001.binder_ruler*  | RulerBinder   | RulerBean    |
-| 002  | *002.binder_search* | SearchBinder  | SearchBean   |
-| 003  | *003.binder_button* | ButtonBinder  | ButtonBean   |
-| 004  | *004.binder_chip*   | ChipBinder    | ChipBean     |
-| 005  | *005.binder_text*   | TextBinder    | TextBean     |
-| 006  | *006.binder_plain*  | PlainBinder   | PlainBean    |
+| 序号 | 单项布局xml            | 单项布局Binder | 单项布局Bean  |
+|:-----|:----------------------|:---------------|:-------------|
+| 001  | *001.binder_recycler* | RecyclerBinder | RecyclerBean |
+| 002  | *002.binder_ruler*    | RulerBinder    | RulerBean    |
+| 003  | *003.binder_search*   | SearchBinder   | SearchBean   |
+| 004  | *004.binder_button*   | ButtonBinder   | ButtonBean   |
+| 005  | *005.binder_chip*     | ChipBinder     | ChipBean     |
+| 006  | *006.binder_text*     | TextBinder     | TextBean     |
+| 007  | *007.binder_plain*    | PlainBinder    | PlainBean    |
 
 ## **附12.原生使用扼要**
 
