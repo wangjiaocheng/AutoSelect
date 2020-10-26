@@ -1711,32 +1711,43 @@ class LabelShowMoreActivity : AppCompatActivity() {
 
 ## **附10.回收视图可备单项**
 
-| 序号 | 单项布局xml            | 单项布局Binder | 单项布局Bean  |
-|:-----|:----------------------|:---------------|:-------------|
-| 001  | *001.binder_recycler* | RecyclerBinder | RecyclerBean |
-| 002  | *002.binder_banner*   | BannerBinder   | BannerBean   |
-| 003  | *003.binder_card*     | CardBinder     | CardBean     |
-| 004  | *004.binder_toolbar*  | ToolbarBinder  | ToolbarBean  |
-| 005  | *005.binder_title*    | TitleBinder    | TitleBean    |
-| 006  | *006.binder_calendar* | CalendarBinder | CalendarBean |
-| 007  | *007.binder_cobweb*   | CobwebBinder   | CobwebBean   |
-| 008  | *008.binder_image*    | ImageBinder    | ImageBean    |
-| 009  | *009.binder_pin*      | PinBinder      | PinBean      |
-| 010  | *010.binder_progress* | ProgressBinder | ProgressBean |
-| 011  | *011.binder_wave*     | WaveBinder     | WaveBean     |
-| 012  | *012.binder_seek*     | SeekBinder     | SeekBean     |
-| 013  | *013.binder_ruler*    | RulerBinder    | RulerBean    |
-| 014  | *014.binder_rating*   | RatingBinder   | RatingBean   |
-| 015  | *015.binder_search*   | SearchBinder   | SearchBean   |
-| 016  | *016.binder_button*   | ButtonBinder   | ButtonBean   |
-| 017  | *017.binder_chip*     | ChipBinder     | ChipBean     |
-| 018  | *018.binder_text*     | TextBinder     | TextBean     |
-| 019  | *019.binder_zoom*     | ZoomBinder     | ZoomBean     |
-| 020  | *020.binder_plain*    | PlainBinder    | PlainBean    |
-| 021  | *021.binder_complete* | CompleteBinder | CompleteBean |
-| 022  | *022.binder_input*    | InputBinder    | InputBean    |
+| 序号 | 单项布局xml                | 单项布局Binder     | 单项布局Bean      |
+|:-----|:--------------------------|:-------------------|:-----------------|
+| 001  | ~~*001.binder_recycler*~~ | ~~RecyclerBinder~~ | ~~RecyclerBean~~ |
+| 002  | ~~*002.binder_banner*~~   | ~~BannerBinder~~   | ~~BannerBean~~   |
+| 003  | ~~*003.binder_card*~~     | ~~CardBinder~~     | ~~CardBean~~     |
+| 004  | ~~*004.binder_toolbar*~~  | ~~ToolbarBinder~~  | ~~ToolbarBean~~  |
+| 005  | ~~*005.binder_title*~~    | ~~TitleBinder~~    | ~~TitleBean~~    |
+| 006  | ~~*006.binder_calendar*~~ | ~~CalendarBinder~~ | ~~CalendarBean~~ |
+| 007  | ~~*007.binder_cobweb*~~   | ~~CobwebBinder~~   | ~~CobwebBean~~   |
+| 008  | ~~*008.binder_image*~~    | ~~ImageBinder~~    | ~~ImageBean~~    |
+| 009  | ~~*009.binder_pin*~~      | ~~PinBinder~~      | ~~PinBean~~      |
+| 010  | ~~*010.binder_progress*~~ | ~~ProgressBinder~~ | ~~ProgressBean~~ |
+| 011  | ~~*011.binder_wave*~~     | ~~WaveBinder~~     | ~~WaveBean~~     |
+| 012  | ~~*012.binder_seek*~~     | ~~SeekBinder~~     | ~~SeekBean~~     |
+| 013  | *013.binder_ruler*        | RulerBinder        | RulerBean        |
+| 014  | ~~*014.binder_rating*~~   | ~~RatingBinder~~   | ~~RatingBean~~   |
+| 015  | *015.binder_search*       | SearchBinder       | SearchBean       |
+| 016  | *016.binder_button*       | ButtonBinder       | ButtonBean       |
+| 017  | *017.binder_chip*         | ChipBinder         | ChipBean         |
+| 018  | *018.binder_text*         | TextBinder         | TextBean         |
+| 019  | ~~*019.binder_zoom*~~     | ~~ZoomBinder~~     | ~~ZoomBean~~     |
+| 020  | *020.binder_plain*        | PlainBinder        | PlainBean        |
+| 021  | ~~*021.binder_complete*~~ | ~~CompleteBinder~~ | ~~CompleteBean~~ |
+| 022  | ~~*022.binder_input*~~    | ~~InputBinder~~    | ~~InputBean~~    |
 
-## **附11.原生使用扼要**
+## **附11.回收视图常用单项**
+
+| 序号 | 单项布局xml          | 单项布局Binder | 单项布局Bean |
+|:-----|:--------------------|:--------------|:-------------|
+| 001  | *001.binder_ruler*  | RulerBinder   | RulerBean    |
+| 002  | *002.binder_search* | SearchBinder  | SearchBean   |
+| 003  | *003.binder_button* | ButtonBinder  | ButtonBean   |
+| 004  | *004.binder_chip*   | ChipBinder    | ChipBean     |
+| 005  | *005.binder_text*   | TextBinder    | TextBean     |
+| 006  | *006.binder_plain*  | PlainBinder   | PlainBean    |
+
+## **附12.原生使用扼要**
 
 ```kotlin
         setSupportActionBar(toolbar)//先设置才能使用
