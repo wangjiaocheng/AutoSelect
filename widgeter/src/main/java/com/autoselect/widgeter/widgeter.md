@@ -1724,7 +1724,7 @@ class LabelShowMoreActivity : AppCompatActivity() {
 | 009  | ~~*009.binder_pin*~~      | ~~PinBinder~~      | ~~PinBean~~      |
 | 010  | ~~*010.binder_progress*~~ | ~~ProgressBinder~~ | ~~ProgressBean~~ |
 | 011  | ~~*011.binder_wave*~~     | ~~WaveBinder~~     | ~~WaveBean~~     |
-| 012  | ~~*012.binder_seek*~~     | ~~SeekBinder~~     | ~~SeekBean~~     |
+| 012  | *012.binder_seek*         | SeekBinder         | SeekBean         |
 | 013  | *013.binder_ruler*        | RulerBinder        | RulerBean        |
 | 014  | ~~*014.binder_rating*~~   | ~~RatingBinder~~   | ~~RatingBean~~   |
 | 015  | *015.binder_search*       | SearchBinder       | SearchBean       |
@@ -1741,12 +1741,13 @@ class LabelShowMoreActivity : AppCompatActivity() {
 | 序号 | 单项布局xml            | 单项布局Binder | 单项布局Bean  |
 |:-----|:----------------------|:---------------|:-------------|
 | 001  | *001.binder_recycler* | RecyclerBinder | RecyclerBean |
-| 002  | *002.binder_ruler*    | RulerBinder    | RulerBean    |
-| 003  | *003.binder_search*   | SearchBinder   | SearchBean   |
-| 004  | *004.binder_button*   | ButtonBinder   | ButtonBean   |
-| 005  | *005.binder_chip*     | ChipBinder     | ChipBean     |
-| 006  | *006.binder_text*     | TextBinder     | TextBean     |
-| 007  | *007.binder_plain*    | PlainBinder    | PlainBean    |
+| 002  | *002.binder_seek*     | SeekBinder     | SeekBean     |
+| 003  | *003.binder_ruler*    | RulerBinder    | RulerBean    |
+| 004  | *004.binder_search*   | SearchBinder   | SearchBean   |
+| 005  | *005.binder_button*   | ButtonBinder   | ButtonBean   |
+| 006  | *006.binder_chip*     | ChipBinder     | ChipBean     |
+| 007  | *007.binder_text*     | TextBinder     | TextBean     |
+| 008  | *008.binder_plain*    | PlainBinder    | PlainBean    |
 
 ## **附12.原生使用扼要**
 
