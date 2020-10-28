@@ -215,20 +215,20 @@
 
 ### *007.拖动SeekBar(755)*
 
-| 序号 | 方法                            | 功能 |
-|:-----|:--------------------------------|:----|
-| 01   | 01. min                         | 功能 |
-| 02   | 02. max                         | 功能 |
-| 03   | 03. isHintHolder                | 功能 |
-| 04   | 04. setLeftProgressDescription  | 功能 |
-| 05   | 05. setRightProgressDescription | 功能 |
-| 06   | 06. setProgressDescription      | 功能 |
-| 07   | 07. setRange                    | 功能 |
-| 08   | 08. setRules                    | 功能 |
-| 09   | 09. currentRange                | 功能 |
-| 10   | 10. setEnabled                  | 功能 |
-| 11   | 11. onRangeChangedListener      | 功能 |
-| 12   | 12. setValue                    | 功能 |
+| 序号 | 方法                            | 功能         |
+|:-----|:--------------------------------|:------------|
+| 01   | 01. min                         | 获取最小值   |
+| 02   | 02. max                         | 获取最大值   |
+| 03   | 03. isHintHolder                | 是否显示提示 |
+| 04   | 04. setLeftProgressDescription  | 设置左边描述 |
+| 05   | 05. setRightProgressDescription | 设置右边描述 |
+| 06   | 06. setProgressDescription      | 设置进度描述 |
+| 07   | 07. setRange                    | 设置区间    |
+| 08   | 08. setRules                    | 设置刻度    |
+| 09   | 09. currentRange                | 获取当前区间 |
+| 10   | 10. setEnabled                  | 设置是否启用 |
+| 11   | 11. onRangeChangedListener      | 区间改变监听 |
+| 12   | 12. setValue                    | 设置值      |
 
 >- mipmap
 >
