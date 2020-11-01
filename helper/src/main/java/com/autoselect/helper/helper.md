@@ -71,7 +71,7 @@
 | 053  | *053.ReflectionHelper(64)*                             | 反射 |
 | 054  | *054.ApiHelper(44)*                                    | 接口 |
 | 055  | *055.SingletonHelper.Singleton(16)*                    | 单例 |
-| 056  | *056.AnyHelper(72)*                                    | 对象 |
+| 056  | *056.EmptyHelper(72)*                                  | 对象 |
 | 057  | *057.BusHelper(239)*                                   | 总线 |
 | 058  | *058.InputMethodHelper(248)*                           | 输入 |
 | 059  | *059.ClipboardHelper(20)*                              | 剪贴 |
@@ -1241,7 +1241,7 @@
 | 01   | 01. newInstance | 功能 |
 | 02   | 02. getInstance | 功能 |
 
-### *056.对象AnyHelper(72)*
+### *056.对象EmptyHelper(72)*
 
 | 序号 | 方法               | 功能 |
 |:-----|:-------------------|:----|

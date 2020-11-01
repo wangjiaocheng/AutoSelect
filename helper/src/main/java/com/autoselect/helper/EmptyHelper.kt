@@ -12,7 +12,7 @@ import androidx.collection.SimpleArrayMap
 import com.autoselect.helper.VersionHelper.aboveJellyBean
 import com.autoselect.helper.VersionHelper.aboveJellyBeanMR2
 
-object AnyHelper {
+object EmptyHelper {
     fun isEmptyAny(any: Any?): Boolean = any?.let {
         when {
             any.javaClass.isArray && (any as Array<*>).size == 0 -> true
