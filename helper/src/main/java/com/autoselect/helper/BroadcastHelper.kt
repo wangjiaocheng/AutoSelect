@@ -5,7 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.net.ConnectivityManager
-import com.autoselect.helper.NetworkHelper.netWorkType
+import com.autoselect.helper.NetHelper.netWorkType
 
 object BroadcastHelper {
     class BroadcastReceiverNetWork : BroadcastReceiver() {

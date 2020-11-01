@@ -6,7 +6,7 @@ import android.net.wifi.WifiManager
 import android.os.Build
 import android.os.Handler
 import android.os.Looper
-import com.autoselect.helper.NetworkHelper.isConnectedNetwork
+import com.autoselect.helper.NetHelper.isConnectedNetwork
 import com.autoselect.helper.ThreadHelper.poolSingle
 import com.autoselect.helper.ToastHelper.showShort
 import com.autoselect.helper.WifiHelper.checkSSIDState

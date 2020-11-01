@@ -30,7 +30,7 @@ import java.net.SocketException
 import java.net.UnknownHostException
 import java.util.*
 
-object NetworkHelper : LoggerHelper {
+object NetHelper : LoggerHelper {
     fun openSettingsWireless(activity: Activity) = activity.startActivityForResult(Intent().apply {
         action = Intent.ACTION_VIEW
         component = ComponentName("com.android.settings", "com.android.settings.WirelessSettings")

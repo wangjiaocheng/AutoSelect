@@ -9,7 +9,7 @@ import android.net.wifi.WifiManager
 import android.net.wifi.WifiManager.WifiLock
 import android.text.TextUtils.isEmpty
 import androidx.annotation.RequiresPermission
-import com.autoselect.helper.NetworkHelper.isConnectedNetwork
+import com.autoselect.helper.NetHelper.isConnectedNetwork
 import com.autoselect.helper.ThreadHelper.poolSingle
 import com.autoselect.helper.ToastHelper.showShort
 
