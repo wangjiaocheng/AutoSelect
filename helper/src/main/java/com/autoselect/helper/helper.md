@@ -20,7 +20,7 @@
 | 002  | *002.SdHelper(188)*                                    | 存储 |
 | 003  | *003.NetworkHelper(580)*                               | 网络 |
 | 004  | *004.WifiHelper(254)*                                  | 无线 |
-| 005  | *005.WifiApHelper(185)*                                | 热点 |
+| 005  | *005.ApHelper(185)*                                    | 热点 |
 | 006  | *006.BluetoothHelper(201)*                             | 蓝牙 |
 | 007  | *007.LocationHelper(283)*                              | 定位 |
 | 008  | *008.BrightnessHelper(48)*                             | 亮度 |
@@ -307,7 +307,7 @@
 | 36   | 36. acquireWifiLock            | 功能 |
 | 37   | 37. release                    | 功能 |
 
-### *005.热点WifiApHelper(185)*
+### *005.热点ApHelper(185)*
 
 | 序号 | 方法                              | 功能 |
 |:-----|:----------------------------------|:----|

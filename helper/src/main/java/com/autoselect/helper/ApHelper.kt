@@ -13,7 +13,7 @@ import com.autoselect.helper.WifiHelper.checkSSIDState
 import com.autoselect.helper.WifiHelper.checkState
 import java.lang.reflect.InvocationTargetException
 
-object WifiApHelper {
+object ApHelper {
     private val wifiManager = AHelper.app.wifiManager
     fun isWifiConnectSuccess(ssid: String?): Boolean =
         checkState && checkSSIDState(ssid) && isConnectedNetwork
