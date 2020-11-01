@@ -8,7 +8,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 import java.util.regex.Pattern
 
-object IdCardHelper : LoggerHelper {
+object IdHelper : LoggerHelper {
     private val idCard15: Pattern =
         "^[1-9]\\d{7}((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0-1])\\d{3}$".toPattern()
     private val idCard18: Pattern =

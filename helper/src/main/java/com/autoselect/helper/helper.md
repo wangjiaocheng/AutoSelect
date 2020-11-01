@@ -80,8 +80,8 @@
 | 062  | *062.TextHelper(444)*                                  | 文本 |
 | 063  | *063.RandomHelper(78)*                                 | 随机 |
 | 064  | *064.ValidationHelper(280)*                            | 验证 |
-| 065  | *065.IdCardHelper(396)*                                | 身份 |
-| 066  | *066.BankCardHelper(1720)*                             | 银行 |
+| 065  | *065.IdHelper(396)*                                    | 身份 |
+| 066  | *066.BankHelper(1720)*                                 | 银行 |
 | 067  | *067.BarQRHelper(149)*                                 | 图码 |
 | 068  | *068.ToolHelper(137)*                                  | 工具 |
 | 069  | *069.EncodeHelper(115)*                                | 编码 |
@@ -1470,7 +1470,7 @@
 >2. [常用正则表达式大全](http://toutiao.com/i6231678548520731137)
 >3. [最新手机号码、电话号码正则表达式](http://caibaojian.com/regexp-example.html)
 
-### *065.身份IdCardHelper(396)*
+### *065.身份IdHelper(396)*
 
 | 序号 | 方法                    | 功能 |
 |:-----|:------------------------|:----|
@@ -1498,7 +1498,7 @@
 | 22   | 22. twFirstCode         | 功能 |
 | 23   | 23. validateTWCard      | 功能 |
 
-### *066.银行BankCardHelper(1720)*
+### *066.银行BankHelper(1720)*
 
 | 序号 | 方法                     | 功能 |
 |:-----|:-------------------------|:----|

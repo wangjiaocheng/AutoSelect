@@ -1,6 +1,6 @@
 package com.autoselect.helper
 
-object BankCardHelper {
+object BankHelper {
     private val binBank: Array<String> = arrayOf(
         "621098", "622150", "622151", "622181", "622188",
         "955100", "621095", "620062", "621285", "621798",
