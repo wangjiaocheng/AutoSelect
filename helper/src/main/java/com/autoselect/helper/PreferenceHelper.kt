@@ -13,7 +13,7 @@ import java.io.ByteArrayOutputStream
 import java.lang.reflect.InvocationTargetException
 import java.lang.reflect.Method
 
-object SharePreferenceHelper {
+object PreferenceHelper {
     var fileName = "share_data"
     var all: Map<String, *> = app.getSharedPreferences(fileName, Context.MODE_PRIVATE).all
     fun putAll(values: Map<String, *>) = try {

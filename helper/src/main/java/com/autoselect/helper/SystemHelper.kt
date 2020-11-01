@@ -141,8 +141,8 @@ object SystemHelper {
             isFollowSystem: Boolean, isNeedStartActivity: Boolean
         ) {
             when {
-                isFollowSystem -> SharePreferenceHelper.put(KEY_LOCALE, VALUE_FOLLOW_SYSTEM)
-                else -> SharePreferenceHelper.put(KEY_LOCALE, locale.run { "$language$$country" })
+                isFollowSystem -> PreferenceHelper.put(KEY_LOCALE, VALUE_FOLLOW_SYSTEM)
+                else -> PreferenceHelper.put(KEY_LOCALE, locale.run { "$language$$country" })
             }
             updateLanguage(app, locale)
             if (isNeedStartActivity) app.startActivity(Intent().apply {
@@ -194,7 +194,7 @@ object SystemHelper {
 
         private const val VALUE_FOLLOW_SYSTEM = "VALUE_FOLLOW_SYSTEM"
         val isAppliedLanguageSystem: Boolean
-            get() = SharePreferenceHelper[KEY_LOCALE, ""] == VALUE_FOLLOW_SYSTEM
+            get() = PreferenceHelper[KEY_LOCALE, ""] == VALUE_FOLLOW_SYSTEM
         val applyLanguageSystemInAppOnCreate
             get() = run {
                 if (!isAppliedLanguageSystem)
@@ -202,14 +202,14 @@ object SystemHelper {
             }
         private const val KEY_LOCALE = "KEY_LOCALE"
         val isAppliedLanguageCustom: Boolean
-            get() = StringHelper.isNotSpace(SharePreferenceHelper[KEY_LOCALE, ""] as String?)
+            get() = StringHelper.isNotSpace(PreferenceHelper[KEY_LOCALE, ""] as String?)
 
         fun applyLanguageCustomInAppOnCreate(locale: Locale) {
             if (!isAppliedLanguageCustom) applyLanguageBase(locale, "", false, false)
         }
 
         fun applyLanguage(activity: Activity) =
-            (SharePreferenceHelper[KEY_LOCALE, ""] as String).let { spLocale ->
+            (PreferenceHelper[KEY_LOCALE, ""] as String).let { spLocale ->
                 if (StringHelper.isNotSpace(spLocale)) when (spLocale) {
                     VALUE_FOLLOW_SYSTEM -> {
                         updateLanguage(app, currentLocale)

@@ -115,7 +115,7 @@
 | 097  | *097.PathHelper(178)*                                  | 路径 |
 | 098  | *098.ResourceHelper(247)*                              | 资源 |
 | 099  | *099.ThemeHelper(157)*                                 | 主题 |
-| 100  | *100.SharePreferenceHelper(109)*                       | 共享 |
+| 100  | *100.PreferenceHelper(109)*                            | 共享 |
 | 101  | *101.HtmlHelper(59)*                                   | 超文 |
 | 102  | *102.UriHelper(91)*                                    | 标识 |
 | 103  | *103.SslHelper(57)*                                    | 安全 |
@@ -2370,7 +2370,7 @@
 | 12   | 12. getColorArray                   | 功能 |
 | 13   | 13. isNightMode                     | 功能 |
 
-### *100.共享SharePreferenceHelper(109)*
+### *100.共享PreferenceHelper(109)*
 
 | 序号 | 方法             | 功能 |
 |:-----|:-----------------|:----|
