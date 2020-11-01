@@ -61,4 +61,6 @@ object VersionHelper {
         get() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.P
     val aboveQ: Boolean
         get() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q
+    val aboveR: Boolean
+        get() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.R
 }

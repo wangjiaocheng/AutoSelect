@@ -37,7 +37,7 @@
 | 019  | *019.RebootHelper(35)*                                 | 重启 |
 | 020  | *020.ShortCutHelper(40)*                               | 快捷 |
 | 021  | *021.RomHelper(215)*                                   | 机型 |
-| 022  | *022.VersionHelper(64)*                                | 版本 |
+| 022  | *022.VersionHelper(66)*                                | 版本 |
 | 023  | *023.RouteHelper(142)*                                 | 路由 |
 | 024  | *024.ActivityHelper(669)*                              | 活动 |
 | 025  | *025.ShareHelper(238)*                                 | 分享 |
@@ -548,39 +548,40 @@
 | 18   | 18. isSony      | 功能 |
 | 19   | 19. isAmigo     | 功能 |
 
-### *022.版本VersionHelper(64)*
+### *022.版本VersionHelper(66)*
 
-| 序号 | 方法                         | 功能 |
-|:-----|:-----------------------------|:----|
-| 01   | 01. aboveAstro               | 功能 |
-| 02   | 02. aboveBender              | 功能 |
-| 03   | 03. aboveCupcake             | 功能 |
-| 04   | 04. aboveDonut               | 功能 |
-| 05   | 05. aboveEclair              | 功能 |
-| 06   | 06. aboveEclair01            | 功能 |
-| 07   | 07. aboveEclairMR1           | 功能 |
-| 08   | 08. aboveFroyo               | 功能 |
-| 09   | 09. aboveGingerbread         | 功能 |
-| 10   | 10. aboveGingerbreadMR1      | 功能 |
-| 11   | 11. aboveHoneycomb           | 功能 |
-| 12   | 12. aboveHoneycombMR1        | 功能 |
-| 13   | 13. aboveHoneycombMR2        | 功能 |
-| 14   | 14. aboveIceCreamSandwich    | 功能 |
-| 15   | 15. aboveIceCreamSandwichMR1 | 功能 |
-| 16   | 16. aboveJellyBean           | 功能 |
-| 17   | 17. aboveJellyBeanMR1        | 功能 |
-| 18   | 18. aboveJellyBeanMR2        | 功能 |
-| 19   | 19. aboveKitKat              | 功能 |
-| 20   | 20. aboveKitKatWatch         | 功能 |
-| 21   | 21. aboveLollipop            | 功能 |
-| 22   | 22. aboveLollipopMR1         | 功能 |
-| 23   | 23. aboveMarshmallow         | 功能 |
-| 24   | 24. aboveNougat              | 功能 |
-| 25   | 25. aboveNougatMR1           | 功能 |
-| 26   | 26. aboveOreo                | 功能 |
-| 27   | 27. aboveOreoMR1             | 功能 |
-| 28   | 28. abovePie                 | 功能 |
-| 29   | 29. aboveQ                   | 功能 |
+| 序号 | 方法                         | 功能       |
+|:-----|:-----------------------------|:----------|
+| 01   | 01. aboveAstro               | 版本01以上 |
+| 02   | 02. aboveBender              | 版本02以上 |
+| 03   | 03. aboveCupcake             | 版本03以上 |
+| 04   | 04. aboveDonut               | 版本04以上 |
+| 05   | 05. aboveEclair              | 版本05以上 |
+| 06   | 06. aboveEclair01            | 版本06以上 |
+| 07   | 07. aboveEclairMR1           | 版本07以上 |
+| 08   | 08. aboveFroyo               | 版本08以上 |
+| 09   | 09. aboveGingerbread         | 版本09以上 |
+| 10   | 10. aboveGingerbreadMR1      | 版本10以上 |
+| 11   | 11. aboveHoneycomb           | 版本11以上 |
+| 12   | 12. aboveHoneycombMR1        | 版本12以上 |
+| 13   | 13. aboveHoneycombMR2        | 版本13以上 |
+| 14   | 14. aboveIceCreamSandwich    | 版本14以上 |
+| 15   | 15. aboveIceCreamSandwichMR1 | 版本15以上 |
+| 16   | 16. aboveJellyBean           | 版本16以上 |
+| 17   | 17. aboveJellyBeanMR1        | 版本17以上 |
+| 18   | 18. aboveJellyBeanMR2        | 版本18以上 |
+| 19   | 19. aboveKitKat              | 版本19以上 |
+| 20   | 20. aboveKitKatWatch         | 版本20以上 |
+| 21   | 21. aboveLollipop            | 版本21以上 |
+| 22   | 22. aboveLollipopMR1         | 版本22以上 |
+| 23   | 23. aboveMarshmallow         | 版本23以上 |
+| 24   | 24. aboveNougat              | 版本24以上 |
+| 25   | 25. aboveNougatMR1           | 版本25以上 |
+| 26   | 26. aboveOreo                | 版本26以上 |
+| 27   | 27. aboveOreoMR1             | 版本27以上 |
+| 28   | 28. abovePie                 | 版本28以上 |
+| 29   | 29. aboveQ                   | 版本29以上 |
+| 30   | 30. aboveR                   | 版本30以上 |
 
 ### *023.路由RouteHelper(142)*
 
