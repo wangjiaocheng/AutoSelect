@@ -9,7 +9,7 @@ import com.autoselect.helper.PathHelper.pathInternalAppCache
 import com.autoselect.helper.PathHelper.pathInternalAppDbs
 import com.autoselect.helper.PathHelper.pathInternalAppFiles
 import com.autoselect.helper.PathHelper.pathInternalAppSp
-import com.autoselect.helper.SdCardHelper.isSdCardEnable
+import com.autoselect.helper.SdHelper.isSdCardEnable
 import java.io.File
 
 object CleanHelper {

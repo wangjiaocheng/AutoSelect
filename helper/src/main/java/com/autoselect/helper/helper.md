@@ -17,7 +17,7 @@
 | 序号 | 类库                                                    | 功能 |
 |:-----|:-------------------------------------------------------|:-----|
 | 001  | *001.DeviceHelper(446)*                                | 设备 |
-| 002  | *002.SdCardHelper(188)*                                | 存储 |
+| 002  | *002.SdHelper(188)*                                    | 存储 |
 | 003  | *003.NetworkHelper(580)*                               | 网络 |
 | 004  | *004.WifiHelper(254)*                                  | 无线 |
 | 005  | *005.WifiApHelper(185)*                                | 热点 |
@@ -164,22 +164,22 @@
 | 31   | 31. stateCall           | 手机状态：0无活动；1响铃；2待机。                                   |
 | 32   | 32. stateLocation       | 手机方位                                                           |
 
-### *002.存储SdCardHelper(188)*
+### *002.存储SdHelper(188)*
 
-| 序号 | 方法                    | 功能 |
-|:-----|:------------------------|:----|
-| 01   | 01. isSdCardEnable      | 功能 |
-| 02   | 02. isSdCardDisable     | 功能 |
-| 03   | 03. isSdCardAvailable   | 功能 |
-| 04   | 04. isSdCardUnavailable | 功能 |
-| 05   | 05. sdCardPathEx        | 功能 |
-| 06   | 06. sdCardPath          | 功能 |
-| 07   | 07. getAllBytes         | 功能 |
-| 08   | 08. getAvailableBytes   | 功能 |
-| 09   | 09. getFreeBytes        | 功能 |
-| 10   | 10. getStatFs           | 功能 |
-| 11   | 11. sdCardInfo          | 功能 |
-| 12   | 12. sdCardInfoList      | 功能 |
+| 序号 | 方法                    | 功能         |
+|:-----|:------------------------|:------------|
+| 01   | 01. isSdCardEnable      | Sd是否启用  |
+| 02   | 02. isSdCardDisable     | Sd是否禁用  |
+| 03   | 03. isSdCardAvailable   | Sd是否可用  |
+| 04   | 04. isSdCardUnavailable | Sd是否停用  |
+| 05   | 05. sdCardPathEx        | Sd路径列表  |
+| 06   | 06. sdCardPath          | Sd路径      |
+| 07   | 07. getAllBytes         | 获取路径容量 |
+| 08   | 08. getAvailableBytes   | 获取可用容量 |
+| 09   | 09. getFreeBytes        | 获取剩余容量 |
+| 10   | 10. getStatFs           | 获取StatFs  |
+| 11   | 11. sdCardInfo          | Sd信息      |
+| 12   | 12. sdCardInfoList      | Sd信息列表  |
 
 ### *003.网络NetworkHelper(580)*
 

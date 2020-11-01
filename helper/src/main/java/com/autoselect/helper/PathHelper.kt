@@ -3,7 +3,7 @@ package com.autoselect.helper
 import android.os.Build
 import android.os.Environment
 import com.autoselect.helper.AHelper.app
-import com.autoselect.helper.SdCardHelper.isSdCardDisable
+import com.autoselect.helper.SdHelper.isSdCardDisable
 import com.autoselect.helper.VersionHelper.aboveLollipop
 import java.io.File
 

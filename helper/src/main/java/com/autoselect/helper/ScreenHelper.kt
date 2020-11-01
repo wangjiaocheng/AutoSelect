@@ -15,7 +15,7 @@ import android.view.WindowManager
 import android.webkit.WebView
 import androidx.annotation.RequiresPermission
 import com.autoselect.helper.AHelper.app
-import com.autoselect.helper.SdCardHelper.isSdCardEnable
+import com.autoselect.helper.SdHelper.isSdCardEnable
 import com.autoselect.helper.VersionHelper.aboveJellyBeanMR1
 import java.io.File
 import java.io.FileNotFoundException

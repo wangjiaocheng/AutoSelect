@@ -26,7 +26,7 @@ import com.autoselect.helper.PathHelper.pathExternalAppFiles
 import com.autoselect.helper.PathHelper.pathInternalAppCache
 import com.autoselect.helper.PathHelper.pathInternalAppData
 import com.autoselect.helper.PathHelper.pathInternalAppFiles
-import com.autoselect.helper.SdCardHelper.isSdCardEnable
+import com.autoselect.helper.SdHelper.isSdCardEnable
 import com.autoselect.helper.StringHelper.isSpace
 import com.autoselect.helper.VersionHelper.aboveJellyBeanMR2
 import com.autoselect.helper.VersionHelper.aboveKitKat

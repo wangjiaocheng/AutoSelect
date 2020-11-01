@@ -16,7 +16,7 @@ import java.io.*
 import java.lang.reflect.Array
 import java.lang.reflect.InvocationTargetException
 
-object SdCardHelper {
+object SdHelper {
     val isSdCardEnable: Boolean
         get() = Environment.getExternalStorageState() == Environment.MEDIA_MOUNTED ||
                 !Environment.isExternalStorageRemovable()

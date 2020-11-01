@@ -11,7 +11,7 @@ import android.provider.MediaStore
 import androidx.annotation.RequiresPermission
 import androidx.fragment.app.Fragment
 import com.autoselect.helper.AHelper.app
-import com.autoselect.helper.SdCardHelper.isSdCardEnable
+import com.autoselect.helper.SdHelper.isSdCardEnable
 import java.text.SimpleDateFormat
 import java.util.*
 
