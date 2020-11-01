@@ -35,7 +35,7 @@
 | 017  | *017.ExitHelper(59)*                                   | 退出 |
 | 018  | *018.CleanHelper(50)*                                  | 清理 |
 | 019  | *019.RebootHelper(35)*                                 | 重启 |
-| 020  | *020.ShortCutHelper(40)*                               | 快捷 |
+| 020  | *020.ShortcutHelper(40)*                               | 快捷 |
 | 021  | *021.RomHelper(215)*                                   | 机型 |
 | 022  | *022.VersionHelper(66)*                                | 版本 |
 | 023  | *023.RouteHelper(142)*                                 | 路由 |
@@ -516,7 +516,7 @@
 | 03   | 03. reboot2Bootloader | 功能                      |
 | 04   | 04. shutdown          | 功能                      |
 
-### *020.快捷ShortCutHelper(40)*
+### *020.快捷ShortcutHelper(40)*
 
 | 序号 | 方法            | 功能 |
 |:-----|:----------------|:----|

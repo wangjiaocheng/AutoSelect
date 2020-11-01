@@ -5,7 +5,7 @@ import android.content.ComponentName
 import android.content.Intent
 import android.net.Uri
 
-object ShortCutHelper {
+object ShortcutHelper {
     fun hasShortcut(activity: Activity): Boolean = activity.contentResolver.query(
         Uri.parse("content://com.android.launcher.settings/favorites?notify=true"),
         arrayOf("title", "iconResource"), "title=?",
