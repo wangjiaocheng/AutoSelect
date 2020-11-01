@@ -18,7 +18,7 @@
         <attr name="titleSize" format="dimension" />
         <attr name="titleVisibility" format="boolean" />
     </declare-styleable>
-    <declare-styleable name="SeekBar">
+    <declare-styleable name="Seek">
         <attr name="cells" format="integer" />
         <attr name="reserve" format="float" />
         <attr name="minProgress" format="float" />
@@ -48,7 +48,7 @@
             <enum name="range" value="2" />
         </attr>
     </declare-styleable>
-    <declare-styleable name="ProgressBar">
+    <declare-styleable name="ProgressView">
         <attr name="stopColor" format="color" />
         <attr name="finishColor" format="color" />
         <attr name="loadingColor" format="color" />
@@ -69,7 +69,7 @@
             <enum name="FILL" value="1" />
         </attr>
     </declare-styleable>
-    <declare-styleable name="AutoImageView">
+    <declare-styleable name="AutoImage">
         <attr name="ImageSrc" format="reference" />
     </declare-styleable>
     <declare-styleable name="ScaleImageView">
@@ -97,7 +97,7 @@
             <flag name="upDownStack" value="2" />
         </attr>
     </declare-styleable>
-    <declare-styleable name="CobwebView">
+    <declare-styleable name="Cobweb">
         <attr name="spiderNameSize" format="dimension" />
         <attr name="spiderMaxLevel" format="integer" />
         <attr name="spiderColor" format="color" />
@@ -120,7 +120,7 @@
         <attr name="overview_checked" format="color" />
         <attr name="txt_color" format="color" />
     </declare-styleable>
-    <declare-styleable name="RulerWheelView">
+    <declare-styleable name="RulerWheel">
         <attr name="ColorMark" format="color|reference" />
         <attr name="ColorMarkText" format="color|reference" />
         <attr name="ColorHighlight" format="color|reference" />
@@ -167,7 +167,7 @@
         <attr name="animLength" format="dimension" />
         <attr name="anim_duration" format="integer" />
     </declare-styleable>
-    <declare-styleable name="WaveView">
+    <declare-styleable name="Wave">
         <attr name="WaveShapeType">
             <enum name="CIRCLE" value="0" />
             <enum name="SQUARE" value="1" />
@@ -175,7 +175,7 @@
         <attr name="WaveColor" format="color" />
         <attr name="WaveBorder" format="dimension" />
     </declare-styleable>
-    <declare-styleable name="SideBar">
+    <declare-styleable name="Side">
         <attr name="sidebar_lazy_respond" format="boolean" />
         <attr name="sidebar_text_color" format="color" />
         <attr name="sidebar_text_size" format="dimension" />

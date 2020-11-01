@@ -19,7 +19,7 @@ import kotlin.math.max
 import kotlin.math.roundToInt
 import kotlin.math.roundToLong
 
-class SeekBar @JvmOverloads constructor(
+class Seek @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0, defStyleRes: Int = 0
 ) : View(context, attrs, defStyleAttr, defStyleRes) {
     init {
@@ -35,7 +35,7 @@ class SeekBar @JvmOverloads constructor(
     private var mThumbResId = 0//按钮背景
     private var mProgressHintBGId = 0//进度提示背景
     private var mProgressHintBG: Bitmap = when (mProgressHintBGId) {
-        0 -> BitmapFactory.decodeResource(resources, R.mipmap.seekbar_hint)
+        0 -> BitmapFactory.decodeResource(resources, R.mipmap.seek_hint)
         else -> BitmapFactory.decodeResource(resources, mProgressHintBGId)
     }
     private var colorLineSelected = 0//选择过的进度条颜色
@@ -66,41 +66,41 @@ class SeekBar @JvmOverloads constructor(
     private var defaultPaddingLeftAndRight = 0
     private var defaultPaddingTop = 0
     private fun initAttrs(context: Context, attrs: AttributeSet?) {
-        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.SeekBar)
+        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.Seek)
         try {
             typedArray.run {
-                cellsCount = getInt(R.styleable.SeekBar_cells, 1)
-                reserveValue = getFloat(R.styleable.SeekBar_reserve, 0f)
-                min = getFloat(R.styleable.SeekBar_minProgress, 0f)
-                max = getFloat(R.styleable.SeekBar_maxProgress, 100f)
+                cellsCount = getInt(R.styleable.Seek_cells, 1)
+                reserveValue = getFloat(R.styleable.Seek_reserve, 0f)
+                min = getFloat(R.styleable.Seek_minProgress, 0f)
+                max = getFloat(R.styleable.Seek_maxProgress, 100f)
                 mThumbResId =
-                    getResourceId(R.styleable.SeekBar_seekBarResId, R.mipmap.seekbar_thumb)
-                mProgressHintBGId = getResourceId(R.styleable.SeekBar_progressHintResId, 0)
-                colorLineSelected = getColor(R.styleable.SeekBar_lineColorSelected, -0xb4269e)
-                colorLineEdge = getColor(R.styleable.SeekBar_lineColorEdge, -0x282829)
-                colorPrimary = getColor(R.styleable.SeekBar_thumbPrimaryColor, 0)
-                colorSecondary = getColor(R.styleable.SeekBar_thumbSecondaryColor, 0)
-                mTextArray = getTextArray(R.styleable.SeekBar_markTextArray)
-                mHideProgressHint = getBoolean(R.styleable.SeekBar_hideProgressHint, false)
-                isHintHolder = getBoolean(R.styleable.SeekBar_isHintHolder, false)
+                    getResourceId(R.styleable.Seek_seekBarResId, R.mipmap.seek_thumb)
+                mProgressHintBGId = getResourceId(R.styleable.Seek_progressHintResId, 0)
+                colorLineSelected = getColor(R.styleable.Seek_lineColorSelected, -0xb4269e)
+                colorLineEdge = getColor(R.styleable.Seek_lineColorEdge, -0x282829)
+                colorPrimary = getColor(R.styleable.Seek_thumbPrimaryColor, 0)
+                colorSecondary = getColor(R.styleable.Seek_thumbSecondaryColor, 0)
+                mTextArray = getTextArray(R.styleable.Seek_markTextArray)
+                mHideProgressHint = getBoolean(R.styleable.Seek_hideProgressHint, false)
+                isHintHolder = getBoolean(R.styleable.Seek_isHintHolder, false)
                 textPadding = getDimension(
-                    R.styleable.SeekBar_textPadding, dip2px(7f).toFloat()
+                    R.styleable.Seek_textPadding, dip2px(7f).toFloat()
                 ).toInt()
                 mTextSize = getDimension(
-                    R.styleable.SeekBar_textSize2, dip2px(12f).toFloat()
+                    R.styleable.Seek_textSize2, dip2px(12f).toFloat()
                 ).toInt()
-                mHintBGHeight = getDimension(R.styleable.SeekBar_hintBGHeight, 0f)
-                mHintBGWith = getDimension(R.styleable.SeekBar_hintBGWith, 0f)
+                mHintBGHeight = getDimension(R.styleable.Seek_hintBGHeight, 0f)
+                mHintBGWith = getDimension(R.styleable.Seek_hintBGWith, 0f)
                 mSeekBarHeight = getDimension(
-                    R.styleable.SeekBar_seekBarHeight, dip2px(2f).toFloat()
+                    R.styleable.Seek_seekBarHeight, dip2px(2f).toFloat()
                 ).toInt()
-                mHintBGPadding = getDimension(R.styleable.SeekBar_hintBGPadding, 0f)
+                mHintBGPadding = getDimension(R.styleable.Seek_hintBGPadding, 0f)
                     .toInt()
                 mThumbSize = getDimension(
-                    R.styleable.SeekBar_thumbSize, dip2px(26f).toFloat()
+                    R.styleable.Seek_thumbSize, dip2px(26f).toFloat()
                 ).toInt()
-                mCellMode = getInt(R.styleable.SeekBar_cellMode, 0)
-                mSeekBarMode = getInt(R.styleable.SeekBar_seekBarMode, 2)
+                mCellMode = getInt(R.styleable.Seek_cellMode, 0)
+                mSeekBarMode = getInt(R.styleable.Seek_seekBarMode, 2)
             }
         } finally {
             typedArray.recycle()
@@ -318,7 +318,7 @@ class SeekBar @JvmOverloads constructor(
 
     interface OnRangeChangedListener {
         fun onRangeChanged(
-            view: SeekBar?, min: Float, max: Float, isFromUser: Boolean
+            view: com.autoselect.widgeter.Seek?, min: Float, max: Float, isFromUser: Boolean
         )
     }
 

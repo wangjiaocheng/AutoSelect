@@ -17,7 +17,7 @@ import androidx.core.view.GestureDetectorCompat
 import androidx.core.view.ViewCompat
 import kotlin.math.*
 
-class RulerWheelView
+class RulerWheel
 @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) :
     View(context, attrs, defStyleAttr), GestureDetector.OnGestureListener {
     init {
@@ -68,20 +68,20 @@ class RulerWheelView
             spaceBottom = it * 6
         }
         val typedArray: TypedArray? =
-            attrs?.let { context.obtainStyledAttributes(it, R.styleable.RulerWheelView) }
+            attrs?.let { context.obtainStyledAttributes(it, R.styleable.RulerWheel) }
         try {
             typedArray?.run {
-                colorMark = getColor(R.styleable.RulerWheelView_ColorMark, colorMark)
-                colorMarkText = getColor(R.styleable.RulerWheelView_ColorMarkText, colorMarkText)
-                colorHighlight = getColor(R.styleable.RulerWheelView_ColorHighlight, colorHighlight)
+                colorMark = getColor(R.styleable.RulerWheel_ColorMark, colorMark)
+                colorMarkText = getColor(R.styleable.RulerWheel_ColorMarkText, colorMarkText)
+                colorHighlight = getColor(R.styleable.RulerWheel_ColorHighlight, colorHighlight)
                 textSizeNormal =
-                    getDimension(R.styleable.RulerWheelView_MarkTextSize, textSizeNormal)
+                    getDimension(R.styleable.RulerWheel_MarkTextSize, textSizeNormal)
                 textSizeCenter =
-                    getDimension(R.styleable.RulerWheelView_MarkTextSizeCenter, textSizeCenter)
-                cursorSize = getDimension(R.styleable.RulerWheelView_CursorSize, cursorSize)
-                intervalFactor = getFloat(R.styleable.RulerWheelView_IntervalFactor, intervalFactor)
-                markRatio = getFloat(R.styleable.RulerWheelView_MarkRatio, markRatio)
-                markAdditionCenter = getString(R.styleable.RulerWheelView_MarkAdditionalCenter)
+                    getDimension(R.styleable.RulerWheel_MarkTextSizeCenter, textSizeCenter)
+                cursorSize = getDimension(R.styleable.RulerWheel_CursorSize, cursorSize)
+                intervalFactor = getFloat(R.styleable.RulerWheel_IntervalFactor, intervalFactor)
+                markRatio = getFloat(R.styleable.RulerWheel_MarkRatio, markRatio)
+                markAdditionCenter = getString(R.styleable.RulerWheel_MarkAdditionalCenter)
             }
         } finally {
             typedArray?.recycle()
@@ -147,8 +147,8 @@ class RulerWheelView
     }
 
     interface OnWheelItemSelectedListener {
-        fun onWheelItemChanged(rulerWheelView: RulerWheelView, position: Int)
-        fun onWheelItemSelected(rulerWheelView: RulerWheelView, position: Int)
+        fun onWheelItemChanged(rulerWheel: RulerWheel, position: Int)
+        fun onWheelItemSelected(rulerWheel: RulerWheel, position: Int)
     }
 
     var onWheelItemSelectedListener: OnWheelItemSelectedListener? = null

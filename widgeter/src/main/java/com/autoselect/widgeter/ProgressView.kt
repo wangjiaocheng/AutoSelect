@@ -8,7 +8,7 @@ import android.view.View
 import com.autoselect.helper.DensityHelper.dip2px
 import kotlin.math.min
 
-class ProgressBar
+class ProgressView
 @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) :
     View(context, attrs, defStyleAttr), Runnable {
     init {
@@ -23,19 +23,19 @@ class ProgressBar
     private var borderWidth: Int = 1
     private var radius: Int = 0
     private fun initAttrs(attrs: AttributeSet?) {
-        val typedArray: TypedArray = context.obtainStyledAttributes(attrs, R.styleable.ProgressBar)
+        val typedArray: TypedArray = context.obtainStyledAttributes(attrs, R.styleable.ProgressView)
         try {
             typedArray.run {
-                stopColor = getColor(R.styleable.ProgressBar_stopColor, Color.parseColor("#ff9800"))
+                stopColor = getColor(R.styleable.ProgressView_stopColor, Color.parseColor("#ff9800"))
                 pauseColor =
-                    getColor(R.styleable.ProgressBar_stopColor, Color.parseColor("#ff9800"))
+                    getColor(R.styleable.ProgressView_stopColor, Color.parseColor("#ff9800"))
                 finishColor =
-                    getColor(R.styleable.ProgressBar_finishColor, Color.parseColor("#3CB371"))
+                    getColor(R.styleable.ProgressView_finishColor, Color.parseColor("#3CB371"))
                 loadingColor =
-                    getColor(R.styleable.ProgressBar_loadingColor, Color.parseColor("#40c4ff"))
-                mTextSize = getDimension(R.styleable.ProgressBar_PbTextSize, 12f).toInt()
-                borderWidth = getDimension(R.styleable.ProgressBar_borderWidth, 1f).toInt()
-                radius = getDimension(R.styleable.ProgressBar_radius, 0f).toInt()
+                    getColor(R.styleable.ProgressView_loadingColor, Color.parseColor("#40c4ff"))
+                mTextSize = getDimension(R.styleable.ProgressView_PbTextSize, 12f).toInt()
+                borderWidth = getDimension(R.styleable.ProgressView_borderWidth, 1f).toInt()
+                radius = getDimension(R.styleable.ProgressView_radius, 0f).toInt()
             }
         } finally {
             typedArray.recycle()

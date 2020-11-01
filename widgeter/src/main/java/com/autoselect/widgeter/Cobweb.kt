@@ -12,7 +12,7 @@ import com.autoselect.helper.DensityHelper.dip2px
 import com.autoselect.helper.ImageHelper.setColorAlphaByInt
 import kotlin.math.*
 
-class CobwebView
+class Cobweb
 @JvmOverloads constructor(mContext: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) :
     View(mContext, attrs, defStyleAttr) {
     init {
@@ -66,25 +66,25 @@ class CobwebView
         }//手势旋转
 
     private fun initAttrs(attrs: AttributeSet?) {
-        val typedArray: TypedArray = context.obtainStyledAttributes(attrs, R.styleable.CobwebView)
+        val typedArray: TypedArray = context.obtainStyledAttributes(attrs, R.styleable.Cobweb)
         try {
             typedArray.run {
                 spiderNameSize =
-                    getDimensionPixelSize(R.styleable.CobwebView_spiderNameSize, dip2px(16f))
-                spiderMaxLevel = getInteger(R.styleable.CobwebView_spiderMaxLevel, 4)
+                    getDimensionPixelSize(R.styleable.Cobweb_spiderNameSize, dip2px(16f))
+                spiderMaxLevel = getInteger(R.styleable.Cobweb_spiderMaxLevel, 4)
                 spiderColor = getColor(
-                    R.styleable.CobwebView_spiderColor, resources.getColor(R.color.cyan_800)
+                    R.styleable.Cobweb_spiderColor, resources.getColor(R.color.cyan_800)
                 )
-                spiderRadiusColor = getColor(R.styleable.CobwebView_spiderRadiusColor, Color.WHITE)
+                spiderRadiusColor = getColor(R.styleable.Cobweb_spiderRadiusColor, Color.WHITE)
                 spiderLevelStrokeColor = getColor(
-                    R.styleable.CobwebView_spiderLevelStrokeColor,
+                    R.styleable.Cobweb_spiderLevelStrokeColor,
                     resources.getColor(R.color.amber_800)
                 )
                 spiderLevelColor = setColorAlphaByInt(spiderLevelStrokeColor, 255 / 2)
                 spiderLevelStrokeWidth =
-                    getFloat(R.styleable.CobwebView_spiderLevelStrokeWidth, 3f)
-                isSpiderLevelStroke = getBoolean(R.styleable.CobwebView_spiderLevelStroke, true)
-                isSpiderRotate = getBoolean(R.styleable.CobwebView_spiderRotate, true)
+                    getFloat(R.styleable.Cobweb_spiderLevelStrokeWidth, 3f)
+                isSpiderLevelStroke = getBoolean(R.styleable.Cobweb_spiderLevelStroke, true)
+                isSpiderRotate = getBoolean(R.styleable.Cobweb_spiderRotate, true)
             }
         } finally {
             typedArray.recycle()

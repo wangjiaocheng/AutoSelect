@@ -14,7 +14,7 @@ import android.widget.TextSwitcher
 import android.widget.TextView
 import android.widget.ViewSwitcher
 
-class TextViewVertical
+class TextVertical
 @JvmOverloads constructor(private var mContext: Context?, attrs: AttributeSet? = null) :
     TextSwitcher(mContext, attrs), ViewSwitcher.ViewFactory {
     init {

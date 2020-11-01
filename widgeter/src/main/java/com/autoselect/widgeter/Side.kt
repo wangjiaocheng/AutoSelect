@@ -14,7 +14,7 @@ import kotlin.math.abs
 import kotlin.math.max
 import kotlin.math.pow
 
-class SideBar
+class Side
 @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) :
     View(context, attrs, defStyleAttr) {
     init {
@@ -76,20 +76,20 @@ class SideBar
         }
 
     private fun initAttrs(context: Context, attrs: AttributeSet?) {
-        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.SideBar)
+        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.Side)
         try {
             typedArray.run {
-                lazyRespond = getBoolean(R.styleable.SideBar_sidebar_lazy_respond, false)
-                textColor = getColor(R.styleable.SideBar_sidebar_text_color, Color.GRAY)
+                lazyRespond = getBoolean(R.styleable.Side_sidebar_lazy_respond, false)
+                textColor = getColor(R.styleable.Side_sidebar_text_color, Color.GRAY)
                 textSize = getDimension(
-                    R.styleable.SideBar_sidebar_text_size, sp2px(DEFAULT_TEXT_SIZE).toFloat()
+                    R.styleable.Side_sidebar_text_size, sp2px(DEFAULT_TEXT_SIZE).toFloat()
                 )
                 maxOffset = getDimension(
-                    R.styleable.SideBar_sidebar_max_offset, dip2px(DEFAULT_MAX_OFFSET).toFloat()
+                    R.styleable.Side_sidebar_max_offset, dip2px(DEFAULT_MAX_OFFSET).toFloat()
                 )
-                sideBarPosition = getInt(R.styleable.SideBar_sidebar_position, POSITION_RIGHT)
+                sideBarPosition = getInt(R.styleable.Side_sidebar_position, POSITION_RIGHT)
                 sideTextAlignment =
-                    getInt(R.styleable.SideBar_sidebar_text_alignment, TEXT_ALIGN_CENTER)
+                    getInt(R.styleable.Side_sidebar_text_alignment, TEXT_ALIGN_CENTER)
             }
         } finally {
             typedArray.recycle()

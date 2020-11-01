@@ -6,7 +6,7 @@ import android.view.View
 import android.view.animation.AnimationUtils
 import android.widget.ViewFlipper
 
-class TextViewVerticalMore
+class TextVerticalMore
 @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null) :
     ViewFlipper(context, attrs) {
     var interval = 5000

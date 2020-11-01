@@ -13,7 +13,7 @@ import android.view.animation.LinearInterpolator
 import com.autoselect.helper.ImageHelper
 import kotlin.math.sin
 
-class WaveView @JvmOverloads constructor(
+class Wave @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0, defStyleRes: Int = 0
 ) : View(context, attrs, defStyleAttr, defStyleRes) {
     init {
@@ -67,18 +67,18 @@ class WaveView @JvmOverloads constructor(
     }
     val cancel = mAnimatorSet?.end()
     private fun init(context: Context, attrs: AttributeSet?) {
-        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.WaveView)
+        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.Wave)
         try {
             typedArray.run {
-                shapeType = when (getInt(R.styleable.WaveView_WaveShapeType, 0)) {
+                shapeType = when (getInt(R.styleable.Wave_WaveShapeType, 0)) {
                     0 -> ShapeType.CIRCLE
                     1 -> ShapeType.SQUARE
                     else -> ShapeType.SQUARE
                 }
                 frontWaveColor =
-                    getColor(R.styleable.WaveView_WaveColor, Color.parseColor("#89CFF0"))
+                    getColor(R.styleable.Wave_WaveColor, Color.parseColor("#89CFF0"))
                 borderWidth =
-                    getDimension(R.styleable.WaveView_WaveBorder, borderWidth * 1f).toInt()
+                    getDimension(R.styleable.Wave_WaveBorder, borderWidth * 1f).toInt()
             }
         } finally {
             typedArray.recycle()
