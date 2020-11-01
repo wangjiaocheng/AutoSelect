@@ -7,6 +7,12 @@ import java.io.FileOutputStream
 import java.io.IOException
 
 object DbHelper : LoggerHelper {
+    fun sqlInjection(vararg sql: String) {
+        for (i in sql) {
+            i.trim { it <= ' ' }.replace(".*([';]+|(--)+).*".toRegex(), " ")
+        }
+    }//将含单引号(')、分号(;)和注释符号(--)语句替掉
+
     @JvmOverloads
     fun exportDb2SdCard(
         realDbName: String, exportDbName: String = "backup$realDbName", path: String = pathExternal

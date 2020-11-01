@@ -121,7 +121,7 @@
 | 103  | *103.SslHelper(57)*                                    | 安全 |
 | 104  | *104.WebServiceHelper(63)*                             | 网服 |
 | 105  | *105.HttpUrlConnectionHelper(107)*                     | 网连 |
-| 106  | *106.DbHelper(29)*                                     | 数库 |
+| 106  | *106.DbHelper(35)*                                     | 数库 |
 | 107  | *107.MapHelper(69)*                                    | 地图 |
 | 108  | *108.ContactsHelper(221)*                              | 通讯 |
 | 109  | *109.SystemHelper：SystemLanguage(230)*                | 系统 |
@@ -2431,11 +2431,12 @@
 | 04   | 04. doPostAsyn | 功能 |
 | 05   | 05. doPost     | 功能 |
 
-### *106.数库DbHelper(29)*
+### *106.数库DbHelper(35)*
 
-| 序号 | 方法                | 功能 |
-|:-----|:--------------------|:----|
-| 01   | 01. exportDb2SdCard | 功能 |
+| 序号 | 方法                | 功能              |
+|:-----|:--------------------|:-----------------|
+| 01   | 01. sqlInjection    | 防止数据注入      |
+| 02   | 02. exportDb2SdCard | 导出数据库到存储卡 |
 
 ### *107.地图MapHelper(69)*
 
