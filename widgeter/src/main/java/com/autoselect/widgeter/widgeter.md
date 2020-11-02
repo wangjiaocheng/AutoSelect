@@ -1606,16 +1606,16 @@ class GuideActivity : AppCompatActivity() {
 
 ## **附01.原生Layouts布局（行、列、格、面）**
 
-| 序号 | 布局                                     | 功能                             |
-|:-----|:-----------------------------------------|:--------------------------------|
-| 001  | *001.ConstraintLayout*                   | 约束布局                        |
-| 002  | *002.LinearLayout(horizontal、vertical)* | 线性布局（水平、垂直）           |
-| 003  | *003.TableLayout(TableRow)*              | 表格布（LayoutTab和LayoutLabel） |
-| 005  | *005.Space*                              | 空白                            |
-| 006  | *006.~~RelativeLayout~~*                 | ~~相对布局（遗留）~~             |
-| 007  | *007.~~CoordinatorLayout~~*              | ~~协调布局（增强型帧布局）~~     |
-| 008  | *008.~~GridLayout~~*                     | ~~网格布局（遗留）~~             |
-| 009  | *009.~~AbsoluteLayout~~*                 | ~~绝对布局~~                    |
+| 序号 | 布局                                     | 功能                              |
+|:-----|:-----------------------------------------|:----------------------------------|
+| 001  | *001.ConstraintLayout*                   | 约束布局                          |
+| 002  | *002.LinearLayout(horizontal、vertical)* | 线性布局（水平、垂直）             |
+| 003  | *003.TableLayout(TableRow)*              | 表格布局（LayoutTab和LayoutLabel） |
+| 005  | *005.Space*                              | 空白                              |
+| 006  | *006.~~RelativeLayout~~*                 | ~~相对布局（遗留）~~               |
+| 007  | *007.~~CoordinatorLayout~~*              | ~~协调布局（增强型帧布局）~~       |
+| 008  | *008.~~GridLayout~~*                     | ~~网格布局（遗留）~~               |
+| 009  | *009.~~AbsoluteLayout~~*                 | ~~绝对布局~~                      |
 
 ## **附02.原生Containers容器（条目、栏目、页目）**
 
