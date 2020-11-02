@@ -14,40 +14,57 @@
 
 ## **控件库widgeter归属客户端布局层**
 
+| 序号 | 类库                                                                  | 类别           |
+|:-----|:---------------------------------------------------------------------|:---------------|
+| 001  | *LayoutTab(LayoutLabel)*                                             | Layouts行列格面 |
+| 002  | *BaseAdapterBinder(BaseAdapterQuick)*                                | Containers条目  |
+| 003  | *Banner、CardStackView*                                              | Containers页目  |
+| 004  | *Title、Side*                                                        | Containers栏目  |
+| 005  | **                                                                   | Helpers助手     |
+| 006  | *Cobweb、NetSpeedView、SeatAirplane、SeatMovie*                      | Widgets通用     |
+| 007  | *PinView、Captcha、SwipeCaptcha、AutoImage、ScratchCard、HeartLayout* | Widgets图片    |
+| 008  | *Seek、RulerWheel、Wave、ProgressRound、ProgressView、Divider*        | Widgets条框    |
+| 009  | *ShoppingView、ShineView*                                            | Buttons执行     |
+| 010  | **                                                                   | Buttons选择     |
+| 011  | *TextAutoZoom、RunText、TextVertical、TextVerticalMore*              | Text显示        |
+| 012  | **                                                                   | Text输入        |
+| 013  | *NoticeHelper*                                                       | Remind强烈      |
+| 014  | *PopupImply、PopupSingle、PopupViewManager*                          | Remind安静      |
+
 | 序号 | 类库                                                                                                                                                                                                                                                                                                                                                   | 功能 |
 |:-----|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----|
-| 001  | *001.Divider(32)*                                                                                                                                                                                                                                                                                                                                     | 分隔 |
-| 002  | *002.Title(203)*                                                                                                                                                                                                                                                                                                                                      | 标题 |
-| 003  | *003.PopupImply(31)*                                                                                                                                                                                                                                                                                                                                  | 说明 |
-| 004  | *004.PopupSingle(111)*                                                                                                                                                                                                                                                                                                                                | 弹表 |
-| 005  | *005.PopupViewManager：PopupView、BackgroundConstructor、Coordinates、CoordinatesFinder(533)*                                                                                                                                                                                                                                                          | 弹框 |
-| 006  | *006.NoticeHelper：NoticeBase、NoticeBigPic、NoticeBigText、NoticeMailbox、NoticeProgress、NoticeCustomView(473)*                                                                                                                                                                                                                                      | 通知 |
-| 007  | *007.Seek(755)*                                                                                                                                                                                                                                                                                                                                       | 拖动 |
-| 008  | *008.ProgressView(258)*                                                                                                                                                                                                                                                                                                                               | 进度 |
-| 009  | *009.ProgressRound(165)*                                                                                                                                                                                                                                                                                                                              | 弧度 |
-| 010  | *010.RunText(12)*                                                                                                                                                                                                                                                                                                                                     | 跑马 |
-| 011  | *011.TextAutoZoom(210)*                                                                                                                                                                                                                                                                                                                               | 字调 |
-| 012  | *012.TextVertical(100)*                                                                                                                                                                                                                                                                                                                               | 单滚 |
-| 013  | *013.TextVerticalMore(40)*                                                                                                                                                                                                                                                                                                                            | 多滚 |
+| 001  | *001.LayoutTab、LayoutLabel：LayoutScroll、LayoutFlow、AttrsHelper、AdapterTab、AdapterLabel、AdapterTemplate、AdapterFlow、FlowListener、FlowListenerAdapter、ActionRect、ActionTri、ActionRound、ActionColor、ActionRes、ActionBase、ActionDot、TextViewTabColor、BeanTab、BeanLabel、TabValue、TabTypeEvaluator、ConstantsFlow、ViewPagerHelper(2120)* | 流式 |
+| 002  | *002.BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)、ViewHolderBase、LoadMoreModuleBase、UpFetchModuleBase、DraggableModuleBase：......(2963)*                                                                                                | 回收 |
+| 003  | *003.Banner：BannerHelper、TypeBannerTrans、BeanPage、PageListener、RecyclerViewHolder、RecyclerBaseAdapter、TypeTrans、Transformer、TransformerCard、TransformerDepthPage、TransformerMz、TransformerZoomOutPage、BeanCircle、BeanRect、TypeIndicatorCircle、IndicatorCircle、IndicatorRect、IndicatorText(1060)*                                       | 横幅 |
+| 004  | *004.CardStackView：AdapterAnimator、AdapterAllMoveDownAnimator、AdapterUpDownAnimator、AdapterUpDownStackAnimator、ViewDataObserver、AdapterDataObservable、ViewHolder、Adapter、AdapterStack、DelegateScrollStack、DelegateScroll(861+36+7)*                                                                                                          | 卡组 |
+| 005  | *005.Title(203)*                                                                                                                                                                                                                                                                                                                                      | 标题 |
+| 006  | *006.Side(240)*                                                                                                                                                                                                                                                                                                                                       | 侧边 |
+| 007  | *007.Cobweb：RotateInfo(411)*                                                                                                                                                                                                                                                                                                                         | 蛛网 |
+| 008  | *008.NetSpeedView(155)*                                                                                                                                                                                                                                                                                                                               | 网速 |
+| 009  | *009.SeatAirplane(890)*                                                                                                                                                                                                                                                                                                                               | 机座 |
+| 010  | *010.SeatMovie(717)*                                                                                                                                                                                                                                                                                                                                  | 影座 |
+| 011  | *011.PinView：ScaleImageView、ImageSource、ImageViewState、DecoderFactory、ImageDecoder、RegionDecoder(34+2115)*                                                                                                                                                                                                                                       | 图调 |
+| 012  | *012.Captcha(117)*                                                                                                                                                                                                                                                                                                                                    | 验证 |
+| 013  | *013.SwipeCaptcha(393)*                                                                                                                                                                                                                                                                                                                               | 滑块 |
 | 014  | *014.AutoImage(35)*                                                                                                                                                                                                                                                                                                                                   | 平滚 |
-| 015  | *015.PinView：ScaleImageView、ImageSource、ImageViewState、DecoderFactory、ImageDecoder、RegionDecoder(34+2115)*                                                                                                                                                                                                                                       | 图调 |
-| 016  | *016.Captcha(117)*                                                                                                                                                                                                                                                                                                                                    | 验证 |
-| 017  | *017.SwipeCaptcha(393)*                                                                                                                                                                                                                                                                                                                               | 滑块 |
-| 018  | *018.ScratchCard(48)*                                                                                                                                                                                                                                                                                                                                 | 刮刮 |
-| 019  | *019.CardStackView：AdapterAnimator、AdapterAllMoveDownAnimator、AdapterUpDownAnimator、AdapterUpDownStackAnimator、ViewDataObserver、AdapterDataObservable、ViewHolder、Adapter、AdapterStack、DelegateScrollStack、DelegateScroll(861+36+7)*                                                                                                          | 卡组 |
-| 020  | *020.Cobweb：RotateInfo(411)*                                                                                                                                                                                                                                                                                                                         | 蛛网 |
-| 021  | *021.NetSpeedView(155)*                                                                                                                                                                                                                                                                                                                               | 网速 |
-| 022  | *022.SeatAirplane(890)*                                                                                                                                                                                                                                                                                                                               | 机座 |
-| 023  | *023.SeatMovie(717)*                                                                                                                                                                                                                                                                                                                                  | 影座 |
-| 024  | *024.RulerWheel(464)*                                                                                                                                                                                                                                                                                                                                 | 刻度 |
-| 025  | *025.ShoppingView(362)*                                                                                                                                                                                                                                                                                                                               | 商品 |
-| 026  | *026.ShineView：ShineButton、PorterShapeImageView、PorterImageView、ShineAnimator、EasingInterpolator、EasingProvider、Ease(699)*                                                                                                                                                                                                                      | 点赞 |
-| 027  | *027.HeartLayout：FloatAnimation、PathAnimator、HeartView(241)*                                                                                                                                                                                                                                                                                        | 爱心 |
-| 028  | *028.Wave(231)*                                                                                                                                                                                                                                                                                                                                       | 水波 |
-| 029  | *029.Side(240)*                                                                                                                                                                                                                                                                                                                                       | 侧边 |
-| 030  | *030.Banner：BannerHelper、TypeBannerTrans、BeanPage、PageListener、RecyclerViewHolder、RecyclerBaseAdapter、TypeTrans、Transformer、TransformerCard、TransformerDepthPage、TransformerMz、TransformerZoomOutPage、BeanCircle、BeanRect、TypeIndicatorCircle、IndicatorCircle、IndicatorRect、IndicatorText(1060)*                                       | 横幅 |
-| 031  | *031.LayoutTab、LayoutLabel：LayoutScroll、LayoutFlow、AttrsHelper、AdapterTab、AdapterLabel、AdapterTemplate、AdapterFlow、FlowListener、FlowListenerAdapter、ActionRect、ActionTri、ActionRound、ActionColor、ActionRes、ActionBase、ActionDot、TextViewTabColor、BeanTab、BeanLabel、TabValue、TabTypeEvaluator、ConstantsFlow、ViewPagerHelper(2120)* | 流式 |
-| 032  | *032.BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)、ViewHolderBase、LoadMoreModuleBase、UpFetchModuleBase、DraggableModuleBase：......(2963)*                                                                                                | 回收 |
+| 015  | *015.ScratchCard(48)*                                                                                                                                                                                                                                                                                                                                 | 刮刮 |
+| 016  | *016.HeartLayout：FloatAnimation、PathAnimator、HeartView(241)*                                                                                                                                                                                                                                                                                        | 爱心 |
+| 017  | *017.Seek(755)*                                                                                                                                                                                                                                                                                                                                       | 拖动 |
+| 018  | *018.RulerWheel(464)*                                                                                                                                                                                                                                                                                                                                 | 刻度 |
+| 019  | *019.Wave(231)*                                                                                                                                                                                                                                                                                                                                       | 水波 |
+| 020  | *020.ProgressRound(165)*                                                                                                                                                                                                                                                                                                                              | 弧度 |
+| 021  | *021.ProgressView(258)*                                                                                                                                                                                                                                                                                                                               | 进度 |
+| 022  | *022.Divider(32)*                                                                                                                                                                                                                                                                                                                                     | 分隔 |
+| 023  | *023.ShoppingView(362)*                                                                                                                                                                                                                                                                                                                               | 商品 |
+| 024  | *024.ShineView：ShineButton、PorterShapeImageView、PorterImageView、ShineAnimator、EasingInterpolator、EasingProvider、Ease(699)*                                                                                                                                                                                                                      | 点赞 |
+| 025  | *025.TextAutoZoom(210)*                                                                                                                                                                                                                                                                                                                               | 字调 |
+| 026  | *026.RunText(12)*                                                                                                                                                                                                                                                                                                                                     | 跑马 |
+| 027  | *027.TextVertical(100)*                                                                                                                                                                                                                                                                                                                               | 单滚 |
+| 028  | *028.TextVerticalMore(40)*                                                                                                                                                                                                                                                                                                                            | 多滚 |
+| 029  | *029.NoticeHelper：NoticeBase、NoticeBigPic、NoticeBigText、NoticeMailbox、NoticeProgress、NoticeCustomView(473)*                                                                                                                                                                                                                                      | 通知 |
+| 030  | *030.PopupImply(31)*                                                                                                                                                                                                                                                                                                                                  | 说明 |
+| 031  | *031.PopupSingle(111)*                                                                                                                                                                                                                                                                                                                                | 弹表 |
+| 032  | *032.PopupViewManager：PopupView、BackgroundConstructor、Coordinates、CoordinatesFinder(533)*                                                                                                                                                                                                                                                          | 弹框 |
 
 >- values
 >
@@ -56,705 +73,7 @@
 >>3. [dimens.xml](../../../../res/values/dimens.xml)
 >>4. [integers.xml](../../../../res/values/integers.xml)
 
-### *001.分隔Divider(32)*
-
->- implementation "com.google.android.material:material:1.2.1"
-
-### *002.标题Title(203)*
-
-| 序号 | 方法                      | 功能 |
-|:-----|:--------------------------|:----|
-| 01   | 01. rootLayout            | 功能 |
-| 02   | 02. leftLL                | 功能 |
-| 03   | 03. leftIV                | 功能 |
-| 04   | 04. leftTV                | 功能 |
-| 05   | 05. rightLL               | 功能 |
-| 06   | 06. rightIV               | 功能 |
-| 07   | 07. rightTV               | 功能 |
-| 08   | 08. textAutoZoom          | 功能 |
-| 09   | 09. leftIcon              | 功能 |
-| 10   | 10. isLeftIconVisibility  | 功能 |
-| 11   | 11. leftText              | 功能 |
-| 12   | 12. leftTextColor         | 功能 |
-| 13   | 13. leftTextSize          | 功能 |
-| 14   | 14. isLeftTextVisibility  | 功能 |
-| 15   | 15. rightIcon             | 功能 |
-| 16   | 16. isRightIconVisibility | 功能 |
-| 17   | 17. rightText             | 功能 |
-| 18   | 18. rightTextColor        | 功能 |
-| 19   | 19. rightTextSize         | 功能 |
-| 20   | 20. isRightTextVisibility | 功能 |
-| 21   | 21. title                 | 功能 |
-| 22   | 22. titleColor            | 功能 |
-| 23   | 23. titleSize             | 功能 |
-| 24   | 24. isTitleVisibility     | 功能 |
-| 25   | 25. setLeftFinish         | 功能 |
-| 26   | 26. setLeftListener       | 功能 |
-| 27   | 27. setLeftIconListener   | 功能 |
-| 28   | 28. setLeftTextListener   | 功能 |
-| 29   | 29. setRightListener      | 功能 |
-| 30   | 30. setRightIconListener  | 功能 |
-| 31   | 31. setRightTextListener  | 功能 |
-
->- layout:[title_view.xml](../../../../res/layout/title_view.xml)
->- mipmap
->
->>1. ![icon_previous](../../../../res/mipmap/icon_previous.png)
->>2. ![icon_set](../../../../res/mipmap/icon_set.png)与PopupSingle共用
-
-### *003.说明PopupImply(31)*
-
-| 序号 | 方法     | 功能     |
-|:-----|:---------|:--------|
-| 01   | 01. show | 显示说明 |
-
->- layout:[popup_imply.xml](../../../../res/layout/popup_imply.xml)
->- mipmap:![popup_imply.9](../../../../res/mipmap/popup_imply.9.png)
-
-### *004.弹表PopupSingle(111)*
-
-| 序号 | 方法                    | 功能           |
-|:-----|:------------------------|:--------------|
-| 01   | 01. itemOnClickListener | 表项点击监听器 |
-| 02   | 02. cleanAction         | 清空表项      |
-| 03   | 03. addAction           | 添加表项      |
-| 04   | 04. getAction           | 获取表项      |
-| 05   | 05. colorItemText       | 弹表文本颜色   |
-| 06   | 06. show                | 显示可选弹表   |
-
->- mipmap:![icon_set](../../../../res/mipmap/icon_set.png)与Title共用
->- layout
->
->>1. [popup_list_layout.xml](../../../../res/layout/popup_list_layout.xml)
->>2. [popup_list_item.xml](../../../../res/layout/popup_list_item.xml)
-
-### *005.弹框PopupViewManager：PopupView、BackgroundConstructor、Coordinates、CoordinatesFinder(533)*
-
-| 序号 | 方法                       | 功能 |
-|:-----|:---------------------------|:----|
-| 01   | 01. TipListener            | 功能 |
-| 02   | 02. animationDuration      | 功能 |
-| 03   | 03. show                   | 功能 |
-| 04   | 04. clearTipsMap           | 功能 |
-| 05   | 05. findAndDismiss         | 功能 |
-| 06   | 06. find                   | 功能 |
-| 07   | 07. dismiss                | 功能 |
-| 08   | 08. isVisible              | 功能 |
-| 09   | #### BackgroundConstructor | 功能 |
-| 10   | 01. setBackground          | 功能 |
-| 11   | #### Coordinates           | 功能 |
-| 12   | 01. left                   | 功能 |
-| 13   | 02. top                    | 功能 |
-| 14   | 03. right                  | 功能 |
-| 15   | 04. bottom                 | 功能 |
-| 16   | #### CoordinatesFinder     | 功能 |
-| 17   | 01. getCoordinates         | 功能 |
-| 18   | #### PopupView             | 功能 |
-| 19   | 01. context                | 功能 |
-| 20   | 02. anchorView             | 功能 |
-| 21   | 03. rootView               | 功能 |
-| 22   | 04. message                | 功能 |
-| 23   | 05. spannableMessage       | 功能 |
-| 24   | 06. isShowArrow            | 功能 |
-| 25   | 07. backgroundColor        | 功能 |
-| 26   | 08. textColor              | 功能 |
-| 27   | 09. textSize               | 功能 |
-| 28   | 10. elevation              | 功能 |
-| 29   | 11. offsetX                | 功能 |
-| 30   | 12. offsetY                | 功能 |
-| 31   | 13. textGravityTemp        | 功能 |
-| 32   | 14. textGravity            | 功能 |
-| 33   | 15. align                  | 功能 |
-| 34   | 16. position               | 功能 |
-| 35   | 17. isHideArrow            | 功能 |
-| 36   | 18. isTextGravityCenter    | 功能 |
-| 37   | 19. isTextGravityLeft      | 功能 |
-| 38   | 20. isTextGravityRight     | 功能 |
-| 39   | 21. isAlignedCenter        | 功能 |
-| 40   | 22. isAlignedLeft          | 功能 |
-| 41   | 23. isAlignedRight         | 功能 |
-| 42   | 24. isPositionedAbove      | 功能 |
-| 43   | 25. isPositionedBelow      | 功能 |
-| 44   | 26. isPositionedLeftTo     | 功能 |
-| 45   | 27. isPositionedRightTo    | 功能 |
-| 46   | ##### BuilderPopupView     | 功能 |
-| 47   | 01. mContext               | 功能 |
-| 48   | 02. mAnchorView            | 功能 |
-| 49   | 03. mRootView              | 功能 |
-| 50   | 04. mMessage               | 功能 |
-| 51   | 05. mSpannableMessage      | 功能 |
-| 52   | 06. mIsShowArrow           | 功能 |
-| 53   | 07. mBackgroundColor       | 功能 |
-| 54   | 08. mTextColor             | 功能 |
-| 55   | 09. mTextSize              | 功能 |
-| 56   | 10. mElevation             | 功能 |
-| 57   | 11. mOffsetX               | 功能 |
-| 58   | 12. mOffsetY               | 功能 |
-| 59   | 13. mTextGravity           | 功能 |
-| 60   | 14. mAlign                 | 功能 |
-| 61   | 15. mPosition              | 功能 |
-| 62   | 16. BuilderPopupView       | 功能 |
-| 63   | 17. buildPopupView         | 功能 |
-
-### *006.通知NoticeHelper：NoticeBase、NoticeBigPic、NoticeBigText、NoticeMailbox、NoticeProgress、NoticeCustomView(473)*
-
-| 序号 | 方法                            | 功能                         |
-|:-----|:--------------------------------|:-----------------------------|
-| 01   | 01. buildSimple                 | 构建简单通知                 |
-| 02   | 02. buildBigPic                 | 构建带图片通知                |
-| 03   | 03. buildBigText                | 构建多文本通知                |
-| 04   | 04. buildMailBox                | 构建带多条消息合并的消息盒通知 |
-| 05   | 05. buildProgress               | 构建带进度条通知，可无精确进度 |
-| 06   | 06. buildCustomView             | 构建自定义通知                |
-| 07   | 07. isNotifyPermissionOpen      | 通知栏权限是否获取            |
-| 08   | 08. openNotifyPermissionSetting | 打开通知栏权限设置页面        |
-| 09   | 09. getManager                  | 获取通知管理器                |
-| 10   | 10. notify                      | 通知                         |
-| 11   | 11. cancel                      | 取消通知                     |
-| 12   | 12. cancelAll                   | 取消所有通知                 |
-
-### *007.拖动Seek(755)*
-
-| 序号 | 方法                            | 功能         |
-|:-----|:--------------------------------|:------------|
-| 01   | 01. min                         | 获取最小值   |
-| 02   | 02. max                         | 获取最大值   |
-| 03   | 03. isHintHolder                | 是否显示提示 |
-| 04   | 04. setLeftProgressDescription  | 设置左边描述 |
-| 05   | 05. setRightProgressDescription | 设置右边描述 |
-| 06   | 06. setProgressDescription      | 设置进度描述 |
-| 07   | 07. setRange                    | 设置区间    |
-| 08   | 08. setRules                    | 设置刻度    |
-| 09   | 09. currentRange                | 获取当前区间 |
-| 10   | 10. setEnabled                  | 设置是否启用 |
-| 11   | 11. onRangeChangedListener      | 区间改变监听 |
-| 12   | 12. setValue                    | 设置值      |
-
->- mipmap
->
->>1. ![seek_thumb](../../../../res/mipmap/seek_thumb.png)
->>2. ![seek_hint.9](../../../../res/mipmap/seek_hint.9.png)
-
-### *008.进度ProgressView(258)*
-
-| 序号 | 方法              | 功能 |
-|:-----|:------------------|:----|
-| 01   | 01. isStop        | 功能 |
-| 02   | 02. isFinish      | 功能 |
-| 03   | 03. finishLoad    | 功能 |
-| 04   | 04. progress      | 功能 |
-| 05   | 05. resetProgress | 功能 |
-| 06   | 06. toggle        | 功能 |
-| 07   | 07. setStop       | 功能 |
-
->- ![flicker](../../../../res/mipmap/flicker.png)
-
-### *009.弧度ProgressRound(165)*
-
-| 序号 | 方法                    | 功能 |
-|:-----|:------------------------|:----|
-| 01   | 01. circleColor         | 功能 |
-| 02   | 02. circleProgressColor | 功能 |
-| 03   | 03. textColor           | 功能 |
-| 04   | 04. textSize            | 功能 |
-| 05   | 05. roundWidth          | 功能 |
-| 06   | 06. max                 | 功能 |
-| 07   | 07. STROKE              | 功能 |
-| 08   | 08. FILL                | 功能 |
-| 09   | 09. progress            | 功能 |
-
-### *010.跑马RunText(12)*
-
-### *011.字调TextAutoZoom(210)*
-
-| 序号 | 方法                 | 功能 |
-|:-----|:---------------------|:----|
-| 01   | 01. setNormalization | 功能 |
-| 02   | 02. minTextSize      | 功能 |
-| 03   | 03. enableSizeCache  | 功能 |
-
->- [Title.kt](Title.kt)
-
-### *012.单滚TextVertical(100)*
-
-| 序号 | 方法                     | 功能 |
-|:-----|:-------------------------|:----|
-| 01   | 01. mTextSize            | 功能 |
-| 02   | 02. mTextColor           | 功能 |
-| 03   | 03. mPadding             | 功能 |
-| 04   | 04. mOnItemClickListener | 功能 |
-| 05   | 05. titles               | 功能 |
-| 06   | 06. autoScrollStart      | 功能 |
-| 07   | 07. autoScrollStop       | 功能 |
-| 08   | 08. setTimeTextStill     | 功能 |
-| 09   | 09. setTimeAnim          | 功能 |
-
-### *013.多滚TextVerticalMore(40)*
-
-| 序号 | 方法                    | 功能 |
-|:-----|:------------------------|:----|
-| 01   | 01. interval            | 功能 |
-| 02   | 02. animDuration        | 功能 |
-| 03   | 03. isSetAnimDuration   | 功能 |
-| 04   | 04. onItemClickListener | 功能 |
-| 05   | 05. setViews            | 功能 |
-
->- anim
->
->>1. [anim_marquee_in.xml](../../../../res/anim/anim_marquee_in.xml)
->>2. [anim_marquee_out.xml](../../../../res/anim/anim_marquee_out.xml)
-
-### *014.平滚AutoImage(35)*
-
-| 序号 | 方法          | 功能 |
-|:-----|:--------------|:----|
-| 01   | 01. imageView | 功能 |
-
->1. anim:[anim_translate.xml](../../../../res/anim/anim_translate.xml)
->2. layout:[autoimage_view.xml](../../../../res/layout/autoimage_view.xml)
-
-### *015.图调PinView：ScaleImageView、ImageSource、ImageViewState、DecoderFactory、ImageDecoder、RegionDecoder(34+2115)*
-
-| 序号 | 方法                            | 功能 |
-|:-----|:--------------------------------|:----|
-| 01   | 01. scaleMax                    | 功能 |
-| 02   | 02. scaleDoubleTapDpiZoom       | 功能 |
-| 03   | 03. setOnLongClickListener      | 功能 |
-| 04   | 04. isEnabledZoom               | 功能 |
-| 05   | 05. scale                       | 功能 |
-| 06   | 06. isReady                     | 功能 |
-| 07   | 07. isEnabledPan                | 功能 |
-| 08   | 08. onImageEventListener        | 功能 |
-| 09   | 09. isDebug                     | 功能 |
-| 10   | 10. parallelLoadingEnabled      | 功能 |
-| 11   | 11. BuilderAnim                 | 功能 |
-| 12   | 12. animateScale                | 功能 |
-| 13   | 13. animateCenter               | 功能 |
-| 14   | 14. animateScaleAndCenter       | 功能 |
-| 15   | 15. isEnabledQuickScale         | 功能 |
-| 16   | 16. viewToSourceCoord           | 功能 |
-| 17   | 17. requiredRotation            | 功能 |
-| 18   | 18. sWidth                      | 功能 |
-| 19   | 19. sHeight                     | 功能 |
-| 20   | 20. minScaleType                | 功能 |
-| 21   | 21. panLimit                    | 功能 |
-| 22   | 22. minScaleDpi                 | 功能 |
-| 23   | 23. doubleTapZoomStyle          | 功能 |
-| 24   | 24. doubleTapZoomDuration       | 功能 |
-| 25   | 25. setScaleAndCenter           | 功能 |
-| 26   | 26. resetScaleAndCenter         | 功能 |
-| 27   | 27. setTileBackgroundColor      | 功能 |
-| 28   | 28. maxTileWidth                | 功能 |
-| 29   | 29. maxTileHeight               | 功能 |
-| 30   | 30. imageDecoder                | 功能 |
-| 31   | 31. regionDecoder               | 功能 |
-| 32   | 32. setImage                    | 功能 |
-| 33   | 33. hasImage                    | 功能 |
-| 34   | 34. isImageLoaded               | 功能 |
-| 35   | 35. orientation                 | 功能 |
-| 36   | 36. state                       | 功能 |
-| 37   | 37. center                      | 功能 |
-| 38   | 38. onStateChangedListener      | 功能 |
-| 39   | 39. sourceToViewCoord           | 功能 |
-| 40   | 40. recycle                     | 功能 |
-| 41   | 41. minTileDpi                  | 功能 |
-| 42   | 42. ORIENTATION_0               | 功能 |
-| 43   | 43. ORIENTATION_90              | 功能 |
-| 44   | 44. ORIENTATION_180             | 功能 |
-| 45   | 45. ORIENTATION_270             | 功能 |
-| 46   | 46. ORIENTATION_USE_EXIF        | 功能 |
-| 47   | 47. ZOOM_FOCUS_FIXED            | 功能 |
-| 48   | 48. ZOOM_FOCUS_CENTER           | 功能 |
-| 49   | 49. ZOOM_FOCUS_CENTER_IMMEDIATE | 功能 |
-| 50   | 50. EASE_OUT_QUAD               | 功能 |
-| 51   | 51. EASE_IN_OUT_QUAD            | 功能 |
-| 52   | 52. PAN_LIMIT_INSIDE            | 功能 |
-| 53   | 53. PAN_LIMIT_OUTSIDE           | 功能 |
-| 54   | 54. PAN_LIMIT_CENTER            | 功能 |
-| 55   | 55. SCALE_TYPE_CENTER_INSIDE    | 功能 |
-| 56   | 56. SCALE_TYPE_CENTER_CROP      | 功能 |
-| 57   | 57. SCALE_TYPE_CUSTOM           | 功能 |
-| 58   | 58. ORIGIN_ANIM                 | 功能 |
-| 59   | 59. ORIGIN_TOUCH                | 功能 |
-| 60   | 60. ORIGIN_FLING                | 功能 |
-| 61   | 61. ORIGIN_DOUBLE_TAP_ZOOM      | 功能 |
-| 62   | 62. tileSizeAuto                | 功能 |
-| 63   | #### PinView                    | 功能 |
-| 64   | 01. pinS                        | 功能 |
-
->- mipmap
->
->>1. ![pushpin_blue](../../../../res/mipmap/pushpin_blue.png)
->>2. ![tooltip_arrow_down.9](../../../../res/mipmap/tooltip_arrow_down.9.png)
->>3. ![tooltip_arrow_down_left.9](../../../../res/mipmap/tooltip_arrow_down_left.9.png)
->>4. ![tooltip_arrow_down_right.9](../../../../res/mipmap/tooltip_arrow_down_right.9.png)
->>5. ![tooltip_arrow_left.9](../../../../res/mipmap/tooltip_arrow_left.9.png)
->>6. ![tooltip_arrow_right.9](../../../../res/mipmap/tooltip_arrow_right.9.png)
->>7. ![tooltip_arrow_up.9](../../../../res/mipmap/tooltip_arrow_up.9.png)
->>8. ![tooltip_arrow_up_left.9](../../../../res/mipmap/tooltip_arrow_up_left.9.png)
->>9. ![tooltip_arrow_up_right.9](../../../../res/mipmap/tooltip_arrow_up_right.9.png)
->>10. ![tooltip_no_arrow.9](../../../../res/mipmap/tooltip_no_arrow.9.png)
-
-### *016.验证Captcha(117)*
-
-| 序号 | 方法           | 功能 |
-|:-----|:---------------|:----|
-| 01   | 01. build      | 功能 |
-| 02   | 02. mType      | 功能 |
-| 03   | 03. codeLength | 功能 |
-| 04   | 04. makeCode   | 功能 |
-| 05   | 05. width      | 功能 |
-| 06   | 06. height     | 功能 |
-| 07   | 07. color      | 功能 |
-| 08   | 08. fontSize   | 功能 |
-| 09   | 09. code       | 功能 |
-| 10   | 10. lineNumber | 功能 |
-| 11   | 11. makeBitmap | 功能 |
-| 12   | 12. into       | 功能 |
-
-### *017.滑块SwipeCaptcha(393)*
-
-| 序号 | 方法                       | 功能 |
-|:-----|:---------------------------|:----|
-| 01   | 01. maxSwipeValue          | 功能 |
-| 02   | 02. onCaptchaMatchCallback | 功能 |
-| 03   | 03. createCaptcha          | 功能 |
-| 04   | 04. matchCaptcha           | 功能 |
-| 05   | 05. resetCaptcha           | 功能 |
-| 06   | 06. setCurrentSwipeValue   | 功能 |
-
-### *018.刮刮ScratchCard(48)*
-
->- mipmap:![img_loading](../../../../res/mipmap/img_loading.png)
-
-### *019.卡组CardStackView：AdapterAnimator、AdapterAllMoveDownAnimator、AdapterUpDownAnimator、AdapterUpDownStackAnimator、ViewDataObserver、AdapterDataObservable、ViewHolder、Adapter、AdapterStack、DelegateScrollStack、DelegateScroll(861+36+7)*
-
-| 序号 | 方法                           | 功能 |
-|:-----|:-------------------------------|:----|
-| 01   | 01. overlapGaps                | 功能 |
-| 02   | 02. overlapGapsCollapse        | 功能 |
-| 03   | 03. duration                   | 功能 |
-| 04   | 04. numBottomShow              | 功能 |
-| 05   | 05. itemExpendListener         | 功能 |
-| 06   | 06. selectPosition             | 功能 |
-| 07   | 07. isExpending                | 功能 |
-| 08   | 08. clearSelectPosition        | 功能 |
-| 09   | 09. updateSelectPosition       | 功能 |
-| 10   | 10. showHeight                 | 功能 |
-| 11   | 11. clearScrollYAndTranslation | 功能 |
-| 12   | 12. delegateScroll             | 功能 |
-| 13   | 13. adapterAnimator            | 功能 |
-| 14   | 14. setAnimationType           | 功能 |
-| 15   | 15. scrollEnable               | 功能 |
-| 16   | 16. totalLength                | 功能 |
-| 17   | 17. viewScrollX                | 功能 |
-| 18   | 18. viewScrollY                | 功能 |
-| 19   | 19. scrollOffset               | 功能 |
-| 20   | 20. fling                      | 功能 |
-| 21   | 21. getViewHolder              | 功能 |
-| 22   | 22. performItemClick           | 功能 |
-| 23   | 23. adapterStack               | 功能 |
-| 24   | 24. cardNext                   | 功能 |
-| 25   | 25. cardPrevious               | 功能 |
-| 26   | #### AdapterDataObservable     | 功能 |
-| 27   | 01. notifyChanged              | 功能 |
-| 28   | 02. hasObservers               | 功能 |
-| 29   | #### ViewHolder                | 功能 |
-| 30   | 01. context                    | 功能 |
-| 31   | 02. itemViewType               | 功能 |
-| 32   | 03. position                   | 功能 |
-| 33   | 04. onAnimationStateChange     | 功能 |
-| 34   | 05. onItemExpand               | 功能 |
-| 35   | #### Adapter                   | 功能 |
-| 36   | 01. itemCount                  | 功能 |
-| 37   | 02. notifyDataSetChanged       | 功能 |
-| 38   | 03. registerObserver           | 功能 |
-| 39   | 04. createView                 | 功能 |
-| 40   | 05. onCreateView               | 功能 |
-| 41   | 06. bindViewHolder             | 功能 |
-| 42   | 07. onBindViewHolder           | 功能 |
-| 43   | 08. getItemViewType            | 功能 |
-| 44   | #### AdapterStack              | 功能 |
-| 45   | 01. layoutInflater             | 功能 |
-| 46   | 02. dataList                   | 功能 |
-| 47   | 03. itemCount                  | 功能 |
-| 48   | 04. onBindViewHolder           | 功能 |
-| 49   | 05. getItem                    | 功能 |
-| 50   | 06. bindView                   | 功能 |
-
-### *020.蛛网Cobweb：RotateInfo(411)*
-
-| 序号 | 方法                       | 功能 |
-|:-----|:---------------------------|:----|
-| 01   | 01. spiderNameSize         | 功能 |
-| 02   | 02. spiderMaxLevel         | 功能 |
-| 03   | 03. spiderColor            | 功能 |
-| 04   | 04. spiderRadiusColor      | 功能 |
-| 05   | 05. spiderLevelColor       | 功能 |
-| 06   | 06. spiderLevelStrokeColor | 功能 |
-| 07   | 07. spiderLevelStrokeWidth | 功能 |
-| 08   | 08. isSpiderLevelStroke    | 功能 |
-| 09   | 09. isSpiderRotate         | 功能 |
-| 10   | 10. ModelSpider            | 功能 |
-| 11   | 11. spiderList             | 功能 |
-| 12   | #### RotateInfo            | 功能 |
-| 13   | 01. getAngleRotate         | 功能 |
-| 14   | 02. getQuadrant            | 功能 |
-| 15   | 03. getAngle               | 功能 |
-| 16   | 04. CIRCLE_ANGLE           | 功能 |
-| 17   | 05. getAngleNormalized     | 功能 |
-
-### *021.网速NetSpeedView(155)*
-
-| 序号 | 方法               | 功能 |
-|:-----|:-------------------|:----|
-| 01   | 01. isMulti        | 功能 |
-| 02   | 02. timeInterval   | 功能 |
-| 03   | 03. updateViewData | 功能 |
-| 04   | 04. setTextColor   | 功能 |
-| 05   | 05. setTextSize    | 功能 |
-
->- layout:[netspeed_view.xml](../../../../res/layout/netspeed_view.xml)
-
-### *022.机座SeatAirplane(890)*
-
-| 序号 | 方法                    | 功能 |
-|:-----|:------------------------|:----|
-| 01   | 01. setEmptySelecting   | 功能 |
-| 02   | 02. maxSelectStates     | 功能 |
-| 03   | 03. setSeatSelected     | 功能 |
-| 04   | 04. bitmapSeatNormal    | 功能 |
-| 05   | 05. bitmapSeatSelected  | 功能 |
-| 06   | 06. bitmapSeatSelecting | 功能 |
-| 07   | 07. getFontLength       | 功能 |
-| 08   | 08. getFontHeight       | 功能 |
-| 09   | 09. setBitmap           | 功能 |
-| 10   | 10. goCabinPosition     | 功能 |
-
->- mipmap（SeatMovie共用）
->
->>1. ![seat_gray](../../../../res/mipmap/seat_gray.png)
->>2. ![seat_green](../../../../res/mipmap/seat_green.png)
->>3. ![seat_sold](../../../../res/mipmap/seat_sold.png)
-
-### *023.影座SeatMovie(717)*
-
-| 序号 | 方法                     | 功能 |
-|:-----|:-------------------------|:----|
-| 01   | 01. numRow               | 功能 |
-| 02   | 02. numColumn            | 功能 |
-| 03   | 03. lineNumbers          | 功能 |
-| 04   | 04. setData              | 功能 |
-| 05   | 05. selectedSeat         | 功能 |
-| 06   | 06. seatChecker          | 功能 |
-| 07   | 07. getRowNumber         | 功能 |
-| 08   | 08. getColumnNumber      | 功能 |
-| 09   | 09. isDrawOverview       | 功能 |
-| 10   | 10. isRenewOverview      | 功能 |
-| 11   | 11. isDebug              | 功能 |
-| 12   | 12. screenName           | 功能 |
-| 13   | 13. isNeedDrawSeatBitmap | 功能 |
-| 14   | 14. maxSelected          | 功能 |
-
-### *024.刻度RulerWheel(464)*
-
-| 序号 | 方法                            | 功能 |
-|:-----|:--------------------------------|:----|
-| 01   | 01. markAdditionCenter          | 功能 |
-| 02   | 02. selectedPosition            | 功能 |
-| 03   | 03. items                       | 功能 |
-| 04   | 04. OnWheelItemSelectedListener | 功能 |
-| 05   | 05. minSelectableIndex          | 功能 |
-| 06   | 06. maxSelectableIndex          | 功能 |
-| 07   | 07. smoothSelectIndex           | 功能 |
-| 08   | 08. fling                       | 功能 |
-
-### *025.商品ShoppingView(362)*
-
-| 序号 | 方法                        | 功能 |
-|:-----|:----------------------------|:----|
-| 01   | 01. onShoppingClickListener | 功能 |
-| 02   | 02. setTextNum              | 功能 |
-
-### *026.点赞ShineView：ShineButton、PorterShapeImageView、PorterImageView、ShineAnimator、EasingInterpolator、EasingProvider、Ease(699)*
-
-| 序号 | 方法                      | 功能 |
-|:-----|:--------------------------|:----|
-| 01   | 01. clickValue            | 功能 |
-| 02   | 02. colorRandom           | 功能 |
-| 03   | 03. enableFlashing        | 功能 |
-| 04   | 04. allowRandomColor      | 功能 |
-| 05   | 05. shineColorBig         | 功能 |
-| 06   | 06. shineColorSmall       | 功能 |
-| 07   | 07. shineSize             | 功能 |
-| 08   | 08. shineCount            | 功能 |
-| 09   | 09. animDuration          | 功能 |
-| 10   | 10. animDurationClick     | 功能 |
-| 11   | 11. shineTurnAngle        | 功能 |
-| 12   | 12. smallShineOffsetAngle | 功能 |
-| 13   | 13. shineDistanceMultiple | 功能 |
-| 14   | 14. showAnimation         | 功能 |
-
-### *027.爱心HeartLayout：FloatAnimation、PathAnimator、HeartView(241)*
-
-| 序号 | 方法         | 功能 |
-|:-----|:-------------|:----|
-| 01   | 01. addHeart | 功能 |
-
->- mipmap
->
->>1. ![anim_heart](../../../../res/mipmap/anim_heart.png)
->>2. ![anim_heart_border](../../../../res/mipmap/anim_heart_border.png)
-
-### *028.水波Wave(231)*
-
-| 序号 | 方法                | 功能 |
-|:-----|:--------------------|:----|
-| 01   | 01. shapeType       | 功能 |
-| 02   | 02. frontWaveColor  | 功能 |
-| 03   | 03. borderWidth     | 功能 |
-| 04   | 04. behindWaveColor | 功能 |
-| 05   | 05. borderColor     | 功能 |
-| 06   | 06. start           | 功能 |
-| 07   | 07. cancel          | 功能 |
-| 08   | 08. setWaveColor    | 功能 |
-| 09   | 09. setBorder       | 功能 |
-| 10   | 10. isShowWave      | 功能 |
-| 11   | 11. waveLengthRatio | 功能 |
-| 12   | 12. amplitudeRatio  | 功能 |
-| 13   | 13. waveShiftRatio  | 功能 |
-| 14   | 14. waterLevelRatio | 功能 |
-
-### *029.侧边Side(240)*
-
-| 序号 | 方法                          | 功能 |
-|:-----|:------------------------------|:----|
-| 01   | 01. lazyRespond               | 功能 |
-| 02   | 02. textColor                 | 功能 |
-| 03   | 03. textSize                  | 功能 |
-| 04   | 04. maxOffset                 | 功能 |
-| 05   | 05. sideBarPosition           | 功能 |
-| 06   | 06. sideTextAlignment         | 功能 |
-| 07   | 07. indexItems                | 功能 |
-| 08   | 08. onSelectIndexItemListener | 功能 |
-
-### *030.横幅Banner：BannerHelper、TypeBannerTrans、BeanPage、PageListener、RecyclerViewHolder、RecyclerBaseAdapter、TypeTrans、Transformer、TransformerCard、TransformerDepthPage、TransformerMz、TransformerZoomOutPage、BeanCircle、BeanRect、TypeIndicatorCircle、IndicatorCircle、IndicatorRect、IndicatorText(1060)*
-
-| 序号 | 方法                   | 功能                                                                                      |
-|:-----|:-----------------------|:-----------------------------------------------------------------------------------------|
-| 01   | 01. viewPager2         | 暴露给addPagerData添加，无需创建                                                           |
-| 02   | 02. setCurrentPosition | 设置当前页目                                                                              |
-| 03   | 03. addIndicator       | 添加指示器IndicatorCircle、IndicatorRect、IndicatorText                                   |
-| 04   | 04. addPageBean        | 添加页面设置BeanPage                                                                      |
-| 05   | 05. isOutVisibleWindow | 判断是否超出屏幕                                                                          |
-| 06   | 06. stopAnim           | 停止翻页动画                                                                              |
-| 07   | 07. startAnim          | 开始翻页动画                                                                              |
-| 08   | 08. setPageListener    | 设置页面监听                                                                              |
-| 09   | 01. addPagerData       | IndicatorCircle、IndicatorRect、IndicatorText暴露给Banner添加页面数量和viewPager2，无需添加 |
-| 10   | 02. addCircleBean      | IndicatorCircle添加BeanCircle                                                             |
-| 11   | 03. addRectBean        | IndicatorRect添加BeanRect                                                                 |
-
-```kotlin
-class GuideActivity : AppCompatActivity() {
-    private data class Guide(var text: String? = null, var resId: Int = 0)
-    companion object {
-        private val guideTexts = arrayOf("引导1", "引导2", "引导3")
-        private val guideIds = intArrayOf(R.mipmap.guide1, R.mipmap.guide2, R.mipmap.guide3)
-    }
-
-    private var guides: MutableList<Guide?>? = null
-    private val initGuides = {
-        guides = mutableListOf<Guide?>().apply {
-            for ((index, guideText) in guideTexts.withIndex()) {
-                Guide().apply {
-                    text = guideText
-                    resId = guideIds[index]
-                }.let { add(it) }
-            }
-        }
-    }
-    private val initBanner = {
-        indicator.apply {
-            addCircleBean(BeanCircle().apply {
-                normalColor = Color.GRAY
-                selectedColor = Color.WHITE
-                horizonMargin = 40
-                circleSize = 20
-                scaleFactor = 1.5f
-                typeIndicatorCircle = TypeIndicatorCircle.CIR_TO_RECT
-            })
-        }
-        banner.setCurrentPosition(1).addIndicator(indicator).addPageBean(BeanPage().apply {
-            isAutoLoop = true
-            smoothScrollTime = 400
-            loopTime = 5000
-            typeBannerTrans = TypeBannerTrans.DEPTH
-        }).setPageListener(R.layout.banner_loop, guides, object : PageListener<Guide?>() {
-            override fun bindView(view: View?, data: Any?, position: Int) {
-                view?.let {
-                    (data as Guide).run {
-                        setText(view, R.id.loop_text, text)
-                        setImageView(view, R.id.loop_icon, resId)
-                    }
-                }
-            }
-        })
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        initGuides
-        initBanner
-        enter.setOnClickListener { finish() }
-    }
-}
-```
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".GuideActivity">
-
-    <FrameLayout
-        android:id="@+id/guide"
-        android:layout_width="409dp"
-        android:layout_height="601dp"
-        app:layout_constraintBottom_toTopOf="@+id/enter"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <com.autoselect.widgeter.banner.Banner
-            android:id="@+id/banner"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <com.autoselect.widgeter.banner.indicat.IndicatorCircle
-            android:id="@+id/indicator"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_gravity="end|bottom"
-            android:layout_marginEnd="20dp" />
-    </FrameLayout>
-
-    <Button
-        android:id="@+id/enter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="结束引导"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
-```
-
->- layout备用:[banner_loop.xml](../../../../res/layout/banner_loop.xml)
-
-### *031.流式LayoutTab、LayoutLabel：LayoutScroll、LayoutFlow、AttrsHelper、AdapterTab、AdapterLabel、AdapterTemplate、AdapterFlow、FlowListener、FlowListenerAdapter、ActionRect、ActionTri、ActionRound、ActionColor、ActionRes、ActionBase、ActionDot、TextViewTabColor、BeanTab、BeanLabel、TabValue、TabTypeEvaluator、ConstantsFlow、ViewPagerHelper(2120)*
+### *001.流式LayoutTab、LayoutLabel：LayoutScroll、LayoutFlow、AttrsHelper、AdapterTab、AdapterLabel、AdapterTemplate、AdapterFlow、FlowListener、FlowListenerAdapter、ActionRect、ActionTri、ActionRound、ActionColor、ActionRes、ActionBase、ActionDot、TextViewTabColor、BeanTab、BeanLabel、TabValue、TabTypeEvaluator、ConstantsFlow、ViewPagerHelper(2120)*
 
 | 序号 | 方法                     | 功能                                                             |
 |:-----|:-------------------------|:----------------------------------------------------------------|
@@ -1325,7 +644,7 @@ class LabelShowMoreActivity : AppCompatActivity() {
 >>2. ![flow_label_show](../../../../res/mipmap/flow_label_show.png)
 >>3. ![flow_label_handup](../../../../res/mipmap/flow_label_handup.png)
 
-### *032.回收BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)、ViewHolderBase、LoadMoreModuleBase、UpFetchModuleBase、DraggableModuleBase：......(2963)*
+### *002.回收BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)、ViewHolderBase、LoadMoreModuleBase、UpFetchModuleBase、DraggableModuleBase：......(2963)*
 
 | 序号 | 方法                                  | 功能（RecyclerView可嵌套：setHasFixedSize(true)、layoutManager、adapter、addItemDecoration）                                                                                                                                                              |
 |:-----|:--------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -1587,38 +906,735 @@ class LabelShowMoreActivity : AppCompatActivity() {
 >>2. CN:[strings.xml](../../../../res/values-zh-rCN/strings.xml)
 >>3. HK:[strings.xml](../../../../res/values-zh-rHK/strings.xml)
 
+### *003.横幅Banner：BannerHelper、TypeBannerTrans、BeanPage、PageListener、RecyclerViewHolder、RecyclerBaseAdapter、TypeTrans、Transformer、TransformerCard、TransformerDepthPage、TransformerMz、TransformerZoomOutPage、BeanCircle、BeanRect、TypeIndicatorCircle、IndicatorCircle、IndicatorRect、IndicatorText(1060)*
+
+| 序号 | 方法                   | 功能                                                                                      |
+|:-----|:-----------------------|:-----------------------------------------------------------------------------------------|
+| 01   | 01. viewPager2         | 暴露给addPagerData添加，无需创建                                                           |
+| 02   | 02. setCurrentPosition | 设置当前页目                                                                              |
+| 03   | 03. addIndicator       | 添加指示器IndicatorCircle、IndicatorRect、IndicatorText                                   |
+| 04   | 04. addPageBean        | 添加页面设置BeanPage                                                                      |
+| 05   | 05. isOutVisibleWindow | 判断是否超出屏幕                                                                          |
+| 06   | 06. stopAnim           | 停止翻页动画                                                                              |
+| 07   | 07. startAnim          | 开始翻页动画                                                                              |
+| 08   | 08. setPageListener    | 设置页面监听                                                                              |
+| 09   | 01. addPagerData       | IndicatorCircle、IndicatorRect、IndicatorText暴露给Banner添加页面数量和viewPager2，无需添加 |
+| 10   | 02. addCircleBean      | IndicatorCircle添加BeanCircle                                                             |
+| 11   | 03. addRectBean        | IndicatorRect添加BeanRect                                                                 |
+
+```kotlin
+class GuideActivity : AppCompatActivity() {
+    private data class Guide(var text: String? = null, var resId: Int = 0)
+    companion object {
+        private val guideTexts = arrayOf("引导1", "引导2", "引导3")
+        private val guideIds = intArrayOf(R.mipmap.guide1, R.mipmap.guide2, R.mipmap.guide3)
+    }
+
+    private var guides: MutableList<Guide?>? = null
+    private val initGuides = {
+        guides = mutableListOf<Guide?>().apply {
+            for ((index, guideText) in guideTexts.withIndex()) {
+                Guide().apply {
+                    text = guideText
+                    resId = guideIds[index]
+                }.let { add(it) }
+            }
+        }
+    }
+    private val initBanner = {
+        indicator.apply {
+            addCircleBean(BeanCircle().apply {
+                normalColor = Color.GRAY
+                selectedColor = Color.WHITE
+                horizonMargin = 40
+                circleSize = 20
+                scaleFactor = 1.5f
+                typeIndicatorCircle = TypeIndicatorCircle.CIR_TO_RECT
+            })
+        }
+        banner.setCurrentPosition(1).addIndicator(indicator).addPageBean(BeanPage().apply {
+            isAutoLoop = true
+            smoothScrollTime = 400
+            loopTime = 5000
+            typeBannerTrans = TypeBannerTrans.DEPTH
+        }).setPageListener(R.layout.banner_loop, guides, object : PageListener<Guide?>() {
+            override fun bindView(view: View?, data: Any?, position: Int) {
+                view?.let {
+                    (data as Guide).run {
+                        setText(view, R.id.loop_text, text)
+                        setImageView(view, R.id.loop_icon, resId)
+                    }
+                }
+            }
+        })
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        initGuides
+        initBanner
+        enter.setOnClickListener { finish() }
+    }
+}
+```
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GuideActivity">
+
+    <FrameLayout
+        android:id="@+id/guide"
+        android:layout_width="409dp"
+        android:layout_height="601dp"
+        app:layout_constraintBottom_toTopOf="@+id/enter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.autoselect.widgeter.banner.Banner
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.autoselect.widgeter.banner.indicat.IndicatorCircle
+            android:id="@+id/indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="end|bottom"
+            android:layout_marginEnd="20dp" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="结束引导"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+```
+
+>- layout备用:[banner_loop.xml](../../../../res/layout/banner_loop.xml)
+
+### *004.卡组CardStackView：AdapterAnimator、AdapterAllMoveDownAnimator、AdapterUpDownAnimator、AdapterUpDownStackAnimator、ViewDataObserver、AdapterDataObservable、ViewHolder、Adapter、AdapterStack、DelegateScrollStack、DelegateScroll(861+36+7)*
+
+| 序号 | 方法                           | 功能 |
+|:-----|:-------------------------------|:----|
+| 01   | 01. overlapGaps                | 功能 |
+| 02   | 02. overlapGapsCollapse        | 功能 |
+| 03   | 03. duration                   | 功能 |
+| 04   | 04. numBottomShow              | 功能 |
+| 05   | 05. itemExpendListener         | 功能 |
+| 06   | 06. selectPosition             | 功能 |
+| 07   | 07. isExpending                | 功能 |
+| 08   | 08. clearSelectPosition        | 功能 |
+| 09   | 09. updateSelectPosition       | 功能 |
+| 10   | 10. showHeight                 | 功能 |
+| 11   | 11. clearScrollYAndTranslation | 功能 |
+| 12   | 12. delegateScroll             | 功能 |
+| 13   | 13. adapterAnimator            | 功能 |
+| 14   | 14. setAnimationType           | 功能 |
+| 15   | 15. scrollEnable               | 功能 |
+| 16   | 16. totalLength                | 功能 |
+| 17   | 17. viewScrollX                | 功能 |
+| 18   | 18. viewScrollY                | 功能 |
+| 19   | 19. scrollOffset               | 功能 |
+| 20   | 20. fling                      | 功能 |
+| 21   | 21. getViewHolder              | 功能 |
+| 22   | 22. performItemClick           | 功能 |
+| 23   | 23. adapterStack               | 功能 |
+| 24   | 24. cardNext                   | 功能 |
+| 25   | 25. cardPrevious               | 功能 |
+| 26   | #### AdapterDataObservable     | 功能 |
+| 27   | 01. notifyChanged              | 功能 |
+| 28   | 02. hasObservers               | 功能 |
+| 29   | #### ViewHolder                | 功能 |
+| 30   | 01. context                    | 功能 |
+| 31   | 02. itemViewType               | 功能 |
+| 32   | 03. position                   | 功能 |
+| 33   | 04. onAnimationStateChange     | 功能 |
+| 34   | 05. onItemExpand               | 功能 |
+| 35   | #### Adapter                   | 功能 |
+| 36   | 01. itemCount                  | 功能 |
+| 37   | 02. notifyDataSetChanged       | 功能 |
+| 38   | 03. registerObserver           | 功能 |
+| 39   | 04. createView                 | 功能 |
+| 40   | 05. onCreateView               | 功能 |
+| 41   | 06. bindViewHolder             | 功能 |
+| 42   | 07. onBindViewHolder           | 功能 |
+| 43   | 08. getItemViewType            | 功能 |
+| 44   | #### AdapterStack              | 功能 |
+| 45   | 01. layoutInflater             | 功能 |
+| 46   | 02. dataList                   | 功能 |
+| 47   | 03. itemCount                  | 功能 |
+| 48   | 04. onBindViewHolder           | 功能 |
+| 49   | 05. getItem                    | 功能 |
+| 50   | 06. bindView                   | 功能 |
+
+### *005.标题Title(203)*
+
+| 序号 | 方法                      | 功能 |
+|:-----|:--------------------------|:----|
+| 01   | 01. rootLayout            | 功能 |
+| 02   | 02. leftLL                | 功能 |
+| 03   | 03. leftIV                | 功能 |
+| 04   | 04. leftTV                | 功能 |
+| 05   | 05. rightLL               | 功能 |
+| 06   | 06. rightIV               | 功能 |
+| 07   | 07. rightTV               | 功能 |
+| 08   | 08. textAutoZoom          | 功能 |
+| 09   | 09. leftIcon              | 功能 |
+| 10   | 10. isLeftIconVisibility  | 功能 |
+| 11   | 11. leftText              | 功能 |
+| 12   | 12. leftTextColor         | 功能 |
+| 13   | 13. leftTextSize          | 功能 |
+| 14   | 14. isLeftTextVisibility  | 功能 |
+| 15   | 15. rightIcon             | 功能 |
+| 16   | 16. isRightIconVisibility | 功能 |
+| 17   | 17. rightText             | 功能 |
+| 18   | 18. rightTextColor        | 功能 |
+| 19   | 19. rightTextSize         | 功能 |
+| 20   | 20. isRightTextVisibility | 功能 |
+| 21   | 21. title                 | 功能 |
+| 22   | 22. titleColor            | 功能 |
+| 23   | 23. titleSize             | 功能 |
+| 24   | 24. isTitleVisibility     | 功能 |
+| 25   | 25. setLeftFinish         | 功能 |
+| 26   | 26. setLeftListener       | 功能 |
+| 27   | 27. setLeftIconListener   | 功能 |
+| 28   | 28. setLeftTextListener   | 功能 |
+| 29   | 29. setRightListener      | 功能 |
+| 30   | 30. setRightIconListener  | 功能 |
+| 31   | 31. setRightTextListener  | 功能 |
+
+>- layout:[title_view.xml](../../../../res/layout/title_view.xml)
+>- mipmap
+>
+>>1. ![icon_previous](../../../../res/mipmap/icon_previous.png)
+>>2. ![icon_set](../../../../res/mipmap/icon_set.png)与PopupSingle共用
+
+### *006.侧边Side(240)*
+
+| 序号 | 方法                          | 功能 |
+|:-----|:------------------------------|:----|
+| 01   | 01. lazyRespond               | 功能 |
+| 02   | 02. textColor                 | 功能 |
+| 03   | 03. textSize                  | 功能 |
+| 04   | 04. maxOffset                 | 功能 |
+| 05   | 05. sideBarPosition           | 功能 |
+| 06   | 06. sideTextAlignment         | 功能 |
+| 07   | 07. indexItems                | 功能 |
+| 08   | 08. onSelectIndexItemListener | 功能 |
+
+### *007.蛛网Cobweb：RotateInfo(411)*
+
+| 序号 | 方法                       | 功能 |
+|:-----|:---------------------------|:----|
+| 01   | 01. spiderNameSize         | 功能 |
+| 02   | 02. spiderMaxLevel         | 功能 |
+| 03   | 03. spiderColor            | 功能 |
+| 04   | 04. spiderRadiusColor      | 功能 |
+| 05   | 05. spiderLevelColor       | 功能 |
+| 06   | 06. spiderLevelStrokeColor | 功能 |
+| 07   | 07. spiderLevelStrokeWidth | 功能 |
+| 08   | 08. isSpiderLevelStroke    | 功能 |
+| 09   | 09. isSpiderRotate         | 功能 |
+| 10   | 10. ModelSpider            | 功能 |
+| 11   | 11. spiderList             | 功能 |
+| 12   | #### RotateInfo            | 功能 |
+| 13   | 01. getAngleRotate         | 功能 |
+| 14   | 02. getQuadrant            | 功能 |
+| 15   | 03. getAngle               | 功能 |
+| 16   | 04. CIRCLE_ANGLE           | 功能 |
+| 17   | 05. getAngleNormalized     | 功能 |
+
+### *008.网速NetSpeedView(155)*
+
+| 序号 | 方法               | 功能 |
+|:-----|:-------------------|:----|
+| 01   | 01. isMulti        | 功能 |
+| 02   | 02. timeInterval   | 功能 |
+| 03   | 03. updateViewData | 功能 |
+| 04   | 04. setTextColor   | 功能 |
+| 05   | 05. setTextSize    | 功能 |
+
+>- layout:[netspeed_view.xml](../../../../res/layout/netspeed_view.xml)
+
+### *009.机座SeatAirplane(890)*
+
+| 序号 | 方法                    | 功能 |
+|:-----|:------------------------|:----|
+| 01   | 01. setEmptySelecting   | 功能 |
+| 02   | 02. maxSelectStates     | 功能 |
+| 03   | 03. setSeatSelected     | 功能 |
+| 04   | 04. bitmapSeatNormal    | 功能 |
+| 05   | 05. bitmapSeatSelected  | 功能 |
+| 06   | 06. bitmapSeatSelecting | 功能 |
+| 07   | 07. getFontLength       | 功能 |
+| 08   | 08. getFontHeight       | 功能 |
+| 09   | 09. setBitmap           | 功能 |
+| 10   | 10. goCabinPosition     | 功能 |
+
+>- mipmap（SeatMovie共用）
+>
+>>1. ![seat_gray](../../../../res/mipmap/seat_gray.png)
+>>2. ![seat_green](../../../../res/mipmap/seat_green.png)
+>>3. ![seat_sold](../../../../res/mipmap/seat_sold.png)
+
+### *010.影座SeatMovie(717)*
+
+| 序号 | 方法                     | 功能 |
+|:-----|:-------------------------|:----|
+| 01   | 01. numRow               | 功能 |
+| 02   | 02. numColumn            | 功能 |
+| 03   | 03. lineNumbers          | 功能 |
+| 04   | 04. setData              | 功能 |
+| 05   | 05. selectedSeat         | 功能 |
+| 06   | 06. seatChecker          | 功能 |
+| 07   | 07. getRowNumber         | 功能 |
+| 08   | 08. getColumnNumber      | 功能 |
+| 09   | 09. isDrawOverview       | 功能 |
+| 10   | 10. isRenewOverview      | 功能 |
+| 11   | 11. isDebug              | 功能 |
+| 12   | 12. screenName           | 功能 |
+| 13   | 13. isNeedDrawSeatBitmap | 功能 |
+| 14   | 14. maxSelected          | 功能 |
+
+### *011.图调PinView：ScaleImageView、ImageSource、ImageViewState、DecoderFactory、ImageDecoder、RegionDecoder(34+2115)*
+
+| 序号 | 方法                            | 功能 |
+|:-----|:--------------------------------|:----|
+| 01   | 01. scaleMax                    | 功能 |
+| 02   | 02. scaleDoubleTapDpiZoom       | 功能 |
+| 03   | 03. setOnLongClickListener      | 功能 |
+| 04   | 04. isEnabledZoom               | 功能 |
+| 05   | 05. scale                       | 功能 |
+| 06   | 06. isReady                     | 功能 |
+| 07   | 07. isEnabledPan                | 功能 |
+| 08   | 08. onImageEventListener        | 功能 |
+| 09   | 09. isDebug                     | 功能 |
+| 10   | 10. parallelLoadingEnabled      | 功能 |
+| 11   | 11. BuilderAnim                 | 功能 |
+| 12   | 12. animateScale                | 功能 |
+| 13   | 13. animateCenter               | 功能 |
+| 14   | 14. animateScaleAndCenter       | 功能 |
+| 15   | 15. isEnabledQuickScale         | 功能 |
+| 16   | 16. viewToSourceCoord           | 功能 |
+| 17   | 17. requiredRotation            | 功能 |
+| 18   | 18. sWidth                      | 功能 |
+| 19   | 19. sHeight                     | 功能 |
+| 20   | 20. minScaleType                | 功能 |
+| 21   | 21. panLimit                    | 功能 |
+| 22   | 22. minScaleDpi                 | 功能 |
+| 23   | 23. doubleTapZoomStyle          | 功能 |
+| 24   | 24. doubleTapZoomDuration       | 功能 |
+| 25   | 25. setScaleAndCenter           | 功能 |
+| 26   | 26. resetScaleAndCenter         | 功能 |
+| 27   | 27. setTileBackgroundColor      | 功能 |
+| 28   | 28. maxTileWidth                | 功能 |
+| 29   | 29. maxTileHeight               | 功能 |
+| 30   | 30. imageDecoder                | 功能 |
+| 31   | 31. regionDecoder               | 功能 |
+| 32   | 32. setImage                    | 功能 |
+| 33   | 33. hasImage                    | 功能 |
+| 34   | 34. isImageLoaded               | 功能 |
+| 35   | 35. orientation                 | 功能 |
+| 36   | 36. state                       | 功能 |
+| 37   | 37. center                      | 功能 |
+| 38   | 38. onStateChangedListener      | 功能 |
+| 39   | 39. sourceToViewCoord           | 功能 |
+| 40   | 40. recycle                     | 功能 |
+| 41   | 41. minTileDpi                  | 功能 |
+| 42   | 42. ORIENTATION_0               | 功能 |
+| 43   | 43. ORIENTATION_90              | 功能 |
+| 44   | 44. ORIENTATION_180             | 功能 |
+| 45   | 45. ORIENTATION_270             | 功能 |
+| 46   | 46. ORIENTATION_USE_EXIF        | 功能 |
+| 47   | 47. ZOOM_FOCUS_FIXED            | 功能 |
+| 48   | 48. ZOOM_FOCUS_CENTER           | 功能 |
+| 49   | 49. ZOOM_FOCUS_CENTER_IMMEDIATE | 功能 |
+| 50   | 50. EASE_OUT_QUAD               | 功能 |
+| 51   | 51. EASE_IN_OUT_QUAD            | 功能 |
+| 52   | 52. PAN_LIMIT_INSIDE            | 功能 |
+| 53   | 53. PAN_LIMIT_OUTSIDE           | 功能 |
+| 54   | 54. PAN_LIMIT_CENTER            | 功能 |
+| 55   | 55. SCALE_TYPE_CENTER_INSIDE    | 功能 |
+| 56   | 56. SCALE_TYPE_CENTER_CROP      | 功能 |
+| 57   | 57. SCALE_TYPE_CUSTOM           | 功能 |
+| 58   | 58. ORIGIN_ANIM                 | 功能 |
+| 59   | 59. ORIGIN_TOUCH                | 功能 |
+| 60   | 60. ORIGIN_FLING                | 功能 |
+| 61   | 61. ORIGIN_DOUBLE_TAP_ZOOM      | 功能 |
+| 62   | 62. tileSizeAuto                | 功能 |
+| 63   | #### PinView                    | 功能 |
+| 64   | 01. pinS                        | 功能 |
+
+>- mipmap
+>
+>>1. ![pushpin_blue](../../../../res/mipmap/pushpin_blue.png)
+>>2. ![tooltip_arrow_down.9](../../../../res/mipmap/tooltip_arrow_down.9.png)
+>>3. ![tooltip_arrow_down_left.9](../../../../res/mipmap/tooltip_arrow_down_left.9.png)
+>>4. ![tooltip_arrow_down_right.9](../../../../res/mipmap/tooltip_arrow_down_right.9.png)
+>>5. ![tooltip_arrow_left.9](../../../../res/mipmap/tooltip_arrow_left.9.png)
+>>6. ![tooltip_arrow_right.9](../../../../res/mipmap/tooltip_arrow_right.9.png)
+>>7. ![tooltip_arrow_up.9](../../../../res/mipmap/tooltip_arrow_up.9.png)
+>>8. ![tooltip_arrow_up_left.9](../../../../res/mipmap/tooltip_arrow_up_left.9.png)
+>>9. ![tooltip_arrow_up_right.9](../../../../res/mipmap/tooltip_arrow_up_right.9.png)
+>>10. ![tooltip_no_arrow.9](../../../../res/mipmap/tooltip_no_arrow.9.png)
+
+### *012.验证Captcha(117)*
+
+| 序号 | 方法           | 功能 |
+|:-----|:---------------|:----|
+| 01   | 01. build      | 功能 |
+| 02   | 02. mType      | 功能 |
+| 03   | 03. codeLength | 功能 |
+| 04   | 04. makeCode   | 功能 |
+| 05   | 05. width      | 功能 |
+| 06   | 06. height     | 功能 |
+| 07   | 07. color      | 功能 |
+| 08   | 08. fontSize   | 功能 |
+| 09   | 09. code       | 功能 |
+| 10   | 10. lineNumber | 功能 |
+| 11   | 11. makeBitmap | 功能 |
+| 12   | 12. into       | 功能 |
+
+### *013.滑块SwipeCaptcha(393)*
+
+| 序号 | 方法                       | 功能 |
+|:-----|:---------------------------|:----|
+| 01   | 01. maxSwipeValue          | 功能 |
+| 02   | 02. onCaptchaMatchCallback | 功能 |
+| 03   | 03. createCaptcha          | 功能 |
+| 04   | 04. matchCaptcha           | 功能 |
+| 05   | 05. resetCaptcha           | 功能 |
+| 06   | 06. setCurrentSwipeValue   | 功能 |
+
+### *014.平滚AutoImage(35)*
+
+| 序号 | 方法          | 功能 |
+|:-----|:--------------|:----|
+| 01   | 01. imageView | 功能 |
+
+>1. anim:[anim_translate.xml](../../../../res/anim/anim_translate.xml)
+>2. layout:[autoimage_view.xml](../../../../res/layout/autoimage_view.xml)
+
+### *015.刮刮ScratchCard(48)*
+
+>- mipmap:![img_loading](../../../../res/mipmap/img_loading.png)
+
+### *016.爱心HeartLayout：FloatAnimation、PathAnimator、HeartView(241)*
+
+| 序号 | 方法         | 功能 |
+|:-----|:-------------|:----|
+| 01   | 01. addHeart | 功能 |
+
+>- mipmap
+>
+>>1. ![anim_heart](../../../../res/mipmap/anim_heart.png)
+>>2. ![anim_heart_border](../../../../res/mipmap/anim_heart_border.png)
+
+### *017.拖动Seek(755)*
+
+| 序号 | 方法                            | 功能         |
+|:-----|:--------------------------------|:------------|
+| 01   | 01. min                         | 获取最小值   |
+| 02   | 02. max                         | 获取最大值   |
+| 03   | 03. isHintHolder                | 是否显示提示 |
+| 04   | 04. setLeftProgressDescription  | 设置左边描述 |
+| 05   | 05. setRightProgressDescription | 设置右边描述 |
+| 06   | 06. setProgressDescription      | 设置进度描述 |
+| 07   | 07. setRange                    | 设置区间    |
+| 08   | 08. setRules                    | 设置刻度    |
+| 09   | 09. currentRange                | 获取当前区间 |
+| 10   | 10. setEnabled                  | 设置是否启用 |
+| 11   | 11. onRangeChangedListener      | 区间改变监听 |
+| 12   | 12. setValue                    | 设置值      |
+
+>- mipmap
+>
+>>1. ![seek_thumb](../../../../res/mipmap/seek_thumb.png)
+>>2. ![seek_hint.9](../../../../res/mipmap/seek_hint.9.png)
+
+### *018.刻度RulerWheel(464)*
+
+| 序号 | 方法                            | 功能 |
+|:-----|:--------------------------------|:----|
+| 01   | 01. markAdditionCenter          | 功能 |
+| 02   | 02. selectedPosition            | 功能 |
+| 03   | 03. items                       | 功能 |
+| 04   | 04. OnWheelItemSelectedListener | 功能 |
+| 05   | 05. minSelectableIndex          | 功能 |
+| 06   | 06. maxSelectableIndex          | 功能 |
+| 07   | 07. smoothSelectIndex           | 功能 |
+| 08   | 08. fling                       | 功能 |
+
+### *019.水波Wave(231)*
+
+| 序号 | 方法                | 功能 |
+|:-----|:--------------------|:----|
+| 01   | 01. shapeType       | 功能 |
+| 02   | 02. frontWaveColor  | 功能 |
+| 03   | 03. borderWidth     | 功能 |
+| 04   | 04. behindWaveColor | 功能 |
+| 05   | 05. borderColor     | 功能 |
+| 06   | 06. start           | 功能 |
+| 07   | 07. cancel          | 功能 |
+| 08   | 08. setWaveColor    | 功能 |
+| 09   | 09. setBorder       | 功能 |
+| 10   | 10. isShowWave      | 功能 |
+| 11   | 11. waveLengthRatio | 功能 |
+| 12   | 12. amplitudeRatio  | 功能 |
+| 13   | 13. waveShiftRatio  | 功能 |
+| 14   | 14. waterLevelRatio | 功能 |
+
+### *020.弧度ProgressRound(165)*
+
+| 序号 | 方法                    | 功能 |
+|:-----|:------------------------|:----|
+| 01   | 01. circleColor         | 功能 |
+| 02   | 02. circleProgressColor | 功能 |
+| 03   | 03. textColor           | 功能 |
+| 04   | 04. textSize            | 功能 |
+| 05   | 05. roundWidth          | 功能 |
+| 06   | 06. max                 | 功能 |
+| 07   | 07. STROKE              | 功能 |
+| 08   | 08. FILL                | 功能 |
+| 09   | 09. progress            | 功能 |
+
+### *021.进度ProgressView(258)*
+
+| 序号 | 方法              | 功能 |
+|:-----|:------------------|:----|
+| 01   | 01. isStop        | 功能 |
+| 02   | 02. isFinish      | 功能 |
+| 03   | 03. finishLoad    | 功能 |
+| 04   | 04. progress      | 功能 |
+| 05   | 05. resetProgress | 功能 |
+| 06   | 06. toggle        | 功能 |
+| 07   | 07. setStop       | 功能 |
+
+>- ![flicker](../../../../res/mipmap/flicker.png)
+
+### *022.分隔Divider(32)*
+
+>- implementation "com.google.android.material:material:1.2.1"
+
+### *023.商品ShoppingView(362)*
+
+| 序号 | 方法                        | 功能 |
+|:-----|:----------------------------|:----|
+| 01   | 01. onShoppingClickListener | 功能 |
+| 02   | 02. setTextNum              | 功能 |
+
+### *024.点赞ShineView：ShineButton、PorterShapeImageView、PorterImageView、ShineAnimator、EasingInterpolator、EasingProvider、Ease(699)*
+
+| 序号 | 方法                      | 功能 |
+|:-----|:--------------------------|:----|
+| 01   | 01. clickValue            | 功能 |
+| 02   | 02. colorRandom           | 功能 |
+| 03   | 03. enableFlashing        | 功能 |
+| 04   | 04. allowRandomColor      | 功能 |
+| 05   | 05. shineColorBig         | 功能 |
+| 06   | 06. shineColorSmall       | 功能 |
+| 07   | 07. shineSize             | 功能 |
+| 08   | 08. shineCount            | 功能 |
+| 09   | 09. animDuration          | 功能 |
+| 10   | 10. animDurationClick     | 功能 |
+| 11   | 11. shineTurnAngle        | 功能 |
+| 12   | 12. smallShineOffsetAngle | 功能 |
+| 13   | 13. shineDistanceMultiple | 功能 |
+| 14   | 14. showAnimation         | 功能 |
+
+### *025.字调TextAutoZoom(210)*
+
+| 序号 | 方法                 | 功能 |
+|:-----|:---------------------|:----|
+| 01   | 01. setNormalization | 功能 |
+| 02   | 02. minTextSize      | 功能 |
+| 03   | 03. enableSizeCache  | 功能 |
+
+>- [Title.kt](Title.kt)
+
+### *026.跑马RunText(12)*
+
+### *027.单滚TextVertical(100)*
+
+| 序号 | 方法                     | 功能 |
+|:-----|:-------------------------|:----|
+| 01   | 01. mTextSize            | 功能 |
+| 02   | 02. mTextColor           | 功能 |
+| 03   | 03. mPadding             | 功能 |
+| 04   | 04. mOnItemClickListener | 功能 |
+| 05   | 05. titles               | 功能 |
+| 06   | 06. autoScrollStart      | 功能 |
+| 07   | 07. autoScrollStop       | 功能 |
+| 08   | 08. setTimeTextStill     | 功能 |
+| 09   | 09. setTimeAnim          | 功能 |
+
+### *028.多滚TextVerticalMore(40)*
+
+| 序号 | 方法                    | 功能 |
+|:-----|:------------------------|:----|
+| 01   | 01. interval            | 功能 |
+| 02   | 02. animDuration        | 功能 |
+| 03   | 03. isSetAnimDuration   | 功能 |
+| 04   | 04. onItemClickListener | 功能 |
+| 05   | 05. setViews            | 功能 |
+
+>- anim
+>
+>>1. [anim_marquee_in.xml](../../../../res/anim/anim_marquee_in.xml)
+>>2. [anim_marquee_out.xml](../../../../res/anim/anim_marquee_out.xml)
+
+### *029.通知NoticeHelper：NoticeBase、NoticeBigPic、NoticeBigText、NoticeMailbox、NoticeProgress、NoticeCustomView(473)*
+
+| 序号 | 方法                            | 功能                         |
+|:-----|:--------------------------------|:-----------------------------|
+| 01   | 01. buildSimple                 | 构建简单通知                 |
+| 02   | 02. buildBigPic                 | 构建带图片通知                |
+| 03   | 03. buildBigText                | 构建多文本通知                |
+| 04   | 04. buildMailBox                | 构建带多条消息合并的消息盒通知 |
+| 05   | 05. buildProgress               | 构建带进度条通知，可无精确进度 |
+| 06   | 06. buildCustomView             | 构建自定义通知                |
+| 07   | 07. isNotifyPermissionOpen      | 通知栏权限是否获取            |
+| 08   | 08. openNotifyPermissionSetting | 打开通知栏权限设置页面        |
+| 09   | 09. getManager                  | 获取通知管理器                |
+| 10   | 10. notify                      | 通知                         |
+| 11   | 11. cancel                      | 取消通知                     |
+| 12   | 12. cancelAll                   | 取消所有通知                 |
+
+### *030.说明PopupImply(31)*
+
+| 序号 | 方法     | 功能     |
+|:-----|:---------|:--------|
+| 01   | 01. show | 显示说明 |
+
+>- layout:[popup_imply.xml](../../../../res/layout/popup_imply.xml)
+>- mipmap:![popup_imply.9](../../../../res/mipmap/popup_imply.9.png)
+
+### *031.弹表PopupSingle(111)*
+
+| 序号 | 方法                    | 功能           |
+|:-----|:------------------------|:--------------|
+| 01   | 01. itemOnClickListener | 表项点击监听器 |
+| 02   | 02. cleanAction         | 清空表项      |
+| 03   | 03. addAction           | 添加表项      |
+| 04   | 04. getAction           | 获取表项      |
+| 05   | 05. colorItemText       | 弹表文本颜色   |
+| 06   | 06. show                | 显示可选弹表   |
+
+>- mipmap:![icon_set](../../../../res/mipmap/icon_set.png)与Title共用
+>- layout
+>
+>>1. [popup_list_layout.xml](../../../../res/layout/popup_list_layout.xml)
+>>2. [popup_list_item.xml](../../../../res/layout/popup_list_item.xml)
+
+### *032.弹框PopupViewManager：PopupView、BackgroundConstructor、Coordinates、CoordinatesFinder(533)*
+
+| 序号 | 方法                       | 功能 |
+|:-----|:---------------------------|:----|
+| 01   | 01. TipListener            | 功能 |
+| 02   | 02. animationDuration      | 功能 |
+| 03   | 03. show                   | 功能 |
+| 04   | 04. clearTipsMap           | 功能 |
+| 05   | 05. findAndDismiss         | 功能 |
+| 06   | 06. find                   | 功能 |
+| 07   | 07. dismiss                | 功能 |
+| 08   | 08. isVisible              | 功能 |
+| 09   | #### BackgroundConstructor | 功能 |
+| 10   | 01. setBackground          | 功能 |
+| 11   | #### Coordinates           | 功能 |
+| 12   | 01. left                   | 功能 |
+| 13   | 02. top                    | 功能 |
+| 14   | 03. right                  | 功能 |
+| 15   | 04. bottom                 | 功能 |
+| 16   | #### CoordinatesFinder     | 功能 |
+| 17   | 01. getCoordinates         | 功能 |
+| 18   | #### PopupView             | 功能 |
+| 19   | 01. context                | 功能 |
+| 20   | 02. anchorView             | 功能 |
+| 21   | 03. rootView               | 功能 |
+| 22   | 04. message                | 功能 |
+| 23   | 05. spannableMessage       | 功能 |
+| 24   | 06. isShowArrow            | 功能 |
+| 25   | 07. backgroundColor        | 功能 |
+| 26   | 08. textColor              | 功能 |
+| 27   | 09. textSize               | 功能 |
+| 28   | 10. elevation              | 功能 |
+| 29   | 11. offsetX                | 功能 |
+| 30   | 12. offsetY                | 功能 |
+| 31   | 13. textGravityTemp        | 功能 |
+| 32   | 14. textGravity            | 功能 |
+| 33   | 15. align                  | 功能 |
+| 34   | 16. position               | 功能 |
+| 35   | 17. isHideArrow            | 功能 |
+| 36   | 18. isTextGravityCenter    | 功能 |
+| 37   | 19. isTextGravityLeft      | 功能 |
+| 38   | 20. isTextGravityRight     | 功能 |
+| 39   | 21. isAlignedCenter        | 功能 |
+| 40   | 22. isAlignedLeft          | 功能 |
+| 41   | 23. isAlignedRight         | 功能 |
+| 42   | 24. isPositionedAbove      | 功能 |
+| 43   | 25. isPositionedBelow      | 功能 |
+| 44   | 26. isPositionedLeftTo     | 功能 |
+| 45   | 27. isPositionedRightTo    | 功能 |
+| 46   | ##### BuilderPopupView     | 功能 |
+| 47   | 01. mContext               | 功能 |
+| 48   | 02. mAnchorView            | 功能 |
+| 49   | 03. mRootView              | 功能 |
+| 50   | 04. mMessage               | 功能 |
+| 51   | 05. mSpannableMessage      | 功能 |
+| 52   | 06. mIsShowArrow           | 功能 |
+| 53   | 07. mBackgroundColor       | 功能 |
+| 54   | 08. mTextColor             | 功能 |
+| 55   | 09. mTextSize              | 功能 |
+| 56   | 10. mElevation             | 功能 |
+| 57   | 11. mOffsetX               | 功能 |
+| 58   | 12. mOffsetY               | 功能 |
+| 59   | 13. mTextGravity           | 功能 |
+| 60   | 14. mAlign                 | 功能 |
+| 61   | 15. mPosition              | 功能 |
+| 62   | 16. BuilderPopupView       | 功能 |
+| 63   | 17. buildPopupView         | 功能 |
+
 ## **附01.原生Layouts布局（行、列、格、面）**
 
-| 序号 | 布局                                     | 功能                        |
-|:-----|:-----------------------------------------|:---------------------------|
-| 001  | *001.ConstraintLayout*                   | 约束布局                   |
-| 002  | *002.LinearLayout(horizontal、vertical)* | 线性布局（水平、垂直）       |
-| 003  | *003.TableLayout(TableRow)*              | 表格布局（表格行）          |
-| 004  | *004.FrameLayout*                        | 帧布局                     |
-| 005  | *005.Space*                              | 空白                       |
-| 006  | *006.~~RelativeLayout~~*                 | ~~相对布局（遗留）~~        |
-| 007  | *007.~~CoordinatorLayout~~*              | ~~协调布局（增强型帧布局）~~ |
-| 008  | *008.~~GridLayout~~*                     | ~~网格布局（遗留）~~        |
-| 009  | *009.~~AbsoluteLayout~~*                 | ~~绝对布局~~               |
+| 序号 | 布局                                     | 功能                             |
+|:-----|:-----------------------------------------|:--------------------------------|
+| 001  | *001.ConstraintLayout*                   | 约束布局                        |
+| 002  | *002.LinearLayout(horizontal、vertical)* | 线性布局（水平、垂直）           |
+| 003  | *003.TableLayout(TableRow)*              | 表格布（LayoutTab和LayoutLabel） |
+| 005  | *005.Space*                              | 空白                            |
+| 006  | *006.~~RelativeLayout~~*                 | ~~相对布局（遗留）~~             |
+| 007  | *007.~~CoordinatorLayout~~*              | ~~协调布局（增强型帧布局）~~     |
+| 008  | *008.~~GridLayout~~*                     | ~~网格布局（遗留）~~             |
+| 009  | *009.~~AbsoluteLayout~~*                 | ~~绝对布局~~                    |
 
 ## **附02.原生Containers容器（条目、栏目、页目）**
 
-| 序号 | 容器                                                                            | 功能                                                                                                 |
-|:-----|:-------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------|
-| 001  | *001.Spinner*                                                                  | 下拉列表                                                                                              |
-| 002  | *002.RecyclerView*                                                             | 回收视图（自制BaseAdapterBinder）                                                                     |
-| 003  | *003.ScrollView、HorizontalScrollView、NestedScrollView*                       | 滚动视图、水平滚动视图、嵌套滚动视图                                                                    |
-| 004  | *004.ViewPager2*                                                               | 视图切换器（自制Banner）                                                                              |
-| 005  | *005.CardView*                                                                 | 卡牌视图（自制CardStackView）                                                                         |
-| 006  | *006.AppBarLayout、BottomAppBar、NavigationView、BottomNavigationView、Toolbar* | 程序条布局（垂直线性布局支持滚动手势）、底部程序条、导航视图（自制Side）、底部导航视图、工具条（自制Title） |
-| 007  | *007.TabLayout(TabItem)、NavHostFragment*                                      | 标签布局（标签项；自制LayoutTab和LayoutLabel）、导航主机片段                                            |
-| 008  | *008.ViewStub、\<include\>、\<fragment\>、\<view\>、\<requestFocus\>*           | 占位视图、引用布局、引用片段、引用视图、引用焦点视图                                                    |
-| 009  | *009.~~ListView、ExpandableListView、GridView~~*                               | ~~列表视图（遗留）、可展开列表视图、网格视图（遗留）~~                                                   |
-| 010  | *010.~~ActionBar、Tabs、TabHost~~*                                             | ~~操作条、标签组、标签主机（遗留）~~                                                                    |
-| 011  | *011.~~StackView~~*                                                            | ~~堆叠视图~~                                                                                          |
-| 012  | *012.~~ViewAnimator~~*                                                         | ~~视图动画~~                                                                                          |
-| 013  | *013.~~TextSwitcher、ImageSwitcher、ViewSwitcher~~*                            | ~~文本切换器、图片切换器、视图切换器~~                                                                  |
-| 014  | *014.~~ViewFlipper、AdapterViewFlipper~~*                                      | ~~视图翻转器、适配器视图翻转器~~                                                                       |
+| 序号 | 容器                                                                            | 功能                                                                                          |
+|:-----|:-------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------|
+| 001  | *001.Spinner*                                                                  | 下拉列表                                                                                      |
+| 002  | *002.RecyclerView*                                                             | 回收视图（BaseAdapterBinder）                                                                  |
+| 003  | *003.ScrollView、HorizontalScrollView、NestedScrollView*                       | 滚动视图、水平滚动视图、嵌套滚动视图                                                             |
+| 004  | *004.ViewPager2*                                                               | 视图切换器（Banner）                                                                           |
+| 005  | *005.CardView*                                                                 | 卡牌视图（CardStackView）                                                                      |
+| 006  | *006.AppBarLayout、BottomAppBar、NavigationView、BottomNavigationView、Toolbar* | 程序条布局（垂直线性布局支持滚动手势）、底部程序条、工具条（Title）、导航视图（Side）、底部导航视图 |
+| 007  | *007.TabLayout(TabItem)、NavHostFragment*                                      | 标签布局（标签项）、导航主机片段                                                                |
+| 008  | *008.ViewStub、\<include\>、\<fragment\>、\<view\>、\<requestFocus\>*           | 占位视图、引用布局、引用片段、引用视图、引用焦点视图                                             |
+| 009  | *009.~~ListView、ExpandableListView、GridView~~*                               | ~~列表视图（遗留）、可展开列表视图、网格视图（遗留）~~                                            |
+| 010  | *010.~~ActionBar、Tabs、TabHost~~*                                             | ~~操作条、标签组、标签主机（遗留）~~                                                            |
+| 011  | *011.~~StackView~~*                                                            | ~~堆叠视图~~                                                                                  |
+| 012  | *012.~~ViewAnimator~~*                                                         | ~~视图动画~~                                                                                  |
+| 013  | *013.~~TextSwitcher、ImageSwitcher、ViewSwitcher~~*                            | ~~文本切换器、图片切换器、视图切换器~~                                                          |
+| 014  | *014.~~ViewFlipper、AdapterViewFlipper~~*                                      | ~~视图翻转器、适配器视图翻转器~~                                                                |
 
 ## **附03.原生Helpers助手（隐藏功能）**
 
@@ -1634,62 +1650,62 @@ class LabelShowMoreActivity : AppCompatActivity() {
 
 ## **附04.原生Widgets组件（通用、图片、条框）**
 
-| 序号 | 组件                                                                                          | 功能                                                                                                                                   |
-|:-----|:---------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------|
-| 001  | *001.View、WebView、VideoView、CalendarView*                                                 | 视图、网页视图、视频视图、日历视图（自制Cobweb、自制NetSpeedView、自制SeatAirplane、自制SeatMovie）                                         |
-| 002  | *002.ImageView*                                                                              | 图片视图（自制AutoImage、自制PinView、自制Captcha、自制SwipeCaptcha、自制ScratchCard、自制HeartLayout）                                   |
-| 003  | *003.ProgressBar、ProgressBar(Horizontal)、SeekBar、SeekBar(Discrete)、RatingBar、SearchView* | 进度条（自制ProgressRound）、水平进度条（自制ProgressView、自制Wave）、拖动条（自制Seek）、分离拖动条（自制RulerWheel）、星级评分条、搜索视图 |
-| 004  | *004.TextureView、SurfaceView*                                                               | 结构视图、表面视图                                                                                                                      |
-| 005  | *005.Divider(Horizontal、Vertical)*                                                          | 分隔条（水平、垂直、自制Divider）                                                                                                        |
-| 006  | *006.~~AnalogClock、TextClock、Chronometer~~*                                                | ~~模拟时钟、文本时钟、计时器~~                                                                                                           |
-| 007  | *007.~~TimePicker、DatePicker、NumberPicker~~*                                               | ~~时间选择器、日期选择器、数字选择器~~                                                                                                    |
-| 008  | *008.~~ZoomButton、ZoomControls~~*                                                           | ~~缩放按钮、缩放控制~~                                                                                                                  |
-| 009  | *009.~~QuickContactBadge~~*                                                                  | ~~快捷联系人标识~~                                                                                                                      |
-| 010  | *010.~~AdView、MapView、MapFragment~~*                                                       | ~~广告视图、地图视图、地图片段~~                                                                                                         |
+| 序号 | 组件                                                                                          | 功能                                                                                                                |
+|:-----|:---------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------|
+| 001  | *001.View、WebView、VideoView、CalendarView*                                                 | 视图、网页视图、视频视图、日历视图（Cobweb、NetSpeedView、SeatAirplane、SeatMovie）                                     |
+| 002  | *002.ImageView*                                                                              | 图片视图（PinView、Captcha、SwipeCaptcha、AutoImage、ScratchCard、HeartLayout）                                       |
+| 003  | *003.ProgressBar、ProgressBar(Horizontal)、SeekBar、SeekBar(Discrete)、RatingBar、SearchView* | 拖动条（Seek）、分离拖动条（RulerWheel）、进度条（Wave、ProgressRound）、水平进度条（ProgressView）、星级评分条、搜索视图 |
+| 004  | *004.TextureView、SurfaceView*                                                               | 结构视图、表面视图                                                                                                    |
+| 005  | *005.Divider(Horizontal、Vertical)*                                                          | 分隔条（水平、垂直、Divider）                                                                                         |
+| 006  | *006.~~AnalogClock、TextClock、Chronometer~~*                                                | ~~模拟时钟、文本时钟、计时器~~                                                                                         |
+| 007  | *007.~~TimePicker、DatePicker、NumberPicker~~*                                               | ~~时间选择器、日期选择器、数字选择器~~                                                                                 |
+| 008  | *008.~~ZoomButton、ZoomControls~~*                                                           | ~~缩放按钮、缩放控制~~                                                                                                |
+| 009  | *009.~~QuickContactBadge~~*                                                                  | ~~快捷联系人标识~~                                                                                                   |
+| 010  | *010.~~AdView、MapView、MapFragment~~*                                                       | ~~广告视图、地图视图、地图片段~~                                                                                       |
 
 ## **附05.原生Buttons按钮（执行、选择）**
 
-| 序号 | 按钮                                                     | 功能                                                         |
-|:-----|:--------------------------------------------------------|:-------------------------------------------------------------|
-| 001  | *001.Button、ImageButton、FloatingActionButton*          | 按钮、图片按钮（自制ShoppingView、自制ShineView）、浮动操作按钮 |
-| 002  | *002.ChipGroup(Chip)、RadioGroup(RadioButton)、CheckBox* | 流式布局标签组（流式布局标签）、单选框组（单选按钮）、复选框     |
-| 003  | *003.ToggleButton、Switch*                               | 切换按钮、开关                                                |
+| 序号 | 按钮                                                     | 功能                                                     |
+|:-----|:--------------------------------------------------------|:---------------------------------------------------------|
+| 001  | *001.Button、ImageButton、FloatingActionButton*          | 按钮、图片按钮（ShoppingView、ShineView）、浮动操作按钮    |
+| 002  | *002.ChipGroup(Chip)、RadioGroup(RadioButton)、CheckBox* | 流式布局标签组（流式布局标签）、单选框组（单选按钮）、复选框 |
+| 003  | *003.ToggleButton、Switch*                               | 切换按钮、开关                                           |
 
 ## **附06.原生Text文本（显示、输入）**
 
 | 序号 | 文本                                                                                                                                         | 功能                                                                                                              |
 |:-----|:--------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------|
-| 001  | *001.TextView*                                                                                                                              | 文本视图（自制RunText、自制TextAutoZoom、自制TextVertical、自制TextVerticalMore）                                    |
+| 001  | *001.TextView*                                                                                                                              | 文本视图（TextAutoZoom、RunText、TextVertical、TextVerticalMore）                                                   |
 | 002  | *002.PlainText、Password、Password(Numeric)、Email、Phone、PostalAddress、MultilineText、Time、Date、Number、Number(Signed)、Number(Decimal)* | 输入普通文本、任意字符密码、数字密码、邮箱地址、电话号码、邮政地址、多行文本、时间、日期、数字、带正负号数字、带小数点数字 |
 | 003  | *003.AutoCompleteTextView、MultiAutoCompleteTextView、CheckedTextView、TextInputLayout*                                                      | 单选自动完成文本框、多选自动完成文本框、文本复选框、文本输入布局（包含EditView默认生成浮动Label）                       |
 
 ## **附07.原生Remind提醒（强烈、安静）**
 
-| 序号 | 提醒                                                                          | 功能                                                              |
-|:-----|:-----------------------------------------------------------------------------|:------------------------------------------------------------------|
-| 001  | *001.Menu、PopupWindow*                                                      | 菜单、弹窗（自制PopupImply、自制PopupSingle、自制PopupViewManager） |
-| 002  | *002.Dialog、DatePickerDialog、TimePickerDialog、ProgressDialog、AlertDialog* | 对话框、日期选择对话框、时间选择对话框、进度对话框、警告对话框        |
-| 003  | *003.Toast、Snackbar*                                                        | 吐司（工具ToastHelper）、快餐（工具SnackHelper）                    |
-| 004  | *004.Notification、RemoteViews*                                              | 通知（自制NoticeHelper）、桌面控件                                  |
+| 序号 | 提醒                                                                          | 功能                                                       |
+|:-----|:-----------------------------------------------------------------------------|:-----------------------------------------------------------|
+| 001  | *001.Notification、RemoteViews*                                              | 通知（NoticeHelper）、桌面控件                              |
+| 002  | *002.Menu、PopupWindow*                                                      | 菜单、弹窗（PopupImply、PopupSingle、PopupViewManager）     |
+| 003  | *003.Dialog、DatePickerDialog、TimePickerDialog、ProgressDialog、AlertDialog* | 对话框、日期选择对话框、时间选择对话框、进度对话框、警告对话框 |
+| 004  | *004.Toast、Snackbar*                                                        | 吐司（工具ToastHelper）、快餐（工具SnackHelper）             |
 
 ## **附08.UI趋势建议**
 
-| 序号 | 类别                   | 控件（严控有限空间Activity跳转、杜绝扩展空间Fragment切换、优先无限空间RecyclerView滑动）共35个常用                                                                                                                                                                           |
-|:-----|:----------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 001  | *001.Layouts行列格面4* | 独立活动根布局ConstraintLayout、回收视图子布局LinearLayout、TableLayout、FrameLayout、~~Space~~                                                                                                                                                                            |
-| 002  | *001.Containers条目2* | 容器RecyclerView、适配器BaseAdapterBinder、~~Spinner、ScrollView、HorizontalScrollView、NestedScrollView~~                                                                                                                                                                |
-| 003  | *002.Containers页目2* | 引导轮播Banner、轮播内容CardView、~~ViewPager2、CardStackView~~                                                                                                                                                                                                            |
-| 004  | *003.Containers栏目3* | 回收视图子布局直达LayoutTab、回收视图条目直达Toolbar、回收视图子布局头部Title、~~AppBarLayout、BottomAppBar、NavigationView、BottomNavigationView、Side、TabLayout(TabItem)、NavHostFragment、LayoutLabel、ViewStub、\<include\>、\<fragment\>、\<view\>、\<requestFocus\>~~   |
-| 005  | *001.Helpers助手0*    | ~~MockView、ImageFilterView、ImageFilterButton、Guideline(Horizontal、Vertical)、Barrier(Horizontal、Vertical)、Group、Flow、Layer~~                                                                                                                                      |
-| 006  | *001.Widgets通用2*    | 月度任务标记CalendarView、综合评分展示Cobweb、~~View、WebView、VideoView、NetSpeedView、SeatAirplane、SeatMovie~~                                                                                                                                                           |
-| 007  | *002.Widgets图片4*    | 图片显示ImageView、指定位置固定可缩放图片PinView、输码验证Captcha、滑动验证SwipeCaptcha、~~AutoImage、ScratchCard、HeartLayout~~                                                                                                                                             |
-| 008  | *003.Widgets条框6*    | 任务进度ProgressBar、进度动效Wave、设置起止值自制Seek、设置精确值RulerWheel、任务评分RatingBar、搜索SearchView、~~ProgressBar(Horizontal)、SeekBar、SeekBar(Discrete)、ProgressRound、自制ProgressView、TextureView、SurfaceView、Divider(Horizontal、Vertical)、自制Divider~~ |
-| 009  | *001.Buttons执行1*    | 执行任务ImageButton、~~Button、FloatingActionButton、ShoppingView、ShineView~~                                                                                                                                                                                            |
-| 010  | *002.Buttons选择1*    | 开关状态ChipGroup(Chip)、~~RadioGroup(RadioButton)、CheckBox、ToggleButton、Switch~~                                                                                                                                                                                      |
-| 011  | *001.Text显示2*       | 文本显示TextView、文本自动缩放TextAutoZoom、~~RunText、TextVertical、TextVerticalMore~~                                                                                                                                                                                    |
-| 012  | *002.Text输入3*       | 文本输入PlainText、输入建议MultiAutoCompleteTextView、输入提示TextInputLayout、~~Password、Password(Numeric)、Email、Phone、PostalAddress、MultilineText、Time、Date、Number、Number(Signed)、Number(Decimal)、AutoCompleteTextView、CheckedTextView~~                       |
-| 013  | *001.Remind强烈3*     | 弹出提示PopupImply、弹出操作PopupSingle、弹出对话PopupViewManager、~~Menu、PopupWindow、Dialog、DatePickerDialog、TimePickerDialog、ProgressDialog、AlertDialog~~                                                                                                           |
-| 014  | *002.Remind安静2*     | 显示提示SnackHelper、发送通知NoticeHelper、~~Toast、Snackbar、ToastHelper、Notification、RemoteViews~~                                                                                                                                                                     |
+| 序号 | 类别                   | 控件（严控有限空间Activity跳转、杜绝扩展空间Fragment切换、优先无限空间RecyclerView滑动）共35个常用                                                                                                                                                                          |
+|:-----|:----------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 001  | *001.Layouts行列格面4* | 独立活动根布局ConstraintLayout、回收视图子布局LinearLayout、TableLayout、FrameLayout、~~Space~~                                                                                                                                                                          |
+| 002  | *001.Containers条目2* | 容器RecyclerView、适配器BaseAdapterBinder、~~Spinner、ScrollView、HorizontalScrollView、NestedScrollView~~                                                                                                                                                               |
+| 003  | *002.Containers页目2* | 引导轮播Banner、轮播内容CardView、~~ViewPager2、CardStackView~~                                                                                                                                                                                                          |
+| 004  | *003.Containers栏目3* | 回收视图子布局直达LayoutTab、回收视图条目直达Toolbar、回收视图子布局头部Title、~~AppBarLayout、BottomAppBar、NavigationView、BottomNavigationView、Side、TabLayout(TabItem)、NavHostFragment、LayoutLabel、ViewStub、\<include\>、\<fragment\>、\<view\>、\<requestFocus\>~~ |
+| 005  | *001.Helpers助手0*    | ~~MockView、ImageFilterView、ImageFilterButton、Guideline(Horizontal、Vertical)、Barrier(Horizontal、Vertical)、Group、Flow、Layer~~                                                                                                                                     |
+| 006  | *001.Widgets通用2*    | 月度任务标记CalendarView、综合评分展示Cobweb、~~View、WebView、VideoView、NetSpeedView、SeatAirplane、SeatMovie~~                                                                                                                                                         |
+| 007  | *002.Widgets图片4*    | 图片显示ImageView、指定位置固定可缩放图片PinView、输码验证Captcha、滑动验证SwipeCaptcha、~~AutoImage、ScratchCard、HeartLayout~~                                                                                                                                            |
+| 008  | *003.Widgets条框6*    | 任务进度ProgressBar、进度动效Wave、设置起止值Seek、设置精确值RulerWheel、任务评分RatingBar、搜索SearchView、~~ProgressBar(Horizontal)、SeekBar、SeekBar(Discrete)、ProgressRound、ProgressView、TextureView、SurfaceView、Divider(Horizontal、Vertical)、Divider~~           |
+| 009  | *001.Buttons执行1*    | 执行任务ImageButton、~~Button、FloatingActionButton、ShoppingView、ShineView~~                                                                                                                                                                                           |
+| 010  | *002.Buttons选择1*    | 开关状态ChipGroup(Chip)、~~RadioGroup(RadioButton)、CheckBox、ToggleButton、Switch~~                                                                                                                                                                                     |
+| 011  | *001.Text显示2*       | 文本显示TextView、文本自动缩放TextAutoZoom、~~RunText、TextVertical、TextVerticalMore~~                                                                                                                                                                                   |
+| 012  | *002.Text输入3*       | 文本输入PlainText、输入建议MultiAutoCompleteTextView、输入提示TextInputLayout、~~Password、Password(Numeric)、Email、Phone、PostalAddress、MultilineText、Time、Date、Number、Number(Signed)、Number(Decimal)、AutoCompleteTextView、CheckedTextView~~                     |
+| 013  | *001.Remind强烈3*     | 弹出提示PopupImply、弹出操作PopupSingle、弹出对话PopupViewManager、~~Menu、PopupWindow、Dialog、DatePickerDialog、TimePickerDialog、ProgressDialog、AlertDialog、Notification、RemoteViews~~                                                                               |
+| 014  | *002.Remind安静2*     | 显示提示SnackHelper、发送通知NoticeHelper、~~Toast、Snackbar、ToastHelper~~                                                                                                                                                                                              |
 
 ## **附09.回收视图可用单项及其成员**
 
@@ -1701,13 +1717,13 @@ class LabelShowMoreActivity : AppCompatActivity() {
 | 004  | *003.容器-栏目-单项2* | Toolbar、Title、~~LayoutTab~~                                |
 | 005  | *001.组件-通用-单项2* | CalendarView、Cobweb                                         |
 | 006  | *002.组件-图片-单项2* | ImageView、PinView、~~Captcha、SwipeCaptcha~~                |
-| 007  | *003.组件-条框-单项6* | ProgressBar、Wave、Seek、RulerWheel、RatingBar、SearchView   |
+| 007  | *003.组件-条框-单项6* | Seek、RulerWheel、Wave、ProgressBar、RatingBar、SearchView   |
 | 008  | *001.按钮-执行-单项1* | ImageButton                                                  |
 | 009  | *002.按钮-选择-单项1* | ChipGroup(Chip)                                              |
 | 010  | *001.文本-显示-单项2* | TextView、TextAutoZoom                                       |
 | 011  | *002.文本-输入-单项3* | PlainText、MultiAutoCompleteTextView、TextInputLayout        |
-| 012  | *001.提醒-强烈-成员3* | PopupImply、PopupSingle、PopupViewManager                    |
-| 013  | *002.提醒-安静-成员2* | SnackHelper、NoticeHelper                                    |
+| 012  | *001.提醒-强烈-成员4* | PopupImply、PopupSingle、PopupViewManager、NoticeHelper      |
+| 013  | *002.提醒-安静-成员1* | SnackHelper                                                  |
 
 ## **附10.回收视图可备单项控件**
 
@@ -1723,9 +1739,9 @@ class LabelShowMoreActivity : AppCompatActivity() {
 | 008  | ~~*008.binder_image*~~    | ~~ImageBinder~~    | ~~ImageBean~~    |
 | 009  | ~~*009.binder_pin*~~      | ~~PinBinder~~      | ~~PinBean~~      |
 | 010  | ~~*010.binder_progress*~~ | ~~ProgressBinder~~ | ~~ProgressBean~~ |
-| 011  | ~~*011.binder_wave*~~     | ~~WaveBinder~~     | ~~WaveBean~~     |
-| 012  | *012.binder_seek*         | SeekBinder         | SeekBean         |
-| 013  | *013.binder_ruler*        | RulerBinder        | RulerBean        |
+| 011  | *011.binder_seek*         | SeekBinder         | SeekBean         |
+| 012  | *012.binder_ruler*        | RulerBinder        | RulerBean        |
+| 013  | ~~*013.binder_wave*~~     | ~~WaveBinder~~     | ~~WaveBean~~     |
 | 014  | ~~*014.binder_rating*~~   | ~~RatingBinder~~   | ~~RatingBean~~   |
 | 015  | *015.binder_search*       | SearchBinder       | SearchBean       |
 | 016  | *016.binder_button*       | ButtonBinder       | ButtonBean       |
