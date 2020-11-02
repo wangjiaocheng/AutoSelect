@@ -14,6 +14,19 @@
 
 ## **工具库helper归属客户端控制层**
 
+| 序号 | 类库                                                               | 功能 |
+|:-----|:------------------------------------------------------------------|:-----|
+| 001  | *001.设备、存储、网络、无线、热点、蓝牙、定位、亮度、闪光、振动、蜂鸣* | 硬件 |
+| 002  | *002.系统、版本、机型、重启、命令、破解、应用、崩溃、退出、清理、快捷* | 系统 |
+| 003  | *003.路由、活动、分享、片段、服务、管理、轮询、广播、意图、元数、权限* | 组件 |
+| 004  | *004.屏幕、窗口、多栏、视图、网视、着色、吐司、零食、连点、防抖、抖动* | 视图 |
+| 005  | *005.全局、接口、总线、内存、磁盘、双重、线程、进程、反射、单例、空判* | 管理 |
+| 006  | *006.输入、剪贴、字串、富文、文本、随机、验证、身份、银行、图码、软包* | 字符 |
+| 007  | *007.编码、加密、位算、压缩、平面、计算、尺寸、坐标、转换、迁移、数库* | 运算 |
+| 008  | *008.文件、存取、压制、密压、打开、图像、照片、图片、动画、信息、属性* | 文件 |
+| 009  | *009.记录、日志、数据、解析、处理、标记、路径、资源、共享、主题、消息* | 资源 |
+| 010  | *010.日期、农历、关闭、工具、通讯、地图、网服、网连、标识、安全、超文* | 连接 |
+
 | 序号 | 类库                                                    | 功能 |
 |:-----|:-------------------------------------------------------|:-----|
 | 001  | *001.DeviceHelper(446)*                                | 设备 |
@@ -27,17 +40,17 @@
 | 009  | *009.FlashlightHelper(58)*                             | 闪光 |
 | 010  | *010.VibrateHelper(20)*                                | 振动 |
 | 011  | *011.BeepHelper(39)*                                   | 蜂鸣 |
-| 012  | *012.AntiShakeHelper(20)*                              | 防抖 |
-| 013  | *013.ShellHelper(86)*                                  | 命令 |
-| 014  | *014.RootHelper(43)*                                   | 破解 |
-| 015  | *015.ApplicationHelper(603)*                           | 应用 |
-| 016  | *016.CrashHelper(143)*                                 | 崩溃 |
-| 017  | *017.ExitHelper(59)*                                   | 退出 |
-| 018  | *018.CleanHelper(50)*                                  | 清理 |
-| 019  | *019.RebootHelper(35)*                                 | 重启 |
-| 020  | *020.ShortcutHelper(40)*                               | 快捷 |
-| 021  | *021.RomHelper(215)*                                   | 机型 |
-| 022  | *022.VersionHelper(66)*                                | 版本 |
+| 012  | *012.SystemHelper：SystemLanguage(230)*                | 系统 |
+| 013  | *013.VersionHelper(66)*                                | 版本 |
+| 014  | *014.RomHelper(215)*                                   | 机型 |
+| 015  | *015.RebootHelper(35)*                                 | 重启 |
+| 016  | *016.ShellHelper(86)*                                  | 命令 |
+| 017  | *017.RootHelper(43)*                                   | 破解 |
+| 018  | *018.ApplicationHelper(603)*                           | 应用 |
+| 019  | *019.CrashHelper(143)*                                 | 崩溃 |
+| 020  | *020.ExitHelper(59)*                                   | 退出 |
+| 021  | *021.CleanHelper(50)*                                  | 清理 |
+| 022  | *022.ShortcutHelper(40)*                               | 快捷 |
 | 023  | *023.RouteHelper(142)*                                 | 路由 |
 | 024  | *024.ActivityHelper(669)*                              | 活动 |
 | 025  | *025.ShareHelper(238)*                                 | 分享 |
@@ -49,83 +62,83 @@
 | 031  | *031.IntentHelper(316)*                                | 意图 |
 | 032  | *032.MetaDataHelper(53)*                               | 元数 |
 | 033  | *033.PermissionHelper(443)*                            | 权限 |
-| 034  | *034.PackageHelper(18)*                                | 软包 |
-| 035  | *035.PropertiesHelper(40)*                             | 属性 |
-| 036  | *036.ScreenHelper(260)*                                | 屏幕 |
-| 037  | *037.WindowHelper(60)*                                 | 窗口 |
-| 038  | *038.BarHelper(531)*                                   | 多栏 |
-| 039  | *039.ViewHelper：ViewTouch、ViewClick、ViewShadow(945)* | 视图 |
-| 040  | *040.ClickHelper(40)*                                  | 连点 |
-| 041  | *041.ShakeHelper(26)*                                  | 抖动 |
-| 042  | *042.WebViewHelper(76)*                                | 网视 |
-| 043  | *043.ToastHelper(360)*                                 | 吐司 |
-| 044  | *044.SnackHelper(107)*                                 | 零食 |
-| 045  | *045.ColorHelper(76)*                                  | 着色 |
-| 046  | *046.UiMessageHelper(166)*                             | 消息 |
-| 047  | *047.AHelper(287)*                                     | 全局 |
+| 034  | *034.ScreenHelper(260)*                                | 屏幕 |
+| 035  | *035.WindowHelper(60)*                                 | 窗口 |
+| 036  | *036.BarHelper(531)*                                   | 多栏 |
+| 037  | *037.ViewHelper：ViewTouch、ViewClick、ViewShadow(945)* | 视图 |
+| 038  | *038.WebViewHelper(76)*                                | 网视 |
+| 039  | *039.ColorHelper(76)*                                  | 着色 |
+| 040  | *040.ToastHelper(360)*                                 | 吐司 |
+| 041  | *041.SnackHelper(107)*                                 | 零食 |
+| 042  | *042.ClickHelper(40)*                                  | 连点 |
+| 043  | *043.AntiShakeHelper(20)*                              | 防抖 |
+| 044  | *044.ShakeHelper(26)*                                  | 抖动 |
+| 045  | *045.AHelper(287)*                                     | 全局 |
+| 046  | *046.ApiHelper(44)*                                    | 接口 |
+| 047  | *047.BusHelper(239)*                                   | 总线 |
 | 048  | *048.CacheMemoryHelper(78)*                            | 内存 |
 | 049  | *049.CacheDiskHelper(523)*                             | 磁盘 |
 | 050  | *050.CacheDoubleHelper(247)*                           | 双重 |
 | 051  | *051.ThreadHelper(328)*                                | 线程 |
 | 052  | *052.ProcessHelper(150)*                               | 进程 |
 | 053  | *053.ReflectionHelper(64)*                             | 反射 |
-| 054  | *054.ApiHelper(44)*                                    | 接口 |
-| 055  | *055.SingletonHelper.Singleton(16)*                    | 单例 |
-| 056  | *056.EmptyHelper(72)*                                  | 对象 |
-| 057  | *057.BusHelper(239)*                                   | 总线 |
-| 058  | *058.InputMethodHelper(248)*                           | 输入 |
-| 059  | *059.ClipboardHelper(20)*                              | 剪贴 |
-| 060  | *060.StringHelper(120)*                                | 字串 |
-| 061  | *061.SpanHelper(795)*                                  | 富文 |
-| 062  | *062.TextHelper(444)*                                  | 文本 |
-| 063  | *063.RandomHelper(78)*                                 | 随机 |
-| 064  | *064.ValidationHelper(280)*                            | 验证 |
-| 065  | *065.IdHelper(396)*                                    | 身份 |
-| 066  | *066.BankHelper(1720)*                                 | 银行 |
-| 067  | *067.BarQRHelper(149)*                                 | 图码 |
-| 068  | *068.ToolHelper(137)*                                  | 工具 |
-| 069  | *069.EncodeHelper(115)*                                | 编码 |
-| 070  | *070.EncryptHelper(510)*                               | 加密 |
-| 071  | *071.BitHelper(35)*                                    | 位算 |
-| 072  | *072.CompressHelper(92)*                               | 压缩 |
-| 073  | *073.PlaneHelper(15)*                                  | 平面 |
-| 074  | *074.CalculateHelper(222)*                             | 计算 |
-| 075  | *075.DensityHelper(58)*                                | 尺寸 |
-| 076  | *076.CoordinateHelper(94)*                             | 坐标 |
-| 077  | *077.ConvertHelper(520)*                               | 转换 |
-| 078  | *078.MigrationHelper(97)*                              | 迁移 |
-| 079  | *079.FileHelper(914)*                                  | 文件 |
-| 080  | *080.FileIoHelper(366)*                                | 存取 |
-| 081  | *081.ZipHelper(336)*                                   | 压制 |
-| 082  | *082.ZipPlusHelper(320)*                               | 密压 |
-| 083  | *083.OpenHelper(102)*                                  | 打开 |
-| 084  | *084.ImageHelper(1298)*                                | 图像 |
-| 085  | *085.PhotoHelper(125)*                                 | 照片 |
-| 086  | *086.PictureHelper(43)*                                | 图片 |
-| 087  | *087.AnimationHelper(209)*                             | 动画 |
-| 088  | *088.ExifHelper(41)*                                   | 信息 |
-| 089  | *089.DateHelper(514)*                                  | 日期 |
-| 090  | *090.LunarHelper(177)*                                 | 农历 |
-| 091  | *091.LoggerHelper(84)*                                 | 记录 |
-| 092  | *092.LogHelper(681)*                                   | 日志 |
-| 093  | *093.DataHelper(146)*                                  | 数据 |
-| 094  | *094.JsonHelper(273)*                                  | 解析 |
-| 095  | *095.GsonHelper(50)*                                   | 处理 |
-| 096  | *096.XmlParseHelper(138)*                              | 标记 |
-| 097  | *097.PathHelper(178)*                                  | 路径 |
-| 098  | *098.ResourceHelper(247)*                              | 资源 |
-| 099  | *099.ThemeHelper(157)*                                 | 主题 |
-| 100  | *100.PreferenceHelper(109)*                            | 共享 |
-| 101  | *101.HtmlHelper(59)*                                   | 超文 |
-| 102  | *102.UriHelper(91)*                                    | 标识 |
-| 103  | *103.SslHelper(57)*                                    | 安全 |
-| 104  | *104.WebServiceHelper(63)*                             | 网服 |
-| 105  | *105.HttpUrlConnectionHelper(107)*                     | 网连 |
-| 106  | *106.DbHelper(35)*                                     | 数库 |
-| 107  | *107.MapHelper(69)*                                    | 地图 |
-| 108  | *108.ContactsHelper(221)*                              | 通讯 |
-| 109  | *109.SystemHelper：SystemLanguage(230)*                | 系统 |
-| 110  | *110.CloseHelper(25)*                                  | 关闭 |
+| 054  | *054.SingletonHelper.Singleton(16)*                    | 单例 |
+| 055  | *055.EmptyHelper(72)*                                  | 空判 |
+| 056  | *056.InputMethodHelper(248)*                           | 输入 |
+| 057  | *057.ClipboardHelper(20)*                              | 剪贴 |
+| 058  | *058.StringHelper(120)*                                | 字串 |
+| 059  | *059.SpanHelper(795)*                                  | 富文 |
+| 060  | *060.TextHelper(444)*                                  | 文本 |
+| 061  | *061.RandomHelper(78)*                                 | 随机 |
+| 062  | *062.ValidationHelper(280)*                            | 验证 |
+| 063  | *063.IdHelper(396)*                                    | 身份 |
+| 064  | *064.BankHelper(1720)*                                 | 银行 |
+| 065  | *065.BarQRHelper(149)*                                 | 图码 |
+| 066  | *066.PackageHelper(18)*                                | 软包 |
+| 067  | *067.EncodeHelper(115)*                                | 编码 |
+| 068  | *068.EncryptHelper(510)*                               | 加密 |
+| 069  | *069.BitHelper(35)*                                    | 位算 |
+| 070  | *070.CompressHelper(92)*                               | 压缩 |
+| 071  | *071.PlaneHelper(15)*                                  | 平面 |
+| 072  | *072.CalculateHelper(222)*                             | 计算 |
+| 073  | *073.DensityHelper(58)*                                | 尺寸 |
+| 074  | *074.CoordinateHelper(94)*                             | 坐标 |
+| 075  | *075.ConvertHelper(520)*                               | 转换 |
+| 076  | *076.MigrationHelper(97)*                              | 迁移 |
+| 077  | *077.DbHelper(35)*                                     | 数库 |
+| 078  | *078.FileHelper(914)*                                  | 文件 |
+| 079  | *079.FileIoHelper(366)*                                | 存取 |
+| 080  | *080.ZipHelper(336)*                                   | 压制 |
+| 081  | *081.ZipPlusHelper(320)*                               | 密压 |
+| 082  | *082.OpenHelper(102)*                                  | 打开 |
+| 083  | *083.ImageHelper(1298)*                                | 图像 |
+| 084  | *084.PhotoHelper(125)*                                 | 照片 |
+| 085  | *085.PictureHelper(43)*                                | 图片 |
+| 086  | *086.AnimationHelper(209)*                             | 动画 |
+| 087  | *087.ExifHelper(41)*                                   | 信息 |
+| 088  | *088.PropertiesHelper(40)*                             | 属性 |
+| 089  | *089.LoggerHelper(84)*                                 | 记录 |
+| 090  | *090.LogHelper(681)*                                   | 日志 |
+| 091  | *091.DataHelper(146)*                                  | 数据 |
+| 092  | *092.JsonHelper(273)*                                  | 解析 |
+| 093  | *093.GsonHelper(50)*                                   | 处理 |
+| 094  | *094.XmlParseHelper(138)*                              | 标记 |
+| 095  | *095.PathHelper(178)*                                  | 路径 |
+| 096  | *096.ResourceHelper(247)*                              | 资源 |
+| 097  | *097.PreferenceHelper(109)*                            | 共享 |
+| 098  | *098.ThemeHelper(157)*                                 | 主题 |
+| 099  | *099.UiMessageHelper(166)*                             | 消息 |
+| 100  | *100.DateHelper(514)*                                  | 日期 |
+| 101  | *101.LunarHelper(177)*                                 | 农历 |
+| 102  | *102.CloseHelper(25)*                                  | 关闭 |
+| 103  | *103.ToolHelper(137)*                                  | 工具 |
+| 104  | *104.ContactsHelper(221)*                              | 通讯 |
+| 105  | *105.MapHelper(69)*                                    | 地图 |
+| 106  | *106.WebServiceHelper(63)*                             | 网服 |
+| 107  | *107.HttpUrlConnectionHelper(107)*                     | 网连 |
+| 108  | *108.UriHelper(91)*                                    | 标识 |
+| 109  | *109.SslHelper(57)*                                    | 安全 |
+| 110  | *110.HtmlHelper(59)*                                   | 超文 |
 
 ### *001.设备DeviceHelper(446)*
 
@@ -403,19 +416,124 @@
 
 >- beep.ogg
 
-### *012.防抖AntiShakeHelper(20)*
+### *012.系统SystemHelper：SystemLanguage(230)*
 
-| 序号 | 方法        | 功能 |
-|:-----|:------------|:----|
-| 01   | 01. isValid | 功能 |
+| 序号 | 方法                                 | 功能 |
+|:-----|:-------------------------------------|:----|
+| 01   | 01. buildManufacturer                | 功能 |
+| 02   | 02. buildModel                       | 功能 |
+| 03   | 03. serial                           | 功能 |
+| 04   | 04. uniqueSerial                     | 功能 |
+| 05   | 05. uniqueId                         | 功能 |
+| 06   | 06. buildSerial                      | 功能 |
+| 07   | 07. buildBrand                       | 功能 |
+| 08   | 08. buildHost                        | 功能 |
+| 09   | 09. buildUser                        | 功能 |
+| 10   | 10. buildTags                        | 功能 |
+| 11   | 11. buildTime                        | 功能 |
+| 12   | 12. buildFingerprint                 | 功能 |
+| 13   | 13. buildProduct                     | 功能 |
+| 14   | 14. buildDevice                      | 功能 |
+| 15   | 15. buildHardware                    | 功能 |
+| 16   | 16. buildBoard                       | 功能 |
+| 17   | 17. buildID                          | 功能 |
+| 18   | 18. buildDisplayVersion              | 功能 |
+| 19   | 19. buildBootloaderVersion           | 功能 |
+| 20   | 20. buildRadioVersion                | 功能 |
+| 21   | 21. buildAbis                        | 功能 |
+| 22   | 22. buildVersionSDK                  | 功能 |
+| 23   | 23. buildVersionRelease              | 功能 |
+| 24   | 24. buildVersionCodename             | 功能 |
+| 25   | 25. buildVersionIncremental          | 功能 |
+| 26   | 26. locales                          | 功能 |
+| 27   | 27. currentLocale                    | 功能 |
+| 28   | 28. currentLanguage                  | 功能 |
+| 29   | 29. gsfId                            | 功能 |
+| 30   | 30. googleAccounts                   | 功能 |
+| 31   | #### SystemLanguage                  | 功能 |
+| 32   | 01. applyLanguageSystem              | 功能 |
+| 33   | 02. applyLanguageCustom              | 功能 |
+| 34   | 03. isAppliedLanguageSystem          | 功能 |
+| 35   | 04. applyLanguageSystemInAppOnCreate | 功能 |
+| 36   | 05. isAppliedLanguageCustom          | 功能 |
+| 37   | 06. applyLanguageCustomInAppOnCreate | 功能 |
+| 38   | 07. applyLanguage                    | 功能 |
 
-### *013.命令ShellHelper(86)*
+### *013.版本VersionHelper(66)*
+
+| 序号 | 方法                         | 功能       |
+|:-----|:-----------------------------|:----------|
+| 01   | 01. aboveAstro               | 版本01以上 |
+| 02   | 02. aboveBender              | 版本02以上 |
+| 03   | 03. aboveCupcake             | 版本03以上 |
+| 04   | 04. aboveDonut               | 版本04以上 |
+| 05   | 05. aboveEclair              | 版本05以上 |
+| 06   | 06. aboveEclair01            | 版本06以上 |
+| 07   | 07. aboveEclairMR1           | 版本07以上 |
+| 08   | 08. aboveFroyo               | 版本08以上 |
+| 09   | 09. aboveGingerbread         | 版本09以上 |
+| 10   | 10. aboveGingerbreadMR1      | 版本10以上 |
+| 11   | 11. aboveHoneycomb           | 版本11以上 |
+| 12   | 12. aboveHoneycombMR1        | 版本12以上 |
+| 13   | 13. aboveHoneycombMR2        | 版本13以上 |
+| 14   | 14. aboveIceCreamSandwich    | 版本14以上 |
+| 15   | 15. aboveIceCreamSandwichMR1 | 版本15以上 |
+| 16   | 16. aboveJellyBean           | 版本16以上 |
+| 17   | 17. aboveJellyBeanMR1        | 版本17以上 |
+| 18   | 18. aboveJellyBeanMR2        | 版本18以上 |
+| 19   | 19. aboveKitKat              | 版本19以上 |
+| 20   | 20. aboveKitKatWatch         | 版本20以上 |
+| 21   | 21. aboveLollipop            | 版本21以上 |
+| 22   | 22. aboveLollipopMR1         | 版本22以上 |
+| 23   | 23. aboveMarshmallow         | 版本23以上 |
+| 24   | 24. aboveNougat              | 版本24以上 |
+| 25   | 25. aboveNougatMR1           | 版本25以上 |
+| 26   | 26. aboveOreo                | 版本26以上 |
+| 27   | 27. aboveOreoMR1             | 版本27以上 |
+| 28   | 28. abovePie                 | 版本28以上 |
+| 29   | 29. aboveQ                   | 版本29以上 |
+| 30   | 30. aboveR                   | 版本30以上 |
+
+### *014.机型RomHelper(215)*
+
+| 序号 | 方法            | 功能 |
+|:-----|:----------------|:----|
+| 01   | 01. isHuawei    | 功能 |
+| 02   | 02. isVivo      | 功能 |
+| 03   | 03. isXiaomi    | 功能 |
+| 04   | 04. isOppo      | 功能 |
+| 05   | 05. isLeeco     | 功能 |
+| 06   | 06. is360       | 功能 |
+| 07   | 07. isZte       | 功能 |
+| 08   | 08. isOneplus   | 功能 |
+| 09   | 09. isNubia     | 功能 |
+| 10   | 10. isCoolpad   | 功能 |
+| 11   | 11. isLg        | 功能 |
+| 12   | 12. isGoogle    | 功能 |
+| 13   | 13. isSamsung   | 功能 |
+| 14   | 14. isMeizu     | 功能 |
+| 15   | 15. isLenovo    | 功能 |
+| 16   | 16. isSmartisan | 功能 |
+| 17   | 17. isHtc       | 功能 |
+| 18   | 18. isSony      | 功能 |
+| 19   | 19. isAmigo     | 功能 |
+
+### *015.重启RebootHelper(35)*
+
+| 序号 | 方法                  | 功能                       |
+|:-----|:----------------------|:--------------------------|
+| 01   | 01. reboot            | android.permission.REBOOT |
+| 02   | 02. reboot2Recovery   | 功能                      |
+| 03   | 03. reboot2Bootloader | 功能                      |
+| 04   | 04. shutdown          | 功能                      |
+
+### *016.命令ShellHelper(86)*
 
 | 序号 | 方法        | 功能 |
 |:-----|:------------|:----|
 | 01   | 01. execCmd | 功能 |
 
-### *014.破解RootHelper(43)*
+### *017.破解RootHelper(43)*
 
 | 序号 | 方法               | 功能 |
 |:-----|:-------------------|:----|
@@ -423,7 +541,7 @@
 | 02   | 02. isRooted       | 功能 |
 | 03   | 03. rootPermission | 功能 |
 
-### *015.应用ApplicationHelper(603)*
+### *018.应用ApplicationHelper(603)*
 
 | 序号 | 方法                                   | 功能 |
 |:-----|:---------------------------------------|:----|
@@ -478,7 +596,7 @@
 | 49   | 49. getAppInfo                         | 功能 |
 | 50   | 50. getApkInfo                         | 功能 |
 
-### *016.崩溃CrashHelper(143)*
+### *019.崩溃CrashHelper(143)*
 
 | 序号 | 方法                | 功能 |
 |:-----|:--------------------|:----|
@@ -486,14 +604,14 @@
 | 02   | 02. crashTip        | 功能 |
 | 03   | 03. OnCrashListener | 功能 |
 
-### *017.退出ExitHelper(59)*
+### *020.退出ExitHelper(59)*
 
 | 序号 | 方法                    | 功能 |
 |:-----|:------------------------|:----|
 | 01   | 01. exitApp             | 功能 |
 | 02   | 02. OnExitClickListener | 功能 |
 
-### *018.清理CleanHelper(50)*
+### *021.清理CleanHelper(50)*
 
 | 序号 | 方法                      | 功能 |
 |:-----|:--------------------------|:----|
@@ -507,81 +625,13 @@
 | 08   | 08. cleanCustomCache      | 功能 |
 | 09   | 09. totalCacheSize        | 功能 |
 
-### *019.重启RebootHelper(35)*
-
-| 序号 | 方法                  | 功能                       |
-|:-----|:----------------------|:--------------------------|
-| 01   | 01. reboot            | android.permission.REBOOT |
-| 02   | 02. reboot2Recovery   | 功能                      |
-| 03   | 03. reboot2Bootloader | 功能                      |
-| 04   | 04. shutdown          | 功能                      |
-
-### *020.快捷ShortcutHelper(40)*
+### *022.快捷ShortcutHelper(40)*
 
 | 序号 | 方法            | 功能 |
 |:-----|:----------------|:----|
 | 01   | 01. hasShortcut | 功能 |
 | 02   | 02. addShortcut | 功能 |
 | 03   | 03. delShortcut | 功能 |
-
-### *021.机型RomHelper(215)*
-
-| 序号 | 方法            | 功能 |
-|:-----|:----------------|:----|
-| 01   | 01. isHuawei    | 功能 |
-| 02   | 02. isVivo      | 功能 |
-| 03   | 03. isXiaomi    | 功能 |
-| 04   | 04. isOppo      | 功能 |
-| 05   | 05. isLeeco     | 功能 |
-| 06   | 06. is360       | 功能 |
-| 07   | 07. isZte       | 功能 |
-| 08   | 08. isOneplus   | 功能 |
-| 09   | 09. isNubia     | 功能 |
-| 10   | 10. isCoolpad   | 功能 |
-| 11   | 11. isLg        | 功能 |
-| 12   | 12. isGoogle    | 功能 |
-| 13   | 13. isSamsung   | 功能 |
-| 14   | 14. isMeizu     | 功能 |
-| 15   | 15. isLenovo    | 功能 |
-| 16   | 16. isSmartisan | 功能 |
-| 17   | 17. isHtc       | 功能 |
-| 18   | 18. isSony      | 功能 |
-| 19   | 19. isAmigo     | 功能 |
-
-### *022.版本VersionHelper(66)*
-
-| 序号 | 方法                         | 功能       |
-|:-----|:-----------------------------|:----------|
-| 01   | 01. aboveAstro               | 版本01以上 |
-| 02   | 02. aboveBender              | 版本02以上 |
-| 03   | 03. aboveCupcake             | 版本03以上 |
-| 04   | 04. aboveDonut               | 版本04以上 |
-| 05   | 05. aboveEclair              | 版本05以上 |
-| 06   | 06. aboveEclair01            | 版本06以上 |
-| 07   | 07. aboveEclairMR1           | 版本07以上 |
-| 08   | 08. aboveFroyo               | 版本08以上 |
-| 09   | 09. aboveGingerbread         | 版本09以上 |
-| 10   | 10. aboveGingerbreadMR1      | 版本10以上 |
-| 11   | 11. aboveHoneycomb           | 版本11以上 |
-| 12   | 12. aboveHoneycombMR1        | 版本12以上 |
-| 13   | 13. aboveHoneycombMR2        | 版本13以上 |
-| 14   | 14. aboveIceCreamSandwich    | 版本14以上 |
-| 15   | 15. aboveIceCreamSandwichMR1 | 版本15以上 |
-| 16   | 16. aboveJellyBean           | 版本16以上 |
-| 17   | 17. aboveJellyBeanMR1        | 版本17以上 |
-| 18   | 18. aboveJellyBeanMR2        | 版本18以上 |
-| 19   | 19. aboveKitKat              | 版本19以上 |
-| 20   | 20. aboveKitKatWatch         | 版本20以上 |
-| 21   | 21. aboveLollipop            | 版本21以上 |
-| 22   | 22. aboveLollipopMR1         | 版本22以上 |
-| 23   | 23. aboveMarshmallow         | 版本23以上 |
-| 24   | 24. aboveNougat              | 版本24以上 |
-| 25   | 25. aboveNougatMR1           | 版本25以上 |
-| 26   | 26. aboveOreo                | 版本26以上 |
-| 27   | 27. aboveOreoMR1             | 版本27以上 |
-| 28   | 28. abovePie                 | 版本28以上 |
-| 29   | 29. aboveQ                   | 版本29以上 |
-| 30   | 30. aboveR                   | 版本30以上 |
 
 ### *023.路由RouteHelper(142)*
 
@@ -836,22 +886,7 @@
 | 28   | 09. SMS                      | 功能 |
 | 29   | 10. getPermissions           | 功能 |
 
-### *034.软包PackageHelper(18)*
-
-| 序号 | 方法                        | 功能 |
-|:-----|:----------------------------|:----|
-| 01   | 01. isExistPackageName      | 功能 |
-| 02   | 02. getInstalledPackageInfo | 功能 |
-
-### *035.属性PropertiesHelper(40)*
-
-| 序号 | 方法                 | 功能 |
-|:-----|:---------------------|:----|
-| 01   | 01. propertiesAll    | 功能 |
-| 02   | 02. getPropertyByKey | 功能 |
-| 03   | 03. init             | 功能 |
-
-### *036.屏幕ScreenHelper(260)*
+### *034.屏幕ScreenHelper(260)*
 
 | 序号 | 方法                            | 功能 |
 |:-----|:--------------------------------|:----|
@@ -882,7 +917,7 @@
 | 25   | 25. adaptHeight                 | 功能 |
 | 26   | 26. closeAdapt                  | 功能 |
 
-### *037.窗口WindowHelper(60)*
+### *035.窗口WindowHelper(60)*
 
 | 序号 | 方法                 | 功能 |
 |:-----|:---------------------|:----|
@@ -897,7 +932,7 @@
 | 09   | 09. setFullScreen    | 功能 |
 | 10   | 10. dimBackground    | 功能 |
 
-### *038.多栏BarHelper(531)*
+### *036.多栏BarHelper(531)*
 
 | 序号 | 方法                                                | 功能 |
 |:-----|:----------------------------------------------------|:----|
@@ -929,7 +964,7 @@
 | 26   | 26. getNavBarColor                                  | 功能 |
 | 27   | 27. setNavBarColor                                  | 功能 |
 
-### *039.视图ViewHelper：ViewTouch、ViewClick、ViewShadow(945)*
+### *037.视图ViewHelper：ViewTouch、ViewClick、ViewShadow(945)*
 
 | 序号 | 方法                          | 功能 |
 |:-----|:------------------------------|:----|
@@ -969,21 +1004,7 @@
 | 34   | #### ViewShadow               | 功能 |
 | 35   | 01. apply                     | 功能 |
 
-### *040.连点ClickHelper(40)*
-
-| 序号 | 方法                  | 功能 |
-|:-----|:----------------------|:----|
-| 01   | 01. isFastDoubleClick | 功能 |
-| 02   | 02. doClick           | 功能 |
-
-### *041.抖动ShakeHelper(26)*
-
-| 序号 | 方法               | 功能 |
-|:-----|:-------------------|:----|
-| 01   | 01. shakeAnimation | 功能 |
-| 02   | 02. shake          | 功能 |
-
-### *042.网视WebViewHelper(76)*
+### *038.网视WebViewHelper(76)*
 
 | 序号 | 方法          | 功能 |
 |:-----|:--------------|:----|
@@ -992,7 +1013,23 @@
 | 03   | 03. loadData  | 功能 |
 | 04   | 04. goBack    | 功能 |
 
-### *043.吐司ToastHelper(360)*
+### *039.着色ColorHelper(76)*
+
+| 序号 | 方法                    | 功能 |
+|:-----|:------------------------|:----|
+| 01   | 01. randomColor         | 功能 |
+| 02   | 02. getRandomColor      | 功能 |
+| 03   | 03. getColor            | 功能 |
+| 04   | 04. setAlphaComponent   | 功能 |
+| 05   | 05. setRedComponent     | 功能 |
+| 06   | 06. setGreenComponent   | 功能 |
+| 07   | 07. setBlueComponent    | 功能 |
+| 08   | 08. string2ColorInt     | 功能 |
+| 09   | 09. int2ArgbOrRgbString | 功能 |
+| 10   | 10. tintCursorDrawable  | 功能 |
+| 11   | 11. tintDrawable        | 功能 |
+
+### *040.吐司ToastHelper(360)*
 
 | 序号 | 方法                   | 功能 |
 |:-----|:-----------------------|:----|
@@ -1021,7 +1058,7 @@
 | 23   | 23. showCustomShort    | 功能 |
 | 24   | 24. showCustomLong     | 功能 |
 
-### *044.零食SnackHelper(107)*
+### *041.零食SnackHelper(107)*
 
 | 序号 | 方法                      | 功能 |
 |:-----|:--------------------------|:----|
@@ -1042,33 +1079,27 @@
 
 >- implementation "com.google.android.material:material:1.2.1"
 
-### *045.着色ColorHelper(76)*
-
-| 序号 | 方法                    | 功能 |
-|:-----|:------------------------|:----|
-| 01   | 01. randomColor         | 功能 |
-| 02   | 02. getRandomColor      | 功能 |
-| 03   | 03. getColor            | 功能 |
-| 04   | 04. setAlphaComponent   | 功能 |
-| 05   | 05. setRedComponent     | 功能 |
-| 06   | 06. setGreenComponent   | 功能 |
-| 07   | 07. setBlueComponent    | 功能 |
-| 08   | 08. string2ColorInt     | 功能 |
-| 09   | 09. int2ArgbOrRgbString | 功能 |
-| 10   | 10. tintCursorDrawable  | 功能 |
-| 11   | 11. tintDrawable        | 功能 |
-
-### *046.消息UiMessageHelper(166)*
+### *042.连点ClickHelper(40)*
 
 | 序号 | 方法                  | 功能 |
 |:-----|:----------------------|:----|
-| 01   | 01. send              | 功能 |
-| 02   | 02. UiMessage         | 功能 |
-| 03   | 03. UiMessageCallback | 功能 |
-| 04   | 04. addListener       | 功能 |
-| 05   | 05. removeListener    | 功能 |
+| 01   | 01. isFastDoubleClick | 功能 |
+| 02   | 02. doClick           | 功能 |
 
-### *047.全局AHelper(287)*
+### *043.防抖AntiShakeHelper(20)*
+
+| 序号 | 方法        | 功能 |
+|:-----|:------------|:----|
+| 01   | 01. isValid | 功能 |
+
+### *044.抖动ShakeHelper(26)*
+
+| 序号 | 方法               | 功能 |
+|:-----|:-------------------|:----|
+| 01   | 01. shakeAnimation | 功能 |
+| 02   | 02. shake          | 功能 |
+
+### *045.全局AHelper(287)*
 
 | 序号 | 方法                       | 功能 |
 |:-----|:---------------------------|:----|
@@ -1083,6 +1114,30 @@
 | 09   | 09. handler                | 功能 |
 | 10   | 10. runOnUiThread          | 功能 |
 | 11   | 11. runOnUiThreadDelayed   | 功能 |
+
+### *046.接口ApiHelper(44)*
+
+| 序号 | 方法            | 功能 |
+|:-----|:----------------|:----|
+| 01   | 01. registerApi | 功能 |
+| 02   | 02. toString    | 功能 |
+| 03   | 03. BaseApi     | 功能 |
+| 04   | 04. getApi      | 功能 |
+| 05   | 05. Api         | 功能 |
+
+### *047.总线BusHelper(239)*
+
+| 序号 | 方法             | 功能 |
+|:-----|:-----------------|:----|
+| 01   | 01. registerBus  | 功能 |
+| 02   | 02. toString     | 功能 |
+| 03   | 03. register     | 功能 |
+| 04   | 04. post         | 功能 |
+| 05   | 05. unregister   | 功能 |
+| 06   | 06. postSticky   | 功能 |
+| 07   | 07. removeSticky | 功能 |
+| 08   | 08. ThreadMode   | 功能 |
+| 09   | 09. Bus          | 功能 |
 
 ### *048.内存CacheMemoryHelper(78)*
 
@@ -1224,24 +1279,14 @@
 | 08   | 08. setProperty           | 功能 |
 | 09   | 09. setStaticProperty     | 功能 |
 
-### *054.接口ApiHelper(44)*
-
-| 序号 | 方法            | 功能 |
-|:-----|:----------------|:----|
-| 01   | 01. registerApi | 功能 |
-| 02   | 02. toString    | 功能 |
-| 03   | 03. BaseApi     | 功能 |
-| 04   | 04. getApi      | 功能 |
-| 05   | 05. Api         | 功能 |
-
-### *055.单例SingletonHelper. Singleton(16)*
+### *054.单例SingletonHelper. Singleton(16)*
 
 | 序号 | 方法            | 功能 |
 |:-----|:----------------|:----|
 | 01   | 01. newInstance | 功能 |
 | 02   | 02. getInstance | 功能 |
 
-### *056.对象EmptyHelper(72)*
+### *055.空判EmptyHelper(72)*
 
 | 序号 | 方法               | 功能 |
 |:-----|:-------------------|:----|
@@ -1252,21 +1297,7 @@
 | 05   | 05. equalsAny      | 功能 |
 | 06   | 06. requireNonNull | 功能 |
 
-### *057.总线BusHelper(239)*
-
-| 序号 | 方法             | 功能 |
-|:-----|:-----------------|:----|
-| 01   | 01. registerBus  | 功能 |
-| 02   | 02. toString     | 功能 |
-| 03   | 03. register     | 功能 |
-| 04   | 04. post         | 功能 |
-| 05   | 05. unregister   | 功能 |
-| 06   | 06. postSticky   | 功能 |
-| 07   | 07. removeSticky | 功能 |
-| 08   | 08. ThreadMode   | 功能 |
-| 09   | 09. Bus          | 功能 |
-
-### *058.输入InputMethodHelper(248)*
+### *056.输入InputMethodHelper(248)*
 
 | 序号 | 方法                                   | 功能 |
 |:-----|:---------------------------------------|:----|
@@ -1283,7 +1314,7 @@
 | 11   | 11. fixAndroidBug5497                  | 功能 |
 | 12   | 12. clickBlankArea2HideSoftInput       | 功能 |
 
-### *059.剪贴ClipboardHelper(20)*
+### *057.剪贴ClipboardHelper(20)*
 
 | 序号 | 方法           | 功能 |
 |:-----|:---------------|:----|
@@ -1291,7 +1322,7 @@
 | 02   | 02. uriClip    | 功能 |
 | 03   | 03. intentClip | 功能 |
 
-### *060.字串StringHelper(120)*
+### *058.字串StringHelper(120)*
 
 | 序号 | 方法                   | 功能 |
 |:-----|:-----------------------|:----|
@@ -1317,7 +1348,7 @@
 | 20   | 20. concatNoSpilt      | 功能 |
 | 21   | 21. concatSpilt        | 功能 |
 
-### *061.富文SpanHelper(795)*
+### *059.富文SpanHelper(795)*
 
 | 序号 | 方法                   | 功能 |
 |:-----|:-----------------------|:----|
@@ -1360,7 +1391,7 @@
 | 37   | 37. appendSpace        | 功能 |
 | 38   | 38. create             | 功能 |
 
-### *062.文本TextHelper(444)*
+### *060.文本TextHelper(444)*
 
 | 序号 | 方法                      | 功能 |
 |:-----|:--------------------------|:----|
@@ -1380,7 +1411,7 @@
 | 14   | 14. getSurnameFirstLetter | 功能 |
 | 15   | 15. surname2Py            | 功能 |
 
-### *063.随机RandomHelper(78)*
+### *061.随机RandomHelper(78)*
 
 | 序号 | 方法                           | 功能 |
 |:-----|:-------------------------------|:----|
@@ -1393,7 +1424,7 @@
 | 07   | 07. randomColor                | 功能 |
 | 08   | 08. shuffle                    | 功能 |
 
-### *064.验证ValidationHelper(280)*
+### *062.验证ValidationHelper(280)*
 
 | 序号 | 方法                    | 功能 |
 |:-----|:------------------------|:----|
@@ -1470,7 +1501,7 @@
 >2. [常用正则表达式大全](http://toutiao.com/i6231678548520731137)
 >3. [最新手机号码、电话号码正则表达式](http://caibaojian.com/regexp-example.html)
 
-### *065.身份IdHelper(396)*
+### *063.身份IdHelper(396)*
 
 | 序号 | 方法                    | 功能 |
 |:-----|:------------------------|:----|
@@ -1498,7 +1529,7 @@
 | 22   | 22. twFirstCode         | 功能 |
 | 23   | 23. validateTWCard      | 功能 |
 
-### *066.银行BankHelper(1720)*
+### *064.银行BankHelper(1720)*
 
 | 序号 | 方法                     | 功能 |
 |:-----|:-------------------------|:----|
@@ -1506,7 +1537,7 @@
 | 02   | 02. checkBankCard        | 功能 |
 | 03   | 03. getBankCardCheckCode | 功能 |
 
-### *067.图码BarQRHelper(149)*
+### *065.图码BarQRHelper(149)*
 
 | 序号 | 方法                 | 功能 |
 |:-----|:---------------------|:----|
@@ -1518,26 +1549,14 @@
 
 >- implementation "com.google.zxing:core:3.4.1"
 
-### *068.工具ToolHelper(137)*
+### *066.软包PackageHelper(18)*
 
 | 序号 | 方法                        | 功能 |
 |:-----|:----------------------------|:----|
-| 01   | 01. backgroundHandler       | 功能 |
-| 02   | 02. OnSimpleListener        | 功能 |
-| 03   | 03. delayToDo               | 功能 |
-| 04   | 04. OnDoListener            | 功能 |
-| 05   | 05. initFastClickAndVibrate | 功能 |
-| 06   | 06. isFastClick             | 功能 |
-| 07   | 07. getResIdByName          | 功能 |
-| 08   | 08. fixListViewHeight       | 功能 |
-| 09   | 09. countDown               | 功能 |
-| 10   | 10. setEditNumberAuto       | 功能 |
-| 11   | 11. setEditNumber           | 功能 |
-| 12   | 12. setEditDecimal          | 功能 |
-| 13   | 13. setEditType             | 功能 |
-| 14   | 14. stringFilter            | 功能 |
+| 01   | 01. isExistPackageName      | 功能 |
+| 02   | 02. getInstalledPackageInfo | 功能 |
 
-### *069.编码EncodeHelper(115)*
+### *067.编码EncodeHelper(115)*
 
 | 序号 | 方法                    | 功能 |
 |:-----|:------------------------|:----|
@@ -1552,7 +1571,7 @@
 | 09   | 09. htmlEncode          | 功能 |
 | 10   | 10. htmlDecode          | 功能 |
 
-### *070.加密EncryptHelper(510)*
+### *068.加密EncryptHelper(510)*
 
 | 序号 | 方法                           | 功能 |
 |:-----|:-------------------------------|:----|
@@ -1633,7 +1652,7 @@
 | 75   | 75. decryptRSA4HexString       | 功能 |
 | 76   | 76. decryptRSA                 | 功能 |
 
-### *071.位算BitHelper(35)*
+### *069.位算BitHelper(35)*
 
 | 序号 | 方法                | 功能 |
 |:-----|:--------------------|:----|
@@ -1642,14 +1661,14 @@
 | 03   | 03. reverseBitValue | 功能 |
 | 04   | 04. setBitValue     | 功能 |
 
-### *072.压缩CompressHelper(92)*
+### *070.压缩CompressHelper(92)*
 
 | 序号 | 方法           | 功能 |
 |:-----|:---------------|:----|
 | 01   | 01. compress   | 功能 |
 | 02   | 02. decompress | 功能 |
 
-### *073.平面PlaneHelper(15)*
+### *071.平面PlaneHelper(15)*
 
 | 序号 | 方法               | 功能 |
 |:-----|:-------------------|:----|
@@ -1657,7 +1676,7 @@
 | 02   | 02. distance       | 功能 |
 | 03   | 03. checkInRound   | 功能 |
 
-### *074.计算CalculateHelper(222)*
+### *072.计算CalculateHelper(222)*
 
 | 序号 | 方法                  | 功能 |
 |:-----|:----------------------|:----|
@@ -1671,7 +1690,7 @@
 | 08   | 08. formatMoney       | 功能 |
 | 09   | 09. adjustDouble      | 功能 |
 
-### *075.尺寸DensityHelper(58)*
+### *073.尺寸DensityHelper(58)*
 
 | 序号 | 方法                  | 功能 |
 |:-----|:----------------------|:----|
@@ -1687,7 +1706,7 @@
 | 10   | 10. getViewHeight     | 功能 |
 | 11   | 11. measureView       | 功能 |
 
-### *076.坐标CoordinateHelper(94)*
+### *074.坐标CoordinateHelper(94)*
 
 | 序号 | 方法             | 功能 |
 |:-----|:-----------------|:----|
@@ -1702,7 +1721,7 @@
 | 09   | 09. wgs84ToGcj02 | 功能 |
 | 10   | 10. gcj02ToBd09  | 功能 |
 
-### *077.转换ConvertHelper(520)*
+### *075.转换ConvertHelper(520)*
 
 | 序号 | 方法                        | 功能 |
 |:-----|:----------------------------|:----|
@@ -1780,7 +1799,7 @@
 | 72   | 72. long2Double             | 功能 |
 | 73   | 73. char2Int                | 功能 |
 
-### *078.迁移MigrationHelper(97)*
+### *076.迁移MigrationHelper(97)*
 
 | 序号 | 方法        | 功能 |
 |:-----|:------------|:----|
@@ -1789,7 +1808,14 @@
 
 >- implementation "org.greenrobot:greendao:3.2.2"
 
-### *079.文件FileHelper(914)*
+### *077.数库DbHelper(35)*
+
+| 序号 | 方法                | 功能              |
+|:-----|:--------------------|:-----------------|
+| 01   | 01. sqlInjection    | 防止数据注入      |
+| 02   | 02. exportDb2SdCard | 导出数据库到存储卡 |
+
+### *078.文件FileHelper(914)*
 
 | 序号 | 方法                          | 功能 |
 |:-----|:------------------------------|:----|
@@ -1877,7 +1903,7 @@
 | 82   | 82. getDataColumn             | 功能 |
 | 83   | 83. rename                    | 功能 |
 
-### *080.存取FileIoHelper(366)*
+### *079.存取FileIoHelper(366)*
 
 | 序号 | 方法                            | 功能 |
 |:-----|:--------------------------------|:----|
@@ -1894,7 +1920,7 @@
 | 11   | 11. readFile2BytesByChannel     | 功能 |
 | 12   | 12. readFile2BytesByMap         | 功能 |
 
-### *081.压制ZipHelper(336)*
+### *080.压制ZipHelper(336)*
 
 | 序号 | 方法                  | 功能 |
 |:-----|:----------------------|:----|
@@ -1909,7 +1935,7 @@
 | 09   | 09. getComments       | 功能 |
 | 10   | 10. getEntries        | 功能 |
 
-### *082.密压ZipPlusHelper(320)*
+### *081.密压ZipPlusHelper(320)*
 
 | 序号 | 方法                        | 功能 |
 |:-----|:----------------------------|:----|
@@ -1924,7 +1950,7 @@
 
 >- implementation "net.lingala.zip4j:zip4j:2.6.3"
 
-### *083.打开OpenHelper(102)*
+### *082.打开OpenHelper(102)*
 
 | 序号 | 方法                           | 功能 |
 |:-----|:-------------------------------|:----|
@@ -1936,7 +1962,7 @@
 | 06   | 06. openWordFile               | 功能 |
 | 07   | 07. openOfficeFileByWps        | 功能 |
 
-### *084.图像ImageHelper(1298)*
+### *083.图像ImageHelper(1298)*
 
 | 序号 | 方法                        | 功能 |
 |:-----|:----------------------------|:----|
@@ -1993,7 +2019,7 @@
 | 51   | 51. calculateInSampleSize   | 功能 |
 | 52   | 52. getBitmapSize           | 功能 |
 
-### *085.照片PhotoHelper(125)*
+### *084.照片PhotoHelper(125)*
 
 | 序号 | 方法                 | 功能 |
 |:-----|:---------------------|:----|
@@ -2003,7 +2029,7 @@
 | 04   | 04. cropImage        | 功能 |
 | 05   | 05. getCropIntent    | 功能 |
 
-### *086.图片PictureHelper(43)*
+### *085.图片PictureHelper(43)*
 
 | 序号 | 方法                    | 功能 |
 |:-----|:------------------------|:----|
@@ -2011,7 +2037,7 @@
 | 02   | 02. getChoosedImage     | 功能 |
 | 03   | 03. getTakePictureFile  | 功能 |
 
-### *087.动画AnimationHelper(209)*
+### *086.动画AnimationHelper(209)*
 
 | 序号 | 方法                       | 功能 |
 |:-----|:---------------------------|:----|
@@ -2031,13 +2057,261 @@
 | 14   | 14. addTouchDark           | 功能 |
 | 15   | 15. addTouchLight          | 功能 |
 
-### *088.信息ExifHelper(41)*
+### *087.信息ExifHelper(41)*
 
 | 序号 | 方法                    | 功能 |
 |:-----|:------------------------|:----|
 | 01   | 01. writeLatLonIntoJpeg | 功能 |
 
-### *089.日期DateHelper(514)*
+### *088.属性PropertiesHelper(40)*
+
+| 序号 | 方法                 | 功能 |
+|:-----|:---------------------|:----|
+| 01   | 01. propertiesAll    | 功能 |
+| 02   | 02. getPropertyByKey | 功能 |
+| 03   | 03. init             | 功能 |
+
+### *089.记录LoggerHelper(84)*
+
+| 序号 | 方法                    | 功能 |
+|:-----|:------------------------|:----|
+| 01   | 01. loggerTag           | 功能 |
+| 02   | 02. getLogger           | 功能 |
+| 03   | 03. verbose             | 功能 |
+| 04   | 04. debug               | 功能 |
+| 05   | 05. info                | 功能 |
+| 06   | 06. warn                | 功能 |
+| 07   | 07. error               | 功能 |
+| 08   | 08. wtf                 | 功能 |
+| 09   | 09. getStackTraceString | 功能 |
+
+### *090.日志LogHelper(681)*
+
+| 序号 | 方法           | 功能 |
+|:-----|:---------------|:----|
+| 01   | 01. IFormatter | 功能 |
+| 02   | 02. config     | 功能 |
+| 03   | 03. v          | 功能 |
+| 04   | 04. d          | 功能 |
+| 05   | 05. i          | 功能 |
+| 06   | 06. w          | 功能 |
+| 07   | 07. e          | 功能 |
+| 08   | 08. a          | 功能 |
+| 09   | 09. vTag       | 功能 |
+| 10   | 10. dTag       | 功能 |
+| 11   | 11. iTag       | 功能 |
+| 12   | 12. wTag       | 功能 |
+| 13   | 13. eTag       | 功能 |
+| 14   | 14. aTag       | 功能 |
+| 15   | 15. file       | 功能 |
+| 16   | 16. json       | 功能 |
+| 17   | 17. xml        | 功能 |
+
+>- implementation "com.google.code.gson:gson:2.8.6"
+
+### *091.数据DataHelper(146)*
+
+| 序号 | 方法                      | 功能 |
+|:-----|:--------------------------|:----|
+| 01   | 01. . toDoubleWithDefault | 功能 |
+| 02   | 02. isNumberByAny         | 功能 |
+| 03   | 03. isIntegerByAny        | 功能 |
+| 04   | 04. isDecimalByAny        | 功能 |
+| 05   | 05. isNullOrEmpty         | 功能 |
+| 06   | 06. compileRegex          | 功能 |
+| 07   | 07. toIntWithDefault      | 功能 |
+| 08   | 08. toLongWithDefault     | 功能 |
+| 09   | 09. toStringWithDefault   | 功能 |
+| 10   | 10. isTrue                | 功能 |
+| 11   | 11. isFalse               | 功能 |
+| 12   | 12. isBoolean             | 功能 |
+| 13   | 13. fitDistance           | 功能 |
+| 14   | 14. hideMobileMid         | 功能 |
+| 15   | 15. hideId18Mid           | 功能 |
+| 16   | 16. hideBankMid           | 功能 |
+| 17   | 17. hideBankLeft          | 功能 |
+| 18   | 18. formatDefault         | 功能 |
+| 19   | 19. formatZero            | 功能 |
+| 20   | 20. formatTwo             | 功能 |
+| 21   | 21. formatPercent         | 功能 |
+| 22   | 22. formatE               | 功能 |
+| 23   | 23. formatSplit           | 功能 |
+| 24   | 24. formatAdd             | 功能 |
+| 25   | 25. formatAmount          | 功能 |
+| 26   | 26. string2Ints           | 功能 |
+| 27   | 27. getPercentValue       | 功能 |
+| 28   | 28. getRoundUp            | 功能 |
+
+### *092.解析JsonHelper(273)*
+
+| 序号 | 方法                     | 功能 |
+|:-----|:-------------------------|:----|
+| 01   | 01. getInt               | 功能 |
+| 02   | 02. getLong              | 功能 |
+| 03   | 03. getDouble            | 功能 |
+| 04   | 04. getBoolean           | 功能 |
+| 05   | 05. getString            | 功能 |
+| 06   | 06. getJSONObject        | 功能 |
+| 07   | 07. getJSONArray         | 功能 |
+| 08   | 08. string2JSONObject    | 功能 |
+| 09   | 09. any2JsonArray        | 功能 |
+| 10   | 10. collection2JsonArray | 功能 |
+| 11   | 11. map2JsonObject       | 功能 |
+| 12   | 12. any2json             | 功能 |
+| 13   | 13. string2json          | 功能 |
+| 14   | 14. array2json           | 功能 |
+| 15   | 15. list2json            | 功能 |
+| 16   | 16. set2json             | 功能 |
+| 17   | 17. map2json             | 功能 |
+| 18   | 18. formatJson           | 功能 |
+
+### *093.处理GsonHelper(50)*
+
+| 序号 | 方法             | 功能 |
+|:-----|:-----------------|:----|
+| 01   | 01. gson         | 功能 |
+| 02   | 02. gsonNoNulls  | 功能 |
+| 03   | 03. deepClone    | 功能 |
+| 04   | 04. toJson       | 功能 |
+| 05   | 05. fromJson     | 功能 |
+| 06   | 06. getArrayType | 功能 |
+| 07   | 07. getListType  | 功能 |
+| 08   | 08. getSetType   | 功能 |
+| 09   | 09. getMapType   | 功能 |
+| 10   | 10. getType      | 功能 |
+
+>- implementation "com.google.code.gson:gson:2.8.6"
+
+### *094.标记XmlParseHelper(138)*
+
+| 序号 | 方法             | 功能 |
+|:-----|:-----------------|:----|
+| 01   | 01. getXmlList   | 功能 |
+| 02   | 02. getXmlObject | 功能 |
+
+### *095.路径PathHelper(178)*
+
+| 序号 | 方法                             | 功能 |
+|:-----|:---------------------------------|:----|
+| 01   | 01. pathRoot                     | 功能 |
+| 02   | 02. pathData                     | 功能 |
+| 03   | 03. pathDownloadCache            | 功能 |
+| 04   | 04. pathInternalAppData          | 功能 |
+| 05   | 05. pathInternalAppCache         | 功能 |
+| 06   | 06. pathInternalAppCodeCache     | 功能 |
+| 07   | 07. pathInternalAppFiles         | 功能 |
+| 08   | 08. pathInternalAppNoBackupFiles | 功能 |
+| 09   | 09. pathInternalAppSp            | 功能 |
+| 10   | 10. pathInternalAppDbs           | 功能 |
+| 11   | 11. getPathInternalAppDb         | 功能 |
+| 12   | 12. pathExternal                 | 功能 |
+| 13   | 13. pathExternalMusic            | 功能 |
+| 14   | 14. pathExternalPodcasts         | 功能 |
+| 15   | 15. pathExternalRingtones        | 功能 |
+| 16   | 16. pathExternalAlarms           | 功能 |
+| 17   | 17. pathExternalNotifications    | 功能 |
+| 18   | 18. pathExternalPictures         | 功能 |
+| 19   | 19. pathExternalMovies           | 功能 |
+| 20   | 20. pathExternalDownload         | 功能 |
+| 21   | 21. pathExternalDcim             | 功能 |
+| 22   | 22. pathExternalDocuments        | 功能 |
+| 23   | 23. pathExternalAppData          | 功能 |
+| 24   | 24. pathExternalAppCache         | 功能 |
+| 25   | 25. pathExternalAppFiles         | 功能 |
+| 26   | 26. pathExternalAppMusic         | 功能 |
+| 27   | 27. pathExternalAppPodcasts      | 功能 |
+| 28   | 28. pathExternalAppRingtones     | 功能 |
+| 29   | 29. pathExternalAppAlarms        | 功能 |
+| 30   | 30. pathExternalAppNotifications | 功能 |
+| 31   | 31. pathExternalAppPictures      | 功能 |
+| 32   | 32. pathExternalAppMovies        | 功能 |
+| 33   | 33. pathExternalAppDownload      | 功能 |
+| 34   | 34. pathExternalAppDcim          | 功能 |
+| 35   | 35. pathExternalAppDocuments     | 功能 |
+| 36   | 36. pathExternalAppObb           | 功能 |
+
+### *096.资源ResourceHelper(247)*
+
+| 序号 | 方法                      | 功能 |
+|:-----|:--------------------------|:----|
+| 01   | 01. ID                    | 功能 |
+| 02   | 02. LAYOUT                | 功能 |
+| 03   | 03. MENU                  | 功能 |
+| 04   | 04. DRAWABLE              | 功能 |
+| 05   | 05. MIPMAP                | 功能 |
+| 06   | 06. ANIM                  | 功能 |
+| 07   | 07. RAW                   | 功能 |
+| 08   | 08. STYLE                 | 功能 |
+| 09   | 09. STYLEABLE             | 功能 |
+| 10   | 10. DIMEN                 | 功能 |
+| 11   | 11. COLOR                 | 功能 |
+| 12   | 12. INTEGER               | 功能 |
+| 13   | 13. BOOL                  | 功能 |
+| 14   | 14. STRING                | 功能 |
+| 15   | 15. ATTR                  | 功能 |
+| 16   | 16. getColorById          | 功能 |
+| 17   | 17. getDrawableById       | 功能 |
+| 18   | 18. getStringById         | 功能 |
+| 19   | 19. getStringWithArgsById | 功能 |
+| 20   | 20. getStringArrayById    | 功能 |
+| 21   | 21. getResourceId         | 功能 |
+| 22   | 22. unZipAssets           | 功能 |
+| 23   | 23. unZipRaw              | 功能 |
+| 24   | 24. copyFileByAssets      | 功能 |
+| 25   | 25. copyFileByRaw         | 功能 |
+| 26   | 26. getBytesByAssets      | 功能 |
+| 27   | 27. getBytesByRaw         | 功能 |
+| 28   | 28. getStringByAssets     | 功能 |
+| 29   | 29. getStringByRaw        | 功能 |
+| 30   | 30. getListByAssets       | 功能 |
+| 31   | 31. getListByRaw          | 功能 |
+
+### *097.共享PreferenceHelper(109)*
+
+| 序号 | 方法             | 功能 |
+|:-----|:-----------------|:----|
+| 01   | 01. fileName     | 功能 |
+| 02   | 02. all          | 功能 |
+| 03   | 03. putAll       | 功能 |
+| 04   | 04. getImage     | 功能 |
+| 05   | 05. putImage     | 功能 |
+| 06   | 06. get          | 功能 |
+| 07   | 07. put          | 功能 |
+| 08   | 08. getStringSet | 功能 |
+| 09   | 09. putStringSet | 功能 |
+| 10   | 10. contains     | 功能 |
+| 11   | 11. remove       | 功能 |
+| 12   | 12. clear        | 功能 |
+
+### *098.主题ThemeHelper(157)*
+
+| 序号 | 方法                                | 功能 |
+|:-----|:------------------------------------|:----|
+| 01   | 01. resolveColor                    | 功能 |
+| 02   | 02. resolveDimension                | 功能 |
+| 03   | 03. resolveBoolean                  | 功能 |
+| 04   | 04. resolveDrawable                 | 功能 |
+| 05   | 05. resolveString                   | 功能 |
+| 06   | 06. resolveFloat                    | 功能 |
+| 07   | 07. resolveInt                      | 功能 |
+| 08   | 08. getColorFromAttrRes             | 功能 |
+| 09   | 09. resolveActionTextColorStateList | 功能 |
+| 10   | 10. getActionTextColorStateList     | 功能 |
+| 11   | 11. getActionTextStateList          | 功能 |
+| 12   | 12. getColorArray                   | 功能 |
+| 13   | 13. isNightMode                     | 功能 |
+
+### *099.消息UiMessageHelper(166)*
+
+| 序号 | 方法                  | 功能 |
+|:-----|:----------------------|:----|
+| 01   | 01. send              | 功能 |
+| 02   | 02. UiMessage         | 功能 |
+| 03   | 03. UiMessageCallback | 功能 |
+| 04   | 04. addListener       | 功能 |
+| 05   | 05. removeListener    | 功能 |
+
+### *100.日期DateHelper(514)*
 
 | 序号 | 方法                         | 功能 |
 |:-----|:-----------------------------|:----|
@@ -2147,7 +2421,7 @@
 | 104  | 104. getWeekUs               | 功能 |
 | 105  | 105. getValueByCalendarField | 功能 |
 
-### *090.农历LunarHelper(177)*
+### *101.农历LunarHelper(177)*
 
 | 序号 | 方法                 | 功能 |
 |:-----|:---------------------|:----|
@@ -2157,300 +2431,33 @@
 | 04   | 04. solar2Lunar      | 功能 |
 | 05   | 05. lunar2Solar      | 功能 |
 
-### *091.记录LoggerHelper(84)*
+### *102.关闭CloseHelper(25)*
 
-| 序号 | 方法                    | 功能 |
-|:-----|:------------------------|:----|
-| 01   | 01. loggerTag           | 功能 |
-| 02   | 02. getLogger           | 功能 |
-| 03   | 03. verbose             | 功能 |
-| 04   | 04. debug               | 功能 |
-| 05   | 05. info                | 功能 |
-| 06   | 06. warn                | 功能 |
-| 07   | 07. error               | 功能 |
-| 08   | 08. wtf                 | 功能 |
-| 09   | 09. getStackTraceString | 功能 |
+| 序号 | 方法               | 功能              |
+|:-----|:-------------------|:-----------------|
+| 01   | 01. closeIo        | 关闭资源          |
+| 02   | 02. closeIoQuietly | 关闭资源，忽略异常 |
 
-### *092.日志LogHelper(681)*
+### *103.工具ToolHelper(137)*
 
-| 序号 | 方法           | 功能 |
-|:-----|:---------------|:----|
-| 01   | 01. IFormatter | 功能 |
-| 02   | 02. config     | 功能 |
-| 03   | 03. v          | 功能 |
-| 04   | 04. d          | 功能 |
-| 05   | 05. i          | 功能 |
-| 06   | 06. w          | 功能 |
-| 07   | 07. e          | 功能 |
-| 08   | 08. a          | 功能 |
-| 09   | 09. vTag       | 功能 |
-| 10   | 10. dTag       | 功能 |
-| 11   | 11. iTag       | 功能 |
-| 12   | 12. wTag       | 功能 |
-| 13   | 13. eTag       | 功能 |
-| 14   | 14. aTag       | 功能 |
-| 15   | 15. file       | 功能 |
-| 16   | 16. json       | 功能 |
-| 17   | 17. xml        | 功能 |
+| 序号 | 方法                        | 功能 |
+|:-----|:----------------------------|:----|
+| 01   | 01. backgroundHandler       | 功能 |
+| 02   | 02. OnSimpleListener        | 功能 |
+| 03   | 03. delayToDo               | 功能 |
+| 04   | 04. OnDoListener            | 功能 |
+| 05   | 05. initFastClickAndVibrate | 功能 |
+| 06   | 06. isFastClick             | 功能 |
+| 07   | 07. getResIdByName          | 功能 |
+| 08   | 08. fixListViewHeight       | 功能 |
+| 09   | 09. countDown               | 功能 |
+| 10   | 10. setEditNumberAuto       | 功能 |
+| 11   | 11. setEditNumber           | 功能 |
+| 12   | 12. setEditDecimal          | 功能 |
+| 13   | 13. setEditType             | 功能 |
+| 14   | 14. stringFilter            | 功能 |
 
->- implementation "com.google.code.gson:gson:2.8.6"
-
-### *093.数据DataHelper(146)*
-
-| 序号 | 方法                      | 功能 |
-|:-----|:--------------------------|:----|
-| 01   | 01. . toDoubleWithDefault | 功能 |
-| 02   | 02. isNumberByAny         | 功能 |
-| 03   | 03. isIntegerByAny        | 功能 |
-| 04   | 04. isDecimalByAny        | 功能 |
-| 05   | 05. isNullOrEmpty         | 功能 |
-| 06   | 06. compileRegex          | 功能 |
-| 07   | 07. toIntWithDefault      | 功能 |
-| 08   | 08. toLongWithDefault     | 功能 |
-| 09   | 09. toStringWithDefault   | 功能 |
-| 10   | 10. isTrue                | 功能 |
-| 11   | 11. isFalse               | 功能 |
-| 12   | 12. isBoolean             | 功能 |
-| 13   | 13. fitDistance           | 功能 |
-| 14   | 14. hideMobileMid         | 功能 |
-| 15   | 15. hideId18Mid           | 功能 |
-| 16   | 16. hideBankMid           | 功能 |
-| 17   | 17. hideBankLeft          | 功能 |
-| 18   | 18. formatDefault         | 功能 |
-| 19   | 19. formatZero            | 功能 |
-| 20   | 20. formatTwo             | 功能 |
-| 21   | 21. formatPercent         | 功能 |
-| 22   | 22. formatE               | 功能 |
-| 23   | 23. formatSplit           | 功能 |
-| 24   | 24. formatAdd             | 功能 |
-| 25   | 25. formatAmount          | 功能 |
-| 26   | 26. string2Ints           | 功能 |
-| 27   | 27. getPercentValue       | 功能 |
-| 28   | 28. getRoundUp            | 功能 |
-
-### *094.解析JsonHelper(273)*
-
-| 序号 | 方法                     | 功能 |
-|:-----|:-------------------------|:----|
-| 01   | 01. getInt               | 功能 |
-| 02   | 02. getLong              | 功能 |
-| 03   | 03. getDouble            | 功能 |
-| 04   | 04. getBoolean           | 功能 |
-| 05   | 05. getString            | 功能 |
-| 06   | 06. getJSONObject        | 功能 |
-| 07   | 07. getJSONArray         | 功能 |
-| 08   | 08. string2JSONObject    | 功能 |
-| 09   | 09. any2JsonArray        | 功能 |
-| 10   | 10. collection2JsonArray | 功能 |
-| 11   | 11. map2JsonObject       | 功能 |
-| 12   | 12. any2json             | 功能 |
-| 13   | 13. string2json          | 功能 |
-| 14   | 14. array2json           | 功能 |
-| 15   | 15. list2json            | 功能 |
-| 16   | 16. set2json             | 功能 |
-| 17   | 17. map2json             | 功能 |
-| 18   | 18. formatJson           | 功能 |
-
-### *095.处理GsonHelper(50)*
-
-| 序号 | 方法             | 功能 |
-|:-----|:-----------------|:----|
-| 01   | 01. gson         | 功能 |
-| 02   | 02. gsonNoNulls  | 功能 |
-| 03   | 03. deepClone    | 功能 |
-| 04   | 04. toJson       | 功能 |
-| 05   | 05. fromJson     | 功能 |
-| 06   | 06. getArrayType | 功能 |
-| 07   | 07. getListType  | 功能 |
-| 08   | 08. getSetType   | 功能 |
-| 09   | 09. getMapType   | 功能 |
-| 10   | 10. getType      | 功能 |
-
->- implementation "com.google.code.gson:gson:2.8.6"
-
-### *096.标记XmlParseHelper(138)*
-
-| 序号 | 方法             | 功能 |
-|:-----|:-----------------|:----|
-| 01   | 01. getXmlList   | 功能 |
-| 02   | 02. getXmlObject | 功能 |
-
-### *097.路径PathHelper(178)*
-
-| 序号 | 方法                             | 功能 |
-|:-----|:---------------------------------|:----|
-| 01   | 01. pathRoot                     | 功能 |
-| 02   | 02. pathData                     | 功能 |
-| 03   | 03. pathDownloadCache            | 功能 |
-| 04   | 04. pathInternalAppData          | 功能 |
-| 05   | 05. pathInternalAppCache         | 功能 |
-| 06   | 06. pathInternalAppCodeCache     | 功能 |
-| 07   | 07. pathInternalAppFiles         | 功能 |
-| 08   | 08. pathInternalAppNoBackupFiles | 功能 |
-| 09   | 09. pathInternalAppSp            | 功能 |
-| 10   | 10. pathInternalAppDbs           | 功能 |
-| 11   | 11. getPathInternalAppDb         | 功能 |
-| 12   | 12. pathExternal                 | 功能 |
-| 13   | 13. pathExternalMusic            | 功能 |
-| 14   | 14. pathExternalPodcasts         | 功能 |
-| 15   | 15. pathExternalRingtones        | 功能 |
-| 16   | 16. pathExternalAlarms           | 功能 |
-| 17   | 17. pathExternalNotifications    | 功能 |
-| 18   | 18. pathExternalPictures         | 功能 |
-| 19   | 19. pathExternalMovies           | 功能 |
-| 20   | 20. pathExternalDownload         | 功能 |
-| 21   | 21. pathExternalDcim             | 功能 |
-| 22   | 22. pathExternalDocuments        | 功能 |
-| 23   | 23. pathExternalAppData          | 功能 |
-| 24   | 24. pathExternalAppCache         | 功能 |
-| 25   | 25. pathExternalAppFiles         | 功能 |
-| 26   | 26. pathExternalAppMusic         | 功能 |
-| 27   | 27. pathExternalAppPodcasts      | 功能 |
-| 28   | 28. pathExternalAppRingtones     | 功能 |
-| 29   | 29. pathExternalAppAlarms        | 功能 |
-| 30   | 30. pathExternalAppNotifications | 功能 |
-| 31   | 31. pathExternalAppPictures      | 功能 |
-| 32   | 32. pathExternalAppMovies        | 功能 |
-| 33   | 33. pathExternalAppDownload      | 功能 |
-| 34   | 34. pathExternalAppDcim          | 功能 |
-| 35   | 35. pathExternalAppDocuments     | 功能 |
-| 36   | 36. pathExternalAppObb           | 功能 |
-
-### *098.资源ResourceHelper(247)*
-
-| 序号 | 方法                      | 功能 |
-|:-----|:--------------------------|:----|
-| 01   | 01. ID                    | 功能 |
-| 02   | 02. LAYOUT                | 功能 |
-| 03   | 03. MENU                  | 功能 |
-| 04   | 04. DRAWABLE              | 功能 |
-| 05   | 05. MIPMAP                | 功能 |
-| 06   | 06. ANIM                  | 功能 |
-| 07   | 07. RAW                   | 功能 |
-| 08   | 08. STYLE                 | 功能 |
-| 09   | 09. STYLEABLE             | 功能 |
-| 10   | 10. DIMEN                 | 功能 |
-| 11   | 11. COLOR                 | 功能 |
-| 12   | 12. INTEGER               | 功能 |
-| 13   | 13. BOOL                  | 功能 |
-| 14   | 14. STRING                | 功能 |
-| 15   | 15. ATTR                  | 功能 |
-| 16   | 16. getColorById          | 功能 |
-| 17   | 17. getDrawableById       | 功能 |
-| 18   | 18. getStringById         | 功能 |
-| 19   | 19. getStringWithArgsById | 功能 |
-| 20   | 20. getStringArrayById    | 功能 |
-| 21   | 21. getResourceId         | 功能 |
-| 22   | 22. unZipAssets           | 功能 |
-| 23   | 23. unZipRaw              | 功能 |
-| 24   | 24. copyFileByAssets      | 功能 |
-| 25   | 25. copyFileByRaw         | 功能 |
-| 26   | 26. getBytesByAssets      | 功能 |
-| 27   | 27. getBytesByRaw         | 功能 |
-| 28   | 28. getStringByAssets     | 功能 |
-| 29   | 29. getStringByRaw        | 功能 |
-| 30   | 30. getListByAssets       | 功能 |
-| 31   | 31. getListByRaw          | 功能 |
-
-### *099.主题ThemeHelper(157)*
-
-| 序号 | 方法                                | 功能 |
-|:-----|:------------------------------------|:----|
-| 01   | 01. resolveColor                    | 功能 |
-| 02   | 02. resolveDimension                | 功能 |
-| 03   | 03. resolveBoolean                  | 功能 |
-| 04   | 04. resolveDrawable                 | 功能 |
-| 05   | 05. resolveString                   | 功能 |
-| 06   | 06. resolveFloat                    | 功能 |
-| 07   | 07. resolveInt                      | 功能 |
-| 08   | 08. getColorFromAttrRes             | 功能 |
-| 09   | 09. resolveActionTextColorStateList | 功能 |
-| 10   | 10. getActionTextColorStateList     | 功能 |
-| 11   | 11. getActionTextStateList          | 功能 |
-| 12   | 12. getColorArray                   | 功能 |
-| 13   | 13. isNightMode                     | 功能 |
-
-### *100.共享PreferenceHelper(109)*
-
-| 序号 | 方法             | 功能 |
-|:-----|:-----------------|:----|
-| 01   | 01. fileName     | 功能 |
-| 02   | 02. all          | 功能 |
-| 03   | 03. putAll       | 功能 |
-| 04   | 04. getImage     | 功能 |
-| 05   | 05. putImage     | 功能 |
-| 06   | 06. get          | 功能 |
-| 07   | 07. put          | 功能 |
-| 08   | 08. getStringSet | 功能 |
-| 09   | 09. putStringSet | 功能 |
-| 10   | 10. contains     | 功能 |
-| 11   | 11. remove       | 功能 |
-| 12   | 12. clear        | 功能 |
-
-### *101.超文HtmlHelper(59)*
-
-| 序号 | 方法               | 功能 |
-|:-----|:-------------------|:----|
-| 01   | 01. keywordMadeRed | 功能 |
-| 02   | 02. addHtmlRedFlag | 功能 |
-| 03   | 03. getJson        | 功能 |
-| 04   | 04. getForm        | 功能 |
-| 05   | 05. postJson       | 功能 |
-| 06   | 06. postForm       | 功能 |
-
-### *102.标识UriHelper(91)*
-
-| 序号 | 方法                 | 功能 |
-|:-----|:---------------------|:----|
-| 01   | 01. getURLWithParams | 功能 |
-| 02   | 02. file2Uri         | 功能 |
-| 03   | 03. uri2File         | 功能 |
-
-### *103.安全SslHelper(57)*
-
-| 序号 | 方法                    | 功能 |
-|:-----|:------------------------|:----|
-| 01   | 01. getSslSocketFactory | 功能 |
-| 02   | 02. getKeyManagers      | 功能 |
-
-### *104.网服WebServiceHelper(63)*
-
-| 序号 | 方法                   | 功能 |
-|:-----|:-----------------------|:----|
-| 01   | 01. WebServiceCallBack | 功能 |
-| 02   | 02. callWebService     | 功能 |
-
->- implementation "com.google.code.ksoap2-android:ksoap2-android:3.6.4"
-
-### *105.网连HttpUrlConnectionHelper(107)*
-
-| 序号 | 方法           | 功能 |
-|:-----|:---------------|:----|
-| 01   | 01. CallBack   | 功能 |
-| 02   | 02. doGetAsyn  | 功能 |
-| 03   | 03. doGet      | 功能 |
-| 04   | 04. doPostAsyn | 功能 |
-| 05   | 05. doPost     | 功能 |
-
-### *106.数库DbHelper(35)*
-
-| 序号 | 方法                | 功能              |
-|:-----|:--------------------|:-----------------|
-| 01   | 01. sqlInjection    | 防止数据注入      |
-| 02   | 02. exportDb2SdCard | 导出数据库到存储卡 |
-
-### *107.地图MapHelper(69)*
-
-| 序号 | 方法                    | 功能 |
-|:-----|:------------------------|:----|
-| 01   | 01. openMap             | 功能 |
-| 02   | 02. openGaodeMapToGuide | 功能 |
-| 03   | 03. openBaiduMapToGuide | 功能 |
-| 04   | 04. openBrowserToGuide  | 功能 |
-| 05   | 05. metreToScreenPixel  | 功能 |
-| 06   | 06. screenPixelToMetre  | 功能 |
-
-### *108.通讯ContactsHelper(221)*
+### *104.通讯ContactsHelper(221)*
 
 | 序号 | 方法                         | 功能 |
 |:-----|:-----------------------------|:----|
@@ -2465,53 +2472,59 @@
 | 09   | 09. getContantNumberChoosed  | 功能 |
 | 10   | 10. contacts                 | 功能 |
 
-### *109.系统SystemHelper：SystemLanguage(230)*
+### *105.地图MapHelper(69)*
 
-| 序号 | 方法                                 | 功能 |
-|:-----|:-------------------------------------|:----|
-| 01   | 01. buildManufacturer                | 功能 |
-| 02   | 02. buildModel                       | 功能 |
-| 03   | 03. serial                           | 功能 |
-| 04   | 04. uniqueSerial                     | 功能 |
-| 05   | 05. uniqueId                         | 功能 |
-| 06   | 06. buildSerial                      | 功能 |
-| 07   | 07. buildBrand                       | 功能 |
-| 08   | 08. buildHost                        | 功能 |
-| 09   | 09. buildUser                        | 功能 |
-| 10   | 10. buildTags                        | 功能 |
-| 11   | 11. buildTime                        | 功能 |
-| 12   | 12. buildFingerprint                 | 功能 |
-| 13   | 13. buildProduct                     | 功能 |
-| 14   | 14. buildDevice                      | 功能 |
-| 15   | 15. buildHardware                    | 功能 |
-| 16   | 16. buildBoard                       | 功能 |
-| 17   | 17. buildID                          | 功能 |
-| 18   | 18. buildDisplayVersion              | 功能 |
-| 19   | 19. buildBootloaderVersion           | 功能 |
-| 20   | 20. buildRadioVersion                | 功能 |
-| 21   | 21. buildAbis                        | 功能 |
-| 22   | 22. buildVersionSDK                  | 功能 |
-| 23   | 23. buildVersionRelease              | 功能 |
-| 24   | 24. buildVersionCodename             | 功能 |
-| 25   | 25. buildVersionIncremental          | 功能 |
-| 26   | 26. locales                          | 功能 |
-| 27   | 27. currentLocale                    | 功能 |
-| 28   | 28. currentLanguage                  | 功能 |
-| 29   | 29. gsfId                            | 功能 |
-| 30   | 30. googleAccounts                   | 功能 |
-| 31   | #### SystemLanguage                  | 功能 |
-| 32   | 01. applyLanguageSystem              | 功能 |
-| 33   | 02. applyLanguageCustom              | 功能 |
-| 34   | 03. isAppliedLanguageSystem          | 功能 |
-| 35   | 04. applyLanguageSystemInAppOnCreate | 功能 |
-| 36   | 05. isAppliedLanguageCustom          | 功能 |
-| 37   | 06. applyLanguageCustomInAppOnCreate | 功能 |
-| 38   | 07. applyLanguage                    | 功能 |
+| 序号 | 方法                    | 功能 |
+|:-----|:------------------------|:----|
+| 01   | 01. openMap             | 功能 |
+| 02   | 02. openGaodeMapToGuide | 功能 |
+| 03   | 03. openBaiduMapToGuide | 功能 |
+| 04   | 04. openBrowserToGuide  | 功能 |
+| 05   | 05. metreToScreenPixel  | 功能 |
+| 06   | 06. screenPixelToMetre  | 功能 |
 
-### *110.关闭CloseHelper(25)*
+### *106.网服WebServiceHelper(63)*
 
-| 序号 | 方法               | 功能              |
-|:-----|:-------------------|:-----------------|
-| 01   | 01. closeIo        | 关闭资源          |
-| 02   | 02. closeIoQuietly | 关闭资源，忽略异常 |
+| 序号 | 方法                   | 功能 |
+|:-----|:-----------------------|:----|
+| 01   | 01. WebServiceCallBack | 功能 |
+| 02   | 02. callWebService     | 功能 |
+
+>- implementation "com.google.code.ksoap2-android:ksoap2-android:3.6.4"
+
+### *107.网连HttpUrlConnectionHelper(107)*
+
+| 序号 | 方法           | 功能 |
+|:-----|:---------------|:----|
+| 01   | 01. CallBack   | 功能 |
+| 02   | 02. doGetAsyn  | 功能 |
+| 03   | 03. doGet      | 功能 |
+| 04   | 04. doPostAsyn | 功能 |
+| 05   | 05. doPost     | 功能 |
+
+### *108.标识UriHelper(91)*
+
+| 序号 | 方法                 | 功能 |
+|:-----|:---------------------|:----|
+| 01   | 01. getURLWithParams | 功能 |
+| 02   | 02. file2Uri         | 功能 |
+| 03   | 03. uri2File         | 功能 |
+
+### *109.安全SslHelper(57)*
+
+| 序号 | 方法                    | 功能 |
+|:-----|:------------------------|:----|
+| 01   | 01. getSslSocketFactory | 功能 |
+| 02   | 02. getKeyManagers      | 功能 |
+
+### *110.超文HtmlHelper(59)*
+
+| 序号 | 方法               | 功能 |
+|:-----|:-------------------|:----|
+| 01   | 01. keywordMadeRed | 功能 |
+| 02   | 02. addHtmlRedFlag | 功能 |
+| 03   | 03. getJson        | 功能 |
+| 04   | 04. getForm        | 功能 |
+| 05   | 05. postJson       | 功能 |
+| 06   | 06. postForm       | 功能 |
 
