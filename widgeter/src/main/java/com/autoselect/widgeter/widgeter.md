@@ -924,25 +924,12 @@ class LabelShowMoreActivity : AppCompatActivity() {
 
 ```kotlin
 class GuideActivity : AppCompatActivity() {
-    private data class Guide(var text: String? = null, var resId: Int = 0)
-    companion object {
-        private val guideTexts = arrayOf("引导1", "引导2", "引导3")
-        private val guideIds = intArrayOf(R.mipmap.guide1, R.mipmap.guide2, R.mipmap.guide3)
-    }
+    private data class Guide(var title: String? = null, var image: Int = 0)
 
-    private var guides: MutableList<Guide?>? = null
-    private val initGuides = {
-        guides = mutableListOf<Guide?>().apply {
-            for ((index, guideText) in guideTexts.withIndex()) {
-                Guide().apply {
-                    text = guideText
-                    resId = guideIds[index]
-                }.let { add(it) }
-            }
-        }
-    }
-    private val initBanner = {
-        indicator.apply {
+    private val images: IntArray = intArrayOf(R.mipmap.guide1, R.mipmap.guide2, R.mipmap.guide3)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        banner.setCurrentPosition(1).addIndicator(indicator.apply {
             addCircleBean(BeanCircle().apply {
                 normalColor = Color.GRAY
                 selectedColor = Color.WHITE
@@ -951,29 +938,32 @@ class GuideActivity : AppCompatActivity() {
                 scaleFactor = 1.5f
                 typeIndicatorCircle = TypeIndicatorCircle.CIR_TO_RECT
             })
-        }
-        banner.setCurrentPosition(1).addIndicator(indicator).addPageBean(BeanPage().apply {
+        }).addPageBean(BeanPage().apply {
             isAutoLoop = true
             smoothScrollTime = 400
             loopTime = 5000
             typeBannerTrans = TypeBannerTrans.DEPTH
-        }).setPageListener(R.layout.banner_loop, guides, object : PageListener<Guide?>() {
+        }).setPageListener(R.layout.banner_loop, mutableListOf<Guide?>().apply {
+            for ((index, guideTitle) in getStringArrayById(R.array.titles).withIndex()) {
+                Guide().apply {
+                    title = guideTitle
+                    image = images[index]
+                }.let { add(it) }
+            }
+        }, object : PageListener<Guide?>() {
             override fun bindView(view: View?, data: Any?, position: Int) {
                 view?.let {
                     (data as Guide).run {
-                        setText(view, R.id.loop_text, text)
-                        setImageView(view, R.id.loop_icon, resId)
+                        setText(view, R.id.loop_text, title)
+                        setImageView(view, R.id.loop_icon, image)
                     }
                 }
             }
         })
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        initGuides
-        initBanner
-        enter.setOnClickListener { finish() }
+        enter.setOnClickListener {
+            ActivityHelper.startActivity(MainActivity::class.java)
+            finish()
+        }
     }
 }
 ```
@@ -1013,7 +1003,7 @@ class GuideActivity : AppCompatActivity() {
         android:id="@+id/enter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="结束引导"
+        android:text="@string/enter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
