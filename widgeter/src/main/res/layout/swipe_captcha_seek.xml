@@ -33,7 +33,7 @@
                 app:captchaWidth="40dp"
                 tools:src="@mipmap/material_warm" />
 
-            <com.autoselect.widgeter.Seek
+            <SeekBar
                 android:id="@+id/swipe_seek"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"

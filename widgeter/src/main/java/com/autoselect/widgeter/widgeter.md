@@ -1329,7 +1329,7 @@ class GuideActivity : AppCompatActivity() {
 | 05   | 05. resetCaptcha           | 重置滑块      |
 | 06   | 06. setCurrentSwipeValue   | 设置当前滑动值 |
 
->- layout备用:[swipe_seek.xml](../../../../res/layout/swipe_seek.xml)
+>- layout备用:[swipe_captcha_seek.xml](../../../../res/layout/swipe_captcha_seek.xml)
 >- drawable备用
 >
 >>1. [swipe_selector_drag.xml](../../../../res/drawable/swipe_selector_drag.xml)
