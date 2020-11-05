@@ -72,6 +72,29 @@
 >>2. [colors.xml](../../../../res/values/colors.xml)
 >>3. [dimens.xml](../../../../res/values/dimens.xml)
 >>4. [integers.xml](../../../../res/values/integers.xml)
+>
+>- mipmap备用
+>
+>>1. ![material_bamboo](../../../../res/mipmap/material_bamboo.jpg)
+>>2. ![material_bud](../../../../res/mipmap/material_bud.jpg)
+>>3. ![material_color](../../../../res/mipmap/material_color.jpg)
+>>4. ![material_dandelion](../../../../res/mipmap/material_dandelion.jpg)
+>>5. ![material_forest](../../../../res/mipmap/material_forest.jpg)
+>>6. ![material_frog](../../../../res/mipmap/material_frog.jpg)
+>>7. ![material_grass](../../../../res/mipmap/material_grass.jpg)
+>>8. ![material_leaf](../../../../res/mipmap/material_leaf.jpg)
+>>9. ![material_monkey](../../../../res/mipmap/material_monkey.jpg)
+>>10. ![material_orange](../../../../res/mipmap/material_orange.jpg)
+>>11. ![material_plum](../../../../res/mipmap/material_plum.jpg)
+>>12. ![material_road](../../../../res/mipmap/material_road.jpg)
+>>13. ![material_room](../../../../res/mipmap/material_room.jpg)
+>>14. ![material_seed](../../../../res/mipmap/material_seed.jpg)
+>>15. ![material_sky](../../../../res/mipmap/material_sky.jpg)
+>>16. ![material_snow](../../../../res/mipmap/material_snow.jpg)
+>>17. ![material_sun](../../../../res/mipmap/material_sun.jpg)
+>>18. ![material_tulip](../../../../res/mipmap/material_tulip.jpg)
+>>19. ![material_warm](../../../../res/mipmap/material_warm.jpg)
+>>20. ![material_white](../../../../res/mipmap/material_white.jpg)
 
 ### *001.流式LayoutTab、LayoutLabel：LayoutScroll、LayoutFlow、AttrsHelper、AdapterTab、AdapterLabel、AdapterTemplate、AdapterFlow、FlowListener、FlowListenerAdapter、ActionRect、ActionTri、ActionRound、ActionColor、ActionRes、ActionBase、ActionDot、TextViewTabColor、BeanTab、BeanLabel、TabValue、TabTypeEvaluator、ConstantsFlow、ViewPagerHelper(2120)*
 
@@ -1297,14 +1320,26 @@ class GuideActivity : AppCompatActivity() {
 
 ### *013.滑块SwipeCaptcha(393)*
 
-| 序号 | 方法                       | 功能 |
-|:-----|:---------------------------|:----|
-| 01   | 01. maxSwipeValue          | 功能 |
-| 02   | 02. onCaptchaMatchCallback | 功能 |
-| 03   | 03. createCaptcha          | 功能 |
-| 04   | 04. matchCaptcha           | 功能 |
-| 05   | 05. resetCaptcha           | 功能 |
-| 06   | 06. setCurrentSwipeValue   | 功能 |
+| 序号 | 方法                       | 功能           |
+|:-----|:---------------------------|:--------------|
+| 01   | 01. maxSwipeValue          | 最大滑动值    |
+| 02   | 02. onCaptchaMatchCallback | 滑动匹配回调   |
+| 03   | 03. createCaptcha          | 创建滑块      |
+| 04   | 04. matchCaptcha           | 匹配滑块      |
+| 05   | 05. resetCaptcha           | 重置滑块      |
+| 06   | 06. setCurrentSwipeValue   | 设置当前滑动值 |
+
+>- layout备用:[swipe_seek.xml](../../../../res/layout/swipe_seek.xml)
+>- drawable备用
+>
+>>1. [swipe_selector_drag.xml](../../../../res/drawable/swipe_selector_drag.xml)
+>>2. [swipe_layer_thumb.xml](../../../../res/drawable/swipe_layer_thumb.xml)
+>>3. [swipe_shape_reset.xml](../../../../res/drawable/swipe_shape_reset.xml)
+>
+>- mipmap备用
+>
+>>1. ![swipe_layer_thumb_normal](../../../../res/mipmap/swipe_layer_thumb_normal.png)
+>>2. ![swipe_layer_thumb_press](../../../../res/mipmap/swipe_layer_thumb_press.png)
 
 ### *014.平滚AutoImage(35)*
 
