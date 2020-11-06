@@ -1329,6 +1329,49 @@ class GuideActivity : AppCompatActivity() {
 | 05   | 05. resetCaptcha           | 重置滑块      |
 | 06   | 06. setCurrentSwipeValue   | 设置当前滑动值 |
 
+```kotlin
+swipe_captcha.onCaptchaMatchCallback =
+    object : SwipeCaptcha.OnCaptchaMatchCallback {
+        override fun matchSuccess(swipeCaptcha: SwipeCaptcha) {
+            swipe_seek.isEnabled = false
+            ActivityHelper.startActivity(UserActivity::class.java)
+            finish()
+        }
+
+        override fun matchFailed(swipeCaptcha: SwipeCaptcha) {
+            swipeCaptcha.resetCaptcha()
+            swipe_seek.progress = 0
+        }
+    }
+swipe_seek.setOnSeekBarChangeListener(object :
+    SeekBar.OnSeekBarChangeListener {
+    override fun onProgressChanged(
+        seekBar: SeekBar?, progress: Int, fromUser: Boolean
+    ) {
+        swipe_captcha.setCurrentSwipeValue(progress)
+    }
+
+    override fun onStartTrackingTouch(seekBar: SeekBar?) {
+        swipe_seek.max = swipe_captcha.maxSwipeValue
+    }
+
+    override fun onStopTrackingTouch(seekBar: SeekBar?) {
+        swipe_captcha.matchCaptcha()
+    }
+})
+swipe_reset.setOnClickListener {
+    val resId = resources.getIntArray(R.array.material)[getRandom(19)]
+    swipe_captcha.apply {
+        setImageResource(resId)
+        createCaptcha()
+    }
+    swipe_seek.apply {
+        isEnabled = true
+        progress = 0
+    }
+}
+```
+
 >- layout备用:[swipe_captcha_seek.xml](../../../../res/layout/swipe_captcha_seek.xml)
 >- drawable备用
 >
