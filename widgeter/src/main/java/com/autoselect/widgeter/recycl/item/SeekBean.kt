@@ -1,4 +1,4 @@
-package com.autoselect.widgeter.recycl.bean
+package com.autoselect.widgeter.recycl.item
 
 data class SeekBean(
     var title: String = "Seek", var min: Float = Float.MIN_VALUE, var max: Float = Float.MAX_VALUE,

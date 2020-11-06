@@ -1,4 +1,4 @@
-package com.autoselect.widgeter.recycl.bean
+package com.autoselect.widgeter.recycl.item
 
 import com.autoselect.widgeter.recycl.BaseAdapterBinder
 
