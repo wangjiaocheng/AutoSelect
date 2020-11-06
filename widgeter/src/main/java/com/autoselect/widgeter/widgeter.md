@@ -1330,44 +1330,50 @@ class GuideActivity : AppCompatActivity() {
 | 06   | 06. setCurrentSwipeValue   | 设置当前滑动值 |
 
 ```kotlin
-swipe_captcha.onCaptchaMatchCallback =
-    object : SwipeCaptcha.OnCaptchaMatchCallback {
-        override fun matchSuccess(swipeCaptcha: SwipeCaptcha) {
-            swipe_seek.isEnabled = false
-            ActivityHelper.startActivity(UserActivity::class.java)
-            finish()
+swipe_captcha_seek.apply {
+    visibility = View.VISIBLE
+    val captcha = findViewById<SwipeCaptcha>(R.id.swipe_captcha)
+    val seek = findViewById<SeekBar>(R.id.swipe_seek)
+    val reset = findViewById<Button>(R.id.swipe_reset)
+    captcha.onCaptchaMatchCallback =
+        object : SwipeCaptcha.OnCaptchaMatchCallback {
+            override fun matchSuccess(swipeCaptcha: SwipeCaptcha) {
+                seek.isEnabled = false
+                ActivityHelper.startActivity(UserActivity::class.java)
+                finish()
+            }
+
+            override fun matchFailed(swipeCaptcha: SwipeCaptcha) {
+                swipeCaptcha.resetCaptcha()
+                seek.progress = 0
+            }
+        }
+    seek.setOnSeekBarChangeListener(object :
+        SeekBar.OnSeekBarChangeListener {
+        override fun onProgressChanged(
+            seekBar: SeekBar?, progress: Int, fromUser: Boolean
+        ) {
+            captcha.setCurrentSwipeValue(progress)
         }
 
-        override fun matchFailed(swipeCaptcha: SwipeCaptcha) {
-            swipeCaptcha.resetCaptcha()
-            swipe_seek.progress = 0
+        override fun onStartTrackingTouch(seekBar: SeekBar?) {
+            seek.max = captcha.maxSwipeValue
         }
-    }
-swipe_seek.setOnSeekBarChangeListener(object :
-    SeekBar.OnSeekBarChangeListener {
-    override fun onProgressChanged(
-        seekBar: SeekBar?, progress: Int, fromUser: Boolean
-    ) {
-        swipe_captcha.setCurrentSwipeValue(progress)
-    }
 
-    override fun onStartTrackingTouch(seekBar: SeekBar?) {
-        swipe_seek.max = swipe_captcha.maxSwipeValue
-    }
-
-    override fun onStopTrackingTouch(seekBar: SeekBar?) {
-        swipe_captcha.matchCaptcha()
-    }
-})
-swipe_reset.setOnClickListener {
-    val resId = resources.getIntArray(R.array.material)[getRandom(19)]
-    swipe_captcha.apply {
-        setImageResource(resId)
-        createCaptcha()
-    }
-    swipe_seek.apply {
-        isEnabled = true
-        progress = 0
+        override fun onStopTrackingTouch(seekBar: SeekBar?) {
+            captcha.matchCaptcha()
+        }
+    })
+    reset.setOnClickListener {
+        val resId = resources.getIntArray(R.array.material)[getRandom(19)]
+        captcha.apply {
+            setImageResource(resId)
+            createCaptcha()
+        }
+        seek.apply {
+            isEnabled = true
+            progress = 0
+        }
     }
 }
 ```
