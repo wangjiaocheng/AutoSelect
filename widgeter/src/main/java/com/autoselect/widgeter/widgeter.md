@@ -1752,43 +1752,43 @@ class GuideActivity : AppCompatActivity() {
 
 ## **附10.回收视图可备单项控件**
 
-| 序号 | 单项布局xml                | 单项布局Binder     | 单项布局Bean      |
-|:-----|:--------------------------|:-------------------|:-----------------|
-| 001  | *001.binder_recycler*     | RecyclerBinder     | RecyclerBean     |
-| 002  | ~~*002.binder_banner*~~   | ~~BannerBinder~~   | ~~BannerBean~~   |
-| 003  | ~~*003.binder_card*~~     | ~~CardBinder~~     | ~~CardBean~~     |
-| 004  | ~~*004.binder_toolbar*~~  | ~~ToolbarBinder~~  | ~~ToolbarBean~~  |
-| 005  | ~~*005.binder_title*~~    | ~~TitleBinder~~    | ~~TitleBean~~    |
-| 006  | ~~*006.binder_calendar*~~ | ~~CalendarBinder~~ | ~~CalendarBean~~ |
-| 007  | ~~*007.binder_cobweb*~~   | ~~CobwebBinder~~   | ~~CobwebBean~~   |
-| 008  | ~~*008.binder_image*~~    | ~~ImageBinder~~    | ~~ImageBean~~    |
-| 009  | ~~*009.binder_pin*~~      | ~~PinBinder~~      | ~~PinBean~~      |
-| 010  | ~~*010.binder_progress*~~ | ~~ProgressBinder~~ | ~~ProgressBean~~ |
-| 011  | *011.binder_seek*         | SeekBinder         | SeekBean         |
-| 012  | *012.binder_ruler*        | RulerBinder        | RulerBean        |
-| 013  | ~~*013.binder_wave*~~     | ~~WaveBinder~~     | ~~WaveBean~~     |
-| 014  | ~~*014.binder_rating*~~   | ~~RatingBinder~~   | ~~RatingBean~~   |
-| 015  | *015.binder_search*       | SearchBinder       | SearchBean       |
-| 016  | *016.binder_button*       | ButtonBinder       | ButtonBean       |
-| 017  | *017.binder_chip*         | ChipBinder         | ChipBean         |
-| 018  | *018.binder_text*         | TextBinder         | TextBean         |
-| 019  | ~~*019.binder_zoom*~~     | ~~ZoomBinder~~     | ~~ZoomBean~~     |
-| 020  | *020.binder_plain*        | PlainBinder        | PlainBean        |
-| 021  | ~~*021.binder_complete*~~ | ~~CompleteBinder~~ | ~~CompleteBean~~ |
-| 022  | ~~*022.binder_input*~~    | ~~InputBinder~~    | ~~InputBean~~    |
+| 序号 | 单项布局xml                | 单项布局Binder          | 单项布局Bean      |
+|:-----|:--------------------------|:------------------------|:-----------------|
+| 001  | *001.binder_recycler*     | RecyclerBinderQuick     | RecyclerBean     |
+| 002  | ~~*002.binder_banner*~~   | ~~BannerBinderQuick~~   | ~~BannerBean~~   |
+| 003  | ~~*003.binder_card*~~     | ~~CardBinderQuick~~     | ~~CardBean~~     |
+| 004  | ~~*004.binder_toolbar*~~  | ~~ToolbarBinderQuick~~  | ~~ToolbarBean~~  |
+| 005  | ~~*005.binder_title*~~    | ~~TitleBinderQuick~~    | ~~TitleBean~~    |
+| 006  | ~~*006.binder_calendar*~~ | ~~CalendarBinderQuick~~ | ~~CalendarBean~~ |
+| 007  | ~~*007.binder_cobweb*~~   | ~~CobwebBinderQuick~~   | ~~CobwebBean~~   |
+| 008  | ~~*008.binder_image*~~    | ~~ImageBinderQuick~~    | ~~ImageBean~~    |
+| 009  | ~~*009.binder_pin*~~      | ~~PinBinderQuick~~      | ~~PinBean~~      |
+| 010  | ~~*010.binder_progress*~~ | ~~ProgressBinderQuick~~ | ~~ProgressBean~~ |
+| 011  | *011.binder_seek*         | SeekBinderQuick         | SeekBean         |
+| 012  | *012.binder_ruler*        | RulerBinderQuick        | RulerBean        |
+| 013  | ~~*013.binder_wave*~~     | ~~WaveBinderQuick~~     | ~~WaveBean~~     |
+| 014  | ~~*014.binder_rating*~~   | ~~RatingBinderQuick~~   | ~~RatingBean~~   |
+| 015  | *015.binder_search*       | SearchBinderQuick       | SearchBean       |
+| 016  | *016.binder_button*       | ButtonBinderQuick       | ButtonBean       |
+| 017  | *017.binder_chip*         | ChipBinderQuick         | ChipBean         |
+| 018  | *018.binder_text*         | TextBinderQuick         | TextBean         |
+| 019  | ~~*019.binder_zoom*~~     | ~~ZoomBinderQuick~~     | ~~ZoomBean~~     |
+| 020  | *020.binder_plain*        | PlainBinderQuick        | PlainBean        |
+| 021  | ~~*021.binder_complete*~~ | ~~CompleteBinderQuick~~ | ~~CompleteBean~~ |
+| 022  | ~~*022.binder_input*~~    | ~~InputBinderQuick~~    | ~~InputBean~~    |
 
 ## **附11.回收视图常用单项控件**
 
-| 序号 | 单项布局xml            | 单项布局Binder | 单项布局Bean  |
-|:-----|:----------------------|:---------------|:-------------|
-| 001  | *001.binder_recycler* | RecyclerBinder | RecyclerBean |
-| 002  | *002.binder_seek*     | SeekBinder     | SeekBean     |
-| 003  | *003.binder_ruler*    | RulerBinder    | RulerBean    |
-| 004  | *004.binder_search*   | SearchBinder   | SearchBean   |
-| 005  | *005.binder_button*   | ButtonBinder   | ButtonBean   |
-| 006  | *006.binder_chip*     | ChipBinder     | ChipBean     |
-| 007  | *007.binder_text*     | TextBinder     | TextBean     |
-| 008  | *008.binder_plain*    | PlainBinder    | PlainBean    |
+| 序号 | 单项布局xml            | 单项布局Binder      | 单项布局Bean  |
+|:-----|:----------------------|:--------------------|:-------------|
+| 001  | *001.binder_recycler* | RecyclerBinderQuick | RecyclerBean |
+| 002  | *002.binder_seek*     | SeekBinderQuick     | SeekBean     |
+| 003  | *003.binder_ruler*    | RulerBinderQuick    | RulerBean    |
+| 004  | *004.binder_search*   | SearchBinderQuick   | SearchBean   |
+| 005  | *005.binder_button*   | ButtonBinderQuick   | ButtonBean   |
+| 006  | *006.binder_chip*     | ChipBinderQuick     | ChipBean     |
+| 007  | *007.binder_text*     | TextBinderQuick     | TextBean     |
+| 008  | *008.binder_plain*    | PlainBinderQuick    | PlainBean    |
 
 ## **附12.原生使用扼要**
 
