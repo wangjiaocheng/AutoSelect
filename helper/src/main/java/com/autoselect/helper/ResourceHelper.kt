@@ -47,7 +47,7 @@ object ResourceHelper {
         ""
     }
 
-    fun getStringArrayById(@ArrayRes arrayId: Int): Array<String?> = try {
+    fun getStringArrayById(@ArrayRes arrayId: Int): Array<String> = try {
         Resources.getSystem().getStringArray(arrayId)
     } catch (ignore: Resources.NotFoundException) {
         arrayOf()
