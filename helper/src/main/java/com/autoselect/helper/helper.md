@@ -1279,7 +1279,7 @@
 | 08   | 08. setProperty           | 功能 |
 | 09   | 09. setStaticProperty     | 功能 |
 
-### *054.单例SingletonHelper. Singleton(16)*
+### *054.单例SingletonHelper.Singleton(16)*
 
 | 序号 | 方法            | 功能 |
 |:-----|:----------------|:----|
