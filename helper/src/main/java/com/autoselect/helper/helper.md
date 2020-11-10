@@ -2232,204 +2232,204 @@
 
 ### *096.资源ResourceHelper(247)*
 
-| 序号 | 方法                      | 功能 |
-|:-----|:--------------------------|:----|
-| 01   | 01. ID                    | 功能 |
-| 02   | 02. LAYOUT                | 功能 |
-| 03   | 03. MENU                  | 功能 |
-| 04   | 04. DRAWABLE              | 功能 |
-| 05   | 05. MIPMAP                | 功能 |
-| 06   | 06. ANIM                  | 功能 |
-| 07   | 07. RAW                   | 功能 |
-| 08   | 08. STYLE                 | 功能 |
-| 09   | 09. STYLEABLE             | 功能 |
-| 10   | 10. DIMEN                 | 功能 |
-| 11   | 11. COLOR                 | 功能 |
-| 12   | 12. INTEGER               | 功能 |
-| 13   | 13. BOOL                  | 功能 |
-| 14   | 14. STRING                | 功能 |
-| 15   | 15. ATTR                  | 功能 |
-| 16   | 16. getColorById          | 功能 |
-| 17   | 17. getDrawableById       | 功能 |
-| 18   | 18. getStringById         | 功能 |
-| 19   | 19. getStringWithArgsById | 功能 |
-| 20   | 20. getStringArrayById    | 功能 |
-| 21   | 21. getResourceId         | 功能 |
-| 22   | 22. unZipAssets           | 功能 |
-| 23   | 23. unZipRaw              | 功能 |
-| 24   | 24. copyFileByAssets      | 功能 |
-| 25   | 25. copyFileByRaw         | 功能 |
-| 26   | 26. getBytesByAssets      | 功能 |
-| 27   | 27. getBytesByRaw         | 功能 |
-| 28   | 28. getStringByAssets     | 功能 |
-| 29   | 29. getStringByRaw        | 功能 |
-| 30   | 30. getListByAssets       | 功能 |
-| 31   | 31. getListByRaw          | 功能 |
+| 序号 | 方法                      | 功能                    |
+|:-----|:--------------------------|:-----------------------|
+| 01   | 01. ID                    | ID                     |
+| 02   | 02. LAYOUT                | 布局                   |
+| 03   | 03. MENU                  | 目录                   |
+| 04   | 04. DRAWABLE              | 可绘制对象              |
+| 05   | 05. MIPMAP                | 图片                   |
+| 06   | 06. ANIM                  | 动画                   |
+| 07   | 07. RAW                   | 原始                   |
+| 08   | 08. STYLE                 | 风格                   |
+| 09   | 09. STYLEABLE             | 自制控件                |
+| 10   | 10. DIMEN                 | 尺寸                   |
+| 11   | 11. COLOR                 | 颜色                   |
+| 12   | 12. INTEGER               | 数字                   |
+| 13   | 13. BOOL                  | 布尔                   |
+| 14   | 14. STRING                | 字符串                  |
+| 15   | 15. ATTR                  | 数组                   |
+| 16   | 16. getColorById          | 通过ID获取颜色          |
+| 17   | 17. getDrawableById       | 通过ID获取可绘制对象    |
+| 18   | 18. getStringById         | 通过ID获取字符串        |
+| 19   | 19. getStringWithArgsById | 通过ID获取系列格式字符串 |
+| 20   | 20. getStringArrayById    | 通过ID获取字符串数组    |
+| 21   | 21. getResourceId         | 通过ID获取资源          |
+| 22   | 22. unZipAssets           | 解压到Assets            |
+| 23   | 23. unZipRaw              | 解压到Raw               |
+| 24   | 24. copyFileByAssets      | 复制Assets到文件        |
+| 25   | 25. copyFileByRaw         | 复制Raw到文件           |
+| 26   | 26. getBytesByAssets      | 通过Assets获取字节数组  |
+| 27   | 27. getBytesByRaw         | 通过Raw获取字节数组     |
+| 28   | 28. getStringByAssets     | 通过Assets获取字符串    |
+| 29   | 29. getStringByRaw        | 通过Raw获取字符串       |
+| 30   | 30. getListByAssets       | 通过Assets获取列表      |
+| 31   | 31. getListByRaw          | 通过Raw获取列表         |
 
 ### *097.共享PreferenceHelper(109)*
 
-| 序号 | 方法             | 功能 |
-|:-----|:-----------------|:----|
-| 01   | 01. fileName     | 功能 |
-| 02   | 02. all          | 功能 |
-| 03   | 03. putAll       | 功能 |
-| 04   | 04. getImage     | 功能 |
-| 05   | 05. putImage     | 功能 |
-| 06   | 06. get          | 功能 |
-| 07   | 07. put          | 功能 |
-| 08   | 08. getStringSet | 功能 |
-| 09   | 09. putStringSet | 功能 |
-| 10   | 10. contains     | 功能 |
-| 11   | 11. remove       | 功能 |
-| 12   | 12. clear        | 功能 |
+| 序号 | 方法             | 功能           |
+|:-----|:-----------------|:--------------|
+| 01   | 01. fileName     | 名称          |
+| 02   | 02. all          | 所有值        |
+| 03   | 03. putAll       | 批量放入值    |
+| 04   | 04. getImage     | 提取图片      |
+| 05   | 05. putImage     | 放入图片      |
+| 06   | 06. get          | 提取值        |
+| 07   | 07. put          | 放入值        |
+| 08   | 08. getStringSet | 提取字符串集合 |
+| 09   | 09. putStringSet | 放入字符串集合 |
+| 10   | 10. contains     | 是否包含值    |
+| 11   | 11. remove       | 移除值        |
+| 12   | 12. clear        | 清空值        |
 
 ### *098.主题ThemeHelper(157)*
 
-| 序号 | 方法                                | 功能 |
-|:-----|:------------------------------------|:----|
-| 01   | 01. resolveColor                    | 功能 |
-| 02   | 02. resolveDimension                | 功能 |
-| 03   | 03. resolveBoolean                  | 功能 |
-| 04   | 04. resolveDrawable                 | 功能 |
-| 05   | 05. resolveString                   | 功能 |
-| 06   | 06. resolveFloat                    | 功能 |
-| 07   | 07. resolveInt                      | 功能 |
-| 08   | 08. getColorFromAttrRes             | 功能 |
-| 09   | 09. resolveActionTextColorStateList | 功能 |
-| 10   | 10. getActionTextColorStateList     | 功能 |
-| 11   | 11. getActionTextStateList          | 功能 |
-| 12   | 12. getColorArray                   | 功能 |
-| 13   | 13. isNightMode                     | 功能 |
+| 序号 | 方法                                | 功能                            |
+|:-----|:------------------------------------|:--------------------------------|
+| 01   | 01. resolveColor                    | 解析颜色                        |
+| 02   | 02. resolveDimension                | 解析尺寸                        |
+| 03   | 03. resolveBoolean                  | 解析布尔                        |
+| 04   | 04. resolveDrawable                 | 解析绘制                        |
+| 05   | 05. resolveString                   | 解析字串                        |
+| 06   | 06. resolveFloat                    | 解析浮点                        |
+| 07   | 07. resolveInt                      | 解析整型                        |
+| 08   | 08. getColorFromAttrRes             | 从属性获取颜色                   |
+| 09   | 09. resolveActionTextColorStateList | 从颜色数组获取ColorStateList     |
+| 10   | 10. getActionTextColorStateList     | 用颜色ID获取ColorStateList跨版本 |
+| 11   | 11. getActionTextStateList          | 用颜色ID获取ColorStateList      |
+| 12   | 12. getColorArray                   | 获取颜色数组                    |
+| 13   | 13. isNightMode                     | 是否深色模式                    |
 
 ### *099.消息UiMessageHelper(166)*
 
-| 序号 | 方法                  | 功能 |
-|:-----|:----------------------|:----|
-| 01   | 01. send              | 功能 |
-| 02   | 02. UiMessage         | 功能 |
-| 03   | 03. UiMessageCallback | 功能 |
-| 04   | 04. addListener       | 功能 |
-| 05   | 05. removeListener    | 功能 |
+| 序号 | 方法                  | 功能           |
+|:-----|:----------------------|:--------------|
+| 01   | 01. send              | 发送UI消息    |
+| 02   | 02. UiMessage         | UI消息        |
+| 03   | 03. UiMessageCallback | UI消息回调    |
+| 04   | 04. addListener       | 添加UI消息回调 |
+| 05   | 05. removeListener    | 移除UI消息回调 |
 
 ### *100.日期DateHelper(514)*
 
-| 序号 | 方法                         | 功能 |
-|:-----|:-----------------------------|:----|
-| 001  | 01. timeZoneNameCurrent      | 功能 |
-| 002  | 02. createGmtOffsetString    | 功能 |
-| 003  | 03. sdfDateExcel             | 功能 |
-| 004  | 04. sdfDateByFullFileName    | 功能 |
-| 005  | 05. sdfYear                  | 功能 |
-| 006  | 06. sdfMonth                 | 功能 |
-| 007  | 07. sdfDay                   | 功能 |
-| 008  | 08. sdfHour                  | 功能 |
-| 009  | 09. sdfMinute                | 功能 |
-| 010  | 10. sdfSecond                | 功能 |
-| 011  | 11. sdfMillisecond           | 功能 |
-| 012  | 12. sdfTimeCn                | 功能 |
-| 013  | 13. sdfDateCn                | 功能 |
-| 014  | 14. sdfDateByHourCn          | 功能 |
-| 015  | 15. sdfDateByMinuteCn        | 功能 |
-| 016  | 16. sdfDateByFullCn          | 功能 |
-| 017  | 17. sdfDateByAllCn           | 功能 |
-| 018  | 18. sdfTimeEn                | 功能 |
-| 019  | 19. sdfDateEn                | 功能 |
-| 020  | 20. sdfDateByHourEn          | 功能 |
-| 021  | 21. sdfDateByMinuteEn        | 功能 |
-| 022  | 22. sdfDateByFullEn          | 功能 |
-| 023  | 23. sdfDateByAllEn           | 功能 |
-| 024  | 24. sdfTimeX                 | 功能 |
-| 025  | 25. sdfDateX                 | 功能 |
-| 026  | 26. sdfDateByHourX           | 功能 |
-| 027  | 27. sdfDateByMinuteX         | 功能 |
-| 028  | 28. sdfDateByFullX           | 功能 |
-| 029  | 29. sdfDateByAllX            | 功能 |
-| 030  | 30. nowDateByFullRandom2     | 功能 |
-| 031  | 31. nowDateByFullRandom4     | 功能 |
-| 032  | 32. nowDateByFullRandom6     | 功能 |
-| 033  | 33. nowDateByFullRandom8     | 功能 |
-| 034  | 34. nowDateByAllRandom2      | 功能 |
-| 035  | 35. nowDateByAllRandom4      | 功能 |
-| 036  | 36. nowDateByAllRandom6      | 功能 |
-| 037  | 37. nowDateByAllRandom8      | 功能 |
-| 038  | 38. calendarToday            | 功能 |
-| 039  | 39. calendarTodayNextMonth   | 功能 |
-| 040  | 40. sdfDateByFull            | 功能 |
-| 041  | 41. getTimeEn                | 功能 |
-| 042  | 42. getTimeCn                | 功能 |
-| 043  | 43. getTimeAlone             | 功能 |
-| 044  | 44. getYyyy                  | 功能 |
-| 045  | 45. getMm                    | 功能 |
-| 046  | 46. getDd                    | 功能 |
-| 047  | 47. getWeekNumberCn          | 功能 |
-| 048  | 48. getWeekNumber            | 功能 |
-| 049  | 49. getWeekOfMonth           | 功能 |
-| 050  | 50. getWeekOfYear            | 功能 |
-| 051  | 51. getDaysForMonth          | 功能 |
-| 052  | 52. getDaysOfMonth           | 功能 |
-| 053  | 53. isLeapYear               | 功能 |
-| 054  | 54. getSecondsNightOrMorning | 功能 |
-| 055  | 55. getDayForwardOrBackward  | 功能 |
-| 056  | 56. getNowOffsetDay          | 功能 |
-| 057  | 57. yesterdayString          | 功能 |
-| 058  | 58. getYesterdayString       | 功能 |
-| 059  | 59. nowString                | 功能 |
-| 060  | 60. getNowString             | 功能 |
-| 061  | 61. nowMillis                | 功能 |
-| 062  | 62. nowDate                  | 功能 |
-| 063  | 63. getStringByTimeSpan      | 功能 |
-| 064  | 64. getMillisByTimeSpan      | 功能 |
-| 065  | 65. getDateByTimeSpan        | 功能 |
-| 066  | 66. getTimeSpan              | 功能 |
-| 067  | 67. getTimeSpanFit           | 功能 |
-| 068  | 68. getTimeSpanFitByNow      | 功能 |
-| 069  | 69. timeOffset               | 功能 |
-| 070  | 70. ymd                      | 功能 |
-| 071  | 71. mdy                      | 功能 |
-| 072  | 72. amOrPm                   | 功能 |
-| 073  | 73. hmsAmOrPm                | 功能 |
-| 074  | 74. hms                      | 功能 |
-| 075  | 75. hm                       | 功能 |
-| 076  | 76. timeAll                  | 功能 |
-| 077  | 77. time2Second              | 功能 |
-| 078  | 78. time2Millis              | 功能 |
-| 079  | 79. yearFullName             | 功能 |
-| 080  | 80. yearReferred             | 功能 |
-| 081  | 81. month                    | 功能 |
-| 082  | 82. monthFullName            | 功能 |
-| 083  | 83. monthReferred            | 功能 |
-| 084  | 84. weekFullName             | 功能 |
-| 085  | 85. weekReferred             | 功能 |
-| 086  | 86. day2Year                 | 功能 |
-| 087  | 87. dayOne                   | 功能 |
-| 088  | 88. dayTwo                   | 功能 |
-| 089  | 89. hourL                    | 功能 |
-| 090  | 90. hourH                    | 功能 |
-| 091  | 91. minute                   | 功能 |
-| 092  | 92. second                   | 功能 |
-| 093  | 93. millis                   | 功能 |
-| 094  | 94. subtle                   | 功能 |
-| 095  | 95. isDateTrue               | 功能 |
-| 096  | 96. isDateReal               | 功能 |
-| 097  | 97. isDaySame                | 功能 |
-| 098  | 98. isToday                  | 功能 |
-| 099  | 99. zeroTimeOfToday          | 功能 |
-| 100  | 100. compareTime             | 功能 |
-| 101  | 101. isEqualTime             | 功能 |
-| 102  | 102. isBeforeTime            | 功能 |
-| 103  | 103. getWeekCn               | 功能 |
-| 104  | 104. getWeekUs               | 功能 |
-| 105  | 105. getValueByCalendarField | 功能 |
+| 序号 | 方法                         | 功能                        |
+|:-----|:-----------------------------|:---------------------------|
+| 001  | 01. timeZoneNameCurrent      | 当前时区                   |
+| 002  | 02. createGmtOffsetString    | 创建GMT时区字符串           |
+| 003  | 03. sdfDateExcel             | excel格式日期              |
+| 004  | 04. sdfDateByFullFileName    | 文件名全格式日期时间        |
+| 005  | 05. sdfYear                  | 年格式                     |
+| 006  | 06. sdfMonth                 | 月格式                     |
+| 007  | 07. sdfDay                   | 日格式                     |
+| 008  | 08. sdfHour                  | 时格式                     |
+| 009  | 09. sdfMinute                | 分格式                     |
+| 010  | 10. sdfSecond                | 秒格式                     |
+| 011  | 11. sdfMillisecond           | 毫格式                     |
+| 012  | 12. sdfTimeCn                | 中文时间格式                |
+| 013  | 13. sdfDateCn                | 中文日期格式                |
+| 014  | 14. sdfDateByHourCn          | 中文日期时格式              |
+| 015  | 15. sdfDateByMinuteCn        | 中文日期时分格式            |
+| 016  | 16. sdfDateByFullCn          | 中文日期时间格式            |
+| 017  | 17. sdfDateByAllCn           | 中文日期时间毫格式          |
+| 018  | 18. sdfTimeEn                | 英文时间格式                |
+| 019  | 19. sdfDateEn                | 英文日期格式                |
+| 020  | 20. sdfDateByHourEn          | 英文日期时格式              |
+| 021  | 21. sdfDateByMinuteEn        | 英文日期时分格式            |
+| 022  | 22. sdfDateByFullEn          | 英文日期时间格式            |
+| 023  | 23. sdfDateByAllEn           | 英文日期时间毫格式          |
+| 024  | 24. sdfTimeX                 | 时间连续格式                |
+| 025  | 25. sdfDateX                 | 日期连续格式                |
+| 026  | 26. sdfDateByHourX           | 日期时连续格式              |
+| 027  | 27. sdfDateByMinuteX         | 日期时分连续格式            |
+| 028  | 28. sdfDateByFullX           | 日期时间连续格式            |
+| 029  | 29. sdfDateByAllX            | 日期时间毫连续格式          |
+| 030  | 30. nowDateByFullRandom2     | 日期时间连续格式加两位随机   |
+| 031  | 31. nowDateByFullRandom4     | 日期时间连续格式加四位随机   |
+| 032  | 32. nowDateByFullRandom6     | 日期时间连续格式加六位随机   |
+| 033  | 33. nowDateByFullRandom8     | 日期时间连续格式加八位随机   |
+| 034  | 34. nowDateByAllRandom2      | 日期时间毫连续格式加八位随机 |
+| 035  | 35. nowDateByAllRandom4      | 日期时间毫连续格式加八位随机 |
+| 036  | 36. nowDateByAllRandom6      | 日期时间毫连续格式加八位随机 |
+| 037  | 37. nowDateByAllRandom8      | 日期时间毫连续格式加八位随机 |
+| 038  | 38. calendarToday            | 日历今天                   |
+| 039  | 39. calendarTodayNextMonth   | 日历下月今天                |
+| 040  | 40. sdfDateByFull            | 单线程英文日期时间格式      |
+| 041  | 41. getTimeEn                | 英文格式化时间              |
+| 042  | 42. getTimeCn                | 中文格式化时间              |
+| 043  | 43. getTimeAlone             | 时间去文字                  |
+| 044  | 44. getYyyy                  | 时间取年                   |
+| 045  | 45. getMm                    | 时间取月                   |
+| 046  | 46. getDd                    | 时间取日                   |
+| 047  | 47. getWeekNumberCn          | 中文一周第几天              |
+| 048  | 48. getWeekNumber            | 英文一周第几天              |
+| 049  | 49. getWeekOfMonth           | 月第几周                   |
+| 050  | 50. getWeekOfYear            | 年第几周                   |
+| 051  | 51. getDaysForMonth          | 月天数日历方式              |
+| 052  | 52. getDaysOfMonth           | 月天数                     |
+| 053  | 53. isLeapYear               | 是否闰年                   |
+| 054  | 54. getSecondsNightOrMorning | 前一天或后一天毫秒形式      |
+| 055  | 55. getDayForwardOrBackward  | 前一天或后一天              |
+| 056  | 56. getNowOffsetDay          | 增减天数                   |
+| 057  | 57. yesterdayString          | 昨日此时                   |
+| 058  | 58. getYesterdayString       | 昨日此时指定格式            |
+| 059  | 59. nowString                | 此时                       |
+| 060  | 60. getNowString             | 此时指定格式                |
+| 061  | 61. nowMillis                | 当前毫秒                   |
+| 062  | 62. nowDate                  | 当前日期                   |
+| 063  | 63. getStringByTimeSpan      | 时间增减字符串              |
+| 064  | 64. getMillisByTimeSpan      | 时间增减毫秒数              |
+| 065  | 65. getDateByTimeSpan        | 时间增减日期对象            |
+| 066  | 66. getTimeSpan              | 时间跨度                   |
+| 067  | 67. getTimeSpanFit           | 时间跨度友好显示            |
+| 068  | 68. getTimeSpanFitByNow      | 当前时间跨度友好显示        |
+| 069  | 69. timeOffset               | 日期格式化01时间偏移        |
+| 070  | 70. ymd                      | 日期格式化02年月日          |
+| 071  | 71. mdy                      | 日期格式化03月日年          |
+| 072  | 72. amOrPm                   | 日期格式化04上午或下午      |
+| 073  | 73. hmsAmOrPm                | 日期格式化05时分秒上午或下午 |
+| 074  | 74. hms                      | 日期格式化06时分秒          |
+| 075  | 75. hm                       | 日期格式化07时分            |
+| 076  | 76. timeAll                  | 日期格式化08全时间          |
+| 077  | 77. time2Second              | 日期格式化09转秒            |
+| 078  | 78. time2Millis              | 日期格式化10转毫            |
+| 079  | 79. yearFullName             | 日期格式化11年全名          |
+| 080  | 80. yearReferred             | 日期格式化12年描述          |
+| 081  | 81. month                    | 日期格式化13月              |
+| 082  | 82. monthFullName            | 日期格式化14月全名          |
+| 083  | 83. monthReferred            | 日期格式化15月描述          |
+| 084  | 84. weekFullName             | 日期格式化16周全名          |
+| 085  | 85. weekReferred             | 日期格式化17周描述          |
+| 086  | 86. day2Year                 | 日期格式化18日转年          |
+| 087  | 87. dayOne                   | 日期格式化19单月日          |
+| 088  | 88. dayTwo                   | 日期格式化20全月日          |
+| 089  | 89. hourL                    | 日期格式化21十二小时制      |
+| 090  | 90. hourH                    | 日期格式化22二十四小时制    |
+| 091  | 91. minute                   | 日期格式化23分两位          |
+| 092  | 92. second                   | 日期格式化24秒两位          |
+| 093  | 93. millis                   | 日期格式化25毫三位          |
+| 094  | 94. subtle                   | 日期格式化26微九位          |
+| 095  | 95. isDateTrue               | 是否真实时间格式化方式      |
+| 096  | 96. isDateReal               | 是否真实时间                |
+| 097  | 97. isDaySame                | 是否相同时间                |
+| 098  | 98. isToday                  | 是否今日                   |
+| 099  | 99. zeroTimeOfToday          | 今日零点                   |
+| 100  | 100. compareTime             | 比较时间                   |
+| 101  | 101. isEqualTime             | 是否相同时间对象            |
+| 102  | 102. isBeforeTime            | 是否之前时间                |
+| 103  | 103. getWeekCn               | 中文周几字符串              |
+| 104  | 104. getWeekUs               | 英文周几字符串              |
+| 105  | 105. getValueByCalendarField | 通过日历属性获取对应值      |
 
 ### *101.农历LunarHelper(177)*
 
-| 序号 | 方法                 | 功能 |
-|:-----|:---------------------|:----|
-| 01   | 01. getZodiac        | 功能 |
-| 02   | 02. getZodiacCn      | 功能 |
-| 03   | 03. lunarYear2GanZhi | 功能 |
-| 04   | 04. solar2Lunar      | 功能 |
-| 05   | 05. lunar2Solar      | 功能 |
+| 序号 | 方法                 | 功能       |
+|:-----|:---------------------|:----------|
+| 01   | 01. getZodiac        | 获取星座   |
+| 02   | 02. getZodiacCn      | 获取属相   |
+| 03   | 03. lunarYear2GanZhi | 农历转干支 |
+| 04   | 04. solar2Lunar      | 公历转农历 |
+| 05   | 05. lunar2Solar      | 农历转公历 |
 
 ### *102.关闭CloseHelper(25)*
 
@@ -2440,91 +2440,91 @@
 
 ### *103.工具ToolHelper(137)*
 
-| 序号 | 方法                        | 功能 |
-|:-----|:----------------------------|:----|
-| 01   | 01. backgroundHandler       | 功能 |
-| 02   | 02. OnSimpleListener        | 功能 |
-| 03   | 03. delayToDo               | 功能 |
-| 04   | 04. OnDoListener            | 功能 |
-| 05   | 05. initFastClickAndVibrate | 功能 |
-| 06   | 06. isFastClick             | 功能 |
-| 07   | 07. getResIdByName          | 功能 |
-| 08   | 08. fixListViewHeight       | 功能 |
-| 09   | 09. countDown               | 功能 |
-| 10   | 10. setEditNumberAuto       | 功能 |
-| 11   | 11. setEditNumber           | 功能 |
-| 12   | 12. setEditDecimal          | 功能 |
-| 13   | 13. setEditType             | 功能 |
-| 14   | 14. stringFilter            | 功能 |
+| 序号 | 方法                        | 功能                    |
+|:-----|:----------------------------|:-----------------------|
+| 01   | 01. backgroundHandler       | 背景处理器              |
+| 02   | 02. OnSimpleListener        | 延迟操作监听器          |
+| 03   | 03. delayToDo               | 延迟操作                |
+| 04   | 04. OnDoListener            | 功能                   |
+| 05   | 05. initFastClickAndVibrate | 快速点击振动            |
+| 06   | 06. isFastClick             | 是否快速点击            |
+| 07   | 07. getResIdByName          | 通过名字获取资源ID      |
+| 08   | 08. fixListViewHeight       | 计算ListView高度        |
+| 09   | 09. countDown               | 倒数                   |
+| 10   | 10. setEditNumberAuto       | 设置EditText数字        |
+| 11   | 11. setEditNumber           | 自动设置EditText数字    |
+| 12   | 12. setEditDecimal          | 设置EditText小数        |
+| 13   | 13. setEditType             | 设置EditText类型        |
+| 14   | 14. stringFilter            | 只许数字汉字字符串过滤器 |
 
 ### *104.通讯ContactsHelper(221)*
 
-| 序号 | 方法                         | 功能 |
-|:-----|:-----------------------------|:----|
-| 01   | 01. call                     | 功能 |
-| 02   | 02. dial                     | 功能 |
-| 03   | 03. sendSmsActivity          | 功能 |
-| 04   | 04. sendSmsSilent            | 功能 |
-| 05   | 05. sendSmsWithReceiver      | 功能 |
-| 06   | 06. allSms2Xml               | 功能 |
-| 07   | 07. toContantNumberActivity  | 功能 |
-| 08   | 08. toContactsChooseActivity | 功能 |
-| 09   | 09. getContantNumberChoosed  | 功能 |
-| 10   | 10. contacts                 | 功能 |
+| 序号 | 方法                         | 功能           |
+|:-----|:-----------------------------|:--------------|
+| 01   | 01. call                     | 直接拨号      |
+| 02   | 02. dial                     | 拨号界面      |
+| 03   | 03. sendSmsActivity          | 短信界面      |
+| 04   | 04. sendSmsSilent            | 超长短信      |
+| 05   | 05. sendSmsWithReceiver      | 短信回报      |
+| 06   | 06. allSms2Xml               | 短信转xml     |
+| 07   | 07. toContantNumberActivity  | 联系人单选界面 |
+| 08   | 08. toContactsChooseActivity | 联系人多选界面 |
+| 09   | 09. getContantNumberChoosed  | 选中联系人号码 |
+| 10   | 10. contacts                 | 所有联系人号码 |
 
 ### *105.地图MapHelper(69)*
 
-| 序号 | 方法                    | 功能 |
-|:-----|:------------------------|:----|
-| 01   | 01. openMap             | 功能 |
-| 02   | 02. openGaodeMapToGuide | 功能 |
-| 03   | 03. openBaiduMapToGuide | 功能 |
-| 04   | 04. openBrowserToGuide  | 功能 |
-| 05   | 05. metreToScreenPixel  | 功能 |
-| 06   | 06. screenPixelToMetre  | 功能 |
+| 序号 | 方法                    | 功能            |
+|:-----|:------------------------|:----------------|
+| 01   | 01. openMap             | 打开地图进行导航 |
+| 02   | 02. openGaodeMapToGuide | 打开高德地图导航 |
+| 03   | 03. openBaiduMapToGuide | 打开百度地图导航 |
+| 04   | 04. openBrowserToGuide  | 打开浏览器导航   |
+| 05   | 05. metreToScreenPixel  | 米转屏幕像素    |
+| 06   | 06. screenPixelToMetre  | 屏幕像素转米    |
 
 ### *106.网服WebServiceHelper(63)*
 
-| 序号 | 方法                   | 功能 |
-|:-----|:-----------------------|:----|
-| 01   | 01. WebServiceCallBack | 功能 |
-| 02   | 02. callWebService     | 功能 |
+| 序号 | 方法                   | 功能           |
+|:-----|:-----------------------|:--------------|
+| 01   | 01. WebServiceCallBack | WebService回调 |
+| 02   | 02. callWebService     | 调用WebService |
 
 >- implementation "com.google.code.ksoap2-android:ksoap2-android:3.6.4"
 
 ### *107.网连HttpUrlConnectionHelper(107)*
 
-| 序号 | 方法           | 功能 |
-|:-----|:---------------|:----|
-| 01   | 01. CallBack   | 功能 |
-| 02   | 02. doGetAsyn  | 功能 |
-| 03   | 03. doGet      | 功能 |
-| 04   | 04. doPostAsyn | 功能 |
-| 05   | 05. doPost     | 功能 |
+| 序号 | 方法           | 功能         |
+|:-----|:---------------|:------------|
+| 01   | 01. CallBack   | 请求完成回调 |
+| 02   | 02. doGetAsyn  | 异步get     |
+| 03   | 03. doGet      | 普通get     |
+| 04   | 04. doPostAsyn | 异步post    |
+| 05   | 05. doPost     | 普通post    |
 
 ### *108.标识UriHelper(91)*
 
-| 序号 | 方法                 | 功能 |
-|:-----|:---------------------|:----|
-| 01   | 01. getURLWithParams | 功能 |
-| 02   | 02. file2Uri         | 功能 |
-| 03   | 03. uri2File         | 功能 |
+| 序号 | 方法                 | 功能           |
+|:-----|:---------------------|:--------------|
+| 01   | 01. getURLWithParams | 获取网址和参数 |
+| 02   | 02. file2Uri         | 文件转URI     |
+| 03   | 03. uri2File         | URI转文件     |
 
 ### *109.安全SslHelper(57)*
 
-| 序号 | 方法                    | 功能 |
-|:-----|:------------------------|:----|
-| 01   | 01. getSslSocketFactory | 功能 |
-| 02   | 02. getKeyManagers      | 功能 |
+| 序号 | 方法                    | 功能                 |
+|:-----|:------------------------|:--------------------|
+| 01   | 01. getSslSocketFactory | 获取SSLSocketFactory |
+| 02   | 02. getKeyManagers      | 获取KeyManager       |
 
 ### *110.超文HtmlHelper(59)*
 
-| 序号 | 方法               | 功能 |
-|:-----|:-------------------|:----|
-| 01   | 01. keywordMadeRed | 功能 |
-| 02   | 02. addHtmlRedFlag | 功能 |
-| 03   | 03. getJson        | 功能 |
-| 04   | 04. getForm        | 功能 |
-| 05   | 05. postJson       | 功能 |
-| 06   | 06. postForm       | 功能 |
+| 序号 | 方法               | 功能               |
+|:-----|:-------------------|:------------------|
+| 01   | 01. keywordMadeRed | 关键词着红色       |
+| 02   | 02. addHtmlRedFlag | 添加红色标签       |
+| 03   | 03. getJson        | get方法json数据    |
+| 04   | 04. getForm        | get方法非json数据  |
+| 05   | 05. postJson       | post方法json数据   |
+| 06   | 06. postForm       | post方法非json数据 |
 
