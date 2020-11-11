@@ -2111,124 +2111,124 @@
 
 ### *091.数据DataHelper(146)*
 
-| 序号 | 方法                      | 功能 |
-|:-----|:--------------------------|:----|
-| 01   | 01. . toDoubleWithDefault | 功能 |
-| 02   | 02. isNumberByAny         | 功能 |
-| 03   | 03. isIntegerByAny        | 功能 |
-| 04   | 04. isDecimalByAny        | 功能 |
-| 05   | 05. isNullOrEmpty         | 功能 |
-| 06   | 06. compileRegex          | 功能 |
-| 07   | 07. toIntWithDefault      | 功能 |
-| 08   | 08. toLongWithDefault     | 功能 |
-| 09   | 09. toStringWithDefault   | 功能 |
-| 10   | 10. isTrue                | 功能 |
-| 11   | 11. isFalse               | 功能 |
-| 12   | 12. isBoolean             | 功能 |
-| 13   | 13. fitDistance           | 功能 |
-| 14   | 14. hideMobileMid         | 功能 |
-| 15   | 15. hideId18Mid           | 功能 |
-| 16   | 16. hideBankMid           | 功能 |
-| 17   | 17. hideBankLeft          | 功能 |
-| 18   | 18. formatDefault         | 功能 |
-| 19   | 19. formatZero            | 功能 |
-| 20   | 20. formatTwo             | 功能 |
-| 21   | 21. formatPercent         | 功能 |
-| 22   | 22. formatE               | 功能 |
-| 23   | 23. formatSplit           | 功能 |
-| 24   | 24. formatAdd             | 功能 |
-| 25   | 25. formatAmount          | 功能 |
-| 26   | 26. string2Ints           | 功能 |
-| 27   | 27. getPercentValue       | 功能 |
-| 28   | 28. getRoundUp            | 功能 |
+| 序号 | 方法                    | 功能                  |
+|:-----|:------------------------|:---------------------|
+| 01   | 01. toDoubleWithDefault | 对象转Double带默认值  |
+| 02   | 02. isNumberByAny       | 是否数字              |
+| 03   | 03. isIntegerByAny      | 是否整数              |
+| 04   | 04. isDecimalByAny      | 是否小数              |
+| 05   | 05. isNullOrEmpty       | 是否null或空字符串    |
+| 06   | 06. compileRegex        | 获取字符串匹配模板    |
+| 07   | 07. toIntWithDefault    | 对象转Int带默认值     |
+| 08   | 08. toLongWithDefault   | 对象转Long带默认值    |
+| 09   | 09. toStringWithDefault | 对象转字符串带默认值   |
+| 10   | 10. isTrue              | 是否true             |
+| 11   | 11. isFalse             | 是否false            |
+| 12   | 12. isBoolean           | 是否布尔              |
+| 13   | 13. fitDistance         | 距离友好显示          |
+| 14   | 14. hideMobileMid       | 隐藏手机号码中间四位   |
+| 15   | 15. hideId18Mid         | 隐藏身份证号码中间十位 |
+| 16   | 16. hideBankMid         | 隐藏银行卡号中间      |
+| 17   | 17. hideBankLeft        | 隐藏银行卡号左边      |
+| 18   | 18. formatDefault       | 默认数字格式化        |
+| 19   | 19. formatZero          | 整数带零位小数        |
+| 20   | 20. formatTwo           | 整数带两位小数        |
+| 21   | 21. formatPercent       | 整数带两位小数百分    |
+| 22   | 22. formatE             | 整数带两位小数科计    |
+| 23   | 23. formatSplit         | 逗号分隔每三位数      |
+| 24   | 24. formatAdd           | 十位整数带两位小数    |
+| 25   | 25. formatAmount        | 格式化数字            |
+| 26   | 26. string2Ints         | 字符串转Int数字       |
+| 27   | 27. getPercentValue     | 获取百分比值          |
+| 28   | 28. getRoundUp          | 获取四舍五入值        |
 
 ### *092.解析JsonHelper(273)*
 
-| 序号 | 方法                     | 功能 |
-|:-----|:-------------------------|:----|
-| 01   | 01. getInt               | 功能 |
-| 02   | 02. getLong              | 功能 |
-| 03   | 03. getDouble            | 功能 |
-| 04   | 04. getBoolean           | 功能 |
-| 05   | 05. getString            | 功能 |
-| 06   | 06. getJSONObject        | 功能 |
-| 07   | 07. getJSONArray         | 功能 |
-| 08   | 08. string2JSONObject    | 功能 |
-| 09   | 09. any2JsonArray        | 功能 |
-| 10   | 10. collection2JsonArray | 功能 |
-| 11   | 11. map2JsonObject       | 功能 |
-| 12   | 12. any2json             | 功能 |
-| 13   | 13. string2json          | 功能 |
-| 14   | 14. array2json           | 功能 |
-| 15   | 15. list2json            | 功能 |
-| 16   | 16. set2json             | 功能 |
-| 17   | 17. map2json             | 功能 |
-| 18   | 18. formatJson           | 功能 |
+| 序号 | 方法                     | 功能                   |
+|:-----|:-------------------------|:----------------------|
+| 01   | 01. getInt               | 从Json获取Int          |
+| 02   | 02. getLong              | 从Json获取Long         |
+| 03   | 03. getDouble            | 从Json获取Double       |
+| 04   | 04. getBoolean           | 从Json获取Boolean      |
+| 05   | 05. getString            | 从Json获取String       |
+| 06   | 06. getJSONObject        | 从Json获取JsonObject   |
+| 07   | 07. getJSONArray         | 从Json获取JsonArray    |
+| 08   | 08. string2JSONObject    | Json字符串转JsonObject |
+| 09   | 09. any2JsonArray        | 数组转JsonArray        |
+| 10   | 10. collection2JsonArray | 集合转JsonArray        |
+| 11   | 11. map2JsonObject       | 映射转JsonArray        |
+| 12   | 12. any2json             | 对象转Json字符串       |
+| 13   | 13. string2json          | 字符串转Json字符串     |
+| 14   | 14. array2json           | 数组转Json字符串       |
+| 15   | 15. list2json            | 列表转Json字符串       |
+| 16   | 16. set2json             | 集合转Json字符串       |
+| 17   | 17. map2json             | 映射转Json字符串       |
+| 18   | 18. formatJson           | 格式化Json             |
 
 ### *093.处理GsonHelper(50)*
 
-| 序号 | 方法             | 功能 |
-|:-----|:-----------------|:----|
-| 01   | 01. gson         | 功能 |
-| 02   | 02. gsonNoNulls  | 功能 |
-| 03   | 03. deepClone    | 功能 |
-| 04   | 04. toJson       | 功能 |
-| 05   | 05. fromJson     | 功能 |
-| 06   | 06. getArrayType | 功能 |
-| 07   | 07. getListType  | 功能 |
-| 08   | 08. getSetType   | 功能 |
-| 09   | 09. getMapType   | 功能 |
-| 10   | 10. getType      | 功能 |
+| 序号 | 方法             | 功能                   |
+|:-----|:-----------------|:----------------------|
+| 01   | 01. gson         | 获取Gson              |
+| 02   | 02. gsonNoNulls  | 获取无空Gson          |
+| 03   | 03. deepClone    | 深度克隆              |
+| 04   | 04. toJson       | 把对象转Json          |
+| 05   | 05. fromJson     | 从Json或Reader获取对象 |
+| 06   | 06. getArrayType | 获取数组类型           |
+| 07   | 07. getListType  | 获取列表类型           |
+| 08   | 08. getSetType   | 获取集合类型           |
+| 09   | 09. getMapType   | 获取映射类型           |
+| 10   | 10. getType      | 获取对象类型           |
 
 >- implementation "com.google.code.gson:gson:2.8.6"
 
 ### *094.标记XmlParseHelper(138)*
 
-| 序号 | 方法             | 功能 |
-|:-----|:-----------------|:----|
-| 01   | 01. getXmlList   | 功能 |
-| 02   | 02. getXmlObject | 功能 |
+| 序号 | 方法             | 功能            |
+|:-----|:-----------------|:---------------|
+| 01   | 01. getXmlList   | 解析xml获取列表 |
+| 02   | 02. getXmlObject | 解析xml获取对象 |
 
 ### *095.路径PathHelper(178)*
 
-| 序号 | 方法                             | 功能 |
-|:-----|:---------------------------------|:----|
-| 01   | 01. pathRoot                     | 功能 |
-| 02   | 02. pathData                     | 功能 |
-| 03   | 03. pathDownloadCache            | 功能 |
-| 04   | 04. pathInternalAppData          | 功能 |
-| 05   | 05. pathInternalAppCache         | 功能 |
-| 06   | 06. pathInternalAppCodeCache     | 功能 |
-| 07   | 07. pathInternalAppFiles         | 功能 |
-| 08   | 08. pathInternalAppNoBackupFiles | 功能 |
-| 09   | 09. pathInternalAppSp            | 功能 |
-| 10   | 10. pathInternalAppDbs           | 功能 |
-| 11   | 11. getPathInternalAppDb         | 功能 |
-| 12   | 12. pathExternal                 | 功能 |
-| 13   | 13. pathExternalMusic            | 功能 |
-| 14   | 14. pathExternalPodcasts         | 功能 |
-| 15   | 15. pathExternalRingtones        | 功能 |
-| 16   | 16. pathExternalAlarms           | 功能 |
-| 17   | 17. pathExternalNotifications    | 功能 |
-| 18   | 18. pathExternalPictures         | 功能 |
-| 19   | 19. pathExternalMovies           | 功能 |
-| 20   | 20. pathExternalDownload         | 功能 |
-| 21   | 21. pathExternalDcim             | 功能 |
-| 22   | 22. pathExternalDocuments        | 功能 |
-| 23   | 23. pathExternalAppData          | 功能 |
-| 24   | 24. pathExternalAppCache         | 功能 |
-| 25   | 25. pathExternalAppFiles         | 功能 |
-| 26   | 26. pathExternalAppMusic         | 功能 |
-| 27   | 27. pathExternalAppPodcasts      | 功能 |
-| 28   | 28. pathExternalAppRingtones     | 功能 |
-| 29   | 29. pathExternalAppAlarms        | 功能 |
-| 30   | 30. pathExternalAppNotifications | 功能 |
-| 31   | 31. pathExternalAppPictures      | 功能 |
-| 32   | 32. pathExternalAppMovies        | 功能 |
-| 33   | 33. pathExternalAppDownload      | 功能 |
-| 34   | 34. pathExternalAppDcim          | 功能 |
-| 35   | 35. pathExternalAppDocuments     | 功能 |
-| 36   | 36. pathExternalAppObb           | 功能 |
+| 序号 | 方法                             | 功能                                                          |
+|:-----|:---------------------------------|:-------------------------------------------------------------|
+| 01   | 01. pathRoot                     | /system                                                      |
+| 02   | 02. pathData                     | /data                                                        |
+| 03   | 03. pathDownloadCache            | /cache                                                       |
+| 04   | 04. pathInternalAppData          | /data/data/package                                           |
+| 05   | 05. pathInternalAppCache         | /data/data/package/cache                                     |
+| 06   | 06. pathInternalAppCodeCache     | /data/data/package/code_cache                                |
+| 07   | 07. pathInternalAppFiles         | /data/data/package/files                                     |
+| 08   | 08. pathInternalAppNoBackupFiles | /data/data/package/no_backup                                 |
+| 09   | 09. pathInternalAppSp            | /data/data/package/shared_prefs                              |
+| 10   | 10. pathInternalAppDbs           | /data/data/package/databases                                 |
+| 11   | 11. getPathInternalAppDb         | /data/data/package/databases/name                            |
+| 12   | 12. pathExternal                 | /storage/emulated/0                                          |
+| 13   | 13. pathExternalMusic            | /storage/emulated/0/Music                                    |
+| 14   | 14. pathExternalPodcasts         | /storage/emulated/0/Podcasts                                 |
+| 15   | 15. pathExternalRingtones        | /storage/emulated/0/Ringtones                                |
+| 16   | 16. pathExternalAlarms           | /storage/emulated/0/Alarms                                   |
+| 17   | 17. pathExternalNotifications    | /storage/emulated/0/Notifications                            |
+| 18   | 18. pathExternalPictures         | /storage/emulated/0/Pictures                                 |
+| 19   | 19. pathExternalMovies           | /storage/emulated/0/Movies                                   |
+| 20   | 20. pathExternalDownload         | /storage/emulated/0/Download                                 |
+| 21   | 21. pathExternalDcim             | /storage/emulated/0/DCIM                                     |
+| 22   | 22. pathExternalDocuments        | /storage/emulated/0/Documents                                |
+| 23   | 23. pathExternalAppData          | /storage/emulated/0/Android/data/package                     |
+| 24   | 24. pathExternalAppCache         | /storage/emulated/0/Android/data/package/cache               |
+| 25   | 25. pathExternalAppFiles         | /storage/emulated/0/Android/data/package/files               |
+| 26   | 26. pathExternalAppMusic         | /storage/emulated/0/Android/data/package/files/Music         |
+| 27   | 27. pathExternalAppPodcasts      | /storage/emulated/0/Android/data/package/files/Podcasts      |
+| 28   | 28. pathExternalAppRingtones     | /storage/emulated/0/Android/data/package/files/Ringtones     |
+| 29   | 29. pathExternalAppAlarms        | /storage/emulated/0/Android/data/package/files/Alarms        |
+| 30   | 30. pathExternalAppNotifications | /storage/emulated/0/Android/data/package/files/Notifications |
+| 31   | 31. pathExternalAppPictures      | /storage/emulated/0/Android/data/package/files/Pictures      |
+| 32   | 32. pathExternalAppMovies        | /storage/emulated/0/Android/data/package/files/Movies        |
+| 33   | 33. pathExternalAppDownload      | /storage/emulated/0/Android/data/package/files/Download      |
+| 34   | 34. pathExternalAppDcim          | /storage/emulated/0/Android/data/package/files/DCIM          |
+| 35   | 35. pathExternalAppDocuments     | /storage/emulated/0/Android/data/package/files/Documents     |
+| 36   | 36. pathExternalAppObb           | /storage/emulated/0/Android/obb/package                      |
 
 ### *096.资源ResourceHelper(247)*
 
