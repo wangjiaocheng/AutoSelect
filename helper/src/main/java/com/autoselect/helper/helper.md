@@ -1801,10 +1801,10 @@
 
 ### *076.迁移MigrationHelper(97)*
 
-| 序号 | 方法        | 功能 |
-|:-----|:------------|:----|
-| 01   | 01. isDebug | 功能 |
-| 02   | 02. migrate | 功能 |
+| 序号 | 方法        | 功能               |
+|:-----|:------------|:------------------|
+| 01   | 01. isDebug | 是否调试           |
+| 02   | 02. migrate | 迁移SQLiteDatabase |
 
 >- implementation "org.greenrobot:greendao:3.2.2"
 
@@ -1817,295 +1817,295 @@
 
 ### *078.文件FileHelper(914)*
 
-| 序号 | 方法                          | 功能 |
-|:-----|:------------------------------|:----|
-| 01   | 01. zip                       | 功能 |
-| 02   | 02. unzip                     | 功能 |
-| 03   | 03. bitmap2JpegFile           | 功能 |
-| 04   | 04. bitmap2PngFile            | 功能 |
-| 05   | 05. encodeFile2Base64String   | 功能 |
-| 06   | 06. decoderBase64String2File  | 功能 |
-| 07   | 07. pathCacheImageAppIcon     | 功能 |
-| 08   | 08. pathCacheImageMainGallery | 功能 |
-| 09   | 09. pathCacheImageBrowse      | 功能 |
-| 10   | 10. pathCacheImageChooseHead  | 功能 |
-| 11   | 11. pathCacheImage            | 功能 |
-| 12   | 12. getCacheSdCard            | 功能 |
-| 13   | 13. getFileByPath             | 功能 |
-| 14   | 14. isExistsTimestamp         | 功能 |
-| 15   | 15. isExistDirSdCard          | 功能 |
-| 16   | 16. isExistsDir               | 功能 |
-| 17   | 17. isExistFileSdCard         | 功能 |
-| 18   | 18. isExistsFile              | 功能 |
-| 19   | 19. pathRootData              | 功能 |
-| 20   | 20. createRootData            | 功能 |
-| 21   | 21. pathAppData               | 功能 |
-| 22   | 22. createAppData             | 功能 |
-| 23   | 23. pathAppFiles              | 功能 |
-| 24   | 24. createAppFiles            | 功能 |
-| 25   | 25. pathAppCache              | 功能 |
-| 26   | 26. createAppCache            | 功能 |
-| 27   | 27. createDirSdCard           | 功能 |
-| 28   | 28. createDirNone             | 功能 |
-| 29   | 29. createDirNew              | 功能 |
-| 30   | 30. createFileSdCard          | 功能 |
-| 31   | 31. createFileNone            | 功能 |
-| 32   | 32. createFileNew             | 功能 |
-| 33   | 33. cutDir                    | 功能 |
-| 34   | 34. copyDir                   | 功能 |
-| 35   | 35. cutFile                   | 功能 |
-| 36   | 36. copyFile                  | 功能 |
-| 37   | 37. cut                       | 功能 |
-| 38   | 38. copy                      | 功能 |
-| 39   | 39. mergeFiles                | 功能 |
-| 40   | 40. shareFile                 | 功能 |
-| 41   | 41. downloadFile              | 功能 |
-| 42   | 42. DownloadService           | 功能 |
-| 43   | 43. upgradeApp                | 功能 |
-| 44   | 44. delete                    | 功能 |
-| 45   | 45. deleteDir                 | 功能 |
-| 46   | 46. deleteFile                | 功能 |
-| 47   | 47. deleteFiles               | 功能 |
-| 48   | 48. deleteFilesByFilter       | 功能 |
-| 49   | 49. listFilesInDirWithFilter  | 功能 |
-| 50   | 50. getFileLastModified       | 功能 |
-| 51   | 51. getFileCharset            | 功能 |
-| 52   | 52. getFileLines              | 功能 |
-| 53   | 53. allSizeInternal           | 功能 |
-| 54   | 54. allSizeExternal           | 功能 |
-| 55   | 55. getAllSize                | 功能 |
-| 56   | 56. availableSizeInternal     | 功能 |
-| 57   | 57. availableSizeExternal     | 功能 |
-| 58   | 58. getAvailableSize          | 功能 |
-| 59   | 59. freeSizeInternal          | 功能 |
-| 60   | 60. freeSizeExternal          | 功能 |
-| 61   | 61. getFreeSize               | 功能 |
-| 62   | 62. getDirsSizeFit            | 功能 |
-| 63   | 63. getDirsSize               | 功能 |
-| 64   | 64. getDirSizeFit             | 功能 |
-| 65   | 65. getDirSize                | 功能 |
-| 66   | 66. getFileSizeFit            | 功能 |
-| 67   | 67. getFileSize               | 功能 |
-| 68   | 68. getDirName                | 功能 |
-| 69   | 69. getFileName               | 功能 |
-| 70   | 70. getFileNoExtension        | 功能 |
-| 71   | 71. getFileExtension          | 功能 |
-| 72   | 72. getFileIntent             | 功能 |
-| 73   | 73. getNativeM3u8             | 功能 |
-| 74   | 74. getFileUri                | 功能 |
-| 75   | 75. getImageContentUri        | 功能 |
-| 76   | 76. getFileFromUri            | 功能 |
-| 77   | 77. getPathFromUri            | 功能 |
-| 78   | 78. isExternalStorageDocument | 功能 |
-| 79   | 79. isDownloadsDocument       | 功能 |
-| 80   | 80. isMediaDocument           | 功能 |
-| 81   | 81. isGooglePhotosUri         | 功能 |
-| 82   | 82. getDataColumn             | 功能 |
-| 83   | 83. rename                    | 功能 |
+| 序号 | 方法                          | 功能                                          |
+|:-----|:------------------------------|:---------------------------------------------|
+| 01   | 01. zip                       | 压缩流                                        |
+| 02   | 02. unzip                     | 解压流                                        |
+| 03   | 03. bitmap2JpegFile           | 位图存jpeg文件                                |
+| 04   | 04. bitmap2PngFile            | 位图存png文件                                 |
+| 05   | 05. encodeFile2Base64String   | 文件转Base64编码字符串                         |
+| 06   | 06. decoderBase64String2File  | Base64编码字符串转文件                         |
+| 07   | 07. pathCacheImageAppIcon     | 应用缓存菜单按钮图片路径                       |
+| 08   | 08. pathCacheImageMainGallery | 应用缓存主页图片路径                           |
+| 09   | 09. pathCacheImageBrowse      | 应用缓存浏览图片路径                           |
+| 10   | 10. pathCacheImageChooseHead  | 应用缓存用户头像路径                           |
+| 11   | 11. pathCacheImage            | 应用缓存其他图片路径                           |
+| 12   | 12. getCacheSdCard            | 获取SD卡缓存文件                              |
+| 13   | 13. getFileByPath             | 通过路径获取文件                               |
+| 14   | 14. isExistsTimestamp         | 是否文件已经过期                               |
+| 15   | 15. isExistDirSdCard          | 是否存在SD卡目录                              |
+| 16   | 16. isExistsDir               | 是否存在目录                                  |
+| 17   | 17. isExistFileSdCard         | 是否存在SD卡目录                              |
+| 18   | 18. isExistsFile              | 是否存在文件                                  |
+| 19   | 19. pathRootData              | 数据根路径含SD卡                              |
+| 20   | 20. createRootData            | 创建数据根路径含SD卡                           |
+| 21   | 21. pathAppData               | 应用数据路径含SD卡                             |
+| 22   | 22. createAppData             | 创建应用数据路径含SD卡                         |
+| 23   | 23. pathAppFiles              | 应用文件路径含SD卡                             |
+| 24   | 24. createAppFiles            | 创建应用文件路径含SD卡                         |
+| 25   | 25. pathAppCache              | 应用缓存路径含SD卡                             |
+| 26   | 26. createAppCache            | 创建应用缓存路径含SD卡                         |
+| 27   | 27. createDirSdCard           | 创建SD卡目录路径                              |
+| 28   | 28. createDirNone             | 创建目录如果不存在                             |
+| 29   | 29. createDirNew              | 创建新目录                                    |
+| 30   | 30. createFileSdCard          | 创建SD卡文件路径                              |
+| 31   | 31. createFileNone            | 创建文件如果不存在                             |
+| 32   | 32. createFileNew             | 创建新文件                                    |
+| 33   | 33. cutDir                    | 剪切目录                                      |
+| 34   | 34. copyDir                   | 复制目录                                      |
+| 35   | 35. cutFile                   | 剪切文件                                      |
+| 36   | 36. copyFile                  | 复制文件                                      |
+| 37   | 37. cut                       | 移动文件到                                    |
+| 38   | 38. copy                      | 复制文件到                                    |
+| 39   | 39. mergeFiles                | 合并文件                                      |
+| 40   | 40. shareFile                 | 分享文件                                      |
+| 41   | 41. downloadFile              | 下载文件                                      |
+| 42   | 42. DownloadService           | 下载服务                                      |
+| 43   | 43. upgradeApp                | 更新应用                                      |
+| 44   | 44. delete                    | 删除文件或目录                                |
+| 45   | 45. deleteDir                 | 删除目录                                      |
+| 46   | 46. deleteFile                | 删除单文件                                    |
+| 47   | 47. deleteFiles               | 删除多文件                                    |
+| 48   | 48. deleteFilesByFilter       | 删除文件带过滤器                               |
+| 49   | 49. listFilesInDirWithFilter  | 列出目录中文件带过滤器                         |
+| 50   | 50. getFileLastModified       | 获取文件最后修改时间                           |
+| 51   | 51. getFileCharset            | 获取文件字符集                                |
+| 52   | 52. getFileLines              | 获取文件行数                                  |
+| 53   | 53. allSizeInternal           | 数据路径容量                                  |
+| 54   | 54. allSizeExternal           | SD卡容量                                      |
+| 55   | 55. getAllSize                | 路径容量                                      |
+| 56   | 56. availableSizeInternal     | 数据路径可用容量                               |
+| 57   | 57. availableSizeExternal     | SD卡可用容量                                  |
+| 58   | 58. getAvailableSize          | 路径可用容量                                  |
+| 59   | 59. freeSizeInternal          | 数据路径空闲容量                               |
+| 60   | 60. freeSizeExternal          | SD卡空闲容量                                  |
+| 61   | 61. getFreeSize               | 路径空闲容量                                  |
+| 62   | 62. getDirsSizeFit            | 获取系列目录容量友好显示                       |
+| 63   | 63. getDirsSize               | 获取系列目录容量                               |
+| 64   | 64. getDirSizeFit             | 获取目录容量友好显示                           |
+| 65   | 65. getDirSize                | 获取目录容量                                  |
+| 66   | 66. getFileSizeFit            | 获取文件大小友好显示                           |
+| 67   | 67. getFileSize               | 获取文件大小                                  |
+| 68   | 68. getDirName                | 获取目录名                                    |
+| 69   | 69. getFileName               | 获取文件名                                    |
+| 70   | 70. getFileNoExtension        | 获取文件名不含扩展名                           |
+| 71   | 71. getFileExtension          | 获取文件扩展名                                |
+| 72   | 72. getFileIntent             | 获取文件意图                                  |
+| 73   | 73. getNativeM3u8             | 获取m3u8                                      |
+| 74   | 74. getFileUri                | 获取文件Uri                                   |
+| 75   | 75. getImageContentUri        | 获取图片文件Uri                               |
+| 76   | 76. getFileFromUri            | 用Uri获取文件                                 |
+| 77   | 77. getPathFromUri            | 用Uri获取路径                                 |
+| 78   | 78. isExternalStorageDocument | 是否com.android.externalstorage.documents     |
+| 79   | 79. isDownloadsDocument       | 是否com.android.providers.downloads.documents |
+| 80   | 80. isMediaDocument           | 是否com.android.providers.media.documents     |
+| 81   | 81. isGooglePhotosUri         | 是否com.google.android.apps.photos.content    |
+| 82   | 82. getDataColumn             | 获取数据列                                    |
+| 83   | 83. rename                    | 文件重命名                                    |
 
 ### *079.存取FileIoHelper(366)*
 
-| 序号 | 方法                            | 功能 |
-|:-----|:--------------------------------|:----|
-| 01   | 01. writeFileFromIS             | 功能 |
-| 02   | 02. writeFileFromString         | 功能 |
-| 03   | 03. writeAppFileFormBytes       | 功能 |
-| 04   | 04. writeFileFromBytesByStream  | 功能 |
-| 05   | 05. writeFileFromBytesByChannel | 功能 |
-| 06   | 06. writeFileFromBytesByMap     | 功能 |
-| 07   | 07. readFile2List               | 功能 |
-| 08   | 08. readFile2StringByLine       | 功能 |
-| 09   | 09. readFile2StringByBytes      | 功能 |
-| 10   | 10. readFile2BytesByStream      | 功能 |
-| 11   | 11. readFile2BytesByChannel     | 功能 |
-| 12   | 12. readFile2BytesByMap         | 功能 |
+| 序号 | 方法                            | 功能                    |
+|:-----|:--------------------------------|:-----------------------|
+| 01   | 01. writeFileFromIS             | 输入流写到文件          |
+| 02   | 02. writeFileFromString         | 字符串写到文件          |
+| 03   | 03. writeAppFileFormBytes       | 字节数组写到文件        |
+| 04   | 04. writeFileFromBytesByStream  | 字节数组流方式写到文件   |
+| 05   | 05. writeFileFromBytesByChannel | 字节数组通道方式写到文件 |
+| 06   | 06. writeFileFromBytesByMap     | 字节数组映射方式写到文件 |
+| 07   | 07. readFile2List               | 读文件到列表            |
+| 08   | 08. readFile2StringByLine       | 按行读文件到字符串      |
+| 09   | 09. readFile2StringByBytes      | 读文件到字符串          |
+| 10   | 10. readFile2BytesByStream      | 流方式读文件到字节数组   |
+| 11   | 11. readFile2BytesByChannel     | 通道方式读文件到字节数组 |
+| 12   | 12. readFile2BytesByMap         | 映射方式读文件到字节数组 |
 
 ### *080.压制ZipHelper(336)*
 
-| 序号 | 方法                  | 功能 |
-|:-----|:----------------------|:----|
-| 01   | 01. zipFiles          | 功能 |
-| 02   | 02. zipFile           | 功能 |
-| 03   | 03. ZipListener       | 功能 |
-| 04   | 04. isStopZip         | 功能 |
-| 05   | 05. fileToZip         | 功能 |
-| 06   | 06. unzipSelectedFile | 功能 |
-| 07   | 07. unzipOneFile      | 功能 |
-| 08   | 08. getFilesPath      | 功能 |
-| 09   | 09. getComments       | 功能 |
-| 10   | 10. getEntries        | 功能 |
+| 序号 | 方法                  | 功能              |
+|:-----|:----------------------|:-----------------|
+| 01   | 01. zipFiles          | 批量压缩文件      |
+| 02   | 02. zipFile           | 压缩文件          |
+| 03   | 03. ZipListener       | 压缩监听器        |
+| 04   | 04. isStopZip         | 是否停止压缩      |
+| 05   | 05. fileToZip         | 文件压缩到压缩文件 |
+| 06   | 06. unzipSelectedFile | 解压选中文件      |
+| 07   | 07. unzipOneFile      | 压缩文件解压到目录 |
+| 08   | 08. getFilesPath      | 获取压缩文件路径   |
+| 09   | 09. getComments       | 获取注释列表      |
+| 10   | 10. getEntries        | 获取文件对象列表   |
 
 ### *081.密压ZipPlusHelper(320)*
 
-| 序号 | 方法                        | 功能 |
-|:-----|:----------------------------|:----|
-| 01   | 01. zipEncrypt              | 功能 |
-| 02   | 02. zipEncryptRargo         | 功能 |
-| 03   | 03. zipInfo                 | 功能 |
-| 04   | 04. unzipFilesByKeyword     | 功能 |
-| 05   | 05. unzipFileByKeyword      | 功能 |
-| 06   | 06. unzipFile               | 功能 |
-| 07   | 07. unzipFileWithMonitor    | 功能 |
-| 08   | 08. removeDirFromZipArchive | 功能 |
+| 序号 | 方法                        | 功能                |
+|:-----|:----------------------------|:-------------------|
+| 01   | 01. zipEncrypt              | 加密压缩            |
+| 02   | 02. zipEncryptRargo         | 加密分卷压缩        |
+| 03   | 03. zipInfo                 | 压缩文件尺寸信息    |
+| 04   | 04. unzipFilesByKeyword     | 批量解压加密压缩文件 |
+| 05   | 05. unzipFileByKeyword      | 解压加密压缩文件    |
+| 06   | 06. unzipFile               | 加压压缩文件        |
+| 07   | 07. unzipFileWithMonitor    | 解压压缩文件带监视器 |
+| 08   | 08. removeDirFromZipArchive | 从压缩文件移除目录   |
 
 >- implementation "net.lingala.zip4j:zip4j:2.6.3"
 
 ### *082.打开OpenHelper(102)*
 
-| 序号 | 方法                           | 功能 |
-|:-----|:-------------------------------|:----|
-| 01   | 01. openInputStreamByUrlString | 功能 |
-| 02   | 02. openWebSite                | 功能 |
-| 03   | 03. openImage                  | 功能 |
-| 04   | 04. openVideo                  | 功能 |
-| 05   | 05. openPdfFile                | 功能 |
-| 06   | 06. openWordFile               | 功能 |
-| 07   | 07. openOfficeFileByWps        | 功能 |
+| 序号 | 方法                           | 功能            |
+|:-----|:-------------------------------|:---------------|
+| 01   | 01. openInputStreamByUrlString | 从url打开输入流 |
+| 02   | 02. openWebSite                | 打开网站       |
+| 03   | 03. openImage                  | 打开图片       |
+| 04   | 04. openVideo                  | 打开视频       |
+| 05   | 05. openPdfFile                | 打开PDF        |
+| 06   | 06. openWordFile               | 打开Word       |
+| 07   | 07. openOfficeFileByWps        | 打开WPS        |
 
 ### *083.图像ImageHelper(1298)*
 
-| 序号 | 方法                        | 功能 |
-|:-----|:----------------------------|:----|
-| 01   | 01. makeKey                 | 功能 |
-| 02   | 02. isSameKey               | 功能 |
-| 03   | 03. crc64Long               | 功能 |
-| 04   | 04. getColorByInt           | 功能 |
-| 05   | 05. getColorHexString       | 功能 |
-| 06   | 06. getAlphaPercent         | 功能 |
-| 07   | 07. setColorAlphaByInt      | 功能 |
-| 08   | 08. setColorAlphaByFloat    | 功能 |
-| 09   | 09. getColorLightness       | 功能 |
-| 10   | 10. setColorLightness       | 功能 |
-| 11   | 11. getDrawableFromMap      | 功能 |
-| 12   | 12. getBitmapFromMap        | 功能 |
-| 13   | 13. recycleBitmaps          | 功能 |
-| 14   | 14. getBitmapFromLocalOrNet | 功能 |
-| 15   | 15. getPicPathFromUri       | 功能 |
-| 16   | 16. getBitmap               | 功能 |
-| 17   | 17. drawNinePatch           | 功能 |
-| 18   | 18. drawColor               | 功能 |
-| 19   | 19. getDropShadow           | 功能 |
-| 20   | 20. toClip                  | 功能 |
-| 21   | 21. toSkew                  | 功能 |
-| 22   | 22. toRotate                | 功能 |
-| 23   | 23. getRotateDegree         | 功能 |
-| 24   | 24. toRound                 | 功能 |
-| 25   | 25. toRoundCorner           | 功能 |
-| 26   | 26. addBorder               | 功能 |
-| 27   | 27. addReflection           | 功能 |
-| 28   | 28. createTextImage         | 功能 |
-| 29   | 29. addTextWatermark        | 功能 |
-| 30   | 30. addImageWatermark       | 功能 |
-| 31   | 31. toAlpha                 | 功能 |
-| 32   | 32. setAlpha                | 功能 |
-| 33   | 33. toGray                  | 功能 |
-| 34   | 34. toGrey                  | 功能 |
-| 35   | 35. grayMasking             | 功能 |
-| 36   | 36. fastBlur                | 功能 |
-| 37   | 37. renderScriptBlur        | 功能 |
-| 38   | 38. stackBlur               | 功能 |
-| 39   | 39. BoxBlurFilter           | 功能 |
-| 40   | 40. blur                    | 功能 |
-| 41   | 41. clamp                   | 功能 |
-| 42   | 42. saveImage               | 功能 |
-| 43   | 43. isImage                 | 功能 |
-| 44   | 44. getImageType            | 功能 |
-| 45   | 45. getImageFormat          | 功能 |
-| 46   | 46. getThumbVideo           | 功能 |
-| 47   | 47. getThumbBitmap          | 功能 |
-| 48   | 48. compressByScale         | 功能 |
-| 49   | 49. compressByQuality       | 功能 |
-| 50   | 50. compressBySampleSize    | 功能 |
-| 51   | 51. calculateInSampleSize   | 功能 |
-| 52   | 52. getBitmapSize           | 功能 |
+| 序号 | 方法                        | 功能                      |
+|:-----|:----------------------------|:-------------------------|
+| 01   | 01. makeKey                 | 网址转字节数组            |
+| 02   | 02. isSameKey               | 是否相同                 |
+| 03   | 03. crc64Long               | 字节数组crc64Long        |
+| 04   | 04. getColorByInt           | 通过Int获取颜色           |
+| 05   | 05. getColorHexString       | 通过十六进制字符串获取颜色 |
+| 06   | 06. getAlphaPercent         | 获取透明度百分比          |
+| 07   | 07. setColorAlphaByInt      | 设置颜色的Int透明度       |
+| 08   | 08. setColorAlphaByFloat    | 设置颜色的Float透明度     |
+| 09   | 09. getColorLightness       | 获取颜色亮度              |
+| 10   | 10. setColorLightness       | 设置颜色亮度              |
+| 11   | 11. getDrawableFromMap      | 获取缓存可绘制对象        |
+| 12   | 12. getBitmapFromMap        | 获取缓存图片              |
+| 13   | 13. recycleBitmaps          | 清空缓存图片              |
+| 14   | 14. getBitmapFromLocalOrNet | 从本地或网络获取图片      |
+| 15   | 15. getPicPathFromUri       | 从Uri获取图片路径         |
+| 16   | 16. getBitmap               | 从各处获取图片            |
+| 17   | 17. drawNinePatch           | 绘制NinePatch            |
+| 18   | 18. drawColor               | 绘制颜色                 |
+| 19   | 19. getDropShadow           | 图片阴影                 |
+| 20   | 20. toClip                  | 图片裁剪                 |
+| 21   | 21. toSkew                  | 图片倾斜                 |
+| 22   | 22. toRotate                | 图片旋转                 |
+| 23   | 23. getRotateDegree         | 获取旋转角度              |
+| 24   | 24. toRound                 | 图片圆形                 |
+| 25   | 25. toRoundCorner           | 图片圆角                 |
+| 26   | 26. addBorder               | 图片边框                 |
+| 27   | 27. addReflection           | 图片倒影                 |
+| 28   | 28. createTextImage         | 图片添加文字              |
+| 29   | 29. addTextWatermark        | 图片添加文字水印          |
+| 30   | 30. addImageWatermark       | 图片添加图片水印          |
+| 31   | 31. toAlpha                 | 图片透明                 |
+| 32   | 32. setAlpha                | 图片设置透明度            |
+| 33   | 33. toGray                  | 图片灰色                 |
+| 34   | 34. toGrey                  | 图片变灰                 |
+| 35   | 35. grayMasking             | 图片光晕                 |
+| 36   | 36. fastBlur                | 图片快速模糊              |
+| 37   | 37. renderScriptBlur        | 图片Render模糊           |
+| 38   | 38. stackBlur               | 图片Stack模糊            |
+| 39   | 39. BoxBlurFilter           | 图片高斯模糊              |
+| 40   | 40. blur                    | 图片模糊                 |
+| 41   | 41. clamp                   | 限制值范围                |
+| 42   | 42. saveImage               | 保存图片                 |
+| 43   | 43. isImage                 | 是否图片                 |
+| 44   | 44. getImageType            | 获取图片类型              |
+| 45   | 45. getImageFormat          | 获取图片格式              |
+| 46   | 46. getThumbVideo           | 获取视频缩略图            |
+| 47   | 47. getThumbBitmap          | 获取图片缩略图            |
+| 48   | 48. compressByScale         | 图片缩放压缩              |
+| 49   | 49. compressByQuality       | 图片质量压缩              |
+| 50   | 50. compressBySampleSize    | 图片Sample压缩           |
+| 51   | 51. calculateInSampleSize   | 计算Sample               |
+| 52   | 52. getBitmapSize           | 获取图片尺寸              |
 
 ### *084.照片PhotoHelper(125)*
 
-| 序号 | 方法                 | 功能 |
-|:-----|:---------------------|:----|
-| 01   | 01. openGalleryMedia | 功能 |
-| 02   | 02. openGalleryImage | 功能 |
-| 03   | 03. openCameraImage  | 功能 |
-| 04   | 04. cropImage        | 功能 |
-| 05   | 05. getCropIntent    | 功能 |
+| 序号 | 方法                 | 功能         |
+|:-----|:---------------------|:------------|
+| 01   | 01. openGalleryMedia | 打开媒体界面 |
+| 02   | 02. openGalleryImage | 打开图片界面 |
+| 03   | 03. openCameraImage  | 打开拍照界面 |
+| 04   | 04. cropImage        | 裁剪图片    |
+| 05   | 05. getCropIntent    | 获取裁剪意图 |
 
 ### *085.图片PictureHelper(43)*
 
-| 序号 | 方法                    | 功能 |
-|:-----|:------------------------|:----|
-| 01   | 01. getChoosedImagePath | 功能 |
-| 02   | 02. getChoosedImage     | 功能 |
-| 03   | 03. getTakePictureFile  | 功能 |
+| 序号 | 方法                    | 功能            |
+|:-----|:------------------------|:----------------|
+| 01   | 01. getChoosedImagePath | 获取选中图片路径 |
+| 02   | 02. getChoosedImage     | 获取选中图片    |
+| 03   | 03. getTakePictureFile  | 获取拍照后照片   |
 
 ### *086.动画AnimationHelper(209)*
 
-| 序号 | 方法                       | 功能 |
-|:-----|:---------------------------|:----|
-| 01   | 01. isRunning              | 功能 |
-| 02   | 02. isStarted              | 功能 |
-| 03   | 03. start                  | 功能 |
-| 04   | 04. stop                   | 功能 |
-| 05   | 05. popupAppear            | 功能 |
-| 06   | 06. popupDisappear         | 功能 |
-| 07   | 07. animationCardFlip      | 功能 |
-| 08   | 08. animationZoomIn        | 功能 |
-| 09   | 09. animationZoomOut       | 功能 |
-| 10   | 10. ScaleUpDown            | 功能 |
-| 11   | 11. animateHeight          | 功能 |
-| 12   | 12. OnDoIntListener        | 功能 |
-| 13   | 13. animationColorGradient | 功能 |
-| 14   | 14. addTouchDark           | 功能 |
-| 15   | 15. addTouchLight          | 功能 |
+| 序号 | 方法                       | 功能           |
+|:-----|:---------------------------|:--------------|
+| 01   | 01. isRunning              | 动画是否正运行 |
+| 02   | 02. isStarted              | 动画是否已开始 |
+| 03   | 03. start                  | 开始动画      |
+| 04   | 04. stop                   | 停止动画      |
+| 05   | 05. popupAppear            | 弹出显示      |
+| 06   | 06. popupDisappear         | 弹出隐藏      |
+| 07   | 07. animationCardFlip      | 翻转动画      |
+| 08   | 08. animationZoomIn        | 放大动画      |
+| 09   | 09. animationZoomOut       | 缩小动画      |
+| 10   | 10. ScaleUpDown            | 从下到上动画   |
+| 11   | 11. animateHeight          | 高度动画      |
+| 12   | 12. OnDoIntListener        | 动画更新监听器 |
+| 13   | 13. animationColorGradient | 渐变色动画    |
+| 14   | 14. addTouchDark           | 视图深色模式   |
+| 15   | 15. addTouchLight          | 视图浅色模式   |
 
 ### *087.信息ExifHelper(41)*
 
-| 序号 | 方法                    | 功能 |
-|:-----|:------------------------|:----|
-| 01   | 01. writeLatLonIntoJpeg | 功能 |
+| 序号 | 方法                    | 功能           |
+|:-----|:------------------------|:--------------|
+| 01   | 01. writeLatLonIntoJpeg | 经纬度写到图片 |
 
 ### *088.属性PropertiesHelper(40)*
 
-| 序号 | 方法                 | 功能 |
-|:-----|:---------------------|:----|
-| 01   | 01. propertiesAll    | 功能 |
-| 02   | 02. getPropertyByKey | 功能 |
-| 03   | 03. init             | 功能 |
+| 序号 | 方法                 | 功能         |
+|:-----|:---------------------|:------------|
+| 01   | 01. propertiesAll    | 所有属性    |
+| 02   | 02. getPropertyByKey | 获取属性    |
+| 03   | 03. init             | 初始属性文件 |
 
 ### *089.记录LoggerHelper(84)*
 
-| 序号 | 方法                    | 功能 |
-|:-----|:------------------------|:----|
-| 01   | 01. loggerTag           | 功能 |
-| 02   | 02. getLogger           | 功能 |
-| 03   | 03. verbose             | 功能 |
-| 04   | 04. debug               | 功能 |
-| 05   | 05. info                | 功能 |
-| 06   | 06. warn                | 功能 |
-| 07   | 07. error               | 功能 |
-| 08   | 08. wtf                 | 功能 |
-| 09   | 09. getStackTraceString | 功能 |
+| 序号 | 方法                    | 功能                |
+|:-----|:------------------------|:-------------------|
+| 01   | 01. loggerTag           | 记录tag             |
+| 02   | 02. getLogger           | 获取记录器          |
+| 03   | 03. verbose             | 冗余                |
+| 04   | 04. debug               | 调试                |
+| 05   | 05. info                | 信息                |
+| 06   | 06. warn                | 警告                |
+| 07   | 07. error               | 错误                |
+| 08   | 08. wtf                 | 断言                |
+| 09   | 09. getStackTraceString | 获取日志栈跟踪字符串 |
 
 ### *090.日志LogHelper(681)*
 
-| 序号 | 方法           | 功能 |
-|:-----|:---------------|:----|
-| 01   | 01. IFormatter | 功能 |
-| 02   | 02. config     | 功能 |
-| 03   | 03. v          | 功能 |
-| 04   | 04. d          | 功能 |
-| 05   | 05. i          | 功能 |
-| 06   | 06. w          | 功能 |
-| 07   | 07. e          | 功能 |
-| 08   | 08. a          | 功能 |
-| 09   | 09. vTag       | 功能 |
-| 10   | 10. dTag       | 功能 |
-| 11   | 11. iTag       | 功能 |
-| 12   | 12. wTag       | 功能 |
-| 13   | 13. eTag       | 功能 |
-| 14   | 14. aTag       | 功能 |
-| 15   | 15. file       | 功能 |
-| 16   | 16. json       | 功能 |
-| 17   | 17. xml        | 功能 |
+| 序号 | 方法           | 功能             |
+|:-----|:---------------|:----------------|
+| 01   | 01. IFormatter | 格式器接口       |
+| 02   | 02. config     | 配置参数         |
+| 03   | 03. v          | VERBOSE记录      |
+| 04   | 04. d          | DEBUG记录        |
+| 05   | 05. i          | INFO记录         |
+| 06   | 06. w          | WARN记录         |
+| 07   | 07. e          | ERROR记录        |
+| 08   | 08. a          | ASSERT记录       |
+| 09   | 09. vTag       | VERBOSE记录带tag |
+| 10   | 10. dTag       | DEBUG记录带tag   |
+| 11   | 11. iTag       | INFO记录带tag    |
+| 12   | 12. wTag       | WARN记录带tag    |
+| 13   | 13. eTag       | ERROR记录带tag   |
+| 14   | 14. aTag       | ASSERT记录带tag  |
+| 15   | 15. file       | file记录         |
+| 16   | 16. json       | json记录         |
+| 17   | 17. xml        | xml记录          |
 
 >- implementation "com.google.code.gson:gson:2.8.6"
 
