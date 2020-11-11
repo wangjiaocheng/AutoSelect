@@ -1215,287 +1215,287 @@
 
 ### *051.线程ThreadHelper(328)*
 
-| 序号 | 方法                         | 功能 |
-|:-----|:-----------------------------|:----|
-| 01   | 01. defaultThreadPoolSize    | 功能 |
-| 02   | 02. isMainThread             | 功能 |
-| 03   | 03. SimpleTask               | 功能 |
-| 04   | 04. Task                     | 功能 |
-| 05   | 05. cancel                   | 功能 |
-| 06   | 06. executeBySingleWithDelay | 功能 |
-| 07   | 07. executeByCachedWithDelay | 功能 |
-| 08   | 08. executeByIOWithDelay     | 功能 |
-| 09   | 09. executeByCPUWithDelay    | 功能 |
-| 10   | 10. executeByFixedWithDelay  | 功能 |
-| 11   | 11. executeWithDelay         | 功能 |
-| 12   | 12. executeBySingleAtFixRate | 功能 |
-| 13   | 13. executeByCachedAtFixRate | 功能 |
-| 14   | 14. executeByIOAtFixRate     | 功能 |
-| 15   | 15. executeByCPUAtFixRate    | 功能 |
-| 16   | 16. executeByFixedAtFixRate  | 功能 |
-| 17   | 17. executeAtFixedRate       | 功能 |
-| 18   | 18. poolSingle               | 功能 |
-| 19   | 19. getPoolSingle            | 功能 |
-| 20   | 20. poolCached               | 功能 |
-| 21   | 21. getPoolCached            | 功能 |
-| 22   | 22. poolIo                   | 功能 |
-| 23   | 23. getPoolIo                | 功能 |
-| 24   | 24. poolCpu                  | 功能 |
-| 25   | 25. getPoolCpu               | 功能 |
-| 26   | 26. getPoolFixed             | 功能 |
-| 27   | 27. getPool                  | 功能 |
-| 28   | 28. executorService          | 功能 |
-| 29   | 29. shutDown                 | 功能 |
-| 30   | 30. shutDownNow              | 功能 |
-| 31   | 31. isShutDown               | 功能 |
-| 32   | 32. isTerminated             | 功能 |
-| 33   | 33. awaitTermination         | 功能 |
-| 34   | 34. submit                   | 功能 |
-| 35   | 35. invokeAny                | 功能 |
-| 36   | 36. invokeAll                | 功能 |
+| 序号 | 方法                         | 功能                                                                             |
+|:-----|:-----------------------------|:---------------------------------------------------------------------------------|
+| 01   | 01. defaultThreadPoolSize    | 获取默认线程池尺寸                                                                |
+| 02   | 02. isMainThread             | 是否主线程                                                                       |
+| 03   | 03. SimpleTask               | 简单任务                                                                         |
+| 04   | 04. Task                     | 复杂任务                                                                         |
+| 05   | 05. cancel                   | 取消任务                                                                         |
+| 06   | 06. executeBySingleWithDelay | 单线程池执行任务，设置延迟时间，或者立即执行                                        |
+| 07   | 07. executeByCachedWithDelay | 缓存线程池执行任务，设置延迟时间，或者立即执行                                      |
+| 08   | 08. executeByIOWithDelay     | 输入输出线程池执行任务，设置延迟时间，或者立即执行                                  |
+| 09   | 09. executeByCPUWithDelay    | CPU线程池执行任务，设置延迟时间，或者立即执行                                       |
+| 10   | 10. executeByFixedWithDelay  | 补丁线程池执行任务，设置延迟时间，或者立即执行                                      |
+| 11   | 11. executeWithDelay         | 指定线程池执行任务，设置延迟时间，或者立即执行                                      |
+| 12   | 12. executeBySingleAtFixRate | 单线程池执行任务，固定执行间隔，设置首次延迟                                        |
+| 13   | 13. executeByCachedAtFixRate | 缓存线程池执行任务，固定执行间隔，设置首次延迟                                      |
+| 14   | 14. executeByIOAtFixRate     | 输入输出线程池执行任务，固定执行间隔，设置首次延迟                                  |
+| 15   | 15. executeByCPUAtFixRate    | CPU线程池执行任务，固定执行间隔，设置首次延迟                                       |
+| 16   | 16. executeByFixedAtFixRate  | 补丁线程池执行任务，固定执行间隔，设置首次延迟                                      |
+| 17   | 17. executeAtFixedRate       | 指定线程池执行任务，固定执行间隔，设置首次延迟                                      |
+| 18   | 18. poolSingle               | 单线程池                                                                         |
+| 19   | 19. getPoolSingle            | 单线程池带优先级                                                                  |
+| 20   | 20. poolCached               | 缓存线程池                                                                       |
+| 21   | 21. getPoolCached            | 缓存线程池带优先级                                                                |
+| 22   | 22. poolIo                   | 输入输出线程池                                                                    |
+| 23   | 23. getPoolIo                | 输入输出线程池带优先级                                                            |
+| 24   | 24. poolCpu                  | CPU线程池                                                                        |
+| 25   | 25. getPoolCpu               | CPU线程池带优先级                                                                 |
+| 26   | 26. getPoolFixed             | 补丁线程池带优先级                                                                |
+| 27   | 27. getPool                  | 获取线程池                                                                       |
+| 28   | 28. executorService          | 线程服务                                                                         |
+| 29   | 29. shutDown                 | 关闭线程，已提交执行完，不接受新提交                                               |
+| 30   | 30. shutDownNow              | 立即关闭线程，已提交也停止，返回等待列表                                           |
+| 31   | 31. isShutDown               | 是否关闭线程                                                                     |
+| 32   | 32. isTerminated             | 是否全部完成，关闭后判断是否全部完成                                               |
+| 33   | 33. awaitTermination         | 等待完成，请求关闭、超时、线程中断，阻塞到所有任务执行完成                           |
+| 34   | 34. submit                   | 提交任务                                                                         |
+| 35   | 35. invokeAny                | 取消未完成任务，正常异常返回取消未完成任务                                          |
+| 36   | 36. invokeAll                | 返回所有任务，返回列表顺序与给定列表顺序同，未超时已完成所有任务，已超时未完成所有任务 |
 
 ### *052.进程ProcessHelper(150)*
 
-| 序号 | 方法                           | 功能 |
-|:-----|:-------------------------------|:----|
-| 01   | 01. isMainProcess              | 功能 |
-| 02   | 02. currentProcessName         | 功能 |
-| 03   | 03. foregroundProcessName      | 功能 |
-| 04   | 04. allBackgroundProcesses     | 功能 |
-| 05   | 05. killBackgroundProcesses    | 功能 |
-| 06   | 06. killAllBackgroundProcesses | 功能 |
+| 序号 | 方法                           | 功能            |
+|:-----|:-------------------------------|:----------------|
+| 01   | 01. isMainProcess              | 是否主进程      |
+| 02   | 02. currentProcessName         | 当前进程名      |
+| 03   | 03. foregroundProcessName      | 前景进程名      |
+| 04   | 04. allBackgroundProcesses     | 所有背景进程    |
+| 05   | 05. killBackgroundProcesses    | 结束背景进程    |
+| 06   | 06. killAllBackgroundProcesses | 结束所有背景进程 |
 
 ### *053.反射ReflectionHelper(64)*
 
-| 序号 | 方法                      | 功能 |
-|:-----|:--------------------------|:----|
-| 01   | 01. getClassListByPackage | 功能 |
-| 02   | 02. isInstance            | 功能 |
-| 03   | 03. newInstance           | 功能 |
-| 04   | 04. invokeMethod          | 功能 |
-| 05   | 05. invokeStaticMethod    | 功能 |
-| 06   | 06. getProperty           | 功能 |
-| 07   | 07. getStaticProperty     | 功能 |
-| 08   | 08. setProperty           | 功能 |
-| 09   | 09. setStaticProperty     | 功能 |
+| 序号 | 方法                      | 功能         |
+|:-----|:--------------------------|:------------|
+| 01   | 01. getClassListByPackage | 获取包类列表 |
+| 02   | 02. isInstance            | 是否实例    |
+| 03   | 03. newInstance           | 创建实例    |
+| 04   | 04. invokeMethod          | 执行方法    |
+| 05   | 05. invokeStaticMethod    | 执行静态方法 |
+| 06   | 06. getProperty           | 获取属性    |
+| 07   | 07. getStaticProperty     | 获取静态属性 |
+| 08   | 08. setProperty           | 设置属性    |
+| 09   | 09. setStaticProperty     | 设置静态属性 |
 
 ### *054.单例SingletonHelper.Singleton(16)*
 
-| 序号 | 方法            | 功能 |
-|:-----|:----------------|:----|
-| 01   | 01. newInstance | 功能 |
-| 02   | 02. getInstance | 功能 |
+| 序号 | 方法            | 功能     |
+|:-----|:----------------|:--------|
+| 01   | 01. newInstance | 创建单例 |
+| 02   | 02. getInstance | 获取单例 |
 
 ### *055.空判EmptyHelper(72)*
 
-| 序号 | 方法               | 功能 |
-|:-----|:-------------------|:----|
-| 01   | 01. isEmptyAny     | 功能 |
-| 02   | 02. isNotEmptyAny  | 功能 |
-| 03   | 03. hashCode       | 功能 |
-| 04   | 04. getOrDefault   | 功能 |
-| 05   | 05. equalsAny      | 功能 |
-| 06   | 06. requireNonNull | 功能 |
+| 序号 | 方法               | 功能            |
+|:-----|:-------------------|:----------------|
+| 01   | 01. isEmptyAny     | 是否空对象      |
+| 02   | 02. isNotEmptyAny  | 是否非空对象    |
+| 03   | 03. hashCode       | 对象哈希码      |
+| 04   | 04. getOrDefault   | 获取对象带默认值 |
+| 05   | 05. equalsAny      | 比较对象        |
+| 06   | 06. requireNonNull | 比较非空对象    |
 
 ### *056.输入InputMethodHelper(248)*
 
-| 序号 | 方法                                   | 功能 |
-|:-----|:---------------------------------------|:----|
-| 01   | 01. showInputMethod                    | 功能 |
-| 02   | 02. toggleInputMethod                  | 功能 |
-| 03   | 03. hideInputMethod                    | 功能 |
-| 04   | 04. hideInputMethodTimer               | 功能 |
-| 05   | 05. isInputMethodActive                | 功能 |
-| 06   | 06. isInputMethodVisible               | 功能 |
-| 07   | 07. OnSoftInputChangedListener         | 功能 |
-| 08   | 08. registerSoftInputChangedListener   | 功能 |
-| 09   | 09. unregisterSoftInputChangedListener | 功能 |
-| 10   | 10. fixSoftInputLeaks                  | 功能 |
-| 11   | 11. fixAndroidBug5497                  | 功能 |
-| 12   | 12. clickBlankArea2HideSoftInput       | 功能 |
+| 序号 | 方法                                   | 功能                  |
+|:-----|:---------------------------------------|:---------------------|
+| 01   | 01. showInputMethod                    | 显示输入法            |
+| 02   | 02. toggleInputMethod                  | 开关输入法            |
+| 03   | 03. hideInputMethod                    | 隐藏输入法            |
+| 04   | 04. hideInputMethodTimer               | 定时隐藏输入法        |
+| 05   | 05. isInputMethodActive                | 是否可用输入法        |
+| 06   | 06. isInputMethodVisible               | 是否可见输入法        |
+| 07   | 07. OnSoftInputChangedListener         | 输入法改变监听器      |
+| 08   | 08. registerSoftInputChangedListener   | 注册输入法改变监听器   |
+| 09   | 09. unregisterSoftInputChangedListener | 取消输入法改变监听器   |
+| 10   | 10. fixSoftInputLeaks                  | 修复输入法内存泄露    |
+| 11   | 11. fixAndroidBug5497                  | 修复输入法5427bug     |
+| 12   | 12. clickBlankArea2HideSoftInput       | 点击空白区域隐藏输入法 |
 
 ### *057.剪贴ClipboardHelper(20)*
 
-| 序号 | 方法           | 功能 |
-|:-----|:---------------|:----|
-| 01   | 01. textClip   | 功能 |
-| 02   | 02. uriClip    | 功能 |
-| 03   | 03. intentClip | 功能 |
+| 序号 | 方法           | 功能       |
+|:-----|:---------------|:----------|
+| 01   | 01. textClip   | 文本剪贴板 |
+| 02   | 02. uriClip    | 地址剪贴板 |
+| 03   | 03. intentClip | 意图剪贴板 |
 
 ### *058.字串StringHelper(120)*
 
-| 序号 | 方法                   | 功能 |
-|:-----|:-----------------------|:----|
-| 01   | 01. isEmptyNoTrim      | 功能 |
-| 02   | 02. isEmptyTrim        | 功能 |
-| 03   | 03. isNotNull          | 功能 |
-| 04   | 04. isNull             | 功能 |
-| 05   | 05. isNotSpace         | 功能 |
-| 06   | 06. isSpace            | 功能 |
-| 07   | 07. isNumberStr        | 功能 |
-| 08   | 08. isIntegerStr       | 功能 |
-| 09   | 09. isDoubleStr        | 功能 |
-| 10   | 10. isCnCharContains   | 功能 |
-| 11   | 11. isCnCharAll        | 功能 |
-| 12   | 12. isNotCnChar        | 功能 |
-| 13   | 13. isCnChar           | 功能 |
-| 14   | 14. isMessyCode        | 功能 |
-| 15   | 15. equalsString       | 功能 |
-| 16   | 16. equalsCharSequence | 功能 |
-| 17   | 17. firstMatcher       | 功能 |
-| 18   | 18. firstSplit         | 功能 |
-| 19   | 19. anySplit           | 功能 |
-| 20   | 20. concatNoSpilt      | 功能 |
-| 21   | 21. concatSpilt        | 功能 |
+| 序号 | 方法                   | 功能                                              |
+|:-----|:-----------------------|:-------------------------------------------------|
+| 01   | 01. isEmptyNoTrim      | 是否空字符或长度为零                              |
+| 02   | 02. isEmptyTrim        | 除空格后是否空字符或长度为零                       |
+| 03   | 03. isNotNull          | 是否非空字符和“null”字符                          |
+| 04   | 04. isNull             | 是否空字符或“null”字符                            |
+| 05   | 05. isNotSpace         | 是否非空字符和长度为零和空格、制表符、回车符、换行符 |
+| 06   | 06. isSpace            | 是否空字符或长度为零或空格、制表符、回车符、换行符   |
+| 07   | 07. isNumberStr        | 是否数字字符串                                    |
+| 08   | 08. isIntegerStr       | 是否整数字符串                                    |
+| 09   | 09. isDoubleStr        | 是否小数字符串                                    |
+| 10   | 10. isCnCharContains   | 是否包含中文字符                                  |
+| 11   | 11. isCnCharAll        | 是否全是中文字符                                  |
+| 12   | 12. isNotCnChar        | 是否非中文字符                                    |
+| 13   | 13. isCnChar           | 是否是中文字符                                    |
+| 14   | 14. isMessyCode        | 是否乱码                                          |
+| 15   | 15. equalsString       | 比较字符串                                        |
+| 16   | 16. equalsCharSequence | 比较字符序列                                      |
+| 17   | 17. firstMatcher       | 获取首个匹配字符串                                |
+| 18   | 18. firstSplit         | 按首个分隔符获取字符串数组                         |
+| 19   | 19. anySplit           | 按指定分隔符获取字符串数组                         |
+| 20   | 20. concatNoSpilt      | 无分隔符拼接字符串                                |
+| 21   | 21. concatSpilt        | 指定分隔符拼接字符串                              |
 
 ### *059.富文SpanHelper(795)*
 
-| 序号 | 方法                   | 功能 |
-|:-----|:-----------------------|:----|
-| 01   | 01. builderSpan        | 功能 |
-| 02   | 02. setFlag            | 功能 |
-| 03   | 03. setForegroundColor | 功能 |
-| 04   | 04. setBackgroundColor | 功能 |
-| 05   | 05. ALIGN_BOTTOM       | 功能 |
-| 06   | 06. ALIGN_BASELINE     | 功能 |
-| 07   | 07. ALIGN_CENTER       | 功能 |
-| 08   | 08. ALIGN_TOP          | 功能 |
-| 09   | 09. setLineHeight      | 功能 |
-| 10   | 10. setQuoteColor      | 功能 |
-| 11   | 11. setMargin          | 功能 |
-| 12   | 12. setLeadingMargin   | 功能 |
-| 13   | 13. setBullet          | 功能 |
-| 14   | 14. setFontSize        | 功能 |
-| 15   | 15. setFontProportion  | 功能 |
-| 16   | 16. setFontXProportion | 功能 |
-| 17   | 17. setStrikeThrough   | 功能 |
-| 18   | 18. setUnderline       | 功能 |
-| 19   | 19. setSuperscript     | 功能 |
-| 20   | 20. setSubscript       | 功能 |
-| 21   | 21. setBold            | 功能 |
-| 22   | 22. setItalic          | 功能 |
-| 23   | 23. setBoldItalic      | 功能 |
-| 24   | 24. setFontFamily      | 功能 |
-| 25   | 25. setTypeface        | 功能 |
-| 26   | 26. setHorizontalAlign | 功能 |
-| 27   | 27. setVerticalAlign   | 功能 |
-| 28   | 28. setClickSpan       | 功能 |
-| 29   | 29. setUrl             | 功能 |
-| 30   | 30. setBlur            | 功能 |
-| 31   | 31. setShader          | 功能 |
-| 32   | 32. setShadow          | 功能 |
-| 33   | 33. setSpans           | 功能 |
-| 34   | 34. append             | 功能 |
-| 35   | 35. appendLine         | 功能 |
-| 36   | 36. appendImage        | 功能 |
-| 37   | 37. appendSpace        | 功能 |
-| 38   | 38. create             | 功能 |
+| 序号 | 方法                   | 功能            |
+|:-----|:-----------------------|:----------------|
+| 01   | 01. builderSpan        | 构建富文本      |
+| 02   | 02. setFlag            | 设置标识        |
+| 03   | 03. setForegroundColor | 设置前景色      |
+| 04   | 04. setBackgroundColor | 设置背景色      |
+| 05   | 05. ALIGN_BOTTOM       | 底对齐          |
+| 06   | 06. ALIGN_BASELINE     | 基线对齐        |
+| 07   | 07. ALIGN_CENTER       | 中间对齐        |
+| 08   | 08. ALIGN_TOP          | 顶对齐          |
+| 09   | 09. setLineHeight      | 设置行高        |
+| 10   | 10. setQuoteColor      | 设置引用颜色    |
+| 11   | 11. setMargin          | 设置间距        |
+| 12   | 12. setLeadingMargin   | 设置行距        |
+| 13   | 13. setBullet          | 设置子弹        |
+| 14   | 14. setFontSize        | 设置字号        |
+| 15   | 15. setFontProportion  | 设置字体比例    |
+| 16   | 16. setFontXProportion | 设置字体横向比例 |
+| 17   | 17. setStrikeThrough   | 设置删除线      |
+| 18   | 18. setUnderline       | 设置下划线      |
+| 19   | 19. setSuperscript     | 设置上标        |
+| 20   | 20. setSubscript       | 设置下标        |
+| 21   | 21. setBold            | 设置粗体        |
+| 22   | 22. setItalic          | 设置斜体        |
+| 23   | 23. setBoldItalic      | 设置粗斜体      |
+| 24   | 24. setFontFamily      | 设置字体系列    |
+| 25   | 25. setTypeface        | 设置字体        |
+| 26   | 26. setHorizontalAlign | 设置水平对齐    |
+| 27   | 27. setVerticalAlign   | 设置垂直对齐    |
+| 28   | 28. setClickSpan       | 设置点击跨度    |
+| 29   | 29. setUrl             | 设置超链接      |
+| 30   | 30. setBlur            | 设置模糊        |
+| 31   | 31. setShader          | 设置着色        |
+| 32   | 32. setShadow          | 功能阴影        |
+| 33   | 33. setSpans           | 功能跨度        |
+| 34   | 34. append             | 添加字符串      |
+| 35   | 35. appendLine         | 添加行          |
+| 36   | 36. appendImage        | 添加图片        |
+| 37   | 37. appendSpace        | 添加空白        |
+| 38   | 38. create             | 创建富文本      |
 
 ### *060.文本TextHelper(444)*
 
-| 序号 | 方法                      | 功能 |
-|:-----|:--------------------------|:----|
-| 01   | 01. string2Unicode        | 功能 |
-| 02   | 02. string2Ascii          | 功能 |
-| 03   | 03. string2Dbc            | 功能 |
-| 04   | 04. string2Sbc            | 功能 |
-| 05   | 05. reverseStr            | 功能 |
-| 06   | 06. underLine2Camel       | 功能 |
-| 07   | 07. camel2UnderLine       | 功能 |
-| 08   | 08. upperFirstLetter      | 功能 |
-| 09   | 09. lowerFirstLetter      | 功能 |
-| 10   | 10. getPyFirstLetters     | 功能 |
-| 11   | 11. allGb2Py              | 功能 |
-| 12   | 12. oneGb2Py              | 功能 |
-| 13   | 13. oneGb2Ascii           | 功能 |
-| 14   | 14. getSurnameFirstLetter | 功能 |
-| 15   | 15. surname2Py            | 功能 |
+| 序号 | 方法                      | 功能              |
+|:-----|:--------------------------|:-----------------|
+| 01   | 01. string2Unicode        | 字符串转Unicode码 |
+| 02   | 02. string2Ascii          | 字符串转Ascii码   |
+| 03   | 03. string2Dbc            | 字符串转半角      |
+| 04   | 04. string2Sbc            | 字符串转全角      |
+| 05   | 05. reverseStr            | 倒序字符串        |
+| 06   | 06. underLine2Camel       | 下划线转驼峰      |
+| 07   | 07. camel2UnderLine       | 驼峰转下划线      |
+| 08   | 08. upperFirstLetter      | 首字母大写        |
+| 09   | 09. lowerFirstLetter      | 首字母小写        |
+| 10   | 10. getPyFirstLetters     | 获取拼音首字母    |
+| 11   | 11. allGb2Py              | 多GB2312转拼音    |
+| 12   | 12. oneGb2Py              | 单GB2312转拼音    |
+| 13   | 13. oneGb2Ascii           | 单GB2312转Ascii码 |
+| 14   | 14. getSurnameFirstLetter | 获取多音字首字母  |
+| 15   | 15. surname2Py            | 多音字转拼音      |
 
 ### *061.随机RandomHelper(78)*
 
-| 序号 | 方法                           | 功能 |
-|:-----|:-------------------------------|:----|
-| 01   | 01. getRandomNumbersAndLetters | 功能 |
-| 02   | 02. getRandomNumbers           | 功能 |
-| 03   | 03. getRandomLetters           | 功能 |
-| 04   | 04. getRandomCapitalLetters    | 功能 |
-| 05   | 05. getRandomLowerCaseLetters  | 功能 |
-| 06   | 06. getRandom                  | 功能 |
-| 07   | 07. randomColor                | 功能 |
-| 08   | 08. shuffle                    | 功能 |
+| 序号 | 方法                           | 功能                |
+|:-----|:-------------------------------|:-------------------|
+| 01   | 01. getRandomNumbersAndLetters | 获取随机数字字母组合 |
+| 02   | 02. getRandomNumbers           | 获取随机数字组合    |
+| 03   | 03. getRandomLetters           | 获取随机字母组合    |
+| 04   | 04. getRandomCapitalLetters    | 获取随机大写字母组合 |
+| 05   | 05. getRandomLowerCaseLetters  | 获取随机小写字母组合 |
+| 06   | 06. getRandom                  | 获取随机字符串或数字 |
+| 07   | 07. randomColor                | 随机颜色            |
+| 08   | 08. shuffle                    | 打乱                |
 
 ### *062.验证ValidationHelper(280)*
 
-| 序号 | 方法                    | 功能 |
-|:-----|:------------------------|:----|
-| 01   | 01. cutStringFromChar   | 功能 |
-| 02   | 02. cutString           | 功能 |
-| 03   | 03. getStringLength     | 功能 |
-| 04   | 04. getReplaceFirst     | 功能 |
-| 05   | 05. getReplaceAll       | 功能 |
-| 06   | 06. getSplits           | 功能 |
-| 07   | 07. getMatches          | 功能 |
-| 08   | 08. isMatch             | 功能 |
-| 09   | 09. isDigit             | 功能 |
-| 10   | 10. isPositiveDigit     | 功能 |
-| 11   | 11. isNegativeDigit     | 功能 |
-| 12   | 12. isNotNegativeDigit  | 功能 |
-| 13   | 13. isNotPositiveDigit  | 功能 |
-| 14   | 14. isDecimals          | 功能 |
-| 15   | 15. isPositiveDecimals  | 功能 |
-| 16   | 16. isNegativeDecimals  | 功能 |
-| 17   | 17. isNotZeroNumeric    | 功能 |
-| 18   | 18. isNumeric           | 功能 |
-| 19   | 19. isBlankLine         | 功能 |
-| 20   | 20. isUpLetter          | 功能 |
-| 21   | 21. isLowLetter         | 功能 |
-| 22   | 22. isLetter            | 功能 |
-| 23   | 23. isChinese           | 功能 |
-| 24   | 24. isDoubleByteChar    | 功能 |
-| 25   | 25. hasSpecialCharacter | 功能 |
-| 26   | 26. isBirthday          | 功能 |
-| 27   | 27. isDate              | 功能 |
-| 28   | 28. isPay               | 功能 |
-| 29   | 29. isBankNo            | 功能 |
-| 30   | 30. isQqNo              | 功能 |
-| 31   | 31. isVehicleNo         | 功能 |
-| 32   | 32. isOneCode           | 功能 |
-| 33   | 33. isPostalCode        | 功能 |
-| 34   | 34. isChinaPostalCode   | 功能 |
-| 35   | 35. hasChinaPostalCode  | 功能 |
-| 36   | 36. isEmail             | 功能 |
-| 37   | 37. isSimplePhone       | 功能 |
-| 38   | 38. isExactPhone        | 功能 |
-| 39   | 39. isChinaPlane        | 功能 |
-| 40   | 40. isGlobalPlane       | 功能 |
-| 41   | 41. isIpAddress         | 功能 |
-| 42   | 42. isUrl               | 功能 |
-| 43   | 43. isUserName          | 功能 |
-| 44   | 44. isRealName          | 功能 |
-| 45   | 45. isPassword          | 功能 |
-| 46   | 46. isCss               | 功能 |
-| 47   | 47. isHtmlTag           | 功能 |
-| 48   | 48. isHtmlNotes         | 功能 |
-| 49   | 49. isHtmlHyperLink     | 功能 |
-| 50   | 50. isHtmlImage         | 功能 |
-| 51   | 51. isHtmlColor         | 功能 |
-| 52   | 52. isHtmlRoute         | 功能 |
-| 53   | 53. isUrlInText         | 功能 |
-| 54   | 54. isHttpOrHttps       | 功能 |
-| 55   | 55. isIpV4              | 功能 |
-| 56   | 56. isIpV6              | 功能 |
-| 57   | 57. isIeVersion         | 功能 |
-| 58   | 58. isIntStr            | 功能 |
-| 59   | 59. isDoubleTwoUp       | 功能 |
-| 60   | 60. isContinuousNo      | 功能 |
-| 61   | 61. isContinuousWord    | 功能 |
-| 62   | 62. isPeculiarStr       | 功能 |
-| 63   | 63. isNumberLetter      | 功能 |
-| 64   | 64. isContainChinese    | 功能 |
-| 65   | 65. lengthChinese       | 功能 |
-| 66   | 66. lengthString        | 功能 |
-| 67   | 67. lengthCharStringSub | 功能 |
-| 68   | 68. uuid                | 功能 |
+| 序号 | 方法                    | 功能                             |
+|:-----|:------------------------|:--------------------------------|
+| 01   | 01. cutStringFromChar   | 从指定字符串开始截取指定长度字符串 |
+| 02   | 02. cutString           | 截取指定长度字符串                |
+| 03   | 03. getStringLength     | 获取字符串长度                   |
+| 04   | 04. getReplaceFirst     | 替换首个匹配子字符串              |
+| 05   | 05. getReplaceAll       | 替换所有匹配子字符串              |
+| 06   | 06. getSplits           | 按分隔符提取子字符串数组          |
+| 07   | 07. getMatches          | 获取所有匹配子字符串              |
+| 08   | 08. isMatch             | 是否匹配                         |
+| 09   | 09. isDigit             | 是否正负整数                     |
+| 10   | 10. isPositiveDigit     | 是否正整数                       |
+| 11   | 11. isNegativeDigit     | 是否负整数                       |
+| 12   | 12. isNotNegativeDigit  | 是否非正整数                     |
+| 13   | 13. isNotPositiveDigit  | 是否非负整数                     |
+| 14   | 14. isDecimals          | 是否正负小数                     |
+| 15   | 15. isPositiveDecimals  | 是否正小数                       |
+| 16   | 16. isNegativeDecimals  | 是否负小数                       |
+| 17   | 17. isNotZeroNumeric    | 是否无零数字                     |
+| 18   | 18. isNumeric           | 是否数字                         |
+| 19   | 19. isBlankLine         | 是否空行                         |
+| 20   | 20. isUpLetter          | 是否大写字母                     |
+| 21   | 21. isLowLetter         | 是否小写字母                     |
+| 22   | 22. isLetter            | 是否字母                         |
+| 23   | 23. isChinese           | 是否中文                         |
+| 24   | 24. isDoubleByteChar    | 是否双字节字符                   |
+| 25   | 25. hasSpecialCharacter | 是否特殊字符                     |
+| 26   | 26. isBirthday          | 是否生日                         |
+| 27   | 27. isDate              | 是否日期                         |
+| 28   | 28. isPay               | 是否金额                         |
+| 29   | 29. isBankNo            | 是否银行卡号                     |
+| 30   | 30. isQqNo              | 是否QQ号码                       |
+| 31   | 31. isVehicleNo         | 是否车牌号码                     |
+| 32   | 32. isOneCode           | 是否条码                         |
+| 33   | 33. isPostalCode        | 是否邮编                         |
+| 34   | 34. isChinaPostalCode   | 是否中国邮编                     |
+| 35   | 35. hasChinaPostalCode  | 是否包含中国邮编                 |
+| 36   | 36. isEmail             | 是否电子邮箱                     |
+| 37   | 37. isSimplePhone       | 是否简单手机号码                 |
+| 38   | 38. isExactPhone        | 是否真实手机号码                 |
+| 39   | 39. isChinaPlane        | 是否中国手机号码                 |
+| 40   | 40. isGlobalPlane       | 是否国家+城市+号码               |
+| 41   | 41. isIpAddress         | 是否IP地址                       |
+| 42   | 42. isUrl               | 是否Url                          |
+| 43   | 43. isUserName          | 是否用户名                       |
+| 44   | 44. isRealName          | 是否实名                         |
+| 45   | 45. isPassword          | 是否密码                         |
+| 46   | 46. isCss               | 是否CSS属性                      |
+| 47   | 47. isHtmlTag           | 是否HTML标签                     |
+| 48   | 48. isHtmlNotes         | 是否HTML注释                     |
+| 49   | 49. isHtmlHyperLink     | 是否HTML超链接                   |
+| 50   | 50. isHtmlImage         | 是否HTML图片                     |
+| 51   | 51. isHtmlColor         | 是否HTML颜色                     |
+| 52   | 52. isHtmlRoute         | 是否HTML文件路径及扩展名          |
+| 53   | 53. isUrlInText         | 是否包含Url                      |
+| 54   | 54. isHttpOrHttps       | 是否HTTP或HTTPS                  |
+| 55   | 55. isIpV4              | 是否IPV4                         |
+| 56   | 56. isIpV6              | 是否IPV6                         |
+| 57   | 57. isIeVersion         | 是否IE版本                       |
+| 58   | 58. isIntStr            | 是否Int字符串                    |
+| 59   | 59. isDoubleTwoUp       | 是否两位以上小数                 |
+| 60   | 60. isContinuousNo      | 是否连续数字                     |
+| 61   | 61. isContinuousWord    | 是否连续字母                     |
+| 62   | 62. isPeculiarStr       | 是否特殊字符                     |
+| 63   | 63. isNumberLetter      | 是否数字字母                     |
+| 64   | 64. isContainChinese    | 是否包含中文                     |
+| 65   | 65. lengthChinese       | 中文长度                         |
+| 66   | 66. lengthString        | 字符串长度                       |
+| 67   | 67. lengthCharStringSub | 包含指定子字符串长度              |
+| 68   | 68. uuid                | 通用唯一识别码32字符小写字符串    |
 
 >1. [常用正则表达式测试](http://tool.oschina.net/regex)
 >2. [常用正则表达式大全](http://toutiao.com/i6231678548520731137)
