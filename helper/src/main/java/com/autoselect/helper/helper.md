@@ -1503,301 +1503,301 @@
 
 ### *063.身份IdHelper(396)*
 
-| 序号 | 方法                    | 功能 |
-|:-----|:------------------------|:----|
-| 01   | 01. isIdCard15          | 功能 |
-| 02   | 02. isIdCard18          | 功能 |
-| 03   | 03. isIdCard            | 功能 |
-| 04   | 04. isIdCardExact       | 功能 |
-| 05   | 05. validateCard        | 功能 |
-| 06   | 06. cnCityCode          | 功能 |
-| 07   | 07. validateIdCard18    | 功能 |
-| 08   | 08. validateIdCard15    | 功能 |
-| 09   | 09. card15ToCard18      | 功能 |
-| 10   | 10. getProvinceByIdCard | 功能 |
-| 11   | 11. getBirthdayByIdCard | 功能 |
-| 12   | 12. getBirthByIdCard    | 功能 |
-| 13   | 13. getAgeByIdCard      | 功能 |
-| 14   | 14. getYearByIdCard     | 功能 |
-| 15   | 15. getMonthByIdCard    | 功能 |
-| 16   | 16. getDateByIdCard     | 功能 |
-| 17   | 17. getGenderByIdCard   | 功能 |
-| 18   | 18. cnMinority          | 功能 |
-| 19   | 19. validateIdCard10    | 功能 |
-| 20   | 20. hkFirstCode         | 功能 |
-| 21   | 21. validateHKCard      | 功能 |
-| 22   | 22. twFirstCode         | 功能 |
-| 23   | 23. validateTWCard      | 功能 |
+| 序号 | 方法                    | 功能               |
+|:-----|:------------------------|:------------------|
+| 01   | 01. isIdCard15          | 是否15位身份证号   |
+| 02   | 02. isIdCard18          | 是否18位身份证号   |
+| 03   | 03. isIdCard            | 是否身份证号       |
+| 04   | 04. isIdCardExact       | 是否真实身份证号   |
+| 05   | 05. validateCard        | 验证身份证号       |
+| 06   | 06. cnCityCode          | 省分代码          |
+| 07   | 07. validateIdCard18    | 验证18位身份证号   |
+| 08   | 08. validateIdCard15    | 验证15位身份证号   |
+| 09   | 09. card15ToCard18      | 15位身份证号转18位 |
+| 10   | 10. getProvinceByIdCard | 身份证号获取省份   |
+| 11   | 11. getBirthdayByIdCard | 身份证号获取生日   |
+| 12   | 12. getBirthByIdCard    | 身份证号获取出生   |
+| 13   | 13. getAgeByIdCard      | 身份证号获取年龄   |
+| 14   | 14. getYearByIdCard     | 身份证号获取年     |
+| 15   | 15. getMonthByIdCard    | 身份证号获取月     |
+| 16   | 16. getDateByIdCard     | 身份证号获取日     |
+| 17   | 17. getGenderByIdCard   | 身份证号获取省性别 |
+| 18   | 18. cnMinority          | 中国民族          |
+| 19   | 19. validateIdCard10    | 验证10位身份证号   |
+| 20   | 20. hkFirstCode         | 香港身份证首代码   |
+| 21   | 21. validateHKCard      | 验证香港身份证号   |
+| 22   | 22. twFirstCode         | 台湾身份证首代码   |
+| 23   | 23. validateTWCard      | 验证台湾身份证号   |
 
 ### *064.银行BankHelper(1720)*
 
-| 序号 | 方法                     | 功能 |
-|:-----|:-------------------------|:----|
-| 01   | 01. getNameOfBank        | 功能 |
-| 02   | 02. checkBankCard        | 功能 |
-| 03   | 03. getBankCardCheckCode | 功能 |
+| 序号 | 方法                     | 功能              |
+|:-----|:-------------------------|:-----------------|
+| 01   | 01. getNameOfBank        | 获取银行名称      |
+| 02   | 02. checkBankCard        | 验证银行卡号      |
+| 03   | 03. getBankCardCheckCode | 获取银行卡号校验码 |
 
 ### *065.图码BarQRHelper(149)*
 
-| 序号 | 方法                 | 功能 |
-|:-----|:---------------------|:----|
-| 01   | 01. decodeFromBitmap | 功能 |
-| 02   | 02. builderBarCode   | 功能 |
-| 03   | 03. createBarCode    | 功能 |
-| 04   | 04. builderQRCode    | 功能 |
-| 05   | 05. createQRCode     | 功能 |
+| 序号 | 方法                 | 功能       |
+|:-----|:---------------------|:----------|
+| 01   | 01. decodeFromBitmap | 从图片解码 |
+| 02   | 02. builderBarCode   | 构建条形码 |
+| 03   | 03. createBarCode    | 创建条形码 |
+| 04   | 04. builderQRCode    | 构建二维码 |
+| 05   | 05. createQRCode     | 创建二维码 |
 
 >- implementation "com.google.zxing:core:3.4.1"
 
 ### *066.软包PackageHelper(18)*
 
-| 序号 | 方法                        | 功能 |
-|:-----|:----------------------------|:----|
-| 01   | 01. isExistPackageName      | 功能 |
-| 02   | 02. getInstalledPackageInfo | 功能 |
+| 序号 | 方法                        | 功能           |
+|:-----|:----------------------------|:--------------|
+| 01   | 01. isExistPackageName      | 是否存在安装包 |
+| 02   | 02. getInstalledPackageInfo | 所有安装包信息 |
 
 ### *067.编码EncodeHelper(115)*
 
-| 序号 | 方法                    | 功能 |
-|:-----|:------------------------|:----|
-| 01   | 01. base64Encode2String | 功能 |
-| 02   | 02. base64EncodeUrlSafe | 功能 |
-| 03   | 03. base64Encode        | 功能 |
-| 04   | 04. base64Decode        | 功能 |
-| 05   | 05. binEncode           | 功能 |
-| 06   | 06. binDecode           | 功能 |
-| 07   | 07. urlEncode           | 功能 |
-| 08   | 08. urlDecode           | 功能 |
-| 09   | 09. htmlEncode          | 功能 |
-| 10   | 10. htmlDecode          | 功能 |
+| 序号 | 方法                    | 功能               |
+|:-----|:------------------------|:------------------|
+| 01   | 01. base64Encode2String | Base64编码字符串   |
+| 02   | 02. base64EncodeUrlSafe | Base64编码Url安全 |
+| 03   | 03. base64Encode        | Base64编码字节数组 |
+| 04   | 04. base64Decode        | Base64解码        |
+| 05   | 05. binEncode           | 字符串二进制编码   |
+| 06   | 06. binDecode           | 字符串二进制解码   |
+| 07   | 07. urlEncode           | Url编码           |
+| 08   | 08. urlDecode           | Url解码           |
+| 09   | 09. htmlEncode          | HTML编码          |
+| 10   | 10. htmlDecode          | HTML解码          |
 
 ### *068.加密EncryptHelper(510)*
 
-| 序号 | 方法                           | 功能 |
-|:-----|:-------------------------------|:----|
-| 01   | 01. xorEncode                  | 功能 |
-| 02   | 02. xorDecode                  | 功能 |
-| 03   | 03. checkMD2                   | 功能 |
-| 04   | 04. encryptMD2ToString         | 功能 |
-| 05   | 05. encryptMD2                 | 功能 |
-| 06   | 06. checkMD5                   | 功能 |
-| 07   | 07. encryptMD5ToString         | 功能 |
-| 08   | 08. encryptMD5                 | 功能 |
-| 09   | 09. encryptMD5ToStringWithSalt | 功能 |
-| 10   | 10. checkSHA1                  | 功能 |
-| 11   | 11. encryptSHA1ToString        | 功能 |
-| 12   | 12. encryptSHA1                | 功能 |
-| 13   | 13. checkSHA224                | 功能 |
-| 14   | 14. encryptSHA224ToString      | 功能 |
-| 15   | 15. encryptSHA224              | 功能 |
-| 16   | 16. checkSHA256                | 功能 |
-| 17   | 17. encryptSHA256ToString      | 功能 |
-| 18   | 18. encryptSHA256              | 功能 |
-| 19   | 19. checkSHA384                | 功能 |
-| 20   | 20. encryptSHA384ToString      | 功能 |
-| 21   | 21. encryptSHA384              | 功能 |
-| 22   | 22. checkSHA512                | 功能 |
-| 23   | 23. encryptSHA512ToString      | 功能 |
-| 24   | 24. encryptSHA512              | 功能 |
-| 25   | 25. checkHmacMD5               | 功能 |
-| 26   | 26. encryptHmacMD5ToString     | 功能 |
-| 27   | 27. encryptHmacMD5             | 功能 |
-| 28   | 28. checkHmacSHA1              | 功能 |
-| 29   | 29. encryptHmacSHA1ToString    | 功能 |
-| 30   | 30. encryptHmacSHA1            | 功能 |
-| 31   | 31. checkHmacSHA224            | 功能 |
-| 32   | 32. encryptHmacSHA224ToString  | 功能 |
-| 33   | 33. encryptHmacSHA224          | 功能 |
-| 34   | 34. checkHmacSHA256            | 功能 |
-| 35   | 35. encryptHmacSHA256ToString  | 功能 |
-| 36   | 36. encryptHmacSHA256          | 功能 |
-| 37   | 37. checkHmacSHA384            | 功能 |
-| 38   | 38. encryptHmacSHA384ToString  | 功能 |
-| 39   | 39. encryptHmacSHA384          | 功能 |
-| 40   | 40. checkHmacSHA512            | 功能 |
-| 41   | 41. encryptHmacSHA512ToString  | 功能 |
-| 42   | 42. encryptHmacSHA512          | 功能 |
-| 43   | 43. checkFile                  | 功能 |
-| 44   | 44. encryptFile2String         | 功能 |
-| 45   | 45. encryptFile                | 功能 |
-| 46   | 46. initKeyDES                 | 功能 |
-| 47   | 47. encryptDES2Base64          | 功能 |
-| 48   | 48. encryptDES2HexString       | 功能 |
-| 49   | 49. encryptDES                 | 功能 |
-| 50   | 50. decryptDES4Base64          | 功能 |
-| 51   | 51. decryptDES4HexString       | 功能 |
-| 52   | 52. decryptDES                 | 功能 |
-| 53   | 53. initKey3DES                | 功能 |
-| 54   | 54. encrypt3DES2Base64         | 功能 |
-| 55   | 55. encrypt3DES2HexString      | 功能 |
-| 56   | 56. encrypt3DES                | 功能 |
-| 57   | 57. decrypt3DES4Base64         | 功能 |
-| 58   | 58. decrypt3DES4HexString      | 功能 |
-| 59   | 59. decrypt3DES                | 功能 |
-| 60   | 60. initKeyAES                 | 功能 |
-| 61   | 61. encryptAES2Base64          | 功能 |
-| 62   | 62. encryptAES2HexString       | 功能 |
-| 63   | 63. encryptAES                 | 功能 |
-| 64   | 64. decryptAES4Base64          | 功能 |
-| 65   | 65. decryptAES4HexString       | 功能 |
-| 66   | 66. decryptAES                 | 功能 |
-| 67   | 67. AES_Transformation         | 功能 |
-| 68   | 68. DES_Transformation         | 功能 |
-| 69   | 69. TripleDES_Transformation   | 功能 |
-| 70   | 70. initKeyRSA                 | 功能 |
-| 71   | 71. encryptRSA2Base64          | 功能 |
-| 72   | 72. encryptRSA2HexString       | 功能 |
-| 73   | 73. encryptRSA                 | 功能 |
-| 74   | 74. decryptRSA4Base64          | 功能 |
-| 75   | 75. decryptRSA4HexString       | 功能 |
-| 76   | 76. decryptRSA                 | 功能 |
+| 序号 | 方法                           | 功能                   |
+|:-----|:-------------------------------|:----------------------|
+| 01   | 01. xorEncode                  | 异或加密              |
+| 02   | 02. xorDecode                  | 异或解密              |
+| 03   | 03. checkMD2                   | 检查MD2是否符合        |
+| 04   | 04. encryptMD2ToString         | MD2加密字符串          |
+| 05   | 05. encryptMD2                 | MD2加密字节数组        |
+| 06   | 06. checkMD5                   | 检查MD5是否符合        |
+| 07   | 07. encryptMD5ToString         | MD5加密字符串          |
+| 08   | 08. encryptMD5                 | MD5加密字节数组        |
+| 09   | 09. encryptMD5ToStringWithSalt | MD5加密字符串加盐      |
+| 10   | 10. checkSHA1                  | 检查SHA1是否符合       |
+| 11   | 11. encryptSHA1ToString        | SHA1加密字符串         |
+| 12   | 12. encryptSHA1                | SHA1加密字节数组       |
+| 13   | 13. checkSHA224                | 检查SHA224是否符合     |
+| 14   | 14. encryptSHA224ToString      | SHA224加密字符串       |
+| 15   | 15. encryptSHA224              | SHA224加密字节数组     |
+| 16   | 16. checkSHA256                | 检查SHA256是否符合     |
+| 17   | 17. encryptSHA256ToString      | SHA256加密字符串       |
+| 18   | 18. encryptSHA256              | SHA256加密字节数组     |
+| 19   | 19. checkSHA384                | 检查SHA384是否符合     |
+| 20   | 20. encryptSHA384ToString      | SHA384加密字符串       |
+| 21   | 21. encryptSHA384              | SHA256加密字节数组     |
+| 22   | 22. checkSHA512                | 检查SHA512是否符合     |
+| 23   | 23. encryptSHA512ToString      | SHA512加密字符串       |
+| 24   | 24. encryptSHA512              | SHA512加密字节数组     |
+| 25   | 25. checkHmacMD5               | 检查HmacMD5是否符合    |
+| 26   | 26. encryptHmacMD5ToString     | HmacMD5加密字符串      |
+| 27   | 27. encryptHmacMD5             | HmacMD5加密字节数组    |
+| 28   | 28. checkHmacSHA1              | 检查HmacSHA1是否符合   |
+| 29   | 29. encryptHmacSHA1ToString    | HmacSHA1加密字符串     |
+| 30   | 30. encryptHmacSHA1            | HmacSHA1加密字节数组   |
+| 31   | 31. checkHmacSHA224            | 检查HmacSHA224是否符合 |
+| 32   | 32. encryptHmacSHA224ToString  | HmacSHA224加密字符串   |
+| 33   | 33. encryptHmacSHA224          | HmacSHA224加密字节数组 |
+| 34   | 34. checkHmacSHA256            | 检查HmacSHA256是否符合 |
+| 35   | 35. encryptHmacSHA256ToString  | HmacSHA256加密字符串   |
+| 36   | 36. encryptHmacSHA256          | HmacSHA256加密字节数组 |
+| 37   | 37. checkHmacSHA384            | 检查HmacSHA384是否符合 |
+| 38   | 38. encryptHmacSHA384ToString  | HmacSHA384加密字符串   |
+| 39   | 39. encryptHmacSHA384          | HmacSHA384加密字节数组 |
+| 40   | 40. checkHmacSHA512            | 检查HmacSHA512是否符合 |
+| 41   | 41. encryptHmacSHA512ToString  | HmacSHA512加密字符串   |
+| 42   | 42. encryptHmacSHA512          | HmacSHA512加密字节数组 |
+| 43   | 43. checkFile                  | 检查文件加密是否符合   |
+| 44   | 44. encryptFile2String         | 文件加密字符串         |
+| 45   | 45. encryptFile                | 文件加密字节数组       |
+| 46   | 46. initKeyDES                 | 初始DESKey            |
+| 47   | 47. encryptDES2Base64          | DES加密Base64字节数组  |
+| 48   | 48. encryptDES2HexString       | DES加密十六进制字符串  |
+| 49   | 49. encryptDES                 | DES加密字节数组        |
+| 50   | 50. decryptDES4Base64          | DES解密Base64字节数组  |
+| 51   | 51. decryptDES4HexString       | DES解密十六进制字符串  |
+| 52   | 52. decryptDES                 | DES解密字节数组        |
+| 53   | 53. initKey3DES                | 初始3DESKey           |
+| 54   | 54. encrypt3DES2Base64         | 3DES加密Base64字节数组 |
+| 55   | 55. encrypt3DES2HexString      | 3DES加密十六进制字符串 |
+| 56   | 56. encrypt3DES                | 3DES加密字节数组       |
+| 57   | 57. decrypt3DES4Base64         | 3DES解密Base64字节数组 |
+| 58   | 58. decrypt3DES4HexString      | 3DES解密十六进制字符串 |
+| 59   | 59. decrypt3DES                | 3DES解密字节数组       |
+| 60   | 60. initKeyAES                 | 初始AESKey            |
+| 61   | 61. encryptAES2Base64          | AES加密Base64字节数组  |
+| 62   | 62. encryptAES2HexString       | AES加密十六进制字符串  |
+| 63   | 63. encryptAES                 | AES加密字节数组        |
+| 64   | 64. decryptAES4Base64          | AES解密Base64字节数组  |
+| 65   | 65. decryptAES4HexString       | AES解密十六进制字符串  |
+| 66   | 66. decryptAES                 | AES解密字节数组        |
+| 67   | 67. AES_Transformation         | AES变换               |
+| 68   | 68. DES_Transformation         | DES变换               |
+| 69   | 69. TripleDES_Transformation   | TripleDES变换         |
+| 70   | 70. initKeyRSA                 | 初始RSAKey            |
+| 71   | 71. encryptRSA2Base64          | RSA加密Base64字节数组  |
+| 72   | 72. encryptRSA2HexString       | RSA加密十六进制字符串  |
+| 73   | 73. encryptRSA                 | RSA加密字节数组        |
+| 74   | 74. decryptRSA4Base64          | RSA解密Base64字节数组  |
+| 75   | 75. decryptRSA4HexString       | RSA解密十六进制字符串  |
+| 76   | 76. decryptRSA                 | RSA解密字节数组        |
 
 ### *069.位算BitHelper(35)*
 
-| 序号 | 方法                | 功能 |
-|:-----|:--------------------|:----|
-| 01   | 01. checkBitValue   | 功能 |
-| 02   | 02. getBitValue     | 功能 |
-| 03   | 03. reverseBitValue | 功能 |
-| 04   | 04. setBitValue     | 功能 |
+| 序号 | 方法                | 功能     |
+|:-----|:--------------------|:--------|
+| 01   | 01. checkBitValue   | 检查位值 |
+| 02   | 02. getBitValue     | 获取位值 |
+| 03   | 03. reverseBitValue | 异或位值 |
+| 04   | 04. setBitValue     | 设置位值 |
 
 ### *070.压缩CompressHelper(92)*
 
-| 序号 | 方法           | 功能 |
-|:-----|:---------------|:----|
-| 01   | 01. compress   | 功能 |
-| 02   | 02. decompress | 功能 |
+| 序号 | 方法           | 功能         |
+|:-----|:---------------|:------------|
+| 01   | 01. compress   | 压缩字节数组 |
+| 02   | 02. decompress | 解压字节数组 |
 
 ### *071.平面PlaneHelper(15)*
 
-| 序号 | 方法               | 功能 |
-|:-----|:-------------------|:----|
-| 01   | 01. pointToDegrees | 功能 |
-| 02   | 02. distance       | 功能 |
-| 03   | 03. checkInRound   | 功能 |
+| 序号 | 方法               | 功能     |
+|:-----|:-------------------|:--------|
+| 01   | 01. pointToDegrees | 点转角度 |
+| 02   | 02. distance       | 两点距离 |
+| 03   | 03. checkInRound   | 是否圆中 |
 
 ### *072.计算CalculateHelper(222)*
 
-| 序号 | 方法                  | 功能 |
-|:-----|:----------------------|:----|
-| 01   | 01. add               | 功能 |
-| 02   | 02. subtract          | 功能 |
-| 03   | 03. multiply          | 功能 |
-| 04   | 04. divide            | 功能 |
-| 05   | 05. remainder         | 功能 |
-| 06   | 06. round             | 功能 |
-| 07   | 07. compareBigDecimal | 功能 |
-| 08   | 08. formatMoney       | 功能 |
-| 09   | 09. adjustDouble      | 功能 |
+| 序号 | 方法                  | 功能         |
+|:-----|:----------------------|:------------|
+| 01   | 01. add               | 加          |
+| 02   | 02. subtract          | 减          |
+| 03   | 03. multiply          | 乘          |
+| 04   | 04. divide            | 除          |
+| 05   | 05. remainder         | 余          |
+| 06   | 06. round             | 四舍五入    |
+| 07   | 07. compareBigDecimal | 比较小数大小 |
+| 08   | 08. formatMoney       | 格式化金额   |
+| 09   | 09. adjustDouble      | 调整数字精度 |
 
 ### *073.尺寸DensityHelper(58)*
 
-| 序号 | 方法                  | 功能 |
-|:-----|:----------------------|:----|
-| 01   | 01. dip2px            | 功能 |
-| 02   | 02. sp2px             | 功能 |
-| 03   | 03. value2px          | 功能 |
-| 04   | 04. px2dip            | 功能 |
-| 05   | 05. px2sp             | 功能 |
-| 06   | 06. px2value          | 功能 |
-| 07   | 07. OnGetSizeListener | 功能 |
-| 08   | 08. forceGetViewSize  | 功能 |
-| 09   | 09. getViewWidth      | 功能 |
-| 10   | 10. getViewHeight     | 功能 |
-| 11   | 11. measureView       | 功能 |
+| 序号 | 方法                  | 功能                |
+|:-----|:----------------------|:-------------------|
+| 01   | 01. dip2px            | dip转px            |
+| 02   | 02. sp2px             | sp转px             |
+| 03   | 03. value2px          | 指定值转px值        |
+| 04   | 04. px2dip            | px转dip            |
+| 05   | 05. px2sp             | px转sp             |
+| 06   | 06. px2value          | px值转指定值        |
+| 07   | 07. OnGetSizeListener | 获取尺寸监听器      |
+| 08   | 08. forceGetViewSize  | 获取视图尺寸执行监听 |
+| 09   | 09. getViewWidth      | 获取视图宽度        |
+| 10   | 10. getViewHeight     | 获取视图高度        |
+| 11   | 11. measureView       | 策略视图尺寸        |
 
 ### *074.坐标CoordinateHelper(94)*
 
-| 序号 | 方法             | 功能 |
-|:-----|:-----------------|:----|
-| 01   | 01. bd09ToWgs84  | 功能 |
-| 02   | 02. bd09ToGcj02  | 功能 |
-| 03   | 03. gcj02ToWgs84 | 功能 |
-| 04   | 04. outOfChina   | 功能 |
-| 05   | 05. transformLng | 功能 |
-| 06   | 06. transformLat | 功能 |
-| 07   | 07. transform    | 功能 |
-| 08   | 08. wgs84ToBd09  | 功能 |
-| 09   | 09. wgs84ToGcj02 | 功能 |
-| 10   | 10. gcj02ToBd09  | 功能 |
+| 序号 | 方法             | 功能         |
+|:-----|:-----------------|:-------------|
+| 01   | 01. bd09ToWgs84  | bd09转wgs84  |
+| 02   | 02. bd09ToGcj02  | bd09转gcj02  |
+| 03   | 03. gcj02ToWgs84 | gcj02转wgs84 |
+| 04   | 04. outOfChina   | 超出中国范围 |
+| 05   | 05. transformLng | 转换纬度     |
+| 06   | 06. transformLat | 转换经度     |
+| 07   | 07. transform    | 转换经纬度   |
+| 08   | 08. wgs84ToBd09  | wgs84转bd09  |
+| 09   | 09. wgs84ToGcj02 | wgs84转gcj02 |
+| 10   | 10. gcj02ToBd09  | gcj02转bd09  |
 
 ### *075.转换ConvertHelper(520)*
 
-| 序号 | 方法                        | 功能 |
-|:-----|:----------------------------|:----|
-| 01   | 01. BYTE                    | 功能 |
-| 02   | 02. KB                      | 功能 |
-| 03   | 03. MB                      | 功能 |
-| 04   | 04. GB                      | 功能 |
-| 05   | 05. MemoryUnit              | 功能 |
-| 06   | 06. memorySize2ByteSize     | 功能 |
-| 07   | 07. byteSize2MemorySize     | 功能 |
-| 08   | 08. byteSize2MemorySizeFit  | 功能 |
-| 09   | 09. byteSize2MemorySizeDesc | 功能 |
-| 10   | 10. MSEC                    | 功能 |
-| 11   | 11. SEC                     | 功能 |
-| 12   | 12. MIN                     | 功能 |
-| 13   | 13. HOUR                    | 功能 |
-| 14   | 14. DAY                     | 功能 |
-| 15   | 15. TimeUnit                | 功能 |
-| 16   | 16. timeSpan2Millis         | 功能 |
-| 17   | 17. millis2TimeSpan         | 功能 |
-| 18   | 18. millis2TimeSpanFit      | 功能 |
-| 19   | 19. millis2TimeSpanFitByNow | 功能 |
-| 20   | 20. timeZonePhone           | 功能 |
-| 21   | 21. timeZoneBeijing         | 功能 |
-| 22   | 22. phoneTime2BeijingTime   | 功能 |
-| 23   | 23. beijingTime2PhoneTime   | 功能 |
-| 24   | 24. changeTimeZone          | 功能 |
-| 25   | 25. millis2Date             | 功能 |
-| 26   | 26. date2Millis             | 功能 |
-| 27   | 27. millis2String           | 功能 |
-| 28   | 28. string2Millis           | 功能 |
-| 29   | 29. date2String             | 功能 |
-| 30   | 30. string2Date             | 功能 |
-| 31   | 31. bytes2Chars             | 功能 |
-| 32   | 32. chars2Bytes             | 功能 |
-| 33   | 33. bytes2Bits              | 功能 |
-| 34   | 34. bits2Bytes              | 功能 |
-| 35   | 35. hexDigitsLower          | 功能 |
-| 36   | 36. hexDigitsUpper          | 功能 |
-| 37   | 37. bytes2HexStringIsUpper  | 功能 |
-| 38   | 38. bytes2HexString         | 功能 |
-| 39   | 39. hexString2Bytes         | 功能 |
-| 40   | 40. hex2Int                 | 功能 |
-| 41   | 41. outputStream2String     | 功能 |
-| 42   | 42. outputStream2Bytes      | 功能 |
-| 43   | 43. string2OutputStream     | 功能 |
-| 44   | 44. bytes2OutputStream      | 功能 |
-| 45   | 45. inputStream2String      | 功能 |
-| 46   | 46. inputStream2Bytes       | 功能 |
-| 47   | 47. bytes2InputStream       | 功能 |
-| 48   | 48. input2OutputStream      | 功能 |
-| 49   | 49. output2InputStream      | 功能 |
-| 50   | 50. string2InputStream      | 功能 |
-| 51   | 51. drawable2Bytes          | 功能 |
-| 52   | 52. bitmap2Bytes            | 功能 |
-| 53   | 53. drawable2Bitmap         | 功能 |
-| 54   | 54. bytes2Drawable          | 功能 |
-| 55   | 55. bitmap2Drawable         | 功能 |
-| 56   | 56. bytes2Bitmap            | 功能 |
-| 57   | 57. nullOfString            | 功能 |
-| 58   | 58. saveDecimals            | 功能 |
-| 59   | 59. int2Bytes               | 功能 |
-| 60   | 60. bytes2Int               | 功能 |
-| 61   | 61. ip2Long                 | 功能 |
-| 62   | 62. string2Byte             | 功能 |
-| 63   | 63. string2Short            | 功能 |
-| 64   | 64. string2Int              | 功能 |
-| 65   | 65. string2Long             | 功能 |
-| 66   | 66. string2Float            | 功能 |
-| 67   | 67. string2Double           | 功能 |
-| 68   | 68. string2Boolean          | 功能 |
-| 69   | 69. double2Int              | 功能 |
-| 70   | 70. double2Long             | 功能 |
-| 71   | 71. long2Int                | 功能 |
-| 72   | 72. long2Double             | 功能 |
-| 73   | 73. char2Int                | 功能 |
+| 序号 | 方法                        | 功能                      |
+|:-----|:----------------------------|:-------------------------|
+| 01   | 01. BYTE                    | 单字节                   |
+| 02   | 02. KB                      | 千字节                   |
+| 03   | 03. MB                      | 兆字节                   |
+| 04   | 04. GB                      | 吉字节                   |
+| 05   | 05. MemoryUnit              | 存储单位                 |
+| 06   | 06. memorySize2ByteSize     | 尺寸单位转字节            |
+| 07   | 07. byteSize2MemorySize     | 字节转尺寸单位            |
+| 08   | 08. byteSize2MemorySizeFit  | 字节转尺寸单位友好显示    |
+| 09   | 09. byteSize2MemorySizeDesc | 字节转尺寸单位描述        |
+| 10   | 10. MSEC                    | 毫                       |
+| 11   | 11. SEC                     | 秒                       |
+| 12   | 12. MIN                     | 分                       |
+| 13   | 13. HOUR                    | 时                       |
+| 14   | 14. DAY                     | 日                       |
+| 15   | 15. TimeUnit                | 时间单位                 |
+| 16   | 16. timeSpan2Millis         | 时间单位转毫秒            |
+| 17   | 17. millis2TimeSpan         | 毫秒转时间单位            |
+| 18   | 18. millis2TimeSpanFit      | 毫秒转时间单位友好显示    |
+| 19   | 19. millis2TimeSpanFitByNow | 毫秒转时间单位友好显示现在 |
+| 20   | 20. timeZonePhone           | 手机时区                 |
+| 21   | 21. timeZoneBeijing         | 北京时区                 |
+| 22   | 22. phoneTime2BeijingTime   | 手机时间转北京时间        |
+| 23   | 23. beijingTime2PhoneTime   | 北京时间转手机时间        |
+| 24   | 24. changeTimeZone          | 改变时区                 |
+| 25   | 25. millis2Date             | 毫秒转日期                |
+| 26   | 26. date2Millis             | 日期转毫秒                |
+| 27   | 27. millis2String           | 毫秒转字符串              |
+| 28   | 28. string2Millis           | 字符串转毫秒              |
+| 29   | 29. date2String             | 日期转字符串              |
+| 30   | 30. string2Date             | 字符串转日期              |
+| 31   | 31. bytes2Chars             | 字节数组转字符数组        |
+| 32   | 32. chars2Bytes             | 字符数组转字节数组        |
+| 33   | 33. bytes2Bits              | 字节数组转位字符串        |
+| 34   | 34. bits2Bytes              | 位字符串转字节数组        |
+| 35   | 35. hexDigitsLower          | 十六进制数字小写          |
+| 36   | 36. hexDigitsUpper          | 十六进制数字大写          |
+| 37   | 37. bytes2HexStringIsUpper  | 字节数组转十六进制大写    |
+| 38   | 38. bytes2HexString         | 字节数组转十六进制        |
+| 39   | 39. hexString2Bytes         | 十六进制转字节数组        |
+| 40   | 40. hex2Int                 | 十六进制转十进制Int       |
+| 41   | 41. outputStream2String     | 输出流转字符串            |
+| 42   | 42. outputStream2Bytes      | 输出流转字节数组          |
+| 43   | 43. string2OutputStream     | 字符串转输出流            |
+| 44   | 44. bytes2OutputStream      | 字节数组转输出流          |
+| 45   | 45. inputStream2String      | 输入流转字符串            |
+| 46   | 46. inputStream2Bytes       | 输入流转字节数组          |
+| 47   | 47. bytes2InputStream       | 字节数组转输入流          |
+| 48   | 48. input2OutputStream      | 输入流转输出流            |
+| 49   | 49. output2InputStream      | 输出流转输入流            |
+| 50   | 50. string2InputStream      | 字符串转输入流            |
+| 51   | 51. drawable2Bytes          | 可绘制对象转字节数组      |
+| 52   | 52. bitmap2Bytes            | 位图转字节数组            |
+| 53   | 53. drawable2Bitmap         | 可绘制对象转位图          |
+| 54   | 54. bytes2Drawable          | 字节数组转可绘制对象      |
+| 55   | 55. bitmap2Drawable         | 位图转可绘制对象          |
+| 56   | 56. bytes2Bitmap            | 字节数组转位图            |
+| 57   | 57. nullOfString            | 字符串去空                |
+| 58   | 58. saveDecimals            | 保存指定位数小数          |
+| 59   | 59. int2Bytes               | Int转字节数组             |
+| 60   | 60. bytes2Int               | 字节数组转Int             |
+| 61   | 61. ip2Long                 | IP转Long                 |
+| 62   | 62. string2Byte             | 字符串转Byte             |
+| 63   | 63. string2Short            | 字符串转Short            |
+| 64   | 64. string2Int              | 字符串转Int              |
+| 65   | 65. string2Long             | 字符串转Long             |
+| 66   | 66. string2Float            | 字符串转Float            |
+| 67   | 67. string2Double           | 字符串转Double           |
+| 68   | 68. string2Boolean          | 字符串转Boolean          |
+| 69   | 69. double2Int              | Double转Int              |
+| 70   | 70. double2Long             | Double转Long             |
+| 71   | 71. long2Int                | Long转Int                |
+| 72   | 72. long2Double             | Long转Double             |
+| 73   | 73. char2Int                | Char转Int                |
 
 ### *076.迁移MigrationHelper(97)*
 
