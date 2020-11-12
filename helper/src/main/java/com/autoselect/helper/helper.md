@@ -1006,212 +1006,212 @@
 
 ### *038.网视WebViewHelper(76)*
 
-| 序号 | 方法          | 功能 |
-|:-----|:--------------|:----|
-| 01   | 01. init      | 功能 |
-| 02   | 02. userAgent | 功能 |
-| 03   | 03. loadData  | 功能 |
-| 04   | 04. goBack    | 功能 |
+| 序号 | 方法          | 功能            |
+|:-----|:--------------|:----------------|
+| 01   | 01. init      | 初始化网络视图   |
+| 02   | 02. userAgent | 浏览器指纹      |
+| 03   | 03. loadData  | 网络视图加载数据 |
+| 04   | 04. goBack    | 网络视图返回    |
 
 ### *039.着色ColorHelper(76)*
 
-| 序号 | 方法                    | 功能 |
-|:-----|:------------------------|:----|
-| 01   | 01. randomColor         | 功能 |
-| 02   | 02. getRandomColor      | 功能 |
-| 03   | 03. getColor            | 功能 |
-| 04   | 04. setAlphaComponent   | 功能 |
-| 05   | 05. setRedComponent     | 功能 |
-| 06   | 06. setGreenComponent   | 功能 |
-| 07   | 07. setBlueComponent    | 功能 |
-| 08   | 08. string2ColorInt     | 功能 |
-| 09   | 09. int2ArgbOrRgbString | 功能 |
-| 10   | 10. tintCursorDrawable  | 功能 |
-| 11   | 11. tintDrawable        | 功能 |
+| 序号 | 方法                    | 功能                       |
+|:-----|:------------------------|:--------------------------|
+| 01   | 01. randomColor         | 随机颜色                   |
+| 02   | 02. getRandomColor      | 获取随机颜色               |
+| 03   | 03. getColor            | 根据ID获取颜色             |
+| 04   | 04. setAlphaComponent   | 颜色设置透明度             |
+| 05   | 05. setRedComponent     | 颜色设置红成分             |
+| 06   | 06. setGreenComponent   | 颜色设置绿成分             |
+| 07   | 07. setBlueComponent    | 颜色设置蓝成分             |
+| 08   | 08. string2ColorInt     | 颜色字符串转颜色值          |
+| 09   | 09. int2ArgbOrRgbString | 颜色值转ARGB或RGB颜色字符串 |
+| 10   | 10. tintCursorDrawable  | 输入框着色                 |
+| 11   | 11. tintDrawable        | 可绘制对象着色             |
 
 ### *040.吐司ToastHelper(360)*
 
-| 序号 | 方法                   | 功能 |
-|:-----|:-----------------------|:----|
-| 01   | 01. TopCenter          | 功能 |
-| 02   | 02. TopLeft            | 功能 |
-| 03   | 03. TopRight           | 功能 |
-| 04   | 04. Center             | 功能 |
-| 05   | 05. CenterLeft         | 功能 |
-| 06   | 06. CenterRight        | 功能 |
-| 07   | 07. BottomCenter       | 功能 |
-| 08   | 08. BottomLeft         | 功能 |
-| 09   | 09. BottomRight        | 功能 |
-| 10   | 10. setGravity         | 功能 |
-| 11   | 11. setMsgTextSize     | 功能 |
-| 12   | 12. COLOR_TEXT_DEFAULT | 功能 |
-| 13   | 13. setMsgColor        | 功能 |
-| 14   | 14. setBgResource      | 功能 |
-| 15   | 15. COLOR_BG_INFO      | 功能 |
-| 16   | 16. COLOR_BG_SUCCESS   | 功能 |
-| 17   | 17. COLOR_BG_WARNING   | 功能 |
-| 18   | 18. COLOR_BG_ERROR     | 功能 |
-| 19   | 19. setBgColor         | 功能 |
-| 20   | 20. showShort          | 功能 |
-| 21   | 21. showLong           | 功能 |
-| 22   | 22. cancel             | 功能 |
-| 23   | 23. showCustomShort    | 功能 |
-| 24   | 24. showCustomLong     | 功能 |
+| 序号 | 方法                   | 功能                |
+|:-----|:-----------------------|:-------------------|
+| 01   | 01. TopCenter          | 顶部居中            |
+| 02   | 02. TopLeft            | 顶部居左            |
+| 03   | 03. TopRight           | 顶部居右            |
+| 04   | 04. Center             | 中部居中            |
+| 05   | 05. CenterLeft         | 中部居左            |
+| 06   | 06. CenterRight        | 中部居右            |
+| 07   | 07. BottomCenter       | 底部居中            |
+| 08   | 08. BottomLeft         | 底部居左            |
+| 09   | 09. BottomRight        | 底部居右            |
+| 10   | 10. setGravity         | 设置对齐            |
+| 11   | 11. setMsgTextSize     | 设置消息文本尺寸    |
+| 12   | 12. COLOR_TEXT_DEFAULT | 消息文本默认颜色    |
+| 13   | 13. setMsgColor        | 设置消息文本颜色    |
+| 14   | 14. setBgResource      | 设置背景资源        |
+| 15   | 15. COLOR_BG_INFO      | 信息背景颜色        |
+| 16   | 16. COLOR_BG_SUCCESS   | 成功背景颜色        |
+| 17   | 17. COLOR_BG_WARNING   | 警告背景颜色        |
+| 18   | 18. COLOR_BG_ERROR     | 错误背景颜色        |
+| 19   | 19. setBgColor         | 设置背景颜色        |
+| 20   | 20. showShort          | 显示短吐司          |
+| 21   | 21. showLong           | 显示长吐司          |
+| 22   | 22. cancel             | 取消显示            |
+| 23   | 23. showCustomShort    | 显示自定义视图短吐司 |
+| 24   | 24. showCustomLong     | 显示自定义视图长吐司 |
 
 ### *041.零食SnackHelper(107)*
 
-| 序号 | 方法                      | 功能 |
-|:-----|:--------------------------|:----|
-| 01   | 01. colorSnackbar         | 功能 |
-| 02   | 02. typeSnackbar          | 功能 |
-| 03   | 03. DEFAULT_INFO_BLUE     | 功能 |
-| 04   | 04. SUCCESS_CONFIRM_GREEN | 功能 |
-| 05   | 05. WARNING_ORANGE        | 功能 |
-| 06   | 06. ERROR_ALERT_RED       | 功能 |
-| 07   | 07. ERROR_ALERT_YELLOW    | 功能 |
-| 08   | 08. switchType            | 功能 |
-| 09   | 09. setColor              | 功能 |
-| 10   | 10. setBottomMargin       | 功能 |
-| 11   | 11. setBackgroundResource | 功能 |
-| 12   | 12. setAction             | 功能 |
-| 13   | 13. getView               | 功能 |
-| 14   | 14. addView               | 功能 |
+| 序号 | 方法                      | 功能                  |
+|:-----|:--------------------------|:---------------------|
+| 01   | 01. colorSnackbar         | 颜色零食              |
+| 02   | 02. typeSnackbar          | 类型零食              |
+| 03   | 03. DEFAULT_INFO_BLUE     | 默认蓝类型            |
+| 04   | 04. SUCCESS_CONFIRM_GREEN | 成功绿类型            |
+| 05   | 05. WARNING_ORANGE        | 警告橙类型            |
+| 06   | 06. ERROR_ALERT_RED       | 错误红类型            |
+| 07   | 07. ERROR_ALERT_YELLOW    | 错误黄类型            |
+| 08   | 08. switchType            | 切换类型              |
+| 09   | 09. setColor              | 设置颜色              |
+| 10   | 10. setBottomMargin       | 设置底部间距          |
+| 11   | 11. setBackgroundResource | 设置背景资源          |
+| 12   | 12. setAction             | 设置文本及其颜色和监听 |
+| 13   | 13. getView               | 从零食获取视图        |
+| 14   | 14. addView               | 添加视图到零食        |
 
 >- implementation "com.google.android.material:material:1.2.1"
 
 ### *042.连点ClickHelper(40)*
 
-| 序号 | 方法                  | 功能 |
-|:-----|:----------------------|:----|
-| 01   | 01. isFastDoubleClick | 功能 |
-| 02   | 02. doClick           | 功能 |
+| 序号 | 方法                  | 功能         |
+|:-----|:----------------------|:------------|
+| 01   | 01. isFastDoubleClick | 是否快速点击 |
+| 02   | 02. doClick           | 连续点击    |
 
 ### *043.防抖AntiShakeHelper(20)*
 
-| 序号 | 方法        | 功能 |
-|:-----|:------------|:----|
-| 01   | 01. isValid | 功能 |
+| 序号 | 方法        | 功能         |
+|:-----|:------------|:------------|
+| 01   | 01. isValid | 防抖是否可用 |
 
 ### *044.抖动ShakeHelper(26)*
 
-| 序号 | 方法               | 功能 |
-|:-----|:-------------------|:----|
-| 01   | 01. shakeAnimation | 功能 |
-| 02   | 02. shake          | 功能 |
+| 序号 | 方法               | 功能           |
+|:-----|:-------------------|:--------------|
+| 01   | 01. shakeAnimation | 抖动动画      |
+| 02   | 02. shake          | 系列输入框抖动 |
 
 ### *045.全局AHelper(287)*
 
-| 序号 | 方法                       | 功能 |
-|:-----|:---------------------------|:----|
-| 01   | 01. FileProvider4Helper    | 功能 |
-| 02   | 02. ContentProvider4Helper | 功能 |
-| 03   | 03. initContext            | 功能 |
-| 04   | 04. app                    | 功能 |
-| 05   | 05. activityLifecycle      | 功能 |
-| 06   | 06. activityLinkedList     | 功能 |
-| 07   | 07. isForegroundApp        | 功能 |
-| 08   | 08. topActivityOrApp       | 功能 |
-| 09   | 09. handler                | 功能 |
-| 10   | 10. runOnUiThread          | 功能 |
-| 11   | 11. runOnUiThreadDelayed   | 功能 |
+| 序号 | 方法                       | 功能                |
+|:-----|:---------------------------|:-------------------|
+| 01   | 01. FileProvider4Helper    | 文件提供者          |
+| 02   | 02. ContentProvider4Helper | 内容提供者          |
+| 03   | 03. initContext            | 初始化上下文        |
+| 04   | 04. app                    | 应用上下文          |
+| 05   | 05. activityLifecycle      | 活动生命周期        |
+| 06   | 06. activityLinkedList     | 活动列表            |
+| 07   | 07. isForegroundApp        | 是否当前APP         |
+| 08   | 08. topActivityOrApp       | 顶部活动或应用上下文 |
+| 09   | 09. handler                | UI线程处理器        |
+| 10   | 10. runOnUiThread          | 运行UI线程          |
+| 11   | 11. runOnUiThreadDelayed   | 延迟运行UI线程      |
 
 ### *046.接口ApiHelper(44)*
 
-| 序号 | 方法            | 功能 |
-|:-----|:----------------|:----|
-| 01   | 01. registerApi | 功能 |
-| 02   | 02. toString    | 功能 |
-| 03   | 03. BaseApi     | 功能 |
-| 04   | 04. getApi      | 功能 |
-| 05   | 05. Api         | 功能 |
+| 序号 | 方法            | 功能                         |
+|:-----|:----------------|:----------------------------|
+| 01   | 01. registerApi | 注册API                     |
+| 02   | 02. toString    | "$loggerTag: $apiMapInject" |
+| 03   | 03. BaseApi     | API基类                     |
+| 04   | 04. getApi      | 获取API                     |
+| 05   | 05. Api         | API注解                     |
 
 ### *047.总线BusHelper(239)*
 
-| 序号 | 方法             | 功能 |
-|:-----|:-----------------|:----|
-| 01   | 01. registerBus  | 功能 |
-| 02   | 02. toString     | 功能 |
-| 03   | 03. register     | 功能 |
-| 04   | 04. post         | 功能 |
-| 05   | 05. unregister   | 功能 |
-| 06   | 06. postSticky   | 功能 |
-| 07   | 07. removeSticky | 功能 |
-| 08   | 08. ThreadMode   | 功能 |
-| 09   | 09. Bus          | 功能 |
+| 序号 | 方法             | 功能                                |
+|:-----|:-----------------|:-----------------------------------|
+| 01   | 01. registerBus  | 注册总线                           |
+| 02   | 02. toString     | "$loggerTag: $mTag_BusInfoListMap" |
+| 03   | 03. register     | 注册                               |
+| 04   | 04. post         | 执行                               |
+| 05   | 05. unregister   | 取消注册                           |
+| 06   | 06. postSticky   | 执行黏性                           |
+| 07   | 07. removeSticky | 移除黏性                           |
+| 08   | 08. ThreadMode   | 线程模式                           |
+| 09   | 09. Bus          | 总线                               |
 
 ### *048.内存CacheMemoryHelper(78)*
 
-| 序号 | 方法              | 功能 |
-|:-----|:------------------|:----|
-| 01   | 01. SEC           | 功能 |
-| 02   | 02. MIN           | 功能 |
-| 03   | 03. HOUR          | 功能 |
-| 04   | 04. DAY           | 功能 |
-| 05   | 05. getInstance   | 功能 |
-| 06   | 06. toString      | 功能 |
-| 07   | #### CacheMemory  | 功能 |
-| 08   | 01. cacheCount    | 功能 |
-| 09   | 02. getCacheCount | 功能 |
-| 10   | 03. put           | 功能 |
-| 11   | 04. get           | 功能 |
-| 12   | 05. remove        | 功能 |
-| 13   | 06. clear         | 功能 |
+| 序号 | 方法              | 功能                                            |
+|:-----|:------------------|:-----------------------------------------------|
+| 01   | 01. SEC           | 1秒                                            |
+| 02   | 02. MIN           | 60秒                                           |
+| 03   | 03. HOUR          | 3600秒                                         |
+| 04   | 04. DAY           | 86400秒                                        |
+| 05   | 05. getInstance   | 获取实例                                       |
+| 06   | 06. toString      | "$cacheKey@${Integer.toHexString(hashCode())}" |
+| 07   | #### CacheMemory  | 内存缓存                                       |
+| 08   | 01. cacheCount    | 默认缓存大小                                    |
+| 09   | 02. getCacheCount | 获取缓存大小                                    |
+| 10   | 03. put           | 放入缓存                                       |
+| 11   | 04. get           | 从缓存获取                                     |
+| 12   | 05. remove        | 从缓存移除                                     |
+| 13   | 06. clear         | 清空缓存                                       |
 
 ### *049.磁盘CacheDiskHelper(523)*
 
-| 序号 | 方法                  | 功能 |
-|:-----|:----------------------|:----|
-| 01   | 01. SEC               | 功能 |
-| 02   | 02. MIN               | 功能 |
-| 03   | 03. HOUR              | 功能 |
-| 04   | 04. DAY               | 功能 |
-| 05   | 05. getInstance       | 功能 |
-| 06   | 06. toString          | 功能 |
-| 07   | 07. XFileOutputStream | 功能 |
-| 08   | #### CacheDisk        | 功能 |
-| 09   | 01. cacheCount        | 功能 |
-| 10   | 02. getCacheCount     | 功能 |
-| 11   | 03. cacheSize         | 功能 |
-| 12   | 04. getCacheSize      | 功能 |
-| 13   | 05. put               | 功能 |
-| 14   | 06. getBytes          | 功能 |
-| 15   | 07. getString         | 功能 |
-| 16   | 08. getJSONObject     | 功能 |
-| 17   | 09. getJSONArray      | 功能 |
-| 18   | 10. getBitmap         | 功能 |
-| 19   | 11. getDrawable       | 功能 |
-| 20   | 12. getSerializable   | 功能 |
-| 21   | 13. getParcelable     | 功能 |
-| 22   | 14. remove            | 功能 |
-| 23   | 15. clear             | 功能 |
+| 序号 | 方法                  | 功能                                            |
+|:-----|:----------------------|:-----------------------------------------------|
+| 01   | 01. SEC               | 1秒                                            |
+| 02   | 02. MIN               | 60秒                                           |
+| 03   | 03. HOUR              | 3600秒                                         |
+| 04   | 04. DAY               | 86400秒                                        |
+| 05   | 05. getInstance       | 获取实例                                       |
+| 06   | 06. toString          | "$cacheKey@${Integer.toHexString(hashCode())}" |
+| 07   | 07. XFileOutputStream | 文件输出流缓存                                  |
+| 08   | #### CacheDisk        | 磁盘缓存                                       |
+| 09   | 01. cacheCount        | 默认缓存大小                                    |
+| 10   | 02. getCacheCount     | 获取缓存大小                                    |
+| 11   | 03. cacheSize         | 默认缓存尺寸                                    |
+| 12   | 04. getCacheSize      | 获取缓存尺寸                                    |
+| 13   | 05. put               | 放入缓存                                       |
+| 14   | 06. getBytes          | 从缓存获取字节数组                              |
+| 15   | 07. getString         | 从缓存获取字符串                                |
+| 16   | 08. getJSONObject     | 从缓存获取JsonObject                           |
+| 17   | 09. getJSONArray      | 从缓存获取JsonArray                            |
+| 18   | 10. getBitmap         | 从缓存获取位图                                  |
+| 19   | 11. getDrawable       | 从缓存获取可绘制对象                            |
+| 20   | 12. getSerializable   | 从缓存获取Serializable                         |
+| 21   | 13. getParcelable     | 从缓存获取Parcelable                           |
+| 22   | 14. remove            | 从缓存移除                                     |
+| 23   | 15. clear             | 清空缓存                                       |
 
 ### *050.双重CacheDoubleHelper(247)*
 
-| 序号 | 方法                    | 功能 |
-|:-----|:------------------------|:----|
-| 01   | 01. SEC                 | 功能 |
-| 02   | 02. MIN                 | 功能 |
-| 03   | 03. HOUR                | 功能 |
-| 04   | 04. DAY                 | 功能 |
-| 05   | 05. getInstance         | 功能 |
-| 06   | #### CacheDouble        | 功能 |
-| 07   | 01. cacheMemoryCount    | 功能 |
-| 08   | 02. getCacheMemoryCount | 功能 |
-| 09   | 03. cacheDiskCount      | 功能 |
-| 10   | 04. getCacheDiskCount   | 功能 |
-| 11   | 05. cacheDiskSize       | 功能 |
-| 12   | 06. getCacheDiskSize    | 功能 |
-| 13   | 07. put                 | 功能 |
-| 14   | 08. getBytes            | 功能 |
-| 15   | 09. getString           | 功能 |
-| 16   | 10. getJSONObject       | 功能 |
-| 17   | 11. getJSONArray        | 功能 |
-| 18   | 12. getBitmap           | 功能 |
-| 19   | 13. getDrawable         | 功能 |
-| 20   | 14. getSerializable     | 功能 |
-| 21   | 15. getParcelable       | 功能 |
-| 22   | 16. remove              | 功能 |
-| 23   | 17. clear               | 功能 |
+| 序号 | 方法                    | 功能                   |
+|:-----|:------------------------|:----------------------|
+| 01   | 01. SEC                 | 1秒                   |
+| 02   | 02. MIN                 | 60秒                  |
+| 03   | 03. HOUR                | 3600秒                |
+| 04   | 04. DAY                 | 86400秒               |
+| 05   | 05. getInstance         | 获取实例               |
+| 06   | #### CacheDouble        | 双重缓存               |
+| 07   | 01. cacheMemoryCount    | 内存缓存大小           |
+| 08   | 02. getCacheMemoryCount | 获取内存缓存大小       |
+| 09   | 03. cacheDiskCount      | 磁盘缓存大小           |
+| 10   | 04. getCacheDiskCount   | 获取磁盘缓存大小       |
+| 11   | 05. cacheDiskSize       | 磁盘缓存尺寸           |
+| 12   | 06. getCacheDiskSize    | 获取磁盘缓存尺寸       |
+| 13   | 07. put                 | 放入缓存               |
+| 14   | 08. getBytes            | 从缓存获取字节数组     |
+| 15   | 09. getString           | 从缓存获取字符串       |
+| 16   | 10. getJSONObject       | 从缓存获取JsonObject   |
+| 17   | 11. getJSONArray        | 从缓存获取JsonArray    |
+| 18   | 12. getBitmap           | 从缓存获取位图         |
+| 19   | 13. getDrawable         | 从缓存获取可绘制对象   |
+| 20   | 14. getSerializable     | 从缓存获取Serializable |
+| 21   | 15. getParcelable       | 从缓存获取Parcelable   |
+| 22   | 16. remove              | 从缓存移除             |
+| 23   | 17. clear               | 清空缓存               |
 
 ### *051.线程ThreadHelper(328)*
 
