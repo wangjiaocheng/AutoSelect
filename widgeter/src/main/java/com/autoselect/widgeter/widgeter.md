@@ -1037,94 +1037,94 @@ class GuideActivity : AppCompatActivity() {
 
 ### *004.卡组CardStackView：AdapterAnimator、AdapterAllMoveDownAnimator、AdapterUpDownAnimator、AdapterUpDownStackAnimator、ViewDataObserver、AdapterDataObservable、ViewHolder、Adapter、AdapterStack、DelegateScrollStack、DelegateScroll(861+36+7)*
 
-| 序号 | 方法                           | 功能 |
-|:-----|:-------------------------------|:----|
-| 01   | 01. overlapGaps                | 功能 |
-| 02   | 02. overlapGapsCollapse        | 功能 |
-| 03   | 03. duration                   | 功能 |
-| 04   | 04. numBottomShow              | 功能 |
-| 05   | 05. itemExpendListener         | 功能 |
-| 06   | 06. selectPosition             | 功能 |
-| 07   | 07. isExpending                | 功能 |
-| 08   | 08. clearSelectPosition        | 功能 |
-| 09   | 09. updateSelectPosition       | 功能 |
-| 10   | 10. showHeight                 | 功能 |
-| 11   | 11. clearScrollYAndTranslation | 功能 |
-| 12   | 12. delegateScroll             | 功能 |
-| 13   | 13. adapterAnimator            | 功能 |
-| 14   | 14. setAnimationType           | 功能 |
-| 15   | 15. scrollEnable               | 功能 |
-| 16   | 16. totalLength                | 功能 |
-| 17   | 17. viewScrollX                | 功能 |
-| 18   | 18. viewScrollY                | 功能 |
-| 19   | 19. scrollOffset               | 功能 |
-| 20   | 20. fling                      | 功能 |
-| 21   | 21. getViewHolder              | 功能 |
-| 22   | 22. performItemClick           | 功能 |
-| 23   | 23. adapterStack               | 功能 |
-| 24   | 24. cardNext                   | 功能 |
-| 25   | 25. cardPrevious               | 功能 |
-| 26   | #### AdapterDataObservable     | 功能 |
-| 27   | 01. notifyChanged              | 功能 |
-| 28   | 02. hasObservers               | 功能 |
-| 29   | #### ViewHolder                | 功能 |
-| 30   | 01. context                    | 功能 |
-| 31   | 02. itemViewType               | 功能 |
-| 32   | 03. position                   | 功能 |
-| 33   | 04. onAnimationStateChange     | 功能 |
-| 34   | 05. onItemExpand               | 功能 |
-| 35   | #### Adapter                   | 功能 |
-| 36   | 01. itemCount                  | 功能 |
-| 37   | 02. notifyDataSetChanged       | 功能 |
-| 38   | 03. registerObserver           | 功能 |
-| 39   | 04. createView                 | 功能 |
-| 40   | 05. onCreateView               | 功能 |
-| 41   | 06. bindViewHolder             | 功能 |
-| 42   | 07. onBindViewHolder           | 功能 |
-| 43   | 08. getItemViewType            | 功能 |
-| 44   | #### AdapterStack              | 功能 |
-| 45   | 01. layoutInflater             | 功能 |
-| 46   | 02. dataList                   | 功能 |
-| 47   | 03. itemCount                  | 功能 |
-| 48   | 04. onBindViewHolder           | 功能 |
-| 49   | 05. getItem                    | 功能 |
-| 50   | 06. bindView                   | 功能 |
+| 序号 | 方法                           | 功能                |
+|:-----|:-------------------------------|:-------------------|
+| 01   | 01. overlapGaps                | 重叠间隙            |
+| 02   | 02. overlapGapsCollapse        | 收起重叠间隙        |
+| 03   | 03. duration                   | 持续时间            |
+| 04   | 04. numBottomShow              | 底部显示数量        |
+| 05   | 05. itemExpendListener         | 项展开监听器        |
+| 06   | 06. selectPosition             | 选中位置            |
+| 07   | 07. isExpending                | 是否展开中          |
+| 08   | 08. clearSelectPosition        | 清除选中位置        |
+| 09   | 09. updateSelectPosition       | 更新选中位置        |
+| 10   | 10. showHeight                 | 显示高度            |
+| 11   | 11. clearScrollYAndTranslation | 清除滚动转换        |
+| 12   | 12. delegateScroll             | 代理滚动            |
+| 13   | 13. adapterAnimator            | 适配器动画          |
+| 14   | 14. setAnimationType           | 设置动画类型        |
+| 15   | 15. scrollEnable               | 启用滚动            |
+| 16   | 16. totalLength                | 总长                |
+| 17   | 17. viewScrollX                | 视图x滚动           |
+| 18   | 18. viewScrollY                | 视图y滚动           |
+| 19   | 19. scrollOffset               | 滚动偏移            |
+| 20   | 20. fling                      | 翻动                |
+| 21   | 21. getViewHolder              | 获取视图持有器      |
+| 22   | 22. performItemClick           | 点击动画到位置      |
+| 23   | 23. adapterStack               | 栈适配器            |
+| 24   | 24. cardNext                   | 下一卡片            |
+| 25   | 25. cardPrevious               | 上一卡片            |
+| 26   | #### AdapterDataObservable     | 适配器数据观察者    |
+| 27   | 01. notifyChanged              | 通知改变            |
+| 28   | 02. hasObservers               | 是否拥有观察者      |
+| 29   | #### ViewHolder                | 视图持有器          |
+| 30   | 01. context                    | 上下文              |
+| 31   | 02. itemViewType               | 项视图类型          |
+| 32   | 03. position                   | 位置                |
+| 33   | 04. onAnimationStateChange     | 待实现动画状态改变   |
+| 34   | 05. onItemExpand               | 待实现项展开        |
+| 35   | #### Adapter                   | 适配器              |
+| 36   | 01. itemCount                  | 项数量              |
+| 37   | 02. notifyDataSetChanged       | 通知数据集改变      |
+| 38   | 03. registerObserver           | 注册观察者          |
+| 39   | 04. createView                 | 创建视图            |
+| 40   | 05. onCreateView               | 待实现创建视图      |
+| 41   | 06. bindViewHolder             | 绑定视图持有器      |
+| 42   | 07. onBindViewHolder           | 待实现绑定视图持有器 |
+| 43   | 08. getItemViewType            | 获取项视图类型      |
+| 44   | #### AdapterStack              | 栈适配器            |
+| 45   | 01. layoutInflater             | 布局填充器          |
+| 46   | 02. dataList                   | 数据列表            |
+| 47   | 03. itemCount                  | 项数量              |
+| 48   | 04. onBindViewHolder           | 绑定视图持有器      |
+| 49   | 05. getItem                    | 获取项              |
+| 50   | 06. bindView                   | 绑定视图            |
 
 ### *005.标题Title(203)*
 
-| 序号 | 方法                      | 功能 |
-|:-----|:--------------------------|:----|
-| 01   | 01. rootLayout            | 功能 |
-| 02   | 02. leftLL                | 功能 |
-| 03   | 03. leftIV                | 功能 |
-| 04   | 04. leftTV                | 功能 |
-| 05   | 05. rightLL               | 功能 |
-| 06   | 06. rightIV               | 功能 |
-| 07   | 07. rightTV               | 功能 |
-| 08   | 08. textAutoZoom          | 功能 |
-| 09   | 09. leftIcon              | 功能 |
-| 10   | 10. isLeftIconVisibility  | 功能 |
-| 11   | 11. leftText              | 功能 |
-| 12   | 12. leftTextColor         | 功能 |
-| 13   | 13. leftTextSize          | 功能 |
-| 14   | 14. isLeftTextVisibility  | 功能 |
-| 15   | 15. rightIcon             | 功能 |
-| 16   | 16. isRightIconVisibility | 功能 |
-| 17   | 17. rightText             | 功能 |
-| 18   | 18. rightTextColor        | 功能 |
-| 19   | 19. rightTextSize         | 功能 |
-| 20   | 20. isRightTextVisibility | 功能 |
-| 21   | 21. title                 | 功能 |
-| 22   | 22. titleColor            | 功能 |
-| 23   | 23. titleSize             | 功能 |
-| 24   | 24. isTitleVisibility     | 功能 |
-| 25   | 25. setLeftFinish         | 功能 |
-| 26   | 26. setLeftListener       | 功能 |
-| 27   | 27. setLeftIconListener   | 功能 |
-| 28   | 28. setLeftTextListener   | 功能 |
-| 29   | 29. setRightListener      | 功能 |
-| 30   | 30. setRightIconListener  | 功能 |
-| 31   | 31. setRightTextListener  | 功能 |
+| 序号 | 方法                      | 功能                |
+|:-----|:--------------------------|:-------------------|
+| 01   | 01. rootLayout            | 根布局              |
+| 02   | 02. leftLL                | 左布局              |
+| 03   | 03. leftIV                | 左图片              |
+| 04   | 04. leftTV                | 左文本              |
+| 05   | 05. rightLL               | 右布局              |
+| 06   | 06. rightIV               | 右图片              |
+| 07   | 07. rightTV               | 右文本              |
+| 08   | 08. textAutoZoom          | 自动缩放文本        |
+| 09   | 09. leftIcon              | 左图标              |
+| 10   | 10. isLeftIconVisibility  | 左图标可见性        |
+| 11   | 11. leftText              | 左文字              |
+| 12   | 12. leftTextColor         | 左文字颜色          |
+| 13   | 13. leftTextSize          | 左文字颜色          |
+| 14   | 14. isLeftTextVisibility  | 左文字可见性        |
+| 15   | 15. rightIcon             | 左图标              |
+| 16   | 16. isRightIconVisibility | 左图标可见性        |
+| 17   | 17. rightText             | 左文字              |
+| 18   | 18. rightTextColor        | 左文字颜色          |
+| 19   | 19. rightTextSize         | 左文字颜色          |
+| 20   | 20. isRightTextVisibility | 左文字可见性        |
+| 21   | 21. title                 | 标题                |
+| 22   | 22. titleColor            | 标题颜色            |
+| 23   | 23. titleSize             | 标题尺寸            |
+| 24   | 24. isTitleVisibility     | 标题可见性          |
+| 25   | 25. setLeftFinish         | 设置左点击结束      |
+| 26   | 26. setLeftListener       | 设置左点击监听器    |
+| 27   | 27. setLeftIconListener   | 设置左图标点击监听器 |
+| 28   | 28. setLeftTextListener   | 设置左文本点击监听器 |
+| 29   | 29. setRightListener      | 设置右点击监听器    |
+| 30   | 30. setRightIconListener  | 设置右图标点击监听器 |
+| 31   | 31. setRightTextListener  | 设置右文本点击监听器 |
 
 >- layout:[title_view.xml](../../../../res/layout/title_view.xml)
 >- mipmap
@@ -1134,65 +1134,65 @@ class GuideActivity : AppCompatActivity() {
 
 ### *006.侧边Side(240)*
 
-| 序号 | 方法                          | 功能 |
-|:-----|:------------------------------|:----|
-| 01   | 01. lazyRespond               | 功能 |
-| 02   | 02. textColor                 | 功能 |
-| 03   | 03. textSize                  | 功能 |
-| 04   | 04. maxOffset                 | 功能 |
-| 05   | 05. sideBarPosition           | 功能 |
-| 06   | 06. sideTextAlignment         | 功能 |
-| 07   | 07. indexItems                | 功能 |
-| 08   | 08. onSelectIndexItemListener | 功能 |
+| 序号 | 方法                          | 功能            |
+|:-----|:------------------------------|:----------------|
+| 01   | 01. lazyRespond               | 是否懒加载      |
+| 02   | 02. textColor                 | 文本颜色        |
+| 03   | 03. textSize                  | 文本尺寸        |
+| 04   | 04. maxOffset                 | 最大偏移        |
+| 05   | 05. sideBarPosition           | 侧边位置        |
+| 06   | 06. sideTextAlignment         | 文字间距        |
+| 07   | 07. indexItems                | 索引列表        |
+| 08   | 08. onSelectIndexItemListener | 选中索引项监听器 |
 
 ### *007.蛛网Cobweb：RotateInfo(411)*
 
-| 序号 | 方法                       | 功能 |
-|:-----|:---------------------------|:----|
-| 01   | 01. spiderNameSize         | 功能 |
-| 02   | 02. spiderMaxLevel         | 功能 |
-| 03   | 03. spiderColor            | 功能 |
-| 04   | 04. spiderRadiusColor      | 功能 |
-| 05   | 05. spiderLevelColor       | 功能 |
-| 06   | 06. spiderLevelStrokeColor | 功能 |
-| 07   | 07. spiderLevelStrokeWidth | 功能 |
-| 08   | 08. isSpiderLevelStroke    | 功能 |
-| 09   | 09. isSpiderRotate         | 功能 |
-| 10   | 10. ModelSpider            | 功能 |
-| 11   | 11. spiderList             | 功能 |
-| 12   | #### RotateInfo            | 功能 |
-| 13   | 01. getAngleRotate         | 功能 |
-| 14   | 02. getQuadrant            | 功能 |
-| 15   | 03. getAngle               | 功能 |
-| 16   | 04. CIRCLE_ANGLE           | 功能 |
-| 17   | 05. getAngleNormalized     | 功能 |
+| 序号 | 方法                       | 功能         |
+|:-----|:---------------------------|:------------|
+| 01   | 01. spiderNameSize         | 名称尺寸    |
+| 02   | 02. spiderMaxLevel         | 最大层级    |
+| 03   | 03. spiderColor            | 内部填充颜色 |
+| 04   | 04. spiderRadiusColor      | 半径颜色    |
+| 05   | 05. spiderLevelColor       | 填充颜色    |
+| 06   | 06. spiderLevelStrokeColor | 描边颜色    |
+| 07   | 07. spiderLevelStrokeWidth | 描边宽度    |
+| 08   | 08. isSpiderLevelStroke    | 层级描边    |
+| 09   | 09. isSpiderRotate         | 手势旋转    |
+| 10   | 10. ModelSpider            | 蜘蛛模型    |
+| 11   | 11. spiderList             | 蜘蛛列表    |
+| 12   | #### RotateInfo            | 方向信息    |
+| 13   | 01. getAngleRotate         | 获取方向    |
+| 14   | 02. getQuadrant            | 获取象限    |
+| 15   | 03. getAngle               | 获取角度    |
+| 16   | 04. CIRCLE_ANGLE           | 圆角        |
+| 17   | 05. getAngleNormalized     | 功能        |
 
 ### *008.网速NetSpeedView(155)*
 
-| 序号 | 方法               | 功能 |
-|:-----|:-------------------|:----|
-| 01   | 01. isMulti        | 功能 |
-| 02   | 02. timeInterval   | 功能 |
-| 03   | 03. updateViewData | 功能 |
-| 04   | 04. setTextColor   | 功能 |
-| 05   | 05. setTextSize    | 功能 |
+| 序号 | 方法               | 功能         |
+|:-----|:-------------------|:------------|
+| 01   | 01. isMulti        | 是否显示多项 |
+| 02   | 02. timeInterval   | 间隔时间    |
+| 03   | 03. updateViewData | 更新视图数据 |
+| 04   | 04. setTextColor   | 设置文本颜色 |
+| 05   | 05. setTextSize    | 设置文本尺寸 |
 
 >- layout:[netspeed_view.xml](../../../../res/layout/netspeed_view.xml)
 
 ### *009.机座SeatAirplane(890)*
 
-| 序号 | 方法                    | 功能 |
-|:-----|:------------------------|:----|
-| 01   | 01. setEmptySelecting   | 功能 |
-| 02   | 02. maxSelectStates     | 功能 |
-| 03   | 03. setSeatSelected     | 功能 |
-| 04   | 04. bitmapSeatNormal    | 功能 |
-| 05   | 05. bitmapSeatSelected  | 功能 |
-| 06   | 06. bitmapSeatSelecting | 功能 |
-| 07   | 07. getFontLength       | 功能 |
-| 08   | 08. getFontHeight       | 功能 |
-| 09   | 09. setBitmap           | 功能 |
-| 10   | 10. goCabinPosition     | 功能 |
+| 序号 | 方法                    | 功能            |
+|:-----|:------------------------|:----------------|
+| 01   | 01. setEmptySelecting   | 座位清空        |
+| 02   | 02. maxSelectStates     | 最大选中数量    |
+| 03   | 03. setSeatSelected     | 设置选中行列编号 |
+| 04   | 04. bitmapSeatNormal    | 普通座位图片    |
+| 05   | 05. bitmapSeatSelected  | 选中座位图片    |
+| 06   | 06. bitmapSeatSelecting | 选择座位图片    |
+| 07   | 07. getFontLength       | 获取字长        |
+| 08   | 08. getFontHeight       | 获取字高        |
+| 09   | 09. setBitmap           | 设置图片        |
+| 10   | 10. goCabinPosition     | 到达座位位置    |
 
 >- mipmap（SeatMovie共用）
 >
@@ -1202,91 +1202,91 @@ class GuideActivity : AppCompatActivity() {
 
 ### *010.影座SeatMovie(717)*
 
-| 序号 | 方法                     | 功能 |
-|:-----|:-------------------------|:----|
-| 01   | 01. numRow               | 功能 |
-| 02   | 02. numColumn            | 功能 |
-| 03   | 03. lineNumbers          | 功能 |
-| 04   | 04. setData              | 功能 |
-| 05   | 05. selectedSeat         | 功能 |
-| 06   | 06. seatChecker          | 功能 |
-| 07   | 07. getRowNumber         | 功能 |
-| 08   | 08. getColumnNumber      | 功能 |
-| 09   | 09. isDrawOverview       | 功能 |
-| 10   | 10. isRenewOverview      | 功能 |
-| 11   | 11. isDebug              | 功能 |
-| 12   | 12. screenName           | 功能 |
-| 13   | 13. isNeedDrawSeatBitmap | 功能 |
-| 14   | 14. maxSelected          | 功能 |
+| 序号 | 方法                     | 功能                |
+|:-----|:-------------------------|:-------------------|
+| 01   | 01. numRow               | 行数量              |
+| 02   | 02. numColumn            | 列数量              |
+| 03   | 03. lineNumbers          | 行编码              |
+| 04   | 04. setData              | 设置数据            |
+| 05   | 05. selectedSeat         | 已选中座位          |
+| 06   | 06. seatChecker          | 座位选择检查器      |
+| 07   | 07. getRowNumber         | 获取行号            |
+| 08   | 08. getColumnNumber      | 获取列号            |
+| 09   | 09. isDrawOverview       | 是否绘制覆盖        |
+| 10   | 10. isRenewOverview      | 是否预览覆盖        |
+| 11   | 11. isDebug              | 是否调试            |
+| 12   | 12. screenName           | 屏幕名称            |
+| 13   | 13. isNeedDrawSeatBitmap | 是否需要绘制座位图片 |
+| 14   | 14. maxSelected          | 最大选中值          |
 
 ### *011.图调PinView：ScaleImageView、ImageSource、ImageViewState、DecoderFactory、ImageDecoder、RegionDecoder(34+2115)*
 
-| 序号 | 方法                            | 功能 |
-|:-----|:--------------------------------|:----|
-| 01   | 01. scaleMax                    | 功能 |
-| 02   | 02. scaleDoubleTapDpiZoom       | 功能 |
-| 03   | 03. setOnLongClickListener      | 功能 |
-| 04   | 04. isEnabledZoom               | 功能 |
-| 05   | 05. scale                       | 功能 |
-| 06   | 06. isReady                     | 功能 |
-| 07   | 07. isEnabledPan                | 功能 |
-| 08   | 08. onImageEventListener        | 功能 |
-| 09   | 09. isDebug                     | 功能 |
-| 10   | 10. parallelLoadingEnabled      | 功能 |
-| 11   | 11. BuilderAnim                 | 功能 |
-| 12   | 12. animateScale                | 功能 |
-| 13   | 13. animateCenter               | 功能 |
-| 14   | 14. animateScaleAndCenter       | 功能 |
-| 15   | 15. isEnabledQuickScale         | 功能 |
-| 16   | 16. viewToSourceCoord           | 功能 |
-| 17   | 17. requiredRotation            | 功能 |
-| 18   | 18. sWidth                      | 功能 |
-| 19   | 19. sHeight                     | 功能 |
-| 20   | 20. minScaleType                | 功能 |
-| 21   | 21. panLimit                    | 功能 |
-| 22   | 22. minScaleDpi                 | 功能 |
-| 23   | 23. doubleTapZoomStyle          | 功能 |
-| 24   | 24. doubleTapZoomDuration       | 功能 |
-| 25   | 25. setScaleAndCenter           | 功能 |
-| 26   | 26. resetScaleAndCenter         | 功能 |
-| 27   | 27. setTileBackgroundColor      | 功能 |
-| 28   | 28. maxTileWidth                | 功能 |
-| 29   | 29. maxTileHeight               | 功能 |
-| 30   | 30. imageDecoder                | 功能 |
-| 31   | 31. regionDecoder               | 功能 |
-| 32   | 32. setImage                    | 功能 |
-| 33   | 33. hasImage                    | 功能 |
-| 34   | 34. isImageLoaded               | 功能 |
-| 35   | 35. orientation                 | 功能 |
-| 36   | 36. state                       | 功能 |
-| 37   | 37. center                      | 功能 |
-| 38   | 38. onStateChangedListener      | 功能 |
-| 39   | 39. sourceToViewCoord           | 功能 |
-| 40   | 40. recycle                     | 功能 |
-| 41   | 41. minTileDpi                  | 功能 |
-| 42   | 42. ORIENTATION_0               | 功能 |
-| 43   | 43. ORIENTATION_90              | 功能 |
-| 44   | 44. ORIENTATION_180             | 功能 |
-| 45   | 45. ORIENTATION_270             | 功能 |
-| 46   | 46. ORIENTATION_USE_EXIF        | 功能 |
-| 47   | 47. ZOOM_FOCUS_FIXED            | 功能 |
-| 48   | 48. ZOOM_FOCUS_CENTER           | 功能 |
-| 49   | 49. ZOOM_FOCUS_CENTER_IMMEDIATE | 功能 |
-| 50   | 50. EASE_OUT_QUAD               | 功能 |
-| 51   | 51. EASE_IN_OUT_QUAD            | 功能 |
-| 52   | 52. PAN_LIMIT_INSIDE            | 功能 |
-| 53   | 53. PAN_LIMIT_OUTSIDE           | 功能 |
-| 54   | 54. PAN_LIMIT_CENTER            | 功能 |
-| 55   | 55. SCALE_TYPE_CENTER_INSIDE    | 功能 |
-| 56   | 56. SCALE_TYPE_CENTER_CROP      | 功能 |
-| 57   | 57. SCALE_TYPE_CUSTOM           | 功能 |
-| 58   | 58. ORIGIN_ANIM                 | 功能 |
-| 59   | 59. ORIGIN_TOUCH                | 功能 |
-| 60   | 60. ORIGIN_FLING                | 功能 |
-| 61   | 61. ORIGIN_DOUBLE_TAP_ZOOM      | 功能 |
-| 62   | 62. tileSizeAuto                | 功能 |
-| 63   | #### PinView                    | 功能 |
-| 64   | 01. pinS                        | 功能 |
+| 序号 | 方法                            | 功能            |
+|:-----|:--------------------------------|:----------------|
+| 01   | 01. scaleMax                    | 最大缩放值      |
+| 02   | 02. scaleDoubleTapDpiZoom       | 双击缩放值      |
+| 03   | 03. setOnLongClickListener      | 设置长按监听器   |
+| 04   | 04. isEnabledZoom               | 是否启用缩放    |
+| 05   | 05. scale                       | 缩放            |
+| 06   | 06. isReady                     | 是否准备        |
+| 07   | 07. isEnabledPan                | 是否启用pan     |
+| 08   | 08. onImageEventListener        | 图像时间监听器   |
+| 09   | 09. isDebug                     | 是否调试        |
+| 10   | 10. parallelLoadingEnabled      | 启用平行加载    |
+| 11   | 11. BuilderAnim                 | 动画构建器      |
+| 12   | 12. animateScale                | 动画缩放        |
+| 13   | 13. animateCenter               | 动画中心        |
+| 14   | 14. animateScaleAndCenter       | 动画缩放中心    |
+| 15   | 15. isEnabledQuickScale         | 是否启用快速缩放 |
+| 16   | 16. viewToSourceCoord           | 视图设置源位置   |
+| 17   | 17. requiredRotation            | 切换方向        |
+| 18   | 18. sWidth                      | 获取宽度        |
+| 19   | 19. sHeight                     | 获取高度        |
+| 20   | 20. minScaleType                | 最小缩放类型    |
+| 21   | 21. panLimit                    | pan限制         |
+| 22   | 22. minScaleDpi                 | 最小缩放dpi     |
+| 23   | 23. doubleTapZoomStyle          | 双击缩放类型    |
+| 24   | 24. doubleTapZoomDuration       | 双击缩放持续时间 |
+| 25   | 25. setScaleAndCenter           | 设置缩放中心    |
+| 26   | 26. resetScaleAndCenter         | 重置缩放中心    |
+| 27   | 27. setTileBackgroundColor      | 设置瓦片背景颜色 |
+| 28   | 28. maxTileWidth                | 最大瓦片宽度    |
+| 29   | 29. maxTileHeight               | 最大瓦片高度    |
+| 30   | 30. imageDecoder                | 图片解码器      |
+| 31   | 31. regionDecoder               | 区域解码器      |
+| 32   | 32. setImage                    | 设置图片        |
+| 33   | 33. hasImage                    | 是否具有图片    |
+| 34   | 34. isImageLoaded               | 图片是否已加载   |
+| 35   | 35. orientation                 | 方向            |
+| 36   | 36. state                       | 状态            |
+| 37   | 37. center                      | 中心            |
+| 38   | 38. onStateChangedListener      | 状态改变监听器   |
+| 39   | 39. sourceToViewCoord           | 源设置视图位置   |
+| 40   | 40. recycle                     | 回收资源        |
+| 41   | 41. minTileDpi                  | 最小瓦片dpi     |
+| 42   | 42. ORIENTATION_0               | 0度             |
+| 43   | 43. ORIENTATION_90              | 90度            |
+| 44   | 44. ORIENTATION_180             | 180度           |
+| 45   | 45. ORIENTATION_270             | 270度           |
+| 46   | 46. ORIENTATION_USE_EXIF        | 图片信息方向    |
+| 47   | 47. ZOOM_FOCUS_FIXED            | 修复缩放焦点    |
+| 48   | 48. ZOOM_FOCUS_CENTER           | 中心缩放焦点    |
+| 49   | 49. ZOOM_FOCUS_CENTER_IMMEDIATE | 自动中心焦点    |
+| 50   | 50. EASE_OUT_QUAD               | 外部缓存        |
+| 51   | 51. EASE_IN_OUT_QUAD            | 内外缓存        |
+| 52   | 52. PAN_LIMIT_INSIDE            | 里pan限制       |
+| 53   | 53. PAN_LIMIT_OUTSIDE           | 外pan限制       |
+| 54   | 54. PAN_LIMIT_CENTER            | 中pan限制       |
+| 55   | 55. SCALE_TYPE_CENTER_INSIDE    | 里中缩放类型    |
+| 56   | 56. SCALE_TYPE_CENTER_CROP      | 剪中缩放类型    |
+| 57   | 57. SCALE_TYPE_CUSTOM           | 自定缩放类型    |
+| 58   | 58. ORIGIN_ANIM                 | 动画源          |
+| 59   | 59. ORIGIN_TOUCH                | 触摸源          |
+| 60   | 60. ORIGIN_FLING                | 翻动源          |
+| 61   | 61. ORIGIN_DOUBLE_TAP_ZOOM      | 双击源          |
+| 62   | 62. tileSizeAuto                | 瓦片自动尺寸    |
+| 63   | #### PinView                    | 固定视图        |
+| 64   | 01. pinS                        | 固定点位        |
 
 >- mipmap
 >
@@ -1303,20 +1303,20 @@ class GuideActivity : AppCompatActivity() {
 
 ### *012.验证Captcha(117)*
 
-| 序号 | 方法           | 功能 |
-|:-----|:---------------|:----|
-| 01   | 01. build      | 功能 |
-| 02   | 02. mType      | 功能 |
-| 03   | 03. codeLength | 功能 |
-| 04   | 04. makeCode   | 功能 |
-| 05   | 05. width      | 功能 |
-| 06   | 06. height     | 功能 |
-| 07   | 07. color      | 功能 |
-| 08   | 08. fontSize   | 功能 |
-| 09   | 09. code       | 功能 |
-| 10   | 10. lineNumber | 功能 |
-| 11   | 11. makeBitmap | 功能 |
-| 12   | 12. into       | 功能 |
+| 序号 | 方法           | 功能                        |
+|:-----|:---------------|:---------------------------|
+| 01   | 01. build      | 构建验证码                 |
+| 02   | 02. mType      | 验证码类型：数字、字母、字符 |
+| 03   | 03. codeLength | 验证码长度                 |
+| 04   | 04. makeCode   | 制作验证码                 |
+| 05   | 05. width      | 验证码宽度                 |
+| 06   | 06. height     | 验证码高度                 |
+| 07   | 07. color      | 验证码颜色                 |
+| 08   | 08. fontSize   | 验证码字号                 |
+| 09   | 09. code       | 验证码小写                 |
+| 10   | 10. lineNumber | 干扰线数量                 |
+| 11   | 11. makeBitmap | 制作验证图                 |
+| 12   | 12. into       | 导入图像视图                |
 
 ### *013.滑块SwipeCaptcha(393)*
 
@@ -1392,9 +1392,9 @@ swipe_captcha_seek.apply {
 
 ### *014.平滚AutoImage(35)*
 
-| 序号 | 方法          | 功能 |
-|:-----|:--------------|:----|
-| 01   | 01. imageView | 功能 |
+| 序号 | 方法          | 功能         |
+|:-----|:--------------|:------------|
+| 01   | 01. imageView | 设置图像视图 |
 
 >1. anim:[anim_translate.xml](../../../../res/anim/anim_translate.xml)
 >2. layout:[autoimage_view.xml](../../../../res/layout/autoimage_view.xml)
@@ -1405,9 +1405,9 @@ swipe_captcha_seek.apply {
 
 ### *016.爱心HeartLayout：FloatAnimation、PathAnimator、HeartView(241)*
 
-| 序号 | 方法         | 功能 |
-|:-----|:-------------|:----|
-| 01   | 01. addHeart | 功能 |
+| 序号 | 方法         | 功能   |
+|:-----|:-------------|:------|
+| 01   | 01. addHeart | 添加心 |
 
 >- mipmap
 >
@@ -1438,61 +1438,61 @@ swipe_captcha_seek.apply {
 
 ### *018.刻度RulerWheel(464)*
 
-| 序号 | 方法                            | 功能 |
-|:-----|:--------------------------------|:----|
-| 01   | 01. markAdditionCenter          | 功能 |
-| 02   | 02. selectedPosition            | 功能 |
-| 03   | 03. items                       | 功能 |
-| 04   | 04. OnWheelItemSelectedListener | 功能 |
-| 05   | 05. minSelectableIndex          | 功能 |
-| 06   | 06. maxSelectableIndex          | 功能 |
-| 07   | 07. smoothSelectIndex           | 功能 |
-| 08   | 08. fling                       | 功能 |
+| 序号 | 方法                            | 功能            |
+|:-----|:--------------------------------|:----------------|
+| 01   | 01. markAdditionCenter          | 文字标记        |
+| 02   | 02. selectedPosition            | 选中位置        |
+| 03   | 03. items                       | 项列表          |
+| 04   | 04. OnWheelItemSelectedListener | 滚动项选中监听器 |
+| 05   | 05. minSelectableIndex          | 最小可选索引    |
+| 06   | 06. maxSelectableIndex          | 最大可选索引    |
+| 07   | 07. smoothSelectIndex           | 平滑滚动到索引   |
+| 08   | 08. fling                       | 滚动到位置      |
 
 ### *019.水波Wave(231)*
 
-| 序号 | 方法                | 功能 |
-|:-----|:--------------------|:----|
-| 01   | 01. shapeType       | 功能 |
-| 02   | 02. frontWaveColor  | 功能 |
-| 03   | 03. borderWidth     | 功能 |
-| 04   | 04. behindWaveColor | 功能 |
-| 05   | 05. borderColor     | 功能 |
-| 06   | 06. start           | 功能 |
-| 07   | 07. cancel          | 功能 |
-| 08   | 08. setWaveColor    | 功能 |
-| 09   | 09. setBorder       | 功能 |
-| 10   | 10. isShowWave      | 功能 |
-| 11   | 11. waveLengthRatio | 功能 |
-| 12   | 12. amplitudeRatio  | 功能 |
-| 13   | 13. waveShiftRatio  | 功能 |
-| 14   | 14. waterLevelRatio | 功能 |
+| 序号 | 方法                | 功能            |
+|:-----|:--------------------|:----------------|
+| 01   | 01. shapeType       | 形状类型：圆、方 |
+| 02   | 02. frontWaveColor  | 前景水波颜色    |
+| 03   | 03. borderWidth     | 边框宽度        |
+| 04   | 04. behindWaveColor | 背景功能        |
+| 05   | 05. borderColor     | 边框颜色        |
+| 06   | 06. start           | 开始            |
+| 07   | 07. cancel          | 取消            |
+| 08   | 08. setWaveColor    | 设置水波颜色    |
+| 09   | 09. setBorder       | 设置边框        |
+| 10   | 10. isShowWave      | 是否显示水波    |
+| 11   | 11. waveLengthRatio | 波长            |
+| 12   | 12. amplitudeRatio  | 振幅            |
+| 13   | 13. waveShiftRatio  | 频率            |
+| 14   | 14. waterLevelRatio | 水位            |
 
 ### *020.弧度ProgressRound(165)*
 
-| 序号 | 方法                    | 功能 |
-|:-----|:------------------------|:----|
-| 01   | 01. circleColor         | 功能 |
-| 02   | 02. circleProgressColor | 功能 |
-| 03   | 03. textColor           | 功能 |
-| 04   | 04. textSize            | 功能 |
-| 05   | 05. roundWidth          | 功能 |
-| 06   | 06. max                 | 功能 |
-| 07   | 07. STROKE              | 功能 |
-| 08   | 08. FILL                | 功能 |
-| 09   | 09. progress            | 功能 |
+| 序号 | 方法                    | 功能         |
+|:-----|:------------------------|:------------|
+| 01   | 01. circleColor         | 圆形颜色    |
+| 02   | 02. circleProgressColor | 圆形进度颜色 |
+| 03   | 03. textColor           | 文本颜色    |
+| 04   | 04. textSize            | 文本尺寸    |
+| 05   | 05. roundWidth          | 圆形宽度    |
+| 06   | 06. max                 | 最大值      |
+| 07   | 07. STROKE              | 空心        |
+| 08   | 08. FILL                | 填充        |
+| 09   | 09. progress            | 进度        |
 
 ### *021.进度ProgressView(258)*
 
-| 序号 | 方法              | 功能 |
-|:-----|:------------------|:----|
-| 01   | 01. isStop        | 功能 |
-| 02   | 02. isFinish      | 功能 |
-| 03   | 03. finishLoad    | 功能 |
-| 04   | 04. progress      | 功能 |
-| 05   | 05. resetProgress | 功能 |
-| 06   | 06. toggle        | 功能 |
-| 07   | 07. setStop       | 功能 |
+| 序号 | 方法              | 功能         |
+|:-----|:------------------|:------------|
+| 01   | 01. isStop        | 是否停止    |
+| 02   | 02. isFinish      | 是否完成    |
+| 03   | 03. finishLoad    | 是否加载完成 |
+| 04   | 04. progress      | 进度        |
+| 05   | 05. resetProgress | 重置进度    |
+| 06   | 06. toggle        | 切换        |
+| 07   | 07. setStop       | 设置停止    |
 
 >- ![flicker](../../../../res/mipmap/flicker.png)
 
@@ -1502,37 +1502,37 @@ swipe_captcha_seek.apply {
 
 ### *023.商品ShoppingView(362)*
 
-| 序号 | 方法                        | 功能 |
-|:-----|:----------------------------|:----|
-| 01   | 01. onShoppingClickListener | 功能 |
-| 02   | 02. setTextNum              | 功能 |
+| 序号 | 方法                        | 功能           |
+|:-----|:----------------------------|:--------------|
+| 01   | 01. onShoppingClickListener | 购物点击监听器 |
+| 02   | 02. setTextNum              | 设置购买数量   |
 
 ### *024.点赞ShineView：ShineButton、PorterShapeImageView、PorterImageView、ShineAnimator、EasingInterpolator、EasingProvider、Ease(699)*
 
-| 序号 | 方法                      | 功能 |
-|:-----|:--------------------------|:----|
-| 01   | 01. clickValue            | 功能 |
-| 02   | 02. colorRandom           | 功能 |
-| 03   | 03. enableFlashing        | 功能 |
-| 04   | 04. allowRandomColor      | 功能 |
-| 05   | 05. shineColorBig         | 功能 |
-| 06   | 06. shineColorSmall       | 功能 |
-| 07   | 07. shineSize             | 功能 |
-| 08   | 08. shineCount            | 功能 |
-| 09   | 09. animDuration          | 功能 |
-| 10   | 10. animDurationClick     | 功能 |
-| 11   | 11. shineTurnAngle        | 功能 |
-| 12   | 12. smallShineOffsetAngle | 功能 |
-| 13   | 13. shineDistanceMultiple | 功能 |
-| 14   | 14. showAnimation         | 功能 |
+| 序号 | 方法                      | 功能            |
+|:-----|:--------------------------|:----------------|
+| 01   | 01. clickValue            | 点击值          |
+| 02   | 02. colorRandom           | 随机颜色        |
+| 03   | 03. enableFlashing        | 启用变色        |
+| 04   | 04. allowRandomColor      | 允许随机颜色    |
+| 05   | 05. shineColorBig         | 大心颜色        |
+| 06   | 06. shineColorSmall       | 小心颜色        |
+| 07   | 07. shineSize             | 心形尺寸        |
+| 08   | 08. shineCount            | 心形数量        |
+| 09   | 09. animDuration          | 动画持续时间    |
+| 10   | 10. animDurationClick     | 动画连点持续时间 |
+| 11   | 11. shineTurnAngle        | 心形转角        |
+| 12   | 12. smallShineOffsetAngle | 小心偏移角度    |
+| 13   | 13. shineDistanceMultiple | 心形之间距离    |
+| 14   | 14. showAnimation         | 显示动画        |
 
 ### *025.字调TextAutoZoom(210)*
 
-| 序号 | 方法                 | 功能 |
-|:-----|:---------------------|:----|
-| 01   | 01. setNormalization | 功能 |
-| 02   | 02. minTextSize      | 功能 |
-| 03   | 03. enableSizeCache  | 功能 |
+| 序号 | 方法                 | 功能         |
+|:-----|:---------------------|:------------|
+| 01   | 01. setNormalization | 设置显示规范 |
+| 02   | 02. minTextSize      | 最小文本尺寸 |
+| 03   | 03. enableSizeCache  | 启用尺寸缓存 |
 
 >- [Title.kt](Title.kt)
 
@@ -1540,27 +1540,27 @@ swipe_captcha_seek.apply {
 
 ### *027.单滚TextVertical(100)*
 
-| 序号 | 方法                     | 功能 |
-|:-----|:-------------------------|:----|
-| 01   | 01. mTextSize            | 功能 |
-| 02   | 02. mTextColor           | 功能 |
-| 03   | 03. mPadding             | 功能 |
-| 04   | 04. mOnItemClickListener | 功能 |
-| 05   | 05. titles               | 功能 |
-| 06   | 06. autoScrollStart      | 功能 |
-| 07   | 07. autoScrollStop       | 功能 |
-| 08   | 08. setTimeTextStill     | 功能 |
-| 09   | 09. setTimeAnim          | 功能 |
+| 序号 | 方法                     | 功能            |
+|:-----|:-------------------------|:----------------|
+| 01   | 01. mTextSize            | 文本尺寸        |
+| 02   | 02. mTextColor           | 文本颜色        |
+| 03   | 03. mPadding             | 文字间距        |
+| 04   | 04. mOnItemClickListener | 项点击监听器    |
+| 05   | 05. titles               | 标题列表        |
+| 06   | 06. autoScrollStart      | 自动滚动开始    |
+| 07   | 07. autoScrollStop       | 自动滚动停止    |
+| 08   | 08. setTimeTextStill     | 设置文本停留时间 |
+| 09   | 09. setTimeAnim          | 设置动画持续时间 |
 
 ### *028.多滚TextVerticalMore(40)*
 
-| 序号 | 方法                    | 功能 |
-|:-----|:------------------------|:----|
-| 01   | 01. interval            | 功能 |
-| 02   | 02. animDuration        | 功能 |
-| 03   | 03. isSetAnimDuration   | 功能 |
-| 04   | 04. onItemClickListener | 功能 |
-| 05   | 05. setViews            | 功能 |
+| 序号 | 方法                    | 功能                |
+|:-----|:------------------------|:-------------------|
+| 01   | 01. interval            | 时间间隔            |
+| 02   | 02. animDuration        | 动画持续时间        |
+| 03   | 03. isSetAnimDuration   | 是否设置动画持续时间 |
+| 04   | 04. onItemClickListener | 项点击监听器        |
+| 05   | 05. setViews            | 设置滚动系列视图    |
 
 >- anim
 >
@@ -1612,71 +1612,70 @@ swipe_captcha_seek.apply {
 
 ### *032.弹框PopupViewManager：PopupView、BackgroundConstructor、Coordinates、CoordinatesFinder(533)*
 
-| 序号 | 方法                       | 功能 |
-|:-----|:---------------------------|:----|
-| 01   | 01. TipListener            | 功能 |
-| 02   | 02. animationDuration      | 功能 |
-| 03   | 03. show                   | 功能 |
-| 04   | 04. clearTipsMap           | 功能 |
-| 05   | 05. findAndDismiss         | 功能 |
-| 06   | 06. find                   | 功能 |
-| 07   | 07. dismiss                | 功能 |
-| 08   | 08. isVisible              | 功能 |
-| 09   | #### BackgroundConstructor | 功能 |
-| 10   | 01. setBackground          | 功能 |
-| 11   | #### Coordinates           | 功能 |
-| 12   | 01. left                   | 功能 |
-| 13   | 02. top                    | 功能 |
-| 14   | 03. right                  | 功能 |
-| 15   | 04. bottom                 | 功能 |
-| 16   | #### CoordinatesFinder     | 功能 |
-| 17   | 01. getCoordinates         | 功能 |
-| 18   | #### PopupView             | 功能 |
-| 19   | 01. context                | 功能 |
-| 20   | 02. anchorView             | 功能 |
-| 21   | 03. rootView               | 功能 |
-| 22   | 04. message                | 功能 |
-| 23   | 05. spannableMessage       | 功能 |
-| 24   | 06. isShowArrow            | 功能 |
-| 25   | 07. backgroundColor        | 功能 |
-| 26   | 08. textColor              | 功能 |
-| 27   | 09. textSize               | 功能 |
-| 28   | 10. elevation              | 功能 |
-| 29   | 11. offsetX                | 功能 |
-| 30   | 12. offsetY                | 功能 |
-| 31   | 13. textGravityTemp        | 功能 |
-| 32   | 14. textGravity            | 功能 |
-| 33   | 15. align                  | 功能 |
-| 34   | 16. position               | 功能 |
-| 35   | 17. isHideArrow            | 功能 |
-| 36   | 18. isTextGravityCenter    | 功能 |
-| 37   | 19. isTextGravityLeft      | 功能 |
-| 38   | 20. isTextGravityRight     | 功能 |
-| 39   | 21. isAlignedCenter        | 功能 |
-| 40   | 22. isAlignedLeft          | 功能 |
-| 41   | 23. isAlignedRight         | 功能 |
-| 42   | 24. isPositionedAbove      | 功能 |
-| 43   | 25. isPositionedBelow      | 功能 |
-| 44   | 26. isPositionedLeftTo     | 功能 |
-| 45   | 27. isPositionedRightTo    | 功能 |
-| 46   | ##### BuilderPopupView     | 功能 |
-| 47   | 01. mContext               | 功能 |
-| 48   | 02. mAnchorView            | 功能 |
-| 49   | 03. mRootView              | 功能 |
-| 50   | 04. mMessage               | 功能 |
-| 51   | 05. mSpannableMessage      | 功能 |
-| 52   | 06. mIsShowArrow           | 功能 |
-| 53   | 07. mBackgroundColor       | 功能 |
-| 54   | 08. mTextColor             | 功能 |
-| 55   | 09. mTextSize              | 功能 |
-| 56   | 10. mElevation             | 功能 |
-| 57   | 11. mOffsetX               | 功能 |
-| 58   | 12. mOffsetY               | 功能 |
-| 59   | 13. mTextGravity           | 功能 |
-| 60   | 14. mAlign                 | 功能 |
-| 61   | 15. mPosition              | 功能 |
-| 62   | 16. BuilderPopupView       | 功能 |
-| 63   | 17. buildPopupView         | 功能 |
+| 序号 | 方法                       | 功能            |
+|:-----|:---------------------------|:---------------|
+| 01   | 01. TipListener            | 提示监听器      |
+| 02   | 02. animationDuration      | 动画持续时间    |
+| 03   | 03. show                   | 显示           |
+| 04   | 04. clearTipsMap           | 清空提示映射    |
+| 05   | 05. findAndDismiss         | 查找视图并隐藏  |
+| 06   | 06. find                   | 通过key获取提示 |
+| 07   | 07. dismiss                | 隐藏           |
+| 08   | 08. isVisible              | 是否可见       |
+| 09   | #### BackgroundConstructor | 背景构造器      |
+| 10   | 01. setBackground          | 设置背景       |
+| 11   | #### Coordinates           | 坐标位置       |
+| 12   | 01. left                   | 左             |
+| 13   | 02. top                    | 上             |
+| 14   | 03. right                  | 右             |
+| 15   | 04. bottom                 | 下             |
+| 16   | #### CoordinatesFinder     | 坐标发现器      |
+| 17   | 01. getCoordinates         | 获取坐标位置    |
+| 18   | #### PopupView             | 弹出视图       |
+| 19   | 01. context                | 上下文         |
+| 20   | 02. anchorView             | 锚点视图       |
+| 21   | 03. rootView               | 根视图         |
+| 22   | 04. message                | 消息           |
+| 23   | 05. spannableMessage       | 富文本消息      |
+| 24   | 06. isShowArrow            | 是否显示箭头    |
+| 25   | 07. backgroundColor        | 背景颜色       |
+| 26   | 08. textColor              | 文本颜色       |
+| 27   | 09. textSize               | 文本尺寸       |
+| 28   | 10. elevation              | 高度           |
+| 29   | 11. offsetX                | 偏移x          |
+| 30   | 12. offsetY                | 偏移y          |
+| 31   | 13. textGravityTemp        | 文本间距缓存    |
+| 32   | 14. textGravity            | 文本间距       |
+| 33   | 15. align                  | 对齐方式       |
+| 34   | 16. position               | 位置           |
+| 35   | 17. isHideArrow            | 是否隐藏箭头    |
+| 36   | 18. isTextGravityCenter    | 是否文字居中    |
+| 37   | 19. isTextGravityLeft      | 是否文字居左    |
+| 38   | 20. isTextGravityRight     | 是否文字居右    |
+| 39   | 21. isAlignedCenter        | 是否居中对齐    |
+| 40   | 22. isAlignedLeft          | 是否居左对齐    |
+| 41   | 23. isAlignedRight         | 是否居右对齐    |
+| 42   | 24. isPositionedAbove      | 是否位于上面    |
+| 43   | 25. isPositionedBelow      | 是否位于下面    |
+| 44   | 26. isPositionedLeftTo     | 是否位于左边    |
+| 45   | 27. isPositionedRightTo    | 是否位于右边    |
+| 46   | ##### BuilderPopupView     | 弹出视图构建器  |
+| 47   | 01. mContext               | 上下文         |
+| 48   | 02. mAnchorView            | 锚点视图       |
+| 49   | 03. mRootView              | 根视图         |
+| 50   | 04. mMessage               | 消息           |
+| 51   | 05. mSpannableMessage      | 富文本消息      |
+| 52   | 06. mIsShowArrow           | 是否显示箭头    |
+| 53   | 07. mBackgroundColor       | 背景颜色       |
+| 54   | 08. mTextColor             | 文本颜色       |
+| 55   | 09. mTextSize              | 文本尺寸       |
+| 56   | 10. mElevation             | 高度           |
+| 57   | 11. mOffsetX               | 偏移x          |
+| 58   | 12. mOffsetY               | 偏移y          |
+| 59   | 13. mTextGravity           | 文本位置       |
+| 60   | 14. mAlign                 | 文本对齐       |
+| 61   | 15. mPosition              | 位置           |
+| 62   | 16. buildPopupView         | 构建弹出视图    |
 
 ## **附01.原生Layouts布局（行、列、格、面）**
 
