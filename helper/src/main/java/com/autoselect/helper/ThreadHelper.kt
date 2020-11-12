@@ -49,23 +49,23 @@ object ThreadHelper : LoggerHelper {
             try {
                 doInBackground().let { result ->
                     if (state == NEW) when {
-                        isSchedule -> Deliver.post(Runnable { onSuccess(result) })
+                        isSchedule -> Deliver.post { onSuccess(result) }
                         else -> {
                             state = COMPLETING
-                            Deliver.post(Runnable {
+                            Deliver.post {
                                 onSuccess(result)
                                 removeScheduleByTask(this@Task)
-                            })
+                            }
                         }
                     }
                 }
             } catch (throwable: Throwable) {
                 if (state == NEW) {
                     state = EXCEPTIONAL
-                    Deliver.post(Runnable {
+                    Deliver.post {
                         onFail(throwable)
                         removeScheduleByTask(this@Task)
-                    })
+                    }
                 }
             }
         }
@@ -73,10 +73,10 @@ object ThreadHelper : LoggerHelper {
         fun cancel() {
             if (state == NEW) {
                 state = CANCELLED
-                Deliver.post(Runnable {
+                Deliver.post {
                     onCancel()
                     removeScheduleByTask(this@Task)
-                })
+                }
             }
         }
     }

@@ -265,7 +265,7 @@ object CacheDiskHelper {
             private val cacheCount = AtomicInteger()
             private val cacheSize = AtomicLong()
             private val lastUsageDates = Collections.synchronizedMap(mutableMapOf<File, Long>())
-            private val thread: Thread = Thread(Runnable {
+            private val thread: Thread = Thread {
                 cacheDir.listFiles { _, name -> name.startsWith(CACHE_PREFIX) }
                     ?.let { cachedFiles ->
                         var count = 0
@@ -278,7 +278,7 @@ object CacheDiskHelper {
                         cacheCount.getAndAdd(count)
                         cacheSize.getAndAdd(size)
                     }
-            })
+            }
 
             init {
                 thread.start()

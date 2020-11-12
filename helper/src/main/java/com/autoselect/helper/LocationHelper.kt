@@ -87,13 +87,13 @@ object LocationHelper : LoggerHelper {
         @RequiresPermission(allOf = [ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION])
         override fun onCreate() {
             super.onCreate()
-            Thread(Runnable {
+            Thread {
                 Looper.prepare()
                 if (registerLocation(0, 0, onLocationChangeListener))
                     setBgColor(COLOR_BG_SUCCESS)
                 showShort("initApplication success")
                 Looper.loop()
-            }).start()
+            }.start()
         }
 
         override fun onBind(intent: Intent): IBinder? = object : Binder() {

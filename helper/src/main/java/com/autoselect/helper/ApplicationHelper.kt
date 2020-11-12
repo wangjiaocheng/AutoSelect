@@ -67,7 +67,7 @@ object ApplicationHelper : LoggerHelper {
     fun runScript(script: String): String? = try {
         val process = Runtime.getRuntime().exec(script)
         val input = StringBuilder()
-        val inputThread = Thread(Runnable {
+        val inputThread = Thread {
             process.inputStream.use {
                 InputStreamReader(it).use { inputStreamReader ->
                     BufferedReader(inputStreamReader, 8192).use { bufferedReader ->
@@ -82,10 +82,10 @@ object ApplicationHelper : LoggerHelper {
                     }
                 }
             }
-        })
+        }
         inputThread.start()
         val error = StringBuilder()
-        val errorThread = Thread(Runnable {
+        val errorThread = Thread {
             process.errorStream.use {
                 InputStreamReader(it).use { inputStreamReader ->
                     BufferedReader(inputStreamReader, 8192).use { bufferedReader ->
@@ -100,7 +100,7 @@ object ApplicationHelper : LoggerHelper {
                     }
                 }
             }
-        })
+        }
         errorThread.start()
         process.waitFor()
         while (inputThread.isAlive) {
@@ -274,7 +274,7 @@ object ApplicationHelper : LoggerHelper {
         get() = System.currentTimeMillis().let { time ->
             app.usageStatsManager
                 .queryUsageStats(UsageStatsManager.INTERVAL_BEST, time - 1000, time)
-                .apply { sortWith(Comparator { o1, o2 -> o1.lastTimeUsed.compareTo(o2.lastTimeUsed) }) }
+                .apply { sortWith { o1, o2 -> o1.lastTimeUsed.compareTo(o2.lastTimeUsed) } }
                 .run { if (isNotEmpty()) get(0).packageName != appPackageName else false }
         }
     val isAppForeground: Boolean
