@@ -888,121 +888,121 @@
 
 ### *034.屏幕ScreenHelper(260)*
 
-| 序号 | 方法                            | 功能 |
-|:-----|:--------------------------------|:----|
-| 01   | 01. isScreenLock                | 功能 |
-| 02   | 02. sleepDuration               | 功能 |
-| 03   | 03. noShootScreen               | 功能 |
-| 04   | 04. shootScreenWithStatusBar    | 功能 |
-| 05   | 05. shootScreenWithoutStatusBar | 功能 |
-| 06   | 06. shootWebView                | 功能 |
-| 07   | 07. realScreenHeight            | 功能 |
-| 08   | 08. screenWidthByPoint          | 功能 |
-| 09   | 09. screenHeightByPoint         | 功能 |
-| 10   | 10. screenWidth                 | 功能 |
-| 11   | 11. screenWidth8                | 功能 |
-| 12   | 12. screenHeight                | 功能 |
-| 13   | 13. screenHeight8               | 功能 |
-| 14   | 14. navigationAreaHeight        | 功能 |
-| 15   | 15. navigationBarHeight         | 功能 |
-| 16   | 16. toolbarHeight               | 功能 |
-| 17   | 17. statusBarHeight             | 功能 |
-| 18   | 18. getTitleBarHeight           | 功能 |
-| 19   | 19. screenDisplayId             | 功能 |
-| 20   | 20. screenDensity               | 功能 |
-| 21   | 21. screenDensityDpi            | 功能 |
-| 22   | 22. screenDensityDpiStr         | 功能 |
-| 23   | 23. getSysSampleSize            | 功能 |
-| 24   | 24. adaptWidth                  | 功能 |
-| 25   | 25. adaptHeight                 | 功能 |
-| 26   | 26. closeAdapt                  | 功能 |
+| 序号 | 方法                            | 功能              |
+|:-----|:--------------------------------|:-----------------|
+| 01   | 01. isScreenLock                | 是否屏幕锁定      |
+| 02   | 02. sleepDuration               | 休眠持续时间      |
+| 03   | 03. noShootScreen               | 禁止截屏         |
+| 04   | 04. shootScreenWithStatusBar    | 截屏含状态栏      |
+| 05   | 05. shootScreenWithoutStatusBar | 截屏无状态栏      |
+| 06   | 06. shootWebView                | 截屏网络视图      |
+| 07   | 07. realScreenHeight            | 真实屏幕高度      |
+| 08   | 08. screenWidthByPoint          | 屏幕宽度点获取    |
+| 09   | 09. screenHeightByPoint         | 屏幕高度点获取    |
+| 10   | 10. screenWidth                 | 屏幕宽度         |
+| 11   | 11. screenWidth8                | 屏幕宽度八成      |
+| 12   | 12. screenHeight                | 屏幕高度         |
+| 13   | 13. screenHeight8               | 屏幕高度八成      |
+| 14   | 14. navigationAreaHeight        | 虚拟按键区域高度  |
+| 15   | 15. navigationBarHeight         | 导航栏高度       |
+| 16   | 16. toolbarHeight               | 工具栏高度       |
+| 17   | 17. statusBarHeight             | 状态栏高度       |
+| 18   | 18. getTitleBarHeight           | 标题栏高度       |
+| 19   | 19. screenDisplayId             | 屏幕显示ID       |
+| 20   | 20. screenDensity               | 屏幕尺寸         |
+| 21   | 21. screenDensityDpi            | 屏幕尺寸dpi      |
+| 22   | 22. screenDensityDpiStr         | 屏幕尺寸dpi字符串 |
+| 23   | 23. getSysSampleSize            | 获取系统样本尺寸  |
+| 24   | 24. adaptWidth                  | 适配宽度         |
+| 25   | 25. adaptHeight                 | 适配高度         |
+| 26   | 26. closeAdapt                  | 关闭适配         |
 
 ### *035.窗口WindowHelper(60)*
 
-| 序号 | 方法                 | 功能 |
-|:-----|:---------------------|:----|
-| 01   | 01. displayRotation  | 功能 |
-| 02   | 02. isLandscape      | 功能 |
-| 03   | 03. setLandscape     | 功能 |
-| 04   | 04. isPortrait       | 功能 |
-| 05   | 05. setPortrait      | 功能 |
-| 06   | 06. toggleFullScreen | 功能 |
-| 07   | 07. isFullScreen     | 功能 |
-| 08   | 08. setNoFullScreen  | 功能 |
-| 09   | 09. setFullScreen    | 功能 |
-| 10   | 10. dimBackground    | 功能 |
+| 序号 | 方法                 | 功能                |
+|:-----|:---------------------|:-------------------|
+| 01   | 01. displayRotation  | 显示方向            |
+| 02   | 02. isLandscape      | 是否横屏            |
+| 03   | 03. setLandscape     | 设置横屏            |
+| 04   | 04. isPortrait       | 是否竖屏            |
+| 05   | 05. setPortrait      | 设置竖屏            |
+| 06   | 06. toggleFullScreen | 切换全屏            |
+| 07   | 07. isFullScreen     | 是否全屏            |
+| 08   | 08. setNoFullScreen  | 设置非全屏          |
+| 09   | 09. setFullScreen    | 设置全屏            |
+| 10   | 10. dimBackground    | 活动背景透明消失动画 |
 
 ### *036.多栏BarHelper(531)*
 
-| 序号 | 方法                                                | 功能 |
-|:-----|:----------------------------------------------------|:----|
-| 01   | 01. isStatusBarExists                               | 功能 |
-| 02   | 02. isStatusBarVisible                              | 功能 |
-| 03   | 03. setStatusBarVisibility                          | 功能 |
-| 04   | 04. isStatusBarModeDark                             | 功能 |
-| 05   | 05. Mode                                            | 功能 |
-| 06   | 06. setStatusBarModeDark                            | 功能 |
-| 07   | 07. getStatusBarColor                               | 功能 |
-| 08   | 08. setStatusBarColor                               | 功能 |
-| 09   | 09. setStatusBarColorDiff                           | 功能 |
-| 10   | 10. setStatusBarColorForDrawerLayout                | 功能 |
-| 11   | 11. setStatusBarColorForDrawerLayoutDiff            | 功能 |
-| 12   | 12. setStatusBarColorForSwipeBack                   | 功能 |
-| 13   | 13. setAllTransparent                               | 功能 |
-| 14   | 14. setStatusBarTranslucent                         | 功能 |
-| 15   | 15. setStatusBarTransparent                         | 功能 |
-| 16   | 16. setStatusBarTranslucentDiff                     | 功能 |
-| 17   | 17. setStatusBarTranslucentForDrawerLayout          | 功能 |
-| 18   | 18. setStatusBarTranslucentForDrawerLayoutDiff      | 功能 |
-| 19   | 19. setStatusBarTranslucentForCoordinatorLayout     | 功能 |
-| 20   | 20. setStatusBarTranslucentForImageViewIsInFragment | 功能 |
-| 21   | 21. setNotificationBarVisibility                    | 功能 |
-| 22   | 22. actionBarHeight                                 | 功能 |
-| 23   | 23. isNavBarSupported                               | 功能 |
-| 24   | 24. isNavBarVisible                                 | 功能 |
-| 25   | 25. setNavBarVisibility                             | 功能 |
-| 26   | 26. getNavBarColor                                  | 功能 |
-| 27   | 27. setNavBarColor                                  | 功能 |
+| 序号 | 方法                                                | 功能                                                              |
+|:-----|:----------------------------------------------------|:-----------------------------------------------------------------|
+| 01   | 01. isStatusBarExists                               | 状态栏是否存在                                                    |
+| 02   | 02. isStatusBarVisible                              | 状态栏是否可见                                                    |
+| 03   | 03. setStatusBarVisibility                          | 设置状态栏可见性                                                  |
+| 04   | 04. isStatusBarModeDark                             | 状态栏是否暗模式                                                  |
+| 05   | 05. Mode                                            | NOON,MIUI,FLYME,OTHERS                                           |
+| 06   | 06. setStatusBarModeDark                            | 设置状态栏暗模式                                                  |
+| 07   | 07. getStatusBarColor                               | 获取状态栏颜色                                                    |
+| 08   | 08. setStatusBarColor                               | 设置状态栏颜色                                                    |
+| 09   | 09. setStatusBarColorDiff                           | 设置状态栏颜色，5.0以上状态栏不透明颜色                             |
+| 10   | 10. setStatusBarColorForDrawerLayout                | 设置DrawerLayout状态栏颜色                                        |
+| 11   | 11. setStatusBarColorForDrawerLayoutDiff            | 设置DrawerLayout状态栏颜色，5.0以上状态栏半透明颜色                 |
+| 12   | 12. setStatusBarColorForSwipeBack                   | 设置滑动返回状态栏颜色                                             |
+| 13   | 13. setAllTransparent                               | 设置全透明                                                        |
+| 14   | 14. setStatusBarTranslucent                         | 设置状态栏透明度                                                  |
+| 15   | 15. setStatusBarTransparent                         | 设置状态栏透明                                                    |
+| 16   | 16. setStatusBarTranslucentDiff                     | 设置状态栏透明，5.0以上状态栏半透明无色，界面背景图片填充到状态栏适用 |
+| 17   | 17. setStatusBarTranslucentForDrawerLayout          | 设置DrawerLayout状态栏透明                                        |
+| 18   | 18. setStatusBarTranslucentForDrawerLayoutDiff      | 设置DrawerLayout状态栏透明，5.0以上状态栏半透明无色                 |
+| 19   | 19. setStatusBarTranslucentForCoordinatorLayout     | 设置CoordinatorLayout状态栏透明，界面背景图片填充到状态栏适用       |
+| 20   | 20. setStatusBarTranslucentForImageViewIsInFragment | 设置片段中图片视图状态栏透明                                       |
+| 21   | 21. setNotificationBarVisibility                    | 设置通知栏可见性                                                  |
+| 22   | 22. actionBarHeight                                 | ActionBar高度                                                    |
+| 23   | 23. isNavBarSupported                               | 是否支持导航栏                                                    |
+| 24   | 24. isNavBarVisible                                 | 是否显示导航栏                                                    |
+| 25   | 25. setNavBarVisibility                             | 设置导航栏可见性                                                  |
+| 26   | 26. getNavBarColor                                  | 获取导航栏颜色                                                    |
+| 27   | 27. setNavBarColor                                  | 设置导航栏颜色                                                    |
 
 ### *037.视图ViewHelper：ViewTouch、ViewClick、ViewShadow(945)*
 
-| 序号 | 方法                          | 功能 |
-|:-----|:------------------------------|:----|
-| 01   | 01. showPopupWindow           | 功能 |
-| 02   | 02. dismissPopupWindow        | 功能 |
-| 03   | 03. setTVUnderLine            | 功能 |
-| 04   | 04. setViewEnabled            | 功能 |
-| 05   | 05. isLayoutRtl               | 功能 |
-| 06   | 06. isTouchInView             | 功能 |
-| 07   | 07. fixScrollViewTopping      | 功能 |
-| 08   | 08. removeSelfFromParent      | 功能 |
-| 09   | 09. requestLayoutParent       | 功能 |
-| 10   | 10. getActivity               | 功能 |
-| 11   | 11. bitmapView                | 功能 |
-| 12   | 12. shootView                 | 功能 |
-| 13   | 13. captureView               | 功能 |
-| 14   | 14. captureActivity           | 功能 |
-| 15   | 15. bigImage                  | 功能 |
-| 16   | #### ViewTouch                | 功能 |
-| 17   | 01. UNKNOWN                   | 功能 |
-| 18   | 02. LEFT                      | 功能 |
-| 19   | 03. UP                        | 功能 |
-| 20   | 04. RIGHT                     | 功能 |
-| 21   | 05. DOWN                      | 功能 |
-| 22   | 06. Direction                 | 功能 |
-| 23   | 07. setOnTouchListener        | 功能 |
-| 24   | 08. OnTouchUtilsListener      | 功能 |
-| 25   | #### ViewClick                | 功能 |
-| 26   | 01. applyPressedViewScale     | 功能 |
-| 27   | 02. applyPressedViewAlpha     | 功能 |
-| 28   | 03. applyPressedBgAlpha       | 功能 |
-| 29   | 04. applyPressedBgDark        | 功能 |
-| 30   | 05. applyDebouncingGlobal     | 功能 |
-| 31   | 06. OnDebouncingClickListener | 功能 |
-| 32   | 07. applyDebouncingSingle     | 功能 |
-| 33   | 08. OnMultiClickListener      | 功能 |
-| 34   | #### ViewShadow               | 功能 |
-| 35   | 01. apply                     | 功能 |
+| 序号 | 方法                          | 功能              |
+|:-----|:------------------------------|:-----------------|
+| 01   | 01. showPopupWindow           | 显示自制弹窗      |
+| 02   | 02. dismissPopupWindow        | 取消显示弹窗      |
+| 03   | 03. setTVUnderLine            | 设置显示框下划线   |
+| 04   | 04. setViewEnabled            | 批量设置视图可用性 |
+| 05   | 05. isLayoutRtl               | 是否Rtl布局       |
+| 06   | 06. isTouchInView             | 是否视图内部触摸   |
+| 07   | 07. fixScrollViewTopping      | 修复滚动视图回顶   |
+| 08   | 08. removeSelfFromParent      | 从父视图移除自身   |
+| 09   | 09. requestLayoutParent       | 请求根父视图      |
+| 10   | 10. getActivity               | 获取视图所在活动   |
+| 11   | 11. bitmapView                | 视图截图1         |
+| 12   | 12. shootView                 | 视图截图2         |
+| 13   | 13. captureView               | 视图截图3         |
+| 14   | 14. captureActivity           | 活动截图          |
+| 15   | 15. bigImage                  | 缩放获取新图      |
+| 16   | #### ViewTouch                | 视图触摸          |
+| 17   | 01. UNKNOWN                   | 未知              |
+| 18   | 02. LEFT                      | 左                |
+| 19   | 03. UP                        | 上                |
+| 20   | 04. RIGHT                     | 右                |
+| 21   | 05. DOWN                      | 下                |
+| 22   | 06. Direction                 | 方向注解          |
+| 23   | 07. setOnTouchListener        | 设置触摸监听器    |
+| 24   | 08. OnTouchUtilsListener      | 触摸监听器        |
+| 25   | #### ViewClick                | 视图点击          |
+| 26   | 01. applyPressedViewScale     | 批量按压缩放      |
+| 27   | 02. applyPressedViewAlpha     | 批量按压透明      |
+| 28   | 03. applyPressedBgAlpha       | 按压背景透明      |
+| 29   | 04. applyPressedBgDark        | 按压背景变暗      |
+| 30   | 05. applyDebouncingGlobal     | 全部视图防抖      |
+| 31   | 06. OnDebouncingClickListener | 全部视图防抖监听器 |
+| 32   | 07. applyDebouncingSingle     | 单个视图防抖      |
+| 33   | 08. OnMultiClickListener      | 连点监听器        |
+| 34   | #### ViewShadow               | 视图阴影          |
+| 35   | 01. apply                     | 视图设置阴影      |
 
 ### *038.网视WebViewHelper(76)*
 
