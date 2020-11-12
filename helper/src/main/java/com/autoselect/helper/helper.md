@@ -598,141 +598,141 @@
 
 ### *019.崩溃CrashHelper(143)*
 
-| 序号 | 方法                | 功能 |
-|:-----|:--------------------|:----|
-| 01   | 01. init            | 功能 |
-| 02   | 02. crashTip        | 功能 |
-| 03   | 03. OnCrashListener | 功能 |
+| 序号 | 方法                | 功能     |
+|:-----|:--------------------|:--------|
+| 01   | 01. init            | 初始崩溃 |
+| 02   | 02. crashTip        | 崩溃提示 |
+| 03   | 03. OnCrashListener | 崩溃监听 |
 
 ### *020.退出ExitHelper(59)*
 
-| 序号 | 方法                    | 功能 |
-|:-----|:------------------------|:----|
-| 01   | 01. exitApp             | 功能 |
-| 02   | 02. OnExitClickListener | 功能 |
+| 序号 | 方法                    | 功能           |
+|:-----|:------------------------|:--------------|
+| 01   | 01. exitApp             | 退出应用      |
+| 02   | 02. OnExitClickListener | 退出点击监听器 |
 
 ### *021.清理CleanHelper(50)*
 
-| 序号 | 方法                      | 功能 |
-|:-----|:--------------------------|:----|
-| 01   | 01. cleanAppData          | 功能 |
-| 02   | 02. cleanInternalFiles    | 功能 |
-| 03   | 03. cleanInternalCache    | 功能 |
-| 04   | 04. cleanExternalCache    | 功能 |
-| 05   | 05. cleanInternalSP       | 功能 |
-| 06   | 06. cleanInternalDbs      | 功能 |
-| 07   | 07. cleanInternalDbByName | 功能 |
-| 08   | 08. cleanCustomCache      | 功能 |
-| 09   | 09. totalCacheSize        | 功能 |
+| 序号 | 方法                      | 功能                |
+|:-----|:--------------------------|:-------------------|
+| 01   | 01. cleanAppData          | 清除应用数据        |
+| 02   | 02. cleanInternalFiles    | 清除应用文件        |
+| 03   | 03. cleanInternalCache    | 清除应用缓存        |
+| 04   | 04. cleanExternalCache    | 清除应用缓存位于SD卡 |
+| 05   | 05. cleanInternalSP       | 清除应用SP数据      |
+| 06   | 06. cleanInternalDbs      | 清除应用所有数据库   |
+| 07   | 07. cleanInternalDbByName | 清除应用指定数据库   |
+| 08   | 08. cleanCustomCache      | 清除自定义数据      |
+| 09   | 09. totalCacheSize        | 缓存尺寸总计        |
 
 ### *022.快捷ShortcutHelper(40)*
 
-| 序号 | 方法            | 功能 |
-|:-----|:----------------|:----|
-| 01   | 01. hasShortcut | 功能 |
-| 02   | 02. addShortcut | 功能 |
-| 03   | 03. delShortcut | 功能 |
+| 序号 | 方法            | 功能         |
+|:-----|:----------------|:------------|
+| 01   | 01. hasShortcut | 是否存在快捷 |
+| 02   | 02. addShortcut | 添加快捷    |
+| 03   | 03. delShortcut | 删除快捷    |
 
 ### *023.路由RouteHelper(142)*
 
-| 序号 | 方法               | 功能 |
-|:-----|:-------------------|:----|
-| 01   | 01. requestCode    | 功能 |
-| 02   | 02. newIntent      | 功能 |
-| 03   | 03. addFlags       | 功能 |
-| 04   | 04. putExtraParam  | 功能 |
-| 05   | 05. setCallback    | 功能 |
-| 06   | 06. to             | 功能 |
-| 07   | 07. putBundle      | 功能 |
-| 08   | 08. putBundleParam | 功能 |
-| 09   | 09. options        | 功能 |
-| 10   | 10. anim           | 功能 |
-| 11   | 11. launch         | 功能 |
-| 12   | 12. pop            | 功能 |
+| 序号 | 方法               | 功能           |
+|:-----|:-------------------|:--------------|
+| 01   | 01. requestCode    | 请求码         |
+| 02   | 02. newIntent      | 新意图         |
+| 03   | 03. addFlags       | 添加标志       |
+| 04   | 04. putExtraParam  | 放入Extra参数  |
+| 05   | 05. setCallback    | 设置路由回调   |
+| 06   | 06. to             | 设置to活动片段 |
+| 07   | 07. putBundle      | 放入Bundle    |
+| 08   | 08. putBundleParam | 放入Bundle参数 |
+| 09   | 09. options        | 设置选项       |
+| 10   | 10. anim           | 设置进出动画   |
+| 11   | 11. launch         | 打开          |
+| 12   | 12. pop            | 弹出          |
 
 ### *024.活动ActivityHelper(669)*
 
-| 序号 | 方法                                | 功能 |
-|:-----|:------------------------------------|:----|
-| 01   | 01. startActivity                   | 功能 |
-| 02   | 02. startActivityForResult          | 功能 |
-| 03   | 03. startActivities                 | 功能 |
-| 04   | 04. startHomeActivity               | 功能 |
-| 05   | 05. activityList                    | 功能 |
-| 06   | 06. currentActivity                 | 功能 |
-| 07   | 07. topActivityName                 | 功能 |
-| 08   | 08. launcherActivityName            | 功能 |
-| 09   | 09. getLauncherActivityName         | 功能 |
-| 10   | 10. getActivityByView               | 功能 |
-| 11   | 11. isActivityExists                | 功能 |
-| 12   | 12. isActivityExistsInList          | 功能 |
-| 13   | 13. finishActivity                  | 功能 |
-| 14   | 14. finishToActivity                | 功能 |
-| 15   | 15. finishOtherActivities           | 功能 |
-| 16   | 16. finishAllActivitiesExceptNewest | 功能 |
-| 17   | 17. finishAllActivities             | 功能 |
-| 18   | 18. getActivityIcon                 | 功能 |
-| 19   | 19. getActivityLogo                 | 功能 |
+| 序号 | 方法                                | 功能                    |
+|:-----|:------------------------------------|:------------------------|
+| 01   | 01. startActivity                   | 开始单活动              |
+| 02   | 02. startActivityForResult          | 开始活动返回结果         |
+| 03   | 03. startActivities                 | 开始多活动              |
+| 04   | 04. startHomeActivity               | 开始主活动              |
+| 05   | 05. activityList                    | 活动列表                |
+| 06   | 06. currentActivity                 | 当前活动                |
+| 07   | 07. topActivityName                 | 顶活动名                |
+| 08   | 08. launcherActivityName            | launcher活动名          |
+| 09   | 09. getLauncherActivityName         | 获取指定包launcher活动名 |
+| 10   | 10. getActivityByView               | 获取视图所在活动         |
+| 11   | 11. isActivityExists                | 活动是否存在            |
+| 12   | 12. isActivityExistsInList          | 活动是否存在于列表       |
+| 13   | 13. finishActivity                  | 结束活动                |
+| 14   | 14. finishToActivity                | 结束转到活动            |
+| 15   | 15. finishOtherActivities           | 结束其它活动            |
+| 16   | 16. finishAllActivitiesExceptNewest | 结束所有活动除了最近使用 |
+| 17   | 17. finishAllActivities             | 结束所有活动            |
+| 18   | 18. getActivityIcon                 | 获取活动图标            |
+| 19   | 19. getActivityLogo                 | 获取活动logo            |
 
 ### *025.分享ShareHelper(238)*
 
-| 序号 | 方法                                              | 功能 |
-|:-----|:--------------------------------------------------|:----|
-| 01   | 01. shareMultiplePicture                          | 功能 |
-| 02   | 02. shareMultiplePictureForResult                 | 功能 |
-| 03   | 03. shareMultiplePictureToWeChatCircle            | 功能 |
-| 04   | 04. shareMultiplePictureToWeChatCircleForResult   | 功能 |
-| 05   | 05. shareMultiplePictureToWeChatContacts          | 功能 |
-| 06   | 06. shareMultiplePictureToWeChatContactsForResult | 功能 |
-| 07   | 07. sharePicture                                  | 功能 |
-| 08   | 08. sharePictureToWeChatCircle                    | 功能 |
-| 09   | 09. sharePictureToWeChatContacts                  | 功能 |
-| 10   | 10. sharePictureForResult                         | 功能 |
-| 11   | 11. sharePictureToWeChatCircleForResult           | 功能 |
-| 12   | 12. sharePictureToWeChatContactsForResult         | 功能 |
-| 13   | 13. shareVideo                                    | 功能 |
-| 14   | 14. shareVideoToWeChatContacts                    | 功能 |
-| 15   | 15. shareVideoForResult                           | 功能 |
-| 16   | 16. shareVideoToWeChatContactsForResult           | 功能 |
-| 17   | 17. shareFile                                     | 功能 |
-| 18   | 18. shareFileToWeChatContacts                     | 功能 |
-| 19   | 19. shareFileForResult                            | 功能 |
-| 20   | 20. shareFileToWeChatContactsForResult            | 功能 |
+| 序号 | 方法                                              | 功能                      |
+|:-----|:--------------------------------------------------|:-------------------------|
+| 01   | 01. shareMultiplePicture                          | 分享多图片                |
+| 02   | 02. shareMultiplePictureForResult                 | 分享多图片返回结果        |
+| 03   | 03. shareMultiplePictureToWeChatCircle            | 分享多图片到朋友圈        |
+| 04   | 04. shareMultiplePictureToWeChatCircleForResult   | 分享多图片到朋友圈返回结果 |
+| 05   | 05. shareMultiplePictureToWeChatContacts          | 分享多图片到联系人        |
+| 06   | 06. shareMultiplePictureToWeChatContactsForResult | 分享多图片到联系人返回结果 |
+| 07   | 07. sharePicture                                  | 分享单图片                |
+| 08   | 08. sharePictureToWeChatCircle                    | 分享单图片到朋友圈        |
+| 09   | 09. sharePictureToWeChatContacts                  | 分享单图片到联系人        |
+| 10   | 10. sharePictureForResult                         | 分享单图片返回结果        |
+| 11   | 11. sharePictureToWeChatCircleForResult           | 分享单图片到朋友圈返回结果 |
+| 12   | 12. sharePictureToWeChatContactsForResult         | 分享单图片到联系人返回结果 |
+| 13   | 13. shareVideo                                    | 分享视频                 |
+| 14   | 14. shareVideoToWeChatContacts                    | 分享视频到联系人          |
+| 15   | 15. shareVideoForResult                           | 分享视频返回结果          |
+| 16   | 16. shareVideoToWeChatContactsForResult           | 分享视频到联系人返回结果   |
+| 17   | 17. shareFile                                     | 分享文件                 |
+| 18   | 18. shareFileToWeChatContacts                     | 分享文件到联系人          |
+| 19   | 19. shareFileForResult                            | 分享文件返回结果          |
+| 20   | 20. shareFileToWeChatContactsForResult            | 分享文件到联系人返回结果   |
 
 ### *026.片段FragmentHelper(485)*
 
-| 序号 | 方法                       | 功能 |
-|:-----|:---------------------------|:----|
-| 01   | 01. addFragment            | 功能 |
-| 02   | 02. addFragments           | 功能 |
-| 03   | 03. hideAddFragment        | 功能 |
-| 04   | 04. popAddFragment         | 功能 |
-| 05   | 05. replaceFragment        | 功能 |
-| 06   | 06. showFragment           | 功能 |
-| 07   | 07. showFragments          | 功能 |
-| 08   | 08. hideFragment           | 功能 |
-| 09   | 09. hideFragments          | 功能 |
-| 10   | 10. hideAllShowFragment    | 功能 |
-| 11   | 11. hideOthersShowFragment | 功能 |
-| 12   | 12. hideShowFragment       | 功能 |
-| 13   | 13. removeFragment         | 功能 |
-| 14   | 14. removeToFragment       | 功能 |
-| 15   | 15. removeFragments        | 功能 |
-| 16   | 16. popFragment            | 功能 |
-| 17   | 17. popToFragment          | 功能 |
-| 18   | 18. popFragments           | 功能 |
-| 19   | 19. getLastAddFragment     | 功能 |
-| 20   | 20. getTopShowFragment     | 功能 |
-| 21   | 21. getFragments           | 功能 |
-| 22   | 22. getNodes               | 功能 |
-| 23   | 23. getPreFragment         | 功能 |
-| 24   | 24. getFragment            | 功能 |
-| 25   | 25. OnBackClickListener    | 功能 |
-| 26   | 26. dispatchBackPress      | 功能 |
-| 27   | 27. setBackgroundColor     | 功能 |
-| 28   | 28. setBackgroundResource  | 功能 |
-| 29   | 29. setBackgroundDrawable  | 功能 |
-| 30   | 30. getSimpleName          | 功能 |
+| 序号 | 方法                       | 功能              |
+|:-----|:---------------------------|:-----------------|
+| 01   | 01. addFragment            | 添加单片段        |
+| 02   | 02. addFragments           | 添加多片段        |
+| 03   | 03. hideAddFragment        | 隐藏添加片段      |
+| 04   | 04. popAddFragment         | 弹出添加片段      |
+| 05   | 05. replaceFragment        | 替换片段          |
+| 06   | 06. showFragment           | 显示单片段        |
+| 07   | 07. showFragments          | 显示多片段        |
+| 08   | 08. hideFragment           | 隐藏单片段        |
+| 09   | 09. hideFragments          | 隐藏多片段        |
+| 10   | 10. hideAllShowFragment    | 隐藏所有显示片段   |
+| 11   | 11. hideOthersShowFragment | 隐藏其他显示片段   |
+| 12   | 12. hideShowFragment       | 隐藏显示片段      |
+| 13   | 13. removeFragment         | 移除单片段        |
+| 14   | 14. removeToFragment       | 移除转到片段      |
+| 15   | 15. removeFragments        | 移除多片段        |
+| 16   | 16. popFragment            | 弹出单片段        |
+| 17   | 17. popToFragment          | 弹出转到片段      |
+| 18   | 18. popFragments           | 弹出多片段        |
+| 19   | 19. getLastAddFragment     | 获取最近添加片段   |
+| 20   | 20. getTopShowFragment     | 获取顶部显示片段   |
+| 21   | 21. getFragments           | 获取所有片段      |
+| 22   | 22. getNodes               | 获取片段节点      |
+| 23   | 23. getPreFragment         | 获取之前片段      |
+| 24   | 24. getFragment            | 获取片段          |
+| 25   | 25. OnBackClickListener    | 返回点击监听器    |
+| 26   | 26. dispatchBackPress      | 执行返回点击      |
+| 27   | 27. setBackgroundColor     | 设置背景颜色      |
+| 28   | 28. setBackgroundResource  | 设置背景资源      |
+| 29   | 29. setBackgroundDrawable  | 设置背景可绘制对象 |
+| 30   | 30. getSimpleName          | 获取片段名称      |
 
 ### *027.服务ServiceHelper(66)*
 
