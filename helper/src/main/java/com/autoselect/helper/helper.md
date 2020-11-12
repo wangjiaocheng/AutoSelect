@@ -196,168 +196,167 @@
 
 ### *003.网络NetHelper(580)*
 
-| 序号 | 方法                          | 功能 |
-|:-----|:------------------------------|:----|
-| 01   | 01. openSettingsWireless      | 功能 |
-| 02   | 02. settingsWireless          | 功能 |
-| 03   | 03. currentNetworkState       | 功能 |
-| 04   | 04. isConnectingByState       | 功能 |
-| 05   | 05. isConnectedByState        | 功能 |
-| 06   | 06. isSuspendedByState        | 功能 |
-| 07   | 07. isDisconnectingByState    | 功能 |
-| 08   | 08. isDisconnectedByState     | 功能 |
-| 09   | 09. isUnknownByState          | 功能 |
-| 10   | 10. currentNetworkType        | 功能 |
-| 11   | 11. isWifiByType              | 功能 |
-| 12   | 12. isMobileByType            | 功能 |
-| 13   | 13. isMobileMmsByType         | 功能 |
-| 14   | 14. isMobileSuplByType        | 功能 |
-| 15   | 15. isMobileDunByType         | 功能 |
-| 16   | 16. isMobileHipriByType       | 功能 |
-| 17   | 17. isWimaxByType             | 功能 |
-| 18   | 18. isBluetoothByType         | 功能 |
-| 19   | 19. isDummyByType             | 功能 |
-| 20   | 20. isEthernetByType          | 功能 |
-| 21   | 21. currentNetworkSubtype     | 功能 |
-| 22   | 22. isEDGEBySubtype           | 功能 |
-| 23   | 23. isGPRSBySubtype           | 功能 |
-| 24   | 24. isCDMABySubtype           | 功能 |
-| 25   | 25. is1XRTTBySubtype          | 功能 |
-| 26   | 26. isIDENBySubtype           | 功能 |
-| 27   | 27. isEVDO_ABySubtype         | 功能 |
-| 28   | 28. isUMTSBySubtype           | 功能 |
-| 29   | 29. isEVDO_0BySubtype         | 功能 |
-| 30   | 30. isHSDPABySubtype          | 功能 |
-| 31   | 31. isHSUPABySubtype          | 功能 |
-| 32   | 32. isHSPABySubtype           | 功能 |
-| 33   | 33. isEVDO_BBySubtype         | 功能 |
-| 34   | 34. isEHRPDBySubtype          | 功能 |
-| 35   | 35. isHSPAPBySubtype          | 功能 |
-| 36   | 36. isLTEBySubtype            | 功能 |
-| 37   | 37. isUNKNOWNBySubtype        | 功能 |
-| 38   | 38. isChinaMobile2G           | 功能 |
-| 39   | 39. isChinaUnicom2G           | 功能 |
-| 40   | 40. isChinaTelecom2G          | 功能 |
-| 41   | 41. isChinaUnicom3G           | 功能 |
-| 42   | 42. isChinaTelecom3G          | 功能 |
-| 43   | 43. NetworkType               | 功能 |
-| 44   | 44. netWorkType               | 功能 |
-| 45   | 45. netWorkTypeName           | 功能 |
-| 46   | 46. networkState              | 功能 |
-| 47   | 47. isConnectedWifiOrMobile   | 功能 |
-| 48   | 48. isConnectedNetwork        | 功能 |
-| 49   | 49. isConnected               | 功能 |
-| 50   | 50. isAvailable               | 功能 |
-| 51   | 51. isAvailableByPing         | 功能 |
-| 52   | 52. ping                      | 功能 |
-| 53   | 53. wifiEnabled               | 功能 |
-| 54   | 54. isWifiAvailable           | 功能 |
-| 55   | 55. isWifiConnected           | 功能 |
-| 56   | 56. wifiState                 | 功能 |
-| 57   | 57. wifiConnectionInfo        | 功能 |
-| 58   | 58. wifiScanResults           | 功能 |
-| 59   | 59. getWifiScanResultsByBSSID | 功能 |
-| 60   | 60. gateWayByWifi             | 功能 |
-| 61   | 61. netMaskByWifi             | 功能 |
-| 62   | 62. ipAddressByWifi           | 功能 |
-| 63   | 63. serverAddressByWifi       | 功能 |
-| 64   | 64. is4GConnected             | 功能 |
-| 65   | 65. isDataEnabled             | 功能 |
-| 66   | 66. setDataEnabled            | 功能 |
-| 67   | 67. setMobileDataEnabled      | 功能 |
-| 68   | 68. isDataOpen                | 功能 |
-| 69   | 69. isDataConnected           | 功能 |
-| 70   | 70. getAddressDomain          | 功能 |
-| 71   | 71. addressProxy              | 功能 |
-| 72   | 72. ipBroadcast               | 功能 |
-| 73   | 73. ipWifi                    | 功能 |
-| 74   | 74. ipGprs                    | 功能 |
-| 75   | 75. getIpGprs                 | 功能 |
-| 76   | 76. addressIp                 | 功能 |
-| 77   | 77. macBluetooth              | 功能 |
-| 78   | 78. addressMac                | 功能 |
-| 79   | 79. getAddressMac             | 功能 |
+| 序号 | 方法                          | 功能                        |
+|:-----|:------------------------------|:---------------------------|
+| 01   | 01. openSettingsWireless      | 打开网络设置界面            |
+| 02   | 02. settingsWireless          | 网络设置界面                |
+| 03   | 03. currentNetworkState       | 当前网络状态                |
+| 04   | 04. isConnectingByState       | 是否网络连接中              |
+| 05   | 05. isConnectedByState        | 是否网络已连接              |
+| 06   | 06. isSuspendedByState        | 是否网络已暂停              |
+| 07   | 07. isDisconnectingByState    | 是否网络连接正取消          |
+| 08   | 08. isDisconnectedByState     | 是否网络连接已取消          |
+| 09   | 09. isUnknownByState          | 是否网络未知状态            |
+| 10   | 10. currentNetworkType        | 当前网络类型                |
+| 11   | 11. isWifiByType              | 是否wifi网络                |
+| 12   | 12. isMobileByType            | 是否移动网络                |
+| 13   | 13. isMobileMmsByType         | 是否移动网络mms             |
+| 14   | 14. isMobileSuplByType        | 是否移动网络supl            |
+| 15   | 15. isMobileDunByType         | 是否移动网络dun             |
+| 16   | 16. isMobileHipriByType       | 是否移动网络hipri           |
+| 17   | 17. isWimaxByType             | 是否wimax网络               |
+| 18   | 18. isBluetoothByType         | 是否蓝牙网络                |
+| 19   | 19. isDummyByType             | 是否dummy网络               |
+| 20   | 20. isEthernetByType          | 是否以太网络                |
+| 21   | 21. currentNetworkSubtype     | 当前网络子类型              |
+| 22   | 22. isEDGEBySubtype           | 是否网络子类型edge          |
+| 23   | 23. isGPRSBySubtype           | 是否网络子类型gprs          |
+| 24   | 24. isCDMABySubtype           | 是否网络子类型cdma          |
+| 25   | 25. is1XRTTBySubtype          | 是否网络子类型1xrtt         |
+| 26   | 26. isIDENBySubtype           | 是否网络子类型iden          |
+| 27   | 27. isEVDO_ABySubtype         | 是否网络子类型evdo_a        |
+| 28   | 28. isUMTSBySubtype           | 是否网络子类型umts          |
+| 29   | 29. isEVDO_0BySubtype         | 是否网络子类型evdo_0        |
+| 30   | 30. isHSDPABySubtype          | 是否网络子类型hsdpa         |
+| 31   | 31. isHSUPABySubtype          | 是否网络子类型hsupa         |
+| 32   | 32. isHSPABySubtype           | 是否网络子类型hspa          |
+| 33   | 33. isEVDO_BBySubtype         | 是否网络子类型evdo_b        |
+| 34   | 34. isEHRPDBySubtype          | 是否网络子类型ehrpd         |
+| 35   | 35. isHSPAPBySubtype          | 是否网络子类型hspap         |
+| 36   | 36. isLTEBySubtype            | 是否网络子类型lte           |
+| 37   | 37. isUNKNOWNBySubtype        | 是否网络子类型未知          |
+| 38   | 38. isChinaMobile2G           | 是否移动2G                  |
+| 39   | 39. isChinaUnicom2G           | 是否联通2G                  |
+| 40   | 40. isChinaTelecom2G          | 是否电信2G                  |
+| 41   | 41. isChinaUnicom3G           | 是否联通3G                  |
+| 42   | 42. isChinaTelecom3G          | 是否电信3G                  |
+| 43   | 43. NetworkType               | 网络类型枚举                |
+| 44   | 44. netWorkType               | 网络类型                    |
+| 45   | 45. netWorkTypeName           | 网络类型名称                |
+| 46   | 46. networkState              | 网络状态                    |
+| 47   | 47. isConnectedWifiOrMobile   | 是否已连接wifi或移动数据网络 |
+| 48   | 48. isConnectedNetwork        | 是否已连接网络              |
+| 49   | 49. isConnected               | 是否已连接                  |
+| 50   | 50. isAvailable               | 网络连接是否可用            |
+| 51   | 51. isAvailableByPing         | 网络连接是否可用通过ping    |
+| 52   | 52. ping                      | 是否连接外网                |
+| 53   | 53. wifiEnabled               | wifi是否启用                |
+| 54   | 54. isWifiAvailable           | wifi是否可用                |
+| 55   | 55. isWifiConnected           | wifi是否已连接              |
+| 56   | 56. wifiState                 | wifi状态                   |
+| 57   | 57. wifiConnectionInfo        | wifi连接信息                |
+| 58   | 58. wifiScanResults           | wifi扫描结果                |
+| 59   | 59. getWifiScanResultsByBSSID | wifi扫描结果通过bssid       |
+| 60   | 60. gateWayByWifi             | wifi网关                   |
+| 61   | 61. netMaskByWifi             | wifi网络掩码                |
+| 62   | 62. ipAddressByWifi           | 获取ip地址通过wifi          |
+| 63   | 63. serverAddressByWifi       | 获取服务器地址通过wifi      |
+| 64   | 64. is4GConnected             | 是否4G网络已连接            |
+| 65   | 65. isDataEnabled             | 是否数据启用                |
+| 66   | 66. setDataEnabled            | 设置数据启用                |
+| 67   | 67. setMobileDataEnabled      | 设置移动数据启用            |
+| 68   | 68. isDataOpen                | 数据是否打开                |
+| 69   | 69. isDataConnected           | 数据是否已连接              |
+| 70   | 70. getAddressDomain          | 获取域名地址                |
+| 71   | 71. addressProxy              | 获取代理地址                |
+| 72   | 72. ipBroadcast               | 广播的ip地址                |
+| 73   | 73. ipWifi                    | wifi的ip地址               |
+| 74   | 74. ipGprs                    | gprs的ip地址               |
+| 75   | 75. getIpGprs                 | gprs的ip地址带是否ipv4      |
+| 76   | 76. addressIp                 | ip地址                     |
+| 77   | 77. macBluetooth              | 蓝牙mac地址                 |
+| 78   | 78. addressMac                | mac地址                    |
+| 79   | 79. getAddressMac             | 获取mac地址                 |
 
 ### *004.无线WifiHelper(254)*
 
-| 序号 | 方法                           | 功能 |
-|:-----|:-------------------------------|:----|
-| 01   | 01. connectWifi                | 功能 |
-| 02   | 02. checkState                 | 功能 |
-| 03   | 03. openWifi                   | 功能 |
-| 04   | 04. closeWifi                  | 功能 |
-| 05   | 05. wifiConfigList             | 功能 |
-| 06   | 06. hiddenSSID                 | 功能 |
-| 07   | 07. displaySSID                | 功能 |
-| 08   | 08. configWifiList             | 功能 |
-| 09   | 09. timeOut                    | 功能 |
-| 10   | 10. onWifiConnectStateListener | 功能 |
-| 11   | 11. wifiInfo                   | 功能 |
-| 12   | 12. mac                        | 功能 |
-| 13   | 13. ip                         | 功能 |
-| 14   | 14. currentNetId               | 功能 |
-| 15   | 15. bssId                      | 功能 |
-| 16   | 16. ssId                       | 功能 |
-| 17   | 17. checkSSIDState             | 功能 |
-| 18   | 18. isConnectSuccess           | 功能 |
-| 19   | 19. wifiList                   | 功能 |
-| 20   | 20. getSSID                    | 功能 |
-| 21   | 21. getBSSID                   | 功能 |
-| 22   | 22. getFrequency               | 功能 |
-| 23   | 23. getLevel                   | 功能 |
-| 24   | 24. getCapabilities            | 功能 |
-| 25   | 25. scanResultList             | 功能 |
-| 26   | 26. lookUpScan                 | 功能 |
-| 27   | 27. checkScanResult            | 功能 |
-| 28   | 28. startScan                  | 功能 |
-| 29   | 29. isExistSSID                | 功能 |
-| 30   | 30. connectConfigurationWifi   | 功能 |
-| 31   | 31. addNetwork                 | 功能 |
-| 32   | 32. removeWifi                 | 功能 |
-| 33   | 33. disconnectWifi             | 功能 |
-| 34   | 34. connectConfiguration       | 功能 |
-| 35   | 35. releaseWifiLock            | 功能 |
-| 36   | 36. acquireWifiLock            | 功能 |
-| 37   | 37. release                    | 功能 |
+| 序号 | 方法                           | 功能                         |
+|:-----|:-------------------------------|:-----------------------------|
+| 01   | 01. connectWifi                | 连接wifi                     |
+| 02   | 02. checkState                 | wifi是否可用                 |
+| 03   | 03. openWifi                   | 打开wifi                     |
+| 04   | 04. closeWifi                  | 关闭wifi                     |
+| 05   | 05. wifiConfigList             | 配置好的wifi网络             |
+| 06   | 06. hiddenSSID                 | 隐藏ssid                     |
+| 07   | 07. displaySSID                | 显示ssid                     |
+| 08   | 08. configWifiList             | 获取已保存配置的wifi网络      |
+| 09   | 09. timeOut                    | wifi默认连接超时时间          |
+| 10   | 10. onWifiConnectStateListener | wifi连接状态监听器            |
+| 11   | 11. wifiInfo                   | 得到WifiInfo所有信息包        |
+| 12   | 12. mac                        | wifi的mac地址                |
+| 13   | 13. ip                         | wifi的ip地址                 |
+| 14   | 14. currentNetId               | 当前网络ID                   |
+| 15   | 15. bssId                      | bssid                        |
+| 16   | 16. ssId                       | ssid                         |
+| 17   | 17. checkSSIDState             | 判断某个wifi网络是否连接      |
+| 18   | 18. isConnectSuccess           | wifi是否连接成功             |
+| 19   | 19. wifiList                   | wifi列表                     |
+| 20   | 20. getSSID                    | 通过网络ID获取ssid           |
+| 21   | 21. getBSSID                   | 通过网络ID获取物理地址        |
+| 22   | 22. getFrequency               | 通过网络ID获取频率            |
+| 23   | 23. getLevel                   | 通过网络ID获取强度            |
+| 24   | 24. getCapabilities            | 通过网络ID获取功能            |
+| 25   | 25. scanResultList             | 扫描结果列表                 |
+| 26   | 26. lookUpScan                 | 扫描结果字符串                |
+| 27   | 27. checkScanResult            | 判断能不能搜索到指定网络      |
+| 28   | 28. startScan                  | 开始扫描wifi                 |
+| 29   | 29. isExistSSID                | 判断某个网络是否已保存在配置中 |
+| 30   | 30. connectConfigurationWifi   | 连接配置好的WiFi             |
+| 31   | 31. addNetwork                 | 添加一个网络并连接            |
+| 32   | 32. removeWifi                 | 删除指定ID网络               |
+| 33   | 33. disconnectWifi             | 断开指定ID网络               |
+| 34   | 34. connectConfiguration       | 指定配置好的网络进行连接      |
+| 35   | 35. releaseWifiLock            | 解锁WifiLock                 |
+| 36   | 36. acquireWifiLock            | 锁定WifiLock                 |
+| 37   | 37. release                    | 释放wifi资源                 |
 
 ### *005.热点ApHelper(185)*
 
-| 序号 | 方法                              | 功能 |
-|:-----|:----------------------------------|:----|
-| 01   | 01. isWifiConnectSuccess          | 功能 |
-| 02   | 02. wifiApState                   | 功能 |
-| 03   | 03. isWifiApEnable                | 功能 |
-| 04   | 04. onWifiAPStatusChangedListener | 功能 |
-| 05   | 05. wifiAPSsid                    | 功能 |
-| 06   | 06. wifiAPPassword                | 功能 |
-| 07   | 07. startWifiAp                   | 功能 |
-| 08   | 08. closeWifiAp                   | 功能 |
-| 09   | 09. startAp                       | 功能 |
-| 10   | 10. closeAp                       | 功能 |
-| 11   | 11. securityType                  | 功能 |
-| 12   | 12. release                       | 功能 |
+| 序号 | 方法                              | 功能                  |
+|:-----|:----------------------------------|:---------------------|
+| 01   | 01. isWifiConnectSuccess          | 是否wifi连接成功      |
+| 02   | 02. wifiApState                   | wifi热点状态          |
+| 03   | 03. isWifiApEnable                | wifi热点是否启用      |
+| 04   | 04. onWifiAPStatusChangedListener | wifi热点状态改变监听器 |
+| 05   | 05. wifiAPSsid                    | wifi热点ssid          |
+| 06   | 06. wifiAPPassword                | wifi热点密码          |
+| 07   | 07. startWifiAp                   | 开始WLAN热点          |
+| 08   | 08. closeWifiAp                   | 关闭WLAN热点          |
+| 09   | 09. startAp                       | 开始wifi热点          |
+| 10   | 10. closeAp                       | 关闭wifi热点          |
+| 11   | 11. securityType                  | wifi安全类型          |
+| 12   | 12. release                       | 释放wifi热点资源      |
 
 ### *006.蓝牙BluetoothHelper(201)*
 
-| 序号 | 方法                          | 功能 |
-|:-----|:------------------------------|:----|
-| 01   | 01. bluetoothAdapter          | 功能 |
-| 02   | 02. getBluetoothDevice        | 功能 |
-| 03   | 03. isOpenBluetooth           | 功能 |
-| 04   | 04. onBluetoothDeviceListener | 功能 |
-| 05   | 05. openBluetooth             | 功能 |
-| 06   | 06. bluetoothDeviceFilter     | 功能 |
-| 07   | 07. isCorrectDevice           | 功能 |
-| 08   | 08. stopSearch                | 功能 |
-| 09   | 09. startSearch               | 功能 |
-| 10   | 10. searchDevices             | 功能 |
-| 11   | 11. createBind                | 功能 |
-| 12   | 12. createBind                | 功能 |
-| 13   | 13. pairBtDevice              | 功能 |
-| 14   | 14. isCorrectDevice           | 功能 |
-| 15   | 15. isBluetoothBond           | 功能 |
-| 16   | 16. isBtAddressValid          | 功能 |
-| 17   | 17. release                   | 功能 |
+| 序号 | 方法                          | 功能                    |
+|:-----|:------------------------------|:-----------------------|
+| 01   | 01. bluetoothAdapter          | 蓝牙适配器              |
+| 02   | 02. getBluetoothDevice        | 根据地址获取蓝牙设备    |
+| 03   | 03. isOpenBluetooth           | 蓝牙是否打开            |
+| 04   | 04. onBluetoothDeviceListener | 蓝牙设备监听器          |
+| 05   | 05. openBluetooth             | 打开蓝牙                |
+| 06   | 06. bluetoothDeviceFilter     | 蓝牙设备过滤器          |
+| 07   | 07. isCorrectDevice           | 是否指定蓝牙设备        |
+| 08   | 08. stopSearch                | 停止搜索蓝牙            |
+| 09   | 09. startSearch               | 开始搜索蓝牙            |
+| 10   | 10. searchDevices             | 搜索蓝牙设备带监听      |
+| 11   | 11. createBind                | 匹配蓝牙设备可带PIN码   |
+| 12   | 12. pairBtDevice              | 根据地址匹配具体蓝牙设备 |
+| 13   | 13. isCorrectDevice           | 蓝牙设备是否正确        |
+| 14   | 14. isBluetoothBond           | 蓝牙是否已绑定          |
+| 15   | 15. isBtAddressValid          | 蓝牙地址是否有效        |
+| 16   | 16. release                   | 蓝牙资源释放            |
 
 ### *007.定位LocationHelper(283)*
 
@@ -382,219 +381,219 @@
 
 ### *008.亮度BrightnessHelper(48)*
 
-| 序号 | 方法                         | 功能 |
-|:-----|:-----------------------------|:----|
-| 01   | 01. isAutoBrightnessEnabled  | 功能 |
-| 02   | 02. setAutoBrightnessEnabled | 功能 |
-| 03   | 03. brightness               | 功能 |
-| 04   | 04. setBrightness            | 功能 |
-| 05   | 05. getWindowBrightness      | 功能 |
-| 06   | 06. setWindowBrightness      | 功能 |
+| 序号 | 方法                         | 功能               |
+|:-----|:-----------------------------|:------------------|
+| 01   | 01. isAutoBrightnessEnabled  | 是否自动亮度启用   |
+| 02   | 02. setAutoBrightnessEnabled | 设置是否自动亮度   |
+| 03   | 03. brightness               | 获取亮度          |
+| 04   | 04. setBrightness            | 设置亮度0..255    |
+| 05   | 05. getWindowBrightness      | 获取窗口亮度       |
+| 06   | 06. setWindowBrightness      | 设置窗口亮度0..255 |
 
 ### *009.闪光FlashlightHelper(58)*
 
-| 序号 | 方法                    | 功能 |
-|:-----|:------------------------|:----|
-| 01   | 01. isFlashlightEnable  | 功能 |
-| 02   | 02. isFlashlightOn      | 功能 |
-| 03   | 03. setFlashlightStatus | 功能 |
-| 04   | 04. destroy             | 功能 |
+| 序号 | 方法                    | 功能           |
+|:-----|:------------------------|:--------------|
+| 01   | 01. isFlashlightEnable  | 闪光灯是否可用 |
+| 02   | 02. isFlashlightOn      | 闪光灯是否打开 |
+| 03   | 03. setFlashlightStatus | 闪光灯设置开关 |
+| 04   | 04. destroy             | 闪光灯销毁    |
 
 ### *010.振动VibrateHelper(20)*
 
-| 序号 | 方法                   | 功能 |
-|:-----|:-----------------------|:----|
-| 01   | 01. vibrateOnce        | 功能 |
-| 02   | 02. vibrateComplicated | 功能 |
-| 03   | 03. vibrateStop        | 功能 |
+| 序号 | 方法                   | 功能     |
+|:-----|:-----------------------|:--------|
+| 01   | 01. vibrateOnce        | 一次振动 |
+| 02   | 02. vibrateComplicated | 周期振动 |
+| 03   | 03. vibrateStop        | 停止振动 |
 
 ### *011.蜂鸣BeepHelper(39)*
 
-| 序号 | 方法         | 功能 |
-|:-----|:-------------|:----|
-| 01   | 01. playBeep | 功能 |
+| 序号 | 方法         | 功能         |
+|:-----|:-------------|:------------|
+| 01   | 01. playBeep | 播放蜂鸣声音 |
 
 >- beep.ogg
 
 ### *012.系统SystemHelper：SystemLanguage(230)*
 
-| 序号 | 方法                                 | 功能 |
-|:-----|:-------------------------------------|:----|
-| 01   | 01. buildManufacturer                | 功能 |
-| 02   | 02. buildModel                       | 功能 |
-| 03   | 03. serial                           | 功能 |
-| 04   | 04. uniqueSerial                     | 功能 |
-| 05   | 05. uniqueId                         | 功能 |
-| 06   | 06. buildSerial                      | 功能 |
-| 07   | 07. buildBrand                       | 功能 |
-| 08   | 08. buildHost                        | 功能 |
-| 09   | 09. buildUser                        | 功能 |
-| 10   | 10. buildTags                        | 功能 |
-| 11   | 11. buildTime                        | 功能 |
-| 12   | 12. buildFingerprint                 | 功能 |
-| 13   | 13. buildProduct                     | 功能 |
-| 14   | 14. buildDevice                      | 功能 |
-| 15   | 15. buildHardware                    | 功能 |
-| 16   | 16. buildBoard                       | 功能 |
-| 17   | 17. buildID                          | 功能 |
-| 18   | 18. buildDisplayVersion              | 功能 |
-| 19   | 19. buildBootloaderVersion           | 功能 |
-| 20   | 20. buildRadioVersion                | 功能 |
-| 21   | 21. buildAbis                        | 功能 |
-| 22   | 22. buildVersionSDK                  | 功能 |
-| 23   | 23. buildVersionRelease              | 功能 |
-| 24   | 24. buildVersionCodename             | 功能 |
-| 25   | 25. buildVersionIncremental          | 功能 |
-| 26   | 26. locales                          | 功能 |
-| 27   | 27. currentLocale                    | 功能 |
-| 28   | 28. currentLanguage                  | 功能 |
-| 29   | 29. gsfId                            | 功能 |
-| 30   | 30. googleAccounts                   | 功能 |
-| 31   | #### SystemLanguage                  | 功能 |
-| 32   | 01. applyLanguageSystem              | 功能 |
-| 33   | 02. applyLanguageCustom              | 功能 |
-| 34   | 03. isAppliedLanguageSystem          | 功能 |
-| 35   | 04. applyLanguageSystemInAppOnCreate | 功能 |
-| 36   | 05. isAppliedLanguageCustom          | 功能 |
-| 37   | 06. applyLanguageCustomInAppOnCreate | 功能 |
-| 38   | 07. applyLanguage                    | 功能 |
+| 序号 | 方法                                 | 功能                        |
+|:-----|:-------------------------------------|:---------------------------|
+| 01   | 01. buildManufacturer                | 厂商                       |
+| 02   | 02. buildModel                       | 型号                       |
+| 03   | 03. serial                           | 序列号                     |
+| 04   | 04. uniqueSerial                     | 唯一序列号                  |
+| 05   | 05. uniqueId                         | 设备物理唯一标识符，伪唯一ID |
+| 06   | 06. buildSerial                      | 编译序列号                  |
+| 07   | 07. buildBrand                       | 编译厂商                   |
+| 08   | 08. buildHost                        | 编译主机                   |
+| 09   | 09. buildUser                        | 编译作者                   |
+| 10   | 10. buildTags                        | 编译描述                   |
+| 11   | 11. buildTime                        | 编译时间                   |
+| 12   | 12. buildFingerprint                 | 编译指纹                   |
+| 13   | 13. buildProduct                     | 编译产品                   |
+| 14   | 14. buildDevice                      | 编译设备                   |
+| 15   | 15. buildHardware                    | 编译硬件                   |
+| 16   | 16. buildBoard                       | 编译主板                   |
+| 17   | 17. buildID                          | 修订版本列表                |
+| 18   | 18. buildDisplayVersion              | 系统版本                   |
+| 19   | 19. buildBootloaderVersion           | 启动程序版本                |
+| 20   | 20. buildRadioVersion                | 基带版本                   |
+| 21   | 21. buildAbis                        | CPU指令集                  |
+| 22   | 22. buildVersionSDK                  | 系统SDK版本                |
+| 23   | 23. buildVersionRelease              | 编译版本                   |
+| 24   | 24. buildVersionCodename             | 开发代号                   |
+| 25   | 25. buildVersionIncremental          | 源码控制版本                |
+| 26   | 26. locales                          | 可用地区                   |
+| 27   | 27. currentLocale                    | 当前地区                   |
+| 28   | 28. currentLanguage                  | 当前语言                   |
+| 29   | 29. gsfId                            | 谷歌服务框架ID              |
+| 30   | 30. googleAccounts                   | 谷歌账号                   |
+| 31   | #### SystemLanguage                  | 系统语言                   |
+| 32   | 01. applyLanguageSystem              | 应用系统语言                |
+| 33   | 02. applyLanguageCustom              | 应用自定义语言              |
+| 34   | 03. isAppliedLanguageSystem          | 是否已应用系统语言          |
+| 35   | 04. applyLanguageSystemInAppOnCreate | 创建生命周期应用系统语言     |
+| 36   | 05. isAppliedLanguageCustom          | 是否已应用自定义语言        |
+| 37   | 06. applyLanguageCustomInAppOnCreate | 创建生命周期应用自定义语言   |
+| 38   | 07. applyLanguage                    | 应用语言                   |
 
 ### *013.版本VersionHelper(66)*
 
-| 序号 | 方法                         | 功能       |
-|:-----|:-----------------------------|:----------|
-| 01   | 01. aboveAstro               | 版本01以上 |
-| 02   | 02. aboveBender              | 版本02以上 |
-| 03   | 03. aboveCupcake             | 版本03以上 |
-| 04   | 04. aboveDonut               | 版本04以上 |
-| 05   | 05. aboveEclair              | 版本05以上 |
-| 06   | 06. aboveEclair01            | 版本06以上 |
-| 07   | 07. aboveEclairMR1           | 版本07以上 |
-| 08   | 08. aboveFroyo               | 版本08以上 |
-| 09   | 09. aboveGingerbread         | 版本09以上 |
-| 10   | 10. aboveGingerbreadMR1      | 版本10以上 |
-| 11   | 11. aboveHoneycomb           | 版本11以上 |
-| 12   | 12. aboveHoneycombMR1        | 版本12以上 |
-| 13   | 13. aboveHoneycombMR2        | 版本13以上 |
-| 14   | 14. aboveIceCreamSandwich    | 版本14以上 |
-| 15   | 15. aboveIceCreamSandwichMR1 | 版本15以上 |
-| 16   | 16. aboveJellyBean           | 版本16以上 |
-| 17   | 17. aboveJellyBeanMR1        | 版本17以上 |
-| 18   | 18. aboveJellyBeanMR2        | 版本18以上 |
-| 19   | 19. aboveKitKat              | 版本19以上 |
-| 20   | 20. aboveKitKatWatch         | 版本20以上 |
-| 21   | 21. aboveLollipop            | 版本21以上 |
-| 22   | 22. aboveLollipopMR1         | 版本22以上 |
-| 23   | 23. aboveMarshmallow         | 版本23以上 |
-| 24   | 24. aboveNougat              | 版本24以上 |
-| 25   | 25. aboveNougatMR1           | 版本25以上 |
-| 26   | 26. aboveOreo                | 版本26以上 |
-| 27   | 27. aboveOreoMR1             | 版本27以上 |
-| 28   | 28. abovePie                 | 版本28以上 |
-| 29   | 29. aboveQ                   | 版本29以上 |
-| 30   | 30. aboveR                   | 版本30以上 |
+| 序号 | 方法                         | 功能              |
+|:-----|:-----------------------------|:------------------|
+| 01   | 01. aboveAstro               | 安卓系统版本01以上 |
+| 02   | 02. aboveBender              | 安卓系统版本02以上 |
+| 03   | 03. aboveCupcake             | 安卓系统版本03以上 |
+| 04   | 04. aboveDonut               | 安卓系统版本04以上 |
+| 05   | 05. aboveEclair              | 安卓系统版本05以上 |
+| 06   | 06. aboveEclair01            | 安卓系统版本06以上 |
+| 07   | 07. aboveEclairMR1           | 安卓系统版本07以上 |
+| 08   | 08. aboveFroyo               | 安卓系统版本08以上 |
+| 09   | 09. aboveGingerbread         | 安卓系统版本09以上 |
+| 10   | 10. aboveGingerbreadMR1      | 安卓系统版本10以上 |
+| 11   | 11. aboveHoneycomb           | 安卓系统版本11以上 |
+| 12   | 12. aboveHoneycombMR1        | 安卓系统版本12以上 |
+| 13   | 13. aboveHoneycombMR2        | 安卓系统版本13以上 |
+| 14   | 14. aboveIceCreamSandwich    | 安卓系统版本14以上 |
+| 15   | 15. aboveIceCreamSandwichMR1 | 安卓系统版本15以上 |
+| 16   | 16. aboveJellyBean           | 安卓系统版本16以上 |
+| 17   | 17. aboveJellyBeanMR1        | 安卓系统版本17以上 |
+| 18   | 18. aboveJellyBeanMR2        | 安卓系统版本18以上 |
+| 19   | 19. aboveKitKat              | 安卓系统版本19以上 |
+| 20   | 20. aboveKitKatWatch         | 安卓系统版本20以上 |
+| 21   | 21. aboveLollipop            | 安卓系统版本21以上 |
+| 22   | 22. aboveLollipopMR1         | 安卓系统版本22以上 |
+| 23   | 23. aboveMarshmallow         | 安卓系统版本23以上 |
+| 24   | 24. aboveNougat              | 安卓系统版本24以上 |
+| 25   | 25. aboveNougatMR1           | 安卓系统版本25以上 |
+| 26   | 26. aboveOreo                | 安卓系统版本26以上 |
+| 27   | 27. aboveOreoMR1             | 安卓系统版本27以上 |
+| 28   | 28. abovePie                 | 安卓系统版本28以上 |
+| 29   | 29. aboveQ                   | 安卓系统版本29以上 |
+| 30   | 30. aboveR                   | 安卓系统版本30以上 |
 
 ### *014.机型RomHelper(215)*
 
-| 序号 | 方法            | 功能 |
-|:-----|:----------------|:----|
-| 01   | 01. isHuawei    | 功能 |
-| 02   | 02. isVivo      | 功能 |
-| 03   | 03. isXiaomi    | 功能 |
-| 04   | 04. isOppo      | 功能 |
-| 05   | 05. isLeeco     | 功能 |
-| 06   | 06. is360       | 功能 |
-| 07   | 07. isZte       | 功能 |
-| 08   | 08. isOneplus   | 功能 |
-| 09   | 09. isNubia     | 功能 |
-| 10   | 10. isCoolpad   | 功能 |
-| 11   | 11. isLg        | 功能 |
-| 12   | 12. isGoogle    | 功能 |
-| 13   | 13. isSamsung   | 功能 |
-| 14   | 14. isMeizu     | 功能 |
-| 15   | 15. isLenovo    | 功能 |
-| 16   | 16. isSmartisan | 功能 |
-| 17   | 17. isHtc       | 功能 |
-| 18   | 18. isSony      | 功能 |
-| 19   | 19. isAmigo     | 功能 |
+| 序号 | 方法            | 功能           |
+|:-----|:----------------|:--------------|
+| 01   | 01. isHuawei    | 是否华为手机   |
+| 02   | 02. isVivo      | 是否Vivo手机  |
+| 03   | 03. isXiaomi    | 是否小米手机   |
+| 04   | 04. isOppo      | 是否Oppo手机  |
+| 05   | 05. isLeeco     | 是否乐视手机   |
+| 06   | 06. is360       | 是否360手机   |
+| 07   | 07. isZte       | 是否中兴手机   |
+| 08   | 08. isOneplus   | 是否一加手机   |
+| 09   | 09. isNubia     | 是否努比亚手机 |
+| 10   | 10. isCoolpad   | 是否酷派手机   |
+| 11   | 11. isLg        | 是否LG手机    |
+| 12   | 12. isGoogle    | 是否谷歌手机   |
+| 13   | 13. isSamsung   | 是否三星手机   |
+| 14   | 14. isMeizu     | 是否魅族手机   |
+| 15   | 15. isLenovo    | 是否联想手机   |
+| 16   | 16. isSmartisan | 是否锤子手机   |
+| 17   | 17. isHtc       | 是否宏达手机   |
+| 18   | 18. isSony      | 是否索尼手机   |
+| 19   | 19. isAmigo     | 是否金立手机   |
 
 ### *015.重启RebootHelper(35)*
 
-| 序号 | 方法                  | 功能                       |
-|:-----|:----------------------|:--------------------------|
-| 01   | 01. reboot            | android.permission.REBOOT |
-| 02   | 02. reboot2Recovery   | 功能                      |
-| 03   | 03. reboot2Bootloader | 功能                      |
-| 04   | 04. shutdown          | 功能                      |
+| 序号 | 方法                  | 功能                          |
+|:-----|:----------------------|:-----------------------------|
+| 01   | 01. reboot            | 重启android.permission.REBOOT |
+| 02   | 02. reboot2Recovery   | 重启到恢复界面                |
+| 03   | 03. reboot2Bootloader | 重启到引导界面                |
+| 04   | 04. shutdown          | 关机                          |
 
 ### *016.命令ShellHelper(86)*
 
-| 序号 | 方法        | 功能 |
-|:-----|:------------|:----|
-| 01   | 01. execCmd | 功能 |
+| 序号 | 方法        | 功能     |
+|:-----|:------------|:--------|
+| 01   | 01. execCmd | 执行命令 |
 
 ### *017.破解RootHelper(43)*
 
-| 序号 | 方法               | 功能 |
-|:-----|:-------------------|:----|
-| 01   | 01. isRoot         | 功能 |
-| 02   | 02. isRooted       | 功能 |
-| 03   | 03. rootPermission | 功能 |
+| 序号 | 方法               | 功能         |
+|:-----|:-------------------|:------------|
+| 01   | 01. isRoot         | 是否root    |
+| 02   | 02. isRooted       | 是否已root   |
+| 03   | 03. rootPermission | 获取root权限 |
 
 ### *018.应用ApplicationHelper(603)*
 
-| 序号 | 方法                                   | 功能 |
-|:-----|:---------------------------------------|:----|
-| 01   | 01. numCores                           | 功能 |
-| 02   | 02. isServiceRunning                   | 功能 |
-| 03   | 03. stopRunningService                 | 功能 |
-| 04   | 04. runScript                          | 功能 |
-| 05   | 05. killProcess                        | 功能 |
-| 06   | 06. registerAppStatusChangedListener   | 功能 |
-| 07   | 07. unregisterAppStatusChangedListener | 功能 |
-| 08   | 08. appPackageName                     | 功能 |
-| 09   | 09. installApp                         | 功能 |
-| 10   | 10. installAppSilent                   | 功能 |
-| 11   | 11. uninstallApp                       | 功能 |
-| 12   | 12. uninstallAppSilent                 | 功能 |
-| 13   | 13. isAppInstalled                     | 功能 |
-| 14   | 14. isAppRoot                          | 功能 |
-| 15   | 15. isAppDebug                         | 功能 |
-| 16   | 16. isAppSystem                        | 功能 |
-| 17   | 17. isAppBackground                    | 功能 |
-| 18   | 18. isAppForeground                    | 功能 |
-| 19   | 19. launchApp                          | 功能 |
-| 20   | 20. relaunchApp                        | 功能 |
-| 21   | 21. launchAppDetailsSettings           | 功能 |
-| 22   | 22. getAppInstaller                    | 功能 |
-| 23   | 23. getAppFirstInstallTime             | 功能 |
-| 24   | 24. getAppLastUpdateTime               | 功能 |
-| 25   | 25. getAppTargetSdkVersion             | 功能 |
-| 26   | 26. getAppUid                          | 功能 |
-| 27   | 27. getApplicationMetaData             | 功能 |
-| 28   | 28. getAppSize                         | 功能 |
-| 29   | 29. appIcon                            | 功能 |
-| 30   | 30. getAppIcon                         | 功能 |
-| 31   | 31. appName                            | 功能 |
-| 32   | 32. getAppName                         | 功能 |
-| 33   | 33. appPath                            | 功能 |
-| 34   | 34. getAppPath                         | 功能 |
-| 35   | 35. appVersionName                     | 功能 |
-| 36   | 36. getAppVersionName                  | 功能 |
-| 37   | 37. appVersionCode                     | 功能 |
-| 38   | 38. getAppVersionCode                  | 功能 |
-| 39   | 39. appSignature                       | 功能 |
-| 40   | 40. getAppSignature                    | 功能 |
-| 41   | 41. appSignatureSHA1                   | 功能 |
-| 42   | 42. getAppSignatureSHA1                | 功能 |
-| 43   | 43. appSignatureSHA256                 | 功能 |
-| 44   | 44. getAppSignatureSHA256              | 功能 |
-| 45   | 45. appSignatureMD5                    | 功能 |
-| 46   | 46. getAppSignatureMD5                 | 功能 |
-| 47   | 47. appsInfo                           | 功能 |
-| 48   | 48. appInfo                            | 功能 |
-| 49   | 49. getAppInfo                         | 功能 |
-| 50   | 50. getApkInfo                         | 功能 |
+| 序号 | 方法                                   | 功能                    |
+|:-----|:---------------------------------------|:-----------------------|
+| 01   | 01. numCores                           | CPU内核数量             |
+| 02   | 02. isServiceRunning                   | 指定服务是否运行         |
+| 03   | 03. stopRunningService                 | 停止运行指定服务         |
+| 04   | 04. runScript                          | 运行脚本                |
+| 05   | 05. killProcess                        | 结束进程                |
+| 06   | 06. registerAppStatusChangedListener   | 注册应用状态改变监听器   |
+| 07   | 07. unregisterAppStatusChangedListener | 取消应用状态改变监听器   |
+| 08   | 08. appPackageName                     | 应用包名                |
+| 09   | 09. installApp                         | 安装应用                |
+| 10   | 10. installAppSilent                   | 静默安装应用            |
+| 11   | 11. uninstallApp                       | 卸载应用                |
+| 12   | 12. uninstallAppSilent                 | 静默卸载应用            |
+| 13   | 13. isAppInstalled                     | 是否安装应用            |
+| 14   | 14. isAppRoot                          | 是否破解应用            |
+| 15   | 15. isAppDebug                         | 是否调试应用            |
+| 16   | 16. isAppSystem                        | 是否系统应用            |
+| 17   | 17. isAppBackground                    | 是否背景应用            |
+| 18   | 18. isAppForeground                    | 是否前景应用            |
+| 19   | 19. launchApp                          | 打开应用                |
+| 20   | 20. relaunchApp                        | 重启应用                |
+| 21   | 21. launchAppDetailsSettings           | 打开应用详细设置         |
+| 22   | 22. getAppInstaller                    | 获取应用安装器          |
+| 23   | 23. getAppFirstInstallTime             | 获取应用首次安装时间     |
+| 24   | 24. getAppLastUpdateTime               | 获取应用最近更新时间     |
+| 25   | 25. getAppTargetSdkVersion             | 获取应用目标系统版本     |
+| 26   | 26. getAppUid                          | 获取应用uid             |
+| 27   | 27. getApplicationMetaData             | 获取应用元数据          |
+| 28   | 28. getAppSize                         | 获取应用尺寸            |
+| 29   | 29. appIcon                            | 获取应用图标            |
+| 30   | 30. getAppIcon                         | 获取应用图标指定包       |
+| 31   | 31. appName                            | 获取应用名称            |
+| 32   | 32. getAppName                         | 获取应用名称指定包       |
+| 33   | 33. appPath                            | 获取应用路径            |
+| 34   | 34. getAppPath                         | 获取应用路径指定包       |
+| 35   | 35. appVersionName                     | 获取应用版本名称         |
+| 36   | 36. getAppVersionName                  | 获取应用版本名称指定包   |
+| 37   | 37. appVersionCode                     | 获取应用版本号码         |
+| 38   | 38. getAppVersionCode                  | 获取应用版本号码指定包   |
+| 39   | 39. appSignature                       | 获取应用签名            |
+| 40   | 40. getAppSignature                    | 获取应用签名指定包       |
+| 41   | 41. appSignatureSHA1                   | 获取应用签名SHA1        |
+| 42   | 42. getAppSignatureSHA1                | 获取应用签名SHA1指定包   |
+| 43   | 43. appSignatureSHA256                 | 获取应用签名SHA256      |
+| 44   | 44. getAppSignatureSHA256              | 获取应用签名SHA256指定包 |
+| 45   | 45. appSignatureMD5                    | 获取应用签名MD5         |
+| 46   | 46. getAppSignatureMD5                 | 获取应用签名MD5指定包    |
+| 47   | 47. appsInfo                           | 获取应用信息列表         |
+| 48   | 48. appInfo                            | 获取应用信息            |
+| 49   | 49. getAppInfo                         | 获取应用信息指定包       |
+| 50   | 50. getApkInfo                         | 获取安装包信息          |
 
 ### *019.崩溃CrashHelper(143)*
 
