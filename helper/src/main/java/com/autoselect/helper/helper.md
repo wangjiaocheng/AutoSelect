@@ -736,155 +736,154 @@
 
 ### *027.服务ServiceHelper(66)*
 
-| 序号 | 方法                   | 功能 |
-|:-----|:-----------------------|:----|
-| 01   | 01. allRunningServices | 功能 |
-| 02   | 02. isServiceRunning   | 功能 |
-| 03   | 03. startService       | 功能 |
-| 04   | 04. stopService        | 功能 |
-| 05   | 05. bindService        | 功能 |
-| 06   | 06. unbindService      | 功能 |
+| 序号 | 方法                   | 功能           |
+|:-----|:-----------------------|:--------------|
+| 01   | 01. allRunningServices | 所有运行中服务 |
+| 02   | 02. isServiceRunning   | 是否服务运行中 |
+| 03   | 03. startService       | 开始服务      |
+| 04   | 04. stopService        | 停止服务      |
+| 05   | 05. bindService        | 绑定服务      |
+| 06   | 06. unbindService      | 解绑服务      |
 
 ### *028.管理ManagerHelper(167)*
 
-| 序号 | 方法                          | 功能 |
-|:-----|:------------------------------|:----|
-| 01   | 01. accessibilityManager      | 功能 |
-| 02   | 02. accountManager            | 功能 |
-| 03   | 03. activityManager           | 功能 |
-| 04   | 04. alarmManager              | 功能 |
-| 05   | 05. appOpsManager             | 功能 |
-| 06   | 06. audioManager              | 功能 |
-| 07   | 07. batteryManager            | 功能 |
-| 08   | 08. bluetoothManager          | 功能 |
-| 09   | 09. cameraManager             | 功能 |
-| 10   | 10. captioningManager         | 功能 |
-| 11   | 11. carrierConfigManager      | 功能 |
-| 12   | 12. clipboardManager          | 功能 |
-| 13   | 13. companionDeviceManager    | 功能 |
-| 14   | 14. connectivityManager       | 功能 |
-| 15   | 15. consumerIrManager         | 功能 |
-| 16   | 16. devicePolicyManager       | 功能 |
-| 17   | 17. displayManager            | 功能 |
-| 18   | 18. downloadManager           | 功能 |
-| 19   | 19. fingerprintManager        | 功能 |
-| 20   | 20. hardwarePropertiesManager | 功能 |
-| 21   | 21. inputManager              | 功能 |
-| 22   | 22. inputMethodManager        | 功能 |
-| 23   | 23. keyguardManager           | 功能 |
-| 24   | 24. layoutInflater            | 功能 |
-| 25   | 25. locationManager           | 功能 |
-| 26   | 26. mediaProjectionManager    | 功能 |
-| 27   | 27. mediaSessionManager       | 功能 |
-| 28   | 28. midiManager               | 功能 |
-| 29   | 29. networkStatsManager       | 功能 |
-| 30   | 30. nfcManager                | 功能 |
-| 31   | 31. notificationManager       | 功能 |
-| 32   | 32. nsdManager                | 功能 |
-| 33   | 33. powerManager              | 功能 |
-| 34   | 34. printManager              | 功能 |
-| 35   | 35. restrictionsManager       | 功能 |
-| 36   | 36. searchManager             | 功能 |
-| 37   | 37. sensorManager             | 功能 |
-| 38   | 38. shortcutManager           | 功能 |
-| 39   | 39. storageManager            | 功能 |
-| 40   | 40. storageStatsManager       | 功能 |
-| 41   | 41. systemHealthManager       | 功能 |
-| 42   | 42. telecomManager            | 功能 |
-| 43   | 43. telephonyManager          | 功能 |
-| 44   | 44. textClassificationManager | 功能 |
-| 45   | 45. tvInputManager            | 功能 |
-| 46   | 46. uiModeManager             | 功能 |
-| 47   | 47. usageStatsManager         | 功能 |
-| 48   | 48. usbManager                | 功能 |
-| 49   | 49. userManager               | 功能 |
-| 50   | 50. vibrator                  | 功能 |
-| 51   | 51. wallpaperManager          | 功能 |
-| 52   | 52. wifiAwareManager          | 功能 |
-| 53   | 53. wifiManager               | 功能 |
-| 54   | 54. wifiP2pManager            | 功能 |
-| 55   | 55. windowManager             | 功能 |
+| 序号 | 方法                          | 功能           |
+|:-----|:------------------------------|:--------------|
+| 01   | 01. accessibilityManager      | 访问管理器     |
+| 02   | 02. accountManager            | 账号管理器     |
+| 03   | 03. activityManager           | 活动管理器     |
+| 04   | 04. alarmManager              | 警告管理器     |
+| 05   | 05. appOpsManager             | 应用管理器     |
+| 06   | 06. audioManager              | 音频管理器     |
+| 07   | 07. batteryManager            | 电池管理器     |
+| 08   | 08. bluetoothManager          | 蓝牙管理器     |
+| 09   | 09. cameraManager             | 相机管理器     |
+| 10   | 10. captioningManager         | 照片管理器     |
+| 11   | 11. carrierConfigManager      | 运输管理器     |
+| 12   | 12. clipboardManager          | 剪贴管理器     |
+| 13   | 13. companionDeviceManager    | 附件管理器     |
+| 14   | 14. connectivityManager       | 连接管理器     |
+| 15   | 15. consumerIrManager         | 消费管理器     |
+| 16   | 16. devicePolicyManager       | 设备管理器     |
+| 17   | 17. displayManager            | 显示管理器     |
+| 18   | 18. downloadManager           | 下载管理器     |
+| 19   | 19. fingerprintManager        | 指纹管理器     |
+| 20   | 20. hardwarePropertiesManager | 硬件管理器     |
+| 21   | 21. inputManager              | 输入管理器     |
+| 22   | 22. inputMethodManager        | 输法管理器     |
+| 23   | 23. keyguardManager           | 键锁管理器     |
+| 24   | 24. layoutInflater            | 布局管理器     |
+| 25   | 25. locationManager           | 定位管理器     |
+| 26   | 26. mediaProjectionManager    | 媒体工程管理器 |
+| 27   | 27. mediaSessionManager       | 媒体场节管理器 |
+| 28   | 28. midiManager               | 乐器管理器     |
+| 29   | 29. networkStatsManager       | 网态管理器     |
+| 30   | 30. nfcManager                | nfc管理器     |
+| 31   | 31. notificationManager       | 通知管理器     |
+| 32   | 32. nsdManager                | nsd管理器     |
+| 33   | 33. powerManager              | 动力管理器     |
+| 34   | 34. printManager              | 打印管理器     |
+| 35   | 35. restrictionsManager       | 限制管理器     |
+| 36   | 36. searchManager             | 搜索管理器     |
+| 37   | 37. sensorManager             | 传感管理器     |
+| 38   | 38. shortcutManager           | 快捷管理器     |
+| 39   | 39. storageManager            | 存储管理器     |
+| 40   | 40. storageStatsManager       | 存储状态管理器 |
+| 41   | 41. systemHealthManager       | 系统健康管理器 |
+| 42   | 42. telecomManager            | 电信管理器     |
+| 43   | 43. telephonyManager          | 通信管理器     |
+| 44   | 44. textClassificationManager | 文本管理器     |
+| 45   | 45. tvInputManager            | tv输入管理器   |
+| 46   | 46. uiModeManager             | ui模式管理器   |
+| 47   | 47. usageStatsManager         | 使用状态管理器 |
+| 48   | 48. usbManager                | usb管理器     |
+| 49   | 49. userManager               | 用户管理器     |
+| 50   | 50. vibrator                  | 振动管理器     |
+| 51   | 51. wallpaperManager          | 墙纸管理器     |
+| 52   | 52. wifiAwareManager          | wifi意识管理器 |
+| 53   | 53. wifiManager               | wifi管理器    |
+| 54   | 54. wifiP2pManager            | wifi点点管理器 |
+| 55   | 55. windowManager             | 窗口管理器     |
 
 ### *029.轮询PollingHelper(38)*
 
-| 序号 | 方法                      | 功能 |
-|:-----|:--------------------------|:----|
-| 01   | 01. isExistPollingService | 功能 |
-| 02   | 02. startPollingService   | 功能 |
-| 03   | 03. stopPollingService    | 功能 |
+| 序号 | 方法                      | 功能            |
+|:-----|:--------------------------|:----------------|
+| 01   | 01. isExistPollingService | 是否存在轮询服务 |
+| 02   | 02. startPollingService   | 开始轮询服务    |
+| 03   | 03. stopPollingService    | 停止轮询服务    |
 
 ### *030.广播BroadcastHelper(22)*
 
-| 序号 | 方法                        | 功能 |
-|:-----|:----------------------------|:----|
-| 01   | 01. registerReceiverNetWork | 功能 |
+| 序号 | 方法                        | 功能                |
+|:-----|:----------------------------|:-------------------|
+| 01   | 01. registerReceiverNetWork | 注册网络状态改变广播 |
 
 ### *031.意图IntentHelper(316)*
 
-| 序号 | 方法                            | 功能 |
-|:-----|:--------------------------------|:----|
-| 01   | 01. isIntentAvailable           | 功能 |
-| 02   | 02. getInstallAppIntent         | 功能 |
-| 03   | 03. getUninstallAppIntent       | 功能 |
-| 04   | 04. getLaunchAppIntent          | 功能 |
-| 05   | 05. getAppDetailsSettingsIntent | 功能 |
-| 06   | 06. getAppStoreIntent           | 功能 |
-| 07   | 07. getCaptureIntent            | 功能 |
-| 08   | 08. getPickIntentWithGallery    | 功能 |
-| 09   | 09. getPickIntentWithDocuments  | 功能 |
-| 10   | 10. buildImageGetIntent         | 功能 |
-| 11   | 11. buildImageCropIntent        | 功能 |
-| 12   | 12. getShareImageIntent         | 功能 |
-| 13   | 13. getShareTextIntent          | 功能 |
-| 14   | 14. getDialIntent               | 功能 |
-| 15   | 15. getCallIntent               | 功能 |
-| 16   | 16. getSendSmsIntent            | 功能 |
-| 17   | 17. shutdownIntent              | 功能 |
-| 18   | 18. getShutdownIntent           | 功能 |
-| 19   | 19. getComponentIntent          | 功能 |
+| 序号 | 方法                            | 功能                |
+|:-----|:--------------------------------|:-------------------|
+| 01   | 01. isIntentAvailable           | 是否意图可用        |
+| 02   | 02. getInstallAppIntent         | 获取安装应用意图    |
+| 03   | 03. getUninstallAppIntent       | 获取卸载应用意图    |
+| 04   | 04. getLaunchAppIntent          | 获取打开应用意图    |
+| 05   | 05. getAppDetailsSettingsIntent | 获取应用详细设置意图 |
+| 06   | 06. getAppStoreIntent           | 获取应用商店意图    |
+| 07   | 07. getCaptureIntent            | 获取拍照意图        |
+| 08   | 08. getPickIntentWithGallery    | 获取选择图片意图    |
+| 09   | 09. getPickIntentWithDocuments  | 获取选择文件意图    |
+| 10   | 10. buildImageGetIntent         | 构建图片获取意图    |
+| 11   | 11. buildImageCropIntent        | 构建图片裁剪意图    |
+| 12   | 12. getShareImageIntent         | 获取分享图片意图    |
+| 13   | 13. getShareTextIntent          | 获取分享文本意图    |
+| 14   | 14. getDialIntent               | 获取拨号意图        |
+| 15   | 15. getCallIntent               | 获取拨打意图        |
+| 16   | 16. getSendSmsIntent            | 获取发送短信意图    |
+| 17   | 17. shutdownIntent              | 关机意图            |
+| 18   | 18. getShutdownIntent           | 获取关机意图        |
+| 19   | 19. getComponentIntent          | 获取包类意图        |
 
 ### *032.元数MetaDataHelper(53)*
 
-| 序号 | 方法                      | 功能 |
-|:-----|:--------------------------|:----|
-| 01   | 01. getMetaDataInApp      | 功能 |
-| 02   | 02. getMetaDataInActivity | 功能 |
-| 03   | 03. getMetaDataInService  | 功能 |
-| 04   | 04. getMetaDataInReceiver | 功能 |
+| 序号 | 方法                      | 功能            |
+|:-----|:--------------------------|:----------------|
+| 01   | 01. getMetaDataInApp      | 获取应用元数据   |
+| 02   | 02. getMetaDataInActivity | 获取活动元数据   |
+| 03   | 03. getMetaDataInService  | 获取服务元数据   |
+| 04   | 04. getMetaDataInReceiver | 获取接收器元数据 |
 
 ### *033.权限PermissionHelper(443)*
 
-| 序号 | 方法                         | 功能 |
-|:-----|:-----------------------------|:----|
-| 01   | 01. builderSimple            | 功能 |
-| 02   | 02. addPermission            | 功能 |
-| 03   | 03. initPermission           | 功能 |
-| 04   | 04. builderPermissions       | 功能 |
-| 05   | 05. PermissionConstants      | 功能 |
-| 06   | 06. request                  | 功能 |
-| 07   | 07. rationale                | 功能 |
-| 08   | 08. simple                   | 功能 |
-| 09   | 09. full                     | 功能 |
-| 10   | 10. theme                    | 功能 |
-| 11   | 11. permission               | 功能 |
-| 12   | 12. getPermissions           | 功能 |
-| 13   | 13. launchAppDetailsSettings | 功能 |
-| 14   | 14. isGrantedWriteSettings   | 功能 |
-| 15   | 15. requestWriteSettings     | 功能 |
-| 16   | 16. isGrantedDrawOverlays    | 功能 |
-| 17   | 17. requestDrawOverlays      | 功能 |
-| 18   | 18. isGranted                | 功能 |
-| 19   | #### PermissionConstants     | 功能 |
-| 20   | 01. PHONE                    | 功能 |
-| 21   | 02. SENSORS                  | 功能 |
-| 22   | 03. LOCATION                 | 功能 |
-| 23   | 04. MICROPHONE               | 功能 |
-| 24   | 05. CAMERA                   | 功能 |
-| 25   | 06. STORAGE                  | 功能 |
-| 26   | 07. CALENDAR                 | 功能 |
-| 27   | 08. CONTACTS                 | 功能 |
-| 28   | 09. SMS                      | 功能 |
-| 29   | 10. getPermissions           | 功能 |
+| 序号 | 方法                         | 功能                |
+|:-----|:-----------------------------|:-------------------|
+| 01   | 01. builderSimple            | 简单权限构建        |
+| 02   | 02. addPermission            | 添加权限            |
+| 03   | 03. initPermission           | 初始权限            |
+| 04   | 04. builderPermissions       | 复杂权限构建        |
+| 05   | 05. request                  | 请求权限            |
+| 06   | 06. rationale                | 设置监听            |
+| 07   | 07. simple                   | 设置简单回调        |
+| 08   | 08. full                     | 设置完整回调        |
+| 09   | 09. theme                    | 设置主题回调        |
+| 10   | 10. permission               | 权限构建器          |
+| 11   | 11. getPermissions           | 获取权限列表        |
+| 12   | 12. launchAppDetailsSettings | 打开应用详细设置界面 |
+| 13   | 13. isGrantedWriteSettings   | 是否可写权限        |
+| 14   | 14. requestWriteSettings     | 请求可写权限        |
+| 15   | 15. isGrantedDrawOverlays    | 是否请求绘制覆盖物   |
+| 16   | 16. requestDrawOverlays      | 请求绘制覆盖物      |
+| 17   | 17. isGranted                | 是否请求            |
+| 18   | #### PermissionConstants     | 权限常量            |
+| 19   | 01. PHONE                    | 手机权限            |
+| 20   | 02. SENSORS                  | 传感权限            |
+| 21   | 03. LOCATION                 | 定位权限            |
+| 22   | 04. MICROPHONE               | 麦克权限            |
+| 23   | 05. CAMERA                   | 相机权限            |
+| 24   | 06. STORAGE                  | 存储权限            |
+| 25   | 07. CALENDAR                 | 日历权限            |
+| 26   | 08. CONTACTS                 | 联系权限            |
+| 27   | 09. SMS                      | 短信权限            |
+| 28   | 10. getPermissions           | 获取权限列表        |
 
 ### *034.屏幕ScreenHelper(260)*
 
