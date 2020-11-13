@@ -1,7 +1,5 @@
 package com.autoselect.helper
 
-import android.Manifest.permission.VIBRATE
-import android.content.Context
 import android.os.CountDownTimer
 import android.os.Handler
 import android.os.HandlerThread
@@ -14,9 +12,6 @@ import android.view.View
 import android.widget.EditText
 import android.widget.ListView
 import android.widget.TextView
-import androidx.annotation.RequiresPermission
-import com.autoselect.helper.ToastHelper.showShort
-import com.autoselect.helper.VibrateHelper.vibrateOnce
 import java.util.regex.PatternSyntaxException
 
 object ToolHelper {
@@ -29,27 +24,6 @@ object ToolHelper {
 
     fun delayToDo(delayTime: Long, onSimpleListener: OnSimpleListener) =
         Handler(Looper.getMainLooper()).postDelayed({ onSimpleListener.doSomething() }, delayTime)
-
-    interface OnDoListener {
-        fun doSomething()
-    }
-
-    @RequiresPermission(VIBRATE)
-    fun initFastClickAndVibrate(onDoListener: OnDoListener): Any = when {
-        isFastClick() -> showShort("请不要重复点击")
-        else -> onDoListener.doSomething().apply { vibrateOnce(100) }
-    }
-
-    private var lastClickTime: Long = 0L
-    fun isFastClick(millisecond: Int = 100): Boolean = System.currentTimeMillis().let { time ->
-        when {
-            (time - lastClickTime) in 1 until millisecond -> true
-            else -> false.apply { lastClickTime = time }
-        }
-    }
-
-    fun getResIdByName(context: Context, name: String, defType: String): Int =
-        context.resources.getIdentifier(name, defType, context.packageName)
 
     fun fixListViewHeight(listView: ListView) = listView.adapter?.let { listAdapter ->
         var totalHeight = 0

@@ -70,7 +70,7 @@
 | 039  | *039.ColorHelper(76)*                                  | 着色 |
 | 040  | *040.ToastHelper(360)*                                 | 吐司 |
 | 041  | *041.SnackHelper(107)*                                 | 零食 |
-| 042  | *042.ClickHelper(40)*                                  | 连点 |
+| 042  | *042.ClickHelper(54)*                                  | 连点 |
 | 043  | *043.AntiShakeHelper(20)*                              | 防抖 |
 | 044  | *044.ShakeHelper(26)*                                  | 抖动 |
 | 045  | *045.AHelper(287)*                                     | 全局 |
@@ -124,14 +124,14 @@
 | 093  | *093.GsonHelper(50)*                                   | 处理 |
 | 094  | *094.XmlParseHelper(138)*                              | 标记 |
 | 095  | *095.PathHelper(178)*                                  | 路径 |
-| 096  | *096.ResourceHelper(247)*                              | 资源 |
+| 096  | *096.ResourceHelper(251)*                              | 资源 |
 | 097  | *097.PreferenceHelper(109)*                            | 共享 |
 | 098  | *098.ThemeHelper(157)*                                 | 主题 |
 | 099  | *099.UiMessageHelper(166)*                             | 消息 |
 | 100  | *100.DateHelper(514)*                                  | 日期 |
 | 101  | *101.LunarHelper(177)*                                 | 农历 |
 | 102  | *102.CloseHelper(25)*                                  | 关闭 |
-| 103  | *103.ToolHelper(137)*                                  | 工具 |
+| 103  | *103.ToolHelper(111)*                                  | 工具 |
 | 104  | *104.ContactsHelper(221)*                              | 通讯 |
 | 105  | *105.MapHelper(69)*                                    | 地图 |
 | 106  | *106.WebServiceHelper(63)*                             | 网服 |
@@ -1077,12 +1077,14 @@
 
 >- implementation "com.google.android.material:material:1.2.1"
 
-### *042.连点ClickHelper(40)*
+### *042.连点ClickHelper(54)*
 
-| 序号 | 方法                  | 功能         |
-|:-----|:----------------------|:------------|
-| 01   | 01. isFastDoubleClick | 是否快速点击 |
-| 02   | 02. doClick           | 连续点击    |
+| 序号 | 方法                        | 功能           |
+|:-----|:----------------------------|:--------------|
+| 04   | 04. OnDoListener            | 点击执行监听器 |
+| 05   | 05. initFastClickAndVibrate | 快速点击振动   |
+| 01   | 01. isFastDoubleClick       | 是否快速点击   |
+| 02   | 02. doClick                 | 连续点击      |
 
 ### *043.防抖AntiShakeHelper(20)*
 
@@ -2228,7 +2230,7 @@
 | 35   | 35. pathExternalAppDocuments     | /storage/emulated/0/Android/data/package/files/Documents     |
 | 36   | 36. pathExternalAppObb           | /storage/emulated/0/Android/obb/package                      |
 
-### *096.资源ResourceHelper(247)*
+### *096.资源ResourceHelper(251)*
 
 | 序号 | 方法                      | 功能                    |
 |:-----|:--------------------------|:-----------------------|
@@ -2247,22 +2249,23 @@
 | 13   | 13. BOOL                  | 布尔                   |
 | 14   | 14. STRING                | 字符串                  |
 | 15   | 15. ATTR                  | 数组                   |
-| 16   | 16. getColorById          | 通过ID获取颜色          |
-| 17   | 17. getDrawableById       | 通过ID获取可绘制对象    |
-| 18   | 18. getStringById         | 通过ID获取字符串        |
-| 19   | 19. getStringWithArgsById | 通过ID获取系列格式字符串 |
-| 20   | 20. getStringArrayById    | 通过ID获取字符串数组    |
-| 21   | 21. getResourceId         | 通过ID获取资源          |
-| 22   | 22. unZipAssets           | 解压到Assets            |
-| 23   | 23. unZipRaw              | 解压到Raw               |
-| 24   | 24. copyFileByAssets      | 复制Assets到文件        |
-| 25   | 25. copyFileByRaw         | 复制Raw到文件           |
-| 26   | 26. getBytesByAssets      | 通过Assets获取字节数组  |
-| 27   | 27. getBytesByRaw         | 通过Raw获取字节数组     |
-| 28   | 28. getStringByAssets     | 通过Assets获取字符串    |
-| 29   | 29. getStringByRaw        | 通过Raw获取字符串       |
-| 30   | 30. getListByAssets       | 通过Assets获取列表      |
-| 31   | 31. getListByRaw          | 通过Raw获取列表         |
+| 16   | 16. getResIdByName        | 通过名字获取资源ID      |
+| 17   | 17. getColorById          | 通过ID获取颜色          |
+| 18   | 18. getDrawableById       | 通过ID获取可绘制对象    |
+| 19   | 19. getStringById         | 通过ID获取字符串        |
+| 20   | 20. getStringWithArgsById | 通过ID获取系列格式字符串 |
+| 21   | 21. getStringArrayById    | 通过ID获取字符串数组    |
+| 22   | 22. getResourceId         | 通过ID获取资源          |
+| 23   | 23. unZipAssets           | 解压到Assets            |
+| 24   | 24. unZipRaw              | 解压到Raw               |
+| 25   | 25. copyFileByAssets      | 复制Assets到文件        |
+| 26   | 26. copyFileByRaw         | 复制Raw到文件           |
+| 27   | 27. getBytesByAssets      | 通过Assets获取字节数组  |
+| 28   | 28. getBytesByRaw         | 通过Raw获取字节数组     |
+| 29   | 29. getStringByAssets     | 通过Assets获取字符串    |
+| 30   | 30. getStringByRaw        | 通过Raw获取字符串       |
+| 31   | 31. getListByAssets       | 通过Assets获取列表      |
+| 32   | 32. getListByRaw          | 通过Raw获取列表         |
 
 ### *097.共享PreferenceHelper(109)*
 
@@ -2436,24 +2439,20 @@
 | 01   | 01. closeIo        | 关闭资源          |
 | 02   | 02. closeIoQuietly | 关闭资源，忽略异常 |
 
-### *103.工具ToolHelper(137)*
+### *103.工具ToolHelper(111)*
 
-| 序号 | 方法                        | 功能                    |
-|:-----|:----------------------------|:-----------------------|
-| 01   | 01. backgroundHandler       | 背景处理器              |
-| 02   | 02. OnSimpleListener        | 延迟操作监听器          |
-| 03   | 03. delayToDo               | 延迟操作                |
-| 04   | 04. OnDoListener            | 功能                   |
-| 05   | 05. initFastClickAndVibrate | 快速点击振动            |
-| 06   | 06. isFastClick             | 是否快速点击            |
-| 07   | 07. getResIdByName          | 通过名字获取资源ID      |
-| 08   | 08. fixListViewHeight       | 计算ListView高度        |
-| 09   | 09. countDown               | 倒数                   |
-| 10   | 10. setEditNumberAuto       | 设置EditText数字        |
-| 11   | 11. setEditNumber           | 自动设置EditText数字    |
-| 12   | 12. setEditDecimal          | 设置EditText小数        |
-| 13   | 13. setEditType             | 设置EditText类型        |
-| 14   | 14. stringFilter            | 只许数字汉字字符串过滤器 |
+| 序号 | 方法                  | 功能                    |
+|:-----|:----------------------|:-----------------------|
+| 01   | 01. backgroundHandler | 背景处理器              |
+| 02   | 02. OnSimpleListener  | 延迟操作监听器          |
+| 03   | 03. delayToDo         | 延迟操作                |
+| 04   | 04. fixListViewHeight | 计算ListView高度        |
+| 05   | 05. countDown         | 倒数                   |
+| 06   | 06. setEditNumberAuto | 设置EditText数字        |
+| 07   | 07. setEditNumber     | 自动设置EditText数字    |
+| 08   | 08. setEditDecimal    | 设置EditText小数        |
+| 09   | 09. setEditType       | 设置EditText类型        |
+| 10   | 10. stringFilter      | 只许数字汉字字符串过滤器 |
 
 ### *104.通讯ContactsHelper(221)*
 

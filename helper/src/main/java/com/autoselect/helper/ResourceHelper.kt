@@ -1,5 +1,6 @@
 package com.autoselect.helper
 
+import android.content.Context
 import android.content.res.Resources
 import android.graphics.drawable.Drawable
 import androidx.annotation.*
@@ -31,6 +32,9 @@ object ResourceHelper {
     const val BOOL = "bool"
     const val STRING = "string"
     const val ATTR = "attr"
+    fun getResIdByName(context: Context, name: String, defType: String): Int =
+        context.resources.getIdentifier(name, defType, context.packageName)
+
     fun getColorById(@ColorRes colorId: Int): Int = Resources.getSystem().getColor(colorId)
     fun getDrawableById(@DrawableRes drawableId: Int): Drawable =
         Resources.getSystem().getDrawable(drawableId)

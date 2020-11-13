@@ -1,9 +1,23 @@
 package com.autoselect.helper
 
+import android.Manifest
 import android.os.SystemClock
 import android.view.View
+import androidx.annotation.RequiresPermission
+import com.autoselect.helper.ToastHelper.showShort
+import com.autoselect.helper.VibrateHelper.vibrateOnce
 
 object ClickHelper {
+    interface OnDoListener {
+        fun doSomething()
+    }
+
+    @RequiresPermission(Manifest.permission.VIBRATE)
+    fun initFastClickAndVibrate(v: View, onDoListener: OnDoListener): Any = when {
+        isFastDoubleClick(v) -> showShort("请不要重复点击")
+        else -> onDoListener.doSomething().apply { vibrateOnce(100) }
+    }
+
     private const val DEFAULT_INTERVAL_MILLIS: Long = 1000//默认点击时间间隔（毫秒）
     private var lastClickTime: Long = 0//最近一次点击时间
     private var lastClickViewId: Int = 0//最近一次点击控件ID
