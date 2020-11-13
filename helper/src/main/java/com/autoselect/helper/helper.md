@@ -1081,10 +1081,10 @@
 
 | 序号 | 方法                        | 功能           |
 |:-----|:----------------------------|:--------------|
-| 04   | 04. OnDoListener            | 点击执行监听器 |
-| 05   | 05. initFastClickAndVibrate | 快速点击振动   |
-| 01   | 01. isFastDoubleClick       | 是否快速点击   |
-| 02   | 02. doClick                 | 连续点击      |
+| 01   | 01. OnDoListener            | 点击执行监听器 |
+| 02   | 02. initFastClickAndVibrate | 快速点击振动   |
+| 03   | 03. isFastDoubleClick       | 是否快速点击   |
+| 04   | 04. doClick                 | 连续点击      |
 
 ### *043.防抖AntiShakeHelper(20)*
 
