@@ -641,7 +641,7 @@ class LabelShowMoreActivity : AppCompatActivity() {
 </ConstraintLayout>
 ```
 
->- implementation "androidx.constraintlayout:constraintlayout:2.0.2"
+>- implementation "androidx.constraintlayout:constraintlayout:2.0.4"
 >- drawable备用
 >
 >>1. [flow_item_shape_red.xml](../../../../res/drawable/flow_item_shape_red.xml)

@@ -1948,7 +1948,7 @@
 | 07   | 07. unzipFileWithMonitor    | 解压压缩文件带监视器 |
 | 08   | 08. removeDirFromZipArchive | 从压缩文件移除目录   |
 
->- implementation "net.lingala.zip4j:zip4j:2.6.3"
+>- implementation "net.lingala.zip4j:zip4j:2.6.4"
 
 ### *082.打开OpenHelper(102)*
 
