@@ -536,7 +536,7 @@ object PayHelper {
         private val handler: Handler = object : Handler(Looper.getMainLooper()) {
             override fun handleMessage(msg: Message) {
                 super.handleMessage(msg)
-                if (msg?.what == PAY_RESULT_MSG) {
+                if (msg.what == PAY_RESULT_MSG) {
                     shutdown
                     mOnPayResultListener?.run {
                         when (ALiPayResult(msg.obj as MutableMap<String?, String?>).resultStatus) {
