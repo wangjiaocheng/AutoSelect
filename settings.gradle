@@ -1,0 +1,6 @@
+include ':payer'
+include ':maper'
+include ':widgeter'
+include ':helper'
+include ':app'
+rootProject.name = "AutoSelect"
