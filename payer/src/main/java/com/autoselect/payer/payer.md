@@ -22,42 +22,54 @@
 
 ### *001.支付PayHelper(596)*
 
-| 序号 | 方法                         | 功能 |
-|:-----|:-----------------------------|:----|
-| 01   | 01. HttpType                 | 功能 |
-| 02   | 02. NetworkClientType        | 功能 |
-| 03   | 03. PayWay                   | 功能 |
-| 04   | 04. PayParams                | 功能 |
-| 05   | 05. NetworkClientInter       | 功能 |
-| 06   | 06. OnPayInfoRequestListener | 功能 |
-| 07   | 07. OnPayResultListener      | 功能 |
-| 08   | 08. execute                  | 功能 |
-| 09   | 09. shutdown                 | 功能 |
-| 10   | 10. HttpUrlConnectionClient  | 功能 |
-| 11   | 11. VolleyClient             | 功能 |
-| 12   | 12. OkHttpClientImpl         | 功能 |
-| 13   | 13. PrePayInfoService        | 功能 |
-| 14   | 14. RetrofitClient           | 功能 |
-| 15   | 15. newClient                | 功能 |
-| 16   | 16. PayStrategyInter         | 功能 |
-| 17   | 17. PayContext               | 功能 |
-| 18   | 18. AutoPay                  | 功能 |
-| 19   | 19. PayStrategyBase          | 功能 |
-| 20   | 20. PrePayInfo               | 功能 |
-| 21   | 21. WeChatPayStrategy        | 功能 |
-| 22   | 22. ALiPayResult             | 功能 |
-| 23   | 23. ALiPayStrategy           | 功能 |
-| 24   | 24. UPPayStrategy            | 功能 |
+| 序号 | 方法                                 | 功能                                                     |
+|:-----|:-------------------------------------|:--------------------------------------------------------|
+| 01   | 01. HttpType                         | 网络方法类型：Get、Post                                  |
+| 02   | 02. NetworkClientType                | 网络连接类型：HttpUrlConnection、Volley、OkHttp、Retrofit |
+| 03   | 03. PayWay                           | 支付渠道类型：WeChatPay、ALiPay、UPPay                    |
+| 04   | 04. PayParams                        | 支付参数                                                 |
+| 05   | 05. NetworkClientInter               | 网络连接接口                                             |
+| 06   | 06. OnPayInfoRequestListener         | 支付信息请求监听                                         |
+| 07   | 07. OnPayResultListener              | 支付结果监听                                             |
+| 08   | 08. execute                          | 线程池执行                                               |
+| 09   | 09. shutdown                         | 线程池关闭                                               |
+| 10   | 10. HttpUrlConnectionClient          | 网络连接实现支付get和post                                 |
+| 11   | 11. VolleyClient                     | 网络连接实现支付get和post                                 |
+| 12   | 12. OkHttpClientImpl                 | 网络连接实现支付get和post                                 |
+| 13   | 13. PrePayInfoService                | 预支付信息服务                                           |
+| 14   | 14. RetrofitClient                   | 网络连接实现支付get和post                                 |
+| 15   | 15. newClient                        | 创建网络连接                                             |
+| 16   | 16. PayStrategyInter                 | 支付策略接口                                             |
+| 17   | 17. PayContext                       | 支付上下文                                               |
+| 18   | 18. PayStrategyBase                  | 支付策略基类                                             |
+| 19   | 19. PrePayInfo                       | 预支付信息                                               |
+| 20   | 20. WeChatPayStrategy                | 微信支付策略                                             |
+| 21   | 21. ALiPayResult                     | 阿里支付结果                                             |
+| 22   | 22. ALiPayStrategy                   | 阿里支付策略                                             |
+| 23   | 23. UPPayStrategy                    | 银联支付策略                                             |
+| 24   | #### AutoPay                         | 自动支付                                                 |
+| 25   | 01. weChatAppID                      | 微信支付ID                                               |
+| 26   | 02. requestPayInfo                   | 请求支付信息                                             |
+| 27   | 03. toPay                            | 执行支付                                                 |
+| 28   | 04. COMMON_OK_PAY                    | 支付正常                                                 |
+| 29   | 05. COMMON_ERR_PAY                   | 支付错误                                                 |
+| 30   | 06. COMMON_ERR_USER_CANCELED         | 用户取消错误                                             |
+| 31   | 07. COMMON_ERR_NETWORK_NOT_AVAILABLE | 网络不可用错误                                           |
+| 32   | 08. COMMON_ERR_REQUEST_TIME_OUT      | 请求超时错误                                             |
+| 33   | 09. WECHAT_ERR_SENT_FAILED           | 微信发送失败错误                                         |
+| 34   | 10. WECHAT_ERR_AUTH_DENIED           | 微信作者否认错误                                         |
+| 35   | 11. WECHAT_ERR_UNSUPPORT             | 微信不支持错误                                           |
+| 36   | 12. WECHAT_ERR_BAN                   | 微信禁止错误                                             |
+| 37   | 13. WECHAT_ERR_NOT_INSTALLED         | 微信未安装错误                                           |
+| 38   | 14. ALI_PAY_ERR_WAIT_CONFIRM         | 支付宝等待确认错误                                        |
+| 39   | 15. ALI_PAY_ERR_NET                  | 支付宝网络错误                                           |
+| 40   | 16. ALI_PAY_ERR_UNKNOWN              | 支付宝未知错误                                           |
+| 41   | 17. ALI_PAY_ERR_OTHER                | 支付宝其他错误                                           |
+| 42   | 18. UPPAY_PLUGIN_NOT_INSTALLED       | 插件未安装                                               |
+| 43   | 19. UPPAY_PLUGIN_NEED_UPGRADE        | 插件需更新                                               |
+| 44   | 20. newInstance                      | 创建支付实例                                             |
 
 ### *002.活动PayActivity(27)*
 
-| 序号 | 方法 | 功能 |
-|:-----|:----|:-----|
-| 01   | 01. | 功能 |
-
 ### *003.微信PayWxEntryActivity(41)*
-
-| 序号 | 方法 | 功能 |
-|:-----|:----|:-----|
-| 01   | 01. | 功能 |
 
