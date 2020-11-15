@@ -14,10 +14,6 @@ dependencies {
 }
 ```
 
-[![fork](https://gitee.com/oschina/git-osc/badge/fork.svg?theme=dark)](https://gitee.com/oschina/git-osc/members)
-[![Fork me on Gitee](https://gitee.com/oschina/git-osc/widgets/widget_6.svg)](https://gitee.com/oschina/git-osc)
-[![star](https://gitee.com/oschina/git-osc/badge/star.svg?theme=dark)](https://gitee.com/oschina/git-osc/stargazers)
-
 [AutoSelect库](https://github.com/wangjiaocheng/AutoSelect)
 AutoSelect库包含工具库helper、控件库widgeter、地图库maper和支付库payer。
 
