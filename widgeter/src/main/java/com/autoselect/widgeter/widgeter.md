@@ -50,7 +50,7 @@
 | 015  | *015.ScratchCard(48)*                                                                                                                                                                                                                                                                                                                                 | 刮刮 |
 | 016  | *016.HeartLayout：FloatAnimation、PathAnimator、HeartView(241)*                                                                                                                                                                                                                                                                                        | 爱心 |
 | 017  | *017.Seek(755)*                                                                                                                                                                                                                                                                                                                                       | 拖动 |
-| 018  | *018.RulerWheel(464)*                                                                                                                                                                                                                                                                                                                                 | 刻度 |
+| 018  | *018.RulerWheel(465)*                                                                                                                                                                                                                                                                                                                                 | 刻度 |
 | 019  | *019.Wave(231)*                                                                                                                                                                                                                                                                                                                                       | 水波 |
 | 020  | *020.ProgressRound(165)*                                                                                                                                                                                                                                                                                                                              | 弧度 |
 | 021  | *021.ProgressView(258)*                                                                                                                                                                                                                                                                                                                               | 进度 |
@@ -1436,7 +1436,7 @@ swipe_captcha_seek.apply {
 >>1. ![seek_thumb](../../../../res/mipmap/seek_thumb.png)
 >>2. ![seek_hint.9](../../../../res/mipmap/seek_hint.9.png)
 
-### *018.刻度RulerWheel(464)*
+### *018.刻度RulerWheel(465)*
 
 | 序号 | 方法                            | 功能            |
 |:-----|:--------------------------------|:----------------|

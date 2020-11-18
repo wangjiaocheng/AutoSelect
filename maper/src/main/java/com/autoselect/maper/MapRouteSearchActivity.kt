@@ -3,10 +3,9 @@ package com.autoselect.maper
 import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
-import android.text.TextUtils
 import android.text.TextWatcher
 import android.view.View
-import android.widget.*
+import android.widget.AdapterView
 import androidx.appcompat.app.AppCompatActivity
 import com.amap.api.maps.model.LatLng
 import com.amap.api.maps.model.Poi
@@ -18,6 +17,8 @@ import com.amap.api.services.help.InputtipsQuery
 import com.amap.api.services.help.Tip
 import com.amap.api.services.poisearch.PoiResult
 import com.amap.api.services.poisearch.PoiSearch
+import com.autoselect.helper.StringHelper.isNotSpace
+import com.autoselect.helper.StringHelper.isSpace
 import kotlinx.android.synthetic.main.activity_route_search.*
 import kotlinx.android.synthetic.main.layout_search_header.*
 
@@ -41,7 +42,7 @@ class MapRouteSearchActivity : AppCompatActivity(), TextWatcher, Inputtips.Input
         tv_msg.apply { if (visibility == View.VISIBLE) visibility = View.GONE }
         s.toString().trim { it <= ' ' }.let {
             when {
-                TextUtils.isEmpty(it) -> resultList?.visibility = View.GONE
+                isSpace(it) -> resultList?.visibility = View.GONE
                 else -> {
                     setLoadingVisible(true)
                     Inputtips(applicationContext, InputtipsQuery(it, city))
@@ -104,7 +105,7 @@ class MapRouteSearchActivity : AppCompatActivity(), TextWatcher, Inputtips.Input
         (parent?.getItemAtPosition(position) as Tip?)?.run {
             Poi(name, LatLng(point.latitude, point.longitude), poiID)
                 .apply { selectedPoi = this }.run {
-                    if (!TextUtils.isEmpty(poiId)) PoiSearch.Query(name, "", city).apply {
+                    if (isNotSpace(poiId)) PoiSearch.Query(name, "", city).apply {
                         isDistanceSort = false
                         requireSubPois(true)
                     }.let {

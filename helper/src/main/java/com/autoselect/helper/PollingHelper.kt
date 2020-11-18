@@ -5,7 +5,7 @@ import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import android.os.SystemClock
-import android.text.TextUtils
+import com.autoselect.helper.StringHelper.isNotSpace
 
 object PollingHelper {
     fun isExistPollingService(context: Context?, cls: Class<*>?): Boolean =
@@ -18,7 +18,7 @@ object PollingHelper {
         context: Context?, interval: Int, cls: Class<*>?, action: String? = null
     ) {
         val intent =
-            Intent(context, cls).apply { if (!TextUtils.isEmpty(action)) this.action = action }
+            Intent(context, cls).apply { if (isNotSpace(action)) this.action = action }
         val pendingIntent =
             PendingIntent.getService(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT)
         val triggerAtTime = SystemClock.elapsedRealtime()
@@ -30,7 +30,7 @@ object PollingHelper {
     @JvmOverloads
     fun stopPollingService(context: Context?, cls: Class<*>?, action: String? = null) {
         val intent =
-            Intent(context, cls).apply { if (!TextUtils.isEmpty(action)) this.action = action }
+            Intent(context, cls).apply { if (isNotSpace(action)) this.action = action }
         val pendingIntent =
             PendingIntent.getService(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT)
         context?.alarmManager?.cancel(pendingIntent)

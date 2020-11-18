@@ -10,6 +10,8 @@ import android.os.Build
 import androidx.core.app.NotificationCompat
 import android.text.TextUtils
 import com.autoselect.helper.AHelper
+import com.autoselect.helper.StringHelper
+import com.autoselect.helper.StringHelper.isNotSpace
 
 open class NoticeBase {
     var builder: NotificationCompat.Builder? = null
@@ -148,8 +150,8 @@ open class NoticeBase {
             builder?.setLargeIcon(BitmapFactory.decodeResource(AHelper.app.resources, mBigIcon))
         builder?.setTicker(mTicker)//顶部状态栏提示信息
         builder?.setContentTitle(mContentTitle)//设置通知中心标题
-        if (!TextUtils.isEmpty(mContentText)) builder?.setContentText(mContentText)//设置通知中心内容
-        if (!TextUtils.isEmpty(mSubText)) builder?.setContentText(mSubText)
+        if (isNotSpace(mContentText.toString())) builder?.setContentText(mContentText)//设置通知中心内容
+        if (isNotSpace(mSubText.toString())) builder?.setContentText(mSubText)
         when {
             mTime > 0 -> builder?.setWhen(mTime)
             else -> builder?.setWhen(System.currentTimeMillis())

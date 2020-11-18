@@ -4,7 +4,6 @@ import android.content.Intent
 import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.os.Parcelable
-import android.text.TextUtils
 import android.util.SparseArray
 import android.view.View
 import android.widget.CompoundButton
@@ -18,6 +17,7 @@ import com.amap.api.navi.model.NaviLatLng
 import com.amap.api.navi.view.PoiInputItemWidget
 import com.amap.api.navi.view.RouteOverLay
 import com.autoselect.helper.LoggerHelper
+import com.autoselect.helper.StringHelper.isNotSpace
 import com.autoselect.helper.ToastHelper.showShort
 import kotlinx.android.synthetic.main.activity_route_calculate.*
 
@@ -157,7 +157,7 @@ class MapRouteCalculateActivity : LoggerHelper, MapNaviActivity(),
             routeIndex++
             isSuccessChooseRoute = true
             aMapNavi?.naviPath?.restrictionInfo?.restrictionTitle
-                .let { if (!TextUtils.isEmpty(it)) showShort(it ?: "") else Unit }
+                .let { if (isNotSpace(it)) showShort(it ?: "") else Unit }
         }
     }
 

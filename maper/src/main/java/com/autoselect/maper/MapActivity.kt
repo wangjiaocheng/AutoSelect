@@ -77,6 +77,8 @@ import com.autoselect.helper.FileIoHelper.writeFileFromIS
 import com.autoselect.helper.ImageHelper.compressByScale
 import com.autoselect.helper.PathHelper.pathExternal
 import com.autoselect.helper.StringHelper.isEmptyTrim
+import com.autoselect.helper.StringHelper.isNotSpace
+import com.autoselect.helper.StringHelper.isSpace
 import com.autoselect.helper.ToastHelper.showShort
 import com.autoselect.maper.MapCommon.toLatLng
 import com.autoselect.maper.MapErrorToast.show
@@ -2916,7 +2918,7 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
                 0 -> {
                     StringBuffer().apply {
                         append("添加围栏成功")
-                        (msg.obj as String).let { if (!TextUtils.isEmpty(it)) append("customId: $it") }
+                        (msg.obj as String).let { if (isNotSpace(it)) append("customId: $it") }
                     }.let {
                         Toast.makeText(applicationContext, it.toString(), Toast.LENGTH_SHORT).show()
                     }
@@ -2942,7 +2944,7 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
                         }
                         if (status != GeoFence.STATUS_LOCFAIL) {
                             getString(GeoFence.BUNDLE_KEY_CUSTOMID)
-                                .let { if (!TextUtils.isEmpty(it)) append(" customId: $it") }
+                                .let { if (isNotSpace(it)) append(" customId: $it") }
                             append(" fenceId: ${getString(GeoFence.BUNDLE_KEY_FENCEID)}")
                         }
                     }.toString()
@@ -2984,14 +2986,14 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
     }
     var keyword: String = ""
     val addDistrictFence = when {
-        TextUtils.isEmpty(keyword) ->
+        isSpace(keyword) ->
             Toast.makeText(AHelper.app, "参数不全", Toast.LENGTH_SHORT).show()
         else -> geoFenceClient.addGeoFence(keyword, customId)
     }
     var centerLatLng: LatLng? = null
     var radiusStr: String = ""
     val addRoundFence = when {
-        centerLatLng == null || TextUtils.isEmpty(radiusStr) ->
+        centerLatLng == null || isSpace(radiusStr) ->
             Toast.makeText(AHelper.app, "参数不全", Toast.LENGTH_SHORT).show()
         else -> geoFenceClient.addGeoFence(centerLatLng?.toDPoint, radiusStr.toFloat(), customId)
     }
@@ -2999,12 +3001,12 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
     var sizeStr: String = ""
     val addNearbyFence = centerLatLng?.run {
         var aroundRadius = 3000f
-        if (!TextUtils.isEmpty(radiusStr)) try {
+        if (isNotSpace(radiusStr)) try {
             aroundRadius = radiusStr.toFloat()
         } catch (e: Throwable) {
         }
         var size = 10
-        if (!TextUtils.isEmpty(sizeStr)) try {
+        if (isNotSpace(sizeStr)) try {
             size = sizeStr.toInt()
         } catch (e: Throwable) {
         }
@@ -3015,14 +3017,14 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
     var city: String = ""
     val addKeywordFence = {
         var size = 10
-        if (!TextUtils.isEmpty(sizeStr)) {
+        if (isNotSpace(sizeStr)) {
             try {
                 size = sizeStr.toInt()
             } catch (e: Throwable) {
             }
         }
         when {
-            TextUtils.isEmpty(keyword) || TextUtils.isEmpty(poiType) ->
+            isSpace(keyword) || isSpace(poiType) ->
                 Toast.makeText(AHelper.app, "参数不全", Toast.LENGTH_SHORT).show()
             else -> geoFenceClient.addGeoFence(keyword, poiType, city, size, customId)
         }

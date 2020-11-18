@@ -6,7 +6,6 @@ import android.graphics.*
 import android.os.Parcel
 import android.os.Parcelable
 import android.text.TextPaint
-import android.text.TextUtils
 import android.util.AttributeSet
 import android.view.GestureDetector
 import android.view.MotionEvent
@@ -15,6 +14,8 @@ import android.view.View
 import android.widget.OverScroller
 import androidx.core.view.GestureDetectorCompat
 import androidx.core.view.ViewCompat
+import com.autoselect.helper.StringHelper.isNotSpace
+import com.autoselect.helper.StringHelper.isSpace
 import kotlin.math.*
 
 class RulerWheel
@@ -137,7 +138,7 @@ class RulerWheel
                 max = rect.width()
             }
         }
-        if (!TextUtils.isEmpty(markAdditionCenter)) {
+        if (isNotSpace(markAdditionCenter)) {
             markTextPaint.apply { textSize = textSizeNormal }
                 .getTextBounds(markAdditionCenter, 0, markAdditionCenter?.length ?: 0, rect)
             additionCenterMarkWidth = rect.width().toFloat()
@@ -276,7 +277,7 @@ class RulerWheel
                                         textSize = textSizeCenter
                                     }
                                     when {
-                                        TextUtils.isEmpty(markAdditionCenter) -> canvas.drawText(
+                                        isSpace(markAdditionCenter) -> canvas.drawText(
                                             temp, 0, temp.length, x,
                                             mHeight - spaceBottom, markTextPaint
                                         )

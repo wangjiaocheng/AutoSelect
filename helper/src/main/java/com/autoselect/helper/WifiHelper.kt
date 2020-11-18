@@ -7,9 +7,9 @@ import android.net.wifi.WifiConfiguration.KeyMgmt
 import android.net.wifi.WifiInfo
 import android.net.wifi.WifiManager
 import android.net.wifi.WifiManager.WifiLock
-import android.text.TextUtils.isEmpty
 import androidx.annotation.RequiresPermission
 import com.autoselect.helper.NetHelper.isConnectedNetwork
+import com.autoselect.helper.StringHelper.isNotSpace
 import com.autoselect.helper.ThreadHelper.poolSingle
 import com.autoselect.helper.ToastHelper.showShort
 
@@ -62,7 +62,7 @@ object WifiHelper {
                         ?.let { connectConfigurationWifi(it) }//如果该网络已保存在配置中，直接连到该网络
                         ?: addNetwork(
                             createWifiInfo(
-                                mWifiSsid, mWifiPassword, if (!isEmpty(mWifiPassword)) 3 else 1
+                                mWifiSsid, mWifiPassword, if (isNotSpace(mWifiPassword)) 3 else 1
                             )
                         )
                     checkWifiConnect(mWifiSsid)

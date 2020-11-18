@@ -1,12 +1,12 @@
 package com.autoselect.maper
 
 import android.content.Context
-import android.text.TextUtils
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
 import com.amap.api.services.help.Tip
+import com.autoselect.helper.StringHelper.isSpace
 import kotlinx.android.synthetic.main.tip_item.view.*
 
 class MapTipListAdapter(private val context: Context?, private val tipList: MutableList<Tip>) :
@@ -26,7 +26,7 @@ class MapTipListAdapter(private val context: Context?, private val tipList: Muta
                     tipName?.text = name
                     tipAddress?.apply {
                         when {
-                            TextUtils.isEmpty(address) -> visibility = View.GONE
+                            isSpace(address) -> visibility = View.GONE
                             else -> {
                                 visibility = View.VISIBLE
                                 text = address

@@ -1,7 +1,7 @@
 package com.autoselect.helper
 
 import android.graphics.Color
-import android.text.TextUtils
+import com.autoselect.helper.StringHelper.isSpace
 import java.util.*
 
 object RandomHelper {
@@ -18,7 +18,7 @@ object RandomHelper {
     private const val LETTERS_LOWER_CASE: String = "abcdefghijklmnopqrstuvwxyz"
     fun getRandomLowerCaseLetters(length: Int): String? = getRandom(LETTERS_LOWER_CASE, length)
     fun getRandom(source: String, length: Int): String? =
-        if (TextUtils.isEmpty(source)) null else getRandom(source.toCharArray(), length)
+        if (isSpace(source)) null else getRandom(source.toCharArray(), length)
 
     fun getRandom(sourceChar: CharArray?, length: Int): String? = when {
         sourceChar == null || sourceChar.isEmpty() || length < 0 -> null

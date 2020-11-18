@@ -7,8 +7,8 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.os.Build
-import android.text.TextUtils.isEmpty
 import androidx.annotation.RequiresApi
+import com.autoselect.helper.StringHelper.isNotSpace
 import com.autoselect.helper.ThreadHelper.poolSingle
 import com.autoselect.helper.ToastHelper.showShort
 import java.util.*
@@ -183,7 +183,7 @@ object BluetoothHelper {
     fun isBluetoothBond(address: String?): Boolean =
         getBluetoothDevice(address)?.bondState == BluetoothDevice.BOND_BONDED//蓝牙是否已绑定
 
-    fun isBtAddressValid(address: String): Boolean = !isEmpty(address) &&
+    fun isBtAddressValid(address: String): Boolean = isNotSpace(address) &&
             BluetoothAdapter.checkBluetoothAddress(address.toUpperCase(Locale.getDefault()))//检验蓝牙地址有效性
 
     val release = {
