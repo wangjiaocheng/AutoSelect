@@ -1510,7 +1510,7 @@
 | 03   | 03. isIdCard            | 是否身份证号       |
 | 04   | 04. isIdCardExact       | 是否真实身份证号   |
 | 05   | 05. validateCard        | 验证身份证号       |
-| 06   | 06. cnCityCode          | 省分代码          |
+| 06   | 06. cnCityCode          | 省份代码          |
 | 07   | 07. validateIdCard18    | 验证18位身份证号   |
 | 08   | 08. validateIdCard15    | 验证15位身份证号   |
 | 09   | 09. card15ToCard18      | 15位身份证号转18位 |
