@@ -15,6 +15,7 @@ import android.view.MotionEvent
 import android.view.ScaleGestureDetector
 import android.view.View
 import android.view.animation.DecelerateInterpolator
+import com.autoselect.helper.DateHelper.nowMillis
 import com.autoselect.helper.LoggerHelper
 import com.autoselect.helper.DensityHelper.dip2px
 import com.autoselect.helper.ToastHelper.showShort
@@ -170,7 +171,7 @@ class SeatMovie
     var isDebug = false
     override fun onDraw(canvas: Canvas) {
         if (numRow > 0 && numColumn != 0) {
-            val totalStart = System.currentTimeMillis()
+            val totalStart = nowMillis
             drawSeat(canvas)
             drawNumber(canvas)
             canvas.drawBitmap(
@@ -179,13 +180,13 @@ class SeatMovie
             )
             drawScreen(canvas)
             if (isDrawOverview) {
-                val overviewStart = System.currentTimeMillis()
+                val overviewStart = nowMillis
                 if (isRenewOverview) drawOverview()
                 overviewBitmap?.let { canvas.drawBitmap(it, 0f, 0f, null) }
                 drawOverview(canvas)
-                if (isDebug) debug("OverviewDrawTime:${System.currentTimeMillis() - overviewStart}")
+                if (isDebug) debug("OverviewDrawTime:${nowMillis - overviewStart}")
             }
-            if (isDebug) debug("TotalDrawTime:${System.currentTimeMillis() - totalStart}")
+            if (isDebug) debug("TotalDrawTime:${nowMillis - totalStart}")
         }
     }
 
@@ -207,7 +208,7 @@ class SeatMovie
 
     private val paint: Paint = Paint().apply { color = Color.RED }
     private fun drawSeat(canvas: Canvas) {
-        val startTime = System.currentTimeMillis()
+        val startTime = nowMillis
         for (i in 0 until numRow) {
             (i * zoom * (yScale1 * seatBitmapAvailable.height + spacingVer) + translateY).let { top ->
                 (zoom * yScale1 * seatBitmapAvailable.height + top).let { bottom ->
@@ -239,7 +240,7 @@ class SeatMovie
                 }
             }
         }
-        if (isDebug) debug("seatDrawTime:${System.currentTimeMillis() - startTime}")
+        if (isDebug) debug("seatDrawTime:${nowMillis - startTime}")
     }
 
     private fun getSeatType(row: Int, column: Int): Int = when {
@@ -309,7 +310,7 @@ class SeatMovie
     }
     private val bacColor: Int = Color.parseColor("#7e000000")
     private fun drawNumber(canvas: Canvas) {
-        val startTime = System.currentTimeMillis()
+        val startTime = nowMillis
         canvas.run {
             drawRoundRect(rectF.apply {
                 left = 0f
@@ -328,7 +329,7 @@ class SeatMovie
                     paintLineNumber.apply { color = Color.WHITE })
             }
         }
-        if (isDebug) debug("drawNumberTime:${System.currentTimeMillis() - startTime}")
+        if (isDebug) debug("drawNumberTime:${nowMillis - startTime}")
     }//行号
 
     private val paintHead: Paint = Paint().apply {

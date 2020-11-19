@@ -18,6 +18,7 @@ import android.view.GestureDetector
 import android.view.MotionEvent
 import android.view.View
 import androidx.annotation.AnyThread
+import com.autoselect.helper.DateHelper.nowMillis
 import com.autoselect.helper.LoggerHelper
 import com.autoselect.helper.VersionHelper.aboveHoneycomb
 import com.autoselect.helper.VersionHelper.aboveIceCreamSandwich
@@ -440,7 +441,7 @@ open class ScaleImageView @JvmOverloads constructor(context: Context, attr: Attr
         var sCenterEndRequested: PointF? = null,
         var vFocusStart: PointF? = null,
         var vFocusEnd: PointF? = null,
-        var time: Long = System.currentTimeMillis()
+        var time: Long = nowMillis
     )
 
     inner class BuilderAnim @JvmOverloads constructor(
@@ -479,7 +480,7 @@ open class ScaleImageView @JvmOverloads constructor(context: Context, attr: Attr
                                     paddingLeft + (width - paddingRight - paddingLeft) / 2f,
                                     paddingTop + (height - paddingBottom - paddingTop) / 2f
                                 )
-                                time = System.currentTimeMillis()
+                                time = nowMillis
                             }
                         }
                 }
@@ -1693,7 +1694,7 @@ open class ScaleImageView @JvmOverloads constructor(context: Context, attr: Attr
         if (checkReady) {
             preDraw
             anim?.let {
-                (System.currentTimeMillis() - it.time).let { elapsed ->
+                (nowMillis - it.time).let { elapsed ->
                     val scaleBefore = scale
                     min(elapsed, it.duration).let { scaleElapsed ->
                         scale = ease(

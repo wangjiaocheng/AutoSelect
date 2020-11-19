@@ -42,8 +42,8 @@
 | 007  | *007.Cobweb：RotateInfo(411)*                                                                                                                                                                                                                                                                                                                         | 蛛网 |
 | 008  | *008.NetSpeedView(155)*                                                                                                                                                                                                                                                                                                                               | 网速 |
 | 009  | *009.SeatAirplane(890)*                                                                                                                                                                                                                                                                                                                               | 机座 |
-| 010  | *010.SeatMovie(717)*                                                                                                                                                                                                                                                                                                                                  | 影座 |
-| 011  | *011.PinView：ScaleImageView、ImageSource、ImageViewState、DecoderFactory、ImageDecoder、RegionDecoder(34+2115)*                                                                                                                                                                                                                                       | 图调 |
+| 010  | *010.SeatMovie(718)*                                                                                                                                                                                                                                                                                                                                  | 影座 |
+| 011  | *011.PinView：ScaleImageView、ImageSource、ImageViewState、DecoderFactory、ImageDecoder、RegionDecoder(34+2116)*                                                                                                                                                                                                                                       | 图调 |
 | 012  | *012.Captcha(117)*                                                                                                                                                                                                                                                                                                                                    | 验证 |
 | 013  | *013.SwipeCaptcha(393)*                                                                                                                                                                                                                                                                                                                               | 滑块 |
 | 014  | *014.AutoImage(35)*                                                                                                                                                                                                                                                                                                                                   | 平滚 |
@@ -61,7 +61,7 @@
 | 026  | *026.RunText(12)*                                                                                                                                                                                                                                                                                                                                     | 跑马 |
 | 027  | *027.TextVertical(100)*                                                                                                                                                                                                                                                                                                                               | 单滚 |
 | 028  | *028.TextVerticalMore(40)*                                                                                                                                                                                                                                                                                                                            | 多滚 |
-| 029  | *029.NoticeHelper：NoticeBase、NoticeBigPic、NoticeBigText、NoticeMailbox、NoticeProgress、NoticeCustomView(473)*                                                                                                                                                                                                                                      | 通知 |
+| 029  | *029.NoticeHelper：NoticeBase、NoticeBigPic、NoticeBigText、NoticeMailbox、NoticeProgress、NoticeCustomView(474)*                                                                                                                                                                                                                                      | 通知 |
 | 030  | *030.PopupImply(31)*                                                                                                                                                                                                                                                                                                                                  | 说明 |
 | 031  | *031.PopupSingle(111)*                                                                                                                                                                                                                                                                                                                                | 弹表 |
 | 032  | *032.PopupViewManager：PopupView、BackgroundConstructor、Coordinates、CoordinatesFinder(533)*                                                                                                                                                                                                                                                          | 弹框 |
@@ -1200,7 +1200,7 @@ class GuideActivity : AppCompatActivity() {
 >>2. ![seat_green](../../../../res/mipmap/seat_green.png)
 >>3. ![seat_sold](../../../../res/mipmap/seat_sold.png)
 
-### *010.影座SeatMovie(717)*
+### *010.影座SeatMovie(718)*
 
 | 序号 | 方法                     | 功能                |
 |:-----|:-------------------------|:-------------------|
@@ -1219,7 +1219,7 @@ class GuideActivity : AppCompatActivity() {
 | 13   | 13. isNeedDrawSeatBitmap | 是否需要绘制座位图片 |
 | 14   | 14. maxSelected          | 最大选中值          |
 
-### *011.图调PinView：ScaleImageView、ImageSource、ImageViewState、DecoderFactory、ImageDecoder、RegionDecoder(34+2115)*
+### *011.图调PinView：ScaleImageView、ImageSource、ImageViewState、DecoderFactory、ImageDecoder、RegionDecoder(34+2116)*
 
 | 序号 | 方法                            | 功能            |
 |:-----|:--------------------------------|:----------------|
@@ -1567,7 +1567,7 @@ swipe_captcha_seek.apply {
 >>1. [anim_marquee_in.xml](../../../../res/anim/anim_marquee_in.xml)
 >>2. [anim_marquee_out.xml](../../../../res/anim/anim_marquee_out.xml)
 
-### *029.通知NoticeHelper：NoticeBase、NoticeBigPic、NoticeBigText、NoticeMailbox、NoticeProgress、NoticeCustomView(473)*
+### *029.通知NoticeHelper：NoticeBase、NoticeBigPic、NoticeBigText、NoticeMailbox、NoticeProgress、NoticeCustomView(474)*
 
 | 序号 | 方法                            | 功能                         |
 |:-----|:--------------------------------|:-----------------------------|

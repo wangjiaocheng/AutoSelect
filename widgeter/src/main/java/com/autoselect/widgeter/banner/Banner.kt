@@ -12,16 +12,16 @@ import android.view.View.OnTouchListener
 import android.widget.FrameLayout
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
+import com.autoselect.helper.DateHelper.nowMillis
 import com.autoselect.widgeter.R
 import com.autoselect.widgeter.banner.indicat.IndicatorCircle
 import com.autoselect.widgeter.banner.indicat.IndicatorRect
 import com.autoselect.widgeter.banner.indicat.IndicatorText
+import com.autoselect.widgeter.banner.listen.*
 import com.autoselect.widgeter.banner.trans.TransformerCard
 import com.autoselect.widgeter.banner.trans.TransformerDepthPage
 import com.autoselect.widgeter.banner.trans.TransformerMz
 import com.autoselect.widgeter.banner.trans.TransformerZoomOutPage
-import com.autoselect.widgeter.banner.listen.*
-import com.autoselect.widgeter.banner.listen.RecyclerViewHolder
 
 class Banner @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null) :
     FrameLayout(context, attrs) {
@@ -189,9 +189,9 @@ class Banner @JvmOverloads constructor(context: Context, attrs: AttributeSet? = 
         if (view != null && position >= 0) view.setOnTouchListener(OnTouchListener { _, event ->
             stopAnim
             when (event.action) {
-                MotionEvent.ACTION_DOWN -> mLastTime = System.currentTimeMillis()
+                MotionEvent.ACTION_DOWN -> mLastTime = nowMillis
                 MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
-                    if (System.currentTimeMillis() - mLastTime < 200 && listener != null && mDataList.size > 0)
+                    if (nowMillis - mLastTime < 200 && listener != null && mDataList.size > 0)
                         listener.onItemClick(view, mDataList[position], position)
                     startAnim
                 }

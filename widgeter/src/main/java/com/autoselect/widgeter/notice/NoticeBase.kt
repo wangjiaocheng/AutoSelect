@@ -8,9 +8,8 @@ import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Build
 import androidx.core.app.NotificationCompat
-import android.text.TextUtils
 import com.autoselect.helper.AHelper
-import com.autoselect.helper.StringHelper
+import com.autoselect.helper.DateHelper.nowMillis
 import com.autoselect.helper.StringHelper.isNotSpace
 
 open class NoticeBase {
@@ -154,7 +153,7 @@ open class NoticeBase {
         if (isNotSpace(mSubText.toString())) builder?.setContentText(mSubText)
         when {
             mTime > 0 -> builder?.setWhen(mTime)
-            else -> builder?.setWhen(System.currentTimeMillis())
+            else -> builder?.setWhen(nowMillis)
         }
         builder?.setShowWhen(mIsShowTime)
         builder?.setContentIntent(mContentIntent)//通知要启动的Intent
