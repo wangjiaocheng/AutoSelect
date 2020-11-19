@@ -23,6 +23,7 @@ import com.autoselect.helper.AHelper.activityLifecycle
 import com.autoselect.helper.AHelper.app
 import com.autoselect.helper.AHelper.isForegroundApp
 import com.autoselect.helper.ConvertHelper.bytes2HexString
+import com.autoselect.helper.DateHelper.nowMillis
 import com.autoselect.helper.FileHelper.getFileByPath
 import com.autoselect.helper.ShellHelper.execCmd
 import com.autoselect.helper.StringHelper.isNotSpace
@@ -271,7 +272,7 @@ object ApplicationHelper : LoggerHelper {
 
     val isAppBackground: Boolean
         @RequiresPermission(PACKAGE_USAGE_STATS)
-        get() = System.currentTimeMillis().let { time ->
+        get() = nowMillis.let { time ->
             app.usageStatsManager
                 .queryUsageStats(UsageStatsManager.INTERVAL_BEST, time - 1000, time)
                 .apply { sortWith { o1, o2 -> o1.lastTimeUsed.compareTo(o2.lastTimeUsed) } }
@@ -316,7 +317,7 @@ object ApplicationHelper : LoggerHelper {
                                     ) return "".apply { info("$loggerTag->foregroundProcessName: refuse to device usage stats.") }
                                 }
                             }
-                        System.currentTimeMillis().let { endTime ->
+                        nowMillis.let { endTime ->
                             app.usageStatsManager.queryUsageStats(
                                 UsageStatsManager.INTERVAL_BEST, endTime - 86400000 * 7, endTime
                             )?.run {

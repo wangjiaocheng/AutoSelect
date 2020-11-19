@@ -13,6 +13,7 @@ import android.provider.Settings
 import androidx.annotation.RequiresPermission
 import com.autoselect.helper.AHelper.app
 import com.autoselect.helper.ApplicationHelper.appPackageName
+import com.autoselect.helper.DateHelper.nowMillis
 import com.autoselect.helper.VersionHelper.aboveLollipopMR1
 
 object ProcessHelper : LoggerHelper {
@@ -63,7 +64,7 @@ object ProcessHelper : LoggerHelper {
                                     ) return "".apply { info("$loggerTag->getForegroundProcessName: refuse to device usage stats.") }
                                 }
                             }
-                            System.currentTimeMillis().let { time ->
+                            nowMillis.let { time ->
                                 return app.usageStatsManager.queryUsageStats(
                                     UsageStatsManager.INTERVAL_BEST, time - 86400000 * 7, time
                                 )?.let { usageStatsList ->

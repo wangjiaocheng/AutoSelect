@@ -22,6 +22,7 @@ import androidx.annotation.IntDef
 import androidx.annotation.IntRange
 import androidx.core.graphics.drawable.DrawableCompat
 import androidx.core.view.ViewCompat
+import com.autoselect.helper.DateHelper.nowMillis
 import com.autoselect.helper.VersionHelper.aboveJellyBeanMR1
 import kotlin.math.*
 
@@ -447,7 +448,7 @@ object ViewHelper {
                 private var enabled = true
                 private val enableAgain = Runnable { enabled = true }
                 private fun isValid(view: View, duration: Long): Boolean {
-                    val time = System.currentTimeMillis()
+                    val time = nowMillis
                     return when (val tag = view.getTag(TAG_DEBOUNCING)) {
                         is Long -> when {
                             time - tag > duration ->
@@ -503,7 +504,7 @@ object ViewHelper {
             abstract fun onBeforeTriggerClick(v: View?, count: Int)
             override fun onClick(v: View) = when {
                 triggerClickCount > 1 -> {
-                    val time: Long = System.currentTimeMillis()
+                    val time: Long = nowMillis
                     when {
                         time - lastClickTime < clickInterval -> {
                             clickCount++

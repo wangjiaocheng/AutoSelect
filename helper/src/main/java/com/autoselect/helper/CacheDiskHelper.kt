@@ -9,6 +9,7 @@ import com.autoselect.helper.ConvertHelper.bitmap2Bytes
 import com.autoselect.helper.ConvertHelper.bytes2Bitmap
 import com.autoselect.helper.ConvertHelper.bytes2Drawable
 import com.autoselect.helper.ConvertHelper.drawable2Bytes
+import com.autoselect.helper.DateHelper.nowMillis
 import com.autoselect.helper.FileHelper.createDirNone
 import com.autoselect.helper.FileIoHelper.writeFileFromBytesByChannel
 import com.autoselect.helper.StringHelper.isSpace
@@ -55,7 +56,7 @@ object CacheDiskHelper {
             createDueTime(second).toByteArray() + data
 
         private fun createDueTime(seconds: Int): String = String.format(
-            Locale.getDefault(), "_$%010d\$_", System.currentTimeMillis() / 1000 + seconds
+            Locale.getDefault(), "_$%010d\$_", nowMillis / 1000 + seconds
         )//"_$%010d${'$'}_"
 
         @JvmOverloads
@@ -85,7 +86,7 @@ object CacheDiskHelper {
         }
 
         private fun isDue(data: ByteArray): Boolean = getDueTime(data).toInt()
-            .let { millis -> millis != -1 && System.currentTimeMillis() > millis }
+            .let { millis -> millis != -1 && nowMillis > millis }
 
         private fun getDueTime(data: ByteArray): Long = when {
             hasTimeInfo(data) -> try {
@@ -308,7 +309,7 @@ object CacheDiskHelper {
                 }
             }
 
-            fun updateModify(file: File) = System.currentTimeMillis().apply {
+            fun updateModify(file: File) = nowMillis.apply {
                 file.setLastModified(this)
                 lastUsageDates[file] = this
             }

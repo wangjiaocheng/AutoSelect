@@ -11,6 +11,7 @@ import android.provider.MediaStore
 import androidx.annotation.RequiresPermission
 import androidx.fragment.app.Fragment
 import com.autoselect.helper.AHelper.app
+import com.autoselect.helper.DateHelper.nowMillis
 import com.autoselect.helper.SdHelper.isSdCardEnable
 import java.text.SimpleDateFormat
 import java.util.*
@@ -59,7 +60,7 @@ object PhotoHelper : LoggerHelper {
 
     @RequiresPermission(WRITE_EXTERNAL_STORAGE)
     private fun createImageOutputUri(context: Context?): Uri = context?.let {
-        System.currentTimeMillis().let { time ->
+        nowMillis.let { time ->
             SimpleDateFormat("yyyyMMdd_HHmmss", Locale.CHINA).format(Date(time)).let { name ->
                 ContentValues(3).apply {
                     put(MediaStore.Images.Media.DISPLAY_NAME, name)

@@ -2,6 +2,7 @@ package com.autoselect.helper
 
 import android.view.View
 import androidx.annotation.IntRange
+import com.autoselect.helper.DateHelper.nowMillis
 
 object AntiShakeHelper {
     private const val DEFAULT_DURATION: Long = 200
@@ -9,7 +10,7 @@ object AntiShakeHelper {
 
     @JvmOverloads
     fun isValid(view: View, @IntRange(from = 0) duration: Long = DEFAULT_DURATION): Boolean =
-        System.currentTimeMillis().let {
+        nowMillis.let {
             view.getTag(TAG_KEY).let { tag ->
                 when {
                     tag is Long && it - tag <= duration -> false

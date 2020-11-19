@@ -1,6 +1,7 @@
 package com.autoselect.helper
 
 import android.util.LruCache
+import com.autoselect.helper.DateHelper.nowMillis
 
 object CacheMemoryHelper {
     class CacheMemory private constructor
@@ -10,7 +11,7 @@ object CacheMemoryHelper {
 
         @JvmOverloads
         fun put(key: String, value: Any?, saveTime: Int = -1): CacheValue? = value?.let {
-            (if (saveTime < 0) -1 else System.currentTimeMillis() + saveTime * 1000).let { dueTime ->
+            (if (saveTime < 0) -1 else nowMillis + saveTime * 1000).let { dueTime ->
                 cacheMemory.put(key, CacheValue(dueTime, it))
             }
         }
@@ -20,7 +21,7 @@ object CacheMemoryHelper {
             cacheMemory.get(key)?.let { cacheValue ->
                 when {
                     cacheValue.dueTime.toInt() == -1 ||
-                            cacheValue.dueTime >= System.currentTimeMillis() -> cacheValue.value as T
+                            cacheValue.dueTime >= nowMillis -> cacheValue.value as T
                     else -> defaultValue.apply { cacheMemory.remove(key) }
                 }
             } ?: defaultValue

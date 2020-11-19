@@ -46,7 +46,7 @@
 | 015  | *015.RebootHelper(35)*                                 | 重启 |
 | 016  | *016.ShellHelper(86)*                                  | 命令 |
 | 017  | *017.RootHelper(43)*                                   | 破解 |
-| 018  | *018.ApplicationHelper(603)*                           | 应用 |
+| 018  | *018.ApplicationHelper(604)*                           | 应用 |
 | 019  | *019.CrashHelper(143)*                                 | 崩溃 |
 | 020  | *020.ExitHelper(59)*                                   | 退出 |
 | 021  | *021.CleanHelper(50)*                                  | 清理 |
@@ -65,22 +65,22 @@
 | 034  | *034.ScreenHelper(260)*                                | 屏幕 |
 | 035  | *035.WindowHelper(60)*                                 | 窗口 |
 | 036  | *036.BarHelper(531)*                                   | 多栏 |
-| 037  | *037.ViewHelper：ViewTouch、ViewClick、ViewShadow(945)* | 视图 |
+| 037  | *037.ViewHelper：ViewTouch、ViewClick、ViewShadow(946)* | 视图 |
 | 038  | *038.WebViewHelper(76)*                                | 网视 |
 | 039  | *039.ColorHelper(76)*                                  | 着色 |
 | 040  | *040.ToastHelper(360)*                                 | 吐司 |
 | 041  | *041.SnackHelper(107)*                                 | 零食 |
-| 042  | *042.ClickHelper(54)*                                  | 连点 |
-| 043  | *043.AntiShakeHelper(20)*                              | 防抖 |
+| 042  | *042.ClickHelper(55)*                                  | 连点 |
+| 043  | *043.AntiShakeHelper(21)*                              | 防抖 |
 | 044  | *044.ShakeHelper(26)*                                  | 抖动 |
 | 045  | *045.AHelper(287)*                                     | 全局 |
 | 046  | *046.ApiHelper(44)*                                    | 接口 |
 | 047  | *047.BusHelper(239)*                                   | 总线 |
-| 048  | *048.CacheMemoryHelper(78)*                            | 内存 |
-| 049  | *049.CacheDiskHelper(523)*                             | 磁盘 |
+| 048  | *048.CacheMemoryHelper(79)*                            | 内存 |
+| 049  | *049.CacheDiskHelper(524)*                             | 磁盘 |
 | 050  | *050.CacheDoubleHelper(247)*                           | 双重 |
 | 051  | *051.ThreadHelper(328)*                                | 线程 |
-| 052  | *052.ProcessHelper(150)*                               | 进程 |
+| 052  | *052.ProcessHelper(151)*                               | 进程 |
 | 053  | *053.ReflectionHelper(64)*                             | 反射 |
 | 054  | *054.SingletonHelper.Singleton(16)*                    | 单例 |
 | 055  | *055.EmptyHelper(72)*                                  | 空判 |
@@ -112,7 +112,7 @@
 | 081  | *081.ZipPlusHelper(320)*                               | 密压 |
 | 082  | *082.OpenHelper(102)*                                  | 打开 |
 | 083  | *083.ImageHelper(1298)*                                | 图像 |
-| 084  | *084.PhotoHelper(125)*                                 | 照片 |
+| 084  | *084.PhotoHelper(126)*                                 | 照片 |
 | 085  | *085.PictureHelper(43)*                                | 图片 |
 | 086  | *086.AnimationHelper(209)*                             | 动画 |
 | 087  | *087.ExifHelper(41)*                                   | 信息 |
@@ -540,7 +540,7 @@
 | 02   | 02. isRooted       | 是否已root   |
 | 03   | 03. rootPermission | 获取root权限 |
 
-### *018.应用ApplicationHelper(603)*
+### *018.应用ApplicationHelper(604)*
 
 | 序号 | 方法                                   | 功能                    |
 |:-----|:---------------------------------------|:-----------------------|
@@ -962,7 +962,7 @@
 | 26   | 26. getNavBarColor                                  | 获取导航栏颜色                                                    |
 | 27   | 27. setNavBarColor                                  | 设置导航栏颜色                                                    |
 
-### *037.视图ViewHelper：ViewTouch、ViewClick、ViewShadow(945)*
+### *037.视图ViewHelper：ViewTouch、ViewClick、ViewShadow(946)*
 
 | 序号 | 方法                          | 功能              |
 |:-----|:------------------------------|:-----------------|
@@ -1077,7 +1077,7 @@
 
 >- implementation "com.google.android.material:material:1.2.1"
 
-### *042.连点ClickHelper(54)*
+### *042.连点ClickHelper(55)*
 
 | 序号 | 方法                        | 功能           |
 |:-----|:----------------------------|:--------------|
@@ -1086,7 +1086,7 @@
 | 03   | 03. isFastDoubleClick       | 是否快速点击   |
 | 04   | 04. doClick                 | 连续点击      |
 
-### *043.防抖AntiShakeHelper(20)*
+### *043.防抖AntiShakeHelper(21)*
 
 | 序号 | 方法        | 功能         |
 |:-----|:------------|:------------|
@@ -1139,7 +1139,7 @@
 | 08   | 08. ThreadMode   | 线程模式                           |
 | 09   | 09. Bus          | 总线                               |
 
-### *048.内存CacheMemoryHelper(78)*
+### *048.内存CacheMemoryHelper(79)*
 
 | 序号 | 方法              | 功能                                            |
 |:-----|:------------------|:-----------------------------------------------|
@@ -1157,7 +1157,7 @@
 | 12   | 05. remove        | 从缓存移除                                     |
 | 13   | 06. clear         | 清空缓存                                       |
 
-### *049.磁盘CacheDiskHelper(523)*
+### *049.磁盘CacheDiskHelper(524)*
 
 | 序号 | 方法                  | 功能                                            |
 |:-----|:----------------------|:-----------------------------------------------|
@@ -1254,7 +1254,7 @@
 | 35   | 35. invokeAny                | 取消未完成任务，正常异常返回取消未完成任务                                          |
 | 36   | 36. invokeAll                | 返回所有任务，返回列表顺序与给定列表顺序同，未超时已完成所有任务，已超时未完成所有任务 |
 
-### *052.进程ProcessHelper(150)*
+### *052.进程ProcessHelper(151)*
 
 | 序号 | 方法                           | 功能            |
 |:-----|:-------------------------------|:----------------|
@@ -2019,7 +2019,7 @@
 | 51   | 51. calculateInSampleSize   | 计算Sample               |
 | 52   | 52. getBitmapSize           | 获取图片尺寸              |
 
-### *084.照片PhotoHelper(125)*
+### *084.照片PhotoHelper(126)*
 
 | 序号 | 方法                 | 功能         |
 |:-----|:---------------------|:------------|

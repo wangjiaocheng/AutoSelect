@@ -4,6 +4,7 @@ import android.Manifest
 import android.os.SystemClock
 import android.view.View
 import androidx.annotation.RequiresPermission
+import com.autoselect.helper.DateHelper.nowMillis
 import com.autoselect.helper.ToastHelper.showShort
 import com.autoselect.helper.VibrateHelper.vibrateOnce
 
@@ -24,7 +25,7 @@ object ClickHelper {
 
     @JvmOverloads
     fun isFastDoubleClick(v: View, intervalMillis: Long = DEFAULT_INTERVAL_MILLIS): Boolean {
-        val time = System.currentTimeMillis()
+        val time = nowMillis
         val viewId = v.id
         return when {
             time - lastClickTime in 1 until intervalMillis && viewId == lastClickViewId -> true
