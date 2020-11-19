@@ -1704,7 +1704,7 @@
 | 08   | 08. forceGetViewSize  | 获取视图尺寸执行监听 |
 | 09   | 09. getViewWidth      | 获取视图宽度        |
 | 10   | 10. getViewHeight     | 获取视图高度        |
-| 11   | 11. measureView       | 策略视图尺寸        |
+| 11   | 11. measureView       | 测量视图尺寸        |
 
 ### *074.坐标CoordinateHelper(94)*
 
@@ -2291,7 +2291,7 @@
 | 01   | 01. resolveColor                    | 解析颜色                        |
 | 02   | 02. resolveDimension                | 解析尺寸                        |
 | 03   | 03. resolveBoolean                  | 解析布尔                        |
-| 04   | 04. resolveDrawable                 | 解析绘制                        |
+| 04   | 04. resolveDrawable                 | 解析可绘制对象                   |
 | 05   | 05. resolveString                   | 解析字串                        |
 | 06   | 06. resolveFloat                    | 解析浮点                        |
 | 07   | 07. resolveInt                      | 解析整型                        |
