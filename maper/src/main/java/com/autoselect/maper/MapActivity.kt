@@ -70,6 +70,7 @@ import com.amap.api.services.weather.WeatherSearch
 import com.amap.api.services.weather.WeatherSearchQuery
 import com.amap.api.trace.*
 import com.autoselect.helper.*
+import com.autoselect.helper.DateHelper.nowMillis
 import com.autoselect.helper.DateHelper.sdfDateByFullX
 import com.autoselect.helper.DensityHelper.dip2px
 import com.autoselect.helper.FileHelper.createDirNone
@@ -2693,7 +2694,7 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
                         区域  码:$adCode
                         地    址:$address
                         兴趣  点:$poiName
-                        定位时间:${DateHelper.sdfDateByFullEn.format(System.currentTimeMillis())}"""
+                        定位时间:${DateHelper.sdfDateByFullEn.format(nowMillis)}"""
                     )
                     else -> append(
                         """定位失败
@@ -2716,7 +2717,7 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
                         }
                     }
                 GPS 星数:${locationQualityReport.gpsSatellites}
-                回调时间:${DateHelper.sdfDateByFullEn.format(System.currentTimeMillis())}"""
+                回调时间:${DateHelper.sdfDateByFullEn.format(nowMillis)}"""
                 )
             }.toString()
         }

@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import com.amap.api.maps.offlinemap.OfflineMapCity
 import com.amap.api.maps.offlinemap.OfflineMapManager
+import com.autoselect.helper.DateHelper.nowMillis
 import com.autoselect.helper.LoggerHelper
 import com.autoselect.helper.debug
 
@@ -14,24 +15,24 @@ class MapOfflineDownloadedAdapter(
 ) : LoggerHelper, BaseAdapter() {
     private val cities: MutableList<OfflineMapCity> = mutableListOf()
     private val initCityList = {
-        var start = System.currentTimeMillis()
+        var start = nowMillis
         cities.apply {
             for (mapCity in this) {
                 remove(mapCity)
             }
         }
-        debug("$loggerTag->Offline Downloading notifyData cities iterator cost: ${System.currentTimeMillis() - start}")
-        start = System.currentTimeMillis()
+        debug("$loggerTag->Offline Downloading notifyData cities iterator cost: ${nowMillis - start}")
+        start = nowMillis
         cities.apply {
             offlineMapManager?.run {
                 addAll(downloadOfflineMapCityList)
                 addAll(downloadingCityList)
             }
         }
-        debug("$loggerTag->Offline Downloading notifyData getDownloadingCityList cost: ${System.currentTimeMillis() - start}")
-        start = System.currentTimeMillis()
+        debug("$loggerTag->Offline Downloading notifyData getDownloadingCityList cost: ${nowMillis - start}")
+        start = nowMillis
         notifyDataSetChanged()
-        debug("$loggerTag->Offline Downloading notifyData notifyDataSetChanged cost: ${System.currentTimeMillis() - start}")
+        debug("$loggerTag->Offline Downloading notifyData notifyDataSetChanged cost: ${nowMillis - start}")
     }
 
     init {
@@ -39,9 +40,9 @@ class MapOfflineDownloadedAdapter(
     }
 
     val notifyDataChange = {
-        val start = System.currentTimeMillis()
+        val start = nowMillis
         initCityList
-        debug("$loggerTag->Offline Downloading notifyDataChange cost: ${System.currentTimeMillis() - start}")
+        debug("$loggerTag->Offline Downloading notifyDataChange cost: ${nowMillis - start}")
     }
 
     override fun getItem(index: Int): Any = cities[index]

@@ -20,6 +20,7 @@ import com.amap.api.navi.enums.NaviType
 import com.amap.api.navi.model.*
 import com.amap.api.navi.view.RouteOverLay
 import com.autonavi.tbt.TrafficFacilityInfo
+import com.autoselect.helper.DateHelper.nowMillis
 import com.autoselect.helper.LoggerHelper
 import com.autoselect.helper.ToastHelper.showLong
 import com.autoselect.helper.ToastHelper.showShort
@@ -367,7 +368,7 @@ open class MapNaviActivity : LoggerHelper, AppCompatActivity(),
         speed = 5f
         accuracy = 1f
         bearing = 5f
-        time = System.currentTimeMillis()
+        time = nowMillis
     }.run {
         aMapNavi?.setExtraGPSData(1, this)//1为GPS坐标，2为高德坐标
         showShort(toString())
