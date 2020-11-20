@@ -31,13 +31,13 @@ class TtsControllerAMap private constructor(context: Context?) {
         get() = object : Handler(Looper.getMainLooper()) {
             override fun handleMessage(msg: Message) {
                 super.handleMessage(msg)
-                when (msg?.what) {
+                when (msg.what) {
                     ttsPlay -> speechSynthesizer?.let {
                         synchronized(it) {
                             if (!isPlaying && wordList.size > 0) {
                                 isPlaying = true
                                 createSynthesizer
-                                it.startSpeaking(wordList?.removeFirst(), object :
+                                it.startSpeaking(wordList.removeFirst(), object :
                                     SynthesizerListener {
                                     override fun onSpeakBegin() {
                                         AMapNavi.setTtsPlaying(true.apply { isPlaying = this })

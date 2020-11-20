@@ -7,10 +7,10 @@ allprojects {
     }
 }
 dependencies {
-    implementation "com.github.wangjiaocheng.AutoSelect:helper:1.0.0"
-    implementation "com.github.wangjiaocheng.AutoSelect:widgeter:1.0.0"
-    implementation "com.github.wangjiaocheng.AutoSelect:maper:1.0.0"
-    implementation "com.github.wangjiaocheng.AutoSelect:payer:1.0.0"
+    implementation "com.github.wangjiaocheng.AutoSelect:helper:master-SNAPSHOT"
+    implementation "com.github.wangjiaocheng.AutoSelect:widgeter:master-SNAPSHOT"
+    implementation "com.github.wangjiaocheng.AutoSelect:maper:master-SNAPSHOT"
+    implementation "com.github.wangjiaocheng.AutoSelect:payer:master-SNAPSHOT"
 }
 ```
 
@@ -95,9 +95,9 @@ Android客户端三层架构，其中视图层再分两层架构。
 | 042  | *042.ClickHelper(55)*                                  | 连点 |
 | 043  | *043.AntiShakeHelper(21)*                              | 防抖 |
 | 044  | *044.ShakeHelper(26)*                                  | 抖动 |
-| 045  | *045.AHelper(287)*                                     | 全局 |
+| 045  | *045.AHelper(276)*                                     | 全局 |
 | 046  | *046.ApiHelper(44)*                                    | 接口 |
-| 047  | *047.BusHelper(239)*                                   | 总线 |
+| 047  | *047.BusHelper(240)*                                   | 总线 |
 | 048  | *048.CacheMemoryHelper(79)*                            | 内存 |
 | 049  | *049.CacheDiskHelper(524)*                             | 磁盘 |
 | 050  | *050.CacheDoubleHelper(247)*                           | 双重 |
@@ -149,11 +149,11 @@ Android客户端三层架构，其中视图层再分两层架构。
 | 096  | *096.ResourceHelper(251)*                              | 资源 |
 | 097  | *097.PreferenceHelper(109)*                            | 共享 |
 | 098  | *098.ThemeHelper(157)*                                 | 主题 |
-| 099  | *099.UiMessageHelper(166)*                             | 消息 |
+| 099  | *099.UiMessageHelper(167)*                             | 消息 |
 | 100  | *100.DateHelper(514)*                                  | 日期 |
 | 101  | *101.LunarHelper(177)*                                 | 农历 |
 | 102  | *102.CloseHelper(25)*                                  | 关闭 |
-| 103  | *103.ToolHelper(111)*                                  | 工具 |
+| 103  | *103.ToolHelper(121)*                                  | 工具 |
 | 104  | *104.ContactsHelper(221)*                              | 通讯 |
 | 105  | *105.MapHelper(69)*                                    | 地图 |
 | 106  | *106.WebServiceHelper(63)*                             | 网服 |
@@ -184,14 +184,14 @@ Android客户端三层架构，其中视图层再分两层架构。
 
 | 序号 | 类库                                                                                                                                                                                                                                                                                                                                                   | 功能 |
 |:-----|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----|
-| 001  | *001.LayoutTab、LayoutLabel：LayoutScroll、LayoutFlow、AttrsHelper、AdapterTab、AdapterLabel、AdapterTemplate、AdapterFlow、FlowListener、FlowListenerAdapter、ActionRect、ActionTri、ActionRound、ActionColor、ActionRes、ActionBase、ActionDot、TextViewTabColor、BeanTab、BeanLabel、TabValue、TabTypeEvaluator、ConstantsFlow、ViewPagerHelper(2120)* | 流式 |
+| 001  | *001.LayoutTab、LayoutLabel：LayoutScroll、LayoutFlow、AttrsHelper、AdapterTab、AdapterLabel、AdapterTemplate、AdapterFlow、FlowListener、FlowListenerAdapter、ActionRect、ActionTri、ActionRound、ActionColor、ActionRes、ActionBase、ActionDot、TextViewTabColor、BeanTab、BeanLabel、TabValue、TabTypeEvaluator、ConstantsFlow、ViewPagerHelper(2118)* | 流式 |
 | 002  | *002.BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)、ViewHolderBase、LoadMoreModuleBase、UpFetchModuleBase、DraggableModuleBase：......(2963)*                                                                                                | 回收 |
 | 003  | *003.Banner：BannerHelper、TypeBannerTrans、BeanPage、PageListener、RecyclerViewHolder、RecyclerBaseAdapter、TypeTrans、Transformer、TransformerCard、TransformerDepthPage、TransformerMz、TransformerZoomOutPage、BeanCircle、BeanRect、TypeIndicatorCircle、IndicatorCircle、IndicatorRect、IndicatorText(1060)*                                       | 横幅 |
 | 004  | *004.CardStackView：AdapterAnimator、AdapterAllMoveDownAnimator、AdapterUpDownAnimator、AdapterUpDownStackAnimator、ViewDataObserver、AdapterDataObservable、ViewHolder、Adapter、AdapterStack、DelegateScrollStack、DelegateScroll(861+36+7)*                                                                                                          | 卡组 |
 | 005  | *005.Title(203)*                                                                                                                                                                                                                                                                                                                                      | 标题 |
 | 006  | *006.Side(240)*                                                                                                                                                                                                                                                                                                                                       | 侧边 |
 | 007  | *007.Cobweb：RotateInfo(411)*                                                                                                                                                                                                                                                                                                                         | 蛛网 |
-| 008  | *008.NetSpeedView(155)*                                                                                                                                                                                                                                                                                                                               | 网速 |
+| 008  | *008.NetSpeedView(153)*                                                                                                                                                                                                                                                                                                                               | 网速 |
 | 009  | *009.SeatAirplane(890)*                                                                                                                                                                                                                                                                                                                               | 机座 |
 | 010  | *010.SeatMovie(718)*                                                                                                                                                                                                                                                                                                                                  | 影座 |
 | 011  | *011.PinView：ScaleImageView、ImageSource、ImageViewState、DecoderFactory、ImageDecoder、RegionDecoder(34+2116)*                                                                                                                                                                                                                                       | 图调 |

@@ -2,17 +2,15 @@ package com.autoselect.maper
 
 import android.content.Context
 import android.graphics.Color
-import android.os.Handler
-import android.os.Looper
 import android.view.Gravity
 import android.widget.TextView
 import android.widget.Toast
 import com.amap.api.services.core.AMapException
 import com.autoselect.helper.LoggerHelper
+import com.autoselect.helper.ToolHelper.mainHandler
 import com.autoselect.helper.info
 
 object MapErrorToast : LoggerHelper {
-    private val handler = Handler(Looper.getMainLooper())
     private var toast: Toast? = null
     private val runnable = Runnable {
         toast?.run {
@@ -23,7 +21,7 @@ object MapErrorToast : LoggerHelper {
 
     @JvmStatic
     fun showTvToast(context: Context?, message: String?) {
-        toast?.let { handler.postDelayed(runnable, 0) } ?: run {
+        toast?.let { mainHandler.postDelayed(runnable, 0) } ?: run {
             toast = Toast(context).apply {
                 duration = Toast.LENGTH_SHORT
                 setGravity(Gravity.BOTTOM, 0, 150)
@@ -34,7 +32,7 @@ object MapErrorToast : LoggerHelper {
                 }
             }
         }//不到一秒，还未取消，立即取消
-        handler.postDelayed(runnable, 1000)
+        mainHandler.postDelayed(runnable, 1000)
         toast?.show()
     }
 

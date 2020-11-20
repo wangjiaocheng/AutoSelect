@@ -17,6 +17,7 @@ import com.amap.api.maps.offlinemap.OfflineMapCity
 import com.amap.api.maps.offlinemap.OfflineMapManager
 import com.amap.api.maps.offlinemap.OfflineMapStatus
 import com.autoselect.helper.LoggerHelper
+import com.autoselect.helper.ToolHelper.runOnUiThreadDelayed
 import com.autoselect.helper.debug
 import com.autoselect.helper.layoutInflater
 
@@ -129,7 +130,8 @@ class MapOfflineChild(private val context: Context, offlineMapManager: OfflineMa
                     OfflineMapStatus.ERROR -> displayStatusException
                     OfflineMapStatus.WAITING -> displayStatusWaiting
                     OfflineMapStatus.CHECKUPDATES -> displayStatusDefault
-                    OfflineMapStatus.EXCEPTION_AMAP, OfflineMapStatus.EXCEPTION_NETWORK_LOADING, OfflineMapStatus.EXCEPTION_SDCARD -> displayStatusException()
+                    OfflineMapStatus.EXCEPTION_AMAP, OfflineMapStatus.EXCEPTION_NETWORK_LOADING,
+                    OfflineMapStatus.EXCEPTION_SDCARD -> displayStatusException()
                     OfflineMapStatus.NEW_VERSION -> displayStatusHasNewVersion
                     else -> {
                     }
@@ -161,7 +163,7 @@ class MapOfflineChild(private val context: Context, offlineMapManager: OfflineMa
     override fun onClick(view: View) {
         offLineChildView?.apply {
             isEnabled = false
-            Handler(Looper.getMainLooper()).postDelayed({ isEnabled = true }, 100)
+            runOnUiThreadDelayed({ isEnabled = true }, 100)
         }//避免频繁点击不断从头开始和暂停下载
         mMapCity?.run {
             val completeCode = getcompleteCode()

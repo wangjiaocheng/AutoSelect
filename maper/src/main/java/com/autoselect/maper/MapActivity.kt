@@ -81,6 +81,7 @@ import com.autoselect.helper.StringHelper.isEmptyTrim
 import com.autoselect.helper.StringHelper.isNotSpace
 import com.autoselect.helper.StringHelper.isSpace
 import com.autoselect.helper.ToastHelper.showShort
+import com.autoselect.helper.ToolHelper.backgroundHandler
 import com.autoselect.maper.MapCommon.toLatLng
 import com.autoselect.maper.MapErrorToast.show
 import com.autoselect.maper.MapErrorToast.showError
@@ -340,11 +341,10 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
 
     private var indoorBuildingInfo: IndoorBuildingInfo? = null
     var mapIndoorFloorSwitchView: MapIndoorFloorSwitchView? = null//TODO
-    private val indoorHandler = Handler(Looper.getMainLooper())
     fun showIndoor(position: LatLng) = aMap?.run {
         setOnIndoorBuildingActiveListener {
             info("$loggerTag->indoor OnIndoorBuilding $it")
-            indoorHandler.post {
+            backgroundHandler.post {
                 if (indoorBuildingInfo == null || indoorBuildingInfo?.poiid != it.poiid)
                     mapIndoorFloorSwitchView?.items = it.floor_names.toMutableList()
                 mapIndoorFloorSwitchView?.setSelection(it.activeFloorName)
@@ -620,15 +620,14 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
             val start = SystemClock.uptimeMillis()
             aMap?.projection?.run { fromScreenLocation(Point(toScreenLocation(position).x, 0)) }
                 ?.let { latLng ->
-                    val handler = Handler(Looper.getMainLooper())
-                    handler.post(object : Runnable {
+                    backgroundHandler.post(object : Runnable {
                         override fun run() {
                             AccelerateInterpolator().getInterpolation((SystemClock.uptimeMillis() - start) / 800f)
                                 .let {
                                     val lng = it * position.longitude + (1 - it) * latLng.longitude
                                     val lat = it * position.latitude + (1 - it) * latLng.latitude
                                     position = LatLng(lat, lng)
-                                    if (it < 1.0) handler.postDelayed(this, 16)
+                                    if (it < 1.0) backgroundHandler.postDelayed(this, 16)
                                 }
                         }
                     })
@@ -643,11 +642,10 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
         get() = run {
             isVisible = false
             val start = SystemClock.uptimeMillis()
-            val handler = Handler(Looper.getMainLooper())
             val bitMap = icons[0].bitmap
             var lastMarkerBitMap: Bitmap? = null
             var count = 1
-            handler.post(object : Runnable {
+            backgroundHandler.post(object : Runnable {
                 override fun run() {
                     AccelerateInterpolator().getInterpolation((SystemClock.uptimeMillis() - start) / 250f)
                         .let { if (it > 1) 1f else it }.let {
@@ -667,7 +665,7 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
                                 }
                             }
                             when {
-                                it < 1.0 && count < 10 -> handler.postDelayed(this, 16)
+                                it < 1.0 && count < 10 -> backgroundHandler.postDelayed(this, 16)
                                 else -> {
                                     lastMarkerBitMap?.run { if (!isRecycled) recycle() }
                                     setIcon(BitmapDescriptorFactory.fromBitmap(bitMap))
@@ -697,15 +695,14 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
             aMap?.projection?.run {
                 fromScreenLocation(toScreenLocation(position)?.apply { offset(0, -100) })
             }?.let { latLng ->
-                val handler = Handler(Looper.getMainLooper())
-                handler.post(object : Runnable {
+                backgroundHandler.post(object : Runnable {
                     override fun run() {
                         BounceInterpolator().getInterpolation((SystemClock.uptimeMillis() - start) / 1500f)
                             .let {
                                 val lng = it * position.longitude + (1 - it) * latLng.longitude
                                 val lat = it * position.latitude + (1 - it) * latLng.latitude
                                 position = LatLng(lat, lng)
-                                if (it < 1.0) handler.postDelayed(this, 16)
+                                if (it < 1.0) backgroundHandler.postDelayed(this, 16)
                             }
                     }
                 })
