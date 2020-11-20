@@ -7,7 +7,7 @@ import android.widget.TextView
 import android.widget.Toast
 import com.amap.api.services.core.AMapException
 import com.autoselect.helper.LoggerHelper
-import com.autoselect.helper.ToolHelper.mainHandler
+import com.autoselect.helper.HandleHelper.mainHandler
 import com.autoselect.helper.info
 
 object MapErrorToast : LoggerHelper {

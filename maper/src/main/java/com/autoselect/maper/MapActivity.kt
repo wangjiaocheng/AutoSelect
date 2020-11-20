@@ -17,7 +17,6 @@ import android.hardware.SensorManager
 import android.net.ConnectivityManager
 import android.os.*
 import android.text.Editable
-import android.text.TextUtils
 import android.text.TextWatcher
 import android.util.Pair
 import android.view.Gravity
@@ -81,7 +80,7 @@ import com.autoselect.helper.StringHelper.isEmptyTrim
 import com.autoselect.helper.StringHelper.isNotSpace
 import com.autoselect.helper.StringHelper.isSpace
 import com.autoselect.helper.ToastHelper.showShort
-import com.autoselect.helper.ToolHelper.backgroundHandler
+import com.autoselect.helper.HandleHelper.backgroundHandler
 import com.autoselect.maper.MapCommon.toLatLng
 import com.autoselect.maper.MapErrorToast.show
 import com.autoselect.maper.MapErrorToast.showError

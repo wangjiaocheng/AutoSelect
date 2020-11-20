@@ -14,7 +14,7 @@ import android.widget.ListView
 import android.widget.TextView
 import java.util.regex.PatternSyntaxException
 
-object ToolHelper {
+object HandleHelper {
     val mainHandler: Handler
         get() = Handler(Looper.getMainLooper())
     val backgroundHandler: Handler

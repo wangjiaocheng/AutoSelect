@@ -4,7 +4,7 @@ import android.os.Handler
 import android.os.Message
 import android.util.SparseArray
 import com.autoselect.helper.ApplicationHelper.isAppDebug
-import com.autoselect.helper.ToolHelper.backgroundHandler
+import com.autoselect.helper.HandleHelper.backgroundHandler
 
 object UiMessageHelper : LoggerHelper, Handler.Callback {
     fun send(id: Int): Boolean = backgroundHandler.sendEmptyMessage(id)

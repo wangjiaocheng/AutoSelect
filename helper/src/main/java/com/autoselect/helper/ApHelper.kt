@@ -7,7 +7,7 @@ import android.os.Build
 import com.autoselect.helper.NetHelper.isConnectedNetwork
 import com.autoselect.helper.ThreadHelper.poolSingle
 import com.autoselect.helper.ToastHelper.showShort
-import com.autoselect.helper.ToolHelper.mainHandler
+import com.autoselect.helper.HandleHelper.mainHandler
 import com.autoselect.helper.WifiHelper.checkSSIDState
 import com.autoselect.helper.WifiHelper.checkState
 import java.lang.reflect.InvocationTargetException

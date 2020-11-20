@@ -3,7 +3,7 @@ package com.autoselect.widgeter.recycl.diff
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.DiffUtil.DiffResult
 import androidx.recyclerview.widget.ListUpdateCallback
-import com.autoselect.helper.ToolHelper.mainHandler
+import com.autoselect.helper.HandleHelper.mainHandler
 import com.autoselect.widgeter.recycl.BaseAdapterQuick
 import java.util.concurrent.CopyOnWriteArrayList
 import java.util.concurrent.Executor

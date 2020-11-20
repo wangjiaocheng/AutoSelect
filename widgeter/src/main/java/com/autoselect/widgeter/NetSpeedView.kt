@@ -10,7 +10,7 @@ import android.widget.FrameLayout
 import android.widget.RelativeLayout
 import android.widget.TextView
 import com.autoselect.helper.DataHelper.formatTwo
-import com.autoselect.helper.ToolHelper.backgroundHandler
+import com.autoselect.helper.HandleHelper.backgroundHandler
 
 class NetSpeedView
 @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyle: Int = 0) :

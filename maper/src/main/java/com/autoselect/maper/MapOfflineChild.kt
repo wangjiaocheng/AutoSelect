@@ -17,7 +17,7 @@ import com.amap.api.maps.offlinemap.OfflineMapCity
 import com.amap.api.maps.offlinemap.OfflineMapManager
 import com.amap.api.maps.offlinemap.OfflineMapStatus
 import com.autoselect.helper.LoggerHelper
-import com.autoselect.helper.ToolHelper.runOnUiThreadDelayed
+import com.autoselect.helper.HandleHelper.runOnUiThreadDelayed
 import com.autoselect.helper.debug
 import com.autoselect.helper.layoutInflater
 

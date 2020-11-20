@@ -153,7 +153,7 @@ Android客户端三层架构，其中视图层再分两层架构。
 | 100  | *100.DateHelper(514)*                                  | 日期 |
 | 101  | *101.LunarHelper(177)*                                 | 农历 |
 | 102  | *102.CloseHelper(25)*                                  | 关闭 |
-| 103  | *103.ToolHelper(121)*                                  | 工具 |
+| 103  | *103.HandleHelper(121)*                                | 工具 |
 | 104  | *104.ContactsHelper(221)*                              | 通讯 |
 | 105  | *105.MapHelper(69)*                                    | 地图 |
 | 106  | *106.WebServiceHelper(63)*                             | 网服 |

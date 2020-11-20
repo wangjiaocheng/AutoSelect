@@ -1,7 +1,7 @@
 package com.autoselect.helper
 
-import com.autoselect.helper.ToolHelper.backgroundHandler
-import com.autoselect.helper.ToolHelper.mainHandler
+import com.autoselect.helper.HandleHelper.backgroundHandler
+import com.autoselect.helper.HandleHelper.mainHandler
 import java.lang.reflect.InvocationTargetException
 import java.lang.reflect.Method
 import java.util.*

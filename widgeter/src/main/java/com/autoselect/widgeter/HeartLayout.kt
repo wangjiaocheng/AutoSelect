@@ -12,7 +12,7 @@ import android.view.animation.LinearInterpolator
 import android.view.animation.Transformation
 import android.widget.RelativeLayout
 import androidx.appcompat.widget.AppCompatImageView
-import com.autoselect.helper.ToolHelper.mainHandler
+import com.autoselect.helper.HandleHelper.mainHandler
 import java.util.*
 import java.util.concurrent.atomic.AtomicInteger
 

@@ -27,7 +27,7 @@ import com.autoselect.helper.AHelper.activityLifecycle
 import com.autoselect.helper.AHelper.app
 import com.autoselect.helper.AHelper.topActivityOrApp
 import com.autoselect.helper.ApplicationHelper.appPackageName
-import com.autoselect.helper.ToolHelper.mainHandler
+import com.autoselect.helper.HandleHelper.mainHandler
 import com.autoselect.helper.VersionHelper.aboveJellyBean
 import com.autoselect.helper.VersionHelper.aboveJellyBeanMR1
 import java.lang.reflect.Field
