@@ -12,7 +12,7 @@ import android.view.animation.LinearInterpolator
 import android.view.animation.Transformation
 import android.widget.RelativeLayout
 import androidx.appcompat.widget.AppCompatImageView
-import com.autoselect.helper.AHelper.handler
+import com.autoselect.helper.ToolHelper.mainHandler
 import java.util.*
 import java.util.concurrent.atomic.AtomicInteger
 
@@ -138,7 +138,7 @@ class HeartLayout @JvmOverloads constructor(
                     }
 
                     override fun onAnimationEnd(animation: Animation) {
-                        handler.post { parent.removeView(child) }
+                        mainHandler.post { parent.removeView(child) }
                         counter.decrementAndGet()
                     }
                 })

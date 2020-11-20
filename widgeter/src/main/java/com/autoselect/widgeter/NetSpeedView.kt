@@ -3,8 +3,6 @@ package com.autoselect.widgeter
 import android.content.Context
 import android.content.res.TypedArray
 import android.net.TrafficStats
-import android.os.Handler
-import android.os.Looper
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
@@ -12,6 +10,7 @@ import android.widget.FrameLayout
 import android.widget.RelativeLayout
 import android.widget.TextView
 import com.autoselect.helper.DataHelper.formatTwo
+import com.autoselect.helper.ToolHelper.backgroundHandler
 
 class NetSpeedView
 @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyle: Int = 0) :
@@ -34,7 +33,6 @@ class NetSpeedView
             sumTV?.visibility = if (field) View.GONE else View.VISIBLE
             bigRL?.visibility = if (field) View.VISIBLE else View.GONE
         }
-    private val mHandler = Handler(Looper.getMainLooper())
     var timeInterval: Long = 500//5秒
     private var timeSpan = 2000.0
     private var totalTX: Long = 0
@@ -86,7 +84,7 @@ class NetSpeedView
 
     private val task = object : Runnable {
         override fun run() {
-            mHandler.postDelayed(this, timeInterval)
+            backgroundHandler.postDelayed(this, timeInterval)
             updateViewData
         }
     }
@@ -117,7 +115,7 @@ class NetSpeedView
         }
         setTextColor(mTextColor)
         setTextSize(mTextSize)
-        mHandler.postDelayed(task, timeInterval)
+        backgroundHandler.postDelayed(task, timeInterval)
     }
 
     fun setTextColor(textColor: Int) {
@@ -150,6 +148,6 @@ class NetSpeedView
 
     override fun onDetachedFromWindow() {
         super.onDetachedFromWindow()
-        mHandler.removeCallbacks(task)
+        backgroundHandler.removeCallbacks(task)
     }
 }

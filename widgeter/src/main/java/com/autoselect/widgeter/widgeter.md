@@ -33,14 +33,14 @@
 
 | 序号 | 类库                                                                                                                                                                                                                                                                                                                                                   | 功能 |
 |:-----|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----|
-| 001  | *001.LayoutTab、LayoutLabel：LayoutScroll、LayoutFlow、AttrsHelper、AdapterTab、AdapterLabel、AdapterTemplate、AdapterFlow、FlowListener、FlowListenerAdapter、ActionRect、ActionTri、ActionRound、ActionColor、ActionRes、ActionBase、ActionDot、TextViewTabColor、BeanTab、BeanLabel、TabValue、TabTypeEvaluator、ConstantsFlow、ViewPagerHelper(2120)* | 流式 |
+| 001  | *001.LayoutTab、LayoutLabel：LayoutScroll、LayoutFlow、AttrsHelper、AdapterTab、AdapterLabel、AdapterTemplate、AdapterFlow、FlowListener、FlowListenerAdapter、ActionRect、ActionTri、ActionRound、ActionColor、ActionRes、ActionBase、ActionDot、TextViewTabColor、BeanTab、BeanLabel、TabValue、TabTypeEvaluator、ConstantsFlow、ViewPagerHelper(2118)* | 流式 |
 | 002  | *002.BaseAdapterQuick、BaseAdapterBinder、BaseAdapterMultiDelegate、BaseAdapterMultiProvider(BaseAdapterNode)、BaseAdapterMultiQuick(BaseAdapterSectionQuick)、ViewHolderBase、LoadMoreModuleBase、UpFetchModuleBase、DraggableModuleBase：......(2963)*                                                                                                | 回收 |
 | 003  | *003.Banner：BannerHelper、TypeBannerTrans、BeanPage、PageListener、RecyclerViewHolder、RecyclerBaseAdapter、TypeTrans、Transformer、TransformerCard、TransformerDepthPage、TransformerMz、TransformerZoomOutPage、BeanCircle、BeanRect、TypeIndicatorCircle、IndicatorCircle、IndicatorRect、IndicatorText(1060)*                                       | 横幅 |
 | 004  | *004.CardStackView：AdapterAnimator、AdapterAllMoveDownAnimator、AdapterUpDownAnimator、AdapterUpDownStackAnimator、ViewDataObserver、AdapterDataObservable、ViewHolder、Adapter、AdapterStack、DelegateScrollStack、DelegateScroll(861+36+7)*                                                                                                          | 卡组 |
 | 005  | *005.Title(203)*                                                                                                                                                                                                                                                                                                                                      | 标题 |
 | 006  | *006.Side(240)*                                                                                                                                                                                                                                                                                                                                       | 侧边 |
 | 007  | *007.Cobweb：RotateInfo(411)*                                                                                                                                                                                                                                                                                                                         | 蛛网 |
-| 008  | *008.NetSpeedView(155)*                                                                                                                                                                                                                                                                                                                               | 网速 |
+| 008  | *008.NetSpeedView(153)*                                                                                                                                                                                                                                                                                                                               | 网速 |
 | 009  | *009.SeatAirplane(890)*                                                                                                                                                                                                                                                                                                                               | 机座 |
 | 010  | *010.SeatMovie(718)*                                                                                                                                                                                                                                                                                                                                  | 影座 |
 | 011  | *011.PinView：ScaleImageView、ImageSource、ImageViewState、DecoderFactory、ImageDecoder、RegionDecoder(34+2116)*                                                                                                                                                                                                                                       | 图调 |
@@ -96,7 +96,7 @@
 >>19. ![material_warm](../../../../res/mipmap/material_warm.jpg)
 >>20. ![material_white](../../../../res/mipmap/material_white.jpg)
 
-### *001.流式LayoutTab、LayoutLabel：LayoutScroll、LayoutFlow、AttrsHelper、AdapterTab、AdapterLabel、AdapterTemplate、AdapterFlow、FlowListener、FlowListenerAdapter、ActionRect、ActionTri、ActionRound、ActionColor、ActionRes、ActionBase、ActionDot、TextViewTabColor、BeanTab、BeanLabel、TabValue、TabTypeEvaluator、ConstantsFlow、ViewPagerHelper(2120)*
+### *001.流式LayoutTab、LayoutLabel：LayoutScroll、LayoutFlow、AttrsHelper、AdapterTab、AdapterLabel、AdapterTemplate、AdapterFlow、FlowListener、FlowListenerAdapter、ActionRect、ActionTri、ActionRound、ActionColor、ActionRes、ActionBase、ActionDot、TextViewTabColor、BeanTab、BeanLabel、TabValue、TabTypeEvaluator、ConstantsFlow、ViewPagerHelper(2118)*
 
 | 序号 | 方法                     | 功能                                                             |
 |:-----|:-------------------------|:----------------------------------------------------------------|
@@ -1167,7 +1167,7 @@ class GuideActivity : AppCompatActivity() {
 | 16   | 04. CIRCLE_ANGLE           | 圆角        |
 | 17   | 05. getAngleNormalized     | 功能        |
 
-### *008.网速NetSpeedView(155)*
+### *008.网速NetSpeedView(153)*
 
 | 序号 | 方法               | 功能         |
 |:-----|:-------------------|:------------|

@@ -149,7 +149,7 @@ open class ScaleImageView @JvmOverloads constructor(context: Context, attr: Attr
         scaleMax = 160f
         scaleDoubleTapDpiZoom = 160f
         setGestureDetector(context)
-        longClickHandler = Handler(Handler.Callback { message ->
+        longClickHandler = Handler { message ->
             onLongClickListener?.let {
                 if (message.what == MESSAGE_LONG_CLICK) {
                     touchCountMax = 0
@@ -159,7 +159,7 @@ open class ScaleImageView @JvmOverloads constructor(context: Context, attr: Attr
                 }
             }
             true
-        })
+        }
         quickScaleThreshold = TypedValue
             .applyDimension(TypedValue.COMPLEX_UNIT_DIP, 20f, context.resources.displayMetrics)
         attr?.let {
@@ -1588,8 +1588,8 @@ open class ScaleImageView @JvmOverloads constructor(context: Context, attr: Attr
                         isPanning = true
                         vTranslate?.run { vTranslateStart?.set(x, y) }
                         vCenterStart?.run {
-                            when {
-                                event.actionIndex == 1 -> set(event.getX(0), event.getY(0))
+                            when (event.actionIndex) {
+                                1 -> set(event.getX(0), event.getY(0))
                                 else -> set(event.getX(1), event.getY(1))
                             }
                         }

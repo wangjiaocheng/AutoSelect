@@ -19,6 +19,7 @@ import com.autoselect.helper.DateHelper.nowMillis
 import com.autoselect.helper.LoggerHelper
 import com.autoselect.helper.DensityHelper.dip2px
 import com.autoselect.helper.ToastHelper.showShort
+import com.autoselect.helper.ToolHelper.backgroundHandler
 import com.autoselect.helper.debug
 import java.util.*
 import kotlin.math.abs
@@ -583,7 +584,6 @@ class SeatMovie
     private var isPointer: Boolean = false
     private var downX: Int = 0
     private var downY: Int = 0
-    private val mHandler = Handler(Looper.getMainLooper())
     private val hideOverviewRunnable = Runnable {
         isDrawOverview = false
         invalidate()
@@ -603,7 +603,7 @@ class SeatMovie
                         downY = y
                         isPointer = false
                         isDrawOverview = true
-                        mHandler.removeCallbacks(hideOverviewRunnable)
+                        backgroundHandler.removeCallbacks(hideOverviewRunnable)
                         invalidate()
                     }
                     MotionEvent.ACTION_MOVE ->
@@ -612,7 +612,7 @@ class SeatMovie
                             invalidate()
                         }
                     MotionEvent.ACTION_UP -> {
-                        mHandler.postDelayed(hideOverviewRunnable, 1500)
+                        backgroundHandler.postDelayed(hideOverviewRunnable, 1500)
                         autoScale()
                         if (!isPointer && (abs(x - downX) > 10 || abs(y - downY) > 10)) autoScroll()
                     }

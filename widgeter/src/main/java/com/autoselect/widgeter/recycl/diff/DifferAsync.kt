@@ -1,10 +1,9 @@
 package com.autoselect.widgeter.recycl.diff
 
-import android.os.Handler
-import android.os.Looper
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.DiffUtil.DiffResult
 import androidx.recyclerview.widget.ListUpdateCallback
+import com.autoselect.helper.ToolHelper.mainHandler
 import com.autoselect.widgeter.recycl.BaseAdapterQuick
 import java.util.concurrent.CopyOnWriteArrayList
 import java.util.concurrent.Executor
@@ -13,9 +12,8 @@ class DifferAsync<T>(
     private val adapter: BaseAdapterQuick<T, *>, private val config: DifferAsyncConfig<T>
 ) : Differ<T> {
     private class MainThreadExecutor() : Executor {
-        val mHandler = Handler(Looper.getMainLooper())
         override fun execute(command: Runnable) {
-            mHandler.post(command)
+            mainHandler.post(command)
         }
     }
 
