@@ -25,9 +25,9 @@ import androidx.core.app.NotificationManagerCompat
 import androidx.core.view.ViewCompat
 import com.autoselect.helper.AHelper.activityLifecycle
 import com.autoselect.helper.AHelper.app
-import com.autoselect.helper.AHelper.handler
 import com.autoselect.helper.AHelper.topActivityOrApp
 import com.autoselect.helper.ApplicationHelper.appPackageName
+import com.autoselect.helper.ToolHelper.mainHandler
 import com.autoselect.helper.VersionHelper.aboveJellyBean
 import com.autoselect.helper.VersionHelper.aboveJellyBeanMR1
 import java.lang.reflect.Field
@@ -126,7 +126,7 @@ object ToastHelper : LoggerHelper {
     fun showShort(strText: CharSequence?): Boolean = show(strText ?: "", Toast.LENGTH_SHORT)
     fun showLong(strText: CharSequence?): Boolean = show(strText ?: "", Toast.LENGTH_LONG)
     private var iToast: IToast? = null
-    private fun show(strText: CharSequence, duration: Int): Boolean = handler.post {
+    private fun show(strText: CharSequence, duration: Int): Boolean = mainHandler.post {
         cancel()
         iToast = ToastFactory.toastMake(app, strText, duration).apply {
             if (mGravity != -1 || mXOffset != -1 || mYOffset != -1)
@@ -172,7 +172,7 @@ object ToastHelper : LoggerHelper {
         getView(layoutId).apply { show(this, Toast.LENGTH_LONG) }
 
     private fun getView(@LayoutRes layoutId: Int): View = app.layoutInflater.inflate(layoutId, null)
-    private fun show(layoutView: View, duration: Int): Boolean = handler.post {
+    private fun show(layoutView: View, duration: Int): Boolean = mainHandler.post {
         cancel()
         iToast = ToastFactory.toastNew(app).apply {
             view = layoutView
@@ -317,7 +317,7 @@ object ToastHelper : LoggerHelper {
                     windowManager?.addView(it, layoutParams)
                 } catch (ignored: Exception) {
                 }
-                handler.postDelayed(
+                mainHandler.postDelayed(
                     { cancel() },
                     (if (toast?.duration == Toast.LENGTH_SHORT) 2000 else 3500).toLong()
                 )

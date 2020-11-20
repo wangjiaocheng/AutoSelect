@@ -1,15 +1,16 @@
 package com.autoselect.helper
 
 import android.os.Handler
-import android.os.Looper
 import android.os.Message
 import android.util.SparseArray
 import com.autoselect.helper.ApplicationHelper.isAppDebug
+import com.autoselect.helper.ToolHelper.backgroundHandler
 
 object UiMessageHelper : LoggerHelper, Handler.Callback {
-    private val handler = Handler(Looper.getMainLooper(), this)
-    fun send(id: Int): Boolean = handler.sendEmptyMessage(id)
-    fun send(id: Int, obj: Any): Boolean = handler.sendMessage(handler.obtainMessage(id, obj))
+    fun send(id: Int): Boolean = backgroundHandler.sendEmptyMessage(id)
+    fun send(id: Int, obj: Any): Boolean =
+        backgroundHandler.run { sendMessage(obtainMessage(id, obj)) }
+
     class UiMessage @JvmOverloads constructor(private var mMessage: Message? = null) {
         fun setMessage(message: Message?) {
             mMessage = message

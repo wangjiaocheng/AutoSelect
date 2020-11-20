@@ -1,6 +1,7 @@
 package com.autoselect.helper
 
-import com.autoselect.helper.AHelper.runOnUiThread
+import com.autoselect.helper.ToolHelper.backgroundHandler
+import com.autoselect.helper.ToolHelper.mainHandler
 import java.lang.reflect.InvocationTargetException
 import java.lang.reflect.Method
 import java.util.*
@@ -127,12 +128,12 @@ object BusHelper : LoggerHelper {
     private fun invokeMethod(tag: String, arg: Any, busInfo: BusInfo, sticky: Boolean) =
         Runnable { realInvokeMethod(tag, arg, busInfo, sticky) }.let { runnable ->
             when (busInfo.threadMode) {
-                "MAIN" -> runOnUiThread(runnable)
+                "MAIN" -> mainHandler.post(runnable)
                 "SINGLE" -> ThreadHelper.poolSingle?.execute(runnable)
                 "CACHED" -> ThreadHelper.poolCached?.execute(runnable)
                 "IO" -> ThreadHelper.poolIo?.execute(runnable)
                 "CPU" -> ThreadHelper.poolCpu?.execute(runnable)
-                else -> runnable.run()
+                else -> backgroundHandler.post(runnable)
             }
         }
 

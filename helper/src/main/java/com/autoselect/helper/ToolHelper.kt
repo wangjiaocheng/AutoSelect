@@ -15,15 +15,25 @@ import android.widget.TextView
 import java.util.regex.PatternSyntaxException
 
 object ToolHelper {
+    val mainHandler: Handler
+        get() = Handler(Looper.getMainLooper())
     val backgroundHandler: Handler
-        get() = Handler(HandlerThread("background").apply { start() }.looper)
+        get() = Handler(HandlerThread("background").apply { start() }.looper, UiMessageHelper)
 
     interface OnSimpleListener {
         fun doSomething()
     }
 
     fun delayToDo(delayTime: Long, onSimpleListener: OnSimpleListener) =
-        Handler(Looper.getMainLooper()).postDelayed({ onSimpleListener.doSomething() }, delayTime)
+        mainHandler.postDelayed({ onSimpleListener.doSomething() }, delayTime)
+
+    fun runOnUiThread(runnable: Runnable): Any = when {
+        Looper.myLooper() == Looper.getMainLooper() -> runnable.run()
+        else -> backgroundHandler.post(runnable)
+    }
+
+    fun runOnUiThreadDelayed(runnable: Runnable, delayMillis: Long): Boolean =
+        backgroundHandler.postDelayed(runnable, delayMillis)
 
     fun fixListViewHeight(listView: ListView) = listView.adapter?.let { listAdapter ->
         var totalHeight = 0

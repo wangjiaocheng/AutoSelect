@@ -4,11 +4,10 @@ import android.net.wifi.WifiConfiguration
 import android.net.wifi.WifiConfiguration.KeyMgmt
 import android.net.wifi.WifiManager
 import android.os.Build
-import android.os.Handler
-import android.os.Looper
 import com.autoselect.helper.NetHelper.isConnectedNetwork
 import com.autoselect.helper.ThreadHelper.poolSingle
 import com.autoselect.helper.ToastHelper.showShort
+import com.autoselect.helper.ToolHelper.mainHandler
 import com.autoselect.helper.WifiHelper.checkSSIDState
 import com.autoselect.helper.WifiHelper.checkState
 import java.lang.reflect.InvocationTargetException
@@ -18,18 +17,16 @@ object ApHelper {
     fun isWifiConnectSuccess(ssid: String?): Boolean =
         checkState && checkSSIDState(ssid) && isConnectedNetwork
 
-    private val wifiHandler: Handler = Handler(Looper.getMainLooper())
-
     private class CloseWifiRunnable : Runnable {
         override fun run() {
             when (wifiManager.wifiState) {
                 WifiManager.WIFI_STATE_ENABLED -> {
                     wifiManager.isWifiEnabled = false
-                    closeWifiRunnable?.let { wifiHandler.postDelayed(it, 100) }
+                    closeWifiRunnable?.let { mainHandler.postDelayed(it, 100) }
                 }
                 WifiManager.WIFI_STATE_DISABLING ->
-                    closeWifiRunnable?.let { wifiHandler.postDelayed(it, 100) }
-                WifiManager.WIFI_STATE_DISABLED -> wifiHandler.post {
+                    closeWifiRunnable?.let { mainHandler.postDelayed(it, 100) }
+                WifiManager.WIFI_STATE_DISABLED -> mainHandler.post {
                     startWifiApTh
                     showShort("已关闭WiFi")
                 }
@@ -68,15 +65,15 @@ object ApHelper {
     private class StartWifiApRunnable : Runnable {
         override fun run() {
             when (wifiApState) {
-                wifiApStateFailed -> wifiHandler.post {
+                wifiApStateFailed -> mainHandler.post {
                     showShort("打开热点失败，请到系统设置里检查热点状态！")
                     onWifiAPStatusChangedListener?.onWifiAPStatusChanged(false)
                 }
                 wifiApStateDisabled ->
-                    startWifiApRunnable?.let { wifiHandler.postDelayed(it, 100) }
+                    startWifiApRunnable?.let { mainHandler.postDelayed(it, 100) }
                 wifiApStateEnabling ->
-                    startWifiApRunnable?.let { wifiHandler.postDelayed(it, 100) }
-                wifiApStateEnabled -> wifiHandler.post {
+                    startWifiApRunnable?.let { mainHandler.postDelayed(it, 100) }
+                wifiApStateEnabled -> mainHandler.post {
                     showShort("已开启WLAN热点")
                     onWifiAPStatusChangedListener?.onWifiAPStatusChanged(true)
                 }
@@ -101,11 +98,11 @@ object ApHelper {
             when (wifiApState) {
                 wifiApStateEnabled -> {
                     closeAp(wifiAPSsid, wifiAPPassword)
-                    closeWifiApRunnable?.let { wifiHandler.postDelayed(it, 100) }
+                    closeWifiApRunnable?.let { mainHandler.postDelayed(it, 100) }
                 }
                 wifiApStateDisabling, wifiApStateFailed ->
-                    closeWifiApRunnable?.let { wifiHandler.postDelayed(it, 100) }
-                wifiApStateDisabled -> wifiHandler.post {
+                    closeWifiApRunnable?.let { mainHandler.postDelayed(it, 100) }
+                wifiApStateDisabled -> mainHandler.post {
                     showShort("已关闭WLAN热点！")
                     onWifiAPStatusChangedListener?.onWifiAPStatusChanged(false)
                 }
@@ -179,7 +176,7 @@ object ApHelper {
         }
 
     val release = {
-        wifiHandler.removeCallbacksAndMessages(null)
+        mainHandler.removeCallbacksAndMessages(null)
         onWifiAPStatusChangedListener = null
     }//资源释放
 }

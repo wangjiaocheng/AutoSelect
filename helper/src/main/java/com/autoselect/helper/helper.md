@@ -73,9 +73,9 @@
 | 042  | *042.ClickHelper(55)*                                  | 连点 |
 | 043  | *043.AntiShakeHelper(21)*                              | 防抖 |
 | 044  | *044.ShakeHelper(26)*                                  | 抖动 |
-| 045  | *045.AHelper(287)*                                     | 全局 |
+| 045  | *045.AHelper(276)*                                     | 全局 |
 | 046  | *046.ApiHelper(44)*                                    | 接口 |
-| 047  | *047.BusHelper(239)*                                   | 总线 |
+| 047  | *047.BusHelper(240)*                                   | 总线 |
 | 048  | *048.CacheMemoryHelper(79)*                            | 内存 |
 | 049  | *049.CacheDiskHelper(524)*                             | 磁盘 |
 | 050  | *050.CacheDoubleHelper(247)*                           | 双重 |
@@ -127,11 +127,11 @@
 | 096  | *096.ResourceHelper(251)*                              | 资源 |
 | 097  | *097.PreferenceHelper(109)*                            | 共享 |
 | 098  | *098.ThemeHelper(157)*                                 | 主题 |
-| 099  | *099.UiMessageHelper(166)*                             | 消息 |
+| 099  | *099.UiMessageHelper(167)*                             | 消息 |
 | 100  | *100.DateHelper(514)*                                  | 日期 |
 | 101  | *101.LunarHelper(177)*                                 | 农历 |
 | 102  | *102.CloseHelper(25)*                                  | 关闭 |
-| 103  | *103.ToolHelper(111)*                                  | 工具 |
+| 103  | *103.ToolHelper(121)*                                  | 工具 |
 | 104  | *104.ContactsHelper(221)*                              | 通讯 |
 | 105  | *105.MapHelper(69)*                                    | 地图 |
 | 106  | *106.WebServiceHelper(63)*                             | 网服 |
@@ -1099,7 +1099,7 @@
 | 01   | 01. shakeAnimation | 抖动动画      |
 | 02   | 02. shake          | 系列输入框抖动 |
 
-### *045.全局AHelper(287)*
+### *045.全局AHelper(276)*
 
 | 序号 | 方法                       | 功能                |
 |:-----|:---------------------------|:-------------------|
@@ -1111,9 +1111,6 @@
 | 06   | 06. activityLinkedList     | 活动列表            |
 | 07   | 07. isForegroundApp        | 是否当前APP         |
 | 08   | 08. topActivityOrApp       | 顶部活动或应用上下文 |
-| 09   | 09. handler                | UI线程处理器        |
-| 10   | 10. runOnUiThread          | 运行UI线程          |
-| 11   | 11. runOnUiThreadDelayed   | 延迟运行UI线程      |
 
 ### *046.接口ApiHelper(44)*
 
@@ -1125,7 +1122,7 @@
 | 04   | 04. getApi      | 获取API                     |
 | 05   | 05. Api         | API注解                     |
 
-### *047.总线BusHelper(239)*
+### *047.总线BusHelper(240)*
 
 | 序号 | 方法             | 功能                                |
 |:-----|:-----------------|:-----------------------------------|
@@ -2302,7 +2299,7 @@
 | 12   | 12. getColorArray                   | 获取颜色数组                    |
 | 13   | 13. isNightMode                     | 是否深色模式                    |
 
-### *099.消息UiMessageHelper(166)*
+### *099.消息UiMessageHelper(167)*
 
 | 序号 | 方法                  | 功能           |
 |:-----|:----------------------|:--------------|
@@ -2439,20 +2436,23 @@
 | 01   | 01. closeIo        | 关闭资源          |
 | 02   | 02. closeIoQuietly | 关闭资源，忽略异常 |
 
-### *103.工具ToolHelper(111)*
+### *103.工具ToolHelper(121)*
 
-| 序号 | 方法                  | 功能                    |
-|:-----|:----------------------|:-----------------------|
-| 01   | 01. backgroundHandler | 背景处理器              |
-| 02   | 02. OnSimpleListener  | 延迟操作监听器          |
-| 03   | 03. delayToDo         | 延迟操作                |
-| 04   | 04. fixListViewHeight | 计算ListView高度        |
-| 05   | 05. countDown         | 倒数                   |
-| 06   | 06. setEditNumberAuto | 设置EditText数字        |
-| 07   | 07. setEditNumber     | 自动设置EditText数字    |
-| 08   | 08. setEditDecimal    | 设置EditText小数        |
-| 09   | 09. setEditType       | 设置EditText类型        |
-| 10   | 10. stringFilter      | 只许数字汉字字符串过滤器 |
+| 序号 | 方法                     | 功能                    |
+|:-----|:-------------------------|:-----------------------|
+| 01   | 01. mainHandler          | UI线程处理器            |
+| 02   | 02. backgroundHandler    | 背景处理器              |
+| 03   | 03. OnSimpleListener     | 延迟操作监听器          |
+| 04   | 04. delayToDo            | 延迟操作                |
+| 05   | 05. runOnUiThread        | 运行UI线程              |
+| 06   | 06. runOnUiThreadDelayed | 延迟运行UI线程          |
+| 07   | 07. fixListViewHeight    | 计算ListView高度        |
+| 08   | 08. countDown            | 倒数                   |
+| 09   | 09. setEditNumberAuto    | 设置EditText数字        |
+| 10   | 10. setEditNumber        | 自动设置EditText数字    |
+| 11   | 11. setEditDecimal       | 设置EditText小数        |
+| 12   | 12. setEditType          | 设置EditText类型        |
+| 13   | 13. stringFilter         | 只许数字汉字字符串过滤器 |
 
 ### *104.通讯ContactsHelper(221)*
 

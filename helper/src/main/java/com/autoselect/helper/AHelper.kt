@@ -10,8 +10,6 @@ import android.content.Context
 import android.database.Cursor
 import android.net.Uri
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import androidx.core.content.FileProvider
@@ -275,13 +273,4 @@ object AHelper {
         application = (app ?: applicationByReflect)
             .apply { registerActivityLifecycleCallbacks(activityLifecycle) }
     }
-
-    val handler = Handler(Looper.getMainLooper())
-    fun runOnUiThread(runnable: Runnable): Any = when {
-        Looper.myLooper() == Looper.getMainLooper() -> runnable.run()
-        else -> handler.post(runnable)
-    }
-
-    fun runOnUiThreadDelayed(runnable: Runnable, delayMillis: Long): Boolean =
-        handler.postDelayed(runnable, delayMillis)
-}//applicationContext
+}
