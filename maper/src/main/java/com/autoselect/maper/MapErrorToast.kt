@@ -6,8 +6,9 @@ import android.view.Gravity
 import android.widget.TextView
 import android.widget.Toast
 import com.amap.api.services.core.AMapException
+import com.autoselect.helper.HandleHelper.backgroundHandler
 import com.autoselect.helper.LoggerHelper
-import com.autoselect.helper.HandleHelper.mainHandler
+import com.autoselect.helper.ToastHelper.showShort
 import com.autoselect.helper.info
 
 object MapErrorToast : LoggerHelper {
@@ -21,7 +22,7 @@ object MapErrorToast : LoggerHelper {
 
     @JvmStatic
     fun showTvToast(context: Context?, message: String?) {
-        toast?.let { mainHandler.postDelayed(runnable, 0) } ?: run {
+        toast?.let { backgroundHandler.postDelayed(runnable, 0) } ?: run {
             toast = Toast(context).apply {
                 duration = Toast.LENGTH_SHORT
                 setGravity(Gravity.BOTTOM, 0, 150)
@@ -32,17 +33,11 @@ object MapErrorToast : LoggerHelper {
                 }
             }
         }//不到一秒，还未取消，立即取消
-        mainHandler.postDelayed(runnable, 1000)
+        backgroundHandler.postDelayed(runnable, 1000)
         toast?.show()
     }
 
-    fun show(context: Context?, resId: Int) =
-        Toast.makeText(context, resId, Toast.LENGTH_LONG).show()
-
-    fun show(context: Context?, info: String?) =
-        Toast.makeText(context, info, Toast.LENGTH_LONG).show()
-
-    fun showError(context: Context?, rCode: Int) {
+    fun showError(rCode: Int) {
         try {
             when (rCode) {
                 1001 -> throw AMapException(AMapException.AMAP_SIGNATURE_ERROR)
@@ -94,12 +89,12 @@ object MapErrorToast : LoggerHelper {
                 4000 -> throw AMapException(AMapException.AMAP_SHARE_LICENSE_IS_EXPIRED)
                 4001 -> throw AMapException(AMapException.AMAP_SHARE_FAILURE)
                 else -> {
-                    show(context, "查询失败：$rCode")
+                    showShort("查询失败：$rCode")
                     logError("查询失败", rCode)
                 }
             }
         } catch (e: Exception) {
-            show(context, e.message)
+            showShort(e.message)
             logError(e.message, rCode)
         }
     }

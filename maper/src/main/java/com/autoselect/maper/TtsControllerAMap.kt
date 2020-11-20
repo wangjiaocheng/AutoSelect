@@ -5,8 +5,8 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.os.Message
-import android.widget.Toast
 import com.amap.api.navi.AMapNavi
+import com.autoselect.helper.ToastHelper.showShort
 import com.iflytek.cloud.*
 import java.util.*
 
@@ -21,7 +21,7 @@ class TtsControllerAMap private constructor(context: Context?) {
                 when (it) {
                     ErrorCode.SUCCESS -> {
                     }
-                    else -> Toast.makeText(mContext, "语音合成初始化失败!", Toast.LENGTH_SHORT).show()
+                    else -> showShort("语音合成初始化失败!")
                 }
             }
     }

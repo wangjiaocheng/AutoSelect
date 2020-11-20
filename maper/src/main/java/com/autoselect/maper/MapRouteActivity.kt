@@ -16,10 +16,10 @@ import com.amap.api.services.routepoisearch.RoutePOIItem
 import com.amap.api.services.routepoisearch.RoutePOISearch
 import com.amap.api.services.routepoisearch.RoutePOISearchQuery
 import com.amap.api.services.routepoisearch.RoutePOISearchResult
+import com.autoselect.helper.ToastHelper.showLong
 import com.autoselect.maper.MapCommon.getFriendlyLength
 import com.autoselect.maper.MapCommon.getFriendlyTime
 import com.autoselect.maper.MapCommon.toLatLng
-import com.autoselect.maper.MapErrorToast.show
 import com.autoselect.maper.MapErrorToast.showError
 import kotlinx.android.synthetic.main.activity_route.*
 
@@ -162,8 +162,8 @@ class MapRouteActivity : AppCompatActivity(), RouteSearch.OnRouteSearchListener,
             AMapException.CODE_AMAP_SUCCESS -> result?.paths?.run {
                 if (size > 0) bus_result_list.adapter =
                     MapRouteBusResultListAdapter(context, result)
-            } ?: show(context, R.string.no_result)
-            else -> showError(applicationContext, errorCode)
+            } ?: showLong(R.string.no_result)
+            else -> showError(errorCode)
         }
     }
 
@@ -185,9 +185,11 @@ class MapRouteActivity : AppCompatActivity(), RouteSearch.OnRouteSearchListener,
                     }
                     bottom_layout.visibility = View.VISIBLE
                     firstline.text =
-                        "${getFriendlyTime(drivePath.duration.toInt())}(${getFriendlyLength(
-                            drivePath.distance.toInt()
-                        )})"
+                        "${getFriendlyTime(drivePath.duration.toInt())}(${
+                            getFriendlyLength(
+                                drivePath.distance.toInt()
+                            )
+                        })"
                     secondline.apply {
                         visibility = View.VISIBLE
                         text = "打车约${result.taxiCost}元"
@@ -199,8 +201,8 @@ class MapRouteActivity : AppCompatActivity(), RouteSearch.OnRouteSearchListener,
                         }.let { startActivity(it) }
                     }
                 }
-            } ?: show(context, R.string.no_result)
-            else -> showError(context, errorCode)
+            } ?: showLong(R.string.no_result)
+            else -> showError(errorCode)
         }
     }
 
@@ -229,8 +231,8 @@ class MapRouteActivity : AppCompatActivity(), RouteSearch.OnRouteSearchListener,
                         }.let { startActivity(it) }
                     }
                 }
-            } ?: show(context, R.string.no_result)
-            else -> showError(applicationContext, errorCode)
+            } ?: showLong(R.string.no_result)
+            else -> showError(errorCode)
         }
     }
 
@@ -259,8 +261,8 @@ class MapRouteActivity : AppCompatActivity(), RouteSearch.OnRouteSearchListener,
                         }.let { startActivity(it) }
                     }
                 }
-            } ?: show(context, R.string.no_result)
-            else -> showError(applicationContext, errorCode)
+            } ?: showLong(R.string.no_result)
+            else -> showError(errorCode)
         }
     }
 
@@ -280,10 +282,10 @@ class MapRouteActivity : AppCompatActivity(), RouteSearch.OnRouteSearchListener,
                         innerRoutePoiOverlay = InnerRoutePoiOverlay(aMap, routePois)
                         innerRoutePoiOverlay?.addToMap
                     }
-                    else -> show(this@MapRouteActivity, R.string.no_result)
+                    else -> showLong(R.string.no_result)
                 }
-            } ?: show(this@MapRouteActivity, R.string.no_result)
-            else -> showError(this@MapRouteActivity, errorCode)
+            } ?: showLong(R.string.no_result)
+            else -> showError(errorCode)
         }
     }
 

@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.view.KeyEvent
 import android.view.MotionEvent
 import android.view.Window
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.amap.api.maps.AMap
 import com.amap.api.maps.CameraUpdateFactory
@@ -266,15 +265,15 @@ open class MapNaviActivity : LoggerHelper, AppCompatActivity(),
     @Deprecated("")
     override fun notifyParallelRoad(i: Int) = when (i) {
         0 -> {
-            Toast.makeText(this, "当前在主辅路过渡", Toast.LENGTH_SHORT).show()
+            showShort("当前在主辅路过渡")
             debug("$loggerTag->当前在主辅路过渡")
         }
         1 -> {
-            Toast.makeText(this, "当前在主路", Toast.LENGTH_SHORT).show()
+            showShort("当前在主路")
             debug("$loggerTag->当前在主路")
         }
         2 -> {
-            Toast.makeText(this, "当前在辅路", Toast.LENGTH_SHORT).show()
+            showShort("当前在辅路")
             debug("$loggerTag->当前在辅路")
         }
         else -> {

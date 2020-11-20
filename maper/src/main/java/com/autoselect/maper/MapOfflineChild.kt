@@ -11,13 +11,13 @@ import android.os.Message
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import com.amap.api.maps.AMapException
 import com.amap.api.maps.offlinemap.OfflineMapCity
 import com.amap.api.maps.offlinemap.OfflineMapManager
 import com.amap.api.maps.offlinemap.OfflineMapStatus
-import com.autoselect.helper.LoggerHelper
 import com.autoselect.helper.HandleHelper.runOnUiThreadDelayed
+import com.autoselect.helper.LoggerHelper
+import com.autoselect.helper.ToastHelper.showShort
 import com.autoselect.helper.debug
 import com.autoselect.helper.layoutInflater
 
@@ -199,7 +199,7 @@ class MapOfflineChild(private val context: Context, offlineMapManager: OfflineMa
         true
     } catch (e: AMapException) {
         e.printStackTrace()
-        Toast.makeText(context, e.errorMessage, Toast.LENGTH_SHORT).show()
+        showShort(e.errorMessage)
         false
     }
 

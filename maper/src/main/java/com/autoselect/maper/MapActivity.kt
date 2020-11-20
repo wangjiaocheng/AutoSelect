@@ -74,15 +74,14 @@ import com.autoselect.helper.DateHelper.sdfDateByFullX
 import com.autoselect.helper.DensityHelper.dip2px
 import com.autoselect.helper.FileHelper.createDirNone
 import com.autoselect.helper.FileIoHelper.writeFileFromIS
+import com.autoselect.helper.HandleHelper.backgroundHandler
 import com.autoselect.helper.ImageHelper.compressByScale
 import com.autoselect.helper.PathHelper.pathExternal
 import com.autoselect.helper.StringHelper.isEmptyTrim
 import com.autoselect.helper.StringHelper.isNotSpace
 import com.autoselect.helper.StringHelper.isSpace
 import com.autoselect.helper.ToastHelper.showShort
-import com.autoselect.helper.HandleHelper.backgroundHandler
 import com.autoselect.maper.MapCommon.toLatLng
-import com.autoselect.maper.MapErrorToast.show
 import com.autoselect.maper.MapErrorToast.showError
 import com.autoselect.maper.MapErrorToast.showTvToast
 import kotlinx.android.synthetic.main.activity_map.*
@@ -1044,7 +1043,7 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
                 }
                 else -> showShort(R.string.no_result as CharSequence)
             }
-            else -> showError(this@MapActivity, rCode)
+            else -> showError(rCode)
         }
     }
 
@@ -1091,7 +1090,7 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
                 }
                 else -> showShort(R.string.no_result as CharSequence)
             }
-            else -> showError(this@MapActivity, rCode)
+            else -> showError(rCode)
         }
     }
 
@@ -1241,7 +1240,7 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
                     debug("$loggerTag$key:$value")
                 }
             }
-            else -> showError(this, rCode)
+            else -> showError(rCode)
         }
     }
 
@@ -1311,7 +1310,7 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
                     }
                 } ?: showShort(R.string.no_result as CharSequence)
             }
-            else -> showError(this, rCode)
+            else -> showError(rCode)
         }
     }
 
@@ -1354,7 +1353,7 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
                     }
                 else -> showShort(R.string.no_result as CharSequence)
             }
-            else -> showError(this, rCode)
+            else -> showError(rCode)
         }
     }
 
@@ -1368,7 +1367,7 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
         }
     private var executorService: ExecutorService? = null
     private val msgHandler: Handler = object : Handler(Looper.getMainLooper()) {
-        override fun handleMessage(msg: Message) = showError(this@MapActivity, msg.arg1)
+        override fun handleMessage(msg: Message) = showError(msg.arg1)
     }
 
     fun searchAddressesByLatLonList(latLonPoints: MutableList<LatLonPoint>) {
@@ -1407,7 +1406,7 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
                 reGeoMarker?.position = point?.toLatLng
                 showShort("${it}附近" as CharSequence)
             } ?: showShort(R.string.no_result as CharSequence)
-            else -> showError(this, rCode)
+            else -> showError(rCode)
         }
     }
 
@@ -1462,7 +1461,7 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
                             }
                             subDistrictList = subDistrictMap[currentDistrictItem?.adcode]
                         }
-                        else -> showError(this, it.aMapException.errorCode)
+                        else -> showError(it.aMapException.errorCode)
                     }
                 }
                 setSpinnerView(subDistrictList)
@@ -1500,7 +1499,7 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
                             }.start()
                         }
                         else -> aMapException
-                            ?.let { e -> showError(applicationContext, e.errorCode) }
+                            ?.let { e -> showError(e.errorCode) }
                     }
                 }
             }
@@ -1616,7 +1615,7 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
                                         applicationContext, R.layout.route_inputs,
                                         tipList.map { it.name }.toMutableList()
                                     ).apply { field?.setAdapter(this) }.notifyDataSetChanged()
-                                    else -> showError(this@MapActivity, rCode)
+                                    else -> showError(rCode)
                                 }
                             }
                         }.requestInputtipsAsyn()
@@ -1638,7 +1637,7 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
                             poiSearchList?.adapter = MapPoiListAdapter(this@MapActivity, it.pois)
                                 .apply { mapPoiListAdapter = this }
                         }
-                        else -> showError(this@MapActivity, rCode)
+                        else -> showError(rCode)
                     }
                 }
 
@@ -1649,7 +1648,7 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
                                 this@MapActivity, mutableListOf<PoiItem>().apply { add(it) })
                                 .apply { mapPoiListAdapter = this }
                         }
-                        else -> showError(this@MapActivity, rCode)
+                        else -> showError(rCode)
                     }
                 }
             })
@@ -1673,7 +1672,7 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
                         mPoiInfo?.text = poiExtension?.run { "营业时间：$opentime；评分：${getmRating()}" }
                         mPoiDetail?.visibility = View.VISIBLE
                     }
-                    else -> showError(this@MapActivity, rCode)
+                    else -> showError(rCode)
                 }
             }
         })
@@ -1713,11 +1712,11 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
                                     }
                                     suggestionCities?.isNotEmpty() == true ->
                                         showSuggestCity(suggestionCities)
-                                    else -> show(this@MapActivity, R.string.no_result)
+                                    else -> showShort(R.string.no_result)
                                 }
                             }
-                        } ?: show(this@MapActivity, R.string.no_result)
-                        else -> showError(this@MapActivity, rCode)
+                        } ?: showShort(R.string.no_result)
+                        else -> showError(rCode)
                     }
                 }
             })
@@ -1730,7 +1729,7 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
         for (city in cities) {
             information += city.run { "城市名称:${cityName}城市区号:${cityCode}城市编码:${adCode}\n" }
         }
-        show(this@MapActivity, information)
+        showShort(information)
     }
 
     val nextPagePoiKeyword = {
@@ -1739,7 +1738,7 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
                 poiSearchQuery?.pageNum = ++currentPage
                 poiSearch?.searchPOIAsyn()
             }
-            else -> show(this@MapActivity, R.string.no_result)
+            else -> showShort(R.string.no_result)
         }
     }
     private val latLonPoint: LatLonPoint? = LatLonPoint(39.993743, 116.472995)
@@ -1816,12 +1815,12 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
                                             }
                                             suggestionCities?.isNotEmpty() == true ->
                                                 showSuggestCity(suggestionCities)
-                                            else -> show(this@MapActivity, R.string.no_result)
+                                            else -> showShort(R.string.no_result)
                                         }
                                     }
                                 }
-                            } ?: show(this@MapActivity, R.string.no_result)
-                            else -> showError(applicationContext, rcode)
+                            } ?: showShort(R.string.no_result)
+                            else -> showError(rcode)
                         }
                     }
                 })
@@ -1917,7 +1916,7 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
                 }
             )
             setOnWeatherSearchListener(object : WeatherSearch.OnWeatherSearchListener {
-                override fun onWeatherLiveSearched(result: LocalWeatherLiveResult?, rCode: Int) =
+                override fun onWeatherLiveSearched(result: LocalWeatherLiveResult?, rCode: Int) {
                     when (rCode) {
                         AMapException.CODE_AMAP_SUCCESS -> result?.liveResult?.run {
                             cityNameTv?.text = cityName
@@ -1926,9 +1925,10 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
                             temperatureTv?.text = "${temperature}°"
                             windTv?.text = "${windDirection}风${windPower}级"
                             humidityTv?.text = "湿度${humidity}%"
-                        } ?: show(this@MapActivity, R.string.no_result)
-                        else -> showError(this@MapActivity, rCode)
+                        } ?: showShort(R.string.no_result)
+                        else -> showError(rCode)
                     }
+                }
 
                 override fun onWeatherForecastSearched(
                     result: LocalWeatherForecastResult?, rCode: Int
@@ -1960,9 +1960,9 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
                                 }
                                 forecastTv?.text = forecast
                             }
-                            else -> show(this@MapActivity, R.string.no_result)
+                            else -> showShort(R.string.no_result)
                         }
-                        else -> showError(this@MapActivity, rCode)
+                        else -> showError(rCode)
                     }
                 }
             })
@@ -1975,7 +1975,7 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
                 dismissProgressDialog
                 when (errorCode) {
                     AMapException.CODE_AMAP_SUCCESS -> urlView?.loadUrl(url)
-                    else -> showError(applicationContext, errorCode)
+                    else -> showError(errorCode)
                 }
             }
 
@@ -1983,7 +1983,7 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
                 dismissProgressDialog
                 when (errorCode) {
                     AMapException.CODE_AMAP_SUCCESS -> urlView?.loadUrl(url)
-                    else -> showError(applicationContext, errorCode)
+                    else -> showError(errorCode)
                 }
             }
 
@@ -1991,7 +1991,7 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
                 dismissProgressDialog
                 when (errorCode) {
                     AMapException.CODE_AMAP_SUCCESS -> urlView?.loadUrl(url)
-                    else -> showError(applicationContext, errorCode)
+                    else -> showError(errorCode)
                 }
             }
 
@@ -1999,7 +1999,7 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
                 dismissProgressDialog
                 when (errorCode) {
                     AMapException.CODE_AMAP_SUCCESS -> urlView?.loadUrl(url)
-                    else -> showError(applicationContext, errorCode)
+                    else -> showError(errorCode)
                 }
             }
 
@@ -2007,7 +2007,7 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
                 dismissProgressDialog
                 when (errorCode) {
                     AMapException.CODE_AMAP_SUCCESS -> urlView?.loadUrl(url)
-                    else -> showError(applicationContext, errorCode)
+                    else -> showError(errorCode)
                 }
             }
 
@@ -2015,7 +2015,7 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
                 dismissProgressDialog
                 when (errorCode) {
                     AMapException.CODE_AMAP_SUCCESS -> urlView?.loadUrl(url)
-                    else -> showError(applicationContext, errorCode)
+                    else -> showError(errorCode)
                 }
             }
         })
@@ -2220,7 +2220,7 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
                         OfflineMapStatus.EXCEPTION_AMAP -> error("$loggerTag->download:EXCEPTION_AMAP $downName")
                         OfflineMapStatus.EXCEPTION_NETWORK_LOADING -> {
                             error("$loggerTag->download:EXCEPTION_NETWORK_LOADING $downName")
-                            Toast.makeText(this@MapActivity, "网络异常", Toast.LENGTH_SHORT).show()
+                            showShort("网络异常")
                             field?.pause()
                         }
                         OfflineMapStatus.EXCEPTION_SDCARD -> error("$loggerTag->download:EXCEPTION_SDCARD $downName")
@@ -2374,7 +2374,7 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
                                         ).apply { inputListView?.adapter = this }
                                             .notifyDataSetChanged()
                                     }
-                                    else -> showError(applicationContext, rCode)
+                                    else -> showError(rCode)
                                 }
                             }
                         }.requestInputtipsAsyn()
@@ -2551,7 +2551,7 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
 
     override fun onRequestFailed(lineID: Int, errorInfo: String?) {
         debug("$loggerTag->onRequestFailed")
-        Toast.makeText(applicationContext, errorInfo, Toast.LENGTH_SHORT).show()
+        showShort(errorInfo)
         if (overlayList.containsKey(lineID)) (overlayList[lineID] as TraceOverlay)
             .apply { traceStatus = TraceOverlay.TRACE_STATUS_FAILURE }
             .run { setDistanceAndWait(this) }
@@ -2578,7 +2578,7 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
         lineID: Int, linepoints: MutableList<LatLng?>?, distanceSum: Int, timeWait: Int
     ) {
         debug("$loggerTag->onFinished")
-        Toast.makeText(applicationContext, "onFinished", Toast.LENGTH_SHORT).show()
+        showShort("onFinished")
         if (overlayList.containsKey(lineID)) (overlayList[lineID] as TraceOverlay).apply {
             traceStatus = TraceOverlay.TRACE_STATUS_FINISH
             distance = distanceSum
@@ -2597,7 +2597,7 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
                 TraceOverlay.TRACE_STATUS_PROCESSING -> "该线路轨迹纠偏进行".apply { setDistanceAndWait(it) }
                 TraceOverlay.TRACE_STATUS_FINISH -> "该线路轨迹纠偏完成".apply { setDistanceAndWait(it) }
                 else -> ""
-            }.let { tip -> Toast.makeText(applicationContext, tip, Toast.LENGTH_SHORT).show() }
+            }.let { tip -> showShort(tip) }
         }
         else -> {
             overlayList[sequenceLineID] = TraceOverlay(aMap)
@@ -2917,12 +2917,11 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
                         append("添加围栏成功")
                         (msg.obj as String).let { if (isNotSpace(it)) append("customId: $it") }
                     }.let {
-                        Toast.makeText(applicationContext, it.toString(), Toast.LENGTH_SHORT).show()
+                        showShort(it.toString())
                     }
                     drawFence2Map
                 }
-                1 -> Toast.makeText(applicationContext, "添加围栏失败 ${msg.arg1}", Toast.LENGTH_SHORT)
-                    .show()
+                1 -> showShort("添加围栏失败 ${msg.arg1}")
                 2 -> locationInfo = "${msg.obj as String}\n"
             }
         }
@@ -2973,8 +2972,7 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
         get() = run { DPoint(latitude, longitude) }
     var customId: String = ""
     val addPolygonFence = when {
-        polygonPoints.size < 3 ->
-            Toast.makeText(AHelper.app, "参数不全", Toast.LENGTH_SHORT).show()
+        polygonPoints.size < 3 -> showShort("参数不全")
         else -> mutableListOf<DPoint?>().apply {
             for (latLng in polygonPoints) {
                 add(latLng?.toDPoint)
@@ -2983,15 +2981,13 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
     }
     var keyword: String = ""
     val addDistrictFence = when {
-        isSpace(keyword) ->
-            Toast.makeText(AHelper.app, "参数不全", Toast.LENGTH_SHORT).show()
+        isSpace(keyword) -> showShort("参数不全")
         else -> geoFenceClient.addGeoFence(keyword, customId)
     }
     var centerLatLng: LatLng? = null
     var radiusStr: String = ""
     val addRoundFence = when {
-        centerLatLng == null || isSpace(radiusStr) ->
-            Toast.makeText(AHelper.app, "参数不全", Toast.LENGTH_SHORT).show()
+        centerLatLng == null || isSpace(radiusStr) -> showShort("参数不全")
         else -> geoFenceClient.addGeoFence(centerLatLng?.toDPoint, radiusStr.toFloat(), customId)
     }
     var poiType: String = ""
@@ -3010,7 +3006,7 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
         geoFenceClient.addGeoFence(
             keyword, poiType, DPoint(latitude, longitude), aroundRadius, size, customId
         )
-    } ?: Toast.makeText(AHelper.app, "参数不全", Toast.LENGTH_SHORT).show()
+    } ?: showShort("参数不全")
     var city: String = ""
     val addKeywordFence = {
         var size = 10
@@ -3021,8 +3017,7 @@ class MapActivity : AppCompatActivity(), LoggerHelper, AMap.OnMapScreenShotListe
             }
         }
         when {
-            isSpace(keyword) || isSpace(poiType) ->
-                Toast.makeText(AHelper.app, "参数不全", Toast.LENGTH_SHORT).show()
+            isSpace(keyword) || isSpace(poiType) -> showShort("参数不全")
             else -> geoFenceClient.addGeoFence(keyword, poiType, city, size, customId)
         }
     }
