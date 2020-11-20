@@ -7,10 +7,10 @@ allprojects {
     }
 }
 dependencies {
-    implementation "com.github.wangjiaocheng.AutoSelect:helper:master-SNAPSHOT"
-    implementation "com.github.wangjiaocheng.AutoSelect:widgeter:master-SNAPSHOT"
-    implementation "com.github.wangjiaocheng.AutoSelect:maper:master-SNAPSHOT"
-    implementation "com.github.wangjiaocheng.AutoSelect:payer:master-SNAPSHOT"
+    implementation "com.github.wangjiaocheng.AutoSelect:helper:1.0.0"
+    implementation "com.github.wangjiaocheng.AutoSelect:widgeter:1.0.0"
+    implementation "com.github.wangjiaocheng.AutoSelect:maper:1.0.0"
+    implementation "com.github.wangjiaocheng.AutoSelect:payer:1.0.0"
 }
 ```
 
