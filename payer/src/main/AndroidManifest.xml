@@ -9,7 +9,6 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application>
-        <activity android:name=".PayActivity" />
         <activity android:name=".PayWxEntryActivity" />
     </application>
 </manifest>

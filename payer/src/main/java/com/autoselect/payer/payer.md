@@ -16,11 +16,10 @@
 
 | 序号 | 类库                         | 功能 |
 |:-----|:-----------------------------|:----|
-| 001  | *001.PayHelper(596)*         | 支付 |
-| 002  | *002.PayActivity(27)*        | 活动 |
-| 003  | *003.PayWxEntryActivity(41)* | 微信 |
+| 001  | *001.PayHelper(591)*         | 支付 |
+| 002  | *002.PayWxEntryActivity(41)* | 微信 |
 
-### *001.支付PayHelper(596)*
+### *001.支付PayHelper(591)*
 
 | 序号 | 方法                                 | 功能                                                     |
 |:-----|:-------------------------------------|:--------------------------------------------------------|
@@ -69,7 +68,24 @@
 | 43   | 19. UPPAY_PLUGIN_NEED_UPGRADE        | 插件需更新                                               |
 | 44   | 20. newInstance                      | 创建支付实例                                             |
 
-### *002.活动PayActivity(27)*
+```kotlin
+newInstance(
+    PayHelper.PayParams(
+        this, "your_wechat_appid", PayHelper.PayWay.WeChatPay,
+        0f, "产品名称", "产品详情",
+        PayHelper.HttpType.Get, PayHelper.NetworkClientType.HttpUrlConnection,
+        "http://www.autoselect.com/"//APP服务器host主机地址
+    )
+)?.requestPayInfo(object : PayHelper.OnPayInfoRequestListener {
+    override fun onPayInfoRequestStart() {}//TODO 做一些loading操作，progressBar.show()
+    override fun onPayInfoRequestSuccess() {}//TODO 将loading状态去掉，请求预支付信息成功，跳转到客户端支付
+    override fun onPayInfoRequestFailure() {}//TODO 将loading状态去掉，获取预支付信息失败，同时得到一个支付失败回调
+})?.toPay(object : PayHelper.OnPayResultListener {
+    override fun onPaySuccess(payWay: PayHelper.PayWay?) {}
+    override fun onPayCancel(payWay: PayHelper.PayWay?) {}
+    override fun onPayFailure(payWay: PayHelper.PayWay?, errCode: Int) {}
+})
+```
 
-### *003.微信PayWxEntryActivity(41)*
+### *002.微信PayWxEntryActivity(41)*
 

@@ -16,6 +16,7 @@ import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
+import com.autoselect.helper.ThreadHelper.poolSingle
 import com.autoselect.helper.connectivityManager
 import com.google.gson.Gson
 import com.google.gson.annotations.SerializedName
@@ -30,7 +31,6 @@ import retrofit2.http.Query
 import java.io.IOException
 import java.net.HttpURLConnection
 import java.net.URL
-import java.util.concurrent.Executors
 
 object PayHelper {
     enum class HttpType { Get, Post }
@@ -75,14 +75,9 @@ object PayHelper {
         fun onPayFailure(payWay: PayWay?, errCode: Int)
     }
 
-    private var executors = Executors.newSingleThreadExecutor()
-    fun execute(runnable: Runnable?) = runnable?.run { executors.execute(this) }
-    val shutdown = executors.run {
-        if (!isShutdown) {
-            shutdownNow()
-            executors = null
-        }
-    }
+    val Runnable.execute
+        get() = poolSingle?.execute(this)
+    val shutdown = poolSingle?.run { if (!isShutdown) shutdownNow() }
 
     class HttpUrlConnectionClient : NetworkClientInter {
         override fun get(payParams: PayParams?, callBack: NetworkClientInter.CallBack?) {
@@ -115,7 +110,7 @@ object PayHelper {
                         connection?.disconnect()
                     }
                 }
-            }.run { execute(this) }
+            }.execute
         }//服务器为微信、支付宝、银联等预支付信息走一个接口，通过pay_way或者其他字段进行区分，除商品详情介绍(goods_introduction)外，均为必须上传字段，key值协商定义
 
         override fun post(payParams: PayParams?, callBack: NetworkClientInter.CallBack?) {
@@ -155,7 +150,7 @@ object PayHelper {
                         connection?.disconnect()
                     }
                 }
-            }.run { execute(this) }
+            }.execute
         }//服务器为微信、支付宝、银联等预支付信息走一个接口，通过pay_way或者其他字段进行区分，除商品详情介绍(goods_introduction)外，均为必须上传字段，key值协商定义
     }
 
@@ -562,7 +557,7 @@ object PayHelper {
                         obj = PayTask(mPayParams?.activity).payV2(mPrePayInfo, true)
                     }.let { sendMessage(it) }
                 }//TODO 根据自身需求解析mPrePayInfo，最终字符串值应为一连串key=value形式
-            }.run { execute(this) }
+            }.execute
         }
     }
 
