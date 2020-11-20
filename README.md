@@ -156,8 +156,8 @@ Android客户端三层架构，其中视图层再分两层架构。
 | 103  | *103.HandleHelper(121)*                                | 工具 |
 | 104  | *104.ContactsHelper(221)*                              | 通讯 |
 | 105  | *105.MapHelper(69)*                                    | 地图 |
-| 106  | *106.WebServiceHelper(63)*                             | 网服 |
-| 107  | *107.HttpUrlConnectionHelper(107)*                     | 网连 |
+| 106  | *106.WebServiceHelper(66)*                             | 网服 |
+| 107  | *107.ConnectionHelper(114)*                            | 网连 |
 | 108  | *108.UriHelper(91)*                                    | 标识 |
 | 109  | *109.SslHelper(57)*                                    | 安全 |
 | 110  | *110.HtmlHelper(59)*                                   | 超文 |

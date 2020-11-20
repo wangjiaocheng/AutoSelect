@@ -134,8 +134,8 @@
 | 103  | *103.HandleHelper(121)*                                | 工具 |
 | 104  | *104.ContactsHelper(221)*                              | 通讯 |
 | 105  | *105.MapHelper(69)*                                    | 地图 |
-| 106  | *106.WebServiceHelper(63)*                             | 网服 |
-| 107  | *107.HttpUrlConnectionHelper(107)*                     | 网连 |
+| 106  | *106.WebServiceHelper(66)*                             | 网服 |
+| 107  | *107.ConnectionHelper(114)*                            | 网连 |
 | 108  | *108.UriHelper(91)*                                    | 标识 |
 | 109  | *109.SslHelper(57)*                                    | 安全 |
 | 110  | *110.HtmlHelper(59)*                                   | 超文 |
@@ -2480,7 +2480,7 @@
 | 05   | 05. metreToScreenPixel  | 米转屏幕像素    |
 | 06   | 06. screenPixelToMetre  | 屏幕像素转米    |
 
-### *106.网服WebServiceHelper(63)*
+### *106.网服WebServiceHelper(66)*
 
 | 序号 | 方法                   | 功能           |
 |:-----|:-----------------------|:--------------|
@@ -2489,7 +2489,7 @@
 
 >- implementation "com.google.code.ksoap2-android:ksoap2-android:3.6.4"
 
-### *107.网连HttpUrlConnectionHelper(107)*
+### *107.网连ConnectionHelper(114)*
 
 | 序号 | 方法           | 功能         |
 |:-----|:---------------|:------------|

@@ -3,6 +3,7 @@ package com.autoselect.helper
 import android.os.Handler
 import android.os.Looper
 import android.os.Message
+import com.autoselect.helper.ThreadHelper.getPoolFixed
 import org.ksoap2.SoapEnvelope
 import org.ksoap2.serialization.SoapObject
 import org.ksoap2.serialization.SoapSerializationEnvelope
@@ -21,7 +22,9 @@ object WebServiceHelper {
 
     private const val NAMESPACE = ""
     private const val WEB_SERVER_URL = ""
-    private val executorService: ExecutorService = Executors.newFixedThreadPool(3)
+    private val executorService: ExecutorService =
+        getPoolFixed(3) ?: Executors.newFixedThreadPool(3)
+
     fun callWebService(
         urlStr: String, methodName: String, properties: MutableMap<String, String>?,
         webServiceCallBack: WebServiceCallBack

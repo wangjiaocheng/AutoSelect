@@ -1,5 +1,7 @@
 package com.autoselect.helper
 
+import com.autoselect.helper.ThreadHelper.SimpleTask
+import com.autoselect.helper.ThreadHelper.executeByCachedWithDelay
 import java.io.BufferedReader
 import java.io.ByteArrayOutputStream
 import java.io.InputStreamReader
@@ -7,20 +9,22 @@ import java.io.PrintWriter
 import java.net.HttpURLConnection
 import java.net.URL
 
-object HttpUrlConnectionHelper {
+object ConnectionHelper {
     interface CallBack {
         fun onRequestComplete(result: String?)
     }
 
-    fun doGetAsyn(urlStr: String, callBack: CallBack?) = object : Thread() {
-        override fun run() {
+    fun doGetAsyn(urlStr: String, callBack: CallBack?) = object : SimpleTask<Unit>() {
+        override fun onSuccess(result: Unit?) {}
+        override fun doInBackground(): Unit? {
             try {
                 callBack?.onRequestComplete(doGet(urlStr))
             } catch (e: Exception) {
                 e.printStackTrace()
             }
+            return null
         }
-    }.start()
+    }.let { executeByCachedWithDelay(it) }
 
     private const val TIMEOUT_IN_MILLIONS = 5000
     fun doGet(urlStr: String): String? = (URL(urlStr).openConnection() as HttpURLConnection).apply {
@@ -52,15 +56,18 @@ object HttpUrlConnectionHelper {
         }
     }
 
-    fun doPostAsyn(urlStr: String, params: String, callBack: CallBack?) = object : Thread() {
-        override fun run() {
-            try {
-                callBack?.onRequestComplete(doPost(urlStr, params))
-            } catch (e: Exception) {
-                e.printStackTrace()
+    fun doPostAsyn(urlStr: String, params: String, callBack: CallBack?) =
+        object : SimpleTask<Unit>() {
+            override fun onSuccess(result: Unit?) {}
+            override fun doInBackground(): Unit? {
+                try {
+                    callBack?.onRequestComplete(doPost(urlStr, params))
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                }
+                return null
             }
-        }
-    }.start()
+        }.let { executeByCachedWithDelay(it) }
 
     fun doPost(urlStr: String, param: String?): String =
         (URL(urlStr).openConnection() as HttpURLConnection).apply {
