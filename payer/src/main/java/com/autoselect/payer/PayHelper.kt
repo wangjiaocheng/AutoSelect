@@ -499,7 +499,7 @@ object PayHelper {
                             timeStamp = preTimeStamp
                             sign = preSign
                         })
-                    }//TODO 需要做正式解析，修改PrePayInfo.java类，并解开此处注释
+                    }//TODO 需要做正式解析，修改PrePayInfo，并解开此处注释
                 }
         }
     }
