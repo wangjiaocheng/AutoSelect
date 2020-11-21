@@ -1,3 +1,5 @@
+[![](https://img.shields.io/badge/CopyRight-%E7%8E%8B%E6%95%99%E6%88%90-brightgreen.svg)](https://github.com/wangjiaocheng/AutoSelect)
+[![API](https://img.shields.io/badge/API-28%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=28)
 [![](https://jitpack.io/v/wangjiaocheng/AutoSelect.svg)](https://jitpack.io/#wangjiaocheng/AutoSelect)
 
 ```gradle

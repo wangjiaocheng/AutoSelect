@@ -12,6 +12,21 @@
 | 08   | 08. 服务器表现层：客户端视图层View       | 布局控件逻辑activity类型                         |
 | 09   | 09. 服务器表现层：客户端布局层View       | 布局控件位置xml类型(控件库widgeter、地图库maper)  |
 
+[![](https://img.shields.io/badge/CopyRight-%E7%8E%8B%E6%95%99%E6%88%90-brightgreen.svg)](https://github.com/wangjiaocheng/AutoSelect/tree/master/helper/src/main/java/com/autoselect/helper)
+[![API](https://img.shields.io/badge/API-28%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=28)
+[![](https://jitpack.io/v/wangjiaocheng/AutoSelect.svg)](https://jitpack.io/#wangjiaocheng/AutoSelect)
+
+```gradle
+allprojects {
+    repositories {
+        maven { url "https://jitpack.io" }
+    }
+}
+dependencies {
+    implementation "com.github.wangjiaocheng.AutoSelect:helper:1.0.0"
+}
+```
+
 ## **工具库helper**
 
 | 序号 | 类库                                                               | 类别 |
@@ -1493,10 +1508,6 @@
 | 66   | 66. lengthString        | 字符串长度                       |
 | 67   | 67. lengthCharStringSub | 包含指定子字符串长度              |
 | 68   | 68. uuid                | 通用唯一识别码32字符小写字符串    |
-
->1. [常用正则表达式测试](http://tool.oschina.net/regex)
->2. [常用正则表达式大全](http://toutiao.com/i6231678548520731137)
->3. [最新手机号码、电话号码正则表达式](http://caibaojian.com/regexp-example.html)
 
 ### *063.身份IdHelper(396)*
 

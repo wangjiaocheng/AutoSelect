@@ -12,6 +12,21 @@
 | 08   | 08. 服务器表现层：客户端视图层View       | 布局控件逻辑activity类型                         |
 | 09   | 09. 服务器表现层：客户端布局层View       | 布局控件位置xml类型(控件库widgeter、地图库maper)  |
 
+[![](https://img.shields.io/badge/CopyRight-%E7%8E%8B%E6%95%99%E6%88%90-brightgreen.svg)](https://github.com/wangjiaocheng/AutoSelect/tree/master/maper/src/main/java/com/autoselect/maper)
+[![API](https://img.shields.io/badge/API-28%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=28)
+[![](https://jitpack.io/v/wangjiaocheng/AutoSelect.svg)](https://jitpack.io/#wangjiaocheng/AutoSelect)
+
+```gradle
+allprojects {
+    repositories {
+        maven { url "https://jitpack.io" }
+    }
+}
+dependencies {
+    implementation "com.github.wangjiaocheng.AutoSelect:maper:1.0.0"
+}
+```
+
 ## **地图库maper**
 
 | 序号 | 类库                    | 功能 |
