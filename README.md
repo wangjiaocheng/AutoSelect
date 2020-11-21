@@ -1,3 +1,19 @@
+服务器采用Spring Boot，默认数据层-实体层-持久层-业务层-控制层-表现层。
+Web开发时表现层为网页端，Android开发时表现层为客户端。
+Android客户端三层架构，其中视图层再分两层架构。
+
+| 序号 | 分层                                   | 功能                                             |
+|:-----|:---------------------------------------|:------------------------------------------------|
+| 01   | 01. 服务器数据层                        | 数据库                                          |
+| 02   | 02. 服务器实体层entity                  | 数据库实体类data类型                             |
+| 03   | 03. 服务器持久层repository              | 数据库修改类interface类型                        |
+| 04   | 04. 服务器业务层service                 | 业务逻辑实现class类型                            |
+| 05   | 05. 服务器控制层controller              | 业务开关控制class类型                            |
+| 06   | 06. 服务器表现层：客户端实体层Model      | 对应数据实体data类型                             |
+| 07   | 07. 服务器表现层：客户端控制层Controller | 对应业务逻辑object类型(工具库helper、支付库payer) |
+| 08   | 08. 服务器表现层：客户端视图层View       | 布局控件逻辑activity类型                         |
+| 09   | 09. 服务器表现层：客户端布局层View       | 布局控件位置xml类型(控件库widgeter、地图库maper)  |
+
 [![](https://img.shields.io/badge/CopyRight-%E7%8E%8B%E6%95%99%E6%88%90-brightgreen.svg)](https://github.com/wangjiaocheng/AutoSelect)
 [![API](https://img.shields.io/badge/API-28%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=28)
 [![](https://jitpack.io/v/wangjiaocheng/AutoSelect.svg)](https://jitpack.io/#wangjiaocheng/AutoSelect)
@@ -18,22 +34,6 @@ dependencies {
 
 [AutoSelect库](https://github.com/wangjiaocheng/AutoSelect)
 AutoSelect库包含工具库helper、控件库widgeter、地图库maper和支付库payer。
-
-服务器采用Spring Boot，默认数据层-实体层-持久层-业务层-控制层-表现层。
-Web开发时表现层为网页端，Android开发时表现层为客户端。
-Android客户端三层架构，其中视图层再分两层架构。
-
-| 序号 | 分层                                   | 功能                                             |
-|:-----|:---------------------------------------|:------------------------------------------------|
-| 01   | 01. 服务器数据层                        | 数据库                                          |
-| 02   | 02. 服务器实体层entity                  | 数据库实体类data类型                             |
-| 03   | 03. 服务器持久层repository              | 数据库修改类interface类型                        |
-| 04   | 04. 服务器业务层service                 | 业务逻辑实现class类型                            |
-| 05   | 05. 服务器控制层controller              | 业务开关控制class类型                            |
-| 06   | 06. 服务器表现层：客户端实体层Model      | 对应数据实体data类型                             |
-| 07   | 07. 服务器表现层：客户端控制层Controller | 对应业务逻辑object类型(工具库helper、支付库payer) |
-| 08   | 08. 服务器表现层：客户端视图层View       | 布局控件逻辑activity类型                         |
-| 09   | 09. 服务器表现层：客户端布局层View       | 布局控件位置xml类型(控件库widgeter、地图库maper)  |
 
 [工具库helper](https://github.com/wangjiaocheng/AutoSelect/tree/master/helper/src/main/java/com/autoselect/helper)
 工具库归属于客户端控制层，每个工具类都是独立单例object类，按需选用，不用可删。
@@ -456,4 +456,45 @@ Android客户端三层架构，其中视图层再分两层架构。
 | 42   | 18. UPPAY_PLUGIN_NOT_INSTALLED       | 插件未安装                                               |
 | 43   | 19. UPPAY_PLUGIN_NEED_UPGRADE        | 插件需更新                                               |
 | 44   | 20. newInstance                      | 创建支付实例                                             |
+
+>>1. [Oracle](https://www.oracle.com/cn/index.html)
+>>2. [Android](https://developer.android.google.cn/index.html)
+>>3. [JetBrains](https://www.jetbrains.com/)
+>>4. [MySQL](https://www.mysql.com/)
+>>5. [Git](https://git-scm.com/)
+>>6. [Gradle](https://gradle.org/)
+>>7. [Axure](https://www.axure.com/)
+>>8. [XMind](https://www.xmind.cn/)
+>>9. [GitHub](https://github.com/)
+>>10. [Gitee](https://gitee.com/)
+>>11. [阿里云](https://www.aliyun.com/)
+>>12. [腾讯云](https://www.qcloud.com/)
+>>13. [百度云](https://cloud.baidu.com/)
+>>14. [高德地图](http://lbs.amap.com/)
+>>15. [腾讯地图](http://lbs.qq.com/index.html)
+>>16. [百度地图](http://lbsyun.baidu.com/)
+>>17. [阿里支付](https://open.alipay.com/platform/home.htm)
+>>18. [腾讯支付](https://open.weixin.qq.com/)
+>>19. [银联支付](https://open.unionpay.com/tjweb/index)
+>>20. [讯飞语音](https://www.xfyun.cn/)
+>>21. [爪哇示例](http://www.javased.com/)
+>>22. [在线工具](http://tool.lu/)
+>>23. [JitPack](https://jitpack.io/)
+>>24. [ProcessOn](https://www.processon.com/)
+>>25. [墨刀](https://modao.cc/)
+>>26. [Kotlin](https://www.kotlincn.net/)
+>>27. [安卓教程](http://hukai.me/android-training-course-in-chinese/index.html)
+>>28. [Spring](https://spring.io/)
+>>29. [菜鸟教程](http://www.runoob.com/)
+>>30. [黑马教程](http://yun.itheima.com/)
+>>31. [下载JavaSE](https://www.oracle.com/java/technologies/javase-downloads.html)
+>>32. [下载AndroidStudio](https://developer.android.google.cn/studio#downloads)
+>>33. [东软开源镜像](https://mirrors.neusoft.edu.cn/)
+>>34. [下载IDEA](https://www.jetbrains.com/idea/download/#section=windows)
+>>35. [下载MySQL](https://dev.mysql.com/downloads/installer/)
+>>36. [下载Git](https://npm.taobao.org/mirrors/git-for-windows/)
+>>37. [下载Gradle](https://gradle.org/releases/)
+>>38. [下载Axure](https://axure.cachefly.net/AxureRP-Setup.exe)
+>>39. [下载Axure汉化包](https://www.pmyes.com/thread-35068.htm)
+>>40. [下载XMind](https://www.xmind.cn/download/)
 
