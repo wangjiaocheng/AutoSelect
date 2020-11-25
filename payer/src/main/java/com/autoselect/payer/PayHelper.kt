@@ -13,7 +13,6 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.alipay.sdk.app.PayTask
 import com.android.volley.AuthFailureError
 import com.android.volley.Request
-import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.autoselect.helper.ThreadHelper.poolSingle
@@ -43,9 +42,9 @@ object PayHelper {
 
     data class PayParams(
         var activity: Activity? = null,
-        var weChatAppID: String? = null,
+        var wxAppID: String? = null,
         var payWay: PayWay? = null,
-        var goodsPrice: Float = 0f,
+        var goodsPrice: Int = 0,
         var goodsName: String? = null,
         var goodsIntroduction: String? = null,
         var httpType: HttpType? = HttpType.Post,
@@ -159,8 +158,7 @@ object PayHelper {
             payParams?.run { "$apiUrl?pay_way=$payWay&price=$goodsPrice&goods_name=$goodsName&goods_introduction=$goodsIntroduction" }
                 .let {
                     StringRequest(Request.Method.GET, it,
-                        Response.Listener { response -> callBack?.onSuccess(response) },
-                        Response.ErrorListener { callBack?.onFailure() }
+                        { response -> callBack?.onSuccess(response) }, { callBack?.onFailure() }
                     ).run { Volley.newRequestQueue(payParams?.activity).add(this) }
                 }
         }
@@ -168,11 +166,10 @@ object PayHelper {
         override fun post(payParams: PayParams?, callBack: NetworkClientInter.CallBack?) {
             object : StringRequest(
                 Method.POST, payParams?.apiUrl,
-                Response.Listener { response -> callBack?.onSuccess(response) },
-                Response.ErrorListener { callBack?.onFailure() }
+                { response -> callBack?.onSuccess(response) }, { callBack?.onFailure() }
             ) {
                 @Throws(AuthFailureError::class)
-                override fun getParams(): MutableMap<String?, String?>? = mutableMapOf(
+                override fun getParams(): MutableMap<String?, String?> = mutableMapOf(
                     Pair("pay_way", payParams?.payWay.toString()),
                     Pair("price", payParams?.goodsPrice.toString()),
                     Pair("goods_name", payParams?.goodsName),
@@ -323,7 +320,7 @@ object PayHelper {
 
     class AutoPay private constructor(private var payParams: PayParams?) {
         val weChatAppID: String?
-            get() = payParams?.weChatAppID
+            get() = payParams?.wxAppID
         private var mOnPayInfoRequestListener: OnPayInfoRequestListener? = null
         fun requestPayInfo(onPayInfoRequestListener: OnPayInfoRequestListener?): AutoPay = apply {
             payParams?.payWay?.let {
@@ -434,14 +431,14 @@ object PayHelper {
     }
 
     data class PrePayInfo(
-        var preAppId: String? = null,//应用ID
-        var prePartnerId: String? = null,//合作者ID
-        var prePayId: String? = null,//预支付ID
+        var preAppId: String? = null,//String(32)应用ID
+        var prePartnerId: String? = null,//String(32)商户ID
+        var prePayId: String? = null,//String(64)预支付交易会话ID
         @SerializedName("package")//此属性序列化成JSON时，将名字序列化成注解value属性指定值
-        var prePackageValue: String? = null,//包值
-        var preNonceStr: String? = null,//目前
-        var preTimeStamp: String? = null,//时间戳
-        var preSign: String? = null//签名
+        var prePackageValue: String? = null,//String(128)扩展字段，暂填写固定值Sign=WXPay
+        var preNonceStr: String? = null,//String(32)随机字符串
+        var preTimeStamp: String? = null,//String(10)时间戳
+        var preSign: String? = null//String(64)签名
     )
 
     class WeChatPayStrategy(
@@ -477,7 +474,7 @@ object PayHelper {
         }
 
         override fun doPay() {
-            WXAPIFactory.createWXAPI(context?.applicationContext, mPayParams?.weChatAppID, true)
+            WXAPIFactory.createWXAPI(context?.applicationContext, mPayParams?.wxAppID, true)
                 .run {
                     if (!isWXAppInstalled) {
                         super.mOnPayResultListener?.onPayCallBack(AutoPay.WECHAT_ERR_NOT_INSTALLED)
@@ -487,7 +484,7 @@ object PayHelper {
                         super.mOnPayResultListener?.onPayCallBack(AutoPay.WECHAT_ERR_UNSUPPORT)
                         return
                     }
-                    registerApp(mPayParams?.weChatAppID)
+                    registerApp(mPayParams?.wxAppID)
                     registerPayResultBroadcast
                     Gson().fromJson(mPrePayInfo, PrePayInfo::class.java).run {
                         sendReq(PayReq().apply {
@@ -499,7 +496,7 @@ object PayHelper {
                             timeStamp = preTimeStamp
                             sign = preSign
                         })
-                    }//TODO 需要做正式解析，修改PrePayInfo，并解开此处注释
+                    }//TODO 修改PrePayInfo解析
                 }
         }
     }
@@ -556,7 +553,7 @@ object PayHelper {
                         what = PAY_RESULT_MSG
                         obj = PayTask(mPayParams?.activity).payV2(mPrePayInfo, true)
                     }.let { sendMessage(it) }
-                }//TODO 根据自身需求解析mPrePayInfo，最终字符串值应为一连串key=value形式
+                }//TODO 解析mPrePayInfo为连串key=value形式字符串值
             }.execute
         }
     }
@@ -566,13 +563,13 @@ object PayHelper {
     ) : PayStrategyBase(params, prePayInfo, resultListener) {
         private val modeOfficial: String = "00"//官方模式，启动银联正式环境
         private val modeDev: String = "01"//开发模式，连接银联测试环境
-        private val mode: String = modeOfficial
+        private val mode: String = modeOfficial//TODO 修改环境
 
         companion object {
             private const val PLUGIN_VALID = 0//插件有效响应码
             private const val PLUGIN_NOT_INSTALLED = -1//插件未安装
             private const val PLUGIN_NEED_UPGRADE = 2//插件需更新
-        }//TODO 根据实际情况修改上述环境mode
+        }
 
         override fun doPay() {
             mOnPayResultListener?.run {
@@ -586,6 +583,6 @@ object PayHelper {
             }
         }
 
-        private fun getTn(prePayInfo: String?): String? = ""//TODO 根据自身需求解析prePayInfo得到预支付订单号tn
+        private fun getTn(prePayInfo: String?): String = ""//TODO 解析prePayInfo得到预支付订单号tn
     }
 }

@@ -31,10 +31,10 @@ dependencies {
 
 | 序号 | 类库                         | 功能 |
 |:-----|:-----------------------------|:----|
-| 001  | *001.PayHelper(591)*         | 支付 |
+| 001  | *001.PayHelper(588)*         | 支付 |
 | 002  | *002.PayWxEntryActivity(41)* | 微信 |
 
-### *001.支付PayHelper(591)*
+### *001.支付PayHelper(588)*
 
 | 序号 | 方法                                 | 功能                                                     |
 |:-----|:-------------------------------------|:--------------------------------------------------------|
@@ -84,27 +84,23 @@ dependencies {
 | 44   | 20. newInstance                      | 创建支付实例                                             |
 
 ```kotlin
-class PayActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        newInstance(
-            PayHelper.PayParams(
-                this, "your_wechat_appid", PayHelper.PayWay.WeChatPay,
-                0f, "产品名称", "产品详情",
-                PayHelper.HttpType.Get, PayHelper.NetworkClientType.HttpUrlConnection,
-                "http://www.autoselect.com/"//APP服务器host主机地址
-            )
-        )?.requestPayInfo(object : PayHelper.OnPayInfoRequestListener {
-            override fun onPayInfoRequestStart() {}//TODO 做一些loading操作，progressBar.show()
-            override fun onPayInfoRequestSuccess() {}//TODO 将loading状态去掉，请求预支付信息成功，跳转到客户端支付
-            override fun onPayInfoRequestFailure() {}//TODO 将loading状态去掉，获取预支付信息失败，同时得到一个支付失败回调
-        })?.toPay(object : PayHelper.OnPayResultListener {
-            override fun onPaySuccess(payWay: PayHelper.PayWay?) {}
-            override fun onPayCancel(payWay: PayHelper.PayWay?) {}
-            override fun onPayFailure(payWay: PayHelper.PayWay?, errCode: Int) {}
-        })
-    }
-}
+newInstance(
+    PayHelper.PayParams(
+        this@CenterActivity, "appid",//仅微信支付需
+        channel, price,//分
+        "AutoSelect-recharge", "充值${price}分",
+        PayHelper.HttpType.Post, PayHelper.NetworkClientType.OkHttp,
+        "http://xxx.xxx.xxx.xxx:8080/pay/"//APP服务器host主机地址
+    )
+)?.requestPayInfo(object : PayHelper.OnPayInfoRequestListener {
+    override fun onPayInfoRequestStart() {}//做loading操作，如progressBar.show()
+    override fun onPayInfoRequestSuccess() {}//去loading状态，请求预支付信息成功，跳转到客户端支付
+    override fun onPayInfoRequestFailure() {}//去loading状态，请求预支付信息失败，得到支付失败回调
+})?.toPay(object : PayHelper.OnPayResultListener {
+    override fun onPaySuccess(payWay: PayHelper.PayWay?) {}
+    override fun onPayCancel(payWay: PayHelper.PayWay?) {}
+    override fun onPayFailure(payWay: PayHelper.PayWay?, errCode: Int) {}
+})
 ```
 
 ### *002.微信PayWxEntryActivity(41)*
