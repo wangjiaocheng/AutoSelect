@@ -37,7 +37,7 @@
 -keep class com.alipay.sdk.app.PayTask{ public *;}
 -keep class com.alipay.sdk.app.H5PayCallback{<fields>;<methods>;}
 #JavaBean混淆
--keep class com.autoselect.payer.PayHelper.PrePayInfo{*;}
+-keep class com.autoselect.payer.PayHelper$PrePayInfo{*;}
 #GSON混淆
 -keepattributes Signature
 # For using GSON @Expose annotation

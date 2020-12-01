@@ -27,9 +27,9 @@ class PayWxEntryActivity : AppCompatActivity(), IWXAPIEventHandler, LoggerHelper
         iwxapi?.handleIntent(intent, this)
     }
 
-    override fun onReq(baseReq: BaseReq?) = debug("$loggerTag->请求发出的回调")
+    override fun onReq(baseReq: BaseReq?) = debug("$loggerTag->微信发送的请求回调")
     override fun onResp(baseResp: BaseResp?) = baseResp?.errCode?.let { sendPayResultBroadcast(it) }
-        ?: Unit
+        ?: Unit//发送到微信请求的响应结果回调
 
     private fun sendPayResultBroadcast(resultCode: Int) {
         LocalBroadcastManager.getInstance(applicationContext).sendBroadcast(Intent().apply {
