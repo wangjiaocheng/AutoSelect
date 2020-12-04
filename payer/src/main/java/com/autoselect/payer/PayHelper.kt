@@ -433,15 +433,21 @@ object PayHelper {
     }
 
     data class PrePayInfo(
-        var preAppId: String? = null,//String(32)应用ID
-        var prePartnerId: String? = null,//String(32)商户ID
-        var prePayId: String? = null,//String(64)预支付交易会话ID
-        @SerializedName("package")//此属性序列化成JSON时，将名字序列化成注解value属性指定值
-        var prePackageValue: String? = null,//String(128)扩展字段，暂填写固定值Sign=WXPay
-        var preNonceStr: String? = null,//String(32)随机字符串
-        var preTimeStamp: String? = null,//String(10)时间戳
-        var preSign: String? = null//String(64)签名
-    )
+        @SerializedName("appId")
+        var appid: String? = null,//应用ID，String(32)必须
+        @SerializedName("mchId")
+        var partnerid: String? = null,//商户ID，String(32)必须
+        @SerializedName("prepayId")
+        var prepayid: String? = null,//预支付交易会话ID，String(64)必须
+        @SerializedName("packageStr")
+        var `package`: String? = null,//扩展字段，String(128)必须，暂填写固定值Sign=WXPay
+        @SerializedName("nonceStr")
+        var noncestr: String? = null,//随机字符串，String(32)必须
+        @SerializedName("timeStamp")
+        var timestamp: String? = null,//时间戳，String(10)必须
+        @SerializedName("paySign")
+        var sign: String? = null//签名，String(64)必须
+    )//属性序列化成JSON时，将名字序列化成注解value属性指定值
 
     class WeChatPayStrategy(
         params: PayParams?, prePayInfo: String?, resultListener: AutoPay.PayCallBack?
@@ -490,13 +496,13 @@ object PayHelper {
                     registerPayResultBroadcast
                     Gson().fromJson(mPrePayInfo, PrePayInfo::class.java).run {
                         sendReq(PayReq().apply {
-                            appId = preAppId
-                            partnerId = prePartnerId
-                            prepayId = prePayId
-                            packageValue = prePackageValue
-                            nonceStr = preNonceStr
-                            timeStamp = preTimeStamp
-                            sign = preSign
+                            appId = appid
+                            partnerId = partnerid
+                            prepayId = prepayid
+                            packageValue = `package`
+                            nonceStr = noncestr
+                            timeStamp = timestamp
+                            sign = this@run.sign
                         })
                     }//TODO 修改PrePayInfo解析
                 }
