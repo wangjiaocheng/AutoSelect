@@ -301,7 +301,7 @@ object PayHelper {
         }
     }
 
-    fun newClient(networkClientType: NetworkClientType?): NetworkClientInter? =
+    fun newClient(networkClientType: NetworkClientType?): NetworkClientInter =
         when (networkClientType) {
             NetworkClientType.HttpUrlConnection -> HttpUrlConnectionClient()
             NetworkClientType.Volley -> VolleyClient()
@@ -328,7 +328,7 @@ object PayHelper {
             payParams?.payWay?.let {
                 mOnPayInfoRequestListener = onPayInfoRequestListener
                 mOnPayInfoRequestListener?.onPayInfoRequestStart()
-                newClient(payParams?.networkClientType)?.run {
+                newClient(payParams?.networkClientType).run {
                     object : NetworkClientInter.CallBack {
                         override fun onSuccess(result: Any?) {
                             mOnPayInfoRequestListener?.onPayInfoRequestSuccess()
