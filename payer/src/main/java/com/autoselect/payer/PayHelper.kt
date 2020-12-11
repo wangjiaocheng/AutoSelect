@@ -44,14 +44,14 @@ object PayHelper {
 
     data class PayParams(
         var activity: Activity? = null,
-        var wxAppID: String? = null,
-        var payWay: PayWay? = null,
+        var payWay: PayWay = PayWay.WeChatPay,
         var goodsPrice: Int = 0,
-        var goodsName: String? = null,
-        var goodsIntroduction: String? = null,
-        var httpType: HttpType? = HttpType.Post,
-        var networkClientType: NetworkClientType? = NetworkClientType.OkHttp,
-        var apiUrl: String? = null
+        var goodsName: String = "",
+        var goodsIntroduction: String = "",
+        var apiUrl: String? = null,
+        var wxAppID: String? = null,
+        var httpType: HttpType = HttpType.Post,
+        var networkClientType: NetworkClientType = NetworkClientType.OkHttp
     )
 
     interface NetworkClientInter {
@@ -87,7 +87,7 @@ object PayHelper {
                     super.run()
                     val connection: HttpURLConnection? = null
                     try {
-                        (URL(payParams?.run { "$apiUrl?pay_way=$payWay&price=$goodsPrice&goods_name=$goodsName&goods_introduction=$goodsIntroduction" }).openConnection() as HttpURLConnection).apply {
+                        (URL(payParams?.run { "$apiUrl?payWay=$payWay&goodsPrice=$goodsPrice&goodsName=$goodsName&goodsIntroduction=$goodsIntroduction" }).openConnection() as HttpURLConnection).apply {
                             requestMethod = "GET"
                             connectTimeout = 20 * 1000
                             readTimeout = 10 * 1000
@@ -127,7 +127,7 @@ object PayHelper {
                                 readTimeout = 10 * 1000
                                 doOutput = true
                                 outputStream.use {
-                                    it.write((payParams?.run { "pay_way=$payWay&price=$goodsPrice&goods_name=$goodsName&goods_introduction=$goodsIntroduction" }
+                                    it.write((payParams?.run { "payWay=$payWay&goodsPrice=$goodsPrice&goodsName=$goodsName&goodsIntroduction=$goodsIntroduction" }
                                         ?: "").toByteArray())
                                     it.flush()
                                 }
@@ -157,7 +157,7 @@ object PayHelper {
 
     class VolleyClient : NetworkClientInter {
         override fun get(payParams: PayParams?, callBack: NetworkClientInter.CallBack?) {
-            payParams?.run { "$apiUrl?pay_way=$payWay&price=$goodsPrice&goods_name=$goodsName&goods_introduction=$goodsIntroduction" }
+            payParams?.run { "$apiUrl?payWay=$payWay&goodsPrice=$goodsPrice&goodsName=$goodsName&goodsIntroduction=$goodsIntroduction" }
                 .let {
                     StringRequest(Request.Method.GET, it,
                         { response -> callBack?.onSuccess(response) }, { callBack?.onFailure() }
@@ -172,10 +172,10 @@ object PayHelper {
             ) {
                 @Throws(AuthFailureError::class)
                 override fun getParams(): MutableMap<String?, String?> = mutableMapOf(
-                    Pair("pay_way", payParams?.payWay.toString()),
-                    Pair("price", payParams?.goodsPrice.toString()),
-                    Pair("goods_name", payParams?.goodsName),
-                    Pair("goods_introduction", payParams?.goodsIntroduction)
+                    Pair("payWay", payParams?.payWay.toString()),
+                    Pair("goodsPrice", payParams?.goodsPrice.toString()),
+                    Pair("goodsName", payParams?.goodsName),
+                    Pair("goodsIntroduction", payParams?.goodsIntroduction)
                 )
             }.run { Volley.newRequestQueue(payParams?.activity).add(this) }
         }
@@ -183,7 +183,7 @@ object PayHelper {
 
     class OkHttpClientImpl : NetworkClientInter {
         override fun get(payParams: PayParams?, callBack: NetworkClientInter.CallBack?) {
-            payParams?.run { "$apiUrl?pay_way=$payWay&price=$goodsPrice&goods_name=$goodsName&goods_introduction=$goodsIntroduction" }
+            payParams?.run { "$apiUrl?payWay=$payWay&goodsPrice=$goodsPrice&goodsName=$goodsName&goodsIntroduction=$goodsIntroduction" }
                 ?.let {
                     OkHttpClient().newCall(okhttp3.Request.Builder().url(it).build())
                         .enqueue(object : Callback {
@@ -192,7 +192,7 @@ object PayHelper {
                             }
 
                             @Throws(IOException::class)
-                            override fun onResponse(call: Call, response: okhttp3.Response) {
+                            override fun onResponse(call: Call, response: Response) {
                                 when {
                                     response.isSuccessful -> callBack?.onSuccess(response.body?.string())
                                     else -> callBack?.onFailure()
@@ -207,10 +207,10 @@ object PayHelper {
                 OkHttpClient().newCall(
                     okhttp3.Request.Builder().url(apiUrl ?: "").post(
                         FormBody.Builder()
-                            .add("pay_way", payWay.toString())
-                            .add("price", goodsPrice.toString())
-                            .add("goods_name", goodsName ?: "")
-                            .add("goods_introduction", goodsIntroduction ?: "").build()
+                            .add("payWay", payWay.toString())
+                            .add("goodsPrice", goodsPrice.toString())
+                            .add("goodsName", goodsName)
+                            .add("goodsIntroduction", goodsIntroduction).build()
                     ).build()
                 ).enqueue(object : Callback {
                     override fun onFailure(call: Call, e: IOException) {
@@ -218,7 +218,7 @@ object PayHelper {
                     }
 
                     @Throws(IOException::class)
-                    override fun onResponse(call: Call, response: okhttp3.Response) {
+                    override fun onResponse(call: Call, response: Response) {
                         when {
                             response.isSuccessful -> callBack?.onSuccess(response.body?.string())
                             else -> callBack?.onFailure()
@@ -232,18 +232,18 @@ object PayHelper {
     interface PrePayInfoService {
         @GET("?")
         fun getPrePayInfo(
-            @Query("pay_way") payWay: String?,
-            @Query("price") GoodsPrice: String?,
-            @Query("goods_name") goodsName: String?,
-            @Query("goods_introduction") goodsIntroduce: String?
+            @Query("payWay") payWay: String?,
+            @Query("goodsPrice") goodsPrice: String?,
+            @Query("goodsName") goodsName: String?,
+            @Query("goodsIntroduce") goodsIntroduce: String?
         ): retrofit2.Call<ResponseBody?>?
 
         @POST("?")
         fun postPrePayInfo(
-            @Query("pay_way") payWay: String?,
-            @Query("price") GoodsPrice: String?,
-            @Query("goods_name") goodsName: String?,
-            @Query("goods_introduction") goodsIntroduce: String?
+            @Query("payWay") payWay: String?,
+            @Query("goodsPrice") goodsPrice: String?,
+            @Query("goodsName") goodsName: String?,
+            @Query("goodsIntroduce") goodsIntroduce: String?
         ): retrofit2.Call<ResponseBody?>?
     }
 

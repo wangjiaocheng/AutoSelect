@@ -86,11 +86,11 @@ dependencies {
 ```kotlin
 newInstance(
     PayHelper.PayParams(
-        this@CenterActivity, "appid",//仅微信支付需
-        channel, price,//分
-        "AutoSelect-recharge", "充值${price}分",
-        PayHelper.HttpType.Post, PayHelper.NetworkClientType.OkHttp,
+        this@CenterActivity, channel, price,//分
+        "自得-充值", "充值${price}分",
         "http://xxx.xxx.xxx.xxx:8080/pay/"//APP服务器host主机地址
+        , "appid",//仅微信支付需
+        PayHelper.HttpType.Post, PayHelper.NetworkClientType.OkHttp
     )
 )?.requestPayInfo(object : PayHelper.OnPayInfoRequestListener {
     override fun onPayInfoRequestStart() {}//做loading操作，如progressBar.show()
