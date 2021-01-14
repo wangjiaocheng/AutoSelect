@@ -265,8 +265,7 @@ object PayHelper {
                         }
 
                         override fun onFailure(
-                            call: retrofit2.Call<ResponseBody?>?,
-                            t: Throwable?
+                            call: retrofit2.Call<ResponseBody?>?, t: Throwable?
                         ) {
                             callBack?.onFailure()
                         }
@@ -291,8 +290,7 @@ object PayHelper {
                         }
 
                         override fun onFailure(
-                            call: retrofit2.Call<ResponseBody?>?,
-                            t: Throwable?
+                            call: retrofit2.Call<ResponseBody?>?, t: Throwable?
                         ) {
                             callBack?.onFailure()
                         }
