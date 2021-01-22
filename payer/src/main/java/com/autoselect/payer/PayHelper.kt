@@ -16,7 +16,6 @@ import com.android.volley.Request
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.autoselect.helper.ThreadHelper.poolSingle
-import com.autoselect.helper.ValidationHelper.uuid
 import com.autoselect.helper.connectivityManager
 import com.google.gson.Gson
 import com.google.gson.annotations.SerializedName
@@ -31,7 +30,6 @@ import retrofit2.http.Query
 import java.io.IOException
 import java.net.HttpURLConnection
 import java.net.URL
-import kotlin.math.abs
 
 object PayHelper {
     enum class HttpType { Get, Post }
@@ -502,7 +500,7 @@ object PayHelper {
                             timeStamp = timestamp
                             sign = this@run.sign
                         })
-                    }//TODO 修改PrePayInfo解析
+                    }//TODO 解析mPrePayInfo
                 }
         }
     }
@@ -589,7 +587,6 @@ object PayHelper {
             }
         }
 
-        private fun getTn(prePayInfo: String?): String =//%815，前补8，15位，d正整数
-            "8${String.format("%815d", abs(uuid.hashCode()))}"//TODO 解析prePayInfo得到预支付订单号tn
-    }
+        private fun getTn(prePayInfo: String?): String = prePayInfo ?: ""
+    }//TODO 解析mPrePayInfo得到预支付订单号tn
 }
